@@ -1,0 +1,23 @@
+{
+	"songs": [
+		["Sussus Toogus", "spooky", [34, 51, 68]],
+		["Lights Down", "spooky", [34, 51, 68]],
+		["Reactor", "monster", [34, 51, 68]],
+		["Ejected", "monster", [34, 51, 68]]
+	],
+
+	"weekCharacters": [
+		"spooky",
+		"bf",
+		"gf"
+	],
+	"weekBackground": "halloween",
+
+	"storyName": "Spooky Month",
+	"weekBefore": "week1",
+	"weekName": "Week 2",
+	"startUnlocked": true,
+
+	"hideStoryMode": false,
+	"hideFreeplay": false
+}
