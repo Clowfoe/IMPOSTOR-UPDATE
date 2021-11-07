@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="buildingSheet.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BuildingA10000" x="0" y="0" width="1343" height="6977"/>
+	<SubTexture name="BuildingA20000" x="1358" y="0" width="1343" height="6535"/>
+	<SubTexture name="BuildingA30000" x="2716" y="0" width="1343" height="6049"/>
+	<SubTexture name="BuildingB20000" x="4074" y="0" width="1120" height="3939"/>
+	<SubTexture name="BuildingB10000" x="5209" y="0" width="1119" height="3937"/>
+</TextureAtlas>

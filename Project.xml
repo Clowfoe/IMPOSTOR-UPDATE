@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Psych Engine" file="PsychEngine" packageName="com.shadowmario.psychengine" package="com.shadowmario.psychengine" main="Main" version="0.2.7" company="ShadowMario" />
+	<app title="VS Impostor: V4" file="VS Impostor" packageName="com.shadowmario.psychengine" package="com.shadowmario.psychengine" main="Main" version="0.2.7" company="ShadowMario" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
@@ -60,6 +60,7 @@
 		<library name="week2"         preload="true" />
 		<library name="week3"         preload="true" />
 		<library name="week4"         preload="true" />
+		<library name="impostor"   preload="true" />
 		<library name="week5"         preload="true" />
 		<library name="week6"         preload="true" />
 	</section>
@@ -70,6 +71,7 @@
 		<library name="week2"         preload="false" />
 		<library name="week3"         preload="false" />
 		<library name="week4"         preload="false" />
+		<library name="impostor"   preload="false" />
 		<library name="week5"         preload="false" />
 		<library name="week6"         preload="false" />
 	</section>
@@ -91,6 +93,8 @@
 	<assets path="assets/week5"         library="week5"         exclude="*.mp3" unless="web"/>
 	<assets path="assets/week6"         library="week6"         exclude="*.ogg" if="web"/>
 	<assets path="assets/week6"         library="week6"         exclude="*.mp3" unless="web"/>
+	<assets path="assets/impostor"   library="impostor"   exclude="*.ogg" if="web"/>
+	<assets path="assets/impostor"   library="impostor"   exclude="*.mp3" unless="web"/>
 	
 	<assets path='example_mods' rename='mods' embed='false' if="MODS_ALLOWED"/>
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />

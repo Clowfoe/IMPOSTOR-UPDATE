@@ -246,6 +246,9 @@ class PlayState extends MusicBeatState
 	// Lua shit
 	private var luaDebugGroup:FlxTypedGroup<DebugLuaText>;
 	public var introSoundsSuffix:String = '';
+	//hardcoded flashes because my ass aint redoing them as an event then retiming them all fuck that
+	var _cb = 0;
+	var flashSprite:FlxSprite = new FlxSprite(0, 0).makeGraphic(1920, 1080, 0xFFb30000);
 
 	override public function create()
 	{
@@ -379,7 +382,100 @@ class PlayState extends MusicBeatState
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
+			case 'polus': 
+						curStage = 'polus';
+						defaultCamZoom = 0.9;  
+ 
+						var sky:FlxSprite = new FlxSprite(-834.3, -620.5).loadGraphic(Paths.image('polus/polusSky', 'impostor'));
+						sky.antialiasing = true;
+						sky.scrollFactor.set(0.5, 0.5);
+						sky.active = false;
+						add(sky);		
+		
+						var rocks:FlxSprite = new FlxSprite(-915.8, -411.3).loadGraphic(Paths.image('polus/polusrocks', 'impostor'));
+						rocks.updateHitbox();
+						rocks.antialiasing = true;
+						rocks.scrollFactor.set(0.6, 0.6);
+						rocks.active = false;
+						add(rocks);	
+						
+						var hills:FlxSprite = new FlxSprite(-1238.05, -180.55).loadGraphic(Paths.image('polus/polusHills', 'impostor'));
+						hills.updateHitbox();
+						hills.antialiasing = true;
+						hills.scrollFactor.set(0.9, 0.9);
+						hills.active = false;
+						add(hills);
 
+						var warehouse:FlxSprite = new FlxSprite(-458.35, -315.6).loadGraphic(Paths.image('polus/polusWarehouse', 'impostor'));
+						warehouse.updateHitbox();
+						warehouse.antialiasing = true;
+						warehouse.scrollFactor.set(0.9, 0.9);
+						warehouse.active = false;
+						add(warehouse);
+
+						var crowd:FlxSprite = new FlxSprite(-280.5, 240.8);
+						crowd.frames = Paths.getSparrowAtlas('polus/CrowdBop', 'impostor');
+						crowd.animation.addByPrefix('CrowdBop', 'CrowdBop', 24);
+						crowd.animation.play('CrowdBop');
+						crowd.scrollFactor.set(1, 1);
+						crowd.antialiasing = true;
+						crowd.updateHitbox();
+						crowd.scale.set(1.5, 1.5);
+						if(SONG.song.toLowerCase() == 'meltdown') {
+							add(crowd);
+						}
+
+						
+						var ground:FlxSprite = new FlxSprite(-580.9, 241.85).loadGraphic(Paths.image('polus/polusGround', 'impostor'));
+						ground.updateHitbox();
+						ground.antialiasing = true;
+						ground.scrollFactor.set(1, 1);
+						ground.active = false;
+						add(ground);
+
+			
+			case 'polus2': 
+						curStage = 'polus2';
+						 
+ 
+						var sky:FlxSprite = new FlxSprite(0, -200).loadGraphic(Paths.image('polus/polus2sky', 'impostor'));
+						sky.antialiasing = true;
+						sky.scrollFactor.set(0.5, 0.5);
+						sky.active = false;
+						sky.setGraphicSize(Std.int(sky.width * 1.2));
+						add(sky);		
+		
+						var rocks:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('polus/polus2rocks', 'impostor'));
+						rocks.updateHitbox();
+						rocks.antialiasing = true;
+						rocks.setGraphicSize(Std.int(rocks.width * 1.2));
+						rocks.scrollFactor.set(0.6, 0.6);
+						rocks.active = false;
+						add(rocks);	
+
+						var ground:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('polus/polus2ground', 'impostor'));
+						ground.updateHitbox();
+						ground.setGraphicSize(Std.int(ground.width * 1.2));
+						ground.antialiasing = true;
+						ground.scrollFactor.set(1, 1);
+						ground.active = false;
+						add(ground);
+
+						var snow:FlxSprite = new FlxSprite(0, -550);
+						snow.frames = Paths.getSparrowAtlas('polus/snow', 'impostor');
+						snow.animation.addByPrefix('cum', 'cum', 24);
+						snow.animation.play('cum');
+						snow.scrollFactor.set(1, 1);
+						snow.antialiasing = true;
+						snow.updateHitbox();
+						snow.setGraphicSize(Std.int(snow.width * 1.2));
+						add(snow);
+
+											
+
+					
+
+			
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
 					halloweenBG = new BGSprite('halloween_bg', -200, -100, ['halloweem bg0', 'halloweem bg lightning strike']);
@@ -909,6 +1005,7 @@ class PlayState extends MusicBeatState
 
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
+		flashSprite.cameras = [camHUD];
 		notes.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
 		healthBarBG.cameras = [camHUD];
@@ -3644,6 +3741,17 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	function bgFlash():Void
+		{
+			//oops im stupid so commented out the tweening version
+			//flashSprite.alpha = 0;
+			//FlxTween.tween(flashSprite.alpha, 0.4, 0.15);
+			trace('BG FLASH FUNNY');
+			//yeaaah nice try buckaroo cant FLASH WHILE IN A CUTSCENE!! BITCH!!!!!!!!
+			if(!inCutscene)
+				flashSprite.alpha = 0.4;
+		}
+
 	function killHenchmen():Void
 	{
 		if(!ClientPrefs.lowQuality && ClientPrefs.violence && curStage == 'limo') {
@@ -3716,6 +3824,7 @@ class PlayState extends MusicBeatState
 		{
 			resyncVocals();
 		}
+		flashSprite.alpha -= 0.08;
 
 		if(curStep == lastStepHit) {
 			return;
@@ -3775,6 +3884,113 @@ class PlayState extends MusicBeatState
 
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
+
+		{var sussusBeats = [94, 95, 288, 296, 304, 312, 318, 319];
+			var saboBeats = [16, 24, 32, 40, 48, 56, 62, 63, 272, 280, 288, 296, 302, 303, 376, 384, 892];
+			var meltBeats = [0, 16, 32, 48, 64, 72, 80, 88, 96, 104, 112, 120, 126, 127, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 382, 464, 480, 496, 512];
+			var toogusBeats = [94, 95, 96, 98, 100, 102, 104, 106, 107, 109, 112, 114, 116, 118, 120, 122, 124, 126, 128, 130, 132, 134, 136, 138, 140, 142, 144, 146, 148, 150, 152, 154, 156, 158, 192, 194, 196, 198, 200, 202, 204, 206, 208, 210, 212, 214, 216, 218, 220, 222, 288, 296, 304, 312, 318, 319, 320, 322, 324, 326, 328, 330, 332, 334, 336, 338, 340, 342, 344, 346, 348, 350, 352, 354, 356, 358, 360, 362, 364, 366, 368, 370, 372, 374, 376, 378, 380, 382];
+			var reactorBeats = [1, 16, 32, 48, 64, 72, 80, 88, 96, 104, 112, 120, 126, 127, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172, 176, 180, 184, 188, 448, 456, 464, 472, 476, 478, 480, 484, 488, 492, 496, 500, 504, 508, 512, 516, 520, 524, 528, 532, 536, 540, 544, 548, 552, 556, 560, 564, 568, 572, 576, 580, 584, 588, 592, 596, 600, 604];
+			var _b = 0;
+			//FlxG.watch.addQuick("Flash Timer", _cb); debug stuff
+	
+			add(flashSprite);
+			flashSprite.alpha = 0;
+			flashSprite.scrollFactor.set(0, 0);
+	
+			if(curSong == 'Sussus-Moogus') // sussus flashes
+			{
+				
+				if(curBeat == 97 || curBeat == 192 || curBeat == 320)
+					_cb = 1;
+					if(curBeat > 98 && curBeat < 160 || curBeat > 192 && curBeat < 224 || curBeat > 320 && curBeat < 382 || curBeat == 98 || curBeat == 160 || curBeat == 192 || curBeat == 224 || curBeat == 320 || curBeat == 382)
+					{
+						_cb++;
+						if(_cb == 2)
+						{
+							bgFlash();
+							_cb = 0;
+						}
+					}
+				while(_b < sussusBeats.length) {
+				var susflash = sussusBeats[_b];
+					++_b;
+					if(curBeat == susflash)
+					{
+						bgFlash();
+					}
+				}
+			}
+			if(curSong == 'Sabotage') // sabotage flashes
+			{
+				while(_b < saboBeats.length) {
+					var sabflash = saboBeats[_b];
+						++_b;
+						if(curBeat == sabflash)
+						{
+							bgFlash();
+						}
+					}
+	
+					if(curBeat == 63 || curBeat == 304)
+						_cb = 3;
+					if(curBeat > 64 && curBeat < 124 || curBeat > 304 && curBeat < 370 || curBeat == 64 || curBeat == 124 || curBeat == 304 || curBeat == 370)
+					{
+						_cb++;
+						if(_cb == 4)
+						{
+							bgFlash();
+							_cb = 0;
+						}
+					}
+			}
+			if(curSong == 'Meltdown') // meltdown flashes
+			{
+				while(_b < meltBeats.length) {
+					var meltflash = meltBeats[_b];
+					++_b;
+					if(curBeat == meltflash)
+					{
+						bgFlash();
+					}
+				}
+				if(curBeat == 127)
+					_cb = 3;
+				if(curBeat == 382)
+					_cb = 1;
+				if(curBeat > 128 && curBeat < 192 || curBeat > 382 && curBeat < 448 || curBeat == 128 || curBeat == 192 || curBeat == 382 || curBeat == 448)
+				{
+					_cb++;
+					if(_cb == 4)
+					{
+						bgFlash();
+						_cb = 0;
+					}
+				}
+			}
+			if(curSong == 'Sussus-Toogus') // toogus flashes
+			{
+				while(_b < toogusBeats.length) {
+					var meltflash = toogusBeats[_b];
+					++_b;
+					if(curBeat == meltflash)
+					{
+						bgFlash();
+					}
+				}
+			}
+		
+			if(curSong == 'Reactor') // reactor flashes
+			{
+				while(_b < reactorBeats.length) {
+					var meltflash = reactorBeats[_b];
+					++_b;
+					if(curBeat == meltflash)
+					{
+						bgFlash();
+					}
+				}
+			}
+		}
 
 		if (curBeat % gfSpeed == 0 && !gf.stunned && gf.animation.curAnim.name != null && !gf.animation.curAnim.name.startsWith("sing"))
 		{
