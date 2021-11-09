@@ -249,6 +249,8 @@ class PlayState extends MusicBeatState
 	//hardcoded flashes because my ass aint redoing them as an event then retiming them all fuck that
 	var _cb = 0;
 	var flashSprite:FlxSprite = new FlxSprite(0, 0).makeGraphic(1920, 1080, 0xFFb30000);
+	var stageFront2:FlxSprite;
+	var stageFront3:FlxSprite;
 
 	override public function create()
 	{
@@ -382,6 +384,16 @@ class PlayState extends MusicBeatState
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
+			case 'henry': //stick Min
+				var bg:BGSprite = new BGSprite('stagehenry', -1600, -300, 1, 1);
+				add(bg);
+
+			//	var stageFront:BGSprite = new BGSprite('wall', 0, 0, 1, 1);
+			//	stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+			//	stageFront.updateHitbox();
+			//	add(stageFront);
+
+				
 			case 'polus': 
 						curStage = 'polus';
 						defaultCamZoom = 0.9;  
@@ -471,8 +483,53 @@ class PlayState extends MusicBeatState
 						snow.setGraphicSize(Std.int(snow.width * 1.2));
 						add(snow);
 
-											
+			case 'toogus':
+						
+								curStage = 'toogus';
+								var bg:FlxSprite = new FlxSprite(0,50).loadGraphic(Paths.image('Mira'));
+								bg.setGraphicSize(Std.int(bg.width * 1.4));
+								bg.antialiasing = true;
+								bg.scrollFactor.set(1, 1);
+								bg.active = false;
+								add(bg);
 
+							//	bgDark = new FlxSprite(0,50).loadGraphic(Paths.image('MiraDark'));
+							//	bgDark.setGraphicSize(Std.int(bgDark.width * 1.4));
+							//	bgDark.antialiasing = true;
+							//	bgDark.scrollFactor.set(1, 1);
+							//	bgDark.active = false;
+							//	bgDark.alpha = 0;
+							//	add(bgDark);
+
+								var stageFront:FlxSprite = new FlxSprite(1000, 150).loadGraphic(Paths.image('vending_machine'));
+								stageFront.updateHitbox();
+								stageFront.antialiasing = true;
+								stageFront.scrollFactor.set(1, 1);
+								stageFront.active = false;
+								add(stageFront);
+
+							//	machineDark = new FlxSprite(1000, 150).loadGraphic(Paths.image('vending_machineDark'));
+							//	machineDark.updateHitbox();
+							//	machineDark.antialiasing = true;
+							///	machineDark.scrollFactor.set(1, 1);
+							//	machineDark.active = false;
+							//	machineDark.alpha = 0;
+							//	add(machineDark);
+								
+								var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains'));
+								stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
+								stageCurtains.updateHitbox();
+								stageCurtains.antialiasing = true;
+								stageCurtains.scrollFactor.set(1.3, 1.3);
+								stageCurtains.active = false;
+
+							//	lightsOutSprite.alpha = 0;
+							//	flashSprite.scrollFactor.set(0, 0);
+							//	add(lightsOutSprite); // lights out stuff
+			
+							//	add(stageCurtains);
+											
+				
 					
 
 			
@@ -735,6 +792,49 @@ class PlayState extends MusicBeatState
 
 		add(dadGroup);
 		add(boyfriendGroup);
+
+		if (curStage == 'toogus')
+			{
+				stageFront2 = new FlxSprite(-900, 800).loadGraphic(Paths.image('table'));
+				stageFront2.updateHitbox();
+				stageFront2.antialiasing = true;
+				stageFront2.scrollFactor.set(1, 1);
+				stageFront2.setGraphicSize(Std.int(stageFront2.width * 1.6));
+
+				stageFront3 = new FlxSprite(1500, 800).loadGraphic(Paths.image('table'));
+				stageFront3.updateHitbox();
+				stageFront3.antialiasing = true;
+				stageFront3.scrollFactor.set(1, 1);
+				stageFront3.setGraphicSize(Std.int(stageFront3.width * 1.6));
+				stageFront3.flipX = true;
+				add(stageFront2);
+				add(stageFront3);
+
+		//		stageFront2Dark = new FlxSprite(-850, 800).loadGraphic(Paths.image('tableDark'));
+		//		stageFront2Dark.updateHitbox();
+		///		stageFront2Dark.antialiasing = true;
+		//		stageFront2Dark.scrollFactor.set(1, 1);
+		//		stageFront2Dark.setGraphicSize(Std.int(stageFront2Dark.width * 1.6));
+		//		stageFront2Dark.alpha = 0;
+
+		//		stageFront3Dark = new FlxSprite(1600, 800).loadGraphic(Paths.image('tableDark'));
+		//		stageFront3Dark.updateHitbox();
+		//		stageFront3Dark.antialiasing = true;
+		//		stageFront3Dark.scrollFactor.set(1, 1);
+		//		stageFront3Dark.setGraphicSize(Std.int(stageFront3Dark.width * 1.6));
+		//		stageFront3Dark.flipX = true;
+		//		stageFront3Dark.alpha = 0;
+		//		add(stageFront2Dark);
+		//		add(stageFront3Dark);
+
+		//		miraGradient = new FlxSprite(0,50).loadGraphic(Paths.image('MiraGradient'));
+		//		miraGradient.setGraphicSize(Std.int(miraGradient.width * 1.4));
+		//		miraGradient.antialiasing = true;
+		//		miraGradient.scrollFactor.set(1, 1);
+		//		miraGradient.active = false;
+		//		miraGradient.alpha = 0;
+		//		add(miraGradient);
+			}
 		
 		if(curStage == 'spooky') {
 			add(halloweenWhite);
