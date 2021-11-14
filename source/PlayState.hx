@@ -384,6 +384,13 @@ class PlayState extends MusicBeatState
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
+
+			case 'alpha': //SHIT ASS
+				var bg:BGSprite = new BGSprite('HOTASS', -600, -200, 0.9, 0.9);
+				add(bg);
+
+				
+
 			case 'henry': //stick Min
 				var bg:BGSprite = new BGSprite('stagehenry', -1600, -300, 1, 1);
 				add(bg);
