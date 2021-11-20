@@ -1681,8 +1681,13 @@ class PlayState extends MusicBeatState
 
 		}
 
-		if(dad.curCharacter == "impostor3" && curSong == "Lights-Down"){
-			curPortrait = "greendark";
+		switch(curSong){
+			case "Lights-Down": curPortrait = "greendark";
+			case "Defeat": curPortrait = "black";
+			case "Oversight": curPortrait = "white";
+			case "Double-Kill": curPortrait = "blackairship";
+			case "Danger": curPortrait = "blackairship";
+			case "Titular": curPortrait = "secret";
 		}
 
 		#if desktop
@@ -2053,6 +2058,14 @@ class PlayState extends MusicBeatState
 		{
 			iconP1.swapOldIcon();
 		}*/
+
+		if(SONG.song == 'Defeat'){
+			healthBar.visible = false;
+			healthBarBG.visible = false;
+			health = 1;
+			if(songMisses != 0)
+				health = 0;
+		}
 
 		callOnLuas('onUpdate', [elapsed]);
 
