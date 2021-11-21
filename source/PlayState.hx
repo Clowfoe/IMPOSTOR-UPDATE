@@ -1684,6 +1684,8 @@ class PlayState extends MusicBeatState
 		switch(curSong){
 			case "Lights-Down": curPortrait = "greendark";
 			case "Defeat": curPortrait = "black";
+			case "Mando": curPortrait = "yellow";
+			case "Dlow": curPortrait = "yellow";
 			case "Oversight": curPortrait = "white";
 			case "Double-Kill": curPortrait = "blackairship";
 			case "Danger": curPortrait = "blackairship";
