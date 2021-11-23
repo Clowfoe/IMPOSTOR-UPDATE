@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="redplayable.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="derecha0000" x="0" y="0" width="883" height="404" pivotX="104.4" pivotY="-106.95" frameX="-113" frameY="-12" frameWidth="996" frameHeight="476"/>
+	<SubTexture name="derecha0001" x="913" y="0" width="850" height="404" frameX="-137" frameY="-12" frameWidth="996" frameHeight="476"/>
+	<SubTexture name="derecha0002" x="1793" y="0" width="738" height="464" frameX="-145" frameY="-12" frameWidth="996" frameHeight="476"/>
+	<SubTexture name="derecha0003" x="2561" y="0" width="724" height="404" frameX="-149" frameY="-12" frameWidth="996" frameHeight="476"/>
+	<SubTexture name="derecha0004" x="3315" y="0" width="777" height="404" frameX="-113" frameY="-12" frameWidth="996" frameHeight="476"/>
+	<SubTexture name="derecha0005" x="4122" y="0" width="809" height="416" frameX="0" frameY="0" frameWidth="996" frameHeight="476"/>
+	<SubTexture name="derecha shoot0000" x="4961" y="0" width="573" height="404" pivotX="516.15" pivotY="-63.45" frameX="-484" frameY="-55" frameWidth="1063" frameHeight="472"/>
+	<SubTexture name="derecha shoot0001" x="5564" y="0" width="1063" height="417" frameX="0" frameY="-42" frameWidth="1063" frameHeight="472"/>
+	<SubTexture name="derecha shoot0002" x="6657" y="0" width="1062" height="459" frameX="0" frameY="0" frameWidth="1063" frameHeight="472"/>
+	<SubTexture name="derecha shoot0003" x="0" y="494" width="1057" height="437" frameX="0" frameY="-22" frameWidth="1063" frameHeight="472"/>
+	<SubTexture name="derecha shoot0004" x="1087" y="494" width="1048" height="404" frameX="0" frameY="-55" frameWidth="1063" frameHeight="472"/>
+	<SubTexture name="derecha shoot0005" x="2165" y="494" width="1011" height="417" frameX="0" frameY="-55" frameWidth="1063" frameHeight="472"/>
+	<SubTexture name="pink down0000" x="3206" y="494" width="603" height="387" pivotX="-1.9" pivotY="-2.35" frameX="-14" frameY="-74" frameWidth="617" frameHeight="473"/>
+	<SubTexture name="pink down0001" x="3839" y="494" width="598" height="397" frameX="-15" frameY="-76" frameWidth="617" frameHeight="473"/>
+	<SubTexture name="pink down0002" x="4467" y="494" width="597" height="399" frameX="-15" frameY="-74" frameWidth="617" frameHeight="473"/>
+	<SubTexture name="pink down0003" x="5094" y="494" width="591" height="387" frameX="-15" frameY="-60" frameWidth="617" frameHeight="473"/>
+	<SubTexture name="pink down0004" x="5715" y="494" width="576" height="411" frameX="-14" frameY="-38" frameWidth="617" frameHeight="473"/>
+	<SubTexture name="pink down0005" x="6321" y="494" width="571" height="452" frameX="0" frameY="0" frameWidth="617" frameHeight="473"/>
+	<SubTexture name="pink down shoot0000" x="6922" y="494" width="490" height="372" pivotX="364" pivotY="-2.35" frameX="-379" frameY="-74" frameWidth="896" frameHeight="452"/>
+	<SubTexture name="pink down shoot0001" x="7442" y="494" width="491" height="370" frameX="-380" frameY="-76" frameWidth="896" frameHeight="452"/>
+	<SubTexture name="pink down shoot0002" x="0" y="976" width="868" height="382" frameX="-1" frameY="-64" frameWidth="896" frameHeight="452"/>
+	<SubTexture name="pink down shoot0003" x="898" y="976" width="867" height="404" frameX="0" frameY="-43" frameWidth="896" frameHeight="452"/>
+	<SubTexture name="pink down shoot0004" x="1795" y="976" width="862" height="414" frameX="0" frameY="-35" frameWidth="896" frameHeight="452"/>
+	<SubTexture name="pink down shoot0005" x="2687" y="976" width="896" height="452"/>
+	<SubTexture name="pink idle0000" x="3613" y="976" width="693" height="387" pivotX="314.2" pivotY="158.75" frameX="-8" frameY="-7" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0001" x="3613" y="976" width="693" height="387" frameX="-8" frameY="-7" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0002" x="4336" y="976" width="698" height="385" frameX="-8" frameY="-8" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0003" x="4336" y="976" width="698" height="385" frameX="-8" frameY="-8" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0004" x="5064" y="976" width="696" height="389" frameX="-6" frameY="-5" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0005" x="5064" y="976" width="696" height="389" frameX="-6" frameY="-5" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0006" x="5790" y="976" width="689" height="391" frameX="-6" frameY="-3" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0007" x="5790" y="976" width="689" height="391" frameX="-6" frameY="-3" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0008" x="6509" y="976" width="689" height="393" frameX="-6" frameY="-1" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0009" x="6509" y="976" width="689" height="393" frameX="-6" frameY="-1" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0010" x="7228" y="976" width="695" height="394" frameX="-1" frameY="0" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0011" x="7228" y="976" width="695" height="394" frameX="-1" frameY="0" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0012" x="0" y="1458" width="699" height="394" frameX="0" frameY="0" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0013" x="0" y="1458" width="699" height="394" frameX="0" frameY="0" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0014" x="729" y="1458" width="698" height="394" frameX="-1" frameY="0" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink idle0015" x="729" y="1458" width="698" height="394" frameX="-1" frameY="0" frameWidth="706" frameHeight="394"/>
+	<SubTexture name="pink izquierda tru0000" x="1457" y="1458" width="782" height="398" pivotX="145.85" pivotY="-102.05" frameX="-18" frameY="0" frameWidth="805" frameHeight="446"/>
+	<SubTexture name="pink izquierda tru0001" x="2269" y="1458" width="795" height="398" frameX="-5" frameY="0" frameWidth="805" frameHeight="446"/>
+	<SubTexture name="pink izquierda tru0002" x="3094" y="1458" width="799" height="398" frameX="0" frameY="0" frameWidth="805" frameHeight="446"/>
+	<SubTexture name="pink izquierda tru0003" x="3923" y="1458" width="769" height="398" frameX="-31" frameY="0" frameWidth="805" frameHeight="446"/>
+	<SubTexture name="pink izquierda tru0004" x="4722" y="1458" width="654" height="446" frameX="-146" frameY="0" frameWidth="805" frameHeight="446"/>
+	<SubTexture name="pink izquierda tru0005" x="5406" y="1458" width="612" height="412" frameX="-193" frameY="0" frameWidth="805" frameHeight="446"/>
+	<SubTexture name="pink izquierda tru shoot0000" x="6048" y="1458" width="782" height="398" pivotX="569.7" pivotY="-37.15" frameX="-442" frameY="-65" frameWidth="1229" frameHeight="482"/>
+	<SubTexture name="pink izquierda tru shoot0001" x="6860" y="1458" width="1224" height="415" frameX="0" frameY="-48" frameWidth="1229" frameHeight="482"/>
+	<SubTexture name="pink izquierda tru shoot0002" x="0" y="1934" width="1207" height="463" frameX="-16" frameY="0" frameWidth="1229" frameHeight="482"/>
+	<SubTexture name="pink izquierda tru shoot0003" x="1237" y="1934" width="1208" height="417" frameX="-16" frameY="-46" frameWidth="1229" frameHeight="482"/>
+	<SubTexture name="pink izquierda tru shoot0004" x="2475" y="1934" width="1208" height="398" frameX="-16" frameY="-65" frameWidth="1229" frameHeight="482"/>
+	<SubTexture name="pink izquierda tru shoot0005" x="3713" y="1934" width="1213" height="417" frameX="-16" frameY="-65" frameWidth="1229" frameHeight="482"/>
+	<SubTexture name="pink up0000" x="4956" y="1934" width="614" height="646" pivotX="-1521.75" pivotY="-35.9" frameX="-133" frameY="-194" frameWidth="978" frameHeight="841"/>
+	<SubTexture name="pink up0001" x="5600" y="1934" width="656" height="777" frameX="-142" frameY="-64" frameWidth="978" frameHeight="841"/>
+	<SubTexture name="pink up0002" x="6286" y="1934" width="715" height="831" frameX="-153" frameY="-10" frameWidth="978" frameHeight="841"/>
+	<SubTexture name="pink up0003" x="7031" y="1934" width="764" height="840" frameX="-149" frameY="0" frameWidth="978" frameHeight="841"/>
+	<SubTexture name="pink up0004" x="0" y="2804" width="878" height="766" frameX="-100" frameY="-71" frameWidth="978" frameHeight="841"/>
+	<SubTexture name="pink up0005" x="908" y="2804" width="681" height="482" frameX="0" frameY="-353" frameWidth="978" frameHeight="841"/>
+	<SubTexture name="pink up shoot0000" x="1619" y="2804" width="503" height="521" pivotX="-1190.55" pivotY="-347.4" frameX="-448" frameY="-7" frameWidth="956" frameHeight="529"/>
+	<SubTexture name="pink up shoot0001" x="2152" y="2804" width="528" height="529" frameX="-426" frameY="0" frameWidth="956" frameHeight="529"/>
+	<SubTexture name="pink up shoot0002" x="2710" y="2804" width="956" height="523" frameX="0" frameY="-6" frameWidth="956" frameHeight="529"/>
+	<SubTexture name="pink up shoot0003" x="3696" y="2804" width="955" height="512" frameX="-1" frameY="-16" frameWidth="956" frameHeight="529"/>
+	<SubTexture name="pink up shoot0004" x="4681" y="2804" width="938" height="490" frameX="-1" frameY="-35" frameWidth="956" frameHeight="529"/>
+	<SubTexture name="pink up shoot0005" x="5649" y="2804" width="921" height="482" frameX="-1" frameY="-41" frameWidth="956" frameHeight="529"/>
+	<SubTexture name="red miss <0000" x="6600" y="2804" width="768" height="398" pivotX="-6.4" pivotY="0" frameX="-38" frameY="0" frameWidth="812" frameHeight="398"/>
+	<SubTexture name="red miss <0001" x="0" y="3600" width="806" height="398" frameX="0" frameY="0" frameWidth="812" frameHeight="398"/>
+	<SubTexture name="red miss <0002" x="836" y="3600" width="800" height="398" frameX="-7" frameY="0" frameWidth="812" frameHeight="398"/>
+	<SubTexture name="red miss <0003" x="1666" y="3600" width="711" height="398" frameX="-101" frameY="0" frameWidth="812" frameHeight="398"/>
+	<SubTexture name="red miss <0004" x="1666" y="3600" width="711" height="398" frameX="-101" frameY="0" frameWidth="812" frameHeight="398"/>
+	<SubTexture name="red miss <0005" x="1666" y="3600" width="711" height="398" frameX="-101" frameY="0" frameWidth="812" frameHeight="398"/>
+	<SubTexture name="red miss down0000" x="2407" y="3600" width="621" height="394" pivotX="-20.55" pivotY="42" frameX="-1" frameY="-40" frameWidth="631" frameHeight="451"/>
+	<SubTexture name="red miss down0001" x="3058" y="3600" width="613" height="409" frameX="-13" frameY="-42" frameWidth="631" frameHeight="451"/>
+	<SubTexture name="red miss down0002" x="3701" y="3600" width="615" height="401" frameX="-11" frameY="-36" frameWidth="631" frameHeight="451"/>
+	<SubTexture name="red miss down0003" x="4346" y="3600" width="631" height="414" frameX="0" frameY="0" frameWidth="631" frameHeight="451"/>
+	<SubTexture name="red miss down0004" x="4346" y="3600" width="631" height="414" frameX="0" frameY="0" frameWidth="631" frameHeight="451"/>
+	<SubTexture name="red miss down0005" x="4346" y="3600" width="631" height="414" frameX="0" frameY="0" frameWidth="631" frameHeight="451"/>
+	<SubTexture name="red miss up0000" x="5007" y="3600" width="670" height="711" pivotX="-28.75" pivotY="-48.65" frameX="0" frameY="-23" frameWidth="684" frameHeight="734"/>
+	<SubTexture name="red miss up0001" x="5707" y="3600" width="656" height="734" frameX="-14" frameY="0" frameWidth="684" frameHeight="734"/>
+	<SubTexture name="red miss up0002" x="6393" y="3600" width="660" height="720" frameX="-24" frameY="-14" frameWidth="684" frameHeight="734"/>
+	<SubTexture name="red miss up0003" x="7083" y="3600" width="650" height="678" frameX="-14" frameY="-56" frameWidth="684" frameHeight="734"/>
+	<SubTexture name="red miss up0004" x="7083" y="3600" width="650" height="678" frameX="-14" frameY="-56" frameWidth="684" frameHeight="734"/>
+	<SubTexture name="red miss up0005" x="7083" y="3600" width="650" height="678" frameX="-14" frameY="-56" frameWidth="684" frameHeight="734"/>
+	<SubTexture name="red miss>0000" x="0" y="4364" width="825" height="424" pivotX="0" pivotY="-54.1" frameX="0" frameY="0" frameWidth="866" frameHeight="424"/>
+	<SubTexture name="red miss>0001" x="855" y="4364" width="824" height="424" frameX="-42" frameY="0" frameWidth="866" frameHeight="424"/>
+	<SubTexture name="red miss>0002" x="1709" y="4364" width="796" height="424" frameX="-48" frameY="0" frameWidth="866" frameHeight="424"/>
+	<SubTexture name="red miss>0003" x="2535" y="4364" width="680" height="424" frameX="-24" frameY="0" frameWidth="866" frameHeight="424"/>
+	<SubTexture name="red miss>0004" x="2535" y="4364" width="680" height="424" frameX="-24" frameY="0" frameWidth="866" frameHeight="424"/>
+	<SubTexture name="red miss>0005" x="2535" y="4364" width="680" height="424" frameX="-24" frameY="0" frameWidth="866" frameHeight="424"/>
+</TextureAtlas>

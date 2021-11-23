@@ -18,7 +18,9 @@ class Main extends Sprite
 	var framerate:Int = 60; // How many frames per second the game should run at.
 	var skipSplash:Bool = true; // Whether to skip the flixel splash screen that appears in release mode.
 	var startFullscreen:Bool = false; // Whether to start the game in fullscreen on desktop targets
+	public static var fpsCounter:FPS;
 	public static var fpsVar:FPS;
+	
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
 
@@ -50,6 +52,7 @@ class Main extends Sprite
 
 		setupGame();
 	}
+	
 
 	private function setupGame():Void
 	{
@@ -71,18 +74,43 @@ class Main extends Sprite
 
 		Paths.getModFolders();
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
+		
+		
 
 		#if !mobile
+		fpsCounter = new FPS(10, 3, 0xFFFFFF);
+		addChild(fpsCounter);
+
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
-		addChild(fpsVar);
-		if(fpsVar != null) {
-			fpsVar.visible = ClientPrefs.showFPS;
-		}
+		addChild(fpsCounter);
+//		if(fpsCounter != null) {
+	//		fpsCounter.visible = ClientPrefs.showFPS;
+	//	}
 		#end
+
+		
 
 		#if html5
 		FlxG.autoPause = false;
 		FlxG.mouse.visible = false;
 		#end
+	}
+	public function toggleFPS(fpsEnabled:Bool):Void {
+		fpsCounter.visible = fpsEnabled;
+	}
+
+	public function setFPSCap(cap:Float)
+	{
+		openfl.Lib.current.stage.frameRate = cap;
+	}
+
+	public function getFPSCap():Float
+	{
+		return openfl.Lib.current.stage.frameRate;
+	}
+
+	public function getFPS():Float
+	{
+		return fpsCounter.currentFPS;
 	}
 }
