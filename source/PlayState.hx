@@ -681,7 +681,15 @@ class PlayState extends MusicBeatState
 			
 							//	add(stageCurtains);
 											
-				
+			case 'defeat':
+					
+						
+						curStage = 'defeat';
+						var defeat:FlxSprite = new FlxSprite(0, 100).loadGraphic(Paths.image('defeatfnf', 'shared'));		
+						defeat.setGraphicSize(Std.int(defeat.width * 2));
+						defeat.scrollFactor.set(1,1);
+						defeat.antialiasing = true;
+						add(defeat);
 					
 
 			
@@ -2243,13 +2251,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		if(SONG.song == 'Defeat'){
-			healthBar.visible = false;
-			healthBarBG.visible = false;
-			health = 1;
-			if(songMisses != 0)
-				health = 0;
-		}
+		
 
 		callOnLuas('onUpdate', [elapsed]);
 
@@ -2259,6 +2261,12 @@ class PlayState extends MusicBeatState
 				if(!ClientPrefs.lowQuality && bgGhouls.animation.curAnim.finished) {
 					bgGhouls.visible = false;
 				}
+			case 'defeat':
+				healthBar.visible = false;
+				healthBarBG.visible = false;
+				health = 1;
+				if(songMisses != 0)
+				health = 0;
 			case 'philly':
 				if (trainMoving)
 				{
