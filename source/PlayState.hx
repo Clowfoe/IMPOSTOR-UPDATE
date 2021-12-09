@@ -124,6 +124,9 @@ class PlayState extends MusicBeatState
 	public var dad:Character;
 	public var gf:Character;
 	public var boyfriend:Boyfriend;
+	public var bfLegs:Boyfriend;
+
+	var bfAnchorPoint:Array<Float> = [0, 0];
 
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
@@ -545,7 +548,46 @@ class PlayState extends MusicBeatState
 			//	stageFront.updateHitbox();
 			//	add(stageFront);
 
-				
+			case 'dangerSky':
+				curStage = 'dangerSky';
+				defaultCamZoom = 0.5;  
+
+				var bgSky:FlxSprite = new FlxSprite(-955, -1045.3).loadGraphic(Paths.image('dangerSky/bgSky', 'impostor'));
+				bgSky.antialiasing = true;
+				bgSky.scrollFactor.set(0, 0);
+				bgSky.scale.set(0.3, 0.3);
+				bgSky.active = true;
+				add(bgSky);	
+
+				var cloud1:FlxSprite = new FlxSprite(-237.8, 334.55).loadGraphic(Paths.image('dangerSky/cloud1', 'impostor'));
+				cloud1.antialiasing = true;
+				cloud1.scrollFactor.set(0.2, 0.2);
+				cloud1.scale.set(0.3, 0.3);
+				cloud1.active = true;
+				add(cloud1);	
+
+				var cloud2:FlxSprite = new FlxSprite(-191.25, 810.45).loadGraphic(Paths.image('dangerSky/cloud2', 'impostor'));
+				cloud2.antialiasing = true;
+				cloud2.scrollFactor.set(0.3, 0.3);
+				cloud2.scale.set(0.3, 0.3);
+				cloud2.active = true;
+				add(cloud2);	
+
+				var cloudsky:FlxSprite = new FlxSprite(-219.2, 893.45).loadGraphic(Paths.image('dangerSky/cloudsky', 'impostor'));
+				cloudsky.antialiasing = true;
+				cloudsky.scrollFactor.set(0.5, 0.5);
+				cloudsky.scale.set(0.3, 0.3);
+				cloudsky.active = true;
+				add(cloudsky);	
+
+				var nuves:FlxSprite = new FlxSprite(-942.35, 1472.95).loadGraphic(Paths.image('dangerSky/nuves 1', 'impostor'));
+				nuves.antialiasing = true;
+				nuves.scrollFactor.set(0.7, 0.7);
+				nuves.scale.set(0.3, 0.3);
+				nuves.active = true;
+				add(nuves);	
+
+
 			case 'polus': 
 						curStage = 'polus';
 						defaultCamZoom = 0.9;  
@@ -1094,9 +1136,26 @@ class PlayState extends MusicBeatState
 		startCharacterPos(dad, true);
 		dadGroup.add(dad);
 
+		if(SONG.player1 == 'bf-running')
+		{
+			bfLegs = new Boyfriend(0, 0, 'bf-legs');
+			boyfriendGroup.add(bfLegs);
+		}
+		
+
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
+
+		if(SONG.player1 == 'bf-running')
+		{
+			bfLegs.x = boyfriend.x;
+			bfLegs.y = boyfriend.y;
+		}
+		
+
+		bfAnchorPoint[0] = boyfriend.x;
+		bfAnchorPoint[1] = boyfriend.y;
 		
 		var camPos:FlxPoint = new FlxPoint(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y);
 		camPos.x += gf.cameraPosition[0];
@@ -2228,6 +2287,19 @@ class PlayState extends MusicBeatState
 		{
 			iconP1.swapOldIcon();
 		}*/
+
+		var legPosY = [13, 7, -3, -1, -1, 2, 7, 9, 7, 2, 0, 0, 3, 1, 3, 7, 13];
+		var legPosX = [3, 4, 4, 5, 5, 4, 3, 2, 0, 0, -3, -4, -4, -5, -5, -4, -3];
+
+		if(boyfriend.curCharacter == 'bf-running')
+		{
+			if(boyfriend.animation.curAnim.name.startsWith("sing")){
+				bfLegs.alpha = 1;
+				boyfriend.y = bfAnchorPoint[1] + legPosY[bfLegs.animation.curAnim.curFrame];
+			}
+			else
+				bfLegs.alpha = 0;
+		}
 
 		if(curStage == "ejected")
 		{
@@ -4405,8 +4477,17 @@ class PlayState extends MusicBeatState
 			gf.dance();
 		}
 
+		if(curBeat % 1 == 0) {
+			if(boyfriend.curCharacter == 'bf-running')
+				bfLegs.dance();
+			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing") && boyfriend.curCharacter == 'bf-running')
+			{
+				boyfriend.dance();
+			}
+		}
+
 		if(curBeat % 2 == 0) {
-			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing"))
+			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing") && boyfriend.curCharacter != 'bf-running')
 			{
 				boyfriend.dance();
 			}
