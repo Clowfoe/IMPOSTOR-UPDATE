@@ -2,76 +2,65 @@
 	"animations": [
 		{
 			"offsets": [
-				365,
-				30
+				450,
+				350
 			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
 			"anim": "idle",
-			"loop": true,
+			"indices": [],
 			"name": "black idle (placeholder)"
 		},
 		{
 			"offsets": [
-				480,
-				43
+				450,
+				350
 			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singLEFT",
-			"loop": false,
-			"name": "LEFT"
-		},
-		{
-			"offsets": [
-				132,
-				22
-			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "RIGHT"
+			"indices": [],
+			"name": "black idle (placeholder)"
 		},
 		{
 			"offsets": [
-				341,
-				10
+				450,
+				350
 			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "DOWN"
+			"indices": [],
+			"name": "black idle (placeholder)"
 		},
 		{
 			"offsets": [
-				404,
-				135
+				450,
+				350
 			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT",
 			"indices": [],
+			"name": "black idle (placeholder)"
+		},
+		{
+			"offsets": [
+				450,
+				350
+			],
+			"loop": true,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "UP"
-		},
-		{
-			"offsets": [
-				616,
-				267
-			],
 			"indices": [],
-			"fps": 24,
-			"anim": "death",
-			"loop": false,
-			"name": "BLACK DEATH"
+			"name": "black idle (placeholder)"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/black",
+	"image": "characters/black_placeholder",
 	"position": [
 		0,
-		0
+		290
 	],
 	"healthicon": "black",
 	"flip_x": false,
@@ -81,9 +70,9 @@
 		79
 	],
 	"camera_position": [
-		0,
-		0
+		-430,
+		-190
 	],
-	"sing_duration": 4,
+	"sing_duration": 6.1,
 	"scale": 1
 }

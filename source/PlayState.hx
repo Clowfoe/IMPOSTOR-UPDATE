@@ -212,6 +212,11 @@ class PlayState extends MusicBeatState
 	var limoLight:BGSprite;
 	var limoCorpse:BGSprite;
 	var limoCorpseTwo:BGSprite;
+	var snow:FlxSprite;
+	var crowd:FlxSprite = new FlxSprite();
+	var gray:FlxSprite = new FlxSprite();
+	var neato:FlxSprite = new FlxSprite();
+	var saster:FlxSprite = new FlxSprite();
 	var bgLimo:BGSprite;
 	var grpLimoParticles:FlxTypedGroup<BGSprite>;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
@@ -404,6 +409,58 @@ class PlayState extends MusicBeatState
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
+
+			case 'chef': //mayhew has gone mad	
+						var floor:FlxSprite = new FlxSprite(-500, 400).loadGraphic(Paths.image('chef/floor', 'impostor'));
+						floor.antialiasing = true;
+						floor.scrollFactor.set(1, 1);
+						floor.setGraphicSize(Std.int(floor.width * 0.8));
+						floor.active = false;
+						add(floor);	
+
+						var bg:FlxSprite = new FlxSprite(-500, 0).loadGraphic(Paths.image('chef/bg', 'impostor'));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
+						bg.setGraphicSize(Std.int(bg.width * 0.8));
+						add(bg);		
+
+						gray = new FlxSprite(450, 150);
+						gray.frames = Paths.getSparrowAtlas('chef/gray', 'impostor');
+						gray.animation.addByPrefix('bop', 'gray', 24, false);
+						gray.animation.play('bop');
+						gray.antialiasing = true;
+						gray.scrollFactor.set(1, 1);
+						gray.active = true;
+						add(gray);
+
+						saster = new FlxSprite(-190, 270);
+						saster.frames = Paths.getSparrowAtlas('chef/saster', 'impostor');
+						saster.animation.addByPrefix('bop', 'saster', 24, false);
+						saster.animation.play('bop');
+						saster.antialiasing = true;
+						saster.scrollFactor.set(1, 1);
+						saster.active = true;
+						add(saster);
+
+						neato = new FlxSprite(1350, 270);
+						neato.frames = Paths.getSparrowAtlas('chef/neato', 'impostor');
+						neato.animation.addByPrefix('bop', 'neato', 24, false);
+						neato.animation.play('bop');
+						neato.antialiasing = true;
+						neato.scrollFactor.set(1, 1);
+						neato.active = true;
+						add(neato);
+
+						var desk:FlxSprite = new FlxSprite(0, 390).loadGraphic(Paths.image('chef/desk', 'impostor'));
+						desk.antialiasing = true;
+						desk.scrollFactor.set(1, 1);
+						desk.active = false;
+						desk.setGraphicSize(Std.int(desk.width * 0.8));
+						add(desk);		
+		
+						
+
 				case 'ejected':
 					
 						defaultCamZoom = 0.45;
@@ -619,16 +676,16 @@ class PlayState extends MusicBeatState
 						warehouse.active = false;
 						add(warehouse);
 
-						var crowd:FlxSprite = new FlxSprite(-280.5, 240.8);
-						crowd.frames = Paths.getSparrowAtlas('polus/CrowdBop', 'impostor');
-						crowd.animation.addByPrefix('CrowdBop', 'CrowdBop', 24);
-						crowd.animation.play('CrowdBop');
-						crowd.scrollFactor.set(1, 1);
-						crowd.antialiasing = true;
-						crowd.updateHitbox();
-						crowd.scale.set(1.5, 1.5);
+						var crowd2:FlxSprite = new FlxSprite(-280.5, 240.8);
+						crowd2.frames = Paths.getSparrowAtlas('polus/CrowdBop', 'impostor');
+						crowd2.animation.addByPrefix('CrowdBop', 'CrowdBop', 24);
+						crowd2.animation.play('CrowdBop');
+						crowd2.scrollFactor.set(1, 1);
+						crowd2.antialiasing = true;
+						crowd2.updateHitbox();
+						crowd2.scale.set(1.5, 1.5);
 						if(SONG.song.toLowerCase() == 'meltdown') {
-							add(crowd);
+							add(crowd2);
 						}
 
 						
@@ -643,39 +700,50 @@ class PlayState extends MusicBeatState
 			case 'polus2': 
 						curStage = 'polus2';
 						 
+						
  
-						var sky:FlxSprite = new FlxSprite(0, -200).loadGraphic(Paths.image('polus/polus2sky', 'impostor'));
+						var sky:FlxSprite = new FlxSprite(-100, -500).loadGraphic(Paths.image('polus/SkyPolusLol', 'impostor'));
 						sky.antialiasing = true;
 						sky.scrollFactor.set(0.5, 0.5);
 						sky.active = false;
-						sky.setGraphicSize(Std.int(sky.width * 1.2));
+						sky.setGraphicSize(Std.int(sky.width * 1));
 						add(sky);		
+
+						var rocksbg:FlxSprite = new FlxSprite(-250, -350).loadGraphic(Paths.image('polus/Back_Rocks', 'impostor'));
+						rocksbg.updateHitbox();
+						rocksbg.antialiasing = true;
+						rocksbg.setGraphicSize(Std.int(rocksbg.width * 1));
+						rocksbg.scrollFactor.set(0.6, 0.6);
+						rocksbg.active = false;
+						add(rocksbg);	
 		
-						var rocks:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('polus/polus2rocks', 'impostor'));
+						var rocks:FlxSprite = new FlxSprite(-100, 0).loadGraphic(Paths.image('polus/polus2rocks', 'impostor'));
 						rocks.updateHitbox();
 						rocks.antialiasing = true;
-						rocks.setGraphicSize(Std.int(rocks.width * 1.2));
-						rocks.scrollFactor.set(0.6, 0.6);
+						rocks.setGraphicSize(Std.int(rocks.width * 1));
+						rocks.scrollFactor.set(0.8, 0.8);
 						rocks.active = false;
 						add(rocks);	
 
-						var ground:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('polus/polus2ground', 'impostor'));
+						crowd = new FlxSprite(-350, -300);
+						crowd.frames = Paths.getSparrowAtlas('polus/Specimen_boppers', 'impostor');
+						crowd.animation.addByPrefix('bop', 'Specimen Path Bopping', 24, false);
+						crowd.animation.play('bop');
+						crowd.antialiasing = true;
+						crowd.scrollFactor.set(0.85, 0.85);
+						crowd.setGraphicSize(Std.int(crowd.width * 0.8));
+						crowd.active = true;
+						add(crowd);
+
+						var ground:FlxSprite = new FlxSprite(-300, -100).loadGraphic(Paths.image('polus/polus2ground', 'impostor'));
 						ground.updateHitbox();
-						ground.setGraphicSize(Std.int(ground.width * 1.2));
+						ground.setGraphicSize(Std.int(ground.width * 1));
 						ground.antialiasing = true;
 						ground.scrollFactor.set(1, 1);
 						ground.active = false;
 						add(ground);
 
-						var snow:FlxSprite = new FlxSprite(0, -550);
-						snow.frames = Paths.getSparrowAtlas('polus/snow', 'impostor');
-						snow.animation.addByPrefix('cum', 'cum', 24);
-						snow.animation.play('cum');
-						snow.scrollFactor.set(1, 1);
-						snow.antialiasing = true;
-						snow.updateHitbox();
-						snow.setGraphicSize(Std.int(snow.width * 1.2));
-						add(snow);
+						
 
 			case 'toogus':
 						
@@ -1004,6 +1072,41 @@ class PlayState extends MusicBeatState
 				}
 				add(cloudScroll);
 				add(speedLines);
+			}
+
+		if(curStage == "polus2")
+			{
+				snow = new FlxSprite(0, -600);
+				snow.frames = Paths.getSparrowAtlas('polus/snow', 'impostor');
+				snow.animation.addByPrefix('cum', 'cum', 24);
+				snow.animation.play('cum');
+				snow.scrollFactor.set(1, 1);
+				snow.antialiasing = true;
+				snow.updateHitbox();
+				snow.setGraphicSize(Std.int(snow.width * 2));
+				
+				add(snow);
+			}
+
+		if(curStage == "chef")
+			{
+				var soup = new FlxSprite(1300, 600).loadGraphic(Paths.image('chef/soup', 'impostor'));
+				soup.updateHitbox();
+				soup.antialiasing = true;
+				soup.scrollFactor.set(1.3, 1.3);
+				add(soup);
+
+
+				var smokelol:FlxSprite = new FlxSprite(1400, 100);
+				smokelol.frames = Paths.getSparrowAtlas('chef/smokeee', 'impostor');
+				smokelol.animation.addByPrefix('CrowdBop', 'WHHAAT', 24);
+				smokelol.animation.play('CrowdBop');
+				smokelol.scrollFactor.set(1.3, 1.3);
+				smokelol.antialiasing = true;
+				smokelol.updateHitbox();
+				smokelol.scale.set(1, 1);
+				add(smokelol);
+
 			}
 
 		if (curStage == 'toogus')
@@ -4504,6 +4607,18 @@ class PlayState extends MusicBeatState
 			case 'school':
 				if(!ClientPrefs.lowQuality) {
 					bgGirls.dance();
+				}
+
+			case 'polus2':
+				if(curBeat % 2 == 0) {
+					crowd.animation.play('bop');
+				}
+
+			case 'chef':
+				if(curBeat % 2 == 0) {
+					gray.animation.play('bop');
+					saster.animation.play('bop');
+					neato.animation.play('bop');
 				}
 
 			case 'mall':
