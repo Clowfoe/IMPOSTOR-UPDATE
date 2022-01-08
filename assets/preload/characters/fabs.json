@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				-40
+			],
+			"indices": [],
+			"fps": 28,
+			"anim": "idle",
+			"loop": false,
+			"name": "fabs idle"
+		},
+		{
+			"offsets": [
+				25,
+				-66
+			],
+			"indices": [],
+			"fps": 28,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "fabs left"
+		},
+		{
+			"offsets": [
+				-9,
+				-52
+			],
+			"indices": [],
+			"fps": 28,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "fabs right"
+		},
+		{
+			"offsets": [
+				12,
+				-95
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "fabs down"
+		},
+		{
+			"offsets": [
+				-4,
+				-7
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "fabs up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/fabs",
+	"position": [
+		0,
+		80
+	],
+	"healthicon": "ziffy",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		153,
+		51
+	],
+	"camera_position": [
+		0,
+		110
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

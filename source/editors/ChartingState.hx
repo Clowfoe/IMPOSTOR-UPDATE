@@ -58,7 +58,9 @@ class ChartingState extends MusicBeatState
 		'Hey!',
 		'Hurt Note',
 		'GF Sing',
-		'No Animation'
+		'No Animation',
+		'fabs',
+		'rare'
 	];
 	private var noteTypeIntMap:Map<Int, String> = new Map<Int, String>();
 	private var noteTypeMap:Map<String, Null<Int>> = new Map<String, Null<Int>>();
@@ -228,6 +230,7 @@ class ChartingState extends MusicBeatState
 				player1: 'bf',
 				player2: 'dad',
 				player3: 'gf',
+				fabs: 'fabs',
 				speed: 1,
 				stage: 'stage',
 				validScore: false
@@ -2123,6 +2126,7 @@ class ChartingState extends MusicBeatState
 
 			player1: _song.player1,
 			player2: _song.player2,
+			fabs: _song.fabs,
 			player3: _song.player3,
 			stage: _song.stage,
 			validScore: false

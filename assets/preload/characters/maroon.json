@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				169,
 				-190
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "MaroonIdle"
+			"fps": 24,
+			"name": "idle",
+			"indices": []
 		},
 		{
-			"offsets": [
-				105,
-				-169
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				95,
+				-279
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "RIGHT"
+			"fps": 24,
+			"name": "right",
+			"indices": []
 		},
 		{
-			"offsets": [
-				105,
-				-215
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				135,
+				-115
+			],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "DOWN"
+			"fps": 24,
+			"name": "down",
+			"indices": []
 		},
 		{
-			"offsets": [
-				182,
-				-200
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-18,
+				-230
+			],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "LEFT"
+			"fps": 24,
+			"name": "left",
+			"indices": []
 		},
 		{
-			"offsets": [
-				234,
-				-137
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				162,
+				-237
+			],
 			"anim": "singUP",
-			"indices": [],
-			"name": "UP"
+			"fps": 24,
+			"name": "up",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/maroon",
 	"position": [
 		70,
-		100
+		50
 	],
 	"healthicon": "maroon",
 	"flip_x": false,

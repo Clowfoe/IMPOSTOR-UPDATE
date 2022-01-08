@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="drippy.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="DrippyDown0000" x="0" y="0" width="500" height="667" frameX="0" frameY="-4" frameWidth="500" frameHeight="671"/>
+	<SubTexture name="DrippyDown0001" x="0" y="0" width="500" height="667" frameX="0" frameY="-4" frameWidth="500" frameHeight="671"/>
+	<SubTexture name="DrippyDown0002" x="530" y="0" width="494" height="671" frameX="-4" frameY="0" frameWidth="500" frameHeight="671"/>
+	<SubTexture name="DrippyDown0003" x="530" y="0" width="494" height="671" frameX="-4" frameY="0" frameWidth="500" frameHeight="671"/>
+	<SubTexture name="DrippyDown0004" x="1054" y="0" width="492" height="671" frameX="-4" frameY="0" frameWidth="500" frameHeight="671"/>
+	<SubTexture name="DrippyDown0005" x="1054" y="0" width="492" height="671" frameX="-4" frameY="0" frameWidth="500" frameHeight="671"/>
+	<SubTexture name="DrippyDown0006" x="1576" y="0" width="486" height="671" frameX="-8" frameY="0" frameWidth="500" frameHeight="671"/>
+	<SubTexture name="DrippyDown0007" x="1576" y="0" width="486" height="671" frameX="-8" frameY="0" frameWidth="500" frameHeight="671"/>
+	<SubTexture name="DrippyIdle0000" x="2092" y="0" width="609" height="683" frameX="-6" frameY="-22" frameWidth="615" frameHeight="705"/>
+	<SubTexture name="DrippyIdle0001" x="2092" y="0" width="609" height="683" frameX="-6" frameY="-22" frameWidth="615" frameHeight="705"/>
+	<SubTexture name="DrippyIdle0002" x="2731" y="0" width="613" height="703" frameX="-2" frameY="-2" frameWidth="615" frameHeight="705"/>
+	<SubTexture name="DrippyIdle0003" x="2731" y="0" width="613" height="703" frameX="-2" frameY="-2" frameWidth="615" frameHeight="705"/>
+	<SubTexture name="DrippyIdle0004" x="3374" y="0" width="607" height="705" frameX="0" frameY="0" frameWidth="615" frameHeight="705"/>
+	<SubTexture name="DrippyIdle0005" x="3374" y="0" width="607" height="705" frameX="0" frameY="0" frameWidth="615" frameHeight="705"/>
+	<SubTexture name="DrippyIdle0006" x="4011" y="0" width="605" height="700" frameX="0" frameY="-5" frameWidth="615" frameHeight="705"/>
+	<SubTexture name="DrippyIdle0007" x="4011" y="0" width="605" height="700" frameX="0" frameY="-5" frameWidth="615" frameHeight="705"/>
+	<SubTexture name="DrippyIdle0008" x="4646" y="0" width="609" height="698" frameX="0" frameY="-7" frameWidth="615" frameHeight="705"/>
+	<SubTexture name="DrippyIdle0009" x="4646" y="0" width="609" height="698" frameX="0" frameY="-7" frameWidth="615" frameHeight="705"/>
+	<SubTexture name="DrippyIdle0010" x="5285" y="0" width="613" height="695" frameX="-1" frameY="-10" frameWidth="615" frameHeight="705"/>
+	<SubTexture name="DrippyIdle0011" x="5285" y="0" width="613" height="695" frameX="-1" frameY="-10" frameWidth="615" frameHeight="705"/>
+	<SubTexture name="DrippyIdle0012" x="5928" y="0" width="609" height="695" frameX="-3" frameY="-10" frameWidth="615" frameHeight="705"/>
+	<SubTexture name="DrippyLeft0000" x="6567" y="0" width="545" height="697"/>
+	<SubTexture name="DrippyLeft0001" x="6567" y="0" width="545" height="697"/>
+	<SubTexture name="DrippyLeft0002" x="7142" y="0" width="516" height="696" frameX="-12" frameY="-1" frameWidth="545" frameHeight="697"/>
+	<SubTexture name="DrippyLeft0003" x="7142" y="0" width="516" height="696" frameX="-12" frameY="-1" frameWidth="545" frameHeight="697"/>
+	<SubTexture name="DrippyLeft0004" x="7688" y="0" width="503" height="697" frameX="-17" frameY="0" frameWidth="545" frameHeight="697"/>
+	<SubTexture name="DrippyLeft0005" x="7688" y="0" width="503" height="697" frameX="-17" frameY="0" frameWidth="545" frameHeight="697"/>
+	<SubTexture name="DrippyLeft0006" x="0" y="735" width="504" height="697" frameX="-13" frameY="0" frameWidth="545" frameHeight="697"/>
+	<SubTexture name="DrippyLeft0007" x="0" y="735" width="504" height="697" frameX="-13" frameY="0" frameWidth="545" frameHeight="697"/>
+	<SubTexture name="DrippyRight0000" x="534" y="735" width="629" height="697" frameX="0" frameY="0" frameWidth="630" frameHeight="697"/>
+	<SubTexture name="DrippyRight0001" x="534" y="735" width="629" height="697" frameX="0" frameY="0" frameWidth="630" frameHeight="697"/>
+	<SubTexture name="DrippyRight0002" x="1193" y="735" width="597" height="697" frameX="-26" frameY="0" frameWidth="630" frameHeight="697"/>
+	<SubTexture name="DrippyRight0003" x="1193" y="735" width="597" height="697" frameX="-26" frameY="0" frameWidth="630" frameHeight="697"/>
+	<SubTexture name="DrippyRight0004" x="1820" y="735" width="597" height="697" frameX="-29" frameY="0" frameWidth="630" frameHeight="697"/>
+	<SubTexture name="DrippyRight0005" x="1820" y="735" width="597" height="697" frameX="-29" frameY="0" frameWidth="630" frameHeight="697"/>
+	<SubTexture name="DrippyRight0006" x="2447" y="735" width="596" height="697" frameX="-34" frameY="0" frameWidth="630" frameHeight="697"/>
+	<SubTexture name="DrippyShotty0000" x="3073" y="735" width="1128" height="695" frameX="-5" frameY="-85" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyShotty0001" x="4231" y="735" width="1274" height="695" frameX="0" frameY="-85" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyShotty0002" x="5535" y="735" width="1182" height="695" frameX="-15" frameY="-85" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyShotty0003" x="5535" y="735" width="1182" height="695" frameX="-15" frameY="-85" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyShotty0004" x="6747" y="735" width="1171" height="695" frameX="-26" frameY="-85" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyShotty0005" x="0" y="1462" width="1423" height="794" frameX="-26" frameY="0" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyShotty0006" x="1453" y="1462" width="1421" height="794" frameX="-28" frameY="0" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyShotty0007" x="2904" y="1462" width="1079" height="694" frameX="-28" frameY="-86" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyShotty0008" x="4013" y="1462" width="1079" height="695" frameX="-28" frameY="-85" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyShotty0009" x="4013" y="1462" width="1079" height="695" frameX="-28" frameY="-85" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyShotty0010" x="5122" y="1462" width="1080" height="696" frameX="-27" frameY="-84" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyShotty0011" x="5122" y="1462" width="1080" height="696" frameX="-27" frameY="-84" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyShotty0012" x="6232" y="1462" width="1073" height="697" frameX="-30" frameY="-83" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyShotty0013" x="6232" y="1462" width="1073" height="697" frameX="-30" frameY="-83" frameWidth="1449" frameHeight="794"/>
+	<SubTexture name="DrippyUp0000" x="7335" y="1462" width="505" height="722" frameX="0" frameY="-5" frameWidth="505" frameHeight="727"/>
+	<SubTexture name="DrippyUp0001" x="7335" y="1462" width="505" height="722" frameX="0" frameY="-5" frameWidth="505" frameHeight="727"/>
+	<SubTexture name="DrippyUp0002" x="0" y="2286" width="496" height="723" frameX="-5" frameY="-4" frameWidth="505" frameHeight="727"/>
+	<SubTexture name="DrippyUp0003" x="0" y="2286" width="496" height="723" frameX="-5" frameY="-4" frameWidth="505" frameHeight="727"/>
+	<SubTexture name="DrippyUp0004" x="526" y="2286" width="488" height="725" frameX="-10" frameY="-2" frameWidth="505" frameHeight="727"/>
+	<SubTexture name="DrippyUp0005" x="526" y="2286" width="488" height="725" frameX="-10" frameY="-2" frameWidth="505" frameHeight="727"/>
+	<SubTexture name="DrippyUp0006" x="1044" y="2286" width="484" height="727" frameX="-10" frameY="0" frameWidth="505" frameHeight="727"/>
+	<SubTexture name="DrippyUp0007" x="1558" y="2286" width="486" height="727" frameX="-8" frameY="0" frameWidth="505" frameHeight="727"/>
+</TextureAtlas>
