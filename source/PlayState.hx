@@ -612,6 +612,7 @@ class PlayState extends MusicBeatState
 						speedLines.alpha = 0.3;
 
 			case 'alpha': //SHIT ASS
+				curStage = 'alpha';				
 				var bg:BGSprite = new BGSprite('HOTASS', -600, -200, 0.9, 0.9);
 				add(bg);
 
@@ -772,105 +773,93 @@ class PlayState extends MusicBeatState
 			
 							//	add(stageCurtains);
 			case 'reactor':
-						
-								defaultCamZoom = 0.5;
-								curStage = 'reactor';
-								var bg:FlxSprite = new FlxSprite(-2300,-1700).loadGraphic(Paths.image('reactor/reactor background', 'impostor'));
-								bg.setGraphicSize(Std.int(bg.width * 0.7));
-								bg.antialiasing = true;
-								bg.scrollFactor.set(1, 1);
-								bg.active = false;
-								add(bg);
-
-								yellow = new FlxSprite(-400, 150);
-								yellow.frames = Paths.getSparrowAtlas('reactor/susBoppers', 'impostor');
-								yellow.animation.addByPrefix('bop', 'yellow sus', 24, false);
-								yellow.animation.play('bop');
-								yellow.setGraphicSize(Std.int(yellow.width * 0.7));
-								yellow.antialiasing = true;
-								yellow.scrollFactor.set(1, 1);
-								yellow.active = true;
-								add(yellow);
-
-								var pillar1:FlxSprite = new FlxSprite(-2300,-1700).loadGraphic(Paths.image('reactor/back pillars', 'impostor'));
-								pillar1.setGraphicSize(Std.int(pillar1.width * 0.7));
-								pillar1.antialiasing = true;
-								pillar1.scrollFactor.set(1, 1);
-								pillar1.active = false;
-								add(pillar1);
-
-								dripster = new FlxSprite(1375, 150);
-								dripster.frames = Paths.getSparrowAtlas('reactor/susBoppers', 'impostor');
-								dripster.animation.addByPrefix('bop', 'blue sus', 24, false);
-								dripster.animation.play('bop');
-								dripster.setGraphicSize(Std.int(dripster.width * 0.7));
-								dripster.antialiasing = true;
-								dripster.scrollFactor.set(1, 1);
-								dripster.active = true;
-								add(dripster);
-
-								var pillar2:FlxSprite = new FlxSprite(-2300,-1700).loadGraphic(Paths.image('reactor/middle pillars', 'impostor'));
-								pillar2.setGraphicSize(Std.int(pillar2.width * 0.7));
-								pillar2.antialiasing = true;
-								pillar2.scrollFactor.set(1, 1);
-								pillar2.active = false;
-								add(pillar2);
-
-								amogus = new FlxSprite(1670, 250);
-								amogus.frames = Paths.getSparrowAtlas('reactor/susBoppers', 'impostor');
-								amogus.animation.addByPrefix('bop', 'Vegans', 24, false);
-								amogus.animation.play('bop');
-								amogus.setGraphicSize(Std.int(amogus.width * 0.7));
-								amogus.antialiasing = true;
-								amogus.scrollFactor.set(1, 1);
-								amogus.active = true;
-								add(amogus);
-
-								brown = new FlxSprite(-850, 190);
-								brown.frames = Paths.getSparrowAtlas('reactor/susBoppers', 'impostor');
-								brown.animation.addByPrefix('bop', 'brown sus', 24, false);
-								brown.animation.play('bop');
-								brown.setGraphicSize(Std.int(brown.width * 0.7));
-								brown.antialiasing = true;
-								brown.scrollFactor.set(1, 1);
-								brown.active = true;
-								add(brown);
-
-								var pillar3:FlxSprite = new FlxSprite(-2300,-1700).loadGraphic(Paths.image('reactor/front pillars', 'impostor'));
-								pillar3.setGraphicSize(Std.int(pillar3.width * 0.7));
-								pillar3.antialiasing = true;
-								pillar3.scrollFactor.set(1, 1);
-								pillar3.active = false;
-								add(pillar3);
-
-								orb = new FlxSprite(-460,-1300).loadGraphic(Paths.image('reactor/ball of big ol energy', 'impostor'));
-								orb.setGraphicSize(Std.int(orb.width * 0.7));
-								orb.antialiasing = true;
-								orb.scrollFactor.set(1, 1);
-								orb.active = false;
-								add(orb);
-
-								var cranes:FlxSprite = new FlxSprite(-735, -1500).loadGraphic(Paths.image('reactor/upper cranes', 'impostor'));
-								cranes.setGraphicSize(Std.int(cranes.width * 0.7));
-								cranes.antialiasing = true;
-								cranes.scrollFactor.set(1, 1);
-								cranes.active = false;
-								add(cranes);
-
-								var console1:FlxSprite = new FlxSprite(-260,150).loadGraphic(Paths.image('reactor/center console', 'impostor'));
-								console1.setGraphicSize(Std.int(console1.width * 0.7));
-								console1.antialiasing = true;
-								console1.scrollFactor.set(1, 1);
-								console1.active = false;
-								add(console1);
-
-								
-								var console2:FlxSprite = new FlxSprite(-1380,450).loadGraphic(Paths.image('reactor/side console', 'impostor'));
-								console2.setGraphicSize(Std.int(console2.width * 0.7));
-								console2.antialiasing = true;
-								console2.scrollFactor.set(1, 1);
-								console2.active = false;
-								add(console2);						
+					
+							curStage = 'reactor';
+							var bg:FlxSprite = new FlxSprite(-2300,-1700).loadGraphic(Paths.image('reactor/reactor background', 'impostor'));
+							bg.setGraphicSize(Std.int(bg.width * 0.7));
+							bg.antialiasing = true;
+							bg.scrollFactor.set(1, 1);
+							bg.active = false;
+							add(bg);
+							yellow = new FlxSprite(-400, 150);
+							yellow.frames = Paths.getSparrowAtlas('reactor/susBoppers', 'impostor');
+							yellow.animation.addByPrefix('bop', 'yellow sus', 24, false);
+							yellow.animation.play('bop');
+							yellow.setGraphicSize(Std.int(yellow.width * 0.7));
+							yellow.antialiasing = true;
+							yellow.scrollFactor.set(1, 1);
+							yellow.active = true;
+							add(yellow);
+							var pillar1:FlxSprite = new FlxSprite(-2300,-1700).loadGraphic(Paths.image('reactor/back pillars', 'impostor'));
+							pillar1.setGraphicSize(Std.int(pillar1.width * 0.7));
+							pillar1.antialiasing = true;
+							pillar1.scrollFactor.set(1, 1);
+							pillar1.active = false;
+							add(pillar1);
+							dripster = new FlxSprite(1375, 150);
+							dripster.frames = Paths.getSparrowAtlas('reactor/susBoppers', 'impostor');
+							dripster.animation.addByPrefix('bop', 'blue sus', 24, false);
+							dripster.animation.play('bop');
+							dripster.setGraphicSize(Std.int(dripster.width * 0.7));
+							dripster.antialiasing = true;
+							dripster.scrollFactor.set(1, 1);
+							dripster.active = true;
+							add(dripster);
+							var pillar2:FlxSprite = new FlxSprite(-2300,-1700).loadGraphic(Paths.image('reactor/middle pillars', 'impostor'));
+							pillar2.setGraphicSize(Std.int(pillar2.width * 0.7));
+							pillar2.antialiasing = true;
+							pillar2.scrollFactor.set(1, 1);
+							pillar2.active = false;
+							add(pillar2);
+							amogus = new FlxSprite(1670, 250);
+							amogus.frames = Paths.getSparrowAtlas('reactor/susBoppers', 'impostor');
+							amogus.animation.addByPrefix('bop', 'Vegans', 24, false);
+							amogus.animation.play('bop');
+							amogus.setGraphicSize(Std.int(amogus.width * 0.7));
+							amogus.antialiasing = true;
+							amogus.scrollFactor.set(1, 1);
+							amogus.active = true;
+							add(amogus);
+							brown = new FlxSprite(-850, 190);
+							brown.frames = Paths.getSparrowAtlas('reactor/susBoppers', 'impostor');
+							brown.animation.addByPrefix('bop', 'brown sus', 24, false);
+							brown.animation.play('bop');
+							brown.setGraphicSize(Std.int(brown.width * 0.7));
+							brown.antialiasing = true;
+							brown.scrollFactor.set(1, 1);
+							brown.active = true;
+							add(brown);
+							var pillar3:FlxSprite = new FlxSprite(-2300,-1700).loadGraphic(Paths.image('reactor/front pillars', 'impostor'));
+							pillar3.setGraphicSize(Std.int(pillar3.width * 0.7));
+							pillar3.antialiasing = true;
+							pillar3.scrollFactor.set(1, 1);
+							pillar3.active = false;
+							add(pillar3);
+							orb = new FlxSprite(-460,-1300).loadGraphic(Paths.image('reactor/ball of big ol energy', 'impostor'));
+							orb.setGraphicSize(Std.int(orb.width * 0.7));
+							orb.antialiasing = true;
+							orb.scrollFactor.set(1, 1);
+							orb.active = false;
+							add(orb);
+							var cranes:FlxSprite = new FlxSprite(-735, -1500).loadGraphic(Paths.image('reactor/upper cranes', 'impostor'));
+							cranes.setGraphicSize(Std.int(cranes.width * 0.7));
+							cranes.antialiasing = true;
+							cranes.scrollFactor.set(1, 1);
+							cranes.active = false;
+							add(cranes);
+							var console1:FlxSprite = new FlxSprite(-260,150).loadGraphic(Paths.image('reactor/center console', 'impostor'));
+							console1.setGraphicSize(Std.int(console1.width * 0.7));
+							console1.antialiasing = true;
+							console1.scrollFactor.set(1, 1);
+							console1.active = false;
+							add(console1);
+							
+							var console2:FlxSprite = new FlxSprite(-1380,450).loadGraphic(Paths.image('reactor/side console', 'impostor'));
+							console2.setGraphicSize(Std.int(console2.width * 0.7));
+							console2.antialiasing = true;
+							console2.scrollFactor.set(1, 1);
+							console2.active = false;
+							add(console2);						
 								
 
 			
@@ -1749,9 +1738,16 @@ class PlayState extends MusicBeatState
 	}
 
 	public function reloadHealthBarColors() {
-		healthBar.createFilledBar(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
-			FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
-		healthBar.updateBar();
+		if(curStage == 'alpha') {
+			healthBar.createFilledBar(FlxColor.RED,
+			FlxColor.fromRGB(0, 255, 0));
+			healthBar.updateBar();
+		}
+		else {
+			healthBar.createFilledBar(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
+				FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
+			healthBar.updateBar();
+		}
 	}
 
 	public function addCharacterToList(newCharacter:String, type:Int) {
@@ -2615,6 +2611,16 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+			case 'alpha':
+				if(timeBar != null) {
+					timeBar.visible = false;
+				}
+				if(timeBarBG != null) {
+					timeBarBG.visible = false;
+				}
+				if(timeTxt != null) {
+					timeTxt.visible = false;
+				}
 			case 'schoolEvil':
 				if(!ClientPrefs.lowQuality && bgGhouls.animation.curAnim.finished) {
 					bgGhouls.visible = false;
@@ -3991,13 +3997,15 @@ class PlayState extends MusicBeatState
 			if(scoreTxtTween != null) {
 				scoreTxtTween.cancel();
 			}
-			scoreTxt.scale.x = 1.1;
-			scoreTxt.scale.y = 1.1;
-			scoreTxtTween = FlxTween.tween(scoreTxt.scale, {x: 1, y: 1}, 0.2, {
-				onComplete: function(twn:FlxTween) {
-					scoreTxtTween = null;
-				}
-			});
+			if(curStage != 'alpha') {
+				scoreTxt.scale.x = 1.1;
+				scoreTxt.scale.y = 1.1;
+				scoreTxtTween = FlxTween.tween(scoreTxt.scale, {x: 1, y: 1}, 0.2, {
+					onComplete: function(twn:FlxTween) {
+						scoreTxtTween = null;
+					}
+				});				
+			}
 		}
 
 		/* if (combo > 60)
