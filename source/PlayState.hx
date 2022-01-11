@@ -198,6 +198,14 @@ class PlayState extends MusicBeatState
 	var speedPass:Array<Float> = [11000, 11000, 11000, 11000];
 	var farSpeedPass:Array<Float> = [11000, 11000, 11000, 11000, 11000, 11000, 11000];
 
+	var airshipPlatform:FlxTypedGroup<FlxSprite>;
+	var airFarClouds:FlxTypedGroup<FlxSprite>;
+	var airMidClouds:FlxTypedGroup<FlxSprite>;
+	var airCloseClouds:FlxTypedGroup<FlxSprite>;
+	var airBigCloud:FlxSprite;
+	var bigCloudSpeed:Float = 10;
+	var airSpeedlines:FlxTypedGroup<FlxSprite>;
+
 	var phillyCityLights:FlxTypedGroup<BGSprite>;
 	var phillyTrain:BGSprite;
 	var blammedLightsBlack:ModchartSprite;
@@ -317,6 +325,11 @@ class PlayState extends MusicBeatState
 
 		if (SONG == null)
 			SONG = Song.loadFromJson('tutorial');
+
+		if(PlayState.SONG.stage.toLowerCase() == 'airship') {
+			camGame.height = FlxG.height + 200;
+			camGame.y -= 100;
+		}
 
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
@@ -612,46 +625,6 @@ class PlayState extends MusicBeatState
 			//	stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 			//	stageFront.updateHitbox();
 			//	add(stageFront);
-
-			case 'dangerSky':
-				curStage = 'dangerSky';
-				defaultCamZoom = 0.5;  
-
-				var bgSky:FlxSprite = new FlxSprite(-955, -1045.3).loadGraphic(Paths.image('dangerSky/bgSky', 'impostor'));
-				bgSky.antialiasing = true;
-				bgSky.scrollFactor.set(0, 0);
-				bgSky.scale.set(0.3, 0.3);
-				bgSky.active = true;
-				add(bgSky);	
-
-				var cloud1:FlxSprite = new FlxSprite(-237.8, 334.55).loadGraphic(Paths.image('dangerSky/cloud1', 'impostor'));
-				cloud1.antialiasing = true;
-				cloud1.scrollFactor.set(0.2, 0.2);
-				cloud1.scale.set(0.3, 0.3);
-				cloud1.active = true;
-				add(cloud1);	
-
-				var cloud2:FlxSprite = new FlxSprite(-191.25, 810.45).loadGraphic(Paths.image('dangerSky/cloud2', 'impostor'));
-				cloud2.antialiasing = true;
-				cloud2.scrollFactor.set(0.3, 0.3);
-				cloud2.scale.set(0.3, 0.3);
-				cloud2.active = true;
-				add(cloud2);	
-
-				var cloudsky:FlxSprite = new FlxSprite(-219.2, 893.45).loadGraphic(Paths.image('dangerSky/cloudsky', 'impostor'));
-				cloudsky.antialiasing = true;
-				cloudsky.scrollFactor.set(0.5, 0.5);
-				cloudsky.scale.set(0.3, 0.3);
-				cloudsky.active = true;
-				add(cloudsky);	
-
-				var nuves:FlxSprite = new FlxSprite(-942.35, 1472.95).loadGraphic(Paths.image('dangerSky/nuves 1', 'impostor'));
-				nuves.antialiasing = true;
-				nuves.scrollFactor.set(0.7, 0.7);
-				nuves.scale.set(0.3, 0.3);
-				nuves.active = true;
-				add(nuves);	
-
 
 			case 'polus': 
 						curStage = 'polus';
@@ -1066,6 +1039,107 @@ class PlayState extends MusicBeatState
 				var evilSnow:BGSprite = new BGSprite('christmas/evilSnow', -200, 700);
 				add(evilSnow);
 
+			case 'airship':
+
+				airshipPlatform = new FlxTypedGroup<FlxSprite>();
+				airFarClouds = new FlxTypedGroup<FlxSprite>();
+				airMidClouds = new FlxTypedGroup<FlxSprite>();
+				airCloseClouds = new FlxTypedGroup<FlxSprite>();
+				airSpeedlines = new FlxTypedGroup<FlxSprite>();
+
+				var sky:FlxSprite = new FlxSprite(-1404, -897.55).loadGraphic(Paths.image('airship/sky', 'impostor'));
+				sky.antialiasing = true;
+				sky.updateHitbox();
+				sky.scale.set(1.5, 1.5);
+				sky.scrollFactor.set(0, 0);
+				add(sky);
+
+				for(i in 0...2) {
+					var cloud:FlxSprite = new FlxSprite(-1148.05, -142.2).loadGraphic(Paths.image('airship/farthestClouds', 'impostor'));
+					switch(i) {
+						case 1:
+							cloud.setPosition(-5678.95, -142.2);
+						case 2:
+							cloud.setPosition(3385.95, -142.2);
+					}
+					cloud.antialiasing = true;
+					cloud.updateHitbox();
+					cloud.scrollFactor.set(0.1, 0.1);
+					airFarClouds.add(cloud);
+				}
+				add(airFarClouds);			
+
+
+				for(i in 0...2) {
+					var cloud:FlxSprite = new FlxSprite(-1162.4, 76.55).loadGraphic(Paths.image('airship/backClouds', 'impostor'));
+					switch(i) {
+						case 1:
+							cloud.setPosition(3352.4, 76.55);
+						case 2:
+							cloud.setPosition(-5651.4, 76.55);
+					}
+					cloud.antialiasing = true;
+					cloud.updateHitbox();
+					cloud.scrollFactor.set(0.2, 0.2);
+					airMidClouds.add(cloud);
+				}
+				add(airMidClouds);
+
+				var airship:FlxSprite = new FlxSprite(1114.75, -873.05).loadGraphic(Paths.image('airship/airship', 'impostor'));
+				airship.antialiasing = true;
+				airship.updateHitbox();
+				airship.scrollFactor.set(0.25, 0.25);
+				add(airship);
+
+				var fan:FlxSprite = new FlxSprite(2285.4, 102);
+				fan.frames = Paths.getSparrowAtlas('airship/airshipFan', 'impostor');
+				fan.animation.addByPrefix('idle', 'ala avion instance 1', 24, true);
+				fan.animation.play('idle');
+				fan.updateHitbox();
+				fan.antialiasing = true;
+				fan.scrollFactor.set(0.27, 0.27);
+				add(fan);
+
+				airBigCloud = new FlxSprite(3507.15, -744.2).loadGraphic(Paths.image('airship/bigCloud', 'impostor'));
+				airBigCloud.antialiasing = true;
+				airBigCloud.updateHitbox();
+				airBigCloud.scrollFactor.set(0.4, 0.4);
+				add(airBigCloud);
+
+				for(i in 0...2) {
+					var cloud:FlxSprite = new FlxSprite(-1903.9, 422.15).loadGraphic(Paths.image('airship/frontClouds', 'impostor'));
+					switch(i) {
+						case 1:
+							cloud.setPosition(-9900.2, 422.15);
+						case 2:
+							cloud.setPosition(6092.2, 422.15);
+					}
+					cloud.antialiasing = true;
+					cloud.updateHitbox();
+					cloud.scrollFactor.set(0.3, 0.3);
+					airCloseClouds.add(cloud);
+				}
+				add(airCloseClouds);
+
+				for(i in 0...2) {					
+					var platform:FlxSprite = new FlxSprite(-1454.2, 282.25).loadGraphic(Paths.image('airship/fgPlatform', 'impostor'));
+					switch(i) {
+						case 1:							
+							platform.setPosition(-7184.8, 282.25);
+							
+						case 2:
+							platform.setPosition(4275.15, 282.25);
+					}
+					platform.antialiasing = true;
+					platform.updateHitbox();
+					platform.scrollFactor.set(1, 1);
+					add(platform);
+					airshipPlatform.add(platform);
+				}
+
+				
+
+
 			case 'school': //Week 6 - Senpai, Roses
 				GameOverSubstate.deathSoundName = 'fnf_loss_sfx-pixel';
 				GameOverSubstate.loopSoundName = 'gameOver-pixel';
@@ -1175,8 +1249,8 @@ class PlayState extends MusicBeatState
 
 		add(dadGroup);
 		add(boyfriendGroup);
-		if(curStage == "ejected")
-			{
+		switch(curStage) {
+			case 'ejected':
 				bfStartpos = new FlxPoint(1008.6, 504);
 				gfStartpos = new FlxPoint(114.4, 78.45);
 				dadStartpos = new FlxPoint(-775.75, 274.3);
@@ -1185,10 +1259,7 @@ class PlayState extends MusicBeatState
 				}
 				add(cloudScroll);
 				add(speedLines);
-			}
-
-		if(curStage == "polus2")
-			{
+			case 'polus2':
 				snow = new FlxSprite(0, -500);
 				snow.frames = Paths.getSparrowAtlas('polus/snow', 'impostor');
 				snow.animation.addByPrefix('cum', 'cum', 24);
@@ -1199,16 +1270,12 @@ class PlayState extends MusicBeatState
 				snow.setGraphicSize(Std.int(snow.width * 2));
 				
 				add(snow);
-			}
-
-		if(curStage == "chef")
-			{
+			case 'chef':
 				var soup = new FlxSprite(1300, 600).loadGraphic(Paths.image('chef/soup', 'impostor'));
 				soup.updateHitbox();
 				soup.antialiasing = true;
 				soup.scrollFactor.set(1.3, 1.3);
 				add(soup);
-
 
 				var smokelol:FlxSprite = new FlxSprite(1400, 100);
 				smokelol.frames = Paths.getSparrowAtlas('chef/smokeee', 'impostor');
@@ -1219,11 +1286,7 @@ class PlayState extends MusicBeatState
 				smokelol.updateHitbox();
 				smokelol.scale.set(1, 1);
 				add(smokelol);
-
-			}
-
-		if (curStage == 'toogus')
-			{
+			case 'toogus':
 				stageFront2 = new FlxSprite(-900, 800).loadGraphic(Paths.image('table'));
 				stageFront2.updateHitbox();
 				stageFront2.antialiasing = true;
@@ -1238,35 +1301,24 @@ class PlayState extends MusicBeatState
 				stageFront3.flipX = true;
 				add(stageFront2);
 				add(stageFront3);
-
-		//		stageFront2Dark = new FlxSprite(-850, 800).loadGraphic(Paths.image('tableDark'));
-		//		stageFront2Dark.updateHitbox();
-		///		stageFront2Dark.antialiasing = true;
-		//		stageFront2Dark.scrollFactor.set(1, 1);
-		//		stageFront2Dark.setGraphicSize(Std.int(stageFront2Dark.width * 1.6));
-		//		stageFront2Dark.alpha = 0;
-
-		//		stageFront3Dark = new FlxSprite(1600, 800).loadGraphic(Paths.image('tableDark'));
-		//		stageFront3Dark.updateHitbox();
-		//		stageFront3Dark.antialiasing = true;
-		//		stageFront3Dark.scrollFactor.set(1, 1);
-		//		stageFront3Dark.setGraphicSize(Std.int(stageFront3Dark.width * 1.6));
-		//		stageFront3Dark.flipX = true;
-		//		stageFront3Dark.alpha = 0;
-		//		add(stageFront2Dark);
-		//		add(stageFront3Dark);
-
-		//		miraGradient = new FlxSprite(0,50).loadGraphic(Paths.image('MiraGradient'));
-		//		miraGradient.setGraphicSize(Std.int(miraGradient.width * 1.4));
-		//		miraGradient.antialiasing = true;
-		//		miraGradient.scrollFactor.set(1, 1);
-		//		miraGradient.active = false;
-		//		miraGradient.alpha = 0;
-		//		add(miraGradient);
-			}
-		
-		if(curStage == 'spooky') {
-			add(halloweenWhite);
+			case 'spooky':
+				add(halloweenWhite);
+			case 'airship':
+				for(i in 0...2) {
+					var speedline:FlxSprite = new FlxSprite(-912.75, -1035.95).loadGraphic(Paths.image('airship/speedlines', 'impostor'));
+					switch(i) {
+						case 1:
+							speedline.setPosition(3352.1, -1035.95);
+						case 2:
+							speedline.setPosition(-5140.05, -1035.95);
+					}
+					speedline.antialiasing = true;
+					speedline.alpha = 0.2;
+					speedline.updateHitbox();
+					speedline.scrollFactor.set(1.3, 1.3);
+					add(speedline);
+					airSpeedlines.add(speedline);
+				}
 		}
 
 		#if LUA_ALLOWED
@@ -2573,6 +2625,59 @@ class PlayState extends MusicBeatState
 				health = 1;
 				if(songMisses != 0)
 				health = 0;
+			case 'airship':
+				camGame.shake(0.0008, 0.01);
+				camGame.y = Math.sin((Conductor.songPosition / 280)*(Conductor.bpm/60) * 1.0) * 2 - 100;
+				camHUD.y = Math.sin((Conductor.songPosition / 300)*(Conductor.bpm/60) * 1.0) * 0.6;
+				camHUD.angle = Math.sin((Conductor.songPosition / 350)*(Conductor.bpm/60) * -1.0) * 0.6;
+				if(airCloseClouds.members.length > 0 ) {
+					for(i in 0...airCloseClouds.members.length) {					
+						airCloseClouds.members[i].x = FlxMath.lerp(airCloseClouds.members[i].x, airCloseClouds.members[i].x - 50, CoolUtil.boundTo(elapsed * 9, 0, 1));
+						if(airCloseClouds.members[i].x < -10400.2) {	
+							airCloseClouds.members[i].x = 5582.2;
+						}
+					}
+				}
+				if(airMidClouds.members.length > 0 ) {
+					for(i in 0...airMidClouds.members.length) {					
+						airMidClouds.members[i].x = FlxMath.lerp(airMidClouds.members[i].x, airMidClouds.members[i].x - 13, CoolUtil.boundTo(elapsed * 9, 0, 1));
+						if(airMidClouds.members[i].x < -6153.4) {	
+							airMidClouds.members[i].x = 2852.4;
+						}
+					}
+				}
+				if(airSpeedlines.members.length > 0) {
+					for(i in 0...airSpeedlines.members.length) {
+						airSpeedlines.members[i].x = FlxMath.lerp(airSpeedlines.members[i].x, airSpeedlines.members[i].x - 350, CoolUtil.boundTo(elapsed * 9, 0, 1));
+						if(airSpeedlines.members[i].x < -5140.05) {	
+							airSpeedlines.members[i].x = 3352.1;
+						}
+					}
+				}
+				if(airFarClouds.members.length > 0 ) {
+					for(i in 0...airFarClouds.members.length) {					
+						airFarClouds.members[i].x = FlxMath.lerp(airFarClouds.members[i].x, airFarClouds.members[i].x - 7, CoolUtil.boundTo(elapsed * 9, 0, 1));
+						if(airFarClouds.members[i].x < -6178.95) {	
+							airFarClouds.members[i].x = 2874.95;
+						}
+					}
+				}
+				if(airshipPlatform.members.length > 0 ) {
+					for(i in 0...airshipPlatform.members.length) {					
+						airshipPlatform.members[i].x = FlxMath.lerp(airshipPlatform.members[i].x, airshipPlatform.members[i].x - 300, CoolUtil.boundTo(elapsed * 9, 0, 1));
+						if(airshipPlatform.members[i].x < -7184.8) {	
+							airshipPlatform.members[i].x = 4275.15;
+						}
+					}
+				}
+				if(airBigCloud != null) {
+					airBigCloud.x = FlxMath.lerp(airBigCloud.x, airBigCloud.x - bigCloudSpeed, CoolUtil.boundTo(elapsed * 9, 0, 1));
+						if(airBigCloud.x < -4163.7) {	
+							airBigCloud.x = FlxG.random.float(3931.5, 4824.05);
+							airBigCloud.y = FlxG.random.float(-1087.5, -307.35);
+							bigCloudSpeed = FlxG.random.float(7, 15);
+						}
+				}
 			case 'philly':
 				if (trainMoving)
 				{
@@ -2586,16 +2691,18 @@ class PlayState extends MusicBeatState
 				}
 				phillyCityLights.members[curLight].alpha -= (Conductor.crochet / 1000) * FlxG.elapsed * 1.5;
 			case 'ejected':
+			camHUD.y = Math.sin((Conductor.songPosition / 1000)*(Conductor.bpm/60) * 1.0) * 15;
+			camHUD.angle = Math.sin((Conductor.songPosition / 1200)*(Conductor.bpm/60) * -1.0) * 1.2;
 			//make sure that the clouds exist
 			if(cloudScroll.members.length == 3) {
 				for(i in 0...cloudScroll.members.length) {					
-					cloudScroll.members[i].y -= speedPass[i] / (cast(Lib.current.getChildAt(0), Main)).getFPS();
+					cloudScroll.members[i].y = FlxMath.lerp(cloudScroll.members[i].y, cloudScroll.members[i].y - speedPass[i], CoolUtil.boundTo(elapsed * 9, 0, 1));
 					if(cloudScroll.members[i].y < -1789.65) {
 						//im not using flxbackdrops so this is how we're doing things today
 						var randomScale = FlxG.random.float(1.5, 2.2);
 						var randomScroll = FlxG.random.float(1, 1.3);
 
-						speedPass[i] = FlxG.random.float(9000, 11000);
+						speedPass[i] = FlxG.random.float(1100, 1300);
 
 						cloudScroll.members[i].scale.set(randomScale, randomScale);
 						cloudScroll.members[i].scrollFactor.set(randomScroll, randomScroll);
@@ -2606,12 +2713,12 @@ class PlayState extends MusicBeatState
 			}
 			if(farClouds.members.length == 7) {
 				for(i in 0...farClouds.members.length) {					
-					farClouds.members[i].y -= farSpeedPass[i] / (cast(Lib.current.getChildAt(0), Main)).getFPS();
+					farClouds.members[i].y = FlxMath.lerp(farClouds.members[i].y, farClouds.members[i].y - farSpeedPass[i], CoolUtil.boundTo(elapsed * 9, 0, 1));
 					if(farClouds.members[i].y < -1614) {
 						var randomScale = FlxG.random.float(0.2, 0.5);
 						var randomScroll = FlxG.random.float(0.2, 0.4);
 
-						farSpeedPass[i] = FlxG.random.float(9000, 11000);
+						farSpeedPass[i] = FlxG.random.float(1100, 1300);
 
 						farClouds.members[i].scale.set(randomScale, randomScale);
 						farClouds.members[i].scrollFactor.set(randomScroll, randomScroll);
@@ -2632,7 +2739,7 @@ class PlayState extends MusicBeatState
 						middleBuildings[i].y = 3190.5;
 						middleBuildings[i].animation.play(FlxG.random.bool(50) ? '1' : '2');
 					}			
-					middleBuildings[i].y -= 9000 / (cast(Lib.current.getChildAt(0), Main)).getFPS();
+					middleBuildings[i].y = FlxMath.lerp(middleBuildings[i].y, middleBuildings[i].y - 1300, CoolUtil.boundTo(elapsed * 9, 0, 1));
 				}
 			}
 			if(rightBuildings.length > 0) {
@@ -2640,9 +2747,10 @@ class PlayState extends MusicBeatState
 					rightBuildings[i].y = leftBuildings[i].y;
 				}
 			}
-			speedLines.y -= 9000 / (cast(Lib.current.getChildAt(0), Main)).getFPS();
+			speedLines.y = FlxMath.lerp(speedLines.y, speedLines.y - 1350, CoolUtil.boundTo(elapsed * 9, 0, 1));
+
 			if(fgCloud != null) {
-				fgCloud.y -= 0.01;
+				fgCloud.y = FlxMath.lerp(fgCloud.y, fgCloud.y - 0.01, CoolUtil.boundTo(elapsed * 9, 0, 1));
 			}
 		
 			case 'limo':
@@ -3914,6 +4022,10 @@ class PlayState extends MusicBeatState
 		rating.x = coolText.x - 40;
 		rating.y -= 60;
 		rating.acceleration.y = 550;
+		if(curStage == 'airship') {
+			rating.velocity.x = -250;
+			rating.acceleration.x = -550;
+		}
 		rating.velocity.y -= FlxG.random.int(140, 175);
 		rating.velocity.x -= FlxG.random.int(0, 10);
 		rating.visible = !ClientPrefs.hideHud;
@@ -3922,6 +4034,10 @@ class PlayState extends MusicBeatState
 		comboSpr.screenCenter();
 		comboSpr.x = coolText.x;
 		comboSpr.acceleration.y = 600;
+		if(curStage == 'airship') {
+			comboSpr.velocity.x = -250;
+			comboSpr.acceleration.x = -550;
+		}
 		comboSpr.velocity.y -= 150;
 		comboSpr.visible = !ClientPrefs.hideHud;
 
