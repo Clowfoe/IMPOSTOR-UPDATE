@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bluehit.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="hit down0000" x="10" y="10" width="341" height="316"/>
+	<SubTexture name="hit down0001" x="10" y="10" width="341" height="316"/>
+	<SubTexture name="hit down0002" x="361" y="10" width="341" height="316"/>
+	<SubTexture name="hit idle0000" x="712" y="10" width="2" height="3"/>
+	<SubTexture name="hit idle0001" x="712" y="10" width="2" height="3"/>
+	<SubTexture name="hit idle0002" x="712" y="10" width="2" height="3"/>
+	<SubTexture name="hit idle0003" x="712" y="10" width="2" height="3"/>
+	<SubTexture name="hit idle0004" x="712" y="10" width="2" height="3"/>
+	<SubTexture name="hit idle0005" x="712" y="10" width="2" height="3"/>
+	<SubTexture name="hit idle0006" x="712" y="10" width="2" height="3"/>
+	<SubTexture name="hit idle0007" x="712" y="10" width="2" height="3"/>
+	<SubTexture name="hit idle0008" x="712" y="10" width="2" height="3"/>
+	<SubTexture name="hit left0000" x="724" y="10" width="287" height="464"/>
+	<SubTexture name="hit left0001" x="1021" y="10" width="287" height="464"/>
+	<SubTexture name="hit left0002" x="1318" y="10" width="287" height="464"/>
+	<SubTexture name="hit left0003" x="1318" y="10" width="287" height="464"/>
+	<SubTexture name="hit left0004" x="1615" y="10" width="287" height="464"/>
+	<SubTexture name="hit left0005" x="1615" y="10" width="287" height="464"/>
+	<SubTexture name="hit left0006" x="10" y="484" width="287" height="464"/>
+	<SubTexture name="hit left0007" x="10" y="484" width="287" height="464"/>
+	<SubTexture name="hit left0008" x="307" y="484" width="287" height="464"/>
+	<SubTexture name="hit right0000" x="604" y="484" width="256" height="352"/>
+	<SubTexture name="hit right0001" x="604" y="484" width="256" height="352"/>
+	<SubTexture name="hit right0002" x="870" y="484" width="256" height="352"/>
+	<SubTexture name="hit up0000" x="1136" y="484" width="268" height="432"/>
+	<SubTexture name="hit up0001" x="1136" y="484" width="268" height="432"/>
+	<SubTexture name="hit up0002" x="1414" y="484" width="268" height="432"/>
+	<SubTexture name="hit up0003" x="1414" y="484" width="268" height="432"/>
+	<SubTexture name="hit up0004" x="1692" y="484" width="268" height="432"/>
+</TextureAtlas>

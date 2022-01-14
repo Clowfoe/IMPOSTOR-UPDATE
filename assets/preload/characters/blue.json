@@ -3,76 +3,76 @@
 		{
 			"loop": false,
 			"offsets": [
-				249,
-				-190
+				30,
+				-301
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "idle",
+			"name": "blue idle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				98,
-				-243
+				17,
+				-302
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "right",
+			"name": "blue right",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				204,
-				-181
+				36,
+				-320
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "down",
+			"name": "blue down",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-4,
-				-217
+				47,
+				-302
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "left",
+			"name": "blue left",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				170,
-				-228
+				24,
+				-275
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "up",
+			"name": "blue up",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/maroon",
+	"image": "characters/blue",
 	"position": [
-		100,
-		50
+		40,
+		100
 	],
-	"healthicon": "maroon",
-	"flip_x": false,
+	"healthicon": "blue",
+	"flip_x": true,
 	"healthbar_colors": [
-		119,
-		53,
-		77
+		15,
+		204,
+		255
 	],
 	"camera_position": [
-		-130,
-		290
+		80,
+		400
 	],
-	"sing_duration": 6.1,
-	"scale": 1
+	"sing_duration": 10,
+	"scale": 0.8
 }

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="red.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="red down0000" x="10" y="10" width="450" height="410"/>
+	<SubTexture name="red down0001" x="10" y="10" width="450" height="410"/>
+	<SubTexture name="red down0002" x="470" y="10" width="450" height="410"/>
+	<SubTexture name="red down0003" x="470" y="10" width="450" height="410"/>
+	<SubTexture name="red down0004" x="930" y="10" width="450" height="410"/>
+	<SubTexture name="red down0005" x="930" y="10" width="450" height="410"/>
+	<SubTexture name="red down0006" x="1390" y="10" width="450" height="410"/>
+	<SubTexture name="red idle0000" x="1850" y="10" width="318" height="357"/>
+	<SubTexture name="red idle0001" x="1850" y="10" width="318" height="357"/>
+	<SubTexture name="red idle0002" x="2178" y="10" width="318" height="357"/>
+	<SubTexture name="red idle0003" x="2178" y="10" width="318" height="357"/>
+	<SubTexture name="red idle0004" x="2506" y="10" width="318" height="357"/>
+	<SubTexture name="red idle0005" x="2506" y="10" width="318" height="357"/>
+	<SubTexture name="red idle0006" x="2834" y="10" width="318" height="357"/>
+	<SubTexture name="red idle0007" x="2834" y="10" width="318" height="357"/>
+	<SubTexture name="red idle0008" x="3162" y="10" width="318" height="357"/>
+	<SubTexture name="red idle0009" x="3162" y="10" width="318" height="357"/>
+	<SubTexture name="red idle0010" x="3490" y="10" width="318" height="357"/>
+	<SubTexture name="red idle0011" x="3490" y="10" width="318" height="357"/>
+	<SubTexture name="red idle0012" x="3490" y="10" width="318" height="357"/>
+	<SubTexture name="red idle0013" x="3490" y="10" width="318" height="357"/>
+	<SubTexture name="red left0000" x="10" y="430" width="510" height="397"/>
+	<SubTexture name="red left0001" x="10" y="430" width="510" height="397"/>
+	<SubTexture name="red left0002" x="530" y="430" width="510" height="397"/>
+	<SubTexture name="red left0003" x="530" y="430" width="510" height="397"/>
+	<SubTexture name="red left0004" x="1050" y="430" width="510" height="397"/>
+	<SubTexture name="red left0005" x="1050" y="430" width="510" height="397"/>
+	<SubTexture name="red left0006" x="1570" y="430" width="510" height="397"/>
+	<SubTexture name="red right0000" x="2090" y="430" width="764" height="379"/>
+	<SubTexture name="red right0001" x="2864" y="430" width="764" height="379"/>
+	<SubTexture name="red right0002" x="10" y="837" width="764" height="379"/>
+	<SubTexture name="red right0003" x="10" y="837" width="764" height="379"/>
+	<SubTexture name="red right0004" x="784" y="837" width="764" height="379"/>
+	<SubTexture name="red right0005" x="784" y="837" width="764" height="379"/>
+	<SubTexture name="red right0006" x="1558" y="837" width="764" height="379"/>
+	<SubTexture name="red up0000" x="2332" y="837" width="250" height="383"/>
+	<SubTexture name="red up0001" x="2332" y="837" width="250" height="383"/>
+	<SubTexture name="red up0002" x="2592" y="837" width="250" height="383"/>
+	<SubTexture name="red up0003" x="2592" y="837" width="250" height="383"/>
+	<SubTexture name="red up0004" x="2852" y="837" width="250" height="383"/>
+	<SubTexture name="red up0005" x="2852" y="837" width="250" height="383"/>
+	<SubTexture name="red up0006" x="3112" y="837" width="250" height="383"/>
+</TextureAtlas>
