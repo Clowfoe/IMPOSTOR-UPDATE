@@ -235,6 +235,9 @@ class PlayState extends MusicBeatState
 	var santa:BGSprite;
 	var heyTimer:Float;
 
+	//loggo
+	var peopleloggo:FlxSprite;
+	var fireloggo:FlxSprite;
 	//reactor
 	var amogus:FlxSprite;
 	var dripster:FlxSprite;
@@ -430,6 +433,60 @@ class PlayState extends MusicBeatState
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
+			case 'loggo': //loggo normal
+
+				var bg:BGSprite = new BGSprite('space', 0, 200, 0.8, 0.8);
+				add(bg);
+				bg.setGraphicSize(Std.int(bg.width * 3));
+				bg.antialiasing = false;
+
+				var stageFront:BGSprite = new BGSprite('normalOne', -650, 600, 0.9, 0.9);
+				stageFront.setGraphicSize(Std.int(stageFront.width * 3));
+				stageFront.updateHitbox();
+				add(stageFront);
+				stageFront.antialiasing = false;
+
+				peopleloggo = new FlxSprite(150, 1200);
+								peopleloggo.frames = Paths.getSparrowAtlas('people');
+								peopleloggo.animation.addByPrefix('bop', 'the guys', 24, false);
+								peopleloggo.animation.play('bop');
+								peopleloggo.setGraphicSize(Std.int(peopleloggo.width * 3));
+								peopleloggo.antialiasing = false;
+								peopleloggo.scrollFactor.set(0.9, 0.9);
+								peopleloggo.active = true;
+								add(peopleloggo);
+				
+				fireloggo = new FlxSprite(150, 1200);
+								fireloggo.frames = Paths.getSparrowAtlas('stockingFire');
+								fireloggo.animation.addByPrefix('bop', 'stocking fire', 24, true);
+								fireloggo.animation.play('bop');
+								fireloggo.setGraphicSize(Std.int(fireloggo.width * 3));
+								fireloggo.antialiasing = false;
+								fireloggo.scrollFactor.set(0.9, 0.9);
+								fireloggo.active = true;
+								add(fireloggo);
+
+			case 'loggo2': //dark loggo
+				var bg:BGSprite = new BGSprite('space', 0, 200, 0.8, 0.8);
+				add(bg);
+				bg.setGraphicSize(Std.int(bg.width * 3));
+				bg.antialiasing = false;
+
+				var stageFront:BGSprite = new BGSprite('placeholder Hell', -650, 600, 0.9, 0.9);
+				stageFront.setGraphicSize(Std.int(stageFront.width * 3));
+				stageFront.updateHitbox();
+				add(stageFront);
+				stageFront.antialiasing = false;
+
+				peopleloggo = new FlxSprite(150, 1200);
+								peopleloggo.frames = Paths.getSparrowAtlas('people');
+								peopleloggo.animation.addByPrefix('bop', 'the guys', 24, false);
+								peopleloggo.animation.play('bop');
+								peopleloggo.setGraphicSize(Std.int(peopleloggo.width * 3));
+								peopleloggo.antialiasing = false;
+								peopleloggo.scrollFactor.set(0.9, 0.9);
+								peopleloggo.active = true;
+								add(peopleloggo);
 
 			case 'chef': //mayhew has gone mad	
 						var floor:FlxSprite = new FlxSprite(-500, 400).loadGraphic(Paths.image('chef/floor', 'impostor'));
@@ -4935,7 +4992,14 @@ class PlayState extends MusicBeatState
 					yellow.animation.play('bop', true);
 					brown.animation.play('bop', true);
 				}
-				
+			case 'loggo':
+				if(curBeat % 2 == 0) {
+					peopleloggo.animation.play('bop', true);
+				}
+			case 'loggo2':
+				if(curBeat % 2 == 0) {
+					peopleloggo.animation.play('bop', true);
+				}
 			case 'mall':
 				if(!ClientPrefs.lowQuality) {
 					upperBoppers.dance(true);

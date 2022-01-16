@@ -401,6 +401,15 @@ class AmongFreeplayState extends MusicBeatState {
 
         weeks.push
         ({
+            songs: [["Compromised Persona", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)]],
+            freeplayColor: [146, 113, 253],
+            weekName: 'Week 5',
+            section: 0
+        });
+        
+
+        weeks.push
+        ({
             songs: [["Ashes", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0)],["Magmatic", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0)],["Boiling Point", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0)]],
             freeplayColor: [146, 113, 253],
             weekName: 'Week 1',
@@ -442,7 +451,23 @@ class AmongFreeplayState extends MusicBeatState {
 
         weeks.push
         ({
-            songs: [["Titular", "henry", 'henry', FlxColor.fromRGB(84, 167, 202)], ["Armed", "henry", 'henry', FlxColor.fromRGB(84, 167, 202)], ["Who", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Drippypop", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Monochrome", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Compromised Persona", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)]],
+            songs: [["Titular", "henry", 'henry', FlxColor.ORANGE], ["Armed", "henry", 'henry', FlxColor.ORANGE]],
+            freeplayColor: [146, 113, 253],
+            weekName: 'Week 1',
+            section: 3
+        });
+
+        weeks.push
+        ({
+            songs: [["Christmas", "fella", 'chef', FlxColor.fromRGB(0, 255, 0)], ["Spookpostor", "boo", 'chef', FlxColor.fromRGB(0, 255, 0)]],
+            freeplayColor: [146, 113, 253],
+            weekName: 'Week 1',
+            section: 3
+        });
+
+        weeks.push
+        ({
+            songs: [["Who", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Drippypop", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Monochrome", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)]],
             freeplayColor: [146, 113, 253],
             weekName: 'Week 1',
             section: 3
