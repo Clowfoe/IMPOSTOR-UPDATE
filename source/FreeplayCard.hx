@@ -17,6 +17,7 @@ class FreeplayCard extends FlxSprite {
     public var coloring:FlxColor;
     public var iconName:String;
     public var songText:FlxText;
+    public var portrait:String;
     public var songName:String;
     public var targetY:Float = 0;
     public var forceX:Float = Math.NEGATIVE_INFINITY;
@@ -25,13 +26,14 @@ class FreeplayCard extends FlxSprite {
     public var yAdd:Float = 0;
     public var deAlpha:Float = 0;
 
-    public function new(x:Float, y:Float, song:String, namer:String, colord:FlxColor)
+    public function new(x:Float, y:Float, song:String, namer:String, colord:FlxColor, portraits:String)
     {
         trueX = x;
         trueY = y;
         iconName = namer;
         coloring = colord;
         songName = song;
+        portrait = portraits;
 
         visible = false;
 

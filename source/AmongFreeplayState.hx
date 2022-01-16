@@ -30,8 +30,6 @@ typedef FreeplayWeek =
 {
 	// JSON variables
 	var songs:Array<Dynamic>;
-	var freeplayColor:Array<Int>;
-	var weekName:String;
     var section:Int;
 }
 
@@ -136,9 +134,9 @@ class AmongFreeplayState extends MusicBeatState {
         portrait.frames = Paths.getSparrowAtlas('freeplay/portraits', 'impostor');        
 
         //END IT
-        portrait.animation.addByPrefix('impostor', 'Red', 24, true);
+        portrait.animation.addByPrefix('red', 'Red', 24, true);
         portraitArray++;
-        portrait.animation.addByPrefix('crewmate', 'Green', 24, true);
+        portrait.animation.addByPrefix('green', 'Green', 24, true);
         portraitArray++;
         portrait.animation.addByPrefix('parasite', 'Parasite', 24, true);
         portraitArray++;
@@ -146,21 +144,27 @@ class AmongFreeplayState extends MusicBeatState {
         portraitArray++;
         portrait.animation.addByPrefix('maroon', 'Maroon', 24, true);
         portraitArray++;
-        portrait.animation.addByPrefix('tomongus', 'Tomo', 24, true);
+        portrait.animation.addByPrefix('tomongus', 'Tomongus', 24, true);
         portraitArray++;
-        portrait.animation.addByPrefix('hamster', 'Ham', 24, true);
+        portrait.animation.addByPrefix('hamster', 'Hamster', 24, true);
         portraitArray++;
         portrait.animation.addByPrefix('pink', 'Pink', 24, true);
         portraitArray++;
-        portrait.animation.addByPrefix('placeholder', 'Chef', 24, true);
+        portrait.animation.addByPrefix('chef', 'Chef', 24, true);
         portraitArray++;
-        portrait.animation.addByPrefix('gray', 'Grey', 24, true);
+        portrait.animation.addByPrefix('grey', 'Grey', 24, true);
         portraitArray++;
         portrait.animation.addByPrefix('henry', 'Henry', 24, true);
         portraitArray++;
         portrait.animation.addByPrefix('yellow', 'Yellow', 24, true);
         portraitArray++;
-        portrait.animation.addByPrefix('black', 'Defeat', 24, true);
+        portrait.animation.addByPrefix('black', 'Black', 24, true);
+        portraitArray++;
+        portrait.animation.addByPrefix('loggo', 'Loggo', 24, true);
+        portraitArray++;
+        portrait.animation.addByPrefix('ziffy', 'Ziffy', 24, true);
+        portraitArray++;
+        portrait.animation.addByPrefix('clowfoe', 'Clowfoe', 24, true);
         portraitArray++;
 
         for(i in 0...portraitArray) {
@@ -196,7 +200,7 @@ class AmongFreeplayState extends MusicBeatState {
             var prevI:Int = i;
             for(i in 0...weeks[i].songs.length) {
                 if(weeks[prevI].section == curWeek) {
-                    listOfButtons.push(new FreeplayCard(0, 0, weeks[prevI].songs[i][0], weeks[prevI].songs[i][1], weeks[prevI].songs[i][3]));
+                    listOfButtons.push(new FreeplayCard(0, 0, weeks[prevI].songs[i][0], weeks[prevI].songs[i][1], weeks[prevI].songs[i][3], weeks[prevI].songs[i][2]));
                 }
             }
         }
@@ -362,48 +366,36 @@ class AmongFreeplayState extends MusicBeatState {
         weeks.push
         ({
             songs: [["Sussus Moogus", "impostor", 'red', FlxColor.RED], ["Sabotage", "impostor", 'red', FlxColor.RED], ["Meltdown", "impostor", 'red', FlxColor.RED]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 1',
             section: 0
         });
 
         weeks.push
         ({
-            songs: [["Sussus Toogus", "crewmate", 'green', FlxColor.fromRGB(0, 255, 0)], ["Lights Down", "impostor3", 'green', FlxColor.fromRGB(0, 255, 0)], ["Reactor", "impostor3", 'green', FlxColor.fromRGB(0, 255, 0)], ["Ejected", "parasite", 'green', FlxColor.fromRGB(0, 255, 0)], ["Double Trouble", 'dt', 'green', FlxColor.fromRGB(0, 255, 0)]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 2',
+            songs: [["Sussus Toogus", "crewmate", 'green', FlxColor.fromRGB(0, 255, 0)], ["Lights Down", "impostor3", 'green', FlxColor.fromRGB(0, 255, 0)], ["Reactor", "impostor3", 'green', FlxColor.fromRGB(0, 255, 0)], ["Ejected", "parasite", 'parasite', FlxColor.fromRGB(0, 255, 0)], ["Double Trouble", 'dt', 'parasite', FlxColor.fromRGB(0, 255, 0)]],
             section: 0
         });
 
         weeks.push
         ({
-            songs: [["Sussy Bussy", "tomongus",'tomo', FlxColor.fromRGB(255, 90, 134)], ["Rivals", "tomongus",'tomo', FlxColor.fromRGB(255, 90, 134)], ["Chewmate", "hamster",'ham', FlxColor.fromRGB(255, 90, 134)]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 3',
+            songs: [["Sussy Bussy", "tomongus",'tomongus', FlxColor.fromRGB(255, 90, 134)], ["Rivals", "tomongus",'tomongus', FlxColor.fromRGB(255, 90, 134)], ["Chewmate", "hamster",'hamster', FlxColor.fromRGB(255, 90, 134)]],
             section: 0
         });
 
         weeks.push
         ({
             songs: [["Mando", "yellow",'yellow', FlxColor.fromRGB(255, 218, 67)], ["Dlow", "yellow",'yellow', FlxColor.fromRGB(255, 218, 67)], ["Oversight", "white",'white', FlxColor.WHITE], ["Danger", "black",'black', FlxColor.fromRGB(179, 0, 255)], ["Double Kill", "whiteblack",'black', FlxColor.fromRGB(179, 0, 255)]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 4',
             section: 0
         });
 
         weeks.push
         ({
             songs: [["Defeat", "black", 'black', FlxColor.fromRGB(179, 0, 255)], ["Ominous", "black", 'black', FlxColor.fromRGB(179, 0, 255)], ["Finale", "black", 'black', FlxColor.fromRGB(179, 0, 255)]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 5',
             section: 0
         });
 
         weeks.push
         ({
             songs: [["Compromised Persona", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 5',
             section: 0
         });
         
@@ -411,16 +403,12 @@ class AmongFreeplayState extends MusicBeatState {
         weeks.push
         ({
             songs: [["Ashes", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0)],["Magmatic", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0)],["Boiling Point", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0)]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 1',
             section: 1
         });
 
         weeks.push
         ({
             songs: [["Insane", "gray", 'grey', FlxColor.fromRGB(139, 157, 168)], ["Blackout", "gray", 'grey', FlxColor.fromRGB(139, 157, 168)], ["Delusion", "gray", 'grey', FlxColor.fromRGB(139, 157, 168)]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 2',
             section: 1
         });
 
@@ -428,57 +416,43 @@ class AmongFreeplayState extends MusicBeatState {
         weeks.push
         ({
             songs: [["Pinkwave", "pink", 'pink', FlxColor.fromRGB(255, 0, 222)], ["Heartbeat", "pink", 'pink', FlxColor.fromRGB(255, 0, 222)]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 3',
             section: 1
         });
 
         weeks.push
         ({
             songs: [["Order Up", "placeholder", 'chef', FlxColor.fromRGB(255, 0, 222)]], 
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 4',
             section: 1
         });
 
         weeks.push
         ({
             songs: [["Alpha Moogus", "oldpostor", 'oldpostor', FlxColor.RED], ["Actin Sus", "oldpostor", 'oldpostor', FlxColor.RED]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 1',
             section: 2
         });
 
         weeks.push
         ({
             songs: [["Titular", "henry", 'henry', FlxColor.ORANGE], ["Armed", "henry", 'henry', FlxColor.ORANGE]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 1',
             section: 3
         });
 
         weeks.push
         ({
-            songs: [["Christmas", "fella", 'chef', FlxColor.fromRGB(0, 255, 0)], ["Spookpostor", "boo", 'chef', FlxColor.fromRGB(0, 255, 0)]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 1',
-            section: 3
+            songs: [["Christmas", "fella", 'loggo', FlxColor.fromRGB(0, 255, 0)], ["Spookpostor", "boo", 'loggo', FlxColor.fromRGB(0, 255, 0)]],
+            section: 4
         });
 
         weeks.push
         ({
             songs: [["Who", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Drippypop", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Monochrome", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 1',
-            section: 3
+            section: 5
         });
 
         weeks.push
         ({
-            songs: [["Skinny Nuts", "henry", 'red', FlxColor.ORANGE],["Skinny Nuts 2", "henry", 'red', FlxColor.ORANGE]],
-            freeplayColor: [146, 113, 253],
-            weekName: 'Week 1',
-            section: 4
+            songs: [["Skinny Nuts", "skinnynuts", 'clowfoe', FlxColor.fromRGB(255, 60, 38)],["Skinny Nuts 2", "skinnynuts", 'ziffy', FlxColor.fromRGB(160, 16, 222)]],
+            section: 6
         });
     }
 
@@ -489,11 +463,11 @@ class AmongFreeplayState extends MusicBeatState {
 
         curWeek += change;
 
-        if(curWeek > 4) {
+        if(curWeek > 6) {
             curWeek = 0;
         }
         if(curWeek < 0) {
-            curWeek = 4;
+            curWeek = 6;
         }  
 
 
@@ -516,7 +490,7 @@ class AmongFreeplayState extends MusicBeatState {
             var prevI:Int = i;
             for(i in 0...weeks[i].songs.length) {
                 if(weeks[prevI].section == curWeek) {
-                    listOfButtons.push(new FreeplayCard(0, 0, weeks[prevI].songs[i][0], weeks[prevI].songs[i][1], weeks[prevI].songs[i][3]));
+                    listOfButtons.push(new FreeplayCard(0, 0, weeks[prevI].songs[i][0], weeks[prevI].songs[i][1], weeks[prevI].songs[i][3], weeks[prevI].songs[i][2]));
                 }
             }
         }
@@ -549,13 +523,13 @@ class AmongFreeplayState extends MusicBeatState {
 
     function changePortrait(?reset:Bool = false) {
         prevPort = portrait.animation.name;
-        switch(listOfButtons[curSelected].iconName) {
+        switch(listOfButtons[curSelected].portrait) {
             case 'impostor3':
                 portrait.animation.play('crewmate');  
             default:
-                portrait.animation.play(listOfButtons[curSelected].iconName);  
+                portrait.animation.play(listOfButtons[curSelected].portrait);  
         }
-        portrait.animation.play(listOfButtons[curSelected].iconName);    
+        trace(portrait.animation.name);
         if(!reset) {
             if(prevSel != curSelected) {
                 if(prevPort != portrait.animation.name) {
