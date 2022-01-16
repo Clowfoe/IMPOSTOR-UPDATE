@@ -305,8 +305,6 @@ class AmongFreeplayState extends MusicBeatState {
 			LoadingState.loadAndSwitchState(new PlayState());
 		}
 
-        portrait.y = Math.sin(CoolUtil.boundTo(elapsed, 0, 1) * 500.0) * 5 - 100;
-
         infoText.x = FlxG.width - infoText.width - 6;
 
         super.update(elapsed);
