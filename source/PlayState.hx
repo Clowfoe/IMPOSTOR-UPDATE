@@ -272,6 +272,8 @@ class PlayState extends MusicBeatState
 	public var inCutscene:Bool = false;
 	var songLength:Float = 0;
 
+	private var task:TaskSong;
+
 	var curPortrait:String = "";
 	#if desktop
 	// Discord RPC variables
@@ -1605,6 +1607,13 @@ class PlayState extends MusicBeatState
 
 		FlxG.fixedTimestep = false;
 		moveCameraSection(0);
+
+		if(Assets.exists(Paths.txt(SONG.song.toLowerCase().replace(' ', '-') + "/info"))){
+			trace('it exists');
+			task = new TaskSong(0, 200, SONG.song.toLowerCase().replace(' ', '-'));
+			task.cameras = [camHUD];
+			add(task);
+		}
 		
 		ass2 = new FlxSprite(0, FlxG.height * 1).loadGraphic(Paths.image('vignette')); 
 		ass2.scrollFactor.set();
@@ -2095,6 +2104,9 @@ class PlayState extends MusicBeatState
 				{
 					case 0:
 						FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
+						if(task != null){
+							task.start();
+						}
 					case 1:
 						var ready:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 						ready.scrollFactor.set();
