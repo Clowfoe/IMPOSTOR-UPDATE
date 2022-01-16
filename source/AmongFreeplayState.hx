@@ -426,6 +426,14 @@ class AmongFreeplayState extends MusicBeatState {
 
         weeks.push
         ({
+            songs: [["Order Up", "placeholder", 'chef', FlxColor.fromRGB(255, 0, 222)]], 
+            freeplayColor: [146, 113, 253],
+            weekName: 'Week 4',
+            section: 1
+        });
+
+        weeks.push
+        ({
             songs: [["Alpha Moogus", "oldpostor", 'oldpostor', FlxColor.RED], ["Actin Sus", "oldpostor", 'oldpostor', FlxColor.RED]],
             freeplayColor: [146, 113, 253],
             weekName: 'Week 1',
@@ -434,7 +442,7 @@ class AmongFreeplayState extends MusicBeatState {
 
         weeks.push
         ({
-            songs: [["Titular", "henry", 'henry', FlxColor.fromRGB(84, 167, 202)], ["Order Up", "placeholder", 'chef', FlxColor.fromRGB(84, 167, 202)], ["Who", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Drippypop", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Monochrome", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Compromised Persona", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)]],
+            songs: [["Titular", "henry", 'henry', FlxColor.fromRGB(84, 167, 202)], ["Armed", "henry", 'henry', FlxColor.fromRGB(84, 167, 202)], ["Who", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Drippypop", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Monochrome", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Compromised Persona", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)]],
             freeplayColor: [146, 113, 253],
             weekName: 'Week 1',
             section: 3
