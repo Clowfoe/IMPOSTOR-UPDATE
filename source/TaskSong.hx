@@ -30,7 +30,14 @@ class TaskSong extends FlxSpriteGroup
         pulledText += '\n';
         var splitText:Array<String> = [];
 
+        
         splitText = pulledText.split('\n');
+        
+        //theres literally no reason to have more than 2 lines
+        //cry
+        splitText.resize(2);
+
+        trace(splitText.length);
 
         var text = new FlxText(0, 0, 0, "", fontSize);
         text.setFormat(Paths.font("arial.ttf"), fontSize, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -47,7 +54,8 @@ class TaskSong extends FlxSpriteGroup
 
         size = text2.fieldWidth;
         
-        var bg = new FlxSprite(fontSize/-2, fontSize/-2).makeGraphic(Math.floor(size + fontSize), Math.floor(text.height + text2.height), FlxColor.WHITE);
+        var bg = new FlxSprite(fontSize/-2, fontSize/-2).makeGraphic(Math.floor(size + fontSize), Std.int(text.height + text2.height), FlxColor.WHITE);
+        bg.height = text.height + text2.height;
         bg.alpha = 0.47;
 
         text.text += "\n";
