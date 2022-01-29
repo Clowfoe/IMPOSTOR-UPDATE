@@ -5334,6 +5334,13 @@
 						105205.479452055,
 						4,
 						719.178082191781
+					],
+					[
+						106746.575342466,
+						-1,
+						"flash",
+						"1",
+						""
 					]
 				],
 				"typeOfSection": 0,
@@ -5384,6 +5391,13 @@
 						108287.671232877,
 						3,
 						0
+					],
+					[
+						106849.315068493,
+						-1,
+						"Change Character",
+						"Dad",
+						"black"
 					]
 				],
 				"typeOfSection": 0,
@@ -6694,6 +6708,13 @@
 						133047.94520548,
 						6,
 						0
+					],
+					[
+						133047.94520548,
+						-1,
+						"flash",
+						"1",
+						""
 					]
 				],
 				"typeOfSection": 0,
@@ -6769,6 +6790,13 @@
 						134691.780821918,
 						2,
 						0
+					],
+					[
+						133150.684931507,
+						-1,
+						"Change Character",
+						"Dad",
+						"grey"
 					]
 				],
 				"typeOfSection": 0,
@@ -12531,6 +12559,13 @@
 						238150.684931507,
 						4,
 						102.739726027397
+					],
+					[
+						238253.424657535,
+						-1,
+						"flash",
+						"1",
+						""
 					]
 				],
 				"altAnim": false,
@@ -12556,6 +12591,13 @@
 						239589.041095891,
 						3,
 						308.219178082192
+					],
+					[
+						238356.164383562,
+						-1,
+						"Change Character",
+						"Dad",
+						"black"
 					]
 				],
 				"altAnim": false,
@@ -13691,6 +13733,13 @@
 						290856.164383562,
 						2,
 						0
+					],
+					[
+						290856.164383562,
+						-1,
+						"flash",
+						"1",
+						""
 					]
 				],
 				"altAnim": false,
@@ -13746,6 +13795,13 @@
 						292223.964350553,
 						0,
 						90.3614457831325
+					],
+					[
+						290958.904109589,
+						-1,
+						"Change Character",
+						"Dad",
+						"maroon"
 					]
 				],
 				"altAnim": false,
@@ -13916,30 +13972,6 @@
 						295838.422181879,
 						2,
 						90.3614457831325
-					],
-					[
-						296019.145073445,
-						1,
-						0,
-						"No Animation"
-					],
-					[
-						296199.867965011,
-						1,
-						0,
-						"No Animation"
-					],
-					[
-						296380.590856577,
-						1,
-						0,
-						"No Animation"
-					],
-					[
-						296561.313748144,
-						1,
-						0,
-						"No Animation"
 					]
 				],
 				"altAnim": false,
@@ -18947,6 +18979,13 @@
 						0,
 						90.3614457831325,
 						"Hey!"
+					],
+					[
+						406531.193266215,
+						-1,
+						"flash",
+						"1",
+						""
 					]
 				],
 				"typeOfSection": 0,
@@ -19017,6 +19056,13 @@
 						407976.976398745,
 						2,
 						0
+					],
+					[
+						406621.554711998,
+						-1,
+						"Change Character",
+						"Dad",
+						"black"
 					]
 				],
 				"typeOfSection": 0,
@@ -24360,7 +24406,6 @@
 				"bpm": 146
 			},
 			{
-				"gfSection": false,
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
@@ -24370,7 +24415,6 @@
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
@@ -24382,9 +24426,90 @@
 		],
 		"player2": "pink",
 		"gfVersion": "gf",
-		"events": [],
+		"events": [
+			[
+				106849.315068493,
+				[
+					[
+						"Change Character",
+						"1",
+						"Beast"
+					]
+				]
+			],
+			[
+				133150.684931507,
+				[
+					[
+						"Change Character",
+						"1",
+						"Knuckles"
+					]
+				]
+			],
+			[
+				238356.164383562,
+				[
+					[
+						"Change Character",
+						"1",
+						"Beast"
+					]
+				]
+			],
+			[
+				290958.904109589,
+				[
+					[
+						"Change Character",
+						"1",
+						"Eggman"
+					]
+				]
+			],
+			[
+				296019.145073445,
+				[
+					[
+						"Play Animation",
+						"Hey!",
+						"Dad"
+					]
+				]
+			],
+			[
+				307585.410133686,
+				[
+					[
+						"Play Animation",
+						"Hey!",
+						"Dad"
+					]
+				]
+			],
+			[
+				400115.530615613,
+				[
+					[
+						"Play Animation",
+						"Hey!",
+						"Dad"
+					]
+				]
+			],
+			[
+				406621.554711998,
+				[
+					[
+						"Change Character",
+						"1",
+						"Beast"
+					]
+				]
+			]
+		],
 		"isRing": true,
-		"player3": null,
+		"player3": "gf",
 		"song": "triple trouble",
 		"validScore": true,
 		"needsVoices": true,
