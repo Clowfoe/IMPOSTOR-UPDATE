@@ -234,7 +234,9 @@ class PlayState extends MusicBeatState
 	var bottomBoppers:BGSprite;
 	var santa:BGSprite;
 	var heyTimer:Float;
-
+	//defeat
+	var defeatthing:FlxSprite;
+	var defeatblack:FlxSprite;
 	//loggo
 	var peopleloggo:FlxSprite;
 	var fireloggo:FlxSprite;
@@ -929,11 +931,23 @@ class PlayState extends MusicBeatState
 					
 						
 						curStage = 'defeat';
-						var defeat:FlxSprite = new FlxSprite(0, 100).loadGraphic(Paths.image('defeatfnf', 'shared'));		
-						defeat.setGraphicSize(Std.int(defeat.width * 2));
-						defeat.scrollFactor.set(1,1);
-						defeat.antialiasing = true;
-						add(defeat);
+						
+
+						defeatthing = new FlxSprite(-200, -150);
+							defeatthing.frames = Paths.getSparrowAtlas('defeat');
+							defeatthing.animation.addByPrefix('bop', 'defeat', 24, false);
+							defeatthing.animation.play('bop');
+							defeatthing.setGraphicSize(Std.int(defeatthing.width * 0.9));
+							defeatthing.antialiasing = true;
+							defeatthing.scrollFactor.set(1, 1);
+							defeatthing.active = true;
+							add(defeatthing);
+
+							defeatblack = new FlxSprite().makeGraphic(FlxG.width * 4, FlxG.height + 700, FlxColor.BLACK);
+							defeatblack.alpha = 0;
+							defeatblack.screenCenter(X);
+							defeatblack.screenCenter(Y);
+							add(defeatblack);
 					
 
 			
@@ -3611,6 +3625,28 @@ class PlayState extends MusicBeatState
 					FlxG.camera.zoom += camZoom;
 					camHUD.zoom += hudZoom;
 				}
+				
+			case 'DefeatDark':
+				var charType:Int = Std.parseInt(value1);
+				if(Math.isNaN(charType)) charType = 0;
+
+				switch(charType) {
+					case 0:
+						defeatblack.alpha = 0;
+					case 1:
+						defeatblack.alpha += 1;
+				}
+
+			case 'flash':
+				var charType:Int = Std.parseInt(value1);
+				if(Math.isNaN(charType)) charType = 0;
+
+				switch(charType) {
+					case 0:
+						camGame.flash(FlxColor.WHITE, 0.35);
+					case 1:
+						camGame.flash(FlxColor.WHITE, 0.35);
+				}
 
 			case 'Trigger BG Ghouls':
 				if(curStage == 'schoolEvil' && !ClientPrefs.lowQuality) {
@@ -4842,6 +4878,8 @@ class PlayState extends MusicBeatState
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
 
+		
+
 		{var sussusBeats = [94, 95, 288, 296, 304, 312, 318, 319];
 			var saboBeats = [16, 24, 32, 40, 48, 56, 62, 63, 272, 280, 288, 296, 302, 303, 376, 384, 892];
 			var meltBeats = [0, 16, 32, 48, 64, 72, 80, 88, 96, 104, 112, 120, 126, 127, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 382, 464, 480, 496, 512];
@@ -4948,6 +4986,7 @@ class PlayState extends MusicBeatState
 				}
 			}
 		}
+		
 
 		if (curBeat % gfSpeed == 0 && !gf.stunned && gf.animation.curAnim.name != null && !gf.animation.curAnim.name.startsWith("sing"))
 		{
@@ -4962,6 +5001,8 @@ class PlayState extends MusicBeatState
 				boyfriend.dance();
 			}
 		}
+
+		
 
 		if(curBeat % 2 == 0) {
 			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing") && boyfriend.curCharacter != 'bf-running')
@@ -5008,10 +5049,12 @@ class PlayState extends MusicBeatState
 				if(curBeat % 2 == 0) {
 					peopleloggo.animation.play('bop', true);
 				}
-			case 'loggo2':
-				if(curBeat % 2 == 0) {
-					peopleloggo.animation.play('bop', true);
+			
+			case 'defeat':
+				if(curBeat % 4 == 0) {
+					defeatthing.animation.play('bop', true);
 				}
+				
 			case 'mall':
 				if(!ClientPrefs.lowQuality) {
 					upperBoppers.dance(true);

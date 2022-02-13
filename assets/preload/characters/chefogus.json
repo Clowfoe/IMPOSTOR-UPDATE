@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				189,
+				-100
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				147,
+				-117
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				63,
+				-140
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				114,
+				-121
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				136,
+				-114
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				89,
+				-153
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "vibratoup",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				-135
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "vibratodown",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/chefogus",
+	"position": [
+		100,
+		80
+	],
+	"healthicon": "chef",
+	"flip_x": false,
+	"healthbar_colors": [
+		242,
+		114,
+		28
+	],
+	"camera_position": [
+		-190,
+		200
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

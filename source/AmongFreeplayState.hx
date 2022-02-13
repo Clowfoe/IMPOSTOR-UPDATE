@@ -408,7 +408,7 @@ class AmongFreeplayState extends MusicBeatState {
 
         weeks.push
         ({
-            songs: [["Insane", "gray", 'grey', FlxColor.fromRGB(139, 157, 168)], ["Blackout", "gray", 'grey', FlxColor.fromRGB(139, 157, 168)], ["Delusion", "gray", 'grey', FlxColor.fromRGB(139, 157, 168)]],
+            songs: [["Delusion", "gray", 'grey', FlxColor.fromRGB(139, 157, 168)], ["Blackout", "gray", 'grey', FlxColor.fromRGB(139, 157, 168)], ["Neurotic", "gray", 'grey', FlxColor.fromRGB(139, 157, 168)]],
             section: 1
         });
 
@@ -421,7 +421,7 @@ class AmongFreeplayState extends MusicBeatState {
 
         weeks.push
         ({
-            songs: [["Order Up", "placeholder", 'chef', FlxColor.fromRGB(255, 0, 222)]], 
+            songs: [["Order Up", "chef", 'chef', FlxColor.fromRGB(242, 114, 28)]], 
             section: 1
         });
 
@@ -445,7 +445,7 @@ class AmongFreeplayState extends MusicBeatState {
 
         weeks.push
         ({
-            songs: [["Who", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Drippypop", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Monochrome", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)]],
+            songs: [["Ow", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)],["Who", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Drippypop", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Crewicide", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Triple Trouble", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Monochrome", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)]],
             section: 5
         });
 

@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				254,
+				-17
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "mungus idle instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				240,
+				-3
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "parasite right new instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				224,
+				23
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "paracite down instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				351,
+				79
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "parasite left instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				191,
+				621
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "parashite up instance 1",
+			"indices": []
+		},
+		{
+			"offsets": [
+				240,
+				-80
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "parasite right redsing instance 1"
+		},
+		{
+			"offsets": [
+				230,
+				-20
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "parasite down redsing instance 1"
+		},
+		{
+			"offsets": [
+				310,
+				20
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "parasite left redsing instance 1"
+		},
+		{
+			"offsets": [
+				211,
+				282
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "parasite up redsing instance 1"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/dt",
+	"position": [
+		0,
+		130
+	],
+	"healthicon": "parasite",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		102,
+		0
+	],
+	"camera_position": [
+		-910,
+		-410
+	],
+	"sing_duration": 6.1,
+	"scale": 2.6
+}

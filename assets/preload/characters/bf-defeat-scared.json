@@ -1,0 +1,144 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-27,
+				-26
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Zbf miss"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-27,
+				-26
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "Zbf miss",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-26,
+				-26
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "Zbf miss",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-26,
+				-26
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "Zbf miss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Zbf idle scared"
+		},
+		{
+			"offsets": [
+				4,
+				-9
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Zbf left scared"
+		},
+		{
+			"offsets": [
+				-6,
+				-60
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Zbf down scared"
+		},
+		{
+			"offsets": [
+				-55,
+				44
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Zbf up scared"
+		},
+		{
+			"offsets": [
+				-43,
+				-7
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Zbf right scared"
+		},
+		{
+			"offsets": [
+				-54,
+				50
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPfinish",
+			"loop": false,
+			"name": "Zbf up pass out"
+		},
+		{
+			"offsets": [
+				-32,
+				14
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "bfFinish",
+			"loop": false,
+			"name": "Zbf pass out"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BF_Defeat_Scared",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
