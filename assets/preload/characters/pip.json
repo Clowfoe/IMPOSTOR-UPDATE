@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Pip Idle"
+		},
+		{
+			"offsets": [
+				84,
+				-19
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Pip Down"
+		},
+		{
+			"offsets": [
+				87,
+				20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Pip Up"
+		},
+		{
+			"offsets": [
+				-30,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Pip Left"
+		},
+		{
+			"offsets": [
+				178,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Pip Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/pip",
+	"position": [
+		-100,
+		110
+	],
+	"healthicon": "pip",
+	"flip_x": false,
+	"healthbar_colors": [
+		254,
+		170,
+		71
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

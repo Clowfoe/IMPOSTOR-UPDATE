@@ -240,12 +240,14 @@ class PlayState extends MusicBeatState
 	//loggo
 	var peopleloggo:FlxSprite;
 	var fireloggo:FlxSprite;
+	var mapthing:FlxSprite;
 	//reactor
 	var amogus:FlxSprite;
 	var dripster:FlxSprite;
 	var yellow:FlxSprite;
 	var brown:FlxSprite;
 	var ass2:FlxSprite;
+	var ass3:FlxSprite;
 	var orb:FlxSprite = new FlxSprite();
 
 	var bgGirls:BackgroundGirls;
@@ -299,6 +301,7 @@ class PlayState extends MusicBeatState
 	var flashSprite:FlxSprite = new FlxSprite(0, 0).makeGraphic(1920, 1080, 0xFFb30000);
 	var stageFront2:FlxSprite;
 	var stageFront3:FlxSprite;
+	var overlay:FlxSprite;
 
 	override public function create()
 	{
@@ -437,6 +440,61 @@ class PlayState extends MusicBeatState
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
+			case 'who': //loggo normal
+
+				var bg:FlxSprite = new FlxSprite(0, 100).loadGraphic(Paths.image('polus/deadguy', 'impostor'));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
+						add(bg);	
+			
+			case 'airshipRoom': //thanks fabs
+
+				var skyyellow:FlxSprite = new FlxSprite(-1858.33333333333, -2161.66666666667).loadGraphic(Paths.image('airship/Sky_Yellow', 'impostor'));
+						skyyellow.antialiasing = true;
+						skyyellow.scrollFactor.set(0.2, 0.2);
+						skyyellow.active = false;
+						add(skyyellow);
+
+				var bluechair:FlxSprite = new FlxSprite(0, 1).loadGraphic(Paths.image('airship/Blu_Chair_Yellow', 'impostor'));
+						bluechair.antialiasing = true;
+						bluechair.scrollFactor.set(1, 1);
+						bluechair.active = false;
+						add(bluechair);
+
+				var cloudyellow:FlxSprite = new FlxSprite(-2175, -163.666666666667).loadGraphic(Paths.image('airship/Clouds_Yellow', 'impostor'));
+						cloudyellow.antialiasing = true;
+						cloudyellow.scrollFactor.set(0.6, 0.6);
+						cloudyellow.active = false;
+						add(cloudyellow);
+				
+				var bottomyellow:FlxSprite = new FlxSprite(-2287.5, -1873).loadGraphic(Paths.image('airship/Bottom_Floor_Yellow', 'impostor'));
+						bottomyellow.antialiasing = true;
+						bottomyellow.scrollFactor.set(1, 1);
+						bottomyellow.active = false;
+						add(bottomyellow);
+				
+				var topyellow:FlxSprite = new FlxSprite(-2050, 6).loadGraphic(Paths.image('airship/Top_Floor_Yellow', 'impostor'));
+						topyellow.antialiasing = true;
+						topyellow.scrollFactor.set(1, 1);
+						topyellow.active = false;
+						add(topyellow);
+
+				var cpyellow:FlxSprite = new FlxSprite(-300, -33.5).loadGraphic(Paths.image('airship/Control_Panel_Yellow', 'impostor'));
+						cpyellow.antialiasing = true;
+						cpyellow.scrollFactor.set(1, 1);
+						cpyellow.active = false;
+						add(cpyellow);
+
+				mapthing = new FlxSprite(0, -500);
+						mapthing.frames = Paths.getSparrowAtlas('airship/Map_Bounce', 'impostor');	
+						mapthing.animation.addByPrefix('bop', 'Map  instance 1', 24, true);
+						mapthing.animation.play('bop');
+						mapthing.antialiasing = false;
+						mapthing.scrollFactor.set(1, 1);
+						mapthing.active = true;
+						add(mapthing);
+
 			case 'loggo': //loggo normal
 
 				var bg:BGSprite = new BGSprite('space', 0, 200, 0.8, 0.8);
@@ -677,6 +735,17 @@ class PlayState extends MusicBeatState
 				var bg:BGSprite = new BGSprite('HOTASS', -600, -200, 0.9, 0.9);
 				add(bg);
 
+			case 'grey': //SHIT ASS
+				curStage = 'grey';				
+				var thebackground = new FlxSprite(0, 0);
+				thebackground.frames = Paths.getSparrowAtlas('airship/Gray_BG', 'impostor');
+				thebackground.animation.addByPrefix('bop', 'BG', 24, true);
+				thebackground.animation.play('bop');
+				thebackground.antialiasing = true;
+				thebackground.scrollFactor.set(1, 1);
+				thebackground.active = true;
+				add(thebackground);
+
 				
 
 			case 'henry': //stick Min
@@ -690,32 +759,33 @@ class PlayState extends MusicBeatState
 
 			case 'polus': 
 						curStage = 'polus';
-						defaultCamZoom = 0.9;  
+						
  
-						var sky:FlxSprite = new FlxSprite(-834.3, -620.5).loadGraphic(Paths.image('polus/polusSky', 'impostor'));
+						var sky:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('polus/polus_custom_sky', 'impostor'));
 						sky.antialiasing = true;
 						sky.scrollFactor.set(0.5, 0.5);
+						sky.setGraphicSize(Std.int(sky.width * 1.4));
 						sky.active = false;
 						add(sky);		
 		
-						var rocks:FlxSprite = new FlxSprite(-915.8, -411.3).loadGraphic(Paths.image('polus/polusrocks', 'impostor'));
+						var rocks:FlxSprite = new FlxSprite(-700, -300).loadGraphic(Paths.image('polus/polusrocks', 'impostor'));
 						rocks.updateHitbox();
 						rocks.antialiasing = true;
 						rocks.scrollFactor.set(0.6, 0.6);
 						rocks.active = false;
 						add(rocks);	
 						
-						var hills:FlxSprite = new FlxSprite(-1238.05, -180.55).loadGraphic(Paths.image('polus/polusHills', 'impostor'));
+						var hills:FlxSprite = new FlxSprite(-1050, -180.55).loadGraphic(Paths.image('polus/polusHills', 'impostor'));
 						hills.updateHitbox();
 						hills.antialiasing = true;
 						hills.scrollFactor.set(0.9, 0.9);
 						hills.active = false;
 						add(hills);
 
-						var warehouse:FlxSprite = new FlxSprite(-458.35, -315.6).loadGraphic(Paths.image('polus/polusWarehouse', 'impostor'));
+						var warehouse:FlxSprite = new FlxSprite(50, -400).loadGraphic(Paths.image('polus/polus_custom_lab', 'impostor'));
 						warehouse.updateHitbox();
 						warehouse.antialiasing = true;
-						warehouse.scrollFactor.set(0.9, 0.9);
+						warehouse.scrollFactor.set(1, 1);
 						warehouse.active = false;
 						add(warehouse);
 
@@ -732,7 +802,7 @@ class PlayState extends MusicBeatState
 						}
 
 						
-						var ground:FlxSprite = new FlxSprite(-580.9, 241.85).loadGraphic(Paths.image('polus/polusGround', 'impostor'));
+						var ground:FlxSprite = new FlxSprite(-1350, 80).loadGraphic(Paths.image('polus/polus_custom_floor', 'impostor'));
 						ground.updateHitbox();
 						ground.antialiasing = true;
 						ground.scrollFactor.set(1, 1);
@@ -785,6 +855,74 @@ class PlayState extends MusicBeatState
 						ground.scrollFactor.set(1, 1);
 						ground.active = false;
 						add(ground);
+
+						
+
+
+			case 'polus3': 
+						curStage = 'polus3';
+						 
+						
+ 
+				//		var sky:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('polus/SkyPolusLol', 'impostor'));
+				//		sky.antialiasing = true;
+				//		sky.scrollFactor.set(0.5, 0.5);
+				//		sky.active = false;
+				//		sky.setGraphicSize(Std.int(sky.width * 1));
+				//		add(sky);		
+
+				//		var rocksbg:FlxSprite = new FlxSprite(-250, -400).loadGraphic(Paths.image('polus/Back_Rocks', 'impostor'));
+				//		rocksbg.updateHitbox();
+				//		rocksbg.antialiasing = true;
+				//		rocksbg.setGraphicSize(Std.int(rocksbg.width * 1));
+					//	rocksbg.scrollFactor.set(0.7, 0.7);
+				//		rocksbg.active = false;
+					//	add(rocksbg);	
+		
+				//		var rocks:FlxSprite = new FlxSprite(-100, 0).loadGraphic(Paths.image('polus/polus2rocks', 'impostor'));
+				//		rocks.updateHitbox();
+				//		rocks.antialiasing = true;
+				//		rocks.setGraphicSize(Std.int(rocks.width * 1));
+				//		rocks.scrollFactor.set(0.8, 0.8);
+				//		rocks.active = false;
+				//		add(rocks);	
+						var edge:FlxSprite = new FlxSprite(750, -400).loadGraphic(Paths.image('polus/Edge', 'impostor'));
+						edge.updateHitbox();
+						edge.setGraphicSize(Std.int(edge.width * 1));
+						edge.antialiasing = true;
+						edge.scrollFactor.set(1, 1);
+						edge.active = false;
+						add(edge);
+
+						var lava = new FlxSprite(450, 300);
+						lava.frames = Paths.getSparrowAtlas('polus/lava', 'impostor');
+						lava.animation.addByPrefix('bop', 'lava', 24, true);
+						lava.animation.play('bop');
+						lava.setGraphicSize(Std.int(lava.width * 1));
+						lava.antialiasing = false;
+						lava.scrollFactor.set(1, 1);
+						lava.active = true;
+						add(lava);
+						
+						var ground:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('polus/platform', 'impostor'));
+						ground.updateHitbox();
+						ground.setGraphicSize(Std.int(ground.width * 0.4));
+						ground.antialiasing = true;
+						ground.scrollFactor.set(1, 1);
+						ground.active = false;
+						add(ground);
+
+						var bubbles = new FlxSprite(900, 400);
+						bubbles.frames = Paths.getSparrowAtlas('polus/bubbles', 'impostor');
+						bubbles.animation.addByPrefix('bop', 'Lava Bubbles', 24, true);
+						bubbles.animation.play('bop');
+						bubbles.setGraphicSize(Std.int(bubbles.width * 1));
+						bubbles.antialiasing = false;
+						bubbles.scrollFactor.set(1, 1);
+						bubbles.active = true;
+						add(bubbles);
+
+						
 
 						
 
@@ -1348,6 +1486,7 @@ class PlayState extends MusicBeatState
 				smokelol.updateHitbox();
 				smokelol.scale.set(1, 1);
 				add(smokelol);
+				
 			case 'toogus':
 				stageFront2 = new FlxSprite(-900, 800).loadGraphic(Paths.image('table'));
 				stageFront2.updateHitbox();
@@ -1363,6 +1502,8 @@ class PlayState extends MusicBeatState
 				stageFront3.flipX = true;
 				add(stageFront2);
 				add(stageFront3);
+			case 'polus3':
+				
 			case 'spooky':
 				add(halloweenWhite);
 			case 'airship':
@@ -1632,10 +1773,27 @@ class PlayState extends MusicBeatState
 		ass2 = new FlxSprite(0, FlxG.height * 1).loadGraphic(Paths.image('vignette')); 
 		ass2.scrollFactor.set();
 		ass2.screenCenter();
+		
+		overlay = new FlxSprite(-1000, -2000).loadGraphic(Paths.image('polus/overlay', 'impostor'));
+		overlay.updateHitbox();
+		overlay.setGraphicSize(Std.int(overlay.width * 0.4));
+		overlay.antialiasing = true;
+		overlay.scrollFactor.set(1, 1);
+		overlay.active = false;
+		overlay.blend = 'add';
+		overlay.alpha = 0.5;
+		
+
 		if (curSong == 'Reactor')
 		{
 			add(ass2);
 		}
+
+		if (curSong == 'Boiling Point')
+			{
+				add(overlay);
+			}
+	
 
 		healthBarBG = new AttachedSprite('healthBar');
 		healthBarBG.y = FlxG.height * 0.89;
@@ -1692,6 +1850,7 @@ class PlayState extends MusicBeatState
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		ass2.cameras = [camHUD];
+//		ass3.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
@@ -1785,6 +1944,9 @@ class PlayState extends MusicBeatState
 				case 'senpai' | 'roses' | 'thorns':
 					if(daSong == 'roses') FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
+
+				case 'sussus-moogus':
+					startVideo('polus1');
 
 				default:
 					startCountdown();
@@ -2664,6 +2826,12 @@ class PlayState extends MusicBeatState
 				orb.alpha = FlxMath.lerp(0.96, orb.alpha, 0.90);
 				ass2.alpha = FlxMath.lerp(1, ass2.alpha, 0.90);
 			}
+		}
+
+		if(curSong == 'Boiling Point') {
+			
+				overlay.alpha = FlxMath.lerp(0.5, overlay.alpha, 0.40);
+			
 		}
 
 		if(curStage == "ejected")
@@ -5016,6 +5184,44 @@ class PlayState extends MusicBeatState
 		} else if(dad.danceIdle && dad.animation.curAnim.name != null && !dad.curCharacter.startsWith('gf') && !dad.animation.curAnim.name.startsWith("sing") && !dad.stunned) {
 			dad.dance();
 		}
+		
+				//drop 1
+		if (curBeat == 128 && curSong == 'Reactor')
+    {
+			defaultCamZoom = 0.7;
+			camFollowPos.setPosition(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y + 100);
+    }
+
+		if (curBeat == 191 && curSong == 'Reactor')
+    {
+			defaultCamZoom = 0.5;
+			camFollowPos.setPosition(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y - 100);
+    }
+	//drop 2
+		if (curBeat == 319 && curSong == 'Reactor')
+    {
+			defaultCamZoom = 0.7;
+			camFollowPos.setPosition(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y + 100);
+    }
+
+		if (curBeat == 383 && curSong == 'Reactor')
+    {
+			defaultCamZoom = 0.5;
+			camFollowPos.setPosition(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y - 100);
+    }
+	//FUCKING EPIC DROP NIGGA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	//clowfoe wrote this btw im not racist
+		if (curBeat == 480 && curSong == 'Reactor')
+    {
+			defaultCamZoom = 0.9;
+			camFollowPos.setPosition(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y + 100);
+    }
+
+		if (curBeat == 607 && curSong == 'Reactor')
+    {
+			defaultCamZoom = 0.7;
+			camFollowPos.setPosition(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y + 100);
+    }
 
 		switch (curStage)
 		{
@@ -5045,6 +5251,15 @@ class PlayState extends MusicBeatState
 					yellow.animation.play('bop', true);
 					brown.animation.play('bop', true);
 				}
+
+			case 'polus3':
+				if(curBeat % 4 == 0) {
+
+					overlay.alpha = 0.4;
+				
+				}
+				
+					
 			case 'loggo':
 				if(curBeat % 2 == 0) {
 					peopleloggo.animation.play('bop', true);

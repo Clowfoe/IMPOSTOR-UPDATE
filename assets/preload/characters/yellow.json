@@ -1,59 +1,70 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-40,
 				-150
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "yellow idle"
+			"fps": 24,
+			"name": "yellow idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				-183
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "yellow right"
+			"fps": 24,
+			"name": "yellow right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-77,
 				-224
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "yellow down"
+			"fps": 24,
+			"name": "yellow down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				22,
 				-220
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "yellow left"
+			"fps": 24,
+			"name": "yellow left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				23,
 				-171
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
+			"fps": 24,
+			"name": "yellow up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-40,
+				-169
+			],
 			"indices": [],
-			"name": "yellow up"
+			"fps": 24,
+			"anim": "death",
+			"loop": false,
+			"name": "death"
 		}
 	],
 	"no_antialiasing": false,

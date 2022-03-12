@@ -1,7 +1,7 @@
 {
 	"song": {
-		"player1": "blue",
-		"player2": "red",
+		"player1": "whitewho",
+		"player2": "bluewhonormal",
 		"notes": [
 			{
 				"lengthInSteps": 16,
@@ -4533,21 +4533,48 @@
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
 				"bpm": 155,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
 				"bpm": 155,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 155,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 155
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 155
 			},
 			{
 				"lengthInSteps": 16,
@@ -4561,9 +4588,9 @@
 		],
 		"gfVersion": "gf",
 		"events": [],
-		"player3": "gf",
+		"player3": "gf-car",
 		"song": "Who",
-		"stage": "kills",
+		"stage": "who",
 		"validScore": true,
 		"needsVoices": true,
 		"speed": 2.7,

@@ -2,7 +2,7 @@
 	"song": {
 		"player1": "bf",
 		"events": [],
-		"gfVersion": "gf",
+		"gfVersion": "gf-car",
 		"player2": "grey",
 		"notes": [
 			{
@@ -6574,6 +6574,7 @@
 		],
 		"player3": null,
 		"song": "Neurotic",
+		"stage": "grey",
 		"needsVoices": true,
 		"validScore": true,
 		"speed": 3.2,

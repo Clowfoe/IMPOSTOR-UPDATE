@@ -451,7 +451,7 @@ class AmongFreeplayState extends MusicBeatState {
 
         weeks.push
         ({
-            songs: [["Skinny Nuts", "skinnynuts", 'clowfoe', FlxColor.fromRGB(255, 60, 38)],["Skinny Nuts 2", "skinnynuts", 'ziffy', FlxColor.fromRGB(160, 16, 222)]],
+            songs: [["Chippin", "skinnynuts", 'clowfoe', FlxColor.fromRGB(255, 60, 38)], ["Skinny Nuts", "skinnynuts", 'clowfoe', FlxColor.fromRGB(255, 60, 38)],["Skinny Nuts 2", "skinnynuts", 'ziffy', FlxColor.fromRGB(160, 16, 222)]],
             section: 6
         });
     }
