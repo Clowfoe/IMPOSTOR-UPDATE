@@ -3437,7 +3437,14 @@ class PlayState extends MusicBeatState
 						//	dad.playAnim(animToPlay + altAnim, true);
 						//	dad.holdTimer = 0;
 						}
-
+						if(daNote.noteType == 'orb') {
+							//	gf.playAnim(animToPlay + altAnim, true);
+							//	gf.holdTimer = 0;
+							} else {
+							//	dad.playAnim(animToPlay + altAnim, true);
+							//	dad.holdTimer = 0;
+							}
+						
 						if(daNote.noteType == 'rare') {
 							//	gf.playAnim(animToPlay + altAnim, true);
 							//	gf.holdTimer = 0;
@@ -4578,6 +4585,15 @@ class PlayState extends MusicBeatState
 		//	boyfriend.playAnim(animToPlay + daAlt, true);
 		}
 
+		if(daNote.noteType == 'orb') {
+			//gf.playAnim(animToPlay, true);
+		} else {
+		//	var daAlt = '';
+		//	if(daNote.noteType == 'Alt Animation') daAlt = '-alt';
+
+		//	boyfriend.playAnim(animToPlay + daAlt, true);
+		}
+
 		if(daNote.noteType == 'rare') {
 			//gf.playAnim(animToPlay, true);
 		} else {
@@ -4704,6 +4720,14 @@ class PlayState extends MusicBeatState
 				//	boyfriend.playAnim(animToPlay + daAlt, true);
 				//	boyfriend.holdTimer = 0;
 				}
+
+				if(note.noteType == 'orb') {
+					//	gf.playAnim(animToPlay + daAlt, true);
+					//	gf.holdTimer = 0;
+					} else {
+					//	boyfriend.playAnim(animToPlay + daAlt, true);
+					//	boyfriend.holdTimer = 0;
+					}
 
 				if(note.noteType == 'rare') {
 					//	gf.playAnim(animToPlay + daAlt, true);

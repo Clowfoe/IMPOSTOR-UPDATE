@@ -2,77 +2,77 @@
 	"animations": [
 		{
 			"offsets": [
-				70,
-				-280
+				189,
+				-140
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "impostor idle"
+			"loop": false,
+			"name": "Pink Idle"
 		},
 		{
 			"offsets": [
-				-7,
-				-301
+				100,
+				-159
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "impostor right"
+			"loop": false,
+			"name": "Pink Right"
 		},
 		{
 			"offsets": [
-				11,
-				-255
+				126,
+				-169
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "impostor down"
+			"loop": false,
+			"name": "Pink Down"
 		},
 		{
 			"offsets": [
-				195,
-				-296
+				137,
+				-172
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "imposter left"
+			"loop": false,
+			"name": "Pink Left"
 		},
 		{
 			"offsets": [
-				5,
-				-250
+				259,
+				-164
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "singUP",
 			"loop": false,
-			"name": "impostor up"
+			"name": "Pink Up"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/impostor",
+	"image": "characters/pinkexe",
 	"position": [
-		0,
-		100
+		100,
+		80
 	],
-	"healthicon": "impostor",
+	"healthicon": "pink",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		51,
-		51
+		182,
+		80,
+		146
 	],
 	"camera_position": [
-		-130,
-		290
+		-190,
+		200
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 0.9
 }

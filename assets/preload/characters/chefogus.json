@@ -9,80 +9,80 @@
 			"fps": 24,
 			"anim": "idle",
 			"indices": [],
-			"name": "idle"
+			"name": "IDLE"
 		},
 		{
 			"offsets": [
-				147,
-				-117
+				15,
+				-102
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
 			"indices": [],
-			"name": "right"
+			"name": "RIGHT"
 		},
 		{
 			"offsets": [
-				63,
-				-140
+				-10,
+				-131
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
-			"name": "down"
+			"name": "DOWN"
 		},
 		{
 			"offsets": [
-				114,
-				-121
+				92,
+				-88
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
 			"indices": [],
-			"name": "left"
+			"name": "LEFT"
 		},
 		{
 			"offsets": [
-				136,
-				-114
+				33,
+				-113
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
-			"name": "up"
+			"name": "UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				89,
-				-153
+				27,
+				-114
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP-alt",
-			"fps": 24,
-			"name": "vibratoup",
-			"indices": []
+			"indices": [],
+			"name": "Vibrato UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-8,
-				-135
+				32,
+				-118
 			],
-			"anim": "singDOWN-alt",
+			"loop": false,
 			"fps": 24,
-			"name": "vibratodown",
-			"indices": []
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "Vibrato DOWN"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/chefogus",
 	"position": [
-		100,
-		80
+		70,
+		70
 	],
 	"healthicon": "chef",
 	"flip_x": false,
