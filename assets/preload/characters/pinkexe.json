@@ -5,10 +5,10 @@
 				189,
 				-140
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "idle",
-			"loop": false,
+			"indices": [],
 			"name": "Pink Idle"
 		},
 		{
@@ -16,10 +16,10 @@
 				100,
 				-159
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "Pink Right"
 		},
 		{
@@ -27,10 +27,10 @@
 				126,
 				-169
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "Pink Down"
 		},
 		{
@@ -38,10 +38,10 @@
 				137,
 				-172
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "Pink Left"
 		},
 		{
@@ -49,18 +49,18 @@
 				259,
 				-164
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "Pink Up"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/pinkexe",
 	"position": [
-		100,
-		80
+		40,
+		50
 	],
 	"healthicon": "pink",
 	"flip_x": false,

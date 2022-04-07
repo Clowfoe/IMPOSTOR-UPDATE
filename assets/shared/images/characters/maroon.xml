@@ -2,56 +2,129 @@
 <TextureAtlas imagePath="maroon.png">
 	<!-- Created with Adobe Animate version 21.0.6.41649 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="down0000" x="0" y="0" width="512" height="443" frameX="-76" frameY="-48" frameWidth="589" frameHeight="501"/>
-	<SubTexture name="down0001" x="542" y="0" width="557" height="432" frameX="-31" frameY="-69" frameWidth="589" frameHeight="501"/>
-	<SubTexture name="down0002" x="1129" y="0" width="588" height="501" frameX="0" frameY="0" frameWidth="589" frameHeight="501"/>
-	<SubTexture name="down0003" x="1747" y="0" width="500" height="478" frameX="-89" frameY="-19" frameWidth="589" frameHeight="501"/>
-	<SubTexture name="down0004" x="2277" y="0" width="502" height="419" frameX="-87" frameY="-78" frameWidth="589" frameHeight="501"/>
-	<SubTexture name="down0005" x="2809" y="0" width="557" height="423" frameX="-32" frameY="-72" frameWidth="589" frameHeight="501"/>
-	<SubTexture name="down0006" x="3396" y="0" width="588" height="493" frameX="-1" frameY="-2" frameWidth="589" frameHeight="501"/>
-	<SubTexture name="down0007" x="0" y="531" width="504" height="483" frameX="-85" frameY="-15" frameWidth="589" frameHeight="501"/>
-	<SubTexture name="down0008" x="534" y="531" width="506" height="429" frameX="-83" frameY="-69" frameWidth="589" frameHeight="501"/>
-	<SubTexture name="idle0000" x="1070" y="531" width="751" height="487" frameX="-16" frameY="-26" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="idle0001" x="1070" y="531" width="751" height="487" frameX="-16" frameY="-26" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="idle0002" x="1851" y="531" width="744" height="452" frameX="-15" frameY="-58" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="idle0003" x="1851" y="531" width="744" height="452" frameX="-15" frameY="-58" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="idle0004" x="2625" y="531" width="726" height="421" frameX="-9" frameY="-65" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="idle0005" x="2625" y="531" width="726" height="421" frameX="-9" frameY="-65" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="idle0006" x="0" y="1048" width="727" height="418" frameX="-3" frameY="-68" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="idle0007" x="0" y="1048" width="727" height="418" frameX="-3" frameY="-68" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="idle0008" x="757" y="1048" width="729" height="486" frameX="0" frameY="0" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="idle0009" x="1516" y="1048" width="729" height="451" frameX="0" frameY="-35" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="idle0010" x="1516" y="1048" width="729" height="451" frameX="0" frameY="-35" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="idle0011" x="2275" y="1048" width="729" height="436" frameX="0" frameY="-50" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="idle0012" x="2275" y="1048" width="729" height="436" frameX="0" frameY="-50" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="idle0013" x="3034" y="1048" width="729" height="423" frameX="0" frameY="-63" frameWidth="767" frameHeight="513"/>
-	<SubTexture name="left0000" x="0" y="1564" width="390" height="437" frameX="-20" frameY="-20" frameWidth="422" frameHeight="478"/>
-	<SubTexture name="left0001" x="420" y="1564" width="393" height="470" frameX="-10" frameY="-1" frameWidth="422" frameHeight="478"/>
-	<SubTexture name="left0002" x="843" y="1564" width="412" height="419" frameX="-10" frameY="-52" frameWidth="422" frameHeight="478"/>
-	<SubTexture name="left0003" x="1285" y="1564" width="419" height="426" frameX="-3" frameY="-52" frameWidth="422" frameHeight="478"/>
-	<SubTexture name="left0004" x="1734" y="1564" width="413" height="423" frameX="-3" frameY="-55" frameWidth="422" frameHeight="478"/>
-	<SubTexture name="left0005" x="2177" y="1564" width="416" height="423" frameX="0" frameY="-55" frameWidth="422" frameHeight="478"/>
-	<SubTexture name="left0006" x="2623" y="1564" width="399" height="478" frameX="0" frameY="0" frameWidth="422" frameHeight="478"/>
-	<SubTexture name="left0007" x="3052" y="1564" width="395" height="470" frameX="-4" frameY="0" frameWidth="422" frameHeight="478"/>
-	<SubTexture name="left0008" x="3477" y="1564" width="395" height="469" frameX="-4" frameY="-1" frameWidth="422" frameHeight="478"/>
-	<SubTexture name="left0009" x="0" y="2072" width="390" height="440" frameX="-20" frameY="-17" frameWidth="422" frameHeight="478"/>
-	<SubTexture name="right0000" x="420" y="2072" width="630" height="365" frameX="0" frameY="-64" frameWidth="648" frameHeight="445"/>
-	<SubTexture name="right0001" x="1080" y="2072" width="630" height="381" frameX="-18" frameY="-64" frameWidth="648" frameHeight="445"/>
-	<SubTexture name="right0002" x="1740" y="2072" width="630" height="395" frameX="-18" frameY="-50" frameWidth="648" frameHeight="445"/>
-	<SubTexture name="right0003" x="2400" y="2072" width="629" height="387" frameX="-15" frameY="-50" frameWidth="648" frameHeight="445"/>
-	<SubTexture name="right0004" x="3059" y="2072" width="629" height="437" frameX="-15" frameY="0" frameWidth="648" frameHeight="445"/>
-	<SubTexture name="right0005" x="0" y="2542" width="630" height="440" frameX="-14" frameY="0" frameWidth="648" frameHeight="445"/>
-	<SubTexture name="right0006" x="660" y="2542" width="630" height="430" frameX="-14" frameY="-10" frameWidth="648" frameHeight="445"/>
-	<SubTexture name="right0007" x="660" y="2542" width="630" height="430" frameX="-14" frameY="-10" frameWidth="648" frameHeight="445"/>
-	<SubTexture name="right0008" x="1320" y="2542" width="630" height="376" frameX="-14" frameY="-64" frameWidth="648" frameHeight="445"/>
-	<SubTexture name="right0009" x="1320" y="2542" width="630" height="376" frameX="-14" frameY="-64" frameWidth="648" frameHeight="445"/>
-	<SubTexture name="up0000" x="1980" y="2542" width="733" height="388" frameX="0" frameY="-58" frameWidth="750" frameHeight="446"/>
-	<SubTexture name="up0001" x="2743" y="2542" width="738" height="437" frameX="-12" frameY="-9" frameWidth="750" frameHeight="446"/>
-	<SubTexture name="up0002" x="2743" y="2542" width="738" height="437" frameX="-12" frameY="-9" frameWidth="750" frameHeight="446"/>
-	<SubTexture name="up0003" x="0" y="3012" width="733" height="446" frameX="-17" frameY="0" frameWidth="750" frameHeight="446"/>
-	<SubTexture name="up0004" x="0" y="3012" width="733" height="446" frameX="-17" frameY="0" frameWidth="750" frameHeight="446"/>
-	<SubTexture name="up0005" x="763" y="3012" width="732" height="415" frameX="-14" frameY="-31" frameWidth="750" frameHeight="446"/>
-	<SubTexture name="up0006" x="763" y="3012" width="732" height="415" frameX="-14" frameY="-31" frameWidth="750" frameHeight="446"/>
-	<SubTexture name="up0007" x="1525" y="3012" width="732" height="417" frameX="-14" frameY="-29" frameWidth="750" frameHeight="446"/>
-	<SubTexture name="up0008" x="1525" y="3012" width="732" height="417" frameX="-14" frameY="-29" frameWidth="750" frameHeight="446"/>
+	<SubTexture name="Maroon Down0000" x="0" y="0" width="577" height="540" frameX="-3" frameY="0" frameWidth="584" frameHeight="555"/>
+	<SubTexture name="Maroon Down0001" x="607" y="0" width="559" height="524" frameX="-25" frameY="-29" frameWidth="584" frameHeight="555"/>
+	<SubTexture name="Maroon Down0002" x="1196" y="0" width="575" height="502" frameX="-9" frameY="-51" frameWidth="584" frameHeight="555"/>
+	<SubTexture name="Maroon Down0003" x="1801" y="0" width="574" height="501" frameX="-9" frameY="-54" frameWidth="584" frameHeight="555"/>
+	<SubTexture name="Maroon Down0004" x="2405" y="0" width="573" height="507" frameX="-10" frameY="-48" frameWidth="584" frameHeight="555"/>
+	<SubTexture name="Maroon Down0005" x="3008" y="0" width="566" height="524" frameX="-17" frameY="-30" frameWidth="584" frameHeight="555"/>
+	<SubTexture name="Maroon Down0006" x="3604" y="0" width="583" height="502" frameX="0" frameY="-52" frameWidth="584" frameHeight="555"/>
+	<SubTexture name="Maroon Down0007" x="4217" y="0" width="584" height="501" frameX="0" frameY="-51" frameWidth="584" frameHeight="555"/>
+	<SubTexture name="Maroon Down0008" x="4831" y="0" width="583" height="507" frameX="-1" frameY="-45" frameWidth="584" frameHeight="555"/>
+	<SubTexture name="Maroon Idle0000" x="5444" y="0" width="733" height="460" frameX="0" frameY="-26" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Idle0001" x="5444" y="0" width="733" height="460" frameX="0" frameY="-26" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Idle0002" x="6207" y="0" width="733" height="428" frameX="0" frameY="-58" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Idle0003" x="6207" y="0" width="733" height="428" frameX="0" frameY="-58" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Idle0004" x="6970" y="0" width="732" height="421" frameX="-11" frameY="-65" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Idle0005" x="6970" y="0" width="732" height="421" frameX="-11" frameY="-65" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Idle0006" x="0" y="570" width="731" height="418" frameX="-14" frameY="-68" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Idle0007" x="0" y="570" width="731" height="418" frameX="-14" frameY="-68" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Idle0008" x="761" y="570" width="731" height="486" frameX="-14" frameY="0" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Idle0009" x="1522" y="570" width="731" height="451" frameX="-14" frameY="-35" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Idle0010" x="1522" y="570" width="731" height="451" frameX="-14" frameY="-35" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Idle0011" x="2283" y="570" width="731" height="436" frameX="-14" frameY="-50" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Idle0012" x="2283" y="570" width="731" height="436" frameX="-14" frameY="-50" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Idle0013" x="3044" y="570" width="731" height="423" frameX="-14" frameY="-63" frameWidth="745" frameHeight="486"/>
+	<SubTexture name="Maroon Left0000" x="3805" y="570" width="503" height="437" frameX="0" frameY="-20" frameWidth="532" frameHeight="457"/>
+	<SubTexture name="Maroon Left0001" x="4338" y="570" width="421" height="456" frameX="-60" frameY="-1" frameWidth="532" frameHeight="457"/>
+	<SubTexture name="Maroon Left0002" x="4789" y="570" width="472" height="405" frameX="-60" frameY="-52" frameWidth="532" frameHeight="457"/>
+	<SubTexture name="Maroon Left0003" x="5291" y="570" width="446" height="405" frameX="-86" frameY="-52" frameWidth="532" frameHeight="457"/>
+	<SubTexture name="Maroon Left0004" x="5767" y="570" width="440" height="402" frameX="-86" frameY="-55" frameWidth="532" frameHeight="457"/>
+	<SubTexture name="Maroon Left0005" x="6237" y="570" width="438" height="402" frameX="-88" frameY="-55" frameWidth="532" frameHeight="457"/>
+	<SubTexture name="Maroon Left0006" x="6705" y="570" width="421" height="457" frameX="-88" frameY="0" frameWidth="532" frameHeight="457"/>
+	<SubTexture name="Maroon Left0007" x="7156" y="570" width="424" height="457" frameX="-85" frameY="0" frameWidth="532" frameHeight="457"/>
+	<SubTexture name="Maroon Left0008" x="7610" y="570" width="396" height="456" frameX="-85" frameY="-1" frameWidth="532" frameHeight="457"/>
+	<SubTexture name="Maroon Mad Idle0000" x="0" y="1086" width="705" height="469" frameX="0" frameY="-50" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mad Idle0001" x="0" y="1086" width="705" height="469" frameX="0" frameY="-50" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mad Idle0002" x="735" y="1086" width="706" height="452" frameX="0" frameY="-63" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mad Idle0003" x="735" y="1086" width="706" height="452" frameX="0" frameY="-63" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mad Idle0004" x="1471" y="1086" width="708" height="485" frameX="0" frameY="-29" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mad Idle0005" x="1471" y="1086" width="708" height="485" frameX="0" frameY="-29" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mad Idle0006" x="2209" y="1086" width="703" height="446" frameX="-7" frameY="-64" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mad Idle0007" x="2209" y="1086" width="703" height="446" frameX="-7" frameY="-64" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mad Idle0008" x="2942" y="1086" width="698" height="429" frameX="-12" frameY="-79" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mad Idle0009" x="2942" y="1086" width="698" height="429" frameX="-12" frameY="-79" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mad Idle0010" x="3670" y="1086" width="696" height="414" frameX="-14" frameY="-93" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mad Idle0011" x="3670" y="1086" width="696" height="414" frameX="-14" frameY="-93" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mad Idle0012" x="4396" y="1086" width="696" height="478" frameX="-14" frameY="-29" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mad Idle0013" x="4396" y="1086" width="696" height="478" frameX="-14" frameY="-29" frameWidth="710" frameHeight="519"/>
+	<SubTexture name="Maroon Mic Throws0000" x="5122" y="1086" width="758" height="489" frameX="-37" frameY="-337" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0001" x="5910" y="1086" width="758" height="454" frameX="-37" frameY="-372" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0002" x="6698" y="1086" width="758" height="454" frameX="-39" frameY="-372" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0003" x="0" y="1605" width="758" height="439" frameX="-39" frameY="-387" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0004" x="788" y="1605" width="818" height="427" frameX="-12" frameY="-400" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0005" x="788" y="1605" width="818" height="427" frameX="-12" frameY="-400" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0006" x="1636" y="1605" width="826" height="494" frameX="-6" frameY="-337" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0007" x="1636" y="1605" width="826" height="494" frameX="-6" frameY="-337" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0008" x="2492" y="1605" width="828" height="461" frameX="-4" frameY="-372" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0009" x="2492" y="1605" width="828" height="461" frameX="-4" frameY="-372" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0010" x="3350" y="1605" width="828" height="446" frameX="-4" frameY="-387" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0011" x="3350" y="1605" width="828" height="446" frameX="-4" frameY="-387" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0012" x="4208" y="1605" width="828" height="433" frameX="-4" frameY="-400" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0013" x="4208" y="1605" width="828" height="433" frameX="-4" frameY="-400" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0014" x="5066" y="1605" width="828" height="496" frameX="-4" frameY="-337" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0015" x="5066" y="1605" width="828" height="496" frameX="-4" frameY="-337" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0016" x="2492" y="1605" width="828" height="461" frameX="-4" frameY="-372" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0017" x="2492" y="1605" width="828" height="461" frameX="-4" frameY="-372" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0018" x="3350" y="1605" width="828" height="446" frameX="-4" frameY="-387" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0019" x="3350" y="1605" width="828" height="446" frameX="-4" frameY="-387" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0020" x="4208" y="1605" width="828" height="433" frameX="-4" frameY="-400" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0021" x="4208" y="1605" width="828" height="433" frameX="-4" frameY="-400" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0022" x="5924" y="1605" width="817" height="461" frameX="-4" frameY="-372" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0023" x="6771" y="1605" width="817" height="446" frameX="-4" frameY="-387" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0024" x="0" y="2131" width="817" height="446" frameX="-4" frameY="-387" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0025" x="847" y="2131" width="817" height="433" frameX="-4" frameY="-400" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0026" x="1694" y="2131" width="808" height="435" frameX="-4" frameY="-400" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0027" x="2532" y="2131" width="808" height="498" frameX="-4" frameY="-337" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0028" x="3370" y="2131" width="777" height="479" frameX="-9" frameY="-400" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0029" x="4177" y="2131" width="777" height="542" frameX="-9" frameY="-337" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0030" x="4984" y="2131" width="777" height="546" frameX="-9" frameY="-337" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0031" x="5791" y="2131" width="777" height="511" frameX="-9" frameY="-372" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0032" x="6598" y="2131" width="777" height="509" frameX="-9" frameY="-372" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0033" x="7405" y="2131" width="777" height="494" frameX="-9" frameY="-387" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0034" x="7405" y="2131" width="777" height="494" frameX="-9" frameY="-387" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0035" x="0" y="2707" width="777" height="481" frameX="-9" frameY="-400" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0036" x="0" y="2707" width="777" height="481" frameX="-9" frameY="-400" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0037" x="807" y="2707" width="778" height="542" frameX="-5" frameY="-337" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0038" x="1615" y="2707" width="673" height="443" frameX="-77" frameY="-423" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0039" x="1615" y="2707" width="673" height="443" frameX="-77" frameY="-423" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0040" x="2318" y="2707" width="684" height="417" frameX="-54" frameY="-415" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0041" x="3032" y="2707" width="684" height="483" frameX="-54" frameY="-349" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0042" x="3746" y="2707" width="680" height="446" frameX="-13" frameY="-387" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0043" x="4456" y="2707" width="751" height="577" frameX="-5" frameY="-260" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0044" x="5237" y="2707" width="751" height="577" frameX="-5" frameY="-260" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0045" x="6018" y="2707" width="757" height="720" frameX="-2" frameY="-120" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0046" x="6805" y="2707" width="757" height="720" frameX="-2" frameY="-120" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0047" x="0" y="3457" width="746" height="814" frameX="-12" frameY="-21" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0048" x="776" y="3457" width="746" height="814" frameX="-12" frameY="-21" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0049" x="1552" y="3457" width="741" height="835" frameX="-16" frameY="0" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0050" x="2323" y="3457" width="741" height="835" frameX="-16" frameY="0" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0051" x="3094" y="3457" width="745" height="707" frameX="-18" frameY="-128" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0052" x="3869" y="3457" width="745" height="707" frameX="-18" frameY="-128" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0053" x="4644" y="3457" width="736" height="541" frameX="-15" frameY="-299" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0054" x="5410" y="3457" width="736" height="541" frameX="-15" frameY="-299" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0055" x="6176" y="3457" width="747" height="450" frameX="-4" frameY="-399" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0056" x="6953" y="3457" width="747" height="513" frameX="-4" frameY="-336" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0057" x="0" y="4322" width="722" height="516" frameX="-1" frameY="-336" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0058" x="752" y="4322" width="722" height="481" frameX="-1" frameY="-371" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0059" x="1504" y="4322" width="706" height="484" frameX="0" frameY="-371" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Mic Throws0060" x="2240" y="4322" width="706" height="469" frameX="0" frameY="-386" frameWidth="832" frameHeight="883"/>
+	<SubTexture name="Maroon Right0000" x="2976" y="4322" width="674" height="401" frameX="0" frameY="-55" frameWidth="677" frameHeight="456"/>
+	<SubTexture name="Maroon Right0001" x="3680" y="4322" width="652" height="372" frameX="-25" frameY="-84" frameWidth="677" frameHeight="456"/>
+	<SubTexture name="Maroon Right0002" x="4362" y="4322" width="652" height="386" frameX="-25" frameY="-70" frameWidth="677" frameHeight="456"/>
+	<SubTexture name="Maroon Right0003" x="5044" y="4322" width="644" height="401" frameX="-33" frameY="-55" frameWidth="677" frameHeight="456"/>
+	<SubTexture name="Maroon Right0004" x="5718" y="4322" width="644" height="452" frameX="-33" frameY="-4" frameWidth="677" frameHeight="456"/>
+	<SubTexture name="Maroon Right0005" x="6392" y="4322" width="644" height="452" frameX="-33" frameY="-4" frameWidth="677" frameHeight="456"/>
+	<SubTexture name="Maroon Right0006" x="7066" y="4322" width="644" height="442" frameX="-33" frameY="-14" frameWidth="677" frameHeight="456"/>
+	<SubTexture name="Maroon Right0007" x="0" y="4868" width="656" height="456" frameX="-21" frameY="0" frameWidth="677" frameHeight="456"/>
+	<SubTexture name="Maroon Right0008" x="686" y="4868" width="656" height="383" frameX="-21" frameY="-73" frameWidth="677" frameHeight="456"/>
+	<SubTexture name="Maroon Up0000" x="1372" y="4868" width="824" height="387" frameX="0" frameY="-59" frameWidth="824" frameHeight="446"/>
+	<SubTexture name="Maroon Up0001" x="2226" y="4868" width="801" height="437" frameX="-23" frameY="-9" frameWidth="824" frameHeight="446"/>
+	<SubTexture name="Maroon Up0002" x="2226" y="4868" width="801" height="437" frameX="-23" frameY="-9" frameWidth="824" frameHeight="446"/>
+	<SubTexture name="Maroon Up0003" x="3057" y="4868" width="807" height="446" frameX="-17" frameY="0" frameWidth="824" frameHeight="446"/>
+	<SubTexture name="Maroon Up0004" x="3057" y="4868" width="807" height="446" frameX="-17" frameY="0" frameWidth="824" frameHeight="446"/>
+	<SubTexture name="Maroon Up0005" x="3894" y="4868" width="813" height="389" frameX="-11" frameY="-57" frameWidth="824" frameHeight="446"/>
+	<SubTexture name="Maroon Up0006" x="3894" y="4868" width="813" height="389" frameX="-11" frameY="-57" frameWidth="824" frameHeight="446"/>
+	<SubTexture name="Maroon Up0007" x="4737" y="4868" width="815" height="394" frameX="-9" frameY="-52" frameWidth="824" frameHeight="446"/>
+	<SubTexture name="Maroon Up0008" x="4737" y="4868" width="815" height="394" frameX="-9" frameY="-52" frameWidth="824" frameHeight="446"/>
 </TextureAtlas>

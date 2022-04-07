@@ -2,8 +2,8 @@
 	"animations": [
 		{
 			"offsets": [
-				-125,
-				50
+				-30,
+				-90
 			],
 			"loop": false,
 			"fps": 24,
@@ -13,30 +13,8 @@
 		},
 		{
 			"offsets": [
-				-41,
-				41
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Henry Right"
-		},
-		{
-			"offsets": [
-				-22,
-				-22
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "Henry Down"
-		},
-		{
-			"offsets": [
-				21,
-				41
+				142,
+				-119
 			],
 			"loop": false,
 			"fps": 24,
@@ -46,32 +24,54 @@
 		},
 		{
 			"offsets": [
-				-17,
-				74
+				83,
+				-162
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Henry Down"
+		},
+		{
+			"offsets": [
+				89,
+				-58
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
 			"name": "Henry Up"
+		},
+		{
+			"offsets": [
+				-2,
+				-133
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Henry Right"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/henry",
 	"position": [
-		-20,
-		150
+		0,
+		10
 	],
 	"healthicon": "henry",
 	"flip_x": false,
 	"healthbar_colors": [
-		213,
-		235,
-		235
+		255,
+		255,
+		255
 	],
 	"camera_position": [
-		20,
-		50
+		-60,
+		110
 	],
 	"sing_duration": 6.1,
 	"scale": 1

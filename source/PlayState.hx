@@ -52,6 +52,21 @@ import StageData;
 import FunkinLua;
 import DialogueBoxPsych;
 
+import openfl8.blends.*;
+import openfl8.effects.*;
+import openfl8.effects.WiggleEffect.WiggleEffectType;
+import openfl8.effects.BlendModeEffect.BlendModeShader;
+
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.addons.ui.FlxUIDropDownMenu;
+import flixel.text.FlxText;
+import openfl.filters.ShaderFilter;
+
+import flixel.text.FlxText;
+
+
 #if sys
 import sys.FileSystem;
 #end
@@ -62,7 +77,7 @@ class PlayState extends MusicBeatState
 {
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
-
+var wiggleEffect:WiggleEffect;
 	public static var ratingStuff:Array<Dynamic> = [
 		['You Suck!', 0.2], //From 0% to 19%
 		['Shit', 0.4], //From 20% to 39%
@@ -106,6 +121,7 @@ class PlayState extends MusicBeatState
 	public var DAD_Y:Float = 100;
 	public var GF_X:Float = 400;
 	public var GF_Y:Float = 130;
+	//var wiggleEffect:WiggleEffect;
 
 	public var boyfriendGroup:FlxSpriteGroup;
 	public var dadGroup:FlxSpriteGroup;
@@ -1075,11 +1091,18 @@ class PlayState extends MusicBeatState
 							defeatthing.frames = Paths.getSparrowAtlas('defeat');
 							defeatthing.animation.addByPrefix('bop', 'defeat', 24, false);
 							defeatthing.animation.play('bop');
-							defeatthing.setGraphicSize(Std.int(defeatthing.width * 0.9));
+							defeatthing.setGraphicSize(Std.int(defeatthing.width * 1.1));
 							defeatthing.antialiasing = true;
-							defeatthing.scrollFactor.set(1, 1);
+							defeatthing.scrollFactor.set(0.8, 0.8);
 							defeatthing.active = true;
 							add(defeatthing);
+
+							var bodies:FlxSprite = new FlxSprite(-260,150).loadGraphic(Paths.image('deadBG'));
+							bodies.setGraphicSize(Std.int(bodies.width * 1));
+							bodies.antialiasing = true;
+							bodies.scrollFactor.set(0.9, 0.9);
+							bodies.active = false;
+							add(bodies);
 
 							defeatblack = new FlxSprite().makeGraphic(FlxG.width * 4, FlxG.height + 700, FlxColor.BLACK);
 							defeatblack.alpha = 0;
@@ -1088,6 +1111,70 @@ class PlayState extends MusicBeatState
 							add(defeatblack);
 					
 
+			case 'tripletrouble':
+					
+						
+						curStage = 'tripletrouble';
+
+							var bg:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image('ttv4'));
+							bg.setGraphicSize(Std.int(bg.width * 1));
+							bg.antialiasing = true;
+							bg.scrollFactor.set(0.9, 0.9);
+							bg.active = false;
+							add(bg);
+
+							var fg:FlxSprite = new FlxSprite(300,300).loadGraphic(Paths.image('ttv4fg'));
+							fg.setGraphicSize(Std.int(fg.width * 1));
+							fg.antialiasing = true;
+							fg.scrollFactor.set(1, 1);
+							fg.active = false;
+							add(fg);
+
+							wiggleEffect = new WiggleEffect();
+							wiggleEffect.effectType = WiggleEffectType.DREAMY;
+							wiggleEffect.waveAmplitude = 0.1;
+							wiggleEffect.waveFrequency = 5;
+							wiggleEffect.waveSpeed = 1;
+							bg.shader = wiggleEffect.shader;
+
+			case 'pink':
+				// note to self or anyone else , move pink stage assets to impostor/pink for better memory usage
+						
+						curStage = 'pink';
+
+						var skygrad:BGSprite = new BGSprite('skygrad', -25, 7.83, 1, 1);
+						add(skygrad);
+						var bottomclouds:BGSprite = new BGSprite('bottomclouds', 350, 589.5, 0.5, 0.5);
+						bottomclouds.scale.set(3.1,3.1);
+						add(bottomclouds);
+						var cloud3:BGSprite = new BGSprite('cloud3', 1612.5, 293.5, 0.6, 0.6);
+						cloud3.scale.set(2.4,2.4);
+						add(cloud3);
+						var cloud2:BGSprite = new BGSprite('cloud2', 1397.5, 452.5, 0.4, 0.4);
+						cloud2.scale.set(3.5,3.5);
+						add(cloud2);
+						var cloud1:BGSprite = new BGSprite('cloud1', 25, 391.5, 0.7, 0.7);
+						cloud1.scale.set(2.6,2.6);
+						add(cloud1);
+						var backwindow:BGSprite = new BGSprite('backwindow', 221.43, 360.3, 1, 
+						1);
+						add(backwindow);
+						var floor:BGSprite = new BGSprite('floor', 237.5, 880.3, 1, 1);
+						add(floor);
+						var lines:BGSprite = new BGSprite('lines', 197.916, 299.58, 1, 1);
+						add(lines);
+						var container:BGSprite = new BGSprite('container', 875, 294.5, 1, 1);
+						add(container);
+						var pinkplant:BGSprite = new BGSprite('pinkplant', 980, 501, 1, 1);
+						add(pinkplant);
+						var containerglass:BGSprite = new BGSprite('containerglass', 934.54, 407.09, 1, 1);
+						add(containerglass);
+						var bushfront:BGSprite = new BGSprite('bushfront', 335, 1303, 1.2, 1.2);
+						add(bushfront); 
+						
+
+							
+					
 			
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
@@ -2805,6 +2892,12 @@ class PlayState extends MusicBeatState
 		{
 			iconP1.swapOldIcon();
 		}*/
+		if(curStage == "tripletrouble") {
+			wiggleEffect.update(elapsed);
+			}
+		
+
+		
 
 		var legPosY = [13, 7, -3, -1, -1, 2, 7, 9, 7, 2, 0, 0, 3, 1, 3, 7, 13];
 		var legPosX = [3, 4, 4, 5, 5, 4, 3, 2, 0, 0, -3, -4, -4, -5, -5, -4, -3];
@@ -5358,6 +5451,7 @@ class PlayState extends MusicBeatState
 		#end
 		return returnVal;
 	}
+	
 
 	public function setOnLuas(variable:String, arg:Dynamic) {
 		#if LUA_ALLOWED
