@@ -255,6 +255,7 @@ var wiggleEffect:WiggleEffect;
 	var defeatblack:FlxSprite;
 	//loggo
 	var peopleloggo:FlxSprite;
+	var thebackground:FlxSprite;
 	var fireloggo:FlxSprite;
 	var mapthing:FlxSprite;
 	//reactor
@@ -762,10 +763,33 @@ var wiggleEffect:WiggleEffect;
 				thebackground.active = true;
 				add(thebackground);
 
+			case 'drippypop': //SHIT ASS
+				curStage = 'drippypop';	
+				
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('drip/dripfloor', 'impostor'));
+						bg.updateHitbox();
+						bg.antialiasing = true;
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
+						add(bg);	
+
+				var thebackground = new FlxSprite(0, 0);
+				thebackground.frames = Paths.getSparrowAtlas('drip/drippers', 'impostor');
+				thebackground.animation.addByPrefix('bop', 'dripbop', 24, false);
+				thebackground.animation.play('bop');
+				thebackground.antialiasing = true;
+				thebackground.scrollFactor.set(1, 1);
+				thebackground.active = true;
+				add(thebackground);
+
 				
 
 			case 'henry': //stick Min
 				var bg:BGSprite = new BGSprite('stagehenry', -1600, -300, 1, 1);
+				add(bg);
+
+			case 'jerma': //fuck you neato
+				var bg:BGSprite = new BGSprite('jerma', 0, 0, 1, 1);
 				add(bg);
 
 			//	var stageFront:BGSprite = new BGSprite('wall', 0, 0, 1, 1);
@@ -945,8 +969,8 @@ var wiggleEffect:WiggleEffect;
 			case 'toogus':
 						
 								curStage = 'toogus';
-								var bg:FlxSprite = new FlxSprite(0,50).loadGraphic(Paths.image('Mira'));
-								bg.setGraphicSize(Std.int(bg.width * 1.4));
+								var bg:FlxSprite = new FlxSprite(-1600 ,50).loadGraphic(Paths.image('mirabg'));
+								bg.setGraphicSize(Std.int(bg.width * 1.06));
 								bg.antialiasing = true;
 								bg.scrollFactor.set(1, 1);
 								bg.active = false;
@@ -960,12 +984,12 @@ var wiggleEffect:WiggleEffect;
 							//	bgDark.alpha = 0;
 							//	add(bgDark);
 
-								var stageFront:FlxSprite = new FlxSprite(1000, 150).loadGraphic(Paths.image('vending_machine'));
-								stageFront.updateHitbox();
-								stageFront.antialiasing = true;
-								stageFront.scrollFactor.set(1, 1);
-								stageFront.active = false;
-								add(stageFront);
+								var fg:FlxSprite = new FlxSprite(-1600 ,50).loadGraphic(Paths.image('mirafg'));
+								fg.setGraphicSize(Std.int(fg.width * 1.06));
+								fg.antialiasing = true;
+								fg.scrollFactor.set(1, 1);
+								fg.active = false;
+								add(fg);
 
 							//	machineDark = new FlxSprite(1000, 150).loadGraphic(Paths.image('vending_machineDark'));
 							//	machineDark.updateHitbox();
@@ -975,12 +999,12 @@ var wiggleEffect:WiggleEffect;
 							//	machineDark.alpha = 0;
 							//	add(machineDark);
 								
-								var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains'));
-								stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
-								stageCurtains.updateHitbox();
-								stageCurtains.antialiasing = true;
-								stageCurtains.scrollFactor.set(1.3, 1.3);
-								stageCurtains.active = false;
+								var tbl:FlxSprite = new FlxSprite(-1600 ,50).loadGraphic(Paths.image('table_bg'));
+								tbl.setGraphicSize(Std.int(tbl.width * 1.06));
+								tbl.antialiasing = true;
+								tbl.scrollFactor.set(1, 1);
+								tbl.active = false;
+								add(tbl);
 
 							//	lightsOutSprite.alpha = 0;
 							//	flashSprite.scrollFactor.set(0, 0);
@@ -1546,6 +1570,17 @@ var wiggleEffect:WiggleEffect;
 				}
 				add(cloudScroll);
 				add(speedLines);
+			case 'polus':
+				snow = new FlxSprite(0, -250);
+				snow.frames = Paths.getSparrowAtlas('polus/snow', 'impostor');
+				snow.animation.addByPrefix('cum', 'cum', 24);
+				snow.animation.play('cum');
+				snow.scrollFactor.set(1, 1);
+				snow.antialiasing = true;
+				snow.updateHitbox();
+				snow.setGraphicSize(Std.int(snow.width * 2));
+				
+				add(snow);
 			case 'polus2':
 				snow = new FlxSprite(0, -500);
 				snow.frames = Paths.getSparrowAtlas('polus/snow', 'impostor');
@@ -1574,21 +1609,7 @@ var wiggleEffect:WiggleEffect;
 				smokelol.scale.set(1, 1);
 				add(smokelol);
 				
-			case 'toogus':
-				stageFront2 = new FlxSprite(-900, 800).loadGraphic(Paths.image('table'));
-				stageFront2.updateHitbox();
-				stageFront2.antialiasing = true;
-				stageFront2.scrollFactor.set(1, 1);
-				stageFront2.setGraphicSize(Std.int(stageFront2.width * 1.6));
-
-				stageFront3 = new FlxSprite(1500, 800).loadGraphic(Paths.image('table'));
-				stageFront3.updateHitbox();
-				stageFront3.antialiasing = true;
-				stageFront3.scrollFactor.set(1, 1);
-				stageFront3.setGraphicSize(Std.int(stageFront3.width * 1.6));
-				stageFront3.flipX = true;
-				add(stageFront2);
-				add(stageFront3);
+			
 			case 'polus3':
 				
 			case 'spooky':
@@ -1875,6 +1896,12 @@ var wiggleEffect:WiggleEffect;
 		{
 			add(ass2);
 		}
+
+		if (curSong == 'Insane Streamer')
+			{
+				add(ass2);
+			}
+	
 
 		if (curSong == 'Boiling Point')
 			{

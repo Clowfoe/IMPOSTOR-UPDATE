@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-90
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "DrippyIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-48,
+				-99
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "DrippyLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-44,
+				-122
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "DrippyDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-41,
+				-68
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "DrippyUp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-98
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "DrippyRight",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-16,
+				-14
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "DrippyShotty",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-16,
+				-15
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "DrippyShotty",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-16,
+				-14
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "DrippyShotty",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-17,
+				-15
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "DrippyShotty",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/drippy",
+	"position": [
+		0,
+		10
+	],
+	"healthicon": "drippy",
+	"flip_x": false,
+	"healthbar_colors": [
+		188,
+		106,
+		223
+	],
+	"camera_position": [
+		-60,
+		110
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

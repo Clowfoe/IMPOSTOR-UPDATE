@@ -365,7 +365,7 @@ class AmongFreeplayState extends MusicBeatState {
         //jesus christ man this cant get near the coherent code
         weeks.push
         ({
-            songs: [["Sussus Moogus", "impostor", 'red', FlxColor.RED], ["Sabotage", "impostor", 'red', FlxColor.RED], ["Meltdown", "impostor", 'red', FlxColor.RED]],
+            songs: [["Sussus Moogus", "impostor", 'red', FlxColor.RED], ["Sabotage", "impostor", 'red', FlxColor.RED], ["Meltdown", "impostor2", 'red', FlxColor.RED]],
             section: 0
         });
 
@@ -402,7 +402,7 @@ class AmongFreeplayState extends MusicBeatState {
 
         weeks.push
         ({
-            songs: [["Ashes", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0)],["Magmatic", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0)],["Boiling Point", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0)]],
+            songs: [["Ashes", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0)],["Magmatic", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0)],["Boiling Point", "boilingpoint", 'maroon', FlxColor.fromRGB(181, 0, 0)]],
             section: 1
         });
 
@@ -415,13 +415,13 @@ class AmongFreeplayState extends MusicBeatState {
         
         weeks.push
         ({
-            songs: [["Pinkwave", "pink", 'pink', FlxColor.fromRGB(255, 0, 222)], ["Heartbeat", "pink", 'pink', FlxColor.fromRGB(255, 0, 222)]],
+            songs: [["Pinkwave", "pink", 'pink', FlxColor.fromRGB(255, 0, 222)], ["Heartbeat", "pink", 'pink', FlxColor.fromRGB(255, 0, 222)], ["Pretender", "pretender", 'pink', FlxColor.fromRGB(255, 0, 222)]],
             section: 1
         });
 
         weeks.push
         ({
-            songs: [["Order Up", "chef", 'chef', FlxColor.fromRGB(242, 114, 28)]], 
+            songs: [["Sauces Moogus", "chef", 'chef', FlxColor.fromRGB(242, 114, 28)]], 
             section: 1
         });
 
@@ -433,7 +433,7 @@ class AmongFreeplayState extends MusicBeatState {
 
         weeks.push
         ({
-            songs: [["Titular", "henry", 'henry', FlxColor.ORANGE], ["Armed", "henry", 'henry', FlxColor.ORANGE]],
+            songs: [["Titular", "henry", 'henry', FlxColor.ORANGE], ["Reinforcements", "ellie", 'henry', FlxColor.ORANGE], ["Armed", "rhm", 'henry', FlxColor.ORANGE]],
             section: 3
         });
 
@@ -445,7 +445,7 @@ class AmongFreeplayState extends MusicBeatState {
 
         weeks.push
         ({
-            songs: [["Ow", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)],["Who", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Drippypop", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Crewicide", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Triple Trouble", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Monochrome", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)]],
+            songs: [["Ow", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Insane Streamer", "jerma", 'red', FlxColor.fromRGB(84, 167, 202)], ["Who", "whoguys", 'red', FlxColor.fromRGB(84, 167, 202)], ["Drippypop", "drippy", 'red', FlxColor.fromRGB(84, 167, 202)], ["Crewicide", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Triple Trouble", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], ["Monochrome", "dead", 'red', FlxColor.fromRGB(84, 167, 202)]],
             section: 5
         });
 

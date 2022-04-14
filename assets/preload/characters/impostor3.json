@@ -1,73 +1,73 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				70,
 				-279
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "impostor idle"
+			"fps": 24,
+			"name": "impostor idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				59,
 				-293
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "impostor right"
+			"fps": 24,
+			"name": "impostor right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				108,
 				-298
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "impostor down"
+			"fps": 24,
+			"name": "impostor down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				226,
 				-285
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "imposter left"
+			"fps": 24,
+			"name": "imposter left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				150,
 				-161
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "impostor up2"
+			"fps": 24,
+			"name": "impostor up2",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/impostor3",
 	"position": [
 		0,
-		100
+		80
 	],
 	"healthicon": "impostor3",
 	"flip_x": false,
 	"healthbar_colors": [
 		0,
-		153,
-		0
+		119,
+		27
 	],
 	"camera_position": [
 		-130,

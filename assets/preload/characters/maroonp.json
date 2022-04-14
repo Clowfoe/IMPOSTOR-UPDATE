@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				249,
 				40
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				271,
-				92
+				112
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "RIGHT",
-			"indices": []
+			"indices": [],
+			"name": "RIGHT"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				190,
-				55
+				170,
+				64
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "DOWN",
-			"indices": []
+			"indices": [],
+			"name": "DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				277,
-				67
+				288,
+				76
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "LEFT",
-			"indices": []
+			"indices": [],
+			"name": "LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				223,
-				135
+				213,
+				162
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "UP"
 		}
 	],
 	"no_antialiasing": false,
@@ -62,7 +62,7 @@
 		100,
 		90
 	],
-	"healthicon": "maroonP",
+	"healthicon": "boilingpoint",
 	"flip_x": false,
 	"healthbar_colors": [
 		119,
@@ -74,5 +74,5 @@
 		260
 	],
 	"sing_duration": 6.1,
-	"scale": 0.9
+	"scale": 1.2
 }
