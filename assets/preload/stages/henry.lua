@@ -53,7 +53,7 @@ function onUpdate()
             if getProperty('dad.animation.curAnim.name') == 'singDOWN-alt' then
                 triggerEvent('Camera Follow Pos',xx,yy+ofs)
             end
-            if getProperty('dad.animation.curAnim.name') == 'idle-alt' then
+	    if getProperty('dad.animation.curAnim.name') == 'idle-alt' then
                 triggerEvent('Camera Follow Pos',xx,yy)
             end
             if getProperty('dad.animation.curAnim.name') == 'idle' then

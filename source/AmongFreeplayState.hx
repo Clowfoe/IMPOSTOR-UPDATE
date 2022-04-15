@@ -298,13 +298,24 @@ class AmongFreeplayState extends MusicBeatState {
 		{
 			var songLowercase:String = Paths.formatToSongPath(listOfButtons[curSelected].songName.toLowerCase());
             trace(listOfButtons[curSelected].songName);
+
+            PlayState.isStoryMode = false;
+			PlayState.storyDifficulty = 2;
+			PlayState.storyWeek = curWeek;
+
+            var diffic:String = '';
+
+            switch(curDifficulty){
+                case 0:
+                    diffic = '-easy';
+                case 2:
+                    diffic = '-hard';
+            }
+
 			var poop:String = Highscore.formatSong(songLowercase, 1);
 
-			PlayState.SONG = Song.loadFromJson(poop, songLowercase);
-			PlayState.isStoryMode = false;
-			PlayState.storyDifficulty = 1;
-
-			PlayState.storyWeek = curWeek;
+			PlayState.SONG = Song.loadFromJson(poop + diffic, songLowercase);
+			
 			trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
 			LoadingState.loadAndSwitchState(new PlayState());
 		}

@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-30,
 				-90
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Henry Idle"
+			"fps": 24,
+			"name": "Henry Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				142,
 				-119
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Henry Left"
+			"fps": 24,
+			"name": "Henry Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				83,
 				-162
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Henry Down"
+			"fps": 24,
+			"name": "Henry Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				89,
 				-58
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Henry Up"
+			"fps": 24,
+			"name": "Henry Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-2,
 				-133
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Henry Right"
+			"fps": 24,
+			"name": "Henry Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -65,8 +65,8 @@
 	"healthicon": "henry",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		255,
+		213,
+		235,
 		255
 	],
 	"camera_position": [

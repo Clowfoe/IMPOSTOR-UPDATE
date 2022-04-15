@@ -108,10 +108,12 @@ var wiggleEffect:WiggleEffect;
 	#if (haxe >= "4.0.0")
 	public var boyfriendMap:Map<String, Boyfriend> = new Map();
 	public var dadMap:Map<String, Character> = new Map();
+	public var momMap:Map<String, Character> = new Map();
 	public var gfMap:Map<String, Character> = new Map();
 	#else
 	public var boyfriendMap:Map<String, Boyfriend> = new Map<String, Boyfriend>();
 	public var dadMap:Map<String, Character> = new Map<String, Character>();
+	public var momMap:Map<String, Character> = new Map<String, Character>();
 	public var gfMap:Map<String, Character> = new Map<String, Character>();
 	#end
 
@@ -121,10 +123,13 @@ var wiggleEffect:WiggleEffect;
 	public var DAD_Y:Float = 100;
 	public var GF_X:Float = 400;
 	public var GF_Y:Float = 130;
+	public var MOM_X:Float = 100;
+	public var MOM_Y:Float = 100;
 	//var wiggleEffect:WiggleEffect;
 
 	public var boyfriendGroup:FlxSpriteGroup;
 	public var dadGroup:FlxSpriteGroup;
+	public var momGroup:FlxSpriteGroup;
 	public var gfGroup:FlxSpriteGroup;
 
 	public static var curStage:String = '';
@@ -138,6 +143,7 @@ var wiggleEffect:WiggleEffect;
 	public var vocals:FlxSound;
 
 	public var dad:Character;
+	public var mom:Character;
 	public var gf:Character;
 	public var boyfriend:Boyfriend;
 	public var bfLegs:Boyfriend;
@@ -253,6 +259,7 @@ var wiggleEffect:WiggleEffect;
 	//defeat
 	var defeatthing:FlxSprite;
 	var defeatblack:FlxSprite;
+	var bodiesfront:FlxSprite;
 	//loggo
 	var peopleloggo:FlxSprite;
 	var thebackground:FlxSprite;
@@ -309,6 +316,9 @@ var wiggleEffect:WiggleEffect;
 	var keysPressed:Array<Bool> = [false, false, false, false];
 	var boyfriendIdleTime:Float = 0.0;
 	var boyfriendIdled:Bool = false;
+
+	var opponent2sing:Bool = false;
+	var bothOpponentsSing:Bool = false;
 
 	// Lua shit
 	private var luaDebugGroup:FlxTypedGroup<DebugLuaText>;
@@ -410,10 +420,11 @@ var wiggleEffect:WiggleEffect;
 				directory: "",
 				defaultZoom: 0.9,
 				isPixelStage: false,
-			
+				
 				boyfriend: [770, 100],
 				girlfriend: [400, 130],
-				opponent: [100, 100]
+				opponent: [100, 100],
+				secondopp: [100, 100]
 			};
 		}
 
@@ -425,9 +436,12 @@ var wiggleEffect:WiggleEffect;
 		GF_Y = stageData.girlfriend[1];
 		DAD_X = stageData.opponent[0];
 		DAD_Y = stageData.opponent[1];
+		MOM_X = stageData.secondopp[0];
+		MOM_Y = stageData.secondopp[1];
 
 		boyfriendGroup = new FlxSpriteGroup(BF_X, BF_Y);
 		dadGroup = new FlxSpriteGroup(DAD_X, DAD_Y);
+		momGroup = new FlxSpriteGroup(MOM_X, MOM_Y);
 		gfGroup = new FlxSpriteGroup(GF_X, GF_Y);
 
 		switch (curStage)
@@ -457,6 +471,20 @@ var wiggleEffect:WiggleEffect;
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
+		
+			case 'cargo': //double kill
+				var bg:FlxSprite = new FlxSprite(-2700, 150).loadGraphic(Paths.image('airship/cargofloor', 'impostor'));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
+						add(bg);
+				
+				var bg:FlxSprite = new FlxSprite(-1800, -700).loadGraphic(Paths.image('airship/cargowall', 'impostor'));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
+						add(bg);
+
 			case 'who': //loggo normal
 
 				var bg:FlxSprite = new FlxSprite(0, 100).loadGraphic(Paths.image('polus/deadguy', 'impostor'));
@@ -503,7 +531,7 @@ var wiggleEffect:WiggleEffect;
 						cpyellow.active = false;
 						add(cpyellow);
 
-				mapthing = new FlxSprite(0, -500);
+				mapthing = new FlxSprite(0, -360);
 						mapthing.frames = Paths.getSparrowAtlas('airship/Map_Bounce', 'impostor');	
 						mapthing.animation.addByPrefix('bop', 'Map  instance 1', 24, true);
 						mapthing.animation.play('bop');
@@ -1052,7 +1080,7 @@ var wiggleEffect:WiggleEffect;
 							add(pillar2);
 							amogus = new FlxSprite(1670, 250);
 							amogus.frames = Paths.getSparrowAtlas('reactor/susBoppers', 'impostor');
-							amogus.animation.addByPrefix('bop', 'Vegans', 24, false);
+							amogus.animation.addByPrefix('bop', 'white sus', 24, false);
 							amogus.animation.play('bop');
 							amogus.setGraphicSize(Std.int(amogus.width * 0.7));
 							amogus.antialiasing = true;
@@ -1111,18 +1139,18 @@ var wiggleEffect:WiggleEffect;
 						curStage = 'defeat';
 						
 
-						defeatthing = new FlxSprite(-200, -150);
+						defeatthing = new FlxSprite(-400, -150);
 							defeatthing.frames = Paths.getSparrowAtlas('defeat');
 							defeatthing.animation.addByPrefix('bop', 'defeat', 24, false);
 							defeatthing.animation.play('bop');
-							defeatthing.setGraphicSize(Std.int(defeatthing.width * 1.1));
+							defeatthing.setGraphicSize(Std.int(defeatthing.width * 1.3));
 							defeatthing.antialiasing = true;
 							defeatthing.scrollFactor.set(0.8, 0.8);
 							defeatthing.active = true;
 							add(defeatthing);
 
-							var bodies:FlxSprite = new FlxSprite(-260,150).loadGraphic(Paths.image('deadBG'));
-							bodies.setGraphicSize(Std.int(bodies.width * 1));
+							var bodies:FlxSprite = new FlxSprite(-2760,0).loadGraphic(Paths.image('deadBG'));
+							bodies.setGraphicSize(Std.int(bodies.width * 0.4));
 							bodies.antialiasing = true;
 							bodies.scrollFactor.set(0.9, 0.9);
 							bodies.active = false;
@@ -1133,6 +1161,12 @@ var wiggleEffect:WiggleEffect;
 							defeatblack.screenCenter(X);
 							defeatblack.screenCenter(Y);
 							add(defeatblack);
+
+							bodiesfront = new FlxSprite(-2830,0).loadGraphic(Paths.image('deadFG'));
+							bodiesfront.setGraphicSize(Std.int(bodiesfront.width * 0.4));
+							bodiesfront.antialiasing = true;
+							bodiesfront.scrollFactor.set(0.5, 1);
+							bodiesfront.active = false;
 					
 
 			case 'tripletrouble':
@@ -1557,9 +1591,18 @@ var wiggleEffect:WiggleEffect;
 		// Shitty layering but whatev it works LOL
 		if (curStage == 'limo')
 			add(limo);
-
+		
+		switch(curStage.toLowerCase()){
+			case 'cargo':
+				add(momGroup);
+		}
 		add(dadGroup);
+		//add(momGroup);
 		add(boyfriendGroup);
+
+		if (curStage == 'defeat')
+			add(bodiesfront);
+
 		switch(curStage) {
 			case 'ejected':
 				bfStartpos = new FlxPoint(1008.6, 504);
@@ -1674,6 +1717,8 @@ var wiggleEffect:WiggleEffect;
 				position = members.indexOf(boyfriendGroup);
 			} else if(members.indexOf(dadGroup) < position) {
 				position = members.indexOf(dadGroup);
+			} else if(members.indexOf(momGroup) < position) {
+				position = members.indexOf(momGroup);
 			}
 			insert(position, blammedLightsBlack);
 
@@ -1714,6 +1759,10 @@ var wiggleEffect:WiggleEffect;
 		dad = new Character(0, 0, SONG.player2);
 		startCharacterPos(dad, true);
 		dadGroup.add(dad);
+
+		mom = new Character(0, 0, SONG.player4);
+		startCharacterPos(mom, true);
+		momGroup.add(mom);
 
 		if(SONG.player1 == 'bf-running')
 		{
@@ -2061,6 +2110,12 @@ var wiggleEffect:WiggleEffect;
 
 				case 'sussus-moogus':
 					startVideo('polus1');
+				
+				/*case 'mando':
+					startVideo('polus1');
+
+				case 'titular':
+					startVideo('polus1');*/
 
 				default:
 					startCountdown();
@@ -2364,10 +2419,18 @@ var wiggleEffect:WiggleEffect;
 					{
 						dad.dance();
 					}
+					if (mom.animation.curAnim != null && !mom.animation.curAnim.name.startsWith('sing') && !mom.stunned)
+					{
+						mom.dance();
+					}
 				}
 				else if(dad.danceIdle && dad.animation.curAnim != null && !dad.stunned && !dad.curCharacter.startsWith('gf') && !dad.animation.curAnim.name.startsWith("sing"))
 				{
 					dad.dance();
+				}
+				else if(mom.danceIdle && mom.animation.curAnim != null && !mom.stunned && !mom.curCharacter.startsWith('gf') && !mom.animation.curAnim.name.startsWith("sing"))
+				{
+					mom.dance();
 				}
 
 				var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
@@ -2790,7 +2853,7 @@ var wiggleEffect:WiggleEffect;
 
 			if(carTimer != null) carTimer.active = false;
 
-			var chars:Array<Character> = [boyfriend, gf, dad];
+			var chars:Array<Character> = [boyfriend, gf, dad, mom];
 			for (i in 0...chars.length) {
 				if(chars[i].colorTween != null) {
 					chars[i].colorTween.active = false;
@@ -2829,7 +2892,7 @@ var wiggleEffect:WiggleEffect;
 			
 			if(carTimer != null) carTimer.active = true;
 
-			var chars:Array<Character> = [boyfriend, gf, dad];
+			var chars:Array<Character> = [boyfriend, gf, dad, mom];
 			for (i in 0...chars.length) {
 				if(chars[i].colorTween != null) {
 					chars[i].colorTween.active = true;
@@ -3545,7 +3608,15 @@ var wiggleEffect:WiggleEffect;
 						if(daNote.noteType == 'GF Sing') {
 							gf.playAnim(animToPlay + altAnim, true);
 							gf.holdTimer = 0;
-						} else {
+						} else if(daNote.noteType == 'Opponent 2 Sing' || opponent2sing == true) {
+							mom.playAnim(animToPlay + altAnim, true);
+							mom.holdTimer = 0;
+						} else if(daNote.noteType == 'Both Opponents Sing' || bothOpponentsSing == true) {
+							mom.playAnim(animToPlay + altAnim, true);
+							mom.holdTimer = 0;
+							dad.playAnim(animToPlay + altAnim, true);
+							dad.holdTimer = 0;
+						}else {
 							dad.playAnim(animToPlay + altAnim, true);
 							dad.holdTimer = 0;
 						}
@@ -3752,6 +3823,31 @@ var wiggleEffect:WiggleEffect;
 
 	public function triggerEventNote(eventName:String, value1:String, value2:String) {
 		switch(eventName) {
+			case 'Both Opponents':
+				var charType:Int = Std.parseInt(value1);
+				if(Math.isNaN(charType)) charType = 0;
+				switch(charType) {
+					case 0:
+						bothOpponentsSing = false;
+					case 1:
+						bothOpponentsSing = true;
+				}
+
+			case 'Opponent Two':
+				var charType:Int = Std.parseInt(value1);
+				if(Math.isNaN(charType)) charType = 0;
+				switch(charType) {
+					case 0:
+						opponent2sing = false;
+					case 1:
+						opponent2sing = true;
+				}
+
+			case 'Ellie Drop':
+				add(momGroup);
+				mom.playAnim('enter', false);
+				mom.specialAnim = true;
+				iconP2.changeIcon('ellie');
 			case 'Hey!':
 				var value:Int = 2;
 				switch(value1.toLowerCase().trim()) {
@@ -3823,7 +3919,7 @@ var wiggleEffect:WiggleEffect;
 							}
 						});
 
-						var chars:Array<Character> = [boyfriend, gf, dad];
+						var chars:Array<Character> = [boyfriend, gf, dad, mom];
 						for (i in 0...chars.length) {
 							if(chars[i].colorTween != null) {
 								chars[i].colorTween.cancel();
@@ -3839,7 +3935,7 @@ var wiggleEffect:WiggleEffect;
 						blammedLightsBlackTween = null;
 						blammedLightsBlack.alpha = 1;
 
-						var chars:Array<Character> = [boyfriend, gf, dad];
+						var chars:Array<Character> = [boyfriend, gf, dad, mom];
 						for (i in 0...chars.length) {
 							if(chars[i].colorTween != null) {
 								chars[i].colorTween.cancel();
@@ -3847,6 +3943,7 @@ var wiggleEffect:WiggleEffect;
 							chars[i].colorTween = null;
 						}
 						dad.color = color;
+						mom.color = color;
 						boyfriend.color = color;
 						gf.color = color;
 					}
@@ -3893,7 +3990,7 @@ var wiggleEffect:WiggleEffect;
 						}
 					}
 
-					var chars:Array<Character> = [boyfriend, gf, dad];
+					var chars:Array<Character> = [boyfriend, gf, dad, mom];
 					for (i in 0...chars.length) {
 						if(chars[i].colorTween != null) {
 							chars[i].colorTween.cancel();
@@ -4427,8 +4524,8 @@ var wiggleEffect:WiggleEffect;
 
 		rating.loadGraphic(Paths.image(pixelShitPart1 + daRating + pixelShitPart2));
 		rating.screenCenter();
-		rating.x = coolText.x - 40;
-		rating.y -= 60;
+		rating.x = boyfriend.x - 40;
+		rating.y = boyfriend.y - 60;
 		rating.acceleration.y = 550;
 		if(curStage == 'airship') {
 			rating.velocity.x = -250;
@@ -4482,8 +4579,8 @@ var wiggleEffect:WiggleEffect;
 		{
 			var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'num' + Std.int(i) + pixelShitPart2));
 			numScore.screenCenter();
-			numScore.x = coolText.x + (43 * daLoop) - 90;
-			numScore.y += 80;
+			numScore.x = boyfriend.x + (43 * daLoop) - 90;
+			numScore.y = boyfriend.y + 70;
 
 			if (!PlayState.isPixelStage)
 			{
@@ -5325,9 +5422,16 @@ var wiggleEffect:WiggleEffect;
 			{
 				dad.dance();
 			}
+			if (mom.animation.curAnim.name != null && !mom.animation.curAnim.name.startsWith("sing") && !mom.stunned)
+			{
+				mom.dance();
+			}
 		} else if(dad.danceIdle && dad.animation.curAnim.name != null && !dad.curCharacter.startsWith('gf') && !dad.animation.curAnim.name.startsWith("sing") && !dad.stunned) {
 			dad.dance();
+		} else if(mom.danceIdle && mom.animation.curAnim.name != null && !mom.curCharacter.startsWith('gf') && !mom.animation.curAnim.name.startsWith("sing") && !mom.stunned) {
+			mom.dance();
 		}
+		
 		
 				//drop 1
 		if (curBeat == 128 && curSong == 'Reactor')

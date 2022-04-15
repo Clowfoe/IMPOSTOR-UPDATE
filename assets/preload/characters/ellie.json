@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-30,
+				-90
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Ellie Idle"
+		},
+		{
+			"offsets": [
+				14,
+				-106
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Ellie Left"
+		},
+		{
+			"offsets": [
+				-51,
+				-209
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Ellie Down"
+		},
+		{
+			"offsets": [
+				-53,
+				-69
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Ellie Up"
+		},
+		{
+			"offsets": [
+				-91,
+				-141
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Ellie Right"
+		},
+		{
+			"offsets": [
+				-4,
+				1123
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "enter",
+			"loop": false,
+			"name": "Ellie Enter Animation"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Ellie_Assets",
+	"position": [
+		-40,
+		10
+	],
+	"healthicon": "ellie",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		-60,
+		110
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

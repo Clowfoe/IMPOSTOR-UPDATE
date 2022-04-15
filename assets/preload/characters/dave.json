@@ -1,78 +1,78 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				-31,
-				-179
+				150,
+				10
 			],
-			"anim": "singDOWN",
-			"fps": 16,
-			"name": "Dave down",
-			"indices": []
-		},
-		{
 			"loop": false,
-			"offsets": [
-				-1,
-				-188
-			],
-			"anim": "singUP",
-			"fps": 16,
-			"name": "Dave up",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				-189
-			],
-			"anim": "singRIGHT",
-			"fps": 16,
-			"name": "Dave right",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				1,
-				-187
-			],
-			"anim": "singLEFT",
-			"fps": 16,
-			"name": "Dave left",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				-186
-			],
-			"anim": "idle",
 			"fps": 12,
-			"name": "Dave idle",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Dave right"
+		},
+		{
+			"offsets": [
+				160,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Dave left"
+		},
+		{
+			"offsets": [
+				160,
+				10
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Dave up"
+		},
+		{
+			"offsets": [
+				160,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Dave down"
+		},
+		{
+			"offsets": [
+				160,
+				0
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "Dave idle"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Dave",
 	"position": [
-		-210,
-		-240
+		0,
+		0
 	],
-	"healthicon": "face",
+	"healthicon": "dad",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		255,
-		255
+		175,
+		102,
+		206
 	],
 	"camera_position": [
-		-50,
-		230
+		-300,
+		160
 	],
 	"sing_duration": 6.1,
-	"scale": 0.95
+	"scale": 0.9
 }

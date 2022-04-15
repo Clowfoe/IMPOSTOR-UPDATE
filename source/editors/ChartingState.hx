@@ -59,9 +59,11 @@ class ChartingState extends MusicBeatState
 		'Hurt Note',
 		'GF Sing',
 		'No Animation',
-		'fabs',
+		'Opponent 2 Sing',
+		'Both Opponents Sing'
+		/*'fabs',
 		'orb',
-		'rare'
+		'rare'*/
 	];
 	private var noteTypeIntMap:Map<Int, String> = new Map<Int, String>();
 	private var noteTypeMap:Map<String, Null<Int>> = new Map<String, Null<Int>>();
@@ -84,7 +86,10 @@ class ChartingState extends MusicBeatState
 		['Reactor Beep', "beep beep value 1 changes the type"],
 		['DefeatDark', "black thingy"],
 		['flash', "i eat children"],
-		['Lights Down', "Value 1: turn the lights on or off"]
+		['Lights Down', "Value 1: turn the lights on or off"],
+		['Ellie Drop', "ellie dro p down"],
+		['Both Opponents', "0 - off, 1 - on"],
+		['Opponent Two', "0 - off, 1 - on"],
 	];
 
 	var _file:FileReference;
@@ -233,6 +238,7 @@ class ChartingState extends MusicBeatState
 				player1: 'bf',
 				player2: 'dad',
 				player3: 'gf',
+				player4: 'mom',
 				fabs: 'fabs',
 				speed: 1,
 				stage: 'stage',
@@ -2131,6 +2137,7 @@ class ChartingState extends MusicBeatState
 			player2: _song.player2,
 			fabs: _song.fabs,
 			player3: _song.player3,
+			player4: _song.player4,
 			stage: _song.stage,
 			validScore: false
 		};
