@@ -8,7 +8,7 @@ local xx = 500.95;
 local yy = 460;
 local xx2 = 952.9;
 local yy2 = 460;
-local ofs = 30;
+local ofs = 10;
 local followchars = true;
 local del = 0;
 local del2 = 0;
@@ -84,6 +84,71 @@ function onUpdate()
     else
         triggerEvent('Camera Follow Pos','','')
     end
+
+	if curBeat == 42 then
+		setProperty('defaultCamZoom',1.3)
+	end
+	if curBeat == 44 then
+		setProperty('defaultCamZoom',1)
+	end
+
+	if curStep == 206 or curStep == 207 then
+		setProperty('defaultCamZoom',1.3)
+	end
+
+	if curStep == 1172 then
+		setProperty('defaultCamZoom',1)
+	end
+
+	if curStep >= 1164 and curStep < 1172 then
+		setProperty('defaultCamZoom',1.3)
+	end
+
+	if curStep == 1172 then
+		setProperty('defaultCamZoom',1)
+	end
+
+	if curBeat == 304 then
+		setProperty('defaultCamZoom',1.1)
+	end
+
+	if curBeat == 305 then
+		setProperty('defaultCamZoom',1.2)
+	end
+
+	if curBeat == 306 then
+		setProperty('defaultCamZoom',1.3)
+	end
+
+	if curBeat == 307 then
+		setProperty('defaultCamZoom',1.4)
+	end
+
+	if curBeat == 308 then
+		setProperty('defaultCamZoom',1)
+	end
+
+	if curBeat == 320 then
+		setProperty('defaultCamZoom',1.1)
+	end
+
+	if curBeat == 321 then
+		setProperty('defaultCamZoom',1.2)
+	end
+
+	if curBeat == 322 then
+		setProperty('defaultCamZoom',1.3)
+	end
+
+	if curBeat == 323 then
+		setProperty('defaultCamZoom',1.4)
+	end
+
+	if curBeat == 324 then
+		setProperty('defaultCamZoom',1)
+		followchars = false
+		triggerEvent('Camera Follow Pos','726','460')
+	end
     
 end
 

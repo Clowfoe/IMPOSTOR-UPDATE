@@ -281,6 +281,12 @@ class AmongFreeplayState extends MusicBeatState {
         if(downScroll) {
             changeSelection(1);
         }
+        if(upP) {
+            changeSelection(-1);
+        }
+        if(downP) {
+            changeSelection(1);
+        }
         if(rightP) {
             changeWeek(1);
             FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);

@@ -8,7 +8,7 @@ local xx = 1100;
 local yy = 1150;
 local xx2 = 1100;
 local yy2 = 1150;
-local ofs = 20;
+local ofs = 0;
 local followchars = true;
 local del = 0;
 local del2 = 0;
@@ -84,6 +84,12 @@ function onUpdate()
     else
         triggerEvent('Camera Follow Pos','','')
     end
-    
+	
+	if curBeat == 96 then
+		followchars = false
+	end
+	if curBeat == 112 then
+		followchars = false
+	end
 end
 

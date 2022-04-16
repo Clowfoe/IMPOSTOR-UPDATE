@@ -20,6 +20,7 @@ end
 
 
 function onUpdate()
+	setProperty('gf.alpha', 0);
 	if del > 0 then
 		del = del - 1
 	end

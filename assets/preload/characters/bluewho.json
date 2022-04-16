@@ -1,62 +1,62 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-40,
 				-230
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "blue idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "blue idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-45,
 				-221
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "blue down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "blue down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				64,
 				-206
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "blue up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "blue up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-102,
 				-235
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "blue left",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "blue left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				75,
 				-238
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "blue right",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "blue right"
 		}
 	],
-	"no_antialiasing": true,
+	"no_antialiasing": false,
 	"image": "characters/bluewho",
 	"position": [
 		0,

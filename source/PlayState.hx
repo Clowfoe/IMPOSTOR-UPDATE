@@ -163,6 +163,8 @@ var wiggleEffect:WiggleEffect;
 	private static var prevCamFollowPos:FlxObject;
 	private static var resetSpriteCache:Bool = false;
 
+	var cameraLocked:Bool = false;
+
 	public var strumLineNotes:FlxTypedGroup<StrumNote>;
 	public var opponentStrums:FlxTypedGroup<StrumNote>;
 	public var playerStrums:FlxTypedGroup<StrumNote>;
@@ -273,6 +275,19 @@ var wiggleEffect:WiggleEffect;
 	var ass2:FlxSprite;
 	var ass3:FlxSprite;
 	var orb:FlxSprite = new FlxSprite();
+	
+	//pink
+	var cloud1:FlxBackdrop;
+	var cloud2:FlxBackdrop;
+	var cloud3:FlxBackdrop;
+	var cloud4:FlxBackdrop;
+	var cloudbig:FlxBackdrop;
+	var greymira:FlxSprite;
+	var cyanmira:FlxSprite;
+	var limemira:FlxSprite;
+	var bluemira:FlxSprite;
+	var oramira:FlxSprite;
+	var vines:FlxSprite;
 
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
@@ -471,6 +486,117 @@ var wiggleEffect:WiggleEffect;
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
+
+			case 'plantroom': //pink stage
+				var bg:FlxSprite = new FlxSprite(-1500, -800).loadGraphic(Paths.image('mira/bg sky', 'impostor'));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
+						add(bg);
+				var bg:FlxSprite = new FlxSprite(-1300, -100).loadGraphic(Paths.image('mira/cloud fathest', 'impostor'));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
+						add(bg);
+
+				cloud1 = new FlxBackdrop(Paths.image('mira/cloud 1', 'impostor'), 1, 1, true, true);
+						cloud1.setPosition(0, -1000);
+						cloud1.updateHitbox();
+						cloud1.antialiasing = true;
+						cloud1.scrollFactor.set(1, 1);
+						add(cloud1);
+
+				cloud2 = new FlxBackdrop(Paths.image('mira/cloud 2', 'impostor'), 1, 1, true, true);
+						cloud2.setPosition(0, -1200);
+						cloud2.updateHitbox();
+						cloud2.antialiasing = true;
+						cloud2.scrollFactor.set(1, 1);
+						add(cloud2);
+						
+				cloud3 = new FlxBackdrop(Paths.image('mira/cloud 3', 'impostor'), 1, 1, true, true);
+						cloud3.setPosition(0, -1400);
+						cloud3.updateHitbox();
+						cloud3.antialiasing = true;
+						cloud3.scrollFactor.set(1, 1);
+						add(cloud3);
+
+				cloud4 = new FlxBackdrop(Paths.image('mira/cloud 4', 'impostor'), 1, 1, true, true);
+						cloud4.setPosition(0, -1600);
+						cloud4.updateHitbox();
+						cloud4.antialiasing = true;
+						cloud4.scrollFactor.set(1, 1);
+						add(cloud4);
+					
+				cloudbig = new FlxBackdrop(Paths.image('mira/bigcloud', 'impostor'), 1, 1, true, true);
+						cloudbig.setPosition(0, -1200);
+						cloudbig.updateHitbox();
+						cloudbig.antialiasing = true;
+						cloudbig.scrollFactor.set(1, 1);
+						add(cloudbig);
+	
+				var bg:FlxSprite = new FlxSprite(-1200, -750).loadGraphic(Paths.image('mira/glasses', 'impostor'));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
+						add(bg);
+
+				greymira = new FlxSprite(0, -100);
+						greymira.frames = Paths.getSparrowAtlas('mira/crew', 'impostor');	
+						greymira.animation.addByPrefix('bop', 'skrunk', 24, true);
+						greymira.animation.play('bop');
+						greymira.antialiasing = true;
+						greymira.scrollFactor.set(1, 1);
+						greymira.active = true;
+						add(greymira);
+
+				var bg:FlxSprite = new FlxSprite(0, -710).loadGraphic(Paths.image('mira/what is this', 'impostor'));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
+						add(bg);
+
+				cyanmira = new FlxSprite(800, 100);
+						cyanmira.frames = Paths.getSparrowAtlas('mira/crew', 'impostor');	
+						cyanmira.animation.addByPrefix('bop', 'cyan', 24, true);
+						cyanmira.animation.play('bop');
+						cyanmira.antialiasing = true;
+						cyanmira.scrollFactor.set(1, 1);
+						cyanmira.active = true;
+						add(cyanmira);
+					
+				limemira = new FlxSprite(1300, -300);
+						limemira.frames = Paths.getSparrowAtlas('mira/crew', 'impostor');	
+						limemira.animation.addByPrefix('bop', 'lmao 2', 24, true);
+						limemira.animation.play('bop');
+						limemira.antialiasing = true;
+						limemira.scrollFactor.set(1, 1);
+						limemira.active = true;
+						add(limemira);
+				
+				oramira = new FlxSprite(1000, 450);
+						oramira.frames = Paths.getSparrowAtlas('mira/crew', 'impostor');	
+						oramira.animation.addByPrefix('bop', 'orange', 24, true);
+						oramira.animation.play('bop');
+						oramira.antialiasing = true;
+						oramira.scrollFactor.set(1.2, 1);
+						oramira.active = true;
+						add(oramira);
+
+				var bg:FlxSprite = new FlxSprite(-800, -10).loadGraphic(Paths.image('mira/lmao', 'impostor'));
+						bg.antialiasing = true;
+						bg.setGraphicSize(Std.int(bg.width * 0.9));
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
+						add(bg);
+
+				bluemira = new FlxSprite(-1400, 0);
+						bluemira.frames = Paths.getSparrowAtlas('mira/crew', 'impostor');	
+						bluemira.animation.addByPrefix('bop', 'lmao 3', 24, true);
+						bluemira.animation.play('bop');
+						bluemira.antialiasing = true;
+						bluemira.scrollFactor.set(1.2, 1);
+						bluemira.active = true;
+						add(bluemira);
 		
 			case 'cargo': //double kill
 				var bg:FlxSprite = new FlxSprite(-2700, 150).loadGraphic(Paths.image('airship/cargofloor', 'impostor'));
@@ -1195,45 +1321,6 @@ var wiggleEffect:WiggleEffect;
 							wiggleEffect.waveSpeed = 1;
 							bg.shader = wiggleEffect.shader;
 
-			case 'pink':
-				// note to self or anyone else , move pink stage assets to impostor/pink for better memory usage
-						
-						curStage = 'pink';
-
-						var skygrad:BGSprite = new BGSprite('skygrad', -25, 7.83, 1, 1);
-						add(skygrad);
-						var bottomclouds:BGSprite = new BGSprite('bottomclouds', 350, 589.5, 0.5, 0.5);
-						bottomclouds.scale.set(3.1,3.1);
-						add(bottomclouds);
-						var cloud3:BGSprite = new BGSprite('cloud3', 1612.5, 293.5, 0.6, 0.6);
-						cloud3.scale.set(2.4,2.4);
-						add(cloud3);
-						var cloud2:BGSprite = new BGSprite('cloud2', 1397.5, 452.5, 0.4, 0.4);
-						cloud2.scale.set(3.5,3.5);
-						add(cloud2);
-						var cloud1:BGSprite = new BGSprite('cloud1', 25, 391.5, 0.7, 0.7);
-						cloud1.scale.set(2.6,2.6);
-						add(cloud1);
-						var backwindow:BGSprite = new BGSprite('backwindow', 221.43, 360.3, 1, 
-						1);
-						add(backwindow);
-						var floor:BGSprite = new BGSprite('floor', 237.5, 880.3, 1, 1);
-						add(floor);
-						var lines:BGSprite = new BGSprite('lines', 197.916, 299.58, 1, 1);
-						add(lines);
-						var container:BGSprite = new BGSprite('container', 875, 294.5, 1, 1);
-						add(container);
-						var pinkplant:BGSprite = new BGSprite('pinkplant', 980, 501, 1, 1);
-						add(pinkplant);
-						var containerglass:BGSprite = new BGSprite('containerglass', 934.54, 407.09, 1, 1);
-						add(containerglass);
-						var bushfront:BGSprite = new BGSprite('bushfront', 335, 1303, 1.2, 1.2);
-						add(bushfront); 
-						
-
-							
-					
-			
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
 					halloweenBG = new BGSprite('halloween_bg', -200, -100, ['halloweem bg0', 'halloweem bg lightning strike']);
@@ -1828,11 +1915,11 @@ var wiggleEffect:WiggleEffect;
 		if(ClientPrefs.downScroll) strumLine.y = FlxG.height - 150;
 		strumLine.scrollFactor.set();
 
-		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 20, 400, "", 32);
-		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 585, 20, 400, "", 32);
+		timeTxt.setFormat(Paths.font("vcr.ttf"), 14, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
 		timeTxt.alpha = 0;
-		timeTxt.borderSize = 2;
+		timeTxt.borderSize = 1;
 		timeTxt.visible = !ClientPrefs.hideTime;
 		if(ClientPrefs.downScroll) timeTxt.y = FlxG.height - 45;
 
@@ -1842,7 +1929,8 @@ var wiggleEffect:WiggleEffect;
 		timeBarBG.scrollFactor.set();
 		timeBarBG.alpha = 0;
 		timeBarBG.visible = !ClientPrefs.hideTime;
-		timeBarBG.color = FlxColor.BLACK;
+		//timeBarBG.color = FlxColor.BLACK;
+		timeBarBG.antialiasing = false;
 		timeBarBG.xAdd = -4;
 		timeBarBG.yAdd = -4;
 		add(timeBarBG);
@@ -1850,13 +1938,15 @@ var wiggleEffect:WiggleEffect;
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
 			'songPercent', 0, 1);
 		timeBar.scrollFactor.set();
-		timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
+		timeBar.createFilledBar(0xFF2e412e, 0xFF44d844);
 		timeBar.numDivisions = 800; //How much lag this causes?? Should i tone it down to idk, 400 or 200?
 		timeBar.alpha = 0;
 		timeBar.visible = !ClientPrefs.hideTime;
 		add(timeBar);
 		add(timeTxt);
 		timeBarBG.sprTracker = timeBar;
+		timeTxt.x += 10;
+		timeTxt.y += 4;
 
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		add(strumLineNotes);
@@ -2982,6 +3072,14 @@ var wiggleEffect:WiggleEffect;
 		{
 			iconP1.swapOldIcon();
 		}*/
+
+		if(curStage == 'plantroom'){
+			cloud1.x = FlxMath.lerp(cloud1.x, cloud1.x - 1, CoolUtil.boundTo(elapsed * 9, 0, 1));
+			cloud2.x = FlxMath.lerp(cloud2.x, cloud2.x - 3, CoolUtil.boundTo(elapsed * 9, 0, 1));
+			cloud3.x = FlxMath.lerp(cloud3.x, cloud3.x - 2, CoolUtil.boundTo(elapsed * 9, 0, 1));
+			cloud4.x = FlxMath.lerp(cloud4.x, cloud4.x - 0.25, CoolUtil.boundTo(elapsed * 9, 0, 1));
+			cloudbig.x = FlxMath.lerp(cloudbig.x, cloudbig.x - 0.5, CoolUtil.boundTo(elapsed * 9, 0, 1));
+		}
 		if(curStage == "tripletrouble") {
 			wiggleEffect.update(elapsed);
 			}
@@ -3289,7 +3387,8 @@ var wiggleEffect:WiggleEffect;
 
 		if(!inCutscene) {
 			var lerpVal:Float = CoolUtil.boundTo(elapsed * 2.4 * cameraSpeed, 0, 1);
-			camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
+			if(!cameraLocked)
+				camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 			if(!startingSong && !endingSong && boyfriend.animation.curAnim.name.startsWith('idle')) {
 				boyfriendIdleTime += elapsed;
 				if(boyfriendIdleTime >= 0.15) { // Kind of a mercy thing for making the achievement easier to get as it's apparently frustrating to some playerss
@@ -3432,7 +3531,7 @@ var wiggleEffect:WiggleEffect;
 					var minutesRemaining:Int = Math.floor(secondsTotal / 60);
 					var secondsRemaining:String = '' + secondsTotal % 60;
 					if(secondsRemaining.length < 2) secondsRemaining = '0' + secondsRemaining; //Dunno how to make it display a zero first in Haxe lol
-					timeTxt.text = minutesRemaining + ':' + secondsRemaining;
+					timeTxt.text = '' + curSong.toUpperCase();
 				}
 			}
 
@@ -3748,9 +3847,10 @@ var wiggleEffect:WiggleEffect;
 				vocals.play();
 			}
 		}
-
-		setOnLuas('cameraX', camFollowPos.x);
-		setOnLuas('cameraY', camFollowPos.y);
+		if(!cameraLocked){
+			setOnLuas('cameraX', camFollowPos.x);
+			setOnLuas('cameraY', camFollowPos.y);
+		}
 		setOnLuas('botPlay', PlayState.cpuControlled);
 		callOnLuas('onUpdatePost', [elapsed]);
 		#end
@@ -3822,7 +3922,30 @@ var wiggleEffect:WiggleEffect;
 	}
 
 	public function triggerEventNote(eventName:String, value1:String, value2:String) {
-		switch(eventName) {
+		switch(eventName) {			
+			case 'Cam lock in Who':
+				if(value1 == 'in'){
+					defaultCamZoom = 1.2;
+					FlxG.camera.zoom = 1.2;
+					cameraLocked = true;
+					if(value2 == 'dad') {
+						camFollowPos.setPosition(dad.getMidpoint().x + 50, dad.getMidpoint().y + 50);
+						FlxG.camera.focusOn(camFollowPos.getPosition());
+					}
+					else {
+						camFollowPos.setPosition(boyfriend.getMidpoint().x - 50, boyfriend.getMidpoint().y + 50);
+						FlxG.camera.focusOn(camFollowPos.getPosition());
+					}
+				}
+				else {
+					cameraLocked = false;
+					defaultCamZoom = 0.7;
+					FlxG.camera.zoom = 0.7;
+					setOnLuas('cameraX', camFollowPos.x);
+					setOnLuas('cameraY', camFollowPos.y);
+					FlxG.camera.focusOn(camFollowPos.getPosition());
+				}
+
 			case 'Both Opponents':
 				var charType:Int = Std.parseInt(value1);
 				if(Math.isNaN(charType)) charType = 0;
