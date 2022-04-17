@@ -89,7 +89,7 @@ function onUpdate()
 		followchars = false
 	end
 	if curBeat == 112 then
-		followchars = false
+		followchars = true
 	end
 end
 

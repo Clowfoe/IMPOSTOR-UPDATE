@@ -289,6 +289,12 @@ var wiggleEffect:WiggleEffect;
 	var oramira:FlxSprite;
 	var vines:FlxSprite;
 
+	//who
+	var space:FlxSprite;
+    var starsBG:FlxBackdrop;
+    var starsFG:FlxBackdrop;
+	var meeting:FlxSprite;
+
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
 	var bgGhouls:BGSprite;
@@ -498,6 +504,12 @@ var wiggleEffect:WiggleEffect;
 						bg.scrollFactor.set(1, 1);
 						bg.active = false;
 						add(bg);
+				
+				var bg:FlxSprite = new FlxSprite(-1300, 0).loadGraphic(Paths.image('mira/cloud front', 'impostor'));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
+						add(bg);
 
 				cloud1 = new FlxBackdrop(Paths.image('mira/cloud 1', 'impostor'), 1, 1, true, true);
 						cloud1.setPosition(0, -1000);
@@ -597,6 +609,14 @@ var wiggleEffect:WiggleEffect;
 						bluemira.scrollFactor.set(1.2, 1);
 						bluemira.active = true;
 						add(bluemira);
+					
+				vines = new FlxSprite(-1400, -800);
+						vines.frames = Paths.getSparrowAtlas('mira/vines', 'impostor');	
+						vines.animation.addByPrefix('bop', 'green', 24, true);
+						vines.animation.play('bop');
+						vines.antialiasing = true;
+						vines.scrollFactor.set(1.4, 1);
+						vines.active = true;
 		
 			case 'cargo': //double kill
 				var bg:FlxSprite = new FlxSprite(-2700, 150).loadGraphic(Paths.image('airship/cargofloor', 'impostor'));
@@ -611,13 +631,46 @@ var wiggleEffect:WiggleEffect;
 						bg.active = false;
 						add(bg);
 
-			case 'who': //loggo normal
-
+			case 'who': //dead dead guy
 				var bg:FlxSprite = new FlxSprite(0, 100).loadGraphic(Paths.image('polus/deadguy', 'impostor'));
 						bg.antialiasing = true;
 						bg.scrollFactor.set(1, 1);
 						bg.active = false;
-						add(bg);	
+						add(bg);
+				
+				meeting = new FlxSprite(0, -360);
+						meeting.frames = Paths.getSparrowAtlas('polus/meeting', 'impostor');	
+						meeting.animation.addByPrefix('bop', 'meeting buzz', 24, false);
+						meeting.antialiasing = true;
+						meeting.scrollFactor.set(1, 1);
+						meeting.active = true;
+						meeting.visible = false;
+						add(meeting);
+						meeting.setGraphicSize(Std.int(meeting.width * 0.5));
+						//meeting.screenCenter();
+				
+				space = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height* 3, FlxColor.BLACK);
+						space.antialiasing = true;
+						space.updateHitbox();
+						space.scrollFactor.set();
+						add(space);
+						space.visible = false;
+				
+				starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
+						starsBG.setPosition(111.3, 67.95);
+						starsBG.antialiasing = true;
+						starsBG.updateHitbox();
+						starsBG.scrollFactor.set();
+						add(starsBG);
+						starsBG.visible = false;
+						
+				starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'), 5, 5, true, true);
+						starsFG.setPosition(54.3, 59.45);
+						starsFG.updateHitbox();
+						starsFG.antialiasing = true;
+						starsFG.scrollFactor.set();
+						add(starsFG);
+						starsFG.visible = false;
 			
 			case 'airshipRoom': //thanks fabs
 
@@ -1691,6 +1744,8 @@ var wiggleEffect:WiggleEffect;
 			add(bodiesfront);
 
 		switch(curStage) {
+			case 'plantroom':
+				add(vines);
 			case 'ejected':
 				bfStartpos = new FlxPoint(1008.6, 504);
 				gfStartpos = new FlxPoint(114.4, 78.45);
@@ -3077,7 +3132,7 @@ var wiggleEffect:WiggleEffect;
 			cloud1.x = FlxMath.lerp(cloud1.x, cloud1.x - 1, CoolUtil.boundTo(elapsed * 9, 0, 1));
 			cloud2.x = FlxMath.lerp(cloud2.x, cloud2.x - 3, CoolUtil.boundTo(elapsed * 9, 0, 1));
 			cloud3.x = FlxMath.lerp(cloud3.x, cloud3.x - 2, CoolUtil.boundTo(elapsed * 9, 0, 1));
-			cloud4.x = FlxMath.lerp(cloud4.x, cloud4.x - 0.25, CoolUtil.boundTo(elapsed * 9, 0, 1));
+			cloud4.x = FlxMath.lerp(cloud4.x, cloud4.x - 0.1, CoolUtil.boundTo(elapsed * 9, 0, 1));
 			cloudbig.x = FlxMath.lerp(cloudbig.x, cloudbig.x - 0.5, CoolUtil.boundTo(elapsed * 9, 0, 1));
 		}
 		if(curStage == "tripletrouble") {
@@ -3538,7 +3593,7 @@ var wiggleEffect:WiggleEffect;
 			// Conductor.lastSongPos = FlxG.sound.music.time;
 		}
 
-		if (camZooming)
+		if (camZooming && !cameraLocked)
 		{
 			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, FlxG.camera.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
 			camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
@@ -3922,14 +3977,56 @@ var wiggleEffect:WiggleEffect;
 	}
 
 	public function triggerEventNote(eventName:String, value1:String, value2:String) {
-		switch(eventName) {			
+		switch(eventName) {	
+			case 'Who Buzz':
+				var charType:Int = Std.parseInt(value1);
+				if(Math.isNaN(charType)) charType = 0;
+				switch(charType) {
+					case 0:
+						camHUD.visible = false;
+						meeting.visible = true;
+						meeting.animation.play('bop');
+					case 1:
+						meeting.visible = false;
+						dad.visible = false;
+						space.visible = true;
+						starsBG.visible = true;
+						starsFG.visible = true;
+						boyfriend.screenCenter(Y);
+						boyfriend.x = -1000;
+						FlxTween.angle(boyfriend, 0, 720, 10);
+						FlxTween.tween(boyfriend, {x: 3000}, 10);
+						//cameraLocked = false;
+						defaultCamZoom = 0.5;
+						FlxG.camera.zoom = 0.5;
+						camFollowPos.setPosition(1100, 1150);
+						FlxG.camera.focusOn(camFollowPos.getPosition());
+
+						var whoArray:Array<String> = ["G", "o", "i", "n", "g", "2", "k", "i", "l", "l", "e", "v", "e", "r", "y", "1", "s", "t", "a", "r", "t", "i", "n", "g", "w", "i", "t", "h", "U", " ", "w", "a", "s", " ", "n", "o", "t", " ", "T", "h", "e", " ", "I", "m", "p", "o", "s", "t", "o", "r", "."];
+
+						var ejectText:FlxText;
+						ejectText = new FlxText();
+						ejectText.setFormat(Paths.font("arial.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+						ejectText.scrollFactor.set();
+						ejectText.alpha = 0;
+						ejectText.borderSize = 1;
+						ejectText.text = '';
+						ejectText.screenCenter();
+						add(ejectText);
+
+						for (i in 0...whoArray.length){
+							var addChar:String = whoArray[i];
+							ejectText.text = ejectText.text + addChar;
+							new FlxTimer().start(0.1);
+						}
+				}	
 			case 'Cam lock in Who':
 				if(value1 == 'in'){
 					defaultCamZoom = 1.2;
-					FlxG.camera.zoom = 1.2;
+					camGame.camera.zoom = 1.2;
 					cameraLocked = true;
 					if(value2 == 'dad') {
-						camFollowPos.setPosition(dad.getMidpoint().x + 50, dad.getMidpoint().y + 50);
+						camFollowPos.setPosition(dad.getMidpoint().x + 150, dad.getMidpoint().y + 100);
 						FlxG.camera.focusOn(camFollowPos.getPosition());
 					}
 					else {
@@ -3941,8 +4038,7 @@ var wiggleEffect:WiggleEffect;
 					cameraLocked = false;
 					defaultCamZoom = 0.7;
 					FlxG.camera.zoom = 0.7;
-					setOnLuas('cameraX', camFollowPos.x);
-					setOnLuas('cameraY', camFollowPos.y);
+					camFollowPos.setPosition(1100, 1150);
 					FlxG.camera.focusOn(camFollowPos.getPosition());
 				}
 
@@ -5249,7 +5345,7 @@ var wiggleEffect:WiggleEffect;
 			gf.playAnim('scared', true);
 		}
 
-		if(ClientPrefs.camZooms) {
+		if(ClientPrefs.camZooms && !cameraLocked) {
 			FlxG.camera.zoom += 0.015;
 			camHUD.zoom += 0.03;
 
@@ -5398,7 +5494,7 @@ var wiggleEffect:WiggleEffect;
 		{
 			moveCameraSection(Std.int(curStep / 16));
 		}
-		if (camZooming && FlxG.camera.zoom < 1.35 && ClientPrefs.camZooms && curBeat % 4 == 0)
+		if (camZooming && FlxG.camera.zoom < 1.35 && ClientPrefs.camZooms && curBeat % 4 == 0 && !cameraLocked)
 		{
 			FlxG.camera.zoom += 0.015;
 			camHUD.zoom += 0.03;
