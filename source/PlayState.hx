@@ -3,6 +3,7 @@ package;
 #if desktop
 import Discord.DiscordClient;
 #end
+import WalkingCrewmate;
 import Section.SwagSection;
 import Song.SwagSong;
 import WiggleEffect.WiggleEffectType;
@@ -297,6 +298,7 @@ var wiggleEffect:WiggleEffect;
 
 	//toogus
 	var saxguy:FlxSprite;
+	var walker:WalkingCrewmate;
 
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
@@ -1209,6 +1211,15 @@ var wiggleEffect:WiggleEffect;
 							//	machineDark.alpha = 0;
 							//	add(machineDark);
 								
+							walker = new WalkingCrewmate(0, [-700, 1650], 110, 0.8);
+							add(walker);
+
+							var walker2:WalkingCrewmate = new WalkingCrewmate(1, [-700, 1650], 70, 0.8);
+							add(walker2);
+
+							var walker3:WalkingCrewmate = new WalkingCrewmate(5, [-700, 1650], 70, 0.8);
+							add(walker3);
+
 
 								var tbl:FlxSprite = new FlxSprite(-1600 ,50).loadGraphic(Paths.image('table_bg'));
 								tbl.setGraphicSize(Std.int(tbl.width * 1.06));
@@ -1216,6 +1227,8 @@ var wiggleEffect:WiggleEffect;
 								tbl.scrollFactor.set(1, 1);
 								tbl.active = false;
 								add(tbl);
+
+							
 
 								
 
