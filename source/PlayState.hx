@@ -295,6 +295,9 @@ var wiggleEffect:WiggleEffect;
     var starsFG:FlxBackdrop;
 	var meeting:FlxSprite;
 
+	//toogus
+	var saxguy:FlxSprite;
+
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
 	var bgGhouls:BGSprite;
@@ -1197,7 +1200,7 @@ var wiggleEffect:WiggleEffect;
 								fg.scrollFactor.set(1, 1);
 								fg.active = false;
 								add(fg);
-
+							
 							//	machineDark = new FlxSprite(1000, 150).loadGraphic(Paths.image('vending_machineDark'));
 							//	machineDark.updateHitbox();
 							//	machineDark.antialiasing = true;
@@ -1206,12 +1209,15 @@ var wiggleEffect:WiggleEffect;
 							//	machineDark.alpha = 0;
 							//	add(machineDark);
 								
+
 								var tbl:FlxSprite = new FlxSprite(-1600 ,50).loadGraphic(Paths.image('table_bg'));
 								tbl.setGraphicSize(Std.int(tbl.width * 1.06));
 								tbl.antialiasing = true;
 								tbl.scrollFactor.set(1, 1);
 								tbl.active = false;
 								add(tbl);
+
+								
 
 							//	lightsOutSprite.alpha = 0;
 							//	flashSprite.scrollFactor.set(0, 0);
@@ -1766,6 +1772,16 @@ var wiggleEffect:WiggleEffect;
 				snow.setGraphicSize(Std.int(snow.width * 2));
 				
 				add(snow);
+			case 'toogus':
+				saxguy = new FlxSprite(0, 0);
+				saxguy.frames = Paths.getSparrowAtlas('mira/cyan_toogus', 'impostor');
+				saxguy.animation.addByPrefix('bop', 'Cyan Dancy', 24, true);
+				saxguy.animation.play('bop');
+				saxguy.updateHitbox();
+				saxguy.antialiasing = true;
+				saxguy.scrollFactor.set(1, 1);					
+				saxguy.setGraphicSize(Std.int(saxguy.width * 0.8));
+				saxguy.active = true;
 			case 'polus2':
 				snow = new FlxSprite(0, -500);
 				snow.frames = Paths.getSparrowAtlas('polus/snow', 'impostor');
@@ -3135,6 +3151,11 @@ var wiggleEffect:WiggleEffect;
 			cloud4.x = FlxMath.lerp(cloud4.x, cloud4.x - 0.1, CoolUtil.boundTo(elapsed * 9, 0, 1));
 			cloudbig.x = FlxMath.lerp(cloudbig.x, cloudbig.x - 0.5, CoolUtil.boundTo(elapsed * 9, 0, 1));
 		}
+
+		if(curStage == 'toogus'){
+			saxguy.x = FlxMath.lerp(saxguy.x, saxguy.x + 15, CoolUtil.boundTo(elapsed * 9, 0, 1));
+		}
+
 		if(curStage == "tripletrouble") {
 			wiggleEffect.update(elapsed);
 			}
@@ -4105,6 +4126,10 @@ var wiggleEffect:WiggleEffect;
 				var value:Int = Std.parseInt(value1);
 				if(Math.isNaN(value)) value = 1;
 				gfSpeed = value;
+			
+			case 'Toogus Sax':
+				saxguy.setPosition(-550, 550);
+				add(saxguy);
 
 			case 'Blammed Lights':
 				var lightId:Int = Std.parseInt(value1);

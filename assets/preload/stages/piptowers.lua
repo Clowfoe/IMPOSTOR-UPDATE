@@ -41,11 +41,11 @@ function onStepHit()
 
     if inbeans == false then
         if mustHitSection == false then
-            triggerEvent('Camera Follow Pos',600, 550);
-            setProperty('defaultCamZoom',0.7);
+            triggerEvent('Camera Follow Pos',600, 450);
+            setProperty('defaultCamZoom',0.75);
         else 
             triggerEvent('Camera Follow Pos',800, 450);
-            setProperty('defaultCamZoom',0.8);
+            setProperty('defaultCamZoom',0.75);
         end
     else
         triggerEvent('Camera Follow Pos',750, 300);

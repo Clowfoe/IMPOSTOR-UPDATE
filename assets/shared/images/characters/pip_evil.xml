@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="pip.png">
+<TextureAtlas imagePath="pip_evil.png">
 	<!-- Created with Adobe Animate version 21.0.0.35450 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="Pip Down0000" x="13" y="13" width="703" height="671" frameX="0" frameY="-13" frameWidth="703" frameHeight="684"/>
@@ -32,36 +32,36 @@
 	<SubTexture name="Pip Idle0012" x="1500" y="699" width="725" height="655" frameX="-12" frameY="0" frameWidth="755" frameHeight="672"/>
 	<SubTexture name="Pip Idle0013" x="2238" y="699" width="727" height="653" frameX="-11" frameY="-2" frameWidth="755" frameHeight="672"/>
 	<SubTexture name="Pip Idle0014" x="2238" y="699" width="727" height="653" frameX="-11" frameY="-2" frameWidth="755" frameHeight="672"/>
-	<SubTexture name="Pip Left0000" x="2978" y="699" width="727" height="658" frameX="0" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0001" x="2978" y="699" width="727" height="658" frameX="0" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0002" x="13" y="1372" width="726" height="655" frameX="-11" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0003" x="13" y="1372" width="726" height="655" frameX="-11" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0004" x="752" y="1372" width="724" height="658" frameX="-13" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0005" x="752" y="1372" width="724" height="658" frameX="-13" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0006" x="752" y="1372" width="724" height="658" frameX="-13" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0007" x="752" y="1372" width="724" height="658" frameX="-13" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0008" x="752" y="1372" width="724" height="658" frameX="-13" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0009" x="752" y="1372" width="724" height="658" frameX="-13" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0010" x="752" y="1372" width="724" height="658" frameX="-13" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0011" x="752" y="1372" width="724" height="658" frameX="-13" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0012" x="752" y="1372" width="724" height="658" frameX="-13" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0013" x="752" y="1372" width="724" height="658" frameX="-13" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Left0014" x="752" y="1372" width="724" height="658" frameX="-13" frameY="0" frameWidth="737" frameHeight="658"/>
-	<SubTexture name="Pip Right0000" x="1489" y="1372" width="689" height="644" frameX="-11" frameY="0" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0001" x="1489" y="1372" width="689" height="644" frameX="-11" frameY="0" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0002" x="2191" y="1372" width="696" height="643" frameX="-3" frameY="-1" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0003" x="2191" y="1372" width="696" height="643" frameX="-3" frameY="-1" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0004" x="2900" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0005" x="2900" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0006" x="2900" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0007" x="2900" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0008" x="2900" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0009" x="2900" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0010" x="2900" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0011" x="2900" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0012" x="2900" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0013" x="2900" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
-	<SubTexture name="Pip Right0014" x="2900" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Left0000" x="2978" y="699" width="762" height="658"/>
+	<SubTexture name="Pip Left0001" x="2978" y="699" width="762" height="658"/>
+	<SubTexture name="Pip Left0002" x="13" y="1372" width="734" height="655" frameX="-11" frameY="0" frameWidth="762" frameHeight="658"/>
+	<SubTexture name="Pip Left0003" x="13" y="1372" width="734" height="655" frameX="-11" frameY="0" frameWidth="762" frameHeight="658"/>
+	<SubTexture name="Pip Left0004" x="760" y="1372" width="730" height="658" frameX="-13" frameY="0" frameWidth="762" frameHeight="658"/>
+	<SubTexture name="Pip Left0005" x="760" y="1372" width="730" height="658" frameX="-13" frameY="0" frameWidth="762" frameHeight="658"/>
+	<SubTexture name="Pip Left0006" x="760" y="1372" width="730" height="658" frameX="-13" frameY="0" frameWidth="762" frameHeight="658"/>
+	<SubTexture name="Pip Left0007" x="760" y="1372" width="730" height="658" frameX="-13" frameY="0" frameWidth="762" frameHeight="658"/>
+	<SubTexture name="Pip Left0008" x="760" y="1372" width="730" height="658" frameX="-13" frameY="0" frameWidth="762" frameHeight="658"/>
+	<SubTexture name="Pip Left0009" x="760" y="1372" width="730" height="658" frameX="-13" frameY="0" frameWidth="762" frameHeight="658"/>
+	<SubTexture name="Pip Left0010" x="760" y="1372" width="730" height="658" frameX="-13" frameY="0" frameWidth="762" frameHeight="658"/>
+	<SubTexture name="Pip Left0011" x="760" y="1372" width="730" height="658" frameX="-13" frameY="0" frameWidth="762" frameHeight="658"/>
+	<SubTexture name="Pip Left0012" x="760" y="1372" width="730" height="658" frameX="-13" frameY="0" frameWidth="762" frameHeight="658"/>
+	<SubTexture name="Pip Left0013" x="760" y="1372" width="730" height="658" frameX="-13" frameY="0" frameWidth="762" frameHeight="658"/>
+	<SubTexture name="Pip Left0014" x="760" y="1372" width="730" height="658" frameX="-13" frameY="0" frameWidth="762" frameHeight="658"/>
+	<SubTexture name="Pip Right0000" x="1503" y="1372" width="689" height="644" frameX="-11" frameY="0" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0001" x="1503" y="1372" width="689" height="644" frameX="-11" frameY="0" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0002" x="2205" y="1372" width="696" height="643" frameX="-3" frameY="-1" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0003" x="2205" y="1372" width="696" height="643" frameX="-3" frameY="-1" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0004" x="2914" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0005" x="2914" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0006" x="2914" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0007" x="2914" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0008" x="2914" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0009" x="2914" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0010" x="2914" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0011" x="2914" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0012" x="2914" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0013" x="2914" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
+	<SubTexture name="Pip Right0014" x="2914" y="1372" width="698" height="643" frameX="0" frameY="-1" frameWidth="700" frameHeight="644"/>
 	<SubTexture name="Pip Up0000" x="13" y="2043" width="774" height="637" frameX="-5" frameY="0" frameWidth="782" frameHeight="637"/>
 	<SubTexture name="Pip Up0001" x="13" y="2043" width="774" height="637" frameX="-5" frameY="0" frameWidth="782" frameHeight="637"/>
 	<SubTexture name="Pip Up0002" x="800" y="2043" width="781" height="628" frameX="0" frameY="-9" frameWidth="782" frameHeight="637"/>

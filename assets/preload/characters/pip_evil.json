@@ -1,63 +1,63 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Pip Idle"
+			"fps": 24,
+			"name": "Pip Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-25,
 				-9
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Pip Down"
+			"fps": 24,
+			"name": "Pip Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-26,
 				22
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Pip Up"
+			"fps": 24,
+			"name": "Pip Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-49,
 				9
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Pip Left"
+			"fps": 24,
+			"name": "Pip Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				11,
 				3
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Pip Right"
+			"fps": 24,
+			"name": "Pip Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/pip",
+	"image": "characters/pip_evil",
 	"position": [
 		-100,
 		110

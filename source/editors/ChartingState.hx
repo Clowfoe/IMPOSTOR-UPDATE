@@ -60,6 +60,7 @@ class ChartingState extends MusicBeatState
 		'GF Sing',
 		'No Animation',
 		'Opponent 2 Sing',
+		'Toogus Sax',
 		'Both Opponents Sing'
 		/*'fabs',
 		'orb',
@@ -88,6 +89,7 @@ class ChartingState extends MusicBeatState
 		['flash', "i eat children"],
 		['Lights Down', "Value 1: turn the lights on or off"],
 		['Ellie Drop', "ellie dro p down"],
+		['Toogus Sax', "blow"],
 		['Both Opponents', "0 - off, 1 - on"],
 		['Opponent Two', "0 - off, 1 - on"],
 		['Play On Left', ''],

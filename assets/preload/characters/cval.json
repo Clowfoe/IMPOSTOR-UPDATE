@@ -2,58 +2,69 @@
 	"animations": [
 		{
 			"offsets": [
-				0,
-				80
+				-6,
+				28
 			],
-			"indices": [],
-			"fps": 24,
-			"anim": "idle",
 			"loop": false,
-			"name": "Cval idle"
-		},
-		{
-			"offsets": [
-				-17,
-				60
-			],
-			"indices": [],
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "Cval Down"
 		},
 		{
 			"offsets": [
-				9,
-				100
+				8,
+				126
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "Cval Up"
 		},
 		{
 			"offsets": [
 				-17,
-				81
+				89
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "Cval Right"
 		},
 		{
 			"offsets": [
-				27,
+				32,
+				80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Cval Left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				80
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Cval Idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				100,
 				80
 			],
 			"indices": [],
 			"fps": 24,
-			"anim": "singLEFT",
+			"anim": "pip",
 			"loop": false,
-			"name": "Cval Left"
+			"name": "Cval Hi pip"
 		}
 	],
 	"no_antialiasing": false,
