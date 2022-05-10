@@ -1211,13 +1211,13 @@ var wiggleEffect:WiggleEffect;
 							//	machineDark.alpha = 0;
 							//	add(machineDark);
 								
-							walker = new WalkingCrewmate(0, [-700, 1650], 110, 0.8);
+							walker = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
 							add(walker);
 
-							var walker2:WalkingCrewmate = new WalkingCrewmate(1, [-700, 1650], 70, 0.8);
+							var walker2:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
 							add(walker2);
 
-							var walker3:WalkingCrewmate = new WalkingCrewmate(5, [-700, 1650], 70, 0.8);
+							var walker3:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
 							add(walker3);
 
 

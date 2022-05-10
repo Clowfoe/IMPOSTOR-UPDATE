@@ -139,6 +139,9 @@ class AmongFreeplayState extends MusicBeatState {
         portrait = new FlxSprite();
         portrait.frames = Paths.getSparrowAtlas('freeplay/portraits', 'impostor');
 
+        var walker:WalkingCrewmate = new WalkingCrewmate(0, [0 - 200, FlxG.width + 200], 800, 0.8);
+		add(walker);
+
         portrait.animation.addByIndices('red', 'Character', [1], null, 24, true);
         portrait.animation.addByIndices('yellow', 'Character', [2], null, 24, true);
         portrait.animation.addByIndices('green', 'Character', [3], null, 24, true);
