@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				-305
+			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "speakers lonely",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				-305
+			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "speakers lonely",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/speakerlonely",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

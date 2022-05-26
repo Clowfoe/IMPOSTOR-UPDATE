@@ -780,53 +780,63 @@ var wiggleEffect:WiggleEffect;
 								add(peopleloggo);
 
 			case 'chef': //mayhew has gone mad	
-						var floor:FlxSprite = new FlxSprite(-500, 400).loadGraphic(Paths.image('chef/floor', 'impostor'));
+						var wall:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('chef/Back Wall Kitchen', 'impostor'));
+						wall.antialiasing = true;
+						wall.scrollFactor.set(1, 1);
+						wall.setGraphicSize(Std.int(wall.width * 0.8));
+						wall.active = false;
+						add(wall);	
+
+						var floor:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('chef/Chef Floor', 'impostor'));
 						floor.antialiasing = true;
 						floor.scrollFactor.set(1, 1);
 						floor.setGraphicSize(Std.int(floor.width * 0.8));
 						floor.active = false;
 						add(floor);	
 
-						var bg:FlxSprite = new FlxSprite(-500, 0).loadGraphic(Paths.image('chef/bg', 'impostor'));
-						bg.antialiasing = true;
-						bg.scrollFactor.set(1, 1);
-						bg.active = false;
-						bg.setGraphicSize(Std.int(bg.width * 0.8));
-						add(bg);		
+						var backshit:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('chef/Back Table Kitchen', 'impostor'));
+						backshit.antialiasing = true;
+						backshit.scrollFactor.set(1, 1);
+						backshit.setGraphicSize(Std.int(backshit.width * 0.8));
+						backshit.active = false;
+						add(backshit);				
 
-						gray = new FlxSprite(450, 150);
-						gray.frames = Paths.getSparrowAtlas('chef/gray', 'impostor');
-						gray.animation.addByPrefix('bop', 'gray', 24, false);
+						gray = new FlxSprite(500, 300);
+						gray.frames = Paths.getSparrowAtlas('chef/Boppers', 'impostor');
+						gray.animation.addByPrefix('bop', 'Gray bop', 24, false);
 						gray.animation.play('bop');
 						gray.antialiasing = true;
 						gray.scrollFactor.set(1, 1);
+						gray.setGraphicSize(Std.int(gray.width * 0.8));
 						gray.active = true;
 						add(gray);
 
-						saster = new FlxSprite(-190, 270);
-						saster.frames = Paths.getSparrowAtlas('chef/saster', 'impostor');
-						saster.animation.addByPrefix('bop', 'saster', 24, false);
+						saster = new FlxSprite(500, 300);
+						saster.frames = Paths.getSparrowAtlas('chef/Boppers', 'impostor');
+						saster.animation.addByPrefix('bop', 'Sas bop', 24, false);
 						saster.animation.play('bop');
 						saster.antialiasing = true;
 						saster.scrollFactor.set(1, 1);
+						saster.setGraphicSize(Std.int(saster.width * 1));
 						saster.active = true;
 						add(saster);
 
-						neato = new FlxSprite(1350, 270);
-						neato.frames = Paths.getSparrowAtlas('chef/neato', 'impostor');
-						neato.animation.addByPrefix('bop', 'neato', 24, false);
+						neato = new FlxSprite(700, 300);
+						neato.frames = Paths.getSparrowAtlas('chef/Boppers', 'impostor');
+						neato.animation.addByPrefix('bop', 'neato bop', 24, false);
 						neato.animation.play('bop');
 						neato.antialiasing = true;
 						neato.scrollFactor.set(1, 1);
+						neato.setGraphicSize(Std.int(neato.width * 0.9));
 						neato.active = true;
 						add(neato);
 
-						var desk:FlxSprite = new FlxSprite(0, 390).loadGraphic(Paths.image('chef/desk', 'impostor'));
-						desk.antialiasing = true;
-						desk.scrollFactor.set(1, 1);
-						desk.active = false;
-						desk.setGraphicSize(Std.int(desk.width * 0.8));
-						add(desk);		
+						var frontable:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('chef/Kitchen Counter', 'impostor'));
+						frontable.antialiasing = true;
+						frontable.scrollFactor.set(1, 1);
+						frontable.setGraphicSize(Std.int(frontable.width * 0.8));
+						frontable.active = false;
+						add(frontable);		
 		
 						
 
@@ -1793,7 +1803,7 @@ var wiggleEffect:WiggleEffect;
 				saxguy.updateHitbox();
 				saxguy.antialiasing = true;
 				saxguy.scrollFactor.set(1, 1);					
-				saxguy.setGraphicSize(Std.int(saxguy.width * 0.8));
+				saxguy.setGraphicSize(Std.int(saxguy.width * 0.9));
 				saxguy.active = true;
 			case 'polus2':
 				snow = new FlxSprite(0, -500);
@@ -4141,7 +4151,7 @@ var wiggleEffect:WiggleEffect;
 				gfSpeed = value;
 			
 			case 'Toogus Sax':
-				saxguy.setPosition(-550, 550);
+				saxguy.setPosition(-550, 275);
 				add(saxguy);
 
 			case 'Blammed Lights':
