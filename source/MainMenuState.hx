@@ -39,6 +39,8 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
+		super.create();
+
 		#if desktop
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
@@ -128,8 +130,6 @@ class MainMenuState extends MusicBeatState
 			ClientPrefs.saveSettings();
 		}
 		#end
-
-		super.create();
 	}
 
 	#if ACHIEVEMENTS_ALLOWED

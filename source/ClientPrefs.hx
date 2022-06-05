@@ -26,41 +26,52 @@ class ClientPrefs {
 	public static var ghostTapping:Bool = true;
 	public static var hideTime:Bool = false;
 
-	public static var defaultKeys:Array<FlxKey> = [
-		A, LEFT,			//Note Left
-		S, DOWN,			//Note Down
-		W, UP,				//Note Up
-		D, RIGHT,			//Note Right
-
-		A, LEFT,			//UI Left
-		S, DOWN,			//UI Down
-		W, UP,				//UI Up
-		D, RIGHT,			//UI Right
-
-		R, NONE,			//Reset
-		SPACE, ENTER,		//Accept
-		BACKSPACE, ESCAPE,	//Back
-		ENTER, ESCAPE		//Pause
+	public static var keyBinds:Map<String, Array<FlxKey>> = [
+		'note_left'		=> [A, LEFT],
+		'note_down'		=> [S, DOWN],
+		'note_up'		=> [W, UP],
+		'note_right'	=> [D, RIGHT],
+		
+		'ui_left'		=> [A, LEFT],
+		'ui_down'		=> [S, DOWN],
+		'ui_up'			=> [W, UP],
+		'ui_right'		=> [D, RIGHT],
+		
+		'accept'		=> [SPACE, ENTER],
+		'back'			=> [BACKSPACE, ESCAPE],
+		'pause'			=> [ENTER, ESCAPE],
+		'reset'			=> [R, NONE],
+		
+		'volume_mute'	=> [ZERO, NONE],
+		'volume_up'		=> [NUMPADPLUS, PLUS],
+		'volume_down'	=> [NUMPADMINUS, MINUS],
+		
+		'debug_1'		=> [SEVEN, NONE],
+		'debug_2'		=> [EIGHT, NONE]
 	];
-	//Every key has two binds, these binds are defined on defaultKeys! If you want your control to be changeable, you have to add it on ControlsSubState (inside OptionsState)'s list
-	public static var keyBinds:Array<Dynamic> = [
+
+	public static function startControls() {
 		//Key Bind, Name for ControlsSubState
-		[Control.NOTE_LEFT, 'Left'],
-		[Control.NOTE_DOWN, 'Down'],
-		[Control.NOTE_UP, 'Up'],
-		[Control.NOTE_RIGHT, 'Right'],
+		keyBinds.set('note_left', [A, LEFT]);
+		keyBinds.set('note_down', [S, DOWN]);
+		keyBinds.set('note_up', [W, UP]);
+		keyBinds.set('note_right', [D, RIGHT]);
+		
+		keyBinds.set('ui_left', [A, LEFT]);
+		keyBinds.set('ui_down', [S, DOWN]);
+		keyBinds.set('ui_up', [W, UP]);
+		keyBinds.set('ui_right', [D, RIGHT]);
+		
+		keyBinds.set('accept', [SPACE, ENTER]);
+		keyBinds.set('back', [BACKSPACE, ESCAPE]);
+		keyBinds.set('pause', [ENTER, ESCAPE]);
+		keyBinds.set('reset', [R, NONE]);
 
-		[Control.UI_LEFT, 'Left '],		//Added a space for not conflicting on ControlsSubState
-		[Control.UI_DOWN, 'Down '],		//Added a space for not conflicting on ControlsSubState
-		[Control.UI_UP, 'Up '],			//Added a space for not conflicting on ControlsSubState
-		[Control.UI_RIGHT, 'Right '],	//Added a space for not conflicting on ControlsSubState
+		// Don't delete this
+		defaultKeys = keyBinds.copy();
+	}
 
-		[Control.RESET, 'Reset'],
-		[Control.ACCEPT, 'Accept'],
-		[Control.BACK, 'Back'],
-		[Control.PAUSE, 'Pause']
-	];
-	public static var lastControls:Array<FlxKey> = defaultKeys.copy();
+	public static var defaultKeys:Map<String, Array<FlxKey>> = null;
 
 	public static function saveSettings() {
 		FlxG.save.data.downScroll = downScroll;
@@ -92,8 +103,8 @@ class ClientPrefs {
 		FlxG.save.flush();
 
 		var save:FlxSave = new FlxSave();
-		save.bind('controls', 'ninjamuffin99'); //Placing this in a separate save so that it can be manually deleted without removing your Score and stuff
-		save.data.customControls = lastControls;
+		save.bind('controls_v2', 'ninjamuffin99'); //Placing this in a separate save so that it can be manually deleted without removing your Score and stuff
+		save.data.customControls = keyBinds;
 		save.flush();
 		FlxG.log.add("Settings saved!");
 	}
@@ -163,44 +174,39 @@ class ClientPrefs {
 		}
 
 		var save:FlxSave = new FlxSave();
-		save.bind('controls', 'ninjamuffin99');
+		save.bind('controls_v2', 'ninjamuffin99');
 		if(save != null && save.data.customControls != null) {
-			reloadControls(save.data.customControls);
+			var loadedControls:Map<String, Array<FlxKey>> = save.data.customControls;
+			for (control => keys in loadedControls) {
+				keyBinds.set(control, keys);
+			}
+			reloadControls();
 		}
 	}
 
-	public static function reloadControls(newKeys:Array<FlxKey>) {
-		ClientPrefs.removeControls(ClientPrefs.lastControls);
-		ClientPrefs.lastControls = newKeys.copy();
-		ClientPrefs.loadControls(ClientPrefs.lastControls);
-	}
+	public static function reloadControls() {
+		PlayerSettings.player1.controls.setKeyboardScheme(KeyboardScheme.Solo);
 
-	private static function removeControls(controlArray:Array<FlxKey>) {
-		for (i in 0...keyBinds.length) {
-			var controlValue:Int = i*2;
-			var controlsToRemove:Array<FlxKey> = [];
-			for (j in 0...2) {
-				if(controlArray[controlValue+j] != NONE) {
-					controlsToRemove.push(controlArray[controlValue+j]);
-				}
-			}
-			if(controlsToRemove.length > 0) {
-				PlayerSettings.player1.controls.unbindKeys(keyBinds[i][0], controlsToRemove);
-			}
-		}
+		TitleState.muteKeys = copyKey(keyBinds.get('volume_mute'));
+		TitleState.volumeDownKeys = copyKey(keyBinds.get('volume_down'));
+		TitleState.volumeUpKeys = copyKey(keyBinds.get('volume_up'));
+		FlxG.sound.muteKeys = TitleState.muteKeys;
+		FlxG.sound.volumeDownKeys = TitleState.volumeDownKeys;
+		FlxG.sound.volumeUpKeys = TitleState.volumeUpKeys;
 	}
-	private static function loadControls(controlArray:Array<FlxKey>) {
-		for (i in 0...keyBinds.length) {
-			var controlValue:Int = i*2;
-			var controlsToAdd:Array<FlxKey> = [];
-			for (j in 0...2) {
-				if(controlArray[controlValue+j] != NONE) {
-					controlsToAdd.push(controlArray[controlValue+j]);
-				}
+	public static function copyKey(arrayToCopy:Array<FlxKey>):Array<FlxKey> {
+		var copiedArray:Array<FlxKey> = arrayToCopy.copy();
+		var i:Int = 0;
+		var len:Int = copiedArray.length;
+
+		while (i < len) {
+			if(copiedArray[i] == NONE) {
+				copiedArray.remove(NONE);
+				--i;
 			}
-			if(controlsToAdd.length > 0) {
-				PlayerSettings.player1.controls.bindKeys(keyBinds[i][0], controlsToAdd);
-			}
+			i++;
+			len = copiedArray.length;
 		}
+		return copiedArray;
 	}
 }

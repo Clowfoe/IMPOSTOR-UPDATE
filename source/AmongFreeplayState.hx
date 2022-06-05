@@ -90,7 +90,8 @@ class AmongFreeplayState extends MusicBeatState {
 
     var listOfButtons:Array<FreeplayCard> = [];
 
-    override function create() {        
+    override function create() {   
+        super.create();         
         FlxG.mouse.visible = true;
 
         //i dont care
@@ -272,10 +273,7 @@ class AmongFreeplayState extends MusicBeatState {
         changePortrait();
         changeDiff(0);
 
-        super.create();        
-
         CustomFadeTransition.nextCamera = camOther;
-
     }
 
     override function update(elapsed:Float) {

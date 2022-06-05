@@ -26,9 +26,8 @@ class CustomFadeTransition extends MusicBeatSubstate {
 		super();
 
 		this.isTransIn = isTransIn;
-		var zoom:Float = CoolUtil.boundTo(FlxG.camera.zoom, 0.05, 1);
-		var width:Int = Std.int(FlxG.width / zoom);
-		var height:Int = Std.int(FlxG.height / zoom);
+		var width:Int = Std.int(FlxG.width);
+		var height:Int = Std.int(FlxG.height);
 		transGradient = FlxGradient.createGradientFlxSprite(width, height, (isTransIn ? [0x0, FlxColor.BLACK] : [FlxColor.BLACK, 0x0]));
 		transGradient.scrollFactor.set();
 		add(transGradient);
@@ -40,53 +39,53 @@ class CustomFadeTransition extends MusicBeatSubstate {
 		transGradient.x -= (width - FlxG.width) / 2;
 		transBlack.x = transGradient.x;
 
-		if(isTransIn) {
+		if (isTransIn)
+		{
 			transGradient.y = transBlack.y - transBlack.height;
 			FlxTween.tween(transGradient, {y: transGradient.height + 50}, duration, {
-				onComplete: function(twn:FlxTween) {
+				onComplete: function(twn:FlxTween)
+				{
 					close();
 				},
-			ease: FlxEase.linear});
-		} else {
+				ease: FlxEase.linear
+			});
+		}
+		else
+		{
 			transGradient.y = -transGradient.height;
 			transBlack.y = transGradient.y - transBlack.height + 50;
 			leTween = FlxTween.tween(transGradient, {y: transGradient.height + 50}, duration, {
-				onComplete: function(twn:FlxTween) {
-					if(finishCallback != null) {
+				onComplete: function(twn:FlxTween)
+				{
+					if (finishCallback != null)
 						finishCallback();
-					}
 				},
-			ease: FlxEase.linear});
+				ease: FlxEase.linear
+			});
 		}
-
-		if(nextCamera != null) {
-			transBlack.cameras = [nextCamera];
-			transGradient.cameras = [nextCamera];
-		}
-		nextCamera = null;
 	}
 
 	override function update(elapsed:Float) {
-		if(isTransIn) {
+		if (isTransIn)
 			transBlack.y = transGradient.y + transGradient.height;
-		} else {
+		else
 			transBlack.y = transGradient.y - transBlack.height;
-		}
+
+		var camList = FlxG.cameras.list;
+		camera = camList[camList.length - 1];
+		transBlack.cameras = [camera];
+		transGradient.cameras = [camera];
+
 		super.update(elapsed);
-		if(isTransIn) {
+		
+		if (isTransIn)
 			transBlack.y = transGradient.y + transGradient.height;
-		} else {
+		else
 			transBlack.y = transGradient.y - transBlack.height;
-		}
 	}
 
 	override function destroy() {
 		if(leTween != null) {
-			#if MODS_ALLOWED
-			if(isTransIn) {
-				Paths.destroyLoadedImages();
-			}
-			#end
 			finishCallback();
 			leTween.cancel();
 		}
