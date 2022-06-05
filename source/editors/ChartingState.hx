@@ -184,10 +184,7 @@ class ChartingState extends MusicBeatState
 
 	override function create()
 	{
-		#if MODS_ALLOWED
-		Paths.destroyLoadedImages();
-		#end
-
+		super.create();
 		#if desktop
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("Chart Editor", StringTools.replace(PlayState.SONG.song, '-', ' '));
@@ -344,7 +341,6 @@ class ChartingState extends MusicBeatState
 		add(zoomTxt);
 		
 		updateGrid();
-		super.create();
 	}
 
 	var check_mute_inst:FlxUICheckBox = null;

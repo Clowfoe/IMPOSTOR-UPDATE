@@ -67,6 +67,10 @@ class Note extends FlxSprite
 	public var noAnimation:Bool = false;
 	public var hitCausesMiss:Bool = false;
 
+	public var parentNote:Note;
+	public var childrenNotes:Array<Note> = [];
+	public var endHoldOffset:Float = Math.NEGATIVE_INFINITY;
+
 	private function set_texture(value:String):String {
 		if(texture != value) {
 			reloadNote('', value);
@@ -209,6 +213,16 @@ class Note extends FlxSprite
 			earlyHitMult = 1;
 		}
 		x += offsetX;
+
+		// determine parent note
+		if (isSustainNote && prevNote != null) {
+			parentNote = prevNote;
+			while (parentNote.parentNote != null)
+				parentNote = parentNote.parentNote;
+			parentNote.childrenNotes.push(this);
+		} else if (!isSustainNote)
+			parentNote = null;
+
 	}
 
 	function reloadNote(?prefix:String = '', ?texture:String = '', ?suffix:String = '') {
@@ -334,7 +348,7 @@ class Note extends FlxSprite
 				wasGoodHit = true;
 		}
 
-		if (tooLate)
+		if (tooLate || (parentNote != null && parentNote.tooLate))
 		{
 			if (alpha > 0.3)
 				alpha = 0.3;
