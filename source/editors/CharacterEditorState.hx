@@ -52,11 +52,11 @@ class CharacterEditorState extends MusicBeatState
 	var dumbTexts:FlxTypedGroup<FlxText>;
 	//var animList:Array<String> = [];
 	var curAnim:Int = 0;
-	var daAnim:String = 'spooky';
+	var daAnim:String = 'bf';
 	var goToPlayState:Bool = true;
 	var camFollow:FlxObject;
 
-	public function new(daAnim:String = 'spooky', goToPlayState:Bool = true)
+	public function new(daAnim:String = 'bf', goToPlayState:Bool = true)
 	{
 		super();
 		this.daAnim = daAnim;
@@ -79,6 +79,8 @@ class CharacterEditorState extends MusicBeatState
 
 	override function create()
 	{
+		super.create();
+		
 		FlxG.sound.playMusic(Paths.music('breakfast'), 0.5);
 
 		camEditor = new FlxCamera();
@@ -197,7 +199,7 @@ class CharacterEditorState extends MusicBeatState
 		FlxG.mouse.visible = true;
 		reloadCharacterOptions();
 
-		super.create();
+		
 	}
 
 	var onPixelBG:Bool = false;

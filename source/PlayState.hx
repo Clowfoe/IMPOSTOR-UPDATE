@@ -3400,7 +3400,7 @@ var wiggleEffect:WiggleEffect;
 		var roundedSpeed:Float = FlxMath.roundDecimal(SONG.speed, 2);
 		if (unspawnNotes[0] != null)
 		{
-			var time:Float = 1500;
+			var time:Float = 3000;
 			if(roundedSpeed < 1) time /= roundedSpeed;
 
 			while (unspawnNotes.length > 0 && unspawnNotes[0].strumTime - Conductor.songPosition < time)
@@ -4528,13 +4528,13 @@ var wiggleEffect:WiggleEffect;
 		if (noteDiff > 45)
 		{
 			daRating = 'good';
-			score = 200;
+			score = 275;
 			healthMultiplier = 0.5;
 		} 
 		if (noteDiff > 90)
 		{
 			daRating = 'bad';
-			score = 100;
+			score = 200;
 			healthMultiplier = 0.25;
 		}
 		if (noteDiff > 135)
@@ -5081,7 +5081,8 @@ var wiggleEffect:WiggleEffect;
 
 		
 
-		{var sussusBeats = [94, 95, 288, 296, 304, 312, 318, 319];
+		{
+			var sussusBeats = [94, 95, 288, 296, 304, 312, 318, 319];
 			var saboBeats = [16, 24, 32, 40, 48, 56, 62, 63, 272, 280, 288, 296, 302, 303, 376, 384, 892];
 			var meltBeats = [0, 16, 32, 48, 64, 72, 80, 88, 96, 104, 112, 120, 126, 127, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 382, 464, 480, 496, 512];
 			var toogusBeats = [94, 95, 96, 98, 100, 102, 104, 106, 107, 109, 112, 114, 116, 118, 120, 122, 124, 126, 128, 130, 132, 134, 136, 138, 140, 142, 144, 146, 148, 150, 152, 154, 156, 158, 192, 194, 196, 198, 200, 202, 204, 206, 208, 210, 212, 214, 216, 218, 220, 222, 288, 296, 304, 312, 318, 319, 320, 322, 324, 326, 328, 330, 332, 334, 336, 338, 340, 342, 344, 346, 348, 350, 352, 354, 356, 358, 360, 362, 364, 366, 368, 370, 372, 374, 376, 378, 380, 382];
