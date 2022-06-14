@@ -526,7 +526,8 @@ class AmongFreeplayState extends MusicBeatState {
 
         weeks.push
         ({
-            songs: [["Titular", "henry", 'tit', FlxColor.ORANGE], 
+            songs: [["Titular", "henry", 'tit', FlxColor.ORANGE],
+            ["Greatest Plan", "charles", 'tit', FlxColor.ORANGE],  
             ["Reinforcements", "ellie", 'tit', FlxColor.ORANGE], 
             ["Armed", "rhm", 'tit', FlxColor.ORANGE]],
 

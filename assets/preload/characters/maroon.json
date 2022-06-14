@@ -24,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				194,
-				-22
+				84,
+				-170
 			],
 			"loop": false,
 			"fps": 24,
@@ -54,6 +54,22 @@
 			"anim": "singUP",
 			"indices": [],
 			"name": "up"
+		},
+		{
+			"offsets": [
+				249,
+				-190
+			],
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"fps": 24,
+			"anim": "idle-loop",
+			"loop": true,
+			"name": "idle"
 		}
 	],
 	"no_antialiasing": false,

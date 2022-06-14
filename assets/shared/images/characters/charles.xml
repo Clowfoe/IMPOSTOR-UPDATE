@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="charles.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down0000" x="10" y="10" width="978" height="837"/>
+	<SubTexture name="down0001" x="10" y="10" width="978" height="837"/>
+	<SubTexture name="down0002" x="998" y="10" width="978" height="837"/>
+	<SubTexture name="idle0000" x="1986" y="10" width="978" height="836"/>
+	<SubTexture name="idle0001" x="1986" y="10" width="978" height="836"/>
+	<SubTexture name="idle0002" x="2974" y="10" width="978" height="836"/>
+	<SubTexture name="idle0003" x="2974" y="10" width="978" height="836"/>
+	<SubTexture name="idle0004" x="10" y="857" width="978" height="836"/>
+	<SubTexture name="idle0005" x="10" y="857" width="978" height="836"/>
+	<SubTexture name="idle0006" x="998" y="857" width="978" height="836"/>
+	<SubTexture name="idle0007" x="998" y="857" width="978" height="836"/>
+	<SubTexture name="idle0008" x="1986" y="857" width="978" height="836"/>
+	<SubTexture name="idle0009" x="1986" y="857" width="978" height="836"/>
+	<SubTexture name="idle0010" x="1986" y="857" width="978" height="836"/>
+	<SubTexture name="idle0011" x="1986" y="857" width="978" height="836"/>
+	<SubTexture name="idle0012" x="1986" y="857" width="978" height="836"/>
+	<SubTexture name="idle0013" x="1986" y="857" width="978" height="836"/>
+	<SubTexture name="left0000" x="2974" y="857" width="978" height="837"/>
+	<SubTexture name="left0001" x="2974" y="857" width="978" height="837"/>
+	<SubTexture name="left0002" x="10" y="1704" width="978" height="837"/>
+	<SubTexture name="right0000" x="998" y="1704" width="978" height="837"/>
+	<SubTexture name="right0001" x="998" y="1704" width="978" height="837"/>
+	<SubTexture name="right0002" x="1986" y="1704" width="978" height="837"/>
+	<SubTexture name="up0000" x="2974" y="1704" width="978" height="837"/>
+	<SubTexture name="up0001" x="2974" y="1704" width="978" height="837"/>
+	<SubTexture name="up0002" x="10" y="2551" width="978" height="837"/>
+</TextureAtlas>
