@@ -1,14 +1,13 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-2,
 				-21
 			],
-			"loop": false,
-			"anim": "sad",
 			"fps": 24,
-			"name": "gf sad",
+			"anim": "sad",
 			"indices": [
 				0,
 				1,
@@ -23,13 +22,18 @@
 				10,
 				11,
 				12
-			]
+			],
+			"name": "gf sad"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				-9
 			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "gf idle",
 			"indices": [
 				15,
 				16,
@@ -46,17 +50,17 @@
 				27,
 				28,
 				29
-			],
-			"fps": 24,
-			"anim": "danceRight",
-			"loop": false,
-			"name": "gf idle"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				-9
 			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "gf idle",
 			"indices": [
 				30,
 				0,
@@ -74,40 +78,36 @@
 				12,
 				13,
 				14
-			],
-			"fps": 24,
-			"anim": "danceLeft",
-			"loop": false,
-			"name": "gf idle"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				3,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "cheer",
-			"loop": false,
-			"name": "gf cheer"
+			"fps": 24,
+			"name": "gf cheer",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-2,
 				-17
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "scared",
-			"loop": true,
-			"name": "gf fade in"
+			"fps": 24,
+			"name": "gf fade in",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/ghostgf",
 	"position": [
-		0,
-		0
+		200,
+		-80
 	],
 	"healthicon": "gf",
 	"flip_x": false,

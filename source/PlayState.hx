@@ -268,6 +268,7 @@ var wiggleEffect:WiggleEffect;
 	var bodiesfront:FlxSprite;
 	//loggo
 	var peopleloggo:FlxSprite;
+	var speaker:FlxSprite;
 	var thebackground:FlxSprite;
 	var fireloggo:FlxSprite;
 	var mapthing:FlxSprite;
@@ -970,6 +971,7 @@ var wiggleEffect:WiggleEffect;
 				thebackground.animation.play('bop');
 				thebackground.antialiasing = true;
 				thebackground.scrollFactor.set(1, 1);
+				thebackground.setGraphicSize(Std.int(thebackground.width * 0.8));
 				thebackground.active = true;
 				add(thebackground);
 
@@ -999,6 +1001,10 @@ var wiggleEffect:WiggleEffect;
 				add(bg);
 			
 			case 'charles': //harles
+				GameOverSubstate.deathSoundName = 'henryDeath';
+				GameOverSubstate.loopSoundName = 'deathHenryMusicLoop';
+				GameOverSubstate.endSoundName = 'deathHenryMusicEnd';
+				GameOverSubstate.characterName = 'henryphone';
 				var bg:BGSprite = new BGSprite('stagehenry', -1600, -300, 1, 1);
 				add(bg);
 
@@ -1051,6 +1057,24 @@ var wiggleEffect:WiggleEffect;
 						ground.scrollFactor.set(1, 1);
 						ground.active = false;
 						add(ground);
+
+						speaker = new FlxSprite(300, 185);
+						speaker.frames = Paths.getSparrowAtlas('polus/speakerlonely', 'impostor');
+						speaker.animation.addByPrefix('bop', 'speakers lonely', 24, false);
+						speaker.animation.play('bop');
+						speaker.setGraphicSize(Std.int(speaker.width * 1));
+						speaker.antialiasing = false;
+						speaker.scrollFactor.set(1, 1);
+						speaker.active = true;
+						speaker.antialiasing = true;
+						if(SONG.song.toLowerCase() == 'sabotage') {
+							add(speaker);
+						}
+						if(SONG.song.toLowerCase() == 'meltdown') {
+							add(speaker);
+						}
+						
+						
 
 			
 			case 'polus2': 
@@ -1524,23 +1548,25 @@ var wiggleEffect:WiggleEffect;
 
 		}
 
-		if (curStage == 'charles')
-		{
-			add(boyfriendGroup);
-			add(dadGroup);
+	//	if (curStage == 'charles')
+	//	{
+	//		add(boyfriendGroup);
+	//		add(dadGroup);
 			//add(momGroup);
 			
-		}
-		else
-		{
+//		}
+	//	else
+//		{
 			add(dadGroup);
 			//add(momGroup);
 			add(boyfriendGroup);
-		}
+//		}
 		
 
 		if (curStage == 'defeat')
 			add(bodiesfront);
+
+
 		
 
 		switch(curStage) {
@@ -1564,8 +1590,21 @@ var wiggleEffect:WiggleEffect;
 				snow.antialiasing = true;
 				snow.updateHitbox();
 				snow.setGraphicSize(Std.int(snow.width * 2));
+
+
 				
 				add(snow);
+				crowd2 = new FlxSprite(-900, 150);
+				crowd2.frames = Paths.getSparrowAtlas('polus/boppers_meltdown', 'impostor');
+				crowd2.animation.addByPrefix('bop', 'BoppersMeltdown', 24, false);
+				crowd2.animation.play('bop');
+				crowd2.scrollFactor.set(1.5, 1.5);
+				crowd2.antialiasing = true;
+				crowd2.updateHitbox();
+				crowd2.scale.set(1, 1);
+				if(SONG.song.toLowerCase() == 'meltdown') {
+						add(crowd2);
+					}
 			case 'toogus':
 				saxguy = new FlxSprite(0, 0);
 				saxguy.frames = Paths.getSparrowAtlas('mira/cyan_toogus', 'impostor');
@@ -1592,18 +1631,15 @@ var wiggleEffect:WiggleEffect;
 				mainoverlay.alpha = 0.6;
 				mainoverlay.blend = ADD;
 				add(mainoverlay);
-			case 'polus':
-					var crowd2:FlxSprite = new FlxSprite(0, 0);
-						crowd2.frames = Paths.getSparrowAtlas('polus/boppers_meltdown', 'impostor');
-						crowd2.animation.addByPrefix('CrowdBop', 'BoppersMeltdown', 24);
-						crowd2.animation.play('CrowdBop');
-						crowd2.scrollFactor.set(1, 1);
-						crowd2.antialiasing = true;
-						crowd2.updateHitbox();
-						crowd2.scale.set(1.5, 1.5);
-						if(SONG.song.toLowerCase() == 'meltdown') {
-							add(crowd2);
-						}
+			case 'grey':
+				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/coolthing', 'impostor'));
+				lightoverlay.antialiasing = true;
+				lightoverlay.scrollFactor.set(1, 1);
+				lightoverlay.active = false;
+				lightoverlay.alpha = 0.83;
+				lightoverlay.blend = MULTIPLY;
+				add(lightoverlay);
+
 
 			case 'polus2':
 
@@ -1754,6 +1790,9 @@ var wiggleEffect:WiggleEffect;
 		else {
 			gf.scrollFactor.set(1, 1);
 		}
+
+		
+		
 		gfGroup.add(gf);
 
 		dad = new Character(0, 0, SONG.player2);
@@ -3171,6 +3210,12 @@ var wiggleEffect:WiggleEffect;
 					timeTxt.visible = false;
 				}
 			case 'defeat':
+				healthBar.visible = false;
+				healthBarBG.visible = false;
+				health = 1;
+				if(songMisses != 0)
+				health = 0;
+			case 'jerma':
 				healthBar.visible = false;
 				healthBarBG.visible = false;
 				health = 1;
@@ -5324,7 +5369,14 @@ var wiggleEffect:WiggleEffect;
     }
 
 		switch (curStage)
-		{
+		{	
+			case 'polus':
+				if(curBeat % 1 == 0) {
+					speaker.animation.play('bop');
+				}
+				if(curBeat % 2 == 0) {
+					crowd2.animation.play('bop');
+				}
 			case 'polus2':
 				if(curBeat % 2 == 0) {
 					crowd.animation.play('bop');

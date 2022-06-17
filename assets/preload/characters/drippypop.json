@@ -8,95 +8,51 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "DrippyIdle",
+			"name": "DripIdle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-48,
-				-99
+				146,
+				-84
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "DrippyLeft",
+			"name": "DripLeft",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-44,
-				-122
+				-34,
+				-111
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "DrippyDown",
+			"name": "DripDown",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-41,
-				-68
+				27,
+				13
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "DrippyUp",
+			"name": "DripUp",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-10,
-				-98
+				-34,
+				-84
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "DrippyRight",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-16,
-				-14
-			],
-			"anim": "singLEFT-alt",
-			"fps": 24,
-			"name": "DrippyShotty",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-16,
-				-15
-			],
-			"anim": "singRIGHT-alt",
-			"fps": 24,
-			"name": "DrippyShotty",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-16,
-				-14
-			],
-			"anim": "singUP-alt",
-			"fps": 24,
-			"name": "DrippyShotty",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-17,
-				-15
-			],
-			"anim": "singDOWN-alt",
-			"fps": 24,
-			"name": "DrippyShotty",
+			"name": "DripRight",
 			"indices": []
 		}
 	],
@@ -104,7 +60,7 @@
 	"image": "characters/drippy",
 	"position": [
 		0,
-		10
+		90
 	],
 	"healthicon": "drippy",
 	"flip_x": false,
@@ -115,7 +71,7 @@
 	],
 	"camera_position": [
 		-60,
-		110
+		100
 	],
 	"sing_duration": 6.1,
 	"scale": 1

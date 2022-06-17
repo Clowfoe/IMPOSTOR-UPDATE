@@ -9,51 +9,128 @@
 			"fps": 24,
 			"anim": "idle",
 			"indices": [],
-			"name": "Henry Idle"
+			"name": "idle"
 		},
 		{
 			"offsets": [
-				143,
-				-33
+				132,
+				-78
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
-			"name": "Henry Down"
+			"name": "down"
 		},
 		{
 			"offsets": [
-				-7,
-				25
+				-8,
+				36
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
-			"name": "Henry Up"
+			"name": "up"
 		},
 		{
 			"offsets": [
-				2,
+				148,
 				2
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "Henry Left"
+			"indices": [],
+			"name": "left"
 		},
 		{
 			"offsets": [
-				79,
-				-3
+				65,
+				-26
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				125,
+				-79
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "midown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				161,
+				0
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "mileft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				63,
+				-32
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "miright",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				38
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "miup",
+			"indices": []
+		},
+		{
+			"offsets": [
+				140,
+				20
 			],
 			"indices": [],
 			"fps": 24,
-			"anim": "singRIGHT",
+			"anim": "firstDeath",
 			"loop": false,
-			"name": "Henry Right"
+			"name": "death"
+		},
+		{
+			"offsets": [
+				104,
+				-13
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathLoop",
+			"loop": true,
+			"name": "loop"
+		},
+		{
+			"offsets": [
+				132,
+				-13
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathConfirm",
+			"loop": false,
+			"name": "press"
 		}
 	],
 	"no_antialiasing": false,

@@ -160,6 +160,8 @@ class AmongFreeplayState extends MusicBeatState {
         portrait.animation.addByIndices('clow', 'Character', [15], null, 24, true);
         portrait.animation.addByIndices('ziffy', 'Character', [16], null, 24, true);
         portrait.animation.addByIndices('chips', 'Character', [17], null, 24, true);
+        portrait.animation.addByIndices('oldpostor', 'Character', [18], null, 24, true);
+        portrait.animation.addByIndices('top', 'Character', [19], null, 24, true);
 
         portrait.animation.play('red');
         portrait.antialiasing = true;
@@ -503,8 +505,8 @@ class AmongFreeplayState extends MusicBeatState {
         
         weeks.push
         ({
-            songs: [["Pinkwave", "pink", 'pink', FlxColor.fromRGB(255, 0, 222)], 
-            ["Heartbeat", "pink", 'pink', FlxColor.fromRGB(255, 0, 222)], 
+            songs: [["Heartbeat", "pink", 'pink', FlxColor.fromRGB(255, 0, 222)], 
+            ["Pinkwave", "pink", 'pink', FlxColor.fromRGB(255, 0, 222)], 
             ["Pretender", "pretender", 'pink', FlxColor.fromRGB(255, 0, 222)]],
 
             section: 1
@@ -550,7 +552,9 @@ class AmongFreeplayState extends MusicBeatState {
             ["Drippypop", "drippy", 'red', FlxColor.fromRGB(84, 167, 202)], 
             ["Crewicide", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], 
             ["Triple Trouble", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], 
-            ["Monochrome", "dead", 'red', FlxColor.fromRGB(84, 167, 202)]],
+            ["Monochrome", "dead", 'red', FlxColor.fromRGB(84, 167, 202)],
+            ["Top 10", "top", 'top', FlxColor.RED]],
+            
 
             section: 5
         });

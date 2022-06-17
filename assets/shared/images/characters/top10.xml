@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="top10.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down0000" x="0" y="0" width="800" height="600"/>
+	<SubTexture name="idle0000" x="830" y="0" width="800" height="600"/>
+	<SubTexture name="left0000" x="0" y="630" width="800" height="600"/>
+	<SubTexture name="right0000" x="830" y="630" width="800" height="600"/>
+	<SubTexture name="up0000" x="0" y="1260" width="800" height="600"/>
+</TextureAtlas>
