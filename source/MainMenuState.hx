@@ -230,6 +230,11 @@ class MainMenuState extends MusicBeatState
 				selectedSomethin = true;
 				MusicBeatState.switchState(new MasterEditorMenu());
 			}
+			else if (FlxG.keys.justPressed.ONE)
+			{
+				selectedSomethin = true;
+				MusicBeatState.switchState(new SkinState());
+			}
 			#end
 		}
 
