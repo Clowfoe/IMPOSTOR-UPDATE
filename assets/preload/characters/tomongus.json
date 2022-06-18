@@ -1,77 +1,77 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				1,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "Idle"
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-17,
+				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "Left"
+			"fps": 24,
+			"name": "Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				7,
+				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "Down"
+			"fps": 24,
+			"name": "Down",
+			"indices": []
 		},
 		{
-			"offsets": [
-				1,
-				0
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singUP",
 			"loop": false,
-			"name": "Right"
-		},
-		{
 			"offsets": [
-				19,
+				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Right",
+			"indices": []
+		},
+		{
 			"loop": false,
-			"name": "Up"
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Up",
+			"indices": []
 		}
 	],
 	"no_antialiasing": true,
 	"image": "characters/tomongus",
 	"position": [
-		150,
-		360
+		113,
+		496
 	],
 	"healthicon": "tomongus",
 	"flip_x": false,
 	"healthbar_colors": [
 		255,
-		90,
+		103,
 		111
 	],
 	"camera_position": [
-		-240,
-		-330
+		-70,
+		-220
 	],
 	"sing_duration": 4,
 	"scale": 6
