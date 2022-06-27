@@ -14,8 +14,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				9,
-				-11
+				15,
+				-10
 			],
 			"anim": "singLEFT",
 			"fps": 24,
@@ -36,8 +36,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-35,
-				22
+				-40,
+				20
 			],
 			"anim": "singUP",
 			"fps": 24,
@@ -47,8 +47,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-44,
-				-7
+				-51,
+				-5
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
@@ -58,8 +58,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				12,
-				9
+				13,
+				8
 			],
 			"anim": "singLEFTmiss",
 			"fps": 24,
@@ -69,8 +69,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-14,
-				-27
+				-18,
+				-29
 			],
 			"anim": "singDOWNmiss",
 			"fps": 24,
@@ -91,7 +91,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				-32,
+				-36,
 				12
 			],
 			"anim": "singRIGHTmiss",
@@ -118,8 +118,8 @@
 		{
 			"loop": true,
 			"offsets": [
-				12,
-				-9
+				15,
+				-10
 			],
 			"anim": "singLEFT-loop",
 			"fps": 24,
@@ -134,8 +134,8 @@
 		{
 			"loop": true,
 			"offsets": [
-				-34,
-				22
+				-40,
+				20
 			],
 			"anim": "singUP-loop",
 			"fps": 24,
@@ -165,18 +165,18 @@
 		},
 		{
 			"offsets": [
-				-38,
-				-7
+				-51,
+				-5
 			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
 			"indices": [
 				11,
 				12,
 				13,
 				14
 			],
-			"fps": 24,
-			"anim": "singRIGHT-loop",
-			"loop": true,
 			"name": "BF NOTE RIGHT0"
 		}
 	],
