@@ -1,63 +1,63 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-30,
 				-90
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Henry Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				142,
 				-119
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Henry Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				83,
+				73,
 				-162
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Henry Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				89,
 				-58
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Henry Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-2,
 				-133
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Henry Right"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/henry",
+	"image": "characters/HENRY_ASSS",
 	"position": [
 		0,
 		10
