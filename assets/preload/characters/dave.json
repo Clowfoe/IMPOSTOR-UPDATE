@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				150,
 				10
 			],
-			"loop": false,
-			"fps": 12,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Dave right"
+			"fps": 12,
+			"name": "Dave right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				160,
 				0
 			],
-			"loop": false,
-			"fps": 12,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Dave left"
+			"fps": 12,
+			"name": "Dave left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				160,
 				10
 			],
-			"loop": false,
-			"fps": 12,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Dave up"
+			"fps": 12,
+			"name": "Dave up",
+			"indices": []
 		},
 		{
-			"offsets": [
-				160,
-				0
-			],
 			"loop": false,
-			"fps": 12,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "Dave down"
-		},
-		{
 			"offsets": [
 				160,
 				0
 			],
-			"loop": true,
+			"anim": "singDOWN",
 			"fps": 12,
+			"name": "Dave down",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				160,
+				0
+			],
 			"anim": "idle",
-			"indices": [],
-			"name": "Dave idle"
+			"fps": 12,
+			"name": "Dave idle",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -62,12 +62,12 @@
 		0,
 		0
 	],
-	"healthicon": "dad",
+	"healthicon": "dave",
 	"flip_x": false,
 	"healthbar_colors": [
-		175,
-		102,
-		206
+		55,
+		62,
+		146
 	],
 	"camera_position": [
 		-300,

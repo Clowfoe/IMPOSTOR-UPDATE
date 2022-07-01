@@ -3,76 +3,76 @@
 		{
 			"loop": false,
 			"offsets": [
-				70,
-				-280
+				-40,
+				-150
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "impostor idle",
+			"name": "bidle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-47,
-				-301
+				-280,
+				-527
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "impostor right",
+			"name": "bright",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				10,
-				-255
+				-175,
+				-439
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "impostor down",
+			"name": "bdown",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				232,
-				-296
+				191,
+				-317
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "imposter left",
+			"name": "bleft",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				5,
-				-250
+				-217,
+				-139
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "impostor up",
+			"name": "bup",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/impostor",
+	"image": "characters/bananungus",
 	"position": [
-		0,
-		100
+		-70,
+		-30
 	],
-	"healthicon": "impostor",
+	"healthicon": "bananungus",
 	"flip_x": false,
 	"healthbar_colors": [
 		255,
-		51,
-		51
+		224,
+		160
 	],
 	"camera_position": [
-		-130,
-		290
+		-253,
+		140
 	],
-	"sing_duration": 6.1,
+	"sing_duration": 10,
 	"scale": 1
 }
