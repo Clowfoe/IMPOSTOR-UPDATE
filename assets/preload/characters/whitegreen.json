@@ -3,76 +3,76 @@
 		{
 			"loop": false,
 			"offsets": [
-				30,
-				-291
+				70,
+				-279
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "red idle",
+			"name": "impostor idle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-10,
-				-274
+				59,
+				-293
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "red right",
+			"name": "impostor right",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-8,
-				-249
+				108,
+				-300
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "red down",
+			"name": "impostor down",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				56,
-				-260
+				245,
+				-288
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "red left",
+			"name": "imposter left",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				20,
-				-270
+				150,
+				-163
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "red up",
+			"name": "impostor up2",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/red",
+	"image": "characters/whitegreen",
 	"position": [
-		40,
-		100
+		0,
+		80
 	],
-	"healthicon": "redkill",
+	"healthicon": "impostor3",
 	"flip_x": false,
 	"healthbar_colors": [
-		215,
-		24,
-		20
+		0,
+		119,
+		27
 	],
 	"camera_position": [
-		-80,
-		390
+		-130,
+		290
 	],
-	"sing_duration": 10,
-	"scale": 0.8
+	"sing_duration": 6.1,
+	"scale": 1
 }

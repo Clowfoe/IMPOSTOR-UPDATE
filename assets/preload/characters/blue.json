@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				30,
 				-301
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "blue idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "blue idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				17,
 				-302
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "blue right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "blue right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				36,
 				-320
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "blue down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "blue down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				47,
 				-302
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "blue left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "blue left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				24,
 				-275
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "blue up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "blue up"
 		}
 	],
 	"no_antialiasing": false,
@@ -62,7 +62,7 @@
 		40,
 		100
 	],
-	"healthicon": "blue",
+	"healthicon": "bluekill",
 	"flip_x": true,
 	"healthbar_colors": [
 		15,
