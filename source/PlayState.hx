@@ -300,6 +300,9 @@ var wiggleEffect:WiggleEffect;
     var starsFG:FlxBackdrop;
 	var meeting:FlxSprite;
 
+	//jorsawsee
+	var loungebg:FlxSprite;
+
 	//toogus
 	var saxguy:FlxSprite;
 	var lightoverlay:FlxSprite;
@@ -614,8 +617,14 @@ var wiggleEffect:WiggleEffect;
 						bg.scrollFactor.set(1, 1);
 						bg.active = false;
 						add(bg);
-				
-				
+
+			case 'lounge': //lotowncorry + 02
+				var loungebg:FlxSprite = new FlxSprite(-264.6, -66.25).loadGraphic(Paths.image('airship/lounge', 'impostor'));
+						loungebg.antialiasing = true;
+						loungebg.scrollFactor.set(1, 1);
+						loungebg.active = false;
+						add(loungebg);
+
 			case 'who': //dead dead guy
 				var bg:FlxSprite = new FlxSprite(0, 100).loadGraphic(Paths.image('polus/deadguy', 'impostor'));
 						bg.antialiasing = true;
@@ -1624,13 +1633,21 @@ var wiggleEffect:WiggleEffect;
 				lightoverlay.blend = ADD;
 				add(lightoverlay);
 
-				var mainoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/overlay ass dk', 'impostor'));
+				var mainoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/lights help', 'impostor'));
 				mainoverlay.antialiasing = true;
 				mainoverlay.scrollFactor.set(1, 1);
 				mainoverlay.active = false;
 				mainoverlay.alpha = 0.6;
 				mainoverlay.blend = ADD;
 				add(mainoverlay);
+			case 'lounge':
+				var loungelight:FlxSprite = new FlxSprite(-368.5, -135.55).loadGraphic(Paths.image('airship/loungelight', 'impostor'));
+				loungelight.antialiasing = true;
+				loungelight.scrollFactor.set(1, 1);
+				loungelight.active = false;
+				loungelight.alpha = 0.33;
+				loungelight.blend = ADD;
+				add(loungelight);
 			case 'grey':
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/coolthing', 'impostor'));
 				lightoverlay.antialiasing = true;
