@@ -83,23 +83,27 @@ class MainMenuState extends MusicBeatState
 		starBG.scrollFactor.set();
 		add(starBG);
 
-		redImpostor = new FlxSprite(704.55, 106.65);
-		redImpostor.frames = Paths.getSparrowAtlas('menuBooba/impostorMenu', 'impostor');
-		redImpostor.animation.addByPrefix('idle', 'red smile', 24, true);
+		redImpostor = new FlxSprite(350, -160);
+		redImpostor.frames = Paths.getSparrowAtlas('menuBooba/redmenu', 'impostor');
+		redImpostor.animation.addByPrefix('idle', 'red idle', 24, true);
+		redImpostor.animation.addByPrefix('select', 'red select', 24, false);
 		redImpostor.animation.play('idle');
 		redImpostor.antialiasing = true;
 		redImpostor.updateHitbox();
 		redImpostor.active = true;
+		redImpostor.scale.set(0.7, 0.7);
 		redImpostor.scrollFactor.set();
 		add(redImpostor);
 
-		greenImpostor = new FlxSprite(-159.35, 102.35);
-		greenImpostor.frames = Paths.getSparrowAtlas('menuBooba/impostorMenu', 'impostor');
-		greenImpostor.animation.addByPrefix('idle', 'green smile', 24, true);
+		greenImpostor = new FlxSprite(-300, -60);
+		greenImpostor.frames = Paths.getSparrowAtlas('menuBooba/greenmenu', 'impostor');
+		greenImpostor.animation.addByPrefix('idle', 'green idle', 24, true);
+		greenImpostor.animation.addByPrefix('select', 'green select', 24, false);
 		greenImpostor.animation.play('idle');
 		greenImpostor.antialiasing = true;
 		greenImpostor.updateHitbox();
 		greenImpostor.active = true;
+		greenImpostor.scale.set(0.7, 0.7);
 		greenImpostor.scrollFactor.set();
 		add(greenImpostor);
 
@@ -123,9 +127,11 @@ class MainMenuState extends MusicBeatState
 			testButton.animation.addByPrefix('hover', optionShit[i] + 'Hover', 24, true);
 			testButton.animation.play('idle');
 			testButton.antialiasing = true;
+		//	testButton.scale.set(0.75 ,0.75);
 			testButton.updateHitbox();
 			testButton.screenCenter(X);
 			testButton.scrollFactor.set();
+			// brian was here
 			switch(i) {
 				case 0:
 					testButton.setPosition(367.35, 439.9);
@@ -257,6 +263,9 @@ class MainMenuState extends MusicBeatState
 		{
 			selectedSomethin = true;
 			FlxG.sound.play(Paths.sound('confirmMenu'));
+			greenImpostor.animation.play('select');
+			redImpostor.animation.play('select');
+
 			
 			canClick = false;
 

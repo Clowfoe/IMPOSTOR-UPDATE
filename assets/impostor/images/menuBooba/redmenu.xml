@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="redmenu.png">
+	<!-- Created with Adobe Animate version 20.5.0.29329 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="red idle0000" x="10" y="10" width="1258" height="1495"/>
+	<SubTexture name="red idle0001" x="1278" y="10" width="1256" height="1492" frameX="-2" frameY="0" frameWidth="1258" frameHeight="1495"/>
+	<SubTexture name="red idle0002" x="2544" y="10" width="1256" height="1492" frameX="-2" frameY="0" frameWidth="1258" frameHeight="1495"/>
+	<SubTexture name="red idle0003" x="3810" y="10" width="1258" height="1495"/>
+	<SubTexture name="red select0000" x="5078" y="10" width="1260" height="1453" frameX="0" frameY="-80" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0001" x="6348" y="10" width="1258" height="1451" frameX="-2" frameY="-80" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0002" x="10" y="1515" width="1258" height="1451" frameX="-2" frameY="-80" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0003" x="1278" y="1515" width="1293" height="1399" frameX="-10" frameY="-30" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0004" x="2581" y="1515" width="1293" height="1397" frameX="-10" frameY="-30" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0005" x="2581" y="1515" width="1293" height="1397" frameX="-10" frameY="-30" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0006" x="1278" y="1515" width="1293" height="1399" frameX="-10" frameY="-30" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0007" x="3884" y="1515" width="1364" height="1397" frameX="-5" frameY="0" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0008" x="3884" y="1515" width="1364" height="1397" frameX="-5" frameY="0" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0009" x="5258" y="1515" width="1365" height="1395" frameX="-4" frameY="0" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0010" x="5258" y="1515" width="1365" height="1395" frameX="-4" frameY="0" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0011" x="3884" y="1515" width="1364" height="1397" frameX="-1" frameY="0" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0012" x="3884" y="1515" width="1364" height="1397" frameX="-1" frameY="0" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0013" x="6633" y="1515" width="1365" height="1395" frameX="0" frameY="0" frameWidth="1365" frameHeight="1397"/>
+	<SubTexture name="red select0014" x="6633" y="1515" width="1365" height="1395" frameX="0" frameY="0" frameWidth="1365" frameHeight="1397"/>
+	<SubTexture name="red select0015" x="3884" y="1515" width="1364" height="1397" frameX="-1" frameY="0" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0016" x="3884" y="1515" width="1364" height="1397" frameX="-1" frameY="0" frameWidth="1369" frameHeight="1533"/>
+	<SubTexture name="red select0017" x="6633" y="1515" width="1365" height="1395" frameX="0" frameY="0" frameWidth="1365" frameHeight="1397"/>
+	<SubTexture name="red select0018" x="6633" y="1515" width="1365" height="1395" frameX="0" frameY="0" frameWidth="1365" frameHeight="1397"/>
+</TextureAtlas>
