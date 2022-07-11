@@ -1,129 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-30,
 				90
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Jermidle"
+			"fps": 24,
+			"name": "idle",
+			"indices": []
 		},
 		{
-			"offsets": [
-				232,
-				-49
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				363,
+				-179
+			],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "JermLeft"
-		},
-		{
-			"offsets": [
-				108,
-				-131
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "Jermdown"
+			"name": "left",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-31,
-				112
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "JermUp"
-		},
-		{
 			"offsets": [
 				39,
-				41
+				190
 			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
 			"loop": false,
+			"offsets": [
+				131,
+				-101
+			],
+			"anim": "singDOWN",
 			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				39,
+				1
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "JermRight"
-		},
-		{
-			"offsets": [
-				-30,
-				91
-			],
-			"indices": [
-				10,
-				11
-			],
 			"fps": 24,
-			"anim": "idle-loop",
-			"loop": true,
-			"name": "Jermidle"
-		},
-		{
-			"offsets": [
-				-29,
-				112
-			],
-			"indices": [
-				5,
-				6
-			],
-			"fps": 24,
-			"anim": "singUP-loop",
-			"loop": true,
-			"name": "JermUp"
-		},
-		{
-			"offsets": [
-				40,
-				41
-			],
-			"indices": [
-				4,
-				5
-			],
-			"fps": 24,
-			"anim": "singRIGHT-loop",
-			"loop": true,
-			"name": "JermRight"
-		},
-		{
-			"offsets": [
-				232,
-				-49
-			],
-			"indices": [
-				4,
-				5
-			],
-			"fps": 24,
-			"anim": "singLEFT-loop",
-			"loop": true,
-			"name": "JermLeft"
-		},
-		{
-			"offsets": [
-				110,
-				-132
-			],
-			"indices": [
-				4,
-				5
-			],
-			"fps": 24,
-			"anim": "singDOWN-loop",
-			"loop": true,
-			"name": "Jermdown"
+			"name": "right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
