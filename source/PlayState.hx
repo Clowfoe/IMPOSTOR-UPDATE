@@ -150,8 +150,10 @@ var wiggleEffect:WiggleEffect;
 	public var gf:Character;
 	public var boyfriend:Boyfriend;
 	public var bfLegs:Boyfriend;
+	public var dadlegs:Character;
 
 	var bfAnchorPoint:Array<Float> = [0, 0];
+	var dadAnchorPoint:Array<Float> = [0, 0];
 
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
@@ -268,6 +270,9 @@ var wiggleEffect:WiggleEffect;
 	var bodiesfront:FlxSprite;
 	//loggo
 	var peopleloggo:FlxSprite;
+	var toogusblue:FlxSprite;
+	var toogusorange:FlxSprite;
+	var tooguswhite:FlxSprite;
 	var speaker:FlxSprite;
 	var thebackground:FlxSprite;
 	var fireloggo:FlxSprite;
@@ -1233,15 +1238,59 @@ var wiggleEffect:WiggleEffect;
 							//	machineDark.active = false;
 							//	machineDark.alpha = 0;
 							//	add(machineDark);
+							
+							if(SONG.song.toLowerCase() == 'sussus toogus') {
+								walker = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
+								add(walker);
+
+								var walker2:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
+								add(walker2);
+
+								var walker3:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
+								add(walker3);
+							}
+
+							if(SONG.song.toLowerCase() == 'lights-down') {
+								toogusblue = new FlxSprite(1200, 250);
+								toogusblue.frames = Paths.getSparrowAtlas('mira/mirascaredmates', 'impostor' );
+								toogusblue.animation.addByPrefix('bop', 'blue', 24, false);
+								toogusblue.animation.addByPrefix('bop2', '1body', 24, false);
+								toogusblue.animation.play('bop');
+								toogusblue.setGraphicSize(Std.int(toogusblue.width * 0.7));
+								toogusblue.scrollFactor.set(1, 1);
+								toogusblue.active = true;
+								toogusblue.antialiasing = true;
+								toogusblue.flipX = true;
+								add(toogusblue);
+
+								toogusorange = new FlxSprite(-300, 250);
+								toogusorange.frames = Paths.getSparrowAtlas('mira/mirascaredmates', 'impostor' );
+								toogusorange.animation.addByPrefix('bop', 'orange', 24, false);
+								toogusorange.animation.addByPrefix('bop2', '2body', 24, false);
+								toogusorange.animation.play('bop');
+								toogusorange.setGraphicSize(Std.int(toogusorange.width * 0.7));
+								toogusorange.scrollFactor.set(1, 1);
+								toogusorange.active = true;
+								toogusorange.antialiasing = true;
 								
-							walker = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-							add(walker);
+							
 
-							var walker2:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-							add(walker2);
+								tooguswhite = new FlxSprite(1350, 200);
+								tooguswhite.frames = Paths.getSparrowAtlas('mira/mirascaredmates', 'impostor' );
+								tooguswhite.animation.addByPrefix('bop', 'white', 24, false);
+								tooguswhite.animation.addByPrefix('bop2', '3body', 24, false);
+								tooguswhite.animation.play('bop');
+								tooguswhite.setGraphicSize(Std.int(tooguswhite.width * 0.9));
+								tooguswhite.scrollFactor.set(1, 1);
+								tooguswhite.active = true;
+								tooguswhite.antialiasing = true;
+								tooguswhite.flipX = true;
+								add(tooguswhite);
+							
+							}
 
-							var walker3:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-							add(walker3);
+								
+							
 
 
 								var tbl:FlxSprite = new FlxSprite(-1600 ,50).loadGraphic(Paths.image('table_bg'));
@@ -1549,6 +1598,9 @@ var wiggleEffect:WiggleEffect;
 		// Shitty layering but whatev it works LOL
 		if (curStage == 'limo')
 			add(limo);
+
+		if (curSong == 'armed')
+			add(momGroup);
 		
 		switch(curStage.toLowerCase()){
 			case 'cargo':
@@ -1812,9 +1864,21 @@ var wiggleEffect:WiggleEffect;
 		
 		gfGroup.add(gf);
 
+		if(SONG.player2 == 'black-run')
+			{
+				dadlegs = new Character(0, 0, 'blacklegs');
+				dadGroup.add(dadlegs);
+			}
+
 		dad = new Character(0, 0, SONG.player2);
 		startCharacterPos(dad, true);
 		dadGroup.add(dad);
+
+		if(SONG.player2 == 'black-run')
+			{
+				dadlegs.x = dad.x;
+				dadlegs.y = dad.y;
+			}
 
 		mom = new Character(0, 0, SONG.player4);
 		startCharacterPos(mom, true);
@@ -1836,10 +1900,14 @@ var wiggleEffect:WiggleEffect;
 			bfLegs.x = boyfriend.x;
 			bfLegs.y = boyfriend.y;
 		}
+
+
 		
 
 		bfAnchorPoint[0] = boyfriend.x;
 		bfAnchorPoint[1] = boyfriend.y;
+		dadAnchorPoint[0] = boyfriend.x;
+		dadAnchorPoint[1] = boyfriend.y;
 		
 		var camPos:FlxPoint = new FlxPoint(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y);
 		camPos.x += gf.cameraPosition[0];
@@ -3172,6 +3240,11 @@ var wiggleEffect:WiggleEffect;
 			else
 				bfLegs.alpha = 0;
 		}
+
+		if(dad.curCharacter == 'black-run')
+			{
+				dad.y = dadAnchorPoint[1] + legPosY[dadlegs.animation.curAnim.curFrame];
+			}
 		
 		if(curSong == 'Reactor') {
 			if(orb != null) {
@@ -5325,6 +5398,11 @@ var wiggleEffect:WiggleEffect;
 			}
 		}
 
+		if(curBeat % 1 == 0) {
+			if(dad.curCharacter == 'black-run')
+				dadlegs.dance();
+		}
+
 		
 
 		if(curBeat % 2 == 0) {
@@ -5426,6 +5504,12 @@ var wiggleEffect:WiggleEffect;
 			case 'loggo':
 				if(curBeat % 2 == 0) {
 					peopleloggo.animation.play('bop', true);
+				}
+			case 'toogus':
+				if(curBeat % 2 == 0) {
+					toogusblue.animation.play('bop', true);
+					toogusorange.animation.play('bop', true);
+					tooguswhite.animation.play('bop', true);
 				}
 			
 			case 'defeat':
