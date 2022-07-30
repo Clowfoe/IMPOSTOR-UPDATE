@@ -308,6 +308,11 @@ var wiggleEffect:WiggleEffect;
 	//jorsawsee
 	var loungebg:FlxSprite;
 
+	//bananungus
+	var bananas:FlxSprite;
+	var bunches:FlxSprite;
+	var leaves:FlxSprite;
+
 	//toogus
 	var saxguy:FlxSprite;
 	var lightoverlay:FlxSprite;
@@ -629,6 +634,40 @@ var wiggleEffect:WiggleEffect;
 						loungebg.scrollFactor.set(1, 1);
 						loungebg.active = false;
 						add(loungebg);
+
+			case 'banana': //ra ra rasputin
+				var sky:FlxSprite = new FlxSprite(-221.85, -167.85).loadGraphic(Paths.image('banana/sky', 'impostor'));
+						sky.antialiasing = true;
+						sky.scrollFactor.set(0.5, 0.5);
+						sky.active = false;
+						add(sky);
+
+				var hills:FlxSprite = new FlxSprite(-358, 438.4).loadGraphic(Paths.image('banana/mountains', 'impostor'));
+						hills.antialiasing = true;
+						hills.scrollFactor.set(0.8, 0.8);
+						hills.active = false;
+						add(hills);
+
+				var ground:FlxSprite = new FlxSprite(-331.95, 608.9).loadGraphic(Paths.image('banana/ground', 'impostor'));
+						ground.antialiasing = true;
+						ground.scrollFactor.set(1.0, 1.0);
+						ground.active = false;
+						add(ground);
+
+				bananas = new FlxSprite(117.7, 928.4).loadGraphic(Paths.image('banana/bananas', 'impostor'));
+				bananas.antialiasing = true;
+				bananas.scrollFactor.set(1.1, 1.1);
+				bananas.active = false;
+
+				bunches = new FlxSprite(-284.55, -168).loadGraphic(Paths.image('banana/bananabunches', 'impostor'));
+				bunches.antialiasing = true;
+				bunches.scrollFactor.set(1.3, 1.3);
+				bunches.active = false;
+
+				leaves = new FlxSprite(-78.2, -293.9).loadGraphic(Paths.image('banana/leaves', 'impostor'));
+				leaves.antialiasing = true;
+				leaves.scrollFactor.set(1.5, 1.5);
+				leaves.active = false;
 
 			case 'who': //dead dead guy
 				var bg:FlxSprite = new FlxSprite(0, 100).loadGraphic(Paths.image('polus/deadguy', 'impostor'));
@@ -1627,9 +1666,11 @@ var wiggleEffect:WiggleEffect;
 		if (curStage == 'defeat')
 			add(bodiesfront);
 
-
+		if (curStage == 'banana')
+			add(bananas);
+			add(bunches);
+			add(leaves);
 		
-
 		switch(curStage) {
 			case 'plantroom':
 				add(vines);
@@ -1700,6 +1741,14 @@ var wiggleEffect:WiggleEffect;
 				loungelight.alpha = 0.33;
 				loungelight.blend = ADD;
 				add(loungelight);
+			case 'banana':
+					var lightoverlay:FlxSprite = new FlxSprite(-221.85, -167.7).loadGraphic(Paths.image('banana/LIGHTSOURCE', 'impostor'));
+					lightoverlay.antialiasing = true;
+					lightoverlay.scrollFactor.set(1, 1);
+					lightoverlay.active = false;
+					lightoverlay.alpha = 0.41;
+					lightoverlay.blend = ADD;
+					add(lightoverlay);
 			case 'grey':
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/coolthing', 'impostor'));
 				lightoverlay.antialiasing = true;

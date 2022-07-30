@@ -40,8 +40,37 @@
 			},
 			{
 				"lengthInSteps": 16,
-				"sectionNotes": [],
-				"mustHitSection": true
+				"sectionNotes": [
+					[
+						10500,
+						-1,
+						"Add Camera Zoom",
+						"0.025",
+						"0.05"
+					],
+					[
+						10875,
+						-1,
+						"Add Camera Zoom",
+						"0.025",
+						"0.05"
+					],
+					[
+						11250,
+						-1,
+						"Add Camera Zoom",
+						"0.025",
+						"0.05"
+					],
+					[
+						11625,
+						-1,
+						"Add Camera Zoom",
+						"0.025",
+						"0.05"
+					]
+				],
+				"mustHitSection": false
 			},
 			{
 				"lengthInSteps": 16,
@@ -4865,12 +4894,57 @@
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
 				"bpm": 160,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 160,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 160
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 160
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 160
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 160
 			},
 			{
 				"lengthInSteps": 16,
@@ -4882,8 +4956,9 @@
 				"mustHitSection": true
 			}
 		],
-		"player3": "gf",
+		"player3": "gf-farmer",
 		"song": "Posussium",
+		"stage": "banana",
 		"needsVoices": true,
 		"validScore": true,
 		"speed": 2.8,
