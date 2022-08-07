@@ -9,51 +9,106 @@
 			"fps": 24,
 			"anim": "idle",
 			"indices": [],
-			"name": "impostor idle"
+			"name": "green idle"
 		},
 		{
 			"offsets": [
-				-79,
+				-89,
 				-229
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
 			"indices": [],
-			"name": "impostor right"
+			"name": "green right"
 		},
 		{
 			"offsets": [
-				82,
+				46,
 				-241
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
-			"name": "impostor down"
+			"name": "green down"
 		},
 		{
 			"offsets": [
-				114,
-				-205
+				164,
+				-216
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
 			"indices": [],
-			"name": "imposter left"
+			"name": "green left"
 		},
 		{
 			"offsets": [
-				-9,
-				-43
+				61,
+				-96
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
-			"name": "impostor up2"
+			"name": "green up"
+		},
+		{
+			"offsets": [
+				-77,
+				-199
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "bopL",
+			"indices": [],
+			"name": "silly dance left"
+		},
+		{
+			"offsets": [
+				-80,
+				-201
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "bopR",
+			"indices": [],
+			"name": "silly dance right"
+		},
+		{
+			"offsets": [
+				92,
+				-218
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "notice",
+			"loop": false,
+			"name": "green notice"
+		},
+		{
+			"offsets": [
+				110,
+				-218
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "wave",
+			"loop": false,
+			"name": "green wave"
+		},
+		{
+			"offsets": [
+				89,
+				-218
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "handbye",
+			"loop": false,
+			"name": "green unwave"
 		}
 	],
 	"no_antialiasing": false,
