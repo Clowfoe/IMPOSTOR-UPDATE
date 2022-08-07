@@ -5556,9 +5556,11 @@ var wiggleEffect:WiggleEffect;
 				}
 			case 'toogus':
 				if(curBeat % 2 == 0) {
-					toogusblue.animation.play('bop', true);
-					toogusorange.animation.play('bop', true);
-					tooguswhite.animation.play('bop', true);
+					if(SONG.song.toLowerCase() == 'lights-down') {
+						toogusblue.animation.play('bop', true);
+						toogusorange.animation.play('bop', true);
+						tooguswhite.animation.play('bop', true);
+					}
 				}
 			
 			case 'defeat':
