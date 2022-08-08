@@ -308,6 +308,14 @@ var wiggleEffect:WiggleEffect;
 	//jorsawsee
 	var loungebg:FlxSprite;
 
+	//votingtime
+	var table:FlxSprite;
+	var votingbg:FlxSprite;
+	var otherroom:FlxSprite;
+	var chairs:FlxSprite;
+	var vt_light:FlxSprite;
+	var bars:FlxSprite;
+
 	//bananungus
 	var bananas:FlxSprite;
 	var bunches:FlxSprite;
@@ -634,6 +642,30 @@ var wiggleEffect:WiggleEffect;
 						loungebg.scrollFactor.set(1, 1);
 						loungebg.active = false;
 						add(loungebg);
+
+			case 'voting': //lotowncorry + 02
+				var otherroom:FlxSprite = new FlxSprite(387.3, 194.1).loadGraphic(Paths.image('airship/backer_groung_voting', 'impostor'));
+					otherroom.antialiasing = true;
+					otherroom.scrollFactor.set(0.8, 0.8);
+					otherroom.active = false;
+						add(otherroom);
+
+				var votingbg:FlxSprite = new FlxSprite(-315.15, 52.85).loadGraphic(Paths.image('airship/main_bg_meeting', 'impostor'));
+					votingbg.antialiasing = true;
+					votingbg.scrollFactor.set(0.95, 0.95);
+					votingbg.active = false;
+						add(votingbg);
+
+				var chairs:FlxSprite = new FlxSprite(-7.9, 644.85).loadGraphic(Paths.image('airship/CHAIRS!!!!!!!!!!!!!!!', 'impostor'));
+					chairs.antialiasing = true;
+					chairs.scrollFactor.set(1.0, 1.0);
+					chairs.active = false;
+						add(chairs);
+
+				table = new FlxSprite(209.4, 679.55).loadGraphic(Paths.image('airship/table_voting', 'impostor'));
+				table.antialiasing = true;
+				table.scrollFactor.set(1.0, 1.0);
+				table.active = false;
 
 			case 'banana': //ra ra rasputin
 				var sky:FlxSprite = new FlxSprite(-221.85, -167.85).loadGraphic(Paths.image('banana/sky', 'impostor'));
@@ -1656,15 +1688,20 @@ var wiggleEffect:WiggleEffect;
 			
 //		}
 	//	else
-//		{
+//		{	
+		if (curSong == 'voting')
+			add(momGroup);
+
 			add(dadGroup);
 			//add(momGroup);
 			add(boyfriendGroup);
-//		}
-		
+//		}	
 
 		if (curStage == 'defeat')
 			add(bodiesfront);
+
+		if (curStage == 'voting')
+			add(table);
 
 		if (curStage == 'banana')
 			add(bananas);
@@ -1998,6 +2035,24 @@ var wiggleEffect:WiggleEffect;
 		timeTxt.visible = !ClientPrefs.hideTime;
 		if(ClientPrefs.downScroll) timeTxt.y = FlxG.height - 45;
 
+		vt_light = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/light_voting', 'impostor'));
+		vt_light.updateHitbox();
+		vt_light.antialiasing = true;
+		vt_light.scrollFactor.set(1, 1);
+		vt_light.active = false;
+		vt_light.blend = 'add';
+		vt_light.alpha = 0.46;
+
+		bars = new FlxSprite(0, 0).loadGraphic(Paths.image('bars')); 
+		bars.scrollFactor.set();
+		bars.screenCenter();
+
+		if (songName == 'voting-time')
+			{
+				add(vt_light);
+				add(bars);
+			}
+
 		timeBarBG = new AttachedSprite('timeBar');
 		timeBarBG.x = timeTxt.x;
 		timeBarBG.y = timeTxt.y + (timeTxt.height / 4);
@@ -2117,8 +2172,6 @@ var wiggleEffect:WiggleEffect;
 			}
 	
 
-	
-
 		healthBarBG = new AttachedSprite('healthBar');
 		healthBarBG.y = FlxG.height * 0.89;
 		healthBarBG.screenCenter(X);
@@ -2174,6 +2227,8 @@ var wiggleEffect:WiggleEffect;
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		ass2.cameras = [camHUD];
+		vt_light.cameras = [camHUD];
+		bars.cameras = [camHUD];
 //		ass3.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
@@ -4132,6 +4187,41 @@ var wiggleEffect:WiggleEffect;
 					defaultCamZoom = 0.7;
 					FlxG.camera.zoom = 0.7;
 					camFollowPos.setPosition(1100, 1150);
+					FlxG.camera.focusOn(camFollowPos.getPosition());
+				}
+
+			case 'Cam lock in Voting Time':
+				if(value1 == 'in'){
+					defaultCamZoom = 1.2;
+					camGame.camera.zoom = 1.2;
+					cameraLocked = true;
+					if(value2 == 'dad') {
+						camFollowPos.setPosition(460, 700);
+						FlxG.camera.focusOn(camFollowPos.getPosition());
+					}
+					else {
+						camFollowPos.setPosition(1470, 700);
+						FlxG.camera.focusOn(camFollowPos.getPosition());
+					}
+				}
+				else if(value1 == 'close'){
+					defaultCamZoom = 1.25;
+					camGame.camera.zoom = 1.25;
+					cameraLocked = true;
+					if(value2 == 'dad') {
+						camFollowPos.setPosition(480, 680);
+						FlxG.camera.focusOn(camFollowPos.getPosition());
+					}
+					else {
+						camFollowPos.setPosition(1450, 680);
+						FlxG.camera.focusOn(camFollowPos.getPosition());
+					}
+				}
+				else {
+					cameraLocked = true;
+					defaultCamZoom = 0.7;
+					FlxG.camera.zoom = 0.7;
+					camFollowPos.setPosition(960, 540);
 					FlxG.camera.focusOn(camFollowPos.getPosition());
 				}
 

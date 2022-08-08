@@ -527,8 +527,8 @@ class AmongFreeplayState extends MusicBeatState {
         weeks.push
         ({
             songs: [["Lotowncorry", "jorsawsee", 'jorsawsee', FlxColor.fromRGB(22, 65, 240)], 
-            ["O2", "jorsawsee", 'jorsawsee', FlxColor.fromRGB(22, 65, 240)], 
-            ["Voting Time", "redmungus", 'redmungus', FlxColor.RED], 
+            ["O2", "o2", 'jorsawsee', FlxColor.fromRGB(22, 65, 240)], 
+            ["Voting Time", "votingtime", 'warchief', FlxColor.fromRGB(153, 67, 196)], 
             ["Turbulence", "redmungus", 'redmungus', FlxColor.RED], 
             ["Victory", "warchief", 'warchief', FlxColor.fromRGB(153, 67, 196)]],
 

@@ -1,0 +1,121 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-9,
+				-169
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "JDown"
+		},
+		{
+			"offsets": [
+				-117,
+				-110
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "JUp"
+		},
+		{
+			"offsets": [
+				-83,
+				-188
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "JRight"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				9,
+				-148
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "JLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				-153
+			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "JIdle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				-153
+			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "JIdle",
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/jelqer",
+	"position": [
+		-110,
+		130
+	],
+	"healthicon": "jelqer",
+	"flip_x": false,
+	"healthbar_colors": [
+		233,
+		180,
+		215
+	],
+	"camera_position": [
+		10,
+		230
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1
+}

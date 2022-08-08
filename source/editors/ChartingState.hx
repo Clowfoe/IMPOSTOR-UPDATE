@@ -94,6 +94,7 @@ class ChartingState extends MusicBeatState
 		['Opponent Two', "0 - off, 1 - on"],
 		['Play On Left', ''],
 		['Cam lock in Who', 'Value 1: "in" for in zoom\nValue 2: "dad" for dad'],
+		['Cam lock in Voting Time', 'Value 1: "in" for in zoom\nValue 2: "dad" for dad'],
 		['Who Buzz', '']
 	];
 

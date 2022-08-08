@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="warchief.png">
+	<!-- Created with Adobe Animate version 21.0.3.38773 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="WDown0000" x="0" y="0" width="444" height="432"/>
+	<SubTexture name="WDown0001" x="0" y="0" width="444" height="432"/>
+	<SubTexture name="WDown0002" x="453" y="0" width="444" height="432"/>
+	<SubTexture name="WDown0003" x="453" y="0" width="444" height="432"/>
+	<SubTexture name="WDown0004" x="906" y="0" width="444" height="432"/>
+	<SubTexture name="WDown0005" x="906" y="0" width="444" height="432"/>
+	<SubTexture name="WDown0006" x="906" y="0" width="444" height="432"/>
+	<SubTexture name="WDown0007" x="906" y="0" width="444" height="432"/>
+	<SubTexture name="WDown0008" x="906" y="0" width="444" height="432"/>
+	<SubTexture name="WIdle0000" x="1359" y="0" width="502" height="453"/>
+	<SubTexture name="WIdle0001" x="1359" y="0" width="502" height="453"/>
+	<SubTexture name="WIdle0002" x="1870" y="0" width="502" height="453"/>
+	<SubTexture name="WIdle0003" x="1870" y="0" width="502" height="453"/>
+	<SubTexture name="WIdle0004" x="2381" y="0" width="502" height="453"/>
+	<SubTexture name="WIdle0005" x="2381" y="0" width="502" height="453"/>
+	<SubTexture name="WIdle0006" x="2892" y="0" width="502" height="453"/>
+	<SubTexture name="WIdle0007" x="2892" y="0" width="502" height="453"/>
+	<SubTexture name="WIdle0008" x="3403" y="0" width="502" height="453"/>
+	<SubTexture name="WIdle0009" x="3403" y="0" width="502" height="453"/>
+	<SubTexture name="WIdle0010" x="0" y="462" width="502" height="453"/>
+	<SubTexture name="WIdle0011" x="0" y="462" width="502" height="453"/>
+	<SubTexture name="WLeft0000" x="511" y="462" width="501" height="454"/>
+	<SubTexture name="WLeft0001" x="511" y="462" width="501" height="454"/>
+	<SubTexture name="WLeft0002" x="1021" y="462" width="501" height="454"/>
+	<SubTexture name="WLeft0003" x="1021" y="462" width="501" height="454"/>
+	<SubTexture name="WLeft0004" x="1531" y="462" width="501" height="454"/>
+	<SubTexture name="WLeft0005" x="1531" y="462" width="501" height="454"/>
+	<SubTexture name="WLeft0006" x="1531" y="462" width="501" height="454"/>
+	<SubTexture name="WLeft0007" x="1531" y="462" width="501" height="454"/>
+	<SubTexture name="WLeft0008" x="1531" y="462" width="501" height="454"/>
+	<SubTexture name="WRight0000" x="2041" y="462" width="521" height="471"/>
+	<SubTexture name="WRight0001" x="2041" y="462" width="521" height="471"/>
+	<SubTexture name="WRight0002" x="2571" y="462" width="521" height="471"/>
+	<SubTexture name="WRight0003" x="2571" y="462" width="521" height="471"/>
+	<SubTexture name="WRight0004" x="3101" y="462" width="521" height="471"/>
+	<SubTexture name="WRight0005" x="3101" y="462" width="521" height="471"/>
+	<SubTexture name="WRight0006" x="3101" y="462" width="521" height="471"/>
+	<SubTexture name="WRight0007" x="3101" y="462" width="521" height="471"/>
+	<SubTexture name="WRight0008" x="3101" y="462" width="521" height="471"/>
+	<SubTexture name="WUp0000" x="0" y="942" width="525" height="475"/>
+	<SubTexture name="WUp0001" x="0" y="942" width="525" height="475"/>
+	<SubTexture name="WUp0002" x="534" y="942" width="525" height="475"/>
+	<SubTexture name="WUp0003" x="534" y="942" width="525" height="475"/>
+	<SubTexture name="WUp0004" x="1068" y="942" width="525" height="475"/>
+	<SubTexture name="WUp0005" x="1068" y="942" width="525" height="475"/>
+	<SubTexture name="WUp0006" x="1602" y="942" width="525" height="475"/>
+	<SubTexture name="WUp0007" x="1602" y="942" width="525" height="475"/>
+	<SubTexture name="WUp0008" x="1602" y="942" width="525" height="475"/>
+</TextureAtlas>
