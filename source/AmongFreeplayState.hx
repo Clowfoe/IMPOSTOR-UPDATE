@@ -572,6 +572,7 @@ class AmongFreeplayState extends MusicBeatState {
         weeks.push
         ({
             songs: [["Ow", "kills", 'kills', FlxColor.fromRGB(84, 167, 202)], 
+            ["Tomongus Tuesday", "tomongus", 'tomongus', FlxColor.fromRGB(255, 90, 134)], 
             ["Insane Streamer", "jerma", 'red', FlxColor.fromRGB(84, 167, 202)], 
             ["Who", "whoguys", 'red', FlxColor.fromRGB(84, 167, 202)], 
             ["Drippypop", "drippy", 'red', FlxColor.fromRGB(84, 167, 202)], 
@@ -587,8 +588,9 @@ class AmongFreeplayState extends MusicBeatState {
         weeks.push
         ({
             songs: [["Chippin", "skinnynuts", 'chips', FlxColor.fromRGB(255, 60, 38)], 
-            ["Skinny Nuts", "skinnynuts", 'clow', FlxColor.fromRGB(255, 60, 38)],
-            ["Skinny Nuts 2", "skinnynuts", 'ziffy', FlxColor.fromRGB(160, 16, 222)]],
+            ["Chipping", "skinnynuts", 'chips', FlxColor.fromRGB(255, 60, 38)], 
+            ["Skinny Nuts", "skinnynuts", 'clow', FlxColor.fromRGB(255, 60, 38)]],
+            
 
             section: 7
         });

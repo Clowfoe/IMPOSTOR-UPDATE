@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				70,
+				-279
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				86,
+				-279
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				66,
+				-274
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				78,
+				-300
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				52,
+				-260
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				60,
+				-278
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "prep",
+			"indices": [],
+			"name": "anim 1"
+		},
+		{
+			"offsets": [
+				1026,
+				-226
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "shot",
+			"indices": [],
+			"name": "anim 2"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/tuesday",
+	"position": [
+		100,
+		110
+	],
+	"healthicon": "tuesday",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		103,
+		112
+	],
+	"camera_position": [
+		-130,
+		290
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

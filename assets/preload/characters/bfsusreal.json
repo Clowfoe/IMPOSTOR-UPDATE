@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				-57,
+				-6
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-60,
+				-51
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				34,
+				29
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-68,
+				-6
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				116,
+				-12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "pull",
+			"indices": [],
+			"name": "bf pull"
+		},
+		{
+			"offsets": [
+				460,
+				115
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "shoot",
+			"indices": [],
+			"name": "bf blow"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bfsusreal",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		300,
+		-30
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
