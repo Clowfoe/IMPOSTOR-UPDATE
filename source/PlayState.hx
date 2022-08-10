@@ -5047,8 +5047,8 @@ var wiggleEffect:WiggleEffect;
 		{
 			var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'num' + Std.int(i) + pixelShitPart2));
 			numScore.screenCenter();
-			numScore.x = boyfriend.x + (43 * daLoop) - 90;
-			numScore.y = boyfriend.y + 70;
+			numScore.x = gf.x + (43 * daLoop) - 90;
+			numScore.y = gf.y + 70;
 
 			if (!PlayState.isPixelStage)
 			{
