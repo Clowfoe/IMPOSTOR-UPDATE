@@ -20,6 +20,7 @@ end
 
 
 function onUpdate()
+    setProperty('gf.alpha', 0);
 	if del > 0 then
 		del = del - 1
 	end
@@ -84,6 +85,14 @@ function onUpdate()
     else
         triggerEvent('Camera Follow Pos','','')
     end
-    
-end
 
+    if curBeat >= 516 then
+        setProperty('defaultCamZoom',0.8)
+    else 
+        if curBeat >= 508 then
+            xx = 780;
+            setProperty('defaultCamZoom',0.9)
+        end
+    end
+
+end

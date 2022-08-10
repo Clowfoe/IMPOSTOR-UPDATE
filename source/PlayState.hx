@@ -339,6 +339,9 @@ var wiggleEffect:WiggleEffect;
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
 
+	//dave
+	var daveDIE:FlxSprite;
+
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
 	public static var seenCutscene:Bool = false;
@@ -378,7 +381,7 @@ var wiggleEffect:WiggleEffect;
 	public var introSoundsSuffix:String = '';
 	//hardcoded flashes because my ass aint redoing them as an event then retiming them all fuck that
 	var _cb = 0;
-	var flashSprite:FlxSprite = new FlxSprite(0, 0).makeGraphic(1920, 1080, 0xFFb30000);
+	var flashSprite:FlxSprite;
 	var stageFront2:FlxSprite;
 	var stageFront3:FlxSprite;
 	var overlay:FlxSprite;
@@ -1061,6 +1064,14 @@ var wiggleEffect:WiggleEffect;
 						bg.scrollFactor.set(1, 1);
 						bg.active = false;
 						add(bg);
+
+				daveDIE = new FlxSprite(0, 0).loadGraphic(Paths.image('polus/DAVEdie', 'impostor'));
+						daveDIE.updateHitbox();
+						daveDIE.antialiasing = true;
+						daveDIE.scrollFactor.set(1, 1);
+						daveDIE.active = false;
+						daveDIE.alpha = 0.00000001;
+						add(daveDIE);
 
 			case 'grey': //SHIT ASS
 				curStage = 'grey';				
@@ -2240,6 +2251,10 @@ var wiggleEffect:WiggleEffect;
 			botplayTxt.y = timeBarBG.y - 78;
 		}
 
+		flashSprite = new FlxSprite(0, 0).makeGraphic(1920, 1080, 0xFFb30000);
+		add(flashSprite);
+		flashSprite.alpha = 0;
+
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		flashSprite.cameras = [camHUD];
@@ -3334,10 +3349,7 @@ var wiggleEffect:WiggleEffect;
 
 	override public function update(elapsed:Float)
 	{
-		/*if (FlxG.keys.justPressed.NINE)
-		{
-			iconP1.swapOldIcon();
-		}*/
+		flashSprite.alpha = FlxMath.lerp(flashSprite.alpha, 0, 0.06);
 
 		if(curStage == 'plantroom'){
 			cloud1.x = FlxMath.lerp(cloud1.x, cloud1.x - 1, CoolUtil.boundTo(elapsed * 9, 0, 1));
@@ -4188,7 +4200,28 @@ var wiggleEffect:WiggleEffect;
 				iconP1.shader = null;
 				iconP2.shader = null;
 				loBlack.alpha = 0;
-			case 'Who Buzz':
+		switch(eventName) {
+			case 'Reactor Beep':
+				var charType:Float = Std.parseFloat(value1);
+				if(Math.isNaN(charType)) charType = 0;
+
+				flashSprite.alpha = charType;
+
+			case 'Dave AUGH':
+				var targetsArray:Array<FlxCamera> = [camGame, camHUD];
+				for (i in 0...targetsArray.length) {
+					var duration:Float = 1.0;
+					var intensity:Float = 0.1;
+					if(duration > 0 && intensity != 0) {
+						targetsArray[i].shake(intensity, duration);
+					}
+				}
+
+				daveDIE.alpha = 1;
+				dad.alpha = 0;
+				FlxG.sound.play(Paths.sound('davewindowsmash'));	
+
+				case 'Who Buzz':
 				var charType:Int = Std.parseInt(value1);
 				if(Math.isNaN(charType)) charType = 0;
 				switch(charType) {
@@ -5378,17 +5411,6 @@ var wiggleEffect:WiggleEffect;
 		grpNoteSplashes.add(splash);
 	}
 
-	function bgFlash():Void
-		{
-			//oops im stupid so commented out the tweening version
-			//flashSprite.alpha = 0;
-			//FlxTween.tween(flashSprite.alpha, 0.4, 0.15);
-			trace('BG FLASH FUNNY');
-			//yeaaah nice try buckaroo cant FLASH WHILE IN A CUTSCENE!! BITCH!!!!!!!!
-			// if(!inCutscene)
-				// flashSprite.alpha = 0.4;
-		}
-
 	private var preventLuaRemove:Bool = false;
 
 
@@ -5413,7 +5435,6 @@ var wiggleEffect:WiggleEffect;
 		{
 			resyncVocals();
 		}
-		flashSprite.alpha -= 0.08;
 
 		if(curStep == lastStepHit) {
 			return;
@@ -5473,116 +5494,6 @@ var wiggleEffect:WiggleEffect;
 
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
-
-		
-
-		{
-			var sussusBeats = [94, 95, 288, 296, 304, 312, 318, 319];
-			var saboBeats = [16, 24, 32, 40, 48, 56, 62, 63, 272, 280, 288, 296, 302, 303, 376, 384, 892];
-			var meltBeats = [0, 16, 32, 48, 64, 72, 80, 88, 96, 104, 112, 120, 126, 127, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 382, 464, 480, 496, 512];
-			var toogusBeats = [94, 95, 96, 98, 100, 102, 104, 106, 107, 109, 112, 114, 116, 118, 120, 122, 124, 126, 128, 130, 132, 134, 136, 138, 140, 142, 144, 146, 148, 150, 152, 154, 156, 158, 192, 194, 196, 198, 200, 202, 204, 206, 208, 210, 212, 214, 216, 218, 220, 222, 288, 296, 304, 312, 318, 319, 320, 322, 324, 326, 328, 330, 332, 334, 336, 338, 340, 342, 344, 346, 348, 350, 352, 354, 356, 358, 360, 362, 364, 366, 368, 370, 372, 374, 376, 378, 380, 382];
-			var reactorBeats = [1, 16, 32, 48, 64, 72, 80, 88, 96, 104, 112, 120, 126, 127, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172, 176, 180, 184, 188, 448, 456, 464, 472, 476, 478, 480, 484, 488, 492, 496, 500, 504, 508, 512, 516, 520, 524, 528, 532, 536, 540, 544, 548, 552, 556, 560, 564, 568, 572, 576, 580, 584, 588, 592, 596, 600, 604];
-			var _b = 0;
-			//FlxG.watch.addQuick("Flash Timer", _cb); debug stuff
-	
-			add(flashSprite);
-			flashSprite.alpha = 0;
-			flashSprite.scrollFactor.set(0, 0);
-	
-			if(curSong == 'Sussus-Moogus') // sussus flashes
-			{
-				
-				if(curBeat == 97 || curBeat == 192 || curBeat == 320)
-					_cb = 1;
-					if(curBeat > 98 && curBeat < 160 || curBeat > 192 && curBeat < 224 || curBeat > 320 && curBeat < 382 || curBeat == 98 || curBeat == 160 || curBeat == 192 || curBeat == 224 || curBeat == 320 || curBeat == 382)
-					{
-						_cb++;
-						if(_cb == 2)
-						{
-							bgFlash();
-							_cb = 0;
-						}
-					}
-				while(_b < sussusBeats.length) {
-				var susflash = sussusBeats[_b];
-					++_b;
-					if(curBeat == susflash)
-					{
-						bgFlash();
-					}
-				}
-			}
-			if(curSong == 'Sabotage') // sabotage flashes
-			{
-				while(_b < saboBeats.length) {
-					var sabflash = saboBeats[_b];
-						++_b;
-						if(curBeat == sabflash)
-						{
-							bgFlash();
-						}
-					}
-	
-					if(curBeat == 63 || curBeat == 304)
-						_cb = 3;
-					if(curBeat > 64 && curBeat < 124 || curBeat > 304 && curBeat < 370 || curBeat == 64 || curBeat == 124 || curBeat == 304 || curBeat == 370)
-					{
-						_cb++;
-						if(_cb == 4)
-						{
-							bgFlash();
-							_cb = 0;
-						}
-					}
-			}
-			if(curSong == 'Meltdown') // meltdown flashes
-			{
-				while(_b < meltBeats.length) {
-					var meltflash = meltBeats[_b];
-					++_b;
-					if(curBeat == meltflash)
-					{
-						bgFlash();
-					}
-				}
-				if(curBeat == 127)
-					_cb = 3;
-				if(curBeat == 382)
-					_cb = 1;
-				if(curBeat > 128 && curBeat < 192 || curBeat > 382 && curBeat < 448 || curBeat == 128 || curBeat == 192 || curBeat == 382 || curBeat == 448)
-				{
-					_cb++;
-					if(_cb == 4)
-					{
-						bgFlash();
-						_cb = 0;
-					}
-				}
-			}
-			if(curSong == 'Sussus-Toogus') // toogus flashes
-			{
-				while(_b < toogusBeats.length) {
-					var meltflash = toogusBeats[_b];
-					++_b;
-					if(curBeat == meltflash)
-					{
-						bgFlash();
-					}
-				}
-			}
-		
-			if(curSong == 'Reactor') // reactor flashes
-			{
-				while(_b < reactorBeats.length) {
-					var meltflash = reactorBeats[_b];
-					++_b;
-					if(curBeat == meltflash)
-					{
-						bgFlash();
-					}
-				}
-			}
-		}
 		
 
 		if (curBeat % gfSpeed == 0 && !gf.stunned && gf.animation.curAnim.name != null && !gf.animation.curAnim.name.startsWith("sing"))

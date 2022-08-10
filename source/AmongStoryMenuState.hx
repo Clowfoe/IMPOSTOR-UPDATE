@@ -253,11 +253,11 @@ class AmongStoryMenuState extends MusicBeatState
 					changeWeek(1);
 					FlxG.sound.play(Paths.sound('scrollMenu'));
 				}
-				if (controls.ACCEPT)
+				if (controls.ACCEPT && curWeek != 0)
 				{
 					selectWeek();
 				}
-				else if(controls.RESET)
+				else if(controls.RESET && curWeek != 0)
 				{
 					persistentUpdate = false;
 					openSubState(new ResetScoreSubState('', curDifficulty, '', curWeek));
@@ -271,7 +271,7 @@ class AmongStoryMenuState extends MusicBeatState
 				if (controls.UI_LEFT_P)
 					changeDifficulty(-1);
 
-				if (controls.ACCEPT){
+				if (controls.ACCEPT && curWeek != 0){
 					openDiff();
 					FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 					selectingDifficulty = true;
@@ -389,16 +389,16 @@ class AmongStoryMenuState extends MusicBeatState
 		}
 	
 		switch(curWeek){
-			case 0:
+			case 1:
 				txtTracklist.x = FlxG.width * 0.75 - 17;
 				txtTracklist.y = 65;
-			case 1:
+			case 2:
 				txtTracklist.x = FlxG.width * 0.75 - 10;
 				txtTracklist.y = 55;
-			case 2:
+			case 3:
 				txtTracklist.x = FlxG.width * 0.75 + 23;
 				txtTracklist.y = 58;
-			case 3:
+			case 4:
 				txtTracklist.x = FlxG.width * 0.75 + 15;
 				txtTracklist.y = 65;
 		}
