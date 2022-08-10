@@ -255,12 +255,6 @@ class MainMenuState extends MusicBeatState
 
 	function selectSomething()
 	{
-		if (optionShit[curSelected] == 'Shop')
-		{
-			
-		}
-		else
-		{
 			selectedSomethin = true;
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			greenImpostor.animation.play('select');
@@ -299,7 +293,6 @@ class MainMenuState extends MusicBeatState
 						});
 				}
 			});
-		}
 	}
 	function goToState()
 	{
@@ -313,7 +306,9 @@ class MainMenuState extends MusicBeatState
 			case 'Freeplay':
 				FlxG.switchState(new AmongFreeplayState());
 				trace("Freeplay Menu Selected");
-
+			case 'Shop':
+				FlxG.switchState(new ShopState());
+				trace("Shop Menu Selected");
 			case 'Options':
 				FlxG.switchState(new OptionsState());
 		}		

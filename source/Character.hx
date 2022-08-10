@@ -30,6 +30,8 @@ typedef CharacterFile = {
 	var flip_x:Bool;
 	var no_antialiasing:Bool;
 	var healthbar_colors:Array<Int>;
+
+	var platform_pos:Array<Float>;
 }
 
 typedef AnimArray = {
@@ -71,6 +73,7 @@ class Character extends FlxSprite
 	public var noAntialiasing:Bool = false;
 	public var originalFlipX:Bool = false;
 	public var healthColorArray:Array<Int> = [255, 0, 0];
+	public var platformPos:Array<Float> = [0, 0];
 	public var alreadyLoaded:Bool = true; //Used by "Change Character" event
 
 	public static var DEFAULT_CHARACTER:String = 'bf'; //In case a character is missing, it will use BF on its place
@@ -122,6 +125,10 @@ class Character extends FlxSprite
 					frames = Paths.getSparrowAtlas(json.image);
 				}
 				imageFile = json.image;
+
+				if(json.platform_pos != null){
+					platformPos = json.platform_pos;
+				}
 
 				if(json.scale != 1) {
 					jsonScale = json.scale;

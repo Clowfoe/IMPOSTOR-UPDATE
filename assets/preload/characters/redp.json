@@ -1,0 +1,159 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				104
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Ridle"
+		},
+		{
+			"offsets": [
+				-52,
+				103
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Rleft"
+		},
+		{
+			"offsets": [
+				-65,
+				162
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Rdown"
+		},
+		{
+			"offsets": [
+				-74,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Rup"
+		},
+		{
+			"offsets": [
+				-102,
+				102
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Rright"
+		},
+		{
+			"offsets": [
+				-14,
+				119
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BF dies"
+		},
+		{
+			"offsets": [
+				-15,
+				103
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "BF Dead Loop"
+		},
+		{
+			"offsets": [
+				-15,
+				176
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "BF Dead confirm"
+		},
+		{
+			"offsets": [
+				-37,
+				204
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "Rmissleft"
+		},
+		{
+			"offsets": [
+				-111,
+				186
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "Rmissright"
+		},
+		{
+			"offsets": [
+				-65,
+				177
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "Rmissdown"
+		},
+		{
+			"offsets": [
+				-69,
+				247
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "Rmissup"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/red_stuffs",
+	"position": [
+		-20,
+		590
+	],
+	"healthicon": "impostor",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		51,
+		51
+	],
+	"camera_position": [
+		70,
+		-120
+	],
+	"platform_pos": [
+		10,
+		10
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

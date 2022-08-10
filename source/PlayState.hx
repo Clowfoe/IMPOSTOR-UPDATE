@@ -226,6 +226,7 @@ var wiggleEffect:WiggleEffect;
 	var speedLines:FlxBackdrop;
 	var speedPass:Array<Float> = [11000, 11000, 11000, 11000];
 	var farSpeedPass:Array<Float> = [11000, 11000, 11000, 11000, 11000, 11000, 11000];
+	var plat:FlxSprite;
 
 	var airshipPlatform:FlxTypedGroup<FlxSprite>;
 	var airFarClouds:FlxTypedGroup<FlxSprite>;
@@ -264,6 +265,8 @@ var wiggleEffect:WiggleEffect;
 	var bottomBoppers:BGSprite;
 	var santa:BGSprite;
 	var heyTimer:Float;
+	//guh
+	var loBlack:FlxSprite;
 	//defeat
 	var defeatthing:FlxSprite;
 	var defeatblack:FlxSprite;
@@ -379,6 +382,8 @@ var wiggleEffect:WiggleEffect;
 	var stageFront2:FlxSprite;
 	var stageFront3:FlxSprite;
 	var overlay:FlxSprite;
+
+	var charShader:BWShader;
 
 	override public function create()
 	{
@@ -1028,11 +1033,20 @@ var wiggleEffect:WiggleEffect;
 							farClouds.add(newCloud);								
 						}
 
+						plat = new FlxSprite();
+						plat.frames = Paths.getSparrowAtlas('airship/floating_platform', 'impostor');
+						plat.animation.addByPrefix('the', 'floating copy', 24, true);
+						plat.animation.play('the');
+						plat.updateHitbox();
+						add(plat);
+
 						speedLines = new FlxBackdrop(Paths.image('ejected/speedLines', 'impostor'), 1, 1, true, true);
 						speedLines.antialiasing = true;
 						speedLines.updateHitbox();
 						speedLines.scrollFactor.set(1.3, 1.3);
 						speedLines.alpha = 0.3;
+
+
 
 			case 'alpha': //SHIT ASS
 				curStage = 'alpha';				
@@ -1666,6 +1680,14 @@ var wiggleEffect:WiggleEffect;
 
 		add(gfGroup);
 
+		if(SONG.song.toLowerCase() == 'lights-down'){
+			loBlack = new FlxSprite().makeGraphic(FlxG.width * 4, FlxG.height + 700, FlxColor.BLACK);
+			loBlack.alpha = 0;
+			loBlack.screenCenter(X);
+			loBlack.screenCenter(Y);
+			add(loBlack);
+		}
+
 		// Shitty layering but whatev it works LOL
 		if (curStage == 'limo')
 			add(limo);
@@ -1720,6 +1742,7 @@ var wiggleEffect:WiggleEffect;
 				}
 				add(cloudScroll);
 				add(speedLines);
+
 			case 'polus':
 				snow = new FlxSprite(0, -250);
 				snow.frames = Paths.getSparrowAtlas('polus/snow', 'impostor');
@@ -1976,7 +1999,9 @@ var wiggleEffect:WiggleEffect;
 			boyfriendGroup.add(bfLegs);
 		}
 		
-
+		if(ClientPrefs.charOverride != ''){
+			SONG.player1 = ClientPrefs.charOverride;
+		}
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
@@ -1985,10 +2010,7 @@ var wiggleEffect:WiggleEffect;
 		{
 			bfLegs.x = boyfriend.x;
 			bfLegs.y = boyfriend.y;
-		}
-
-
-		
+		}	
 
 		bfAnchorPoint[0] = boyfriend.x;
 		bfAnchorPoint[1] = boyfriend.y;
@@ -2358,6 +2380,10 @@ var wiggleEffect:WiggleEffect;
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
 
 		Paths.clearUnusedMemory();
+
+		if(ClientPrefs.charOverride != ''){
+			trace(ClientPrefs.charOverride);
+		}
 
 		#if desktop
 		// Updating Discord Rich Presence.
@@ -3385,6 +3411,11 @@ var wiggleEffect:WiggleEffect;
 				FlxTween.tween(dadGroup, {x: FlxG.random.float(dadStartpos.x - 15, dadStartpos.x + 15), y: FlxG.random.float(dadStartpos.y - 15, dadStartpos.y + 15)}, 0.4, {
 					ease: FlxEase.smoothStepInOut});
 			}
+
+			if(boyfriend.platformPos != null){
+				plat.setPosition(boyfriend.x + boyfriend.platformPos[0], boyfriend.y + boyfriend.platformPos[1]);
+			}
+			
 		}
 
 		
@@ -4126,6 +4157,37 @@ var wiggleEffect:WiggleEffect;
 
 	public function triggerEventNote(eventName:String, value1:String, value2:String) {
 		switch(eventName) {	
+			case 'Lights out':
+				if(charShader == null){
+					charShader = new BWShader(0.01, 0.12, true);
+				}
+				if(ClientPrefs.charOverride != ''){
+					boyfriend.shader = charShader.shader;
+				}else{
+					triggerEventNote('Change Character', '0', 'whitebf');
+				}
+				if(dad.curCharacter == 'impostor3'){
+					triggerEventNote('Change Character', '1', 'whitegreen');
+				}else{
+					dad.shader = charShader.shader;
+				}
+				iconP1.shader = charShader.shader;
+				iconP2.shader = charShader.shader;
+				loBlack.alpha = 1;
+			case 'Lights on':
+				if(ClientPrefs.charOverride != ''){
+					boyfriend.shader = null;
+				}else{
+					triggerEventNote('Change Character', '0', 'bf');
+				}
+				if(dad.curCharacter == 'whitegreen'){
+					triggerEventNote('Change Character', '1', 'impostor3');
+				}else{
+					dad.shader = null;
+				}
+				iconP1.shader = null;
+				iconP2.shader = null;
+				loBlack.alpha = 0;
 			case 'Who Buzz':
 				var charType:Int = Std.parseInt(value1);
 				if(Math.isNaN(charType)) charType = 0;
@@ -4926,8 +4988,8 @@ var wiggleEffect:WiggleEffect;
 
 		rating.loadGraphic(Paths.image(pixelShitPart1 + daRating + pixelShitPart2));
 		rating.screenCenter();
-		rating.x = boyfriend.x - 40;
-		rating.y = boyfriend.y - 60;
+		rating.x = gf.x - 40;
+		rating.y = gf.y - 60;
 		rating.acceleration.y = 550;
 		if (curStage == 'ejected')
 			rating.acceleration.y = -550;

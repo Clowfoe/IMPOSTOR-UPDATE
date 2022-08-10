@@ -26,6 +26,8 @@ class ClientPrefs {
 	public static var ghostTapping:Bool = true;
 	public static var hideTime:Bool = false;
 
+	public static var charOverride:String = '';
+
 	public static var keyBinds:Map<String, Array<FlxKey>> = [
 		'note_left'		=> [A, LEFT],
 		'note_down'		=> [S, DOWN],
@@ -74,6 +76,8 @@ class ClientPrefs {
 	public static var defaultKeys:Map<String, Array<FlxKey>> = null;
 
 	public static function saveSettings() {
+		FlxG.save.data.charOverride = charOverride;
+
 		FlxG.save.data.downScroll = downScroll;
 		FlxG.save.data.middleScroll = middleScroll;
 		FlxG.save.data.showFPS = showFPS;
@@ -110,6 +114,10 @@ class ClientPrefs {
 	}
 
 	public static function loadPrefs() {
+		if(FlxG.save.data.charOverride != null) {
+			charOverride = FlxG.save.data.charOverride;
+		}
+
 		if(FlxG.save.data.downScroll != null) {
 			downScroll = FlxG.save.data.downScroll;
 		}
