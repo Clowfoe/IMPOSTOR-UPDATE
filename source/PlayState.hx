@@ -1691,13 +1691,11 @@ var wiggleEffect:WiggleEffect;
 
 		add(gfGroup);
 
-		if(SONG.song.toLowerCase() == 'lights-down'){
-			loBlack = new FlxSprite().makeGraphic(FlxG.width * 4, FlxG.height + 700, FlxColor.BLACK);
-			loBlack.alpha = 0;
-			loBlack.screenCenter(X);
-			loBlack.screenCenter(Y);
-			add(loBlack);
-		}
+		loBlack = new FlxSprite().makeGraphic(FlxG.width * 4, FlxG.height + 700, FlxColor.BLACK);
+		loBlack.alpha = 0;
+		loBlack.screenCenter(X);
+		loBlack.screenCenter(Y);
+		add(loBlack);
 
 		// Shitty layering but whatev it works LOL
 		if (curStage == 'limo')
@@ -2022,6 +2020,10 @@ var wiggleEffect:WiggleEffect;
 			bfLegs.x = boyfriend.x;
 			bfLegs.y = boyfriend.y;
 		}	
+
+		var tests:RimlightShader = new RimlightShader(0.0009,0.0009,0xFFFFFFFF,boyfriend);
+		add(tests);
+		boyfriend.shader = tests.shader;
 
 		bfAnchorPoint[0] = boyfriend.x;
 		bfAnchorPoint[1] = boyfriend.y;
@@ -2494,6 +2496,21 @@ var wiggleEffect:WiggleEffect;
 			if (playerStrums.members[key] != null 
 			&& playerStrums.members[key].animation.curAnim.name != 'confirm')
 				playerStrums.members[key].playAnim('pressed');
+		}
+
+		if(key == 2){
+			if(boyfriend.animation.curAnim.name == 'idle' && boyfriend.curCharacter == 'greenp'){
+				boyfriend.playAnim('singUP', true);
+				boyfriend.animation.curAnim.curFrame = 5;
+				boyfriend.heyTimer = 0.6;
+			}
+		}
+		if(key == 1){
+			if(boyfriend.animation.curAnim.name == 'idle' && boyfriend.curCharacter == 'redp'){
+				boyfriend.playAnim('hey', true);
+				boyfriend.specialAnim = true;
+				boyfriend.heyTimer = 0.6;
+			}
 		}
 	}
 
@@ -4173,10 +4190,10 @@ var wiggleEffect:WiggleEffect;
 				if(charShader == null){
 					charShader = new BWShader(0.01, 0.12, true);
 				}
-				if(ClientPrefs.charOverride != ''){
-					boyfriend.shader = charShader.shader;
-				}else{
+				if(boyfriend.curCharacter == 'bf'){
 					triggerEventNote('Change Character', '0', 'whitebf');
+				}else{
+					boyfriend.shader = charShader.shader;
 				}
 				if(dad.curCharacter == 'impostor3'){
 					triggerEventNote('Change Character', '1', 'whitegreen');
@@ -4186,11 +4203,14 @@ var wiggleEffect:WiggleEffect;
 				iconP1.shader = charShader.shader;
 				iconP2.shader = charShader.shader;
 				loBlack.alpha = 1;
+
+				healthBar.createFilledBar(FlxColor.BLACK, FlxColor.WHITE);
+				healthBar.updateBar();
 			case 'Lights on':
-				if(ClientPrefs.charOverride != ''){
-					boyfriend.shader = null;
-				}else{
+				if(boyfriend.curCharacter == 'whitebf'){
 					triggerEventNote('Change Character', '0', 'bf');
+				}else{
+					boyfriend.shader = null;
 				}
 				if(dad.curCharacter == 'whitegreen'){
 					triggerEventNote('Change Character', '1', 'impostor3');
@@ -4200,7 +4220,6 @@ var wiggleEffect:WiggleEffect;
 				iconP1.shader = null;
 				iconP2.shader = null;
 				loBlack.alpha = 0;
-		switch(eventName) {
 			case 'Reactor Beep':
 				var charType:Float = Std.parseFloat(value1);
 				if(Math.isNaN(charType)) charType = 0;
@@ -4220,8 +4239,8 @@ var wiggleEffect:WiggleEffect;
 				daveDIE.alpha = 1;
 				dad.alpha = 0;
 				FlxG.sound.play(Paths.sound('davewindowsmash'));	
-
-				case 'Who Buzz':
+				
+			case 'Who Buzz':
 				var charType:Int = Std.parseInt(value1);
 				if(Math.isNaN(charType)) charType = 0;
 				switch(charType) {
