@@ -131,6 +131,17 @@
 			"anim": "singUPmiss",
 			"loop": false,
 			"name": "Rmissup"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				5
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "Rhey",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -139,12 +150,12 @@
 		-20,
 		590
 	],
-	"healthicon": "impostor",
+	"healthicon": "redmini",
 	"flip_x": true,
 	"healthbar_colors": [
-		255,
-		51,
-		51
+		245,
+		27,
+		87
 	],
 	"camera_position": [
 		70,
