@@ -5,7 +5,7 @@ import flixel.util.FlxColor;
 import flixel.FlxBasic;
 import flixel.system.FlxAssets.FlxShader;
 
-class RimlightShader extends FlxBasic
+class RimlightShader
 {
 	public var shader(default, null):RimlightShaderGLSL = new RimlightShaderGLSL();
 
@@ -15,15 +15,13 @@ class RimlightShader extends FlxBasic
 	public var refSprite:FlxSprite;
 
 	public function new(_distX:Float = 0.0009, _distY:Float = 0.0009, _rimlightColor:FlxColor = 0xFFFFFFFF, ?_refSprite:FlxSprite = null):Void{
-		super();
 		distanceX = _distX;
 		distanceY = _distY;
 		rimlightColor = _rimlightColor;
 		refSprite = _refSprite;
 	}
 
-	override public function update(elapsed:Float):Void{
-		super.update(elapsed);
+	public function update():Void{
 		if(refSprite != null){
 			shader.bounds.value = [refSprite.frame.uv.left, refSprite.frame.uv.top, refSprite.frame.uv.right, refSprite.frame.uv.bottom];
 		}

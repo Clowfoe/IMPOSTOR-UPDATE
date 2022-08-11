@@ -1,21 +1,18 @@
 package;
 
+import flixel.FlxSprite;
 import flixel.util.FlxColor;
-import flixel.FlxObject;
+import flixel.FlxBasic;
 import flixel.system.FlxAssets.FlxShader;
 
-/*
-A shader that aims to replicate Adobe Animate's Adjust Color filter with the ability to add a tinted multiply layer similar to how Animate mixes color.
-Basically just used to apply color adjusts to sprites without needing a whole new sprite sheet. 
-Adapted from Andrey-Postelzhuk's shader found here: https://forum.unity.com/threads/hue-saturation-brightness-contrast-shader.260649/
-A lot of stuff needed to be changed to make it more accurate to Adobe Animate's Adjust Color filter or just to make it work in general.
-*/
-
-// this shader is made by rozebud thank u for letting me steal it
-
-class CCShader extends FlxObject
+class CCShader
 {
 	public var shader(default, null):CCShaderGLSL = new CCShaderGLSL();
+
+	public var distanceX(default, set):Float = 0.0009;
+	public var distanceY(default, set):Float = 0.0009;
+	public var rimlightColor(default, set):FlxColor = 0xFFFFFFFF;
+	public var refSprite:FlxSprite;
 
 	public var hue(default, set):Float = 0;
 	public var saturation(default, set):Float = 0;
@@ -23,11 +20,13 @@ class CCShader extends FlxObject
 	public var contrast(default, set):Float = 0;
 	public var multiply(default, set):FlxColor = 0x00FFFFFF;
 
-	//Adobe Animate's color adjust requires goes from -250 to 250 for total black and white.
-	//Setting this to false will make the shader use -100 to 100 like the rest of the non-hue values.
 
-	public function new(_hue:Float = 0, _saturation:Float = 0, _brightness:Float = 0, _contrast:Float = 0, _multiply:FlxColor = 0x00FFFFFF):Void{
-		super();
+	public function new(_hue:Float = 0, _saturation:Float = 0, _brightness:Float = 0, _contrast:Float = 0, _multiply:FlxColor = 0x00FFFFFF, _distX:Float = 0.0009, _distY:Float = 0.0009, _rimlightColor:FlxColor = 0xFFFFFFFF, ?_refSprite:FlxSprite = null):Void{
+		distanceX = _distX;
+		distanceY = _distY;
+		rimlightColor = _rimlightColor;
+		refSprite = _refSprite;
+
 		hue = _hue;
 		saturation = _saturation;
 		brightness = _brightness;
@@ -35,10 +34,34 @@ class CCShader extends FlxObject
 		multiply = _multiply;
 	}
 
-	override public function update(elapsed:Float):Void{
-		super.update(elapsed);
+	public function update():Void{
+		if(refSprite != null){
+			shader.bounds.value = [refSprite.frame.uv.left, refSprite.frame.uv.top, refSprite.frame.uv.right, refSprite.frame.uv.bottom];
+		}
+		else{ 
+			shader.bounds.value = [0, 0, 1, 1]; 
+		}
 	}
 
+	function set_distanceX(v:Float):Float{
+		distanceX = v;
+		shader.distance.value = [distanceX, distanceY];
+		return v;
+	}
+
+	function set_distanceY(v:Float):Float{
+		distanceY = v;
+		shader.distance.value = [distanceX, distanceY];
+		return v;
+	}
+
+	function set_rimlightColor(v:FlxColor):FlxColor{
+		rimlightColor = v;
+		shader.rimlightColor.value = [rimlightColor.redFloat, rimlightColor.greenFloat, rimlightColor.blueFloat, rimlightColor.alphaFloat];
+		return v;
+	}
+
+	
 	function set_hue(v:Float):Float{
 		hue = v;
 		shader.hue.value = [hue];
@@ -77,10 +100,14 @@ class CCShaderGLSL extends FlxShader
 		#pragma header
 
 		uniform float hue;
-		uniform float saturation;
-		uniform float brightness;
-		uniform float contrast;
-		uniform vec4 muliply;
+        uniform float saturation;
+        uniform float brightness;
+        uniform float contrast;
+        uniform vec4 muliply;
+
+		uniform vec2 distance;
+		uniform vec4 rimlightColor;
+		uniform vec4 bounds;
 
 		vec3 applyHue(vec3 aColor, float aHue)
         {
@@ -104,18 +131,34 @@ class CCShaderGLSL extends FlxShader
             return color;
         }
 
-		void main()
-		{
-			vec4 textureColor = texture2D(bitmap, openfl_TextureCoordv);
+		void main(){
+			vec4 textureColor = flixel_texture2D(bitmap, openfl_TextureCoordv);
+			vec4 overlapColor;
 
-			textureColor = applyHSBEffect(textureColor);
+			vec2 overlapCoord = vec2(openfl_TextureCoordv.x - distance.x, openfl_TextureCoordv.y - distance.y);
+			if(overlapCoord.x < bounds.x || overlapCoord.x > bounds.z || overlapCoord.y < bounds.y || overlapCoord.y > bounds.w){
+				overlapColor = vec4(0);
+			}
+			else{
+				overlapColor = flixel_texture2D(bitmap, overlapCoord);
+			}
+
+			vec3 outColor = textureColor.rgb;
+
+			if(muliply.a > 0){
+				vec3 multiplyColor = mix(textureColor.rgb, muliply.rgb, muliply.a);
+				outColor = mix(applyHSBEffect(textureColor).rgb * multiplyColor, textureColor, overlapColor.a * rimlightColor.a);
+			}else{
+				outColor = mix(applyHSBEffect(textureColor), textureColor, overlapColor.a * rimlightColor.a);
+			}
+			
 
 			if(muliply.a > 0){
 				vec3 multiplyColor = mix(textureColor.rgb, muliply.rgb, muliply.a);
 				textureColor.rgb *= multiplyColor;
 			}
-
-			gl_FragColor = textureColor;
+	
+			gl_FragColor = vec4(outColor.rgb * textureColor.a, textureColor.a);
 		}')
 
 	public function new()

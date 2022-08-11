@@ -216,6 +216,8 @@ var wiggleEffect:WiggleEffect;
 	var bfStartpos:FlxPoint;
 	var dadStartpos:FlxPoint;
 	var gfStartpos:FlxPoint;
+
+	var tests:CCShader;
 // ejected SHIT
 	var cloudScroll:FlxTypedGroup<FlxSprite>;
 	var farClouds:FlxTypedGroup<FlxSprite>;
@@ -2010,10 +2012,6 @@ var wiggleEffect:WiggleEffect;
 			bfLegs.y = boyfriend.y;
 		}	
 
-		var tests:RimlightShader = new RimlightShader(0.0009,0.0009,0xFFFFFFFF,boyfriend);
-		add(tests);
-		boyfriend.shader = tests.shader;
-
 		bfAnchorPoint[0] = boyfriend.x;
 		bfAnchorPoint[1] = boyfriend.y;
 		dadAnchorPoint[0] = boyfriend.x;
@@ -2386,6 +2384,10 @@ var wiggleEffect:WiggleEffect;
 		if(ClientPrefs.charOverride != ''){
 			trace(ClientPrefs.charOverride);
 		}
+
+		
+		//tests = new CCShader(-10,50,0,0,0x00FFFFFF,-0.0039,-0.0039,0xFFFFFFFF,boyfriend);
+		//boyfriend.shader = tests.shader;
 
 		#if desktop
 		// Updating Discord Rich Presence.
@@ -4055,6 +4057,8 @@ var wiggleEffect:WiggleEffect;
 			}
 		}
 		checkEventNote();
+
+		//tests.update();
 
 		#if debug
 		if(!endingSong && !startingSong) {
