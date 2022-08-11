@@ -1079,21 +1079,14 @@ var wiggleEffect:WiggleEffect;
 			case 'drippypop': //SHIT ASS
 				curStage = 'drippypop';	
 				
-				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('drip/dripfloor', 'impostor'));
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('drip/ng', 'impostor'));
 						bg.updateHitbox();
 						bg.antialiasing = true;
 						bg.scrollFactor.set(1, 1);
 						bg.active = false;
 						add(bg);	
 
-				var thebackground = new FlxSprite(0, 0);
-				thebackground.frames = Paths.getSparrowAtlas('drip/drippers', 'impostor');
-				thebackground.animation.addByPrefix('bop', 'dripbop', 24, false);
-				thebackground.animation.play('bop');
-				thebackground.antialiasing = true;
-				thebackground.scrollFactor.set(1, 1);
-				thebackground.active = true;
-				add(thebackground);
+
 
 				
 

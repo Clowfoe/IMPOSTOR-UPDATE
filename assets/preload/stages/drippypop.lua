@@ -4,10 +4,10 @@ local r = 0;
 local shot = false;
 local agent = 1
 local health = 0;
-local xx = 750;
-local yy = 550;
-local xx2 = 1100;
-local yy2 = 550;
+local xx = 1200;
+local yy = 600;
+local xx2 = 1350;
+local yy2 = 600;
 local ofs = 30;
 local followchars = true;
 local del = 0;
@@ -28,7 +28,7 @@ function onUpdate()
 	end
     if followchars == true then
         if mustHitSection == false then
-            setProperty('defaultCamZoom',0.9)
+           
             if getProperty('dad.animation.curAnim.name') == 'singLEFT' then
                 triggerEvent('Camera Follow Pos',xx-ofs,yy)
             end
@@ -61,7 +61,6 @@ function onUpdate()
             end
         else
 
-            setProperty('defaultCamZoom',0.9)
             if getProperty('boyfriend.animation.curAnim.name') == 'singLEFT' then
                 triggerEvent('Camera Follow Pos',xx2-ofs,yy2)
             end
@@ -84,6 +83,53 @@ function onUpdate()
     else
         triggerEvent('Camera Follow Pos','','')
     end
-    
+    if curBeat == 286 then
+        setProperty('defaultCamZoom',1.1)
+		followchars = true
+        xx = 1300
+        yy = 350
+        xx2 = 1300
+        yy2 = 350
+    end
+    if curBeat == 304 then
+        setProperty('defaultCamZoom',0.9)
+		followchars = true
+        xx = 1200
+        yy = 600
+        xx2 = 1350
+        yy2 = 600
+    end
+    if curBeat == 318 then
+        setProperty('defaultCamZoom',1.1)
+		followchars = true
+        xx = 1300
+        yy = 350
+        xx2 = 1300
+        yy2 = 350
+    end
+    if curBeat == 336 then
+        setProperty('defaultCamZoom',0.9)
+		followchars = true
+        xx = 1200
+        yy = 600
+        xx2 = 1350
+        yy2 = 600
+    end
+    if curBeat == 384 then
+        setProperty('defaultCamZoom',1.1)
+		followchars = true
+        xx = 1300
+        yy = 350
+        xx2 = 1300
+        yy2 = 350
+    end
+    if curBeat == 401 then
+        setProperty('defaultCamZoom',0.9)
+		followchars = true
+        xx = 1200
+        yy = 600
+        xx2 = 1350
+        yy2 = 600
+    end
 end
 
