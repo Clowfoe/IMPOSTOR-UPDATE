@@ -5,6 +5,7 @@ import openfl.events.KeyboardEvent;
 #if desktop
 import Discord.DiscordClient;
 #end
+import flixel.input.mouse.FlxMouseEventManager;
 import WalkingCrewmate;
 import Section.SwagSection;
 import Song.SwagSong;
@@ -170,6 +171,8 @@ var wiggleEffect:WiggleEffect;
 
 	var cameraLocked:Bool = false;
 
+	var stopEvents:Bool = false;
+
 	public var strumLineNotes:FlxTypedGroup<StrumNote>;
 	public var opponentStrums:FlxTypedGroup<StrumNote>;
 	public var playerStrums:FlxTypedGroup<StrumNote>;
@@ -216,6 +219,11 @@ var wiggleEffect:WiggleEffect;
 	var bfStartpos:FlxPoint;
 	var dadStartpos:FlxPoint;
 	var gfStartpos:FlxPoint;
+
+	// airship shit
+	var henryTeleporter:FlxSprite;
+
+	var tests:CCShader;
 // ejected SHIT
 	var cloudScroll:FlxTypedGroup<FlxSprite>;
 	var farClouds:FlxTypedGroup<FlxSprite>;
@@ -751,51 +759,81 @@ var wiggleEffect:WiggleEffect;
 						starsFG.visible = false;
 			
 			case 'airshipRoom': //thanks fabs
-
-				var skyyellow:FlxSprite = new FlxSprite(-1858.33333333333, -2161.66666666667).loadGraphic(Paths.image('airship/Sky_Yellow', 'impostor'));
-						skyyellow.antialiasing = true;
-						skyyellow.scrollFactor.set(0.2, 0.2);
-						skyyellow.active = false;
-						add(skyyellow);
-
-				var bluechair:FlxSprite = new FlxSprite(0, 1).loadGraphic(Paths.image('airship/Blu_Chair_Yellow', 'impostor'));
-						bluechair.antialiasing = true;
-						bluechair.scrollFactor.set(1, 1);
-						bluechair.active = false;
-						add(bluechair);
-
-				var cloudyellow:FlxSprite = new FlxSprite(-2175, -163.666666666667).loadGraphic(Paths.image('airship/Clouds_Yellow', 'impostor'));
-						cloudyellow.antialiasing = true;
-						cloudyellow.scrollFactor.set(0.6, 0.6);
-						cloudyellow.active = false;
-						add(cloudyellow);
+			
+				var element8 = new FlxSprite(-1468, -995).loadGraphic(Paths.image('airship/newAirship/fartingSky', 'impostor'));
+				element8.antialiasing = true;
+				element8.scale.set(1, 1);
+				element8.updateHitbox();
+				element8.scrollFactor.set(0.3, 0.3);
+				add(element8);
+			
+				var element5 = new FlxSprite(-1125, 284).loadGraphic(Paths.image('airship/newAirship/backSkyyellow', 'impostor'));
+				element5.antialiasing = true;
+				element5.scale.set(1, 1);
+				element5.updateHitbox();
+				element5.scrollFactor.set(0.4, 0.7);
+				add(element5);
 				
-				var bottomyellow:FlxSprite = new FlxSprite(-2287.5, -1873).loadGraphic(Paths.image('airship/Bottom_Floor_Yellow', 'impostor'));
-						bottomyellow.antialiasing = true;
-						bottomyellow.scrollFactor.set(1, 1);
-						bottomyellow.active = false;
-						add(bottomyellow);
-				
-				var topyellow:FlxSprite = new FlxSprite(-2050, 6).loadGraphic(Paths.image('airship/Top_Floor_Yellow', 'impostor'));
-						topyellow.antialiasing = true;
-						topyellow.scrollFactor.set(1, 1);
-						topyellow.active = false;
-						add(topyellow);
+				var element6 = new FlxSprite(1330, 283).loadGraphic(Paths.image('airship/newAirship/yellow cloud 3', 'impostor'));
+				element6.antialiasing = true;
+				element6.scale.set(1, 1);
+				element6.updateHitbox();
+				element6.scrollFactor.set(0.5, 0.8);
+				add(element6);
+			
+				var element7 = new FlxSprite(-837, 304).loadGraphic(Paths.image('airship/newAirship/yellow could 2', 'impostor'));
+				element7.antialiasing = true;
+				element7.scale.set(1, 1);
+				element7.updateHitbox();
+				element7.scrollFactor.set(0.6, 0.9);
+				add(element7);
+			
+				var element2 = new FlxSprite(-1387, -1231).loadGraphic(Paths.image('airship/newAirship/window', 'impostor'));
+				element2.antialiasing = true;
+				element2.scale.set(1, 1);
+				element2.updateHitbox();
+				element2.scrollFactor.set(1, 1);
+				add(element2);
+			
+				var element4 = new FlxSprite(-1541, 242).loadGraphic(Paths.image('airship/newAirship/cloudYellow 1', 'impostor'));
+				element4.antialiasing = true;
+				element4.scale.set(1, 1);
+				element4.updateHitbox();
+				element4.scrollFactor.set(0.8, 0.8);
+				add(element4);
+			
+				var element1 = new FlxSprite(-642, 325).loadGraphic(Paths.image('airship/newAirship/backDlowFloor', 'impostor'));
+				element1.antialiasing = true;
+				element1.scale.set(1, 1);
+				element1.updateHitbox();
+				element1.scrollFactor.set(0.9, 1);
+				add(element1);
+			
+				var element0 = new FlxSprite(-2440, 336).loadGraphic(Paths.image('airship/newAirship/DlowFloor', 'impostor'));
+				element0.antialiasing = true;
+				element0.scale.set(1, 1);
+				element0.updateHitbox();
+				element0.scrollFactor.set(1, 1);
+				add(element0);
+			
+				var element3 = new FlxSprite(-1113, -1009).loadGraphic(Paths.image('airship/newAirship/glowYellow', 'impostor'));
+				element3.antialiasing = true;
+				element3.blend = ADD;
+				element3.scale.set(1, 1);
+				element3.updateHitbox();
+				element3.scrollFactor.set(1, 1);
+				add(element3);
+			
+				if(isStoryMode == false){
+					henryTeleporter = new FlxSprite(998, 620).loadGraphic(Paths.image('airship/newAirship/Teleporter', 'impostor'));
+					henryTeleporter.antialiasing = true;
+					henryTeleporter.scale.set(1, 1);
+					henryTeleporter.updateHitbox();
+					henryTeleporter.scrollFactor.set(1, 1);
+					add(henryTeleporter);
 
-				var cpyellow:FlxSprite = new FlxSprite(-300, -33.5).loadGraphic(Paths.image('airship/Control_Panel_Yellow', 'impostor'));
-						cpyellow.antialiasing = true;
-						cpyellow.scrollFactor.set(1, 1);
-						cpyellow.active = false;
-						add(cpyellow);
-
-				mapthing = new FlxSprite(0, -360);
-						mapthing.frames = Paths.getSparrowAtlas('airship/Map_Bounce', 'impostor');	
-						mapthing.animation.addByPrefix('bop', 'Map  instance 1', 24, true);
-						mapthing.animation.play('bop');
-						mapthing.antialiasing = false;
-						mapthing.scrollFactor.set(1, 1);
-						mapthing.active = true;
-						add(mapthing);
+					FlxMouseEventManager.add(henryTeleporter, function onMouseDown(teleporter:FlxSprite){henryTeleport();}, null, null, null);
+				}
 
 			case 'loggo': //loggo normal
 
@@ -1088,21 +1126,14 @@ var wiggleEffect:WiggleEffect;
 			case 'drippypop': //SHIT ASS
 				curStage = 'drippypop';	
 				
-				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('drip/dripfloor', 'impostor'));
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('drip/ng', 'impostor'));
 						bg.updateHitbox();
 						bg.antialiasing = true;
 						bg.scrollFactor.set(1, 1);
 						bg.active = false;
 						add(bg);	
 
-				var thebackground = new FlxSprite(0, 0);
-				thebackground.frames = Paths.getSparrowAtlas('drip/drippers', 'impostor');
-				thebackground.animation.addByPrefix('bop', 'dripbop', 24, false);
-				thebackground.animation.play('bop');
-				thebackground.antialiasing = true;
-				thebackground.scrollFactor.set(1, 1);
-				thebackground.active = true;
-				add(thebackground);
+
 
 				
 
@@ -2021,10 +2052,6 @@ var wiggleEffect:WiggleEffect;
 			bfLegs.y = boyfriend.y;
 		}	
 
-		var tests:RimlightShader = new RimlightShader(0.0009,0.0009,0xFFFFFFFF,boyfriend);
-		add(tests);
-		boyfriend.shader = tests.shader;
-
 		bfAnchorPoint[0] = boyfriend.x;
 		bfAnchorPoint[1] = boyfriend.y;
 		dadAnchorPoint[0] = boyfriend.x;
@@ -2401,6 +2428,10 @@ var wiggleEffect:WiggleEffect;
 		if(ClientPrefs.charOverride != ''){
 			trace(ClientPrefs.charOverride);
 		}
+
+		
+		//tests = new CCShader(-10,50,0,0,0x00FFFFFF,-0.0039,-0.0039,0xFFFFFFFF,boyfriend);
+		//boyfriend.shader = tests.shader;
 
 		#if desktop
 		// Updating Discord Rich Presence.
@@ -3355,6 +3386,66 @@ var wiggleEffect:WiggleEffect;
 		vocals.play();
 	}
 
+	function henryTeleport(){
+		vocals.volume = 0;
+		vocals.pause();
+		KillNotes();
+		FlxTween.tween(FlxG.sound.music, {volume: 0}, 5, {ease: FlxEase.expoOut});
+
+		var colorShader:ColorShader = new ColorShader(0);
+		boyfriend.shader = colorShader.shader;
+		
+		FlxTween.tween(camHUD, {alpha: 0}, 0.7, {ease: FlxEase.quadInOut});
+
+		triggerEventNote('Camera Follow Pos', '750', '500');
+		stopEvents = true;
+
+		FlxG.sound.play(Paths.sound('teleport_sound'), 1);
+
+		new FlxTimer().start(0.45, function(tmr:FlxTimer) {
+			colorShader.amount = 1;
+			FlxTween.tween(colorShader, {amount: 0}, 0.73, {ease: FlxEase.expoOut});
+		});
+
+		new FlxTimer().start(1.28, function(tmr:FlxTimer) {
+			colorShader.amount = 1;
+			FlxTween.tween(colorShader, {amount: 0.1}, 0.55, {ease: FlxEase.expoOut});
+		});
+
+		new FlxTimer().start(1.93, function(tmr:FlxTimer) {
+			colorShader.amount = 1;
+			FlxTween.tween(colorShader, {amount: 0.2}, 0.2, {ease: FlxEase.expoOut});
+		});
+
+		new FlxTimer().start(2.23, function(tmr:FlxTimer) {
+			colorShader.amount = 1;
+			FlxTween.tween(colorShader, {amount: 0.4}, 0.22, {ease: FlxEase.expoOut});
+		});
+		new FlxTimer().start(2.55, function(tmr:FlxTimer) {
+			colorShader.amount = 1;
+			FlxTween.tween(colorShader, {amount: 0.8}, 0.05, {ease: FlxEase.expoOut});
+		});
+
+		/*new FlxTimer().start(1.25, function(tmr:FlxTimer) {
+			FlxTween.tween(colorShader, {amount: 1}, 2.25, {ease: FlxEase.expoOut});
+		});*/
+
+		new FlxTimer().start(2.7, function(tmr:FlxTimer) {
+			colorShader.amount = 1;
+			FlxTween.tween(boyfriend, {"scale.y": 0}, 0.7, {ease: FlxEase.expoOut});
+			FlxTween.tween(boyfriend, {"scale.x": 3.5}, 0.7, {ease: FlxEase.expoOut});
+			
+		});
+
+		new FlxTimer().start(3.5, function(tmr:FlxTimer) {
+			FlxG.camera.fade(FlxColor.BLACK, 1.4, false, function()
+			{
+				MusicBeatState.switchState(new HenryState());
+			}, true);
+		});
+		
+	}
+
 	private var paused:Bool = false;
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
@@ -4068,6 +4159,8 @@ var wiggleEffect:WiggleEffect;
 		}
 		checkEventNote();
 
+		//tests.update();
+
 		#if debug
 		if(!endingSong && !startingSong) {
 			if (FlxG.keys.justPressed.ONE) {
@@ -4185,6 +4278,9 @@ var wiggleEffect:WiggleEffect;
 	}
 
 	public function triggerEventNote(eventName:String, value1:String, value2:String) {
+		if(stopEvents == false){
+
+		
 		switch(eventName) {	
 			case 'Lights out':
 				if(charShader == null){
@@ -4686,6 +4782,7 @@ var wiggleEffect:WiggleEffect;
 				reloadHealthBarColors();
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
+		}
 	}
 
 	function moveCameraSection(?id:Int = 0):Void {

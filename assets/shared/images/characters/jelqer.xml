@@ -2,15 +2,15 @@
 <TextureAtlas imagePath="jelqer.png">
 	<!-- Created with Adobe Animate version 21.0.3.38773 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="JDown0000" x="0" y="0" width="557" height="380"/>
-	<SubTexture name="JDown0001" x="0" y="0" width="557" height="380"/>
-	<SubTexture name="JDown0002" x="566" y="0" width="557" height="380"/>
-	<SubTexture name="JDown0003" x="566" y="0" width="557" height="380"/>
-	<SubTexture name="JDown0004" x="1132" y="0" width="557" height="380"/>
-	<SubTexture name="JDown0005" x="1132" y="0" width="557" height="380"/>
-	<SubTexture name="JDown0006" x="1698" y="0" width="557" height="380"/>
-	<SubTexture name="JDown0007" x="1698" y="0" width="557" height="380"/>
-	<SubTexture name="JDown0008" x="1698" y="0" width="557" height="380"/>
+	<SubTexture name="JDown0000" x="0" y="0" width="557" height="361"/>
+	<SubTexture name="JDown0001" x="0" y="0" width="557" height="361"/>
+	<SubTexture name="JDown0002" x="566" y="0" width="557" height="361"/>
+	<SubTexture name="JDown0003" x="566" y="0" width="557" height="361"/>
+	<SubTexture name="JDown0004" x="1132" y="0" width="557" height="361"/>
+	<SubTexture name="JDown0005" x="1132" y="0" width="557" height="361"/>
+	<SubTexture name="JDown0006" x="1698" y="0" width="557" height="361"/>
+	<SubTexture name="JDown0007" x="1698" y="0" width="557" height="361"/>
+	<SubTexture name="JDown0008" x="1698" y="0" width="557" height="361"/>
 	<SubTexture name="JIdle0000" x="2264" y="0" width="490" height="396"/>
 	<SubTexture name="JIdle0001" x="2264" y="0" width="490" height="396"/>
 	<SubTexture name="JIdle0002" x="2763" y="0" width="490" height="396"/>
@@ -41,15 +41,15 @@
 	<SubTexture name="JIdle0027" x="998" y="405" width="490" height="396"/>
 	<SubTexture name="JIdle0028" x="998" y="405" width="490" height="396"/>
 	<SubTexture name="JIdle0029" x="998" y="405" width="490" height="396"/>
-	<SubTexture name="JLeft0000" x="0" y="810" width="526" height="401"/>
-	<SubTexture name="JLeft0001" x="0" y="810" width="526" height="401"/>
-	<SubTexture name="JLeft0002" x="535" y="810" width="526" height="401"/>
-	<SubTexture name="JLeft0003" x="535" y="810" width="526" height="401"/>
-	<SubTexture name="JLeft0004" x="1070" y="810" width="526" height="401"/>
-	<SubTexture name="JLeft0005" x="1070" y="810" width="526" height="401"/>
-	<SubTexture name="JLeft0006" x="1070" y="810" width="526" height="401"/>
-	<SubTexture name="JLeft0007" x="1070" y="810" width="526" height="401"/>
-	<SubTexture name="JLeft0008" x="1070" y="810" width="526" height="401"/>
+	<SubTexture name="JLeft0000" x="0" y="810" width="526" height="399"/>
+	<SubTexture name="JLeft0001" x="0" y="810" width="526" height="399"/>
+	<SubTexture name="JLeft0002" x="535" y="810" width="526" height="399"/>
+	<SubTexture name="JLeft0003" x="535" y="810" width="526" height="399"/>
+	<SubTexture name="JLeft0004" x="1070" y="810" width="526" height="399"/>
+	<SubTexture name="JLeft0005" x="1070" y="810" width="526" height="399"/>
+	<SubTexture name="JLeft0006" x="1070" y="810" width="526" height="399"/>
+	<SubTexture name="JLeft0007" x="1070" y="810" width="526" height="399"/>
+	<SubTexture name="JLeft0008" x="1070" y="810" width="526" height="399"/>
 	<SubTexture name="JRight0000" x="1605" y="810" width="522" height="364"/>
 	<SubTexture name="JRight0001" x="1605" y="810" width="522" height="364"/>
 	<SubTexture name="JRight0002" x="2136" y="810" width="522" height="364"/>
@@ -59,13 +59,13 @@
 	<SubTexture name="JRight0006" x="3198" y="810" width="522" height="364"/>
 	<SubTexture name="JRight0007" x="3198" y="810" width="522" height="364"/>
 	<SubTexture name="JRight0008" x="3198" y="810" width="522" height="364"/>
-	<SubTexture name="JUp0000" x="0" y="1220" width="426" height="435"/>
-	<SubTexture name="JUp0001" x="0" y="1220" width="426" height="435"/>
-	<SubTexture name="JUp0002" x="435" y="1220" width="426" height="435"/>
-	<SubTexture name="JUp0003" x="435" y="1220" width="426" height="435"/>
-	<SubTexture name="JUp0004" x="870" y="1220" width="426" height="435"/>
-	<SubTexture name="JUp0005" x="870" y="1220" width="426" height="435"/>
-	<SubTexture name="JUp0006" x="870" y="1220" width="426" height="435"/>
-	<SubTexture name="JUp0007" x="870" y="1220" width="426" height="435"/>
-	<SubTexture name="JUp0008" x="870" y="1220" width="426" height="435"/>
+	<SubTexture name="JUp0000" x="0" y="1218" width="426" height="425"/>
+	<SubTexture name="JUp0001" x="0" y="1218" width="426" height="425"/>
+	<SubTexture name="JUp0002" x="435" y="1218" width="426" height="425"/>
+	<SubTexture name="JUp0003" x="435" y="1218" width="426" height="425"/>
+	<SubTexture name="JUp0004" x="870" y="1218" width="426" height="425"/>
+	<SubTexture name="JUp0005" x="870" y="1218" width="426" height="425"/>
+	<SubTexture name="JUp0006" x="870" y="1218" width="426" height="425"/>
+	<SubTexture name="JUp0007" x="870" y="1218" width="426" height="425"/>
+	<SubTexture name="JUp0008" x="870" y="1218" width="426" height="425"/>
 </TextureAtlas>

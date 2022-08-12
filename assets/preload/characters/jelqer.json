@@ -1,58 +1,57 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-9,
-				-169
+				-191
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "JDown"
-		},
-		{
-			"offsets": [
-				-117,
-				-110
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "JUp"
-		},
-		{
-			"offsets": [
-				-83,
-				-188
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "JRight"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				9,
-				-148
-			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "JLeft",
+			"name": "JDown",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
+				-114,
+				-121
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "JUp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-89,
+				-188
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "JRight",
+			"indices": []
+		},
+		{
+			"offsets": [
+				9,
+				-150
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "JLeft"
+		},
+		{
+			"offsets": [
 				-3,
 				-153
 			],
-			"anim": "danceLeft",
+			"loop": false,
 			"fps": 24,
-			"name": "JIdle",
+			"anim": "danceLeft",
 			"indices": [
 				0,
 				1,
@@ -69,17 +68,17 @@
 				12,
 				13,
 				14
-			]
+			],
+			"name": "JIdle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-3,
 				-153
 			],
-			"anim": "danceRight",
+			"loop": false,
 			"fps": 24,
-			"name": "JIdle",
+			"anim": "danceRight",
 			"indices": [
 				15,
 				16,
@@ -96,14 +95,15 @@
 				27,
 				28,
 				29
-			]
+			],
+			"name": "JIdle"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/jelqer",
 	"position": [
 		-110,
-		130
+		160
 	],
 	"healthicon": "jelqer",
 	"flip_x": false,

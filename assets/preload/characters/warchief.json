@@ -1,59 +1,123 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-30,
 				-90
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "WIdle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "WIdle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-17,
 				-89
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "WLeft",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "WLeft"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-73,
 				-111
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "WDown",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "WDown"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-84,
 				-64
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "WUp",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "WUp"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-81,
 				-72
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "WRight",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "WRight"
+		},
+		{
+			"offsets": [
+				-73,
+				-111
+			],
+			"indices": [
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "singDOWN-loop",
+			"loop": true,
+			"name": "WDown"
+		},
+		{
+			"offsets": [
+				-84,
+				-64
+			],
+			"indices": [
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "singUP-loop",
+			"loop": true,
+			"name": "WUp"
+		},
+		{
+			"offsets": [
+				-17,
+				-89
+			],
+			"indices": [
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"loop": true,
+			"name": "WLeft"
+		},
+		{
+			"offsets": [
+				-81,
+				-72
+			],
+			"indices": [
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"loop": true,
+			"name": "WRight"
 		}
 	],
 	"no_antialiasing": false,
