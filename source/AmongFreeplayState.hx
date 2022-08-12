@@ -537,7 +537,7 @@ class AmongFreeplayState extends MusicBeatState {
 
         weeks.push
         ({
-            songs: [["TOUWKF", "powers", 'powers', FlxColor.fromRGB(80, 173, 235)],
+            songs: [["ROOMCODE", "powers", 'powers', FlxColor.fromRGB(80, 173, 235)],
             ["Posussium", "bananungus", 'bananungus', FlxColor.fromRGB(235, 188, 80)]],
 
             section: 2

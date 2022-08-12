@@ -16,7 +16,7 @@ class ShopState extends MusicBeatState
     public var camUpper:FlxCamera;
     public var camOther:FlxCamera;
     
-    var charList:Array<String> = ['none','amongbf','redp','greenp', 'blackp','bfairship', 'bfg', 'bfmira', 'bfpolus', 'bfsauce'];
+    var charList:Array<String> = ['none','amongbf','redp','greenp', 'blackp','bfairship', 'bfg', 'bfmira', 'bfpolus', 'bfsauce', 'dripbf'];
     var curSelected:Int = 0;
     var things:FlxTypedGroup<FlxText>;
 
