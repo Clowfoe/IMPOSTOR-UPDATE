@@ -1557,6 +1557,20 @@
 						"Add Camera Zoom",
 						"0.01",
 						"0.02"
+					],
+					[
+						125617.647058823,
+						-1,
+						"flash",
+						"",
+						""
+					],
+					[
+						125625,
+						-1,
+						"Play Animation",
+						"death",
+						"Dad"
 					]
 				],
 				"bpm": 0,
@@ -1583,6 +1597,15 @@
 						"0"
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false

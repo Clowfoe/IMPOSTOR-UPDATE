@@ -2424,6 +2424,9 @@ var wiggleEffect:WiggleEffect;
 
 				case 'sussus-moogus':
 					startVideo('polus1');
+
+				case 'oversight':
+					startVideo('oversight');
 				
 				/*case 'mando':
 					startVideo('polus1');
