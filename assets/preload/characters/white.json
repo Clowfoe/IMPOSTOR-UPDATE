@@ -2,65 +2,65 @@
 	"animations": [
 		{
 			"offsets": [
-				-12,
-				-126
+				-5,
+				-128
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
-			"name": "Down"
+			"name": "Down White"
 		},
 		{
 			"offsets": [
-				58,
+				60,
 				-100
 			],
 			"loop": false,
 			"fps": 28,
 			"anim": "idle",
 			"indices": [],
-			"name": "Idle"
+			"name": "Idle White"
 		},
 		{
 			"offsets": [
-				91,
-				-102
+				93,
+				-103
 			],
 			"loop": false,
 			"fps": 28,
 			"anim": "singLEFT",
 			"indices": [],
-			"name": "Left"
+			"name": "Left White"
 		},
 		{
 			"offsets": [
-				-39,
-				-62
+				-37,
+				-65
 			],
 			"loop": false,
 			"fps": 28,
 			"anim": "singUP",
 			"indices": [],
-			"name": "Up"
+			"name": "Up White"
 		},
 		{
 			"offsets": [
-				-102,
+				-106,
 				-103
 			],
 			"loop": false,
 			"fps": 28,
 			"anim": "singRIGHT",
 			"indices": [],
-			"name": "Right"
+			"name": "Right White"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/white",
 	"position": [
-		-80,
-		215
+		-10,
+		210
 	],
 	"healthicon": "white",
 	"flip_x": false,

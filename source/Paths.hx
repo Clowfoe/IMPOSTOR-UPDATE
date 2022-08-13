@@ -179,6 +179,10 @@ class Paths
 		return getPath('data/$key.txt', TEXT, library);
 	}
 
+	inline static public function deathData(key:String, ?library:String){
+		return getPath('sounds/deaths/$key/info.txt', TEXT, library);
+	}
+
 	inline static public function xml(key:String, ?library:String)
 	{
 		return getPath('data/$key.xml', TEXT, library);

@@ -396,6 +396,17 @@ var wiggleEffect:WiggleEffect;
 
 	var charShader:BWShader;
 
+	var extraZoom:Float = 0;
+
+	var camBopInterval:Int = 4;
+	var camBopIntensity:Float = 1;
+
+	var twistShit:Float = 1;
+	var twistAmount:Float = 1;
+	var camTwistIntensity:Float = 0;
+	var camTwistIntensity2:Float = 3;
+	var camTwist:Bool = false;
+
 	override public function create()
 	{
 		super.create();
@@ -3831,7 +3842,7 @@ var wiggleEffect:WiggleEffect;
 
 		if (camZooming && !cameraLocked)
 		{
-			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, FlxG.camera.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
+			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom + extraZoom, FlxG.camera.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
 			camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
 		}
 
@@ -4282,6 +4293,33 @@ var wiggleEffect:WiggleEffect;
 
 		
 		switch(eventName) {	
+			case 'Extra Cam Zoom':
+				var _zoom:Float = Std.parseFloat(value1);
+				if(Math.isNaN(_zoom)) _zoom = 0;
+				extraZoom = _zoom;
+			case 'Camera Twist':
+				camTwist = true;
+				var _intensity:Float = Std.parseFloat(value1);
+				if(Math.isNaN(_intensity)) _intensity = 0;
+				var _intensity2:Float = Std.parseFloat(value2);
+				if(Math.isNaN(_intensity2)) _intensity2 = 0;
+				camTwistIntensity = _intensity;
+				camTwistIntensity2 = _intensity2;
+				if(_intensity2 == 0){
+					camTwist = false;
+					FlxTween.tween(camHUD, {angle: 0}, 1, {ease: FlxEase.sineInOut});
+					FlxTween.tween(camGame, {angle: 0}, 1, {ease: FlxEase.sineInOut});
+				}
+
+			case 'Alter Camera Bop':
+				var _intensity:Float = Std.parseFloat(value1);
+				if(Math.isNaN(_intensity)) _intensity = 1;
+				var _interval:Int = Std.parseInt(value2);
+				if(Math.isNaN(_interval)) _interval = 4;
+
+				camBopIntensity = _intensity;
+				camBopInterval = _interval;
+
 			case 'Lights out':
 				if(charShader == null){
 					charShader = new BWShader(0.01, 0.12, true);
@@ -5559,6 +5597,18 @@ var wiggleEffect:WiggleEffect;
 		lastStepHit = curStep;
 		setOnLuas('curStep', curStep);
 		callOnLuas('onStepHit', []);
+
+		if(camTwist){
+			if(curStep % 4 == 0){
+				FlxTween.tween(camHUD, {y: -6*camTwistIntensity2}, Conductor.stepCrochet*0.002, {ease: FlxEase.circOut});
+				FlxTween.tween(camGame.scroll, {y: 12}, Conductor.stepCrochet*0.002, {ease: FlxEase.sineIn});
+			}
+
+			if(curStep % 4 == 2){
+				FlxTween.tween(camHUD, {y: 0}, Conductor.stepCrochet*0.002, {ease: FlxEase.sineIn});
+				FlxTween.tween(camGame.scroll, {y: 0}, Conductor.stepCrochet*0.002, {ease: FlxEase.sineIn});
+			}
+		}
 	}
 
 	var lightningStrikeBeat:Int = 0;
@@ -5599,10 +5649,24 @@ var wiggleEffect:WiggleEffect;
 		{
 			moveCameraSection(Std.int(curStep / 16));
 		}
-		if (camZooming && FlxG.camera.zoom < 1.35 && ClientPrefs.camZooms && curBeat % 4 == 0 && !cameraLocked)
+		if (camZooming && FlxG.camera.zoom < 1.35 && ClientPrefs.camZooms && curBeat % camBopInterval == 0 && !cameraLocked)
 		{
-			FlxG.camera.zoom += 0.015;
-			camHUD.zoom += 0.03;
+			FlxG.camera.zoom += 0.015 * camBopIntensity;
+			camHUD.zoom += 0.03 * camBopIntensity;
+		} /// WOOO YOU CAN NOW MAKE IT AWESOME
+
+		if(camTwist){
+			if(curBeat % 2 == 0){
+				twistShit = twistAmount;
+			}else{
+				twistShit = -twistAmount;
+			}
+			camHUD.angle = twistShit * camTwistIntensity2;
+			camGame.angle = twistShit * camTwistIntensity2;
+			FlxTween.tween(camHUD, {angle: twistShit*camTwistIntensity}, Conductor.stepCrochet*0.002, {ease: FlxEase.circOut});
+			FlxTween.tween(camHUD, {x: -twistShit*camTwistIntensity}, Conductor.crochet*0.001, {ease: FlxEase.linear});
+			FlxTween.tween(camGame, {angle: twistShit*camTwistIntensity}, Conductor.stepCrochet*0.002, {ease: FlxEase.circOut});
+			FlxTween.tween(camGame, {x: -twistShit*camTwistIntensity}, Conductor.crochet*0.001, {ease: FlxEase.linear});
 		}
 
 		iconP1.setGraphicSize(Std.int(iconP1.width + 30));

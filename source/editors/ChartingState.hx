@@ -72,6 +72,9 @@ class ChartingState extends MusicBeatState
 	var eventStuff:Array<Dynamic> =
 	[
 		['', "Nothing. Yep, that's right."],
+		['Alter Camera Bop', '1 : alter intensity\n2 : alter interval'],
+		['Camera Twist', '1: intensity 1\n2: intensity 2'],
+		['Extra Cam Zoom', '1: the zoom??? self explanatory lol'],
 		['Hey!', "Plays the \"Hey!\" animation from Bopeebo,\nValue 1: BF = Only Boyfriend, GF = Only Girlfriend,\nSomething else = Both.\nValue 2: Custom animation duration,\nleave it blank for 0.6s"],
 		['Set GF Speed', "Sets GF head bopping speed,\nValue 1: 1 = Normal speed,\n2 = 1/2 speed, 4 = 1/4 speed etc.\nUsed on Fresh during the beatbox parts.\n\nWarning: Value must be integer!"],
 		['Blammed Lights', "Value 1: 0 = Turn off, 1 = Blue, 2 = Green,\n3 = Pink, 4 = Red, 5 = Orange, Anything else = Random."],
@@ -1241,12 +1244,12 @@ class ChartingState extends MusicBeatState
 
 		if (!blockInput)
 		{
-			if (FlxG.keys.justPressed.ESCAPE)
+			/*if (FlxG.keys.justPressed.ESCAPE) HAHAAAA FUCK YOUUUU
 			{
 				autosaveSong();
 				LoadingState.loadAndSwitchState(new editors.EditorPlayState(sectionStartTime()));
-			}
-			if (FlxG.keys.justPressed.ENTER)
+			}*/
+			if (FlxG.keys.justPressed.ENTER || FlxG.keys.justPressed.ESCAPE)
 			{
 				autosaveSong();
 				FlxG.mouse.visible = false;
