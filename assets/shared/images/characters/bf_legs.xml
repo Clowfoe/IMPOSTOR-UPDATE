@@ -1,41 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="bf_legs.png">
-	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="fail running0000" x="0" y="0" width="261" height="235" frameX="-57" frameY="-52" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0001" x="291" y="0" width="480" height="314" frameX="0" frameY="-4" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0002" x="801" y="0" width="496" height="314" frameX="-1" frameY="-2" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0003" x="1327" y="0" width="516" height="301" frameX="-2" frameY="-1" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0004" x="0" y="344" width="516" height="302" frameX="-4" frameY="-3" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0005" x="546" y="344" width="520" height="299" frameX="-1" frameY="-8" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0006" x="1096" y="344" width="490" height="286" frameX="-3" frameY="-28" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0007" x="0" y="676" width="453" height="273" frameX="-5" frameY="-48" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0008" x="483" y="676" width="368" height="259" frameX="-27" frameY="-65" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0009" x="881" y="676" width="291" height="275" frameX="-57" frameY="-53" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0010" x="1202" y="676" width="405" height="265" frameX="-75" frameY="-53" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0011" x="0" y="981" width="518" height="298" frameX="0" frameY="-4" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0012" x="548" y="981" width="519" height="303" frameX="-1" frameY="-2" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0013" x="1097" y="981" width="519" height="306" frameX="-2" frameY="-1" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0014" x="0" y="1317" width="489" height="314" frameX="-4" frameY="0" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0015" x="519" y="1317" width="457" height="313" frameX="-1" frameY="-8" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0016" x="1006" y="1317" width="392" height="296" frameX="-3" frameY="-28" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="fail running0017" x="1428" y="1317" width="343" height="280" frameX="-5" frameY="-48" frameWidth="521" frameHeight="328"/>
-	<SubTexture name="pies corriendo0000" x="0" y="1661" width="261" height="235" frameX="-58" frameY="-52" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0001" x="291" y="1661" width="481" height="316" frameX="0" frameY="-3" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0002" x="802" y="1661" width="497" height="315" frameX="-1" frameY="-2" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0003" x="1329" y="1661" width="515" height="302" frameX="-3" frameY="-1" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0004" x="0" y="2007" width="515" height="303" frameX="-5" frameY="-3" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0005" x="545" y="2007" width="521" height="300" frameX="-1" frameY="-8" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0006" x="1096" y="2007" width="490" height="287" frameX="-3" frameY="-28" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0007" x="0" y="2340" width="452" height="273" frameX="-6" frameY="-49" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0008" x="482" y="2340" width="368" height="259" frameX="-28" frameY="-65" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0009" x="880" y="2340" width="291" height="276" frameX="-58" frameY="-53" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0010" x="1201" y="2340" width="406" height="266" frameX="-75" frameY="-53" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0011" x="0" y="2646" width="518" height="300" frameX="0" frameY="-3" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0012" x="548" y="2646" width="519" height="304" frameX="-1" frameY="-2" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0013" x="1097" y="2646" width="519" height="307" frameX="-3" frameY="-1" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0014" x="0" y="2983" width="488" height="315" frameX="-5" frameY="0" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0015" x="518" y="2983" width="457" height="314" frameX="-1" frameY="-8" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0016" x="1005" y="2983" width="392" height="297" frameX="-4" frameY="-28" frameWidth="522" frameHeight="329"/>
-	<SubTexture name="pies corriendo0017" x="1427" y="2983" width="343" height="280" frameX="-6" frameY="-49" frameWidth="522" frameHeight="329"/>
+	<SubTexture name="run legs0000" x="0" y="0" width="195" height="206" frameX="-100" frameY="-60" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0001" x="0" y="0" width="195" height="206" frameX="-100" frameY="-60" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0002" x="215" y="0" width="205" height="199" frameX="-91" frameY="-60" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0003" x="215" y="0" width="205" height="199" frameX="-91" frameY="-60" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0004" x="440" y="0" width="368" height="196" frameX="-17" frameY="-10" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0005" x="440" y="0" width="368" height="196" frameX="-17" frameY="-10" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0006" x="0" y="226" width="381" height="216" frameX="0" frameY="0" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0007" x="0" y="226" width="381" height="216" frameX="0" frameY="0" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0008" x="401" y="226" width="356" height="209" frameX="-2" frameY="-25" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0009" x="401" y="226" width="356" height="209" frameX="-2" frameY="-25" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0010" x="777" y="226" width="201" height="187" frameX="-101" frameY="-58" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0011" x="777" y="226" width="201" height="187" frameX="-101" frameY="-58" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0012" x="0" y="462" width="246" height="190" frameX="-88" frameY="-57" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0013" x="0" y="462" width="246" height="190" frameX="-88" frameY="-57" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0014" x="266" y="462" width="391" height="189" frameX="-33" frameY="-24" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0015" x="266" y="462" width="391" height="189" frameX="-33" frameY="-24" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0016" x="0" y="672" width="388" height="215" frameX="-19" frameY="-10" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0017" x="0" y="672" width="388" height="215" frameX="-19" frameY="-10" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0018" x="408" y="672" width="370" height="215" frameX="-13" frameY="-22" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0019" x="408" y="672" width="370" height="215" frameX="-13" frameY="-22" frameWidth="424" frameHeight="266"/>
 </TextureAtlas>

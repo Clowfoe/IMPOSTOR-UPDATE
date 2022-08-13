@@ -84,12 +84,12 @@ function onUpdate()
         triggerEvent('Camera Follow Pos','','')
     end
     if curStep == 1 then
-        setProperty('defaultCamZoom',0.6)
+        setProperty('defaultCamZoom',0.3)
 		followchars = true
-        xx = 700
-        yy = 150
-        xx2 = 1200
-        yy2 = 150
+        xx = 1634.05
+        yy = -54.3
+        xx2 = 1634.05
+        yy2 = -54.3
     end
     if curBeat == 64 then
         setProperty('defaultCamZoom', 0.4)
@@ -114,21 +114,21 @@ function onUpdate()
         xx2 = 1200
         yy2 = 150
     end
-    if curBeat == 157 then
+    if curBeat == 155 then
         setProperty('defaultCamZoom', 0.8)
         followchars = true
-        xx = 1000
+        xx = 450
         yy = 150
-        xx2 = 1000
+        xx2 = 450
         yy2 = 150
     end
     if curBeat == 160 then
-        setProperty('defaultCamZoom', 0.3)
+        setProperty('defaultCamZoom', 0.4)
         followchars = true
-        xx = 1634.05
-        yy = -54.3
-        xx2 = 1634.05
-        yy2 = -54.3
+        xx = 800
+        yy = 150
+        xx2 = 1200
+        yy2 = 150
     end
     if curBeat == 192 then
         setProperty('defaultCamZoom',0.6)

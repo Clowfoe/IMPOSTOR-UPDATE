@@ -101,7 +101,9 @@ class ChartingState extends MusicBeatState
 		['Cam lock in Voting Time', 'Value 1: "in" for in zoom\nValue 2: "dad" for dad'],
 		['Who Buzz', ''],
 		['Dave AUGH', ''],
-		['Reactor Beep', 'Reactor whomp err']
+		['Reactor Beep', 'Reactor whomp err'],
+		['scream danger', 'danfer'],
+		['unscream danger', 'based and Black Pilled ha ha memes']
 	];
 
 	var _file:FileReference;

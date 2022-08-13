@@ -1,110 +1,77 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				519,
-				325
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "BLACK RIGHT"
-		},
-		{
 			"offsets": [
-				284,
-				319
+				124,
+				287
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "BLACK DOWN"
-		},
-		{
-			"offsets": [
-				462,
-				270
-			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "BLACK LEFT"
+			"fps": 24,
+			"name": "BLACK LEFT",
+			"indices": []
 		},
 		{
-			"offsets": [
-				384,
-				537
-			],
 			"loop": false,
+			"offsets": [
+				176,
+				345 
+			],
+			"anim": "singRIGHT",
 			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "BLACK UP"
+			"name": "BLACK RIGHT",
+			"indices": []
 		},
 		{
-			"loop": true,
+			"loop": false,
 			"offsets": [
-				454,
-				326
+				-53,
+				327
 			],
-			"anim": "idle",
+			"anim": "singDOWN",
 			"fps": 24,
-			"name": "BLACK IDLE",
+			"name": "BLACK DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				54,
+				542
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BLACK UP",
 			"indices": []
 		},
 		{
 			"offsets": [
-				236,
-				431
+				100,
+				350
 			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
-			"anim": "singRIGHT-alt",
-			"loop": false,
-			"name": "right alt"
+			"anim": "idle",
+			"indices": [],
+			"name": "BLACK IDLE"
 		},
 		{
 			"offsets": [
-				407,
-				486
+				132,
+				1033
 			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singUP-alt",
 			"loop": false,
-			"name": "up alt"
-		},
-		{
-			"offsets": [
-				559,
-				215
-			],
-			"indices": [],
 			"fps": 24,
-			"anim": "singDOWN-alt",
-			"loop": false,
-			"name": "down alt"
-		},
-		{
-			"offsets": [
-				400,
-				291
-			],
+			"anim": "scream",
 			"indices": [],
-			"fps": 24,
-			"anim": "singLEFT-alt",
-			"loop": false,
-			"name": "left alt"
+			"name": "BLACK SCREAM"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/blackrun",
 	"position": [
-		0,
-		290
+		-290,
+		-240
 	],
 	"healthicon": "black",
 	"flip_x": false,
@@ -114,9 +81,9 @@
 		79
 	],
 	"camera_position": [
-		-430,
-		-190
+		-880,
+		-100
 	],
-	"sing_duration": 6.1,
+	"sing_duration": 4,
 	"scale": 1.3
 }

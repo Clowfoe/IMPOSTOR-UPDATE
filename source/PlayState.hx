@@ -282,6 +282,7 @@ var wiggleEffect:WiggleEffect;
 	//loggo
 	var peopleloggo:FlxSprite;
 	var toogusblue:FlxSprite;
+	var airshipskyflash:FlxSprite;
 	var toogusorange:FlxSprite;
 	var tooguswhite:FlxSprite;
 	var speaker:FlxSprite;
@@ -1619,6 +1620,16 @@ var wiggleEffect:WiggleEffect;
 				sky.scrollFactor.set(0, 0);
 				add(sky);
 
+				airshipskyflash = new FlxSprite(0, -200);
+				airshipskyflash.frames = Paths.getSparrowAtlas('airship/screamsky', 'impostor');
+				airshipskyflash.animation.addByPrefix('bop', 'scream sky  instance 1', 24, false);
+				airshipskyflash.setGraphicSize(Std.int(airshipskyflash.width * 3));
+				airshipskyflash.antialiasing = false;
+				airshipskyflash.scrollFactor.set(1, 1);
+				airshipskyflash.active = true;
+				add(airshipskyflash);
+				airshipskyflash.alpha = 0;
+
 				for(i in 0...2) {
 					var cloud:FlxSprite = new FlxSprite(-1148.05, -142.2).loadGraphic(Paths.image('airship/farthestClouds', 'impostor'));
 					switch(i) {
@@ -1701,6 +1712,16 @@ var wiggleEffect:WiggleEffect;
 					add(platform);
 					airshipPlatform.add(platform);
 				}
+
+				airshipskyflash = new FlxSprite(0, -300);
+				airshipskyflash.frames = Paths.getSparrowAtlas('airship/screamsky', 'impostor');
+				airshipskyflash.animation.addByPrefix('bop', 'scream sky  instance 1', 24, false);
+				airshipskyflash.setGraphicSize(Std.int(airshipskyflash.width * 3));
+				airshipskyflash.antialiasing = false;
+				airshipskyflash.scrollFactor.set(1, 1);
+				airshipskyflash.active = true;
+				add(airshipskyflash);
+				airshipskyflash.alpha = 0;
 
 				
 
@@ -3499,7 +3520,8 @@ var wiggleEffect:WiggleEffect;
 				boyfriend.y = bfAnchorPoint[1] + legPosY[bfLegs.animation.curAnim.curFrame];
 			}
 			else
-				bfLegs.alpha = 0;
+				bfLegs.alpha = 1;
+				
 		}
 
 		if(dad.curCharacter == 'black-run')
@@ -4482,6 +4504,14 @@ var wiggleEffect:WiggleEffect;
 					case 1:
 						bothOpponentsSing = true;
 				}
+
+			case 'scream danger':
+				airshipskyflash.alpha = 1;
+				airshipskyflash.animation.play('bop', false);
+
+			case 'unscream danger':
+				airshipskyflash.alpha = 0;
+
 
 			case 'Opponent Two':
 				var charType:Int = Std.parseInt(value1);
@@ -5692,6 +5722,11 @@ var wiggleEffect:WiggleEffect;
 
 		if(curBeat % 1 == 0) {
 			if(dad.curCharacter == 'black-run')
+				dadlegs.dance();
+		}
+
+		if(curBeat % 1 == 0) {
+			if(dad.curCharacter == 'blackalt')
 				dadlegs.dance();
 		}
 
