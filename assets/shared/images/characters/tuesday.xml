@@ -82,16 +82,6 @@
 	<SubTexture name="idle0007" x="643" y="2332" width="297" height="345" frameX="-10" frameY="-1" frameWidth="318" frameHeight="346"/>
 	<SubTexture name="idle0008" x="960" y="2332" width="297" height="346" frameX="-10" frameY="0" frameWidth="318" frameHeight="346"/>
 	<SubTexture name="idle0009" x="960" y="2332" width="297" height="346" frameX="-10" frameY="0" frameWidth="318" frameHeight="346"/>
-	<SubTexture name="idle0000" x="3235" y="2332" width="332" height="246" frameX="0" frameY="-5" frameWidth="332" frameHeight="251"/>
-	<SubTexture name="idle0001" x="3587" y="2332" width="332" height="246" frameX="0" frameY="-5" frameWidth="332" frameHeight="251"/>
-	<SubTexture name="idle0002" x="0" y="2718" width="330" height="245" frameX="-1" frameY="-5" frameWidth="332" frameHeight="251"/>
-	<SubTexture name="idle0003" x="0" y="2718" width="330" height="245" frameX="-1" frameY="-5" frameWidth="332" frameHeight="251"/>
-	<SubTexture name="idle0004" x="350" y="2718" width="327" height="249" frameX="-2" frameY="-1" frameWidth="332" frameHeight="251"/>
-	<SubTexture name="idle0005" x="350" y="2718" width="327" height="249" frameX="-2" frameY="-1" frameWidth="332" frameHeight="251"/>
-	<SubTexture name="idle0006" x="697" y="2718" width="324" height="249" frameX="-3" frameY="-1" frameWidth="332" frameHeight="251"/>
-	<SubTexture name="idle0007" x="697" y="2718" width="324" height="249" frameX="-3" frameY="-1" frameWidth="332" frameHeight="251"/>
-	<SubTexture name="idle0008" x="1041" y="2718" width="324" height="250" frameX="-3" frameY="0" frameWidth="332" frameHeight="251"/>
-	<SubTexture name="idle0009" x="1041" y="2718" width="324" height="250" frameX="-3" frameY="0" frameWidth="332" frameHeight="251"/>
 	<SubTexture name="left0000" x="1277" y="2332" width="326" height="349" frameX="0" frameY="-2" frameWidth="329" frameHeight="351"/>
 	<SubTexture name="left0001" x="1277" y="2332" width="326" height="349" frameX="0" frameY="-2" frameWidth="329" frameHeight="351"/>
 	<SubTexture name="left0002" x="1623" y="2332" width="326" height="351" frameX="-3" frameY="0" frameWidth="329" frameHeight="351"/>
@@ -112,6 +102,16 @@
 	<SubTexture name="right0007" x="2315" y="2332" width="326" height="337" frameX="0" frameY="-5" frameWidth="329" frameHeight="342"/>
 	<SubTexture name="right0008" x="2315" y="2332" width="326" height="337" frameX="0" frameY="-5" frameWidth="329" frameHeight="342"/>
 	<SubTexture name="right0009" x="2315" y="2332" width="326" height="337" frameX="0" frameY="-5" frameWidth="329" frameHeight="342"/>
+	<SubTexture name="tomidle0000" x="3235" y="2332" width="332" height="246" frameX="0" frameY="-5" frameWidth="332" frameHeight="251"/>
+	<SubTexture name="tomidle0001" x="3587" y="2332" width="332" height="246" frameX="0" frameY="-5" frameWidth="332" frameHeight="251"/>
+	<SubTexture name="tomidle0002" x="0" y="2718" width="330" height="245" frameX="-1" frameY="-5" frameWidth="332" frameHeight="251"/>
+	<SubTexture name="tomidle0003" x="0" y="2718" width="330" height="245" frameX="-1" frameY="-5" frameWidth="332" frameHeight="251"/>
+	<SubTexture name="tomidle0004" x="350" y="2718" width="327" height="249" frameX="-2" frameY="-1" frameWidth="332" frameHeight="251"/>
+	<SubTexture name="tomidle0005" x="350" y="2718" width="327" height="249" frameX="-2" frameY="-1" frameWidth="332" frameHeight="251"/>
+	<SubTexture name="tomidle0006" x="697" y="2718" width="324" height="249" frameX="-3" frameY="-1" frameWidth="332" frameHeight="251"/>
+	<SubTexture name="tomidle0007" x="697" y="2718" width="324" height="249" frameX="-3" frameY="-1" frameWidth="332" frameHeight="251"/>
+	<SubTexture name="tomidle0008" x="1041" y="2718" width="324" height="250" frameX="-3" frameY="0" frameWidth="332" frameHeight="251"/>
+	<SubTexture name="tomidle0009" x="1041" y="2718" width="324" height="250" frameX="-3" frameY="0" frameWidth="332" frameHeight="251"/>
 	<SubTexture name="up0000" x="2661" y="2332" width="263" height="364" frameX="-4" frameY="-2" frameWidth="271" frameHeight="366"/>
 	<SubTexture name="up0001" x="2661" y="2332" width="263" height="364" frameX="-4" frameY="-2" frameWidth="271" frameHeight="366"/>
 	<SubTexture name="up0002" x="2944" y="2332" width="271" height="366"/>

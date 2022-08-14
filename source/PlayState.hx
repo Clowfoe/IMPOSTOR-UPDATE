@@ -336,6 +336,7 @@ var wiggleEffect:WiggleEffect;
 	//toogus
 	var saxguy:FlxSprite;
 	var lightoverlay:FlxSprite;
+	var yellowdead:FlxSprite;
 	var mainoverlay:FlxSprite;
 	var crowd2:FlxSprite;
 	var walker:WalkingCrewmate;
@@ -1147,8 +1148,16 @@ var wiggleEffect:WiggleEffect;
 						bg.scrollFactor.set(1, 1);
 						bg.active = false;
 						add(bg);	
-
-
+			
+			case 'tomtus': //emihead made peak
+				curStage = 'tomtus';	
+				
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/tuesday', 'impostor'));
+						bg.updateHitbox();
+						bg.antialiasing = true;
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
+						add(bg);	
 
 				
 
@@ -1892,6 +1901,15 @@ var wiggleEffect:WiggleEffect;
 				lightoverlay.alpha = 0.83;
 				lightoverlay.blend = MULTIPLY;
 				add(lightoverlay);
+
+			case 'airshipRoom':
+				var yellowdead:FlxSprite = new FlxSprite(-2440, 336).loadGraphic(Paths.image('airship/newAirship/YELLOW', 'impostor'));
+				yellowdead.antialiasing = true;
+				yellowdead.scrollFactor.set(1, 1);
+				yellowdead.active = false;
+				if(SONG.song.toLowerCase() == 'oversight') {
+					add(yellowdead);
+				}
 
 
 			case 'polus2':
