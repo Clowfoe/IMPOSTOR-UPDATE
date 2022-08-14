@@ -103,7 +103,9 @@ class ChartingState extends MusicBeatState
 		['Dave AUGH', ''],
 		['Reactor Beep', 'Reactor whomp err'],
 		['scream danger', 'danfer'],
-		['unscream danger', 'based and Black Pilled ha ha memes']
+		['unscream danger', 'based and Black Pilled ha ha memes'],
+		['tuesdayblast', 'loud sound'],
+		['HUD Fade', 'fades da hud']
 	];
 
 	var _file:FileReference;

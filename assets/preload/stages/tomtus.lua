@@ -84,6 +84,14 @@ function onUpdate()
     else
         triggerEvent('Camera Follow Pos','','')
     end
+    if curStep == 983 then
+        setProperty('defaultCamZoom',0.8)
+		followchars = true
+        xx = 1000
+        yy = 650
+        xx2 = 1000
+        yy2 = 650
+    end
     
 end
 

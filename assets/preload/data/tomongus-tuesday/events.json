@@ -581,6 +581,20 @@
 						"Play Animation",
 						"shoot",
 						"BF"
+					],
+					[
+						89750.0000000001,
+						-1,
+						"tuesdayblast",
+						"",
+						""
+					],
+					[
+						89545.4545454546,
+						-1,
+						"HUD Fade",
+						"1",
+						""
 					]
 				],
 				"bpm": 0,
@@ -593,20 +607,38 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						90272.7272727273,
-						-1,
-						"Play Animation",
-						"shot",
-						"Dad"
-					],
-					[
 						90363.6363636364,
 						-1,
 						"Alt Idle Animation",
 						"Dad",
 						"-alt"
+					],
+					[
+						90318.1818181819,
+						-1,
+						"Play Animation",
+						"shot",
+						"Dad"
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
