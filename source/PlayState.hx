@@ -412,6 +412,9 @@ var wiggleEffect:WiggleEffect;
 	{
 		super.create();
 
+		FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Inst');
+		FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Voices');
+
 		resetSpriteCache = false;
 
 		if (FlxG.sound.music != null)
@@ -3075,6 +3078,12 @@ var wiggleEffect:WiggleEffect;
 		#end
 		setOnLuas('songLength', songLength);
 		callOnLuas('onSongStart', []);
+
+		new FlxTimer().start(0.3, function(tmr:FlxTimer)
+		{
+		  	if(!paused)
+		    	resyncVocals();
+		});
 	}
 
 	var debugNum:Int = 0;
@@ -3433,23 +3442,30 @@ var wiggleEffect:WiggleEffect;
 		FlxTween.tween(camHUD, {alpha: 0}, 0.7, {ease: FlxEase.quadInOut});
 
 		triggerEventNote('Camera Follow Pos', '750', '500');
+		triggerEventNote('Change Character', '1', 'reaction');
 		stopEvents = true;
 
 		FlxG.sound.play(Paths.sound('teleport_sound'), 1);
 
+		
+
 		new FlxTimer().start(0.45, function(tmr:FlxTimer) {
 			colorShader.amount = 1;
 			FlxTween.tween(colorShader, {amount: 0}, 0.73, {ease: FlxEase.expoOut});
+			dad.animation.play('first', true);
+			//dad.stunned = true;
 		});
 
 		new FlxTimer().start(1.28, function(tmr:FlxTimer) {
 			colorShader.amount = 1;
+			gf.shader = colorShader.shader;
 			FlxTween.tween(colorShader, {amount: 0.1}, 0.55, {ease: FlxEase.expoOut});
 		});
 
 		new FlxTimer().start(1.93, function(tmr:FlxTimer) {
 			colorShader.amount = 1;
 			FlxTween.tween(colorShader, {amount: 0.2}, 0.2, {ease: FlxEase.expoOut});
+			dad.animation.play('second', true);
 		});
 
 		new FlxTimer().start(2.23, function(tmr:FlxTimer) {
@@ -3472,7 +3488,16 @@ var wiggleEffect:WiggleEffect;
 			
 		});
 
-		new FlxTimer().start(3.5, function(tmr:FlxTimer) {
+		new FlxTimer().start(2.8, function(tmr:FlxTimer) {
+			FlxTween.tween(gf, {"scale.y": 0}, 0.7, {ease: FlxEase.expoOut});
+			FlxTween.tween(gf, {"scale.x": 3.5}, 0.7, {ease: FlxEase.expoOut});
+		});
+
+		new FlxTimer().start(2.9, function(tmr:FlxTimer) {
+			dad.animation.play('third', true);
+		});
+
+		new FlxTimer().start(4.5, function(tmr:FlxTimer) {
 			FlxG.camera.fade(FlxColor.BLACK, 1.4, false, function()
 			{
 				MusicBeatState.switchState(new HenryState());
