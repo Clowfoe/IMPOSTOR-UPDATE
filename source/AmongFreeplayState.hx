@@ -169,7 +169,7 @@ class AmongFreeplayState extends MusicBeatState {
         portrait.animation.addByIndices('powers', 'Character', [24], null, 24, true);
         portrait.animation.addByIndices('kills', 'Character', [25], null, 24, true);
         portrait.animation.addByIndices('jerma', 'Character', [26], null, 24, true);
-        portrait.animation.addByIndices('who', 'Character', [26], null, 24, true);
+        portrait.animation.addByIndices('who', 'Character', [27], null, 24, true);
         portrait.animation.play('red');
         portrait.antialiasing = true;
         portrait.setPosition(304.65, -100);

@@ -2232,10 +2232,7 @@ var wiggleEffect:WiggleEffect;
 		overlay.alpha = 0.5;
 		
 
-		if (curSong == 'Reactor')
-		{
-			
-		}
+
 
 		if (curSong == 'Insane Streamer')
 			{
@@ -3531,11 +3528,7 @@ var wiggleEffect:WiggleEffect;
 				dad.y = dadAnchorPoint[1] + legPosY[dadlegs.animation.curAnim.curFrame];
 			}
 		
-		if(curSong == 'Reactor') {
-			if(orb != null) {
-			
-			}
-		}
+		
 
 		if(curSong == 'Boiling Point') {
 			
@@ -5765,7 +5758,7 @@ var wiggleEffect:WiggleEffect;
 		
 		
 				//drop 1
-		i
+		
 
 		switch (curStage)
 		{	
