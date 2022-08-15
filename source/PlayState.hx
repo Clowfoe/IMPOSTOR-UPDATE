@@ -1461,9 +1461,17 @@ var wiggleEffect:WiggleEffect;
 							//	add(lightsOutSprite); // lights out stuff
 			
 							//	add(stageCurtains);
-			case 'reactor':
+			case 'reactor2':
 					
-							curStage = 'reactor';
+							curStage = 'reactor2';
+
+							var bg0:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('reactor/wallbgthing', 'impostor'));
+							bg0.updateHitbox();
+							bg0.antialiasing = true;
+							bg0.scrollFactor.set(1, 1);
+							bg0.active = false;
+							add(bg0);
+
 							var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('reactor/floornew', 'impostor'));
 							bg.updateHitbox();
 							bg.antialiasing = true;
@@ -1471,7 +1479,7 @@ var wiggleEffect:WiggleEffect;
 							bg.active = false;
 							add(bg);	
 
-							toogusorange = new FlxSprite(0, 0);
+							toogusorange = new FlxSprite(875, 915);
 							toogusorange.frames = Paths.getSparrowAtlas('reactor/yellowcoti', 'impostor' );
 							toogusorange.animation.addByPrefix('bop', 'Pillars with crewmates instance 1', 24, false);
 							toogusorange.animation.play('bop');
@@ -1488,7 +1496,7 @@ var wiggleEffect:WiggleEffect;
 							bg2.active = false;
 							add(bg2);
 							
-							toogusblue = new FlxSprite(0, 0);
+							toogusblue = new FlxSprite(450, 995);
 							toogusblue.frames = Paths.getSparrowAtlas('reactor/browngeoff', 'impostor' );
 							toogusblue.animation.addByPrefix('bop', 'Pillars with crewmates instance 1', 24, false);
 							toogusblue.animation.play('bop');
@@ -1503,13 +1511,60 @@ var wiggleEffect:WiggleEffect;
 							bg3.antialiasing = true;
 							bg3.scrollFactor.set(1, 1);
 							bg3.active = false;
-							add(bg3);	
+							add(bg3);
+							
+							tooguswhite = new FlxSprite(1200, 100);
+							tooguswhite.frames = Paths.getSparrowAtlas('reactor/ball lol', 'impostor' );
+							tooguswhite.animation.addByPrefix('bop', 'core instance 1', 24, false);
+							tooguswhite.animation.play('bop');
+							tooguswhite.scrollFactor.set(1, 1);
+							tooguswhite.active = true;
+							tooguswhite.antialiasing = true;
+							add(tooguswhite);
 								
 
 			
 							//	add(stageCurtains);
 						
-											
+			case 'finalem':
+					
+							curStage = 'finalem';
+
+							var bg0:FlxSprite = new FlxSprite(-600,-400).loadGraphic(Paths.image('bgg'));
+							bg0.updateHitbox();
+							bg0.antialiasing = true;
+							bg0.scrollFactor.set(0.8, 0.8);
+							bg0.active = true;
+							bg0.scale.set(1.1, 1.1);
+							add(bg0);
+
+							var bg1:FlxSprite = new FlxSprite(800,-270).loadGraphic(Paths.image('dead'));
+							bg1.updateHitbox();
+							bg1.antialiasing = true;
+							bg1.scrollFactor.set(0.8, 0.8);
+							bg1.active = true;
+							bg1.scale.set(1.1, 1.1);
+							add(bg1);
+
+							var bg2:FlxSprite = new FlxSprite(-790,-530).loadGraphic(Paths.image('bg'));
+							bg2.updateHitbox();
+							bg2.antialiasing = true;
+							bg2.scrollFactor.set(0.9, 0.9);
+							bg2.active = true;
+							bg2.scale.set(1.1, 1.1);
+							add(bg2);
+
+							var bg3:FlxSprite = new FlxSprite(370,1200).loadGraphic(Paths.image('splat'));
+							bg3.updateHitbox();
+							bg3.antialiasing = true;
+							bg3.scrollFactor.set(1,1);
+							bg3.active = true;
+							bg3.scale.set(1.1, 1.1);
+							add(bg3);
+								
+							
+							//	add(stageCurtains);
+												
 			case 'defeat':
 					
 						
@@ -1817,6 +1872,20 @@ var wiggleEffect:WiggleEffect;
 				saxguy.scrollFactor.set(1, 1);					
 				saxguy.setGraphicSize(Std.int(saxguy.width * 0.9));
 				saxguy.active = true;
+			case 'reactor2':
+				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('reactor/frontblack', 'impostor'));
+				lightoverlay.antialiasing = true;
+				lightoverlay.scrollFactor.set(1, 1);
+				lightoverlay.active = false;
+				add(lightoverlay);
+
+				var mainoverlay:FlxSprite = new FlxSprite(750, 100).loadGraphic(Paths.image('reactor/yeahman', 'impostor'));
+				mainoverlay.antialiasing = true;
+				mainoverlay.animation.addByPrefix('bop', 'Reactor Overlay Top instance 1', 24, true);
+				mainoverlay.animation.play('bop');
+				mainoverlay.scrollFactor.set(1, 1);
+				mainoverlay.active = false;
+				add(mainoverlay);
 			case 'cargo':
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/lights help', 'impostor'));
 				lightoverlay.antialiasing = true;
@@ -1826,7 +1895,7 @@ var wiggleEffect:WiggleEffect;
 				lightoverlay.blend = ADD;
 				add(lightoverlay);
 
-				var mainoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/lights help', 'impostor'));
+				var mainoverlay:FlxSprite = new FlxSprite(-100, 0).loadGraphic(Paths.image('airship/lights help', 'impostor'));
 				mainoverlay.antialiasing = true;
 				mainoverlay.scrollFactor.set(1, 1);
 				mainoverlay.active = false;
@@ -5779,9 +5848,11 @@ var wiggleEffect:WiggleEffect;
 					saster.animation.play('bop');
 					neato.animation.play('bop');
 				}
-			case 'reactor':
+			case 'reactor2':
 				if(curBeat % 4 == 0) {
 					toogusorange.animation.play('bop', true);
+					toogusblue.animation.play('bop', true);
+					tooguswhite.animation.play('bop', true);
 				}
 
 			case 'polus3':

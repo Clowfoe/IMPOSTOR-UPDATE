@@ -3,8 +3,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				78,
-				-190
+				70,
+				-279
 			],
 			"anim": "idle",
 			"fps": 24,
@@ -14,8 +14,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-176,
-				-205
+				59,
+				-293
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
@@ -25,8 +25,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-193,
-				-213
+				108,
+				-300
 			],
 			"anim": "singDOWN",
 			"fps": 24,
@@ -36,8 +36,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				180,
-				-184
+				245,
+				-288
 			],
 			"anim": "singLEFT",
 			"fps": 24,
@@ -47,8 +47,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				75,
-				-63
+				150,
+				-163
 			],
 			"anim": "singUP",
 			"fps": 24,
@@ -59,19 +59,19 @@
 	"no_antialiasing": false,
 	"image": "characters/impostorr",
 	"position": [
-		-100,
-		160
+		0,
+		70
 	],
 	"healthicon": "impostor3",
 	"flip_x": false,
 	"healthbar_colors": [
-		64,
-		171,
-		34
+		0,
+		119,
+		27
 	],
 	"camera_position": [
-		110,
-		200
+		-130,
+		290
 	],
 	"sing_duration": 6.1,
 	"scale": 1
