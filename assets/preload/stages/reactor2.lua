@@ -83,15 +83,94 @@ function onUpdate()
     else
         triggerEvent('Camera Follow Pos','','')
     end
-    if curBeat == 65 then
-        setProperty('defaultCamZoom',0.6)
+    if curBeat == 64 then
+        setProperty('defaultCamZoom',0.8)
+		followchars = true
+        xx = 1450
+        yy = 1150
+        xx2 = 1950
+        yy2 = 1150
+    end
+    if curBeat == 128 then
+        setProperty('defaultCamZoom',0.7)
 		followchars = true
         xx = 1725
         yy = 1100
         xx2 = 1725
         yy2 = 1100
     end
-   
+    if curBeat == 192 then
+        setProperty('defaultCamZoom',0.8)
+		followchars = true
+        xx = 1450
+        yy = 1150
+        xx2 = 1950
+        yy2 = 1150
+    end
+    if curBeat == 224 then
+        setProperty('defaultCamZoom',0.8)
+		followchars = true
+        xx = 1725
+        yy = 1100
+        xx2 = 1725
+        yy2 = 1100
+    end
+    if curBeat == 256 then
+        setProperty('defaultCamZoom',0.8)
+		followchars = true
+        xx = 1450
+        yy = 1150
+        xx2 = 1950
+        yy2 = 1150
+    end
+    if curBeat == 320 then
+        setProperty('defaultCamZoom',0.7)
+		followchars = true
+        xx = 1725
+        yy = 1100
+        xx2 = 1725
+        yy2 = 1100
+    end
+    if curBeat == 384 then
+        setProperty('defaultCamZoom',0.8)
+		followchars = true
+        xx = 1450
+        yy = 1150
+        xx2 = 1950
+        yy2 = 1150
+    end
+    if curBeat == 479 then
+        setProperty('defaultCamZoom',0.9)
+		followchars = true
+        xx = 1725
+        yy = 1200
+        xx2 = 1725
+        yy2 = 1200
+    end
+    if curBeat == 544 then
+        setProperty('defaultCamZoom',0.8)
+		followchars = true
+        xx = 1725
+        yy = 1100
+        xx2 = 1725
+        yy2 = 1100
+    end
+    if curBeat == 608 then
+        setProperty('defaultCamZoom',0.9)
+		followchars = true
+        xx = 1725
+        yy = 1200
+        xx2 = 1725
+        yy2 = 1200
+    end
+    if curBeat == 672 then
+        setProperty('defaultCamZoom',0.7)
+		followchars = true
+        xx = 1725
+        yy = 1100
+        xx2 = 1725
+        yy2 = 1100
+    end
 
     
 end
