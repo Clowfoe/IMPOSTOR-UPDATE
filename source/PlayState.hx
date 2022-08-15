@@ -316,6 +316,8 @@ var wiggleEffect:WiggleEffect;
     var starsBG:FlxBackdrop;
     var starsFG:FlxBackdrop;
 	var meeting:FlxSprite;
+	var emergency:FlxSprite;
+	var furiousRage:FlxSprite;
 
 	//jorsawsee
 	var loungebg:FlxSprite;
@@ -740,18 +742,23 @@ var wiggleEffect:WiggleEffect;
 						bg.active = false;
 						add(bg);
 				
-				meeting = new FlxSprite(0, -360);
+				meeting = new FlxSprite(400, 775);
 						meeting.frames = Paths.getSparrowAtlas('polus/meeting', 'impostor');	
 						meeting.animation.addByPrefix('bop', 'meeting buzz', 24, false);
 						meeting.antialiasing = true;
 						meeting.scrollFactor.set(1, 1);
 						meeting.active = true;
-						meeting.visible = false;
-						add(meeting);
-						meeting.setGraphicSize(Std.int(meeting.width * 0.5));
+						meeting.visible = true;
+						meeting.setGraphicSize(Std.int(meeting.width * 0.7));
 						//meeting.screenCenter();
 				
-				space = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height* 3, FlxColor.BLACK);
+				furiousRage = new FlxSprite(400, 775).loadGraphic(Paths.image('polus/KILLYOURSELF', 'impostor'));
+						furiousRage.antialiasing = true;
+					
+				emergency = new FlxSprite(400, 775).loadGraphic(Paths.image('polus/emergency', 'impostor'));
+						emergency.antialiasing = true;
+				
+				space = new FlxSprite(-300, -300).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 						space.antialiasing = true;
 						space.updateHitbox();
 						space.scrollFactor.set();
@@ -1976,14 +1983,13 @@ var wiggleEffect:WiggleEffect;
 				lightoverlay.alpha = 0.21;
 				lightoverlay.blend = ADD;
 				add(lightoverlay);		
-
-
-
 				add(snow2);
 				add(snow);
-			case 'chef':
-				
-				
+
+			case 'who':
+				add(meeting);
+				add(furiousRage);
+				add(emergency);
 			
 			case 'polus3':
 				
