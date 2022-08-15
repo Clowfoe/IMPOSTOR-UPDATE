@@ -27,7 +27,9 @@ class ClientPrefs {
 	public static var hideTime:Bool = false;
 
 	public static var charOverride:String = '';
-
+	public static var boughtArray:Array<Bool> = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+	// should be enough if u add more stuff fuck you >:(
+		
 	public static var keyBinds:Map<String, Array<FlxKey>> = [
 		'note_left'		=> [A, LEFT],
 		'note_down'		=> [S, DOWN],
@@ -77,6 +79,7 @@ class ClientPrefs {
 
 	public static function saveSettings() {
 		FlxG.save.data.charOverride = charOverride;
+		FlxG.save.data.boughtArray = boughtArray;
 
 		FlxG.save.data.downScroll = downScroll;
 		FlxG.save.data.middleScroll = middleScroll;
@@ -116,6 +119,9 @@ class ClientPrefs {
 	public static function loadPrefs() {
 		if(FlxG.save.data.charOverride != null) {
 			charOverride = FlxG.save.data.charOverride;
+		}
+		if(FlxG.save.data.boughtArray != null){
+			boughtArray = FlxG.save.data.boughtArray;
 		}
 
 		if(FlxG.save.data.downScroll != null) {

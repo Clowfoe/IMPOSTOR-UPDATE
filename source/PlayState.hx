@@ -2048,7 +2048,7 @@ var wiggleEffect:WiggleEffect;
 			boyfriendGroup.add(bfLegs);
 		}
 		
-		if(ClientPrefs.charOverride != ''){
+		if(ClientPrefs.charOverride != '' && ClientPrefs.charOverride != 'bf'){
 			SONG.player1 = ClientPrefs.charOverride;
 		}
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
