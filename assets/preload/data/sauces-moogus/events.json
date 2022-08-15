@@ -2,7 +2,7 @@
 	"song": {
 		"speed": 2.9,
 		"stage": "chef",
-		"player1": "bf",
+		"player1": "bfsauce",
 		"player2": "chefogus",
 		"player3": "gf-car",
 		"player4": null,
@@ -11,7 +11,57 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						0,
+						-1,
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						491.803278688525,
+						-1,
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						737.704918032787,
+						-1,
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						1229.50819672131,
+						-1,
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						1352.45901639344,
+						-1,
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						245.901639344262,
+						-1,
+						"Add Camera Zoom",
+						"-0.015",
+						"-0.03"
+					],
+					[
+						983.606557377049,
+						-1,
+						"Add Camera Zoom",
+						"-0.015",
+						"-0.03"
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -340,14 +390,14 @@
 						71311.4754098361,
 						-1,
 						"Reactor Beep",
-						"",
+						"0.4",
 						""
 					],
 					[
 						72295.0819672131,
 						-1,
 						"Reactor Beep",
-						"",
+						"0.4",
 						""
 					]
 				],
@@ -391,14 +441,14 @@
 						79180.3278688525,
 						-1,
 						"Reactor Beep",
-						"",
+						"0.4",
 						""
 					],
 					[
 						80163.9344262295,
 						-1,
 						"Reactor Beep",
-						"",
+						"0.4",
 						""
 					]
 				],
@@ -442,14 +492,14 @@
 						87049.1803278688,
 						-1,
 						"Reactor Beep",
-						"",
+						"0.4",
 						""
 					],
 					[
 						88032.7868852459,
 						-1,
 						"Reactor Beep",
-						"",
+						"0.4",
 						""
 					]
 				],
@@ -490,20 +540,38 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						95901.6393442623,
-						-1,
-						"Reactor Beep",
-						"",
-						""
-					],
-					[
 						94918.0327868852,
 						-1,
 						"Reactor Beep",
-						"",
+						"0.4",
+						""
+					],
+					[
+						95901.6393442623,
+						-1,
+						"Reactor Beep",
+						"0.4",
 						""
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false

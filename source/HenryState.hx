@@ -155,7 +155,7 @@ class HenryState extends MusicBeatState
     function startWeek():Void{
         
         var _difficulty:Int = 2; // TODO: make this the actual diff
-        var _week:Int = 5;
+        var _week:Int = 9;
 
         WeekData.reloadWeekFiles(true);
 

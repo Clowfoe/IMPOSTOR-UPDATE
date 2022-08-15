@@ -86,90 +86,125 @@ function onUpdate()
     end
 
 	if curStep >= 171 and curStep < 176 then
-		setProperty('defaultCamZoom',1.3)
+		setProperty('defaultCamZoom',1)
 	end
 
     if curBeat == 44 then
-        setProperty('defaultCamZoom', 1)
+        setProperty('defaultCamZoom', 0.8)
     end
 
     if curBeat == 112 then
-		setProperty('defaultCamZoom',1.1)
+		setProperty('defaultCamZoom',0.9)
+		xx = 1180;
+		yy = 770;
 	end
 
 	if curBeat == 113 then
-		setProperty('defaultCamZoom',1.2)
+		setProperty('defaultCamZoom',1)
+		xx = 1160;
+		yy = 790;
 	end
 
 	if curBeat == 114 then
-		setProperty('defaultCamZoom',1.3)
+		setProperty('defaultCamZoom',1.1)
+		xx = 1140;
+		yy = 810;
 	end
 
 	if curBeat == 115 then
-		setProperty('defaultCamZoom',1.4)
+		setProperty('defaultCamZoom',1.2)
+		xx = 1120;
+		yy = 830;
 	end
 
 	if curBeat == 116 then
-		setProperty('defaultCamZoom',1)
+		setProperty('defaultCamZoom',0.8)
+		xx = 1200;
+		yy = 750;
 	end
 
 	if curStep == 206 or curStep == 207 then
-		setProperty('defaultCamZoom',1.3)
+		setProperty('defaultCamZoom',1)
+	end
+
+	if curStep >= 399 and curStep < 404 then
+		setProperty('defaultCamZoom',1)
+	end
+
+	if curStep == 404 then
+		setProperty('defaultCamZoom',0.8)
 	end
 
 	if curStep == 1172 then
-		setProperty('defaultCamZoom',1)
+		setProperty('defaultCamZoom', 0.8)
 	end
 
 	if curStep >= 1164 and curStep < 1172 then
-		setProperty('defaultCamZoom',1.3)
+		setProperty('defaultCamZoom',1)
 	end
 
 	if curStep == 1172 then
-		setProperty('defaultCamZoom',1)
+		setProperty('defaultCamZoom',0.8)
 	end
 
 	if curBeat == 304 then
-		setProperty('defaultCamZoom',1.1)
+		setProperty('defaultCamZoom',0.9)
+		xx = 1180;
+		yy = 770;
 	end
 
 	if curBeat == 305 then
-		setProperty('defaultCamZoom',1.2)
+		setProperty('defaultCamZoom',1)
+		xx = 1160;
+		yy = 790;
 	end
 
 	if curBeat == 306 then
-		setProperty('defaultCamZoom',1.3)
+		setProperty('defaultCamZoom',1.1)
+		xx = 1140;
+		yy = 810;
 	end
 
 	if curBeat == 307 then
-		setProperty('defaultCamZoom',1.4)
+		setProperty('defaultCamZoom',1.2)
+		xx = 1120;
+		yy = 830;
 	end
 
 	if curBeat == 308 then
-		setProperty('defaultCamZoom',1)
+		setProperty('defaultCamZoom',0.8)
+		xx = 1200;
+		yy = 750;
 	end
 
 	if curBeat == 320 then
-		setProperty('defaultCamZoom',1.1)
+		setProperty('defaultCamZoom',0.9)
+		xx = 1180;
+		yy = 770;
 	end
 
 	if curBeat == 321 then
-		setProperty('defaultCamZoom',1.2)
+		setProperty('defaultCamZoom',1)
+		xx = 1160;
+		yy = 790;
 	end
 
 	if curBeat == 322 then
-		setProperty('defaultCamZoom',1.3)
+		setProperty('defaultCamZoom',1.1)
+		xx = 1140;
+		yy = 810;
 	end
 
 	if curBeat == 323 then
-		setProperty('defaultCamZoom',1.4)
+		setProperty('defaultCamZoom',1.2)
+		xx = 1120;
+		yy = 830;
 	end
 
-	if curBeat == 324 then
-		setProperty('defaultCamZoom',1)
-		followchars = true
-        xx2 = 726
-        yy2 = 460
+	if curBeat >= 324 then
+		setProperty('defaultCamZoom',0.7)
+		followchars = false
+		triggerEvent('Camera Follow Pos', 1300, 700)
 	end
     
 end
