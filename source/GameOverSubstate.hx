@@ -9,6 +9,11 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import openfl.utils.Assets as OpenFlAssets;
+
+#if sys
+import sys.FileSystem;
+#end
 
 class GameOverSubstate extends MusicBeatSubstate
 {
@@ -47,7 +52,8 @@ class GameOverSubstate extends MusicBeatSubstate
 		camFollow = new FlxPoint(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y);
 
 		FlxG.sound.play(Paths.sound(deathSoundName));
-		Conductor.changeBPM(100);
+
+		Conductor.changeBPM(100); // todo: make an info file for bpm
 		// FlxG.camera.followLerp = 1;
 		// FlxG.camera.focusOn(FlxPoint.get(FlxG.width / 2, FlxG.height / 2));
 		FlxG.camera.scroll.set();

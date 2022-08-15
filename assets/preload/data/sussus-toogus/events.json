@@ -65,7 +65,15 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						10900,
+						-1,
+						"HUD Fade",
+						"1",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -130,6 +138,13 @@
 						"Play Animation",
 						"bopR",
 						"Dad"
+					],
+					[
+						12700,
+						-1,
+						"HUD Fade",
+						"0",
+						""
 					]
 				],
 				"bpm": 0,
@@ -707,6 +722,13 @@
 						"Add Camera Zoom",
 						"",
 						""
+					],
+					[
+						89500,
+						-1,
+						"HUD Fade",
+						"1",
+						""
 					]
 				],
 				"bpm": 0,
@@ -788,7 +810,15 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						102100,
+						-1,
+						"HUD Fade",
+						"0",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false

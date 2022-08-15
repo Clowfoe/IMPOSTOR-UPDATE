@@ -1,0 +1,67 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-40,
+				-150
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "yellow idle"
+		},
+		{
+			"offsets": [
+				29,
+				-75
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "first",
+			"indices": [],
+			"name": "yellow reaction first"
+		},
+		{
+			"offsets": [
+				16,
+				-81
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "second",
+			"indices": [],
+			"name": "yellow reaction second"
+		},
+		{
+			"offsets": [
+				29,
+				-75
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "third",
+			"indices": [],
+			"name": "yellow reaction third"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/live_reaction",
+	"position": [
+		0,
+		160
+	],
+	"healthicon": "yellow",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		204,
+		31
+	],
+	"camera_position": [
+		0,
+		200
+	],
+	"sing_duration": 10,
+	"scale": 1
+}

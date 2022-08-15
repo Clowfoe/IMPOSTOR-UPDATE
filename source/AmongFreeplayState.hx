@@ -169,6 +169,7 @@ class AmongFreeplayState extends MusicBeatState {
         portrait.animation.addByIndices('powers', 'Character', [24], null, 24, true);
         portrait.animation.addByIndices('kills', 'Character', [25], null, 24, true);
         portrait.animation.addByIndices('jerma', 'Character', [26], null, 24, true);
+        portrait.animation.addByIndices('who', 'Character', [27], null, 24, true);
         portrait.animation.play('red');
         portrait.antialiasing = true;
         portrait.setPosition(304.65, -100);
@@ -572,9 +573,9 @@ class AmongFreeplayState extends MusicBeatState {
         weeks.push
         ({
             songs: [["Ow", "kills", 'kills', FlxColor.fromRGB(84, 167, 202)], 
-            ["Tomongus Tuesday", "tomongus", 'tomo', FlxColor.fromRGB(255, 90, 134)], 
+            ["Tomongus Tuesday", "tuesday", 'tomo', FlxColor.fromRGB(255, 90, 134)], 
             ["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK], 
-            ["Who", "whoguys", 'red', FlxColor.fromRGB(84, 167, 202)], 
+            ["Who", "whoguys", 'who', FlxColor.fromRGB(22, 65, 240)], 
             ["Drippypop", "drippy", 'red', FlxColor.fromRGB(84, 167, 202)], 
             ["Crewicide", "dave", 'red', FlxColor.fromRGB(84, 167, 202)], 
             ["Triple Trouble", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)], 
