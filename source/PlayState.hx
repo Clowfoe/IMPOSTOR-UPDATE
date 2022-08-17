@@ -1575,6 +1575,13 @@ class PlayState extends MusicBeatState
 				defeatthing.active = true;
 				add(defeatthing);
 
+				var bodies2:FlxSprite = new FlxSprite(-500, 150).loadGraphic(Paths.image('lol thing'));
+				bodies2.antialiasing = true;
+				bodies2.setGraphicSize(Std.int(bodies2.width * 1.3));
+				bodies2.scrollFactor.set(0.9, 0.9);
+				bodies2.active = false;
+				add(bodies2);
+
 				var bodies:FlxSprite = new FlxSprite(-2760, 0).loadGraphic(Paths.image('deadBG'));
 				bodies.setGraphicSize(Std.int(bodies.width * 0.4));
 				bodies.antialiasing = true;
@@ -1868,6 +1875,13 @@ class PlayState extends MusicBeatState
 				saxguy.scrollFactor.set(1, 1);
 				saxguy.setGraphicSize(Std.int(saxguy.width * 0.9));
 				saxguy.active = true;
+			case 'defeat':
+				var lightoverlay:FlxSprite = new FlxSprite(-550, -100).loadGraphic(Paths.image('iluminao omaga'));
+				lightoverlay.antialiasing = true;
+				lightoverlay.scrollFactor.set(1, 1);
+				lightoverlay.active = false;
+				lightoverlay.blend = ADD;
+				add(lightoverlay);
 			case 'reactor2':
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('reactor/frontblack', 'impostor'));
 				lightoverlay.antialiasing = true;

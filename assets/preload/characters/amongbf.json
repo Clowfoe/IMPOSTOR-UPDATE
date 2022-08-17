@@ -8,128 +8,51 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "Idle",
+			"name": "idle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-11,
+				-21,
 				104
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "Left",
+			"name": "left",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-19,
-				59
+				2,
+				63
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "Down",
+			"name": "down",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-55,
-				156
+				-47,
+				125
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "Up",
+			"name": "up",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-33,
-				111
+				-40,
+				98
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "Right",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-16,
-				121
-			],
-			"anim": "singLEFTmiss",
-			"fps": 24,
-			"name": "LMiss",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-15,
-				71
-			],
-			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "DMiss",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-53,
-				175
-			],
-			"anim": "singUPmiss",
-			"fps": 24,
-			"name": "UMiss",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-42,
-				116
-			],
-			"anim": "singRIGHTmiss",
-			"fps": 24,
-			"name": "RMiss",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-14,
-				119
-			],
-			"anim": "firstDeath",
-			"fps": 24,
-			"name": "BF dies",
-			"indices": []
-		},
-		{
-			"loop": true,
-			"offsets": [
-				-15,
-				103
-			],
-			"anim": "deathLoop",
-			"fps": 24,
-			"name": "BF Dead Loop",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-15,
-				176
-			],
-			"anim": "deathConfirm",
-			"fps": 24,
-			"name": "BF Dead confirm",
+			"name": "right",
 			"indices": []
 		}
 	],
