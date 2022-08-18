@@ -74,18 +74,7 @@ class AmongStoryMenuState extends MusicBeatState
 		// WeekData.reloadWeekFiles(true)
 
 		// my shitty temporary hack
-		WeekData.weeksList = [];
-		for (i in curWeeks)
-		{
-			var fakeWeekFile:WeekFile = WeekData.createWeekFile();
-			fakeWeekFile.weekName = 'week$i';
-			fakeWeekFile.storyName = 'Week $i';
-			fakeWeekFile.songs = [];
-			for (j in i.songs)
-				fakeWeekFile.songs.push([j[0], j[1], [0, 0, 0]]);
-			WeekData.weeksList.push('$i');
-			WeekData.weeksLoaded.set(WeekData.weeksList[WeekData.weeksList.length - 1], new WeekData(fakeWeekFile));
-		}
+		
 
 		persistentUpdate = persistentDraw = true;
 
