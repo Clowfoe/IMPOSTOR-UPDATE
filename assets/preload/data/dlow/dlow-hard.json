@@ -3456,11 +3456,6 @@
 						0
 					],
 					[
-						72176.4705882352,
-						5,
-						0
-					],
-					[
 						72529.4117647058,
 						4,
 						0
@@ -3500,6 +3495,11 @@
 						"Add Camera Zoom",
 						"0.01",
 						"0.02"
+					],
+					[
+						72264.7058823528,
+						5,
+						0
 					]
 				],
 				"typeOfSection": 0,
@@ -3779,11 +3779,6 @@
 						0
 					],
 					[
-						77823.5294117646,
-						5,
-						0
-					],
-					[
 						78176.4705882352,
 						4,
 						0
@@ -3830,6 +3825,11 @@
 						"Add Camera Zoom",
 						"0.01",
 						"0.02"
+					],
+					[
+						77911.7647058822,
+						5,
+						0
 					]
 				],
 				"typeOfSection": 0,
@@ -7215,6 +7215,24 @@
 				"mustHitSection": true,
 				"changeBPM": false,
 				"bpm": 170
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 170
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 170,
+				"changeBPM": false,
+				"mustHitSection": true
 			},
 			{
 				"sectionNotes": [],
