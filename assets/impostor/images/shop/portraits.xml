@@ -9,6 +9,10 @@
 	<SubTexture name="bfpolus0000" x="778" y="0" width="177" height="177"/>
 	<SubTexture name="bfsauce0000" x="0" y="206" width="244" height="244"/>
 	<SubTexture name="blackp0000" x="249" y="206" width="249" height="255"/>
-	<SubTexture name="greenp0000" x="503" y="206" width="334" height="323"/>
-	<SubTexture name="redp0000" x="0" y="534" width="201" height="201"/>
+	<SubTexture name="dripbf0000" x="503" y="206" width="189" height="191"/>
+	<SubTexture name="gfmira0000" x="697" y="206" width="173" height="173"/>
+	<SubTexture name="ghostgf0000" x="0" y="466" width="185" height="190"/>
+	<SubTexture name="greenp0000" x="190" y="466" width="334" height="323"/>
+	<SubTexture name="redp0000" x="529" y="466" width="201" height="201"/>
+	<SubTexture name="stick-bf0000" x="735" y="466" width="201" height="201"/>
 </TextureAtlas>

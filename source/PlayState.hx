@@ -424,6 +424,10 @@ class PlayState extends MusicBeatState
 	var camTwistIntensity2:Float = 3;
 	var camTwist:Bool = false;
 
+	var missCombo:Int;
+
+	var pet:Pet;
+
 	override public function create()
 	{
 		super.create();
@@ -2148,7 +2152,12 @@ class PlayState extends MusicBeatState
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
 
-		if (SONG.player1 == 'bf-running')
+		pet = new Pet(0, 0, 'crab');
+		pet.x += pet.positionArray[0];
+		pet.y += pet.positionArray[1];
+		boyfriendGroup.add(pet);
+
+		if(SONG.player1 == 'bf-running')
 		{
 			bfLegs.x = boyfriend.x;
 			bfLegs.y = boyfriend.y;
@@ -3003,6 +3012,7 @@ class PlayState extends MusicBeatState
 					if (boyfriend.animation.curAnim != null && !boyfriend.animation.curAnim.name.startsWith('sing'))
 					{
 						boyfriend.dance();
+						pet.dance();
 					}
 					if (dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
 					{
@@ -5930,8 +5940,9 @@ class PlayState extends MusicBeatState
 	{
 		if (!boyfriend.stunned)
 		{
-			health -= 0.04;
-			if (combo > 5 && gf.animOffsets.exists('sad'))
+			missCombo += 1;
+			health -= 0.08 * missCombo; // SUPER MARIO
+			if (combo > 5 && gf.animOffsets.exists('sad')) 
 				gf.playAnim('sad');
 
 			combo = 0;
@@ -6000,6 +6011,7 @@ class PlayState extends MusicBeatState
 			if (!note.isSustainNote)
 			{
 				combo += 1;
+				missCombo = 0;
 				popUpScore(note);
 			}
 			else
@@ -6330,11 +6342,11 @@ class PlayState extends MusicBeatState
 				dadlegs.dance();
 		}
 
+		pet.dance();
+
 		if (curBeat % 2 == 0)
 		{
-			if (boyfriend.animation.curAnim.name != null
-				&& !boyfriend.animation.curAnim.name.startsWith("sing")
-				&& boyfriend.curCharacter != 'bf-running')
+			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing") && boyfriend.curCharacter != 'bf-running')
 			{
 				boyfriend.dance();
 			}

@@ -84,12 +84,19 @@ class ShopNode extends FlxSprite
     }
 
     function setupPortrait(name:String){
-        portrait = new FlxSprite(0, 0);
-        portrait.frames = Paths.getSparrowAtlas('shop/portraits', 'impostor');
-		portrait.animation.addByPrefix('guh', name, 0, false);
-		portrait.animation.play('guh');
-		portrait.antialiasing = true;
-        portrait.updateHitbox();
+        if(name != 'bf'){
+            portrait = new FlxSprite(0, 0);
+            portrait.frames = Paths.getSparrowAtlas('shop/portraits', 'impostor');
+            portrait.animation.addByPrefix('guh', name, 0, false);
+            portrait.animation.play('guh');
+            portrait.antialiasing = true;
+            portrait.updateHitbox();
+        }else{
+            portrait = new FlxSprite(0, 0).loadGraphic(Paths.image('shop/missing', 'impostor'));
+            portrait.antialiasing = true;
+            portrait.updateHitbox();
+        }
+        
     }
 
     function setupIcon(_name:String){
@@ -116,8 +123,10 @@ class ShopNode extends FlxSprite
 
         if(bought){
             color = 0xFFFFFFFF;
+            connector.color = 0xFFFFFFFF;
         }else{
-            color = 0xFF797979;
+            color = 0xFF4A4A4A;
+            connector.color = 0xFF4A4A4A;
         }
     }
 
