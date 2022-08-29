@@ -1,13 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="ButtonSheet.png">
-	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="DiscordHover0000" x="0" y="0" width="260" height="111"/>
-	<SubTexture name="DiscordIdle0000" x="275" y="0" width="260" height="111"/>
-	<SubTexture name="FreeplayHover0000" x="550" y="0" width="260" height="111"/>
-	<SubTexture name="FreeplayIdle0000" x="0" y="126" width="260" height="111"/>
-	<SubTexture name="OptionsHover0000" x="275" y="126" width="260" height="111"/>
-	<SubTexture name="OptionsIdle0000" x="550" y="126" width="260" height="111"/>
-	<SubTexture name="StoryHover0000" x="0" y="252" width="260" height="111"/>
-	<SubTexture name="StoryIdle0000" x="275" y="252" width="260" height="111"/>
+	<SubTexture name="FreeplayIdle0000" x="0" y="0" width="442" height="181"/>
+	<SubTexture name="FreeplayHover0000" x="462" y="0" width="442" height="182"/>
+	<SubTexture name="GalleryIdle0000" x="0" y="202" width="440" height="113"/>
+	<SubTexture name="GalleryHover0000" x="460" y="202" width="440" height="113"/>
+	<SubTexture name="InnerslothIdle0000" x="0" y="335" width="151" height="152"/>
+	<SubTexture name="InnerslothHover0000" x="171" y="335" width="152" height="152"/>
+	<SubTexture name="ShopIdle0000" x="343" y="335" width="151" height="152"/>
+	<SubTexture name="ShopHover0000" x="514" y="335" width="152" height="152"/>
+	<SubTexture name="OptionsIdle0000" x="686" y="335" width="151" height="152"/>
+	<SubTexture name="OptionsHover0000" x="857" y="335" width="152" height="152"/>
+	<SubTexture name="StoryIdle0000" x="0" y="507" width="442" height="181"/>
+	<SubTexture name="StoryHover0000" x="462" y="507" width="442" height="182"/>
 </TextureAtlas>

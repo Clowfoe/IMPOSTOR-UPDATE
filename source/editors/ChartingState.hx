@@ -105,7 +105,8 @@ class ChartingState extends MusicBeatState
 		['scream danger', 'danfer'],
 		['unscream danger', 'based and Black Pilled ha ha memes'],
 		['tuesdayblast', 'loud sound'],
-		['HUD Fade', 'fades da hud']
+		['HUD Fade', 'fades da hud'],
+		['Door Open', 'compromised door']
 	];
 
 	var _file:FileReference;

@@ -35,7 +35,7 @@ class MainMenuState extends MusicBeatState
 	public static var firstStart:Bool = true;
 	public static var finishedFunnyMove:Bool = false;
 	
-	var optionShit:Array<String> = ['Story', 'Freeplay', 'Options', 'Shop'];
+	var optionShit:Array<String> = ['Story', 'Freeplay', 'Options', 'Shop', 'Gallery', 'Innersloth'];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -127,20 +127,24 @@ class MainMenuState extends MusicBeatState
 			testButton.animation.addByPrefix('hover', optionShit[i] + 'Hover', 24, true);
 			testButton.animation.play('idle');
 			testButton.antialiasing = true;
-		//	testButton.scale.set(0.75 ,0.75);
+			testButton.scale.set(0.50 ,0.50);
 			testButton.updateHitbox();
 			testButton.screenCenter(X);
 			testButton.scrollFactor.set();
 			// brian was here
 			switch(i) {
 				case 0:
-					testButton.setPosition(367.35, 439.9);
+					testButton.setPosition(400, 475);
 				case 1:
-					testButton.setPosition(665.5, 439.9);
+					testButton.setPosition(633, 475);
 				case 2:
-					testButton.setPosition(367.35, 573.3);
+					testButton.setPosition(455, 640);
 				case 3:
-					testButton.setPosition(665.5, 573.3);
+					testButton.setPosition(715, 640);
+				case 4:
+					testButton.setPosition(515, 575);
+				case 5:
+					testButton.setPosition(585, 640);
 			}
 			menuItems.add(testButton);
 		}		
@@ -311,6 +315,13 @@ class MainMenuState extends MusicBeatState
 				trace("Shop Menu Selected");
 			case 'Options':
 				FlxG.switchState(new OptionsState());
+				trace("Options Menu Selected");
+			case 'Gallery':
+				FlxG.switchState(new OptionsState());
+				trace("Gallery Menu Selected");
+			case 'Innersloth':
+				FlxG.switchState(new OptionsState());
+				trace("Innersloth Menu Selected");
 		}		
 	}
 

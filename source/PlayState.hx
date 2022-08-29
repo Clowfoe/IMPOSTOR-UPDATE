@@ -315,6 +315,7 @@ class PlayState extends MusicBeatState
 	var cyanmira:FlxSprite;
 	var limemira:FlxSprite;
 	var bluemira:FlxSprite;
+	var pot:FlxSprite;
 	var oramira:FlxSprite;
 	var vines:FlxSprite;
 
@@ -618,42 +619,35 @@ class PlayState extends MusicBeatState
 				bg.active = false;
 				add(bg);
 
-				greymira = new FlxSprite(0, -100);
+				greymira = new FlxSprite(-150, -75);
 				greymira.frames = Paths.getSparrowAtlas('mira/crew', 'impostor');
-				greymira.animation.addByPrefix('bop', 'skrunk', 24, true);
+				greymira.animation.addByPrefix('bop', 'grey', 24, false);
 				greymira.animation.play('bop');
 				greymira.antialiasing = true;
 				greymira.scrollFactor.set(1, 1);
 				greymira.active = true;
 				add(greymira);
 
-				var bg:FlxSprite = new FlxSprite(0, -710).loadGraphic(Paths.image('mira/what is this', 'impostor'));
+				var bg:FlxSprite = new FlxSprite(0, -650).loadGraphic(Paths.image('mira/what is this', 'impostor'));
 				bg.antialiasing = true;
 				bg.scrollFactor.set(1, 1);
 				bg.active = false;
 				add(bg);
 
-				cyanmira = new FlxSprite(800, 100);
+				cyanmira = new FlxSprite(750, -50);
 				cyanmira.frames = Paths.getSparrowAtlas('mira/crew', 'impostor');
-				cyanmira.animation.addByPrefix('bop', 'cyan', 24, true);
+				cyanmira.animation.addByPrefix('bop', 'tomatomongus', 24, false);
 				cyanmira.animation.play('bop');
 				cyanmira.antialiasing = true;
 				cyanmira.scrollFactor.set(1, 1);
 				cyanmira.active = true;
 				add(cyanmira);
 
-				limemira = new FlxSprite(1300, -300);
-				limemira.frames = Paths.getSparrowAtlas('mira/crew', 'impostor');
-				limemira.animation.addByPrefix('bop', 'lmao 2', 24, true);
-				limemira.animation.play('bop');
-				limemira.antialiasing = true;
-				limemira.scrollFactor.set(1, 1);
-				limemira.active = true;
-				add(limemira);
+			
 
-				oramira = new FlxSprite(1000, 450);
+				oramira = new FlxSprite(1000, 125);
 				oramira.frames = Paths.getSparrowAtlas('mira/crew', 'impostor');
-				oramira.animation.addByPrefix('bop', 'orange', 24, true);
+				oramira.animation.addByPrefix('bop', 'RHM', 24, false);
 				oramira.animation.play('bop');
 				oramira.antialiasing = true;
 				oramira.scrollFactor.set(1.2, 1);
@@ -667,16 +661,26 @@ class PlayState extends MusicBeatState
 				bg.active = false;
 				add(bg);
 
-				bluemira = new FlxSprite(-1400, 0);
+				
+				
+				
+
+				bluemira = new FlxSprite(-1300, 0);
 				bluemira.frames = Paths.getSparrowAtlas('mira/crew', 'impostor');
-				bluemira.animation.addByPrefix('bop', 'lmao 3', 24, true);
+				bluemira.animation.addByPrefix('bop', 'blue', 24, false);
 				bluemira.animation.play('bop');
 				bluemira.antialiasing = true;
 				bluemira.scrollFactor.set(1.2, 1);
 				bluemira.active = true;
-				add(bluemira);
+				
+				pot = new FlxSprite(-1550, 650).loadGraphic(Paths.image('mira/front pot', 'impostor'));
+				pot.antialiasing = true;
+				pot.setGraphicSize(Std.int(pot.width * 1));
+				pot.scrollFactor.set(1.2, 1);
+				pot.active = false;
+				
 
-				vines = new FlxSprite(-1400, -800);
+				vines = new FlxSprite(-1200, -1200);
 				vines.frames = Paths.getSparrowAtlas('mira/vines', 'impostor');
 				vines.animation.addByPrefix('bop', 'green', 24, true);
 				vines.animation.play('bop');
@@ -1194,6 +1198,76 @@ class PlayState extends MusicBeatState
 				bg.active = false;
 				add(bg);
 
+			case 'monotone': // emihead made peak
+				curStage = 'monotone';
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/SkeldBack', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				bg.setGraphicSize(Std.int(bg.width * 2));
+				add(bg);
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/BackThings', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				bg.setGraphicSize(Std.int(bg.width * 2));
+				add(bg);
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/Floor', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				bg.setGraphicSize(Std.int(bg.width * 2));
+				add(bg);
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/Reactor', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				bg.setGraphicSize(Std.int(bg.width * 2));
+				add(bg);
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/Reactorlight', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				bg.setGraphicSize(Std.int(bg.width * 2));
+				bg.blend = ADD;
+				add(bg);
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/wires1', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				bg.setGraphicSize(Std.int(bg.width * 2));
+				add(bg);
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/wires2', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				bg.setGraphicSize(Std.int(bg.width * 2));
+				add(bg);
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/wires3', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				bg.setGraphicSize(Std.int(bg.width * 2));
+				add(bg);
+
+
+
 			case 'henry': // stick Min
 				var bg:BGSprite = new BGSprite('stagehenry', -1600, -300, 1, 1);
 				add(bg);
@@ -1338,17 +1412,11 @@ class PlayState extends MusicBeatState
 				//		rocks.scrollFactor.set(0.8, 0.8);
 				//		rocks.active = false;
 				//		add(rocks);
-				var edge:FlxSprite = new FlxSprite(750, -400).loadGraphic(Paths.image('polus/Edge', 'impostor'));
-				edge.updateHitbox();
-				edge.setGraphicSize(Std.int(edge.width * 1));
-				edge.antialiasing = true;
-				edge.scrollFactor.set(1, 1);
-				edge.active = false;
-				add(edge);
+			
 
-				var lava = new FlxSprite(450, 300);
-				lava.frames = Paths.getSparrowAtlas('polus/lava', 'impostor');
-				lava.animation.addByPrefix('bop', 'lava', 24, true);
+				var lava = new FlxSprite(0, -300);
+				lava.frames = Paths.getSparrowAtlas('polus/wallBP', 'impostor');
+				lava.animation.addByPrefix('bop', 'Back wall and lava', 24, true);
 				lava.animation.play('bop');
 				lava.setGraphicSize(Std.int(lava.width * 1));
 				lava.antialiasing = false;
@@ -1356,15 +1424,15 @@ class PlayState extends MusicBeatState
 				lava.active = true;
 				add(lava);
 
-				var ground:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('polus/platform', 'impostor'));
+				var ground:FlxSprite = new FlxSprite(1450, 1000).loadGraphic(Paths.image('polus/platform', 'impostor'));
 				ground.updateHitbox();
-				ground.setGraphicSize(Std.int(ground.width * 0.4));
+				ground.setGraphicSize(Std.int(ground.width * 1));
 				ground.antialiasing = true;
 				ground.scrollFactor.set(1, 1);
 				ground.active = false;
 				add(ground);
 
-				var bubbles = new FlxSprite(900, 400);
+				var bubbles = new FlxSprite(1200, 1200);
 				bubbles.frames = Paths.getSparrowAtlas('polus/bubbles', 'impostor');
 				bubbles.animation.addByPrefix('bop', 'Lava Bubbles', 24, true);
 				bubbles.animation.play('bop');
@@ -1834,6 +1902,8 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'plantroom':
+				add(bluemira);
+				add(pot);
 				add(vines);
 			case 'ejected':
 				bfStartpos = new FlxPoint(1008.6, 504);
@@ -1932,6 +2002,35 @@ class PlayState extends MusicBeatState
 				lightoverlay.alpha = 0.41;
 				lightoverlay.blend = ADD;
 				add(lightoverlay);
+			case 'monotone':
+				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/overlay', 'impostor'));
+				lightoverlay.antialiasing = true;
+				lightoverlay.scrollFactor.set(1, 1);
+				lightoverlay.active = false;
+				lightoverlay.setGraphicSize(Std.int(lightoverlay.width * 2));
+				lightoverlay.blend = MULTIPLY;
+				add(lightoverlay);
+
+				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/overlay2', 'impostor'));
+				lightoverlay.antialiasing = true;
+				lightoverlay.scrollFactor.set(1, 1);
+				lightoverlay.active = false;
+				lightoverlay.blend = ADD;
+				lightoverlay.setGraphicSize(Std.int(lightoverlay.width * 2));
+				add(lightoverlay);
+
+				saxguy = new FlxSprite(120, 100);
+				saxguy.frames = Paths.getSparrowAtlas('skeld/doors', 'impostor');
+				saxguy.animation.addByPrefix('closed', 'Door Closed Shrunk', 24, false);
+				saxguy.animation.addByPrefix('open', 'Door Openin Animation Shrunk', 24, false);
+				saxguy.cameras = [camOther];
+				saxguy.animation.play('open');
+				saxguy.updateHitbox();
+				saxguy.antialiasing = true;
+				saxguy.setGraphicSize(Std.int(saxguy.width * 2.4));
+				saxguy.active = true;
+				add(saxguy);
+				
 			case 'grey':
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/coolthing', 'impostor'));
 				lightoverlay.antialiasing = true;
@@ -2326,7 +2425,7 @@ class PlayState extends MusicBeatState
 		{
 			trace('it exists');
 			task = new TaskSong(0, 200, SONG.song.toLowerCase().replace(' ', '-'));
-			task.cameras = [camHUD];
+			task.cameras = [camOther];
 			add(task);
 		}
 
@@ -2402,7 +2501,7 @@ class PlayState extends MusicBeatState
 
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
-		flashSprite.cameras = [camHUD];
+		flashSprite.cameras = [camOther];
 		notes.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
 		healthBarBG.cameras = [camHUD];
@@ -2597,6 +2696,8 @@ class PlayState extends MusicBeatState
 
 		super.destroy();
 	}
+
+	
 
 	public function onKeyPress(event:KeyboardEvent):Void
 	{
@@ -4956,7 +5057,11 @@ class PlayState extends MusicBeatState
 
 				case 'Toogus Sax':
 					saxguy.setPosition(-550, 275);
+					
 					add(saxguy);
+
+				case 'Door Open':
+					saxguy.animation.play('open');
 
 				case 'Blammed Lights':
 					var lightId:Int = Std.parseInt(value1);
@@ -6408,6 +6513,18 @@ class PlayState extends MusicBeatState
 					toogusblue.animation.play('bop', true);
 					tooguswhite.animation.play('bop', true);
 				}
+			case 'plantroom':
+				if (curBeat % 2 == 0)
+				{
+					cyanmira.animation.play('bop', true);
+					greymira.animation.play('bop', true);
+					oramira.animation.play('bop', true);
+				}
+				if (curBeat % 1 == 0)
+				{
+					bluemira.animation.play('bop', true);
+				}
+	
 
 			case 'polus3':
 				if (curBeat % 4 == 0)
