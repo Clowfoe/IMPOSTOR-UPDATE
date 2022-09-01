@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ship.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down0000" x="0" y="169" width="159" height="210"/>
+	<SubTexture name="left0000" x="169" y="220" width="210" height="159"/>
+	<SubTexture name="right0000" x="0" y="0" width="210" height="159"/>
+	<SubTexture name="up0000" x="220" y="0" width="159" height="210"/>
+</TextureAtlas>
