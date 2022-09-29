@@ -64,6 +64,7 @@ class AmongStoryMenuState extends MusicBeatState
 	var weekLines:FlxTypedGroup<FlxSprite>;
 	var weekXvalues:Array<Float> = [];
 	var weekYvalues:Array<Float> = [];
+	var canMove:Bool = true;
 
 	public var camSpace:FlxCamera;
 	public var camScreen:FlxCamera;
@@ -85,6 +86,9 @@ class AmongStoryMenuState extends MusicBeatState
 
 		FlxCamera.defaultCameras = [camSpace];
 
+		camSpace.zoom = 0.7;
+		//croc is so big and chonky i wanna rub their big belly
+
 		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
 		starsBG.setPosition(111.3, 67.95);
         starsBG.antialiasing = true;
@@ -103,6 +107,7 @@ class AmongStoryMenuState extends MusicBeatState
 
 		ship = new FlxSprite(0, 0);
 		ship.antialiasing = ClientPrefs.globalAntialiasing;
+		//orbyy
 		ship.cameras = [camSpace];
 
 		ship.frames = Paths.getSparrowAtlas('storymenu/ship', 'impostor');
@@ -117,13 +122,15 @@ class AmongStoryMenuState extends MusicBeatState
 		shipAddOffset('left', -54, 0);
 		shipAddOffset('up', -47, -10);
 
+		shipPlayAnim('right');
+
 		weekCircles = new FlxTypedGroup<FlxSprite>();
 		add(weekCircles);
 
 		weekLines = new FlxTypedGroup<FlxSprite>();
 		add(weekLines);
 
-		scoreText = new FlxText(100, 10, 0, "SCORE: 49324858");
+		scoreText = new FlxText(100, 100, 0, "SCORE: 49324858");
 		scoreText.setFormat(Paths.font('AmaticSC-Bold.ttf'), 32, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreText.borderSize = 1.6;
 		scoreText.cameras = [camScreen];
@@ -133,9 +140,9 @@ class AmongStoryMenuState extends MusicBeatState
 		txtWeekNumber.borderSize = 2.6;
 		txtWeekNumber.cameras = [camScreen];
 
-		txtWeekTitle = new FlxText(FlxG.width / 2.6, txtWeekNumber.y + 110, 0, "");
+		txtWeekTitle = new FlxText(FlxG.width / 2.6, txtWeekNumber.y + 115, 0, "");
 		txtWeekTitle.setFormat(Paths.font('AmaticSC-Bold.ttf'), 64, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		txtWeekTitle.borderSize = 3;
+		txtWeekTitle.borderSize = 1;
 		txtWeekTitle.cameras = [camScreen];
 
 		var rankText:FlxText = new FlxText(0, 10);
@@ -145,14 +152,14 @@ class AmongStoryMenuState extends MusicBeatState
 		rankText.screenCenter(X);
 
 		weekHealthIcon = new HealthIcon('impostor', true);
-		weekHealthIcon.x = FlxG.width / 2.4 - 150;
-		weekHealthIcon.y = 50;
+		weekHealthIcon.x = FlxG.width / 2.4 - 115;
+		weekHealthIcon.y = 55;
 		weekHealthIcon.flipX = true;
 		weekHealthIcon.cameras = [camScreen];
 
 		weekHealthIconLose = new HealthIcon('impostor', true);
 		weekHealthIconLose.x = FlxG.width / 2.4 + 200;
-		weekHealthIconLose.y = 50;
+		weekHealthIconLose.y = 55;
 		weekHealthIconLose.flipX = true;
 		weekHealthIconLose.cameras = [camScreen];
 
@@ -379,6 +386,7 @@ class AmongStoryMenuState extends MusicBeatState
 			weekCircles.add(weekCircle);
 			weekXvalues.push(weekCircle.x - 95);
 			weekYvalues.push(weekCircle.y - 50);
+			trace(weekYvalues[i]);
 
 			if (weekIsLocked(i))
 			{
@@ -409,7 +417,6 @@ class AmongStoryMenuState extends MusicBeatState
 		txtTracklist = new FlxText(FlxG.width * 0.75, 55, 0);
 		txtTracklist.alignment = CENTER;
 		txtTracklist.setFormat(Paths.font('AmaticSC-Bold.ttf'), 32, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		txtTracklist.borderSize = 1.6;
 		txtTracklist.cameras = [camScreen];
 		add(txtTracklist);
 
@@ -442,8 +449,8 @@ class AmongStoryMenuState extends MusicBeatState
 
 		scoreText.text = "WEEK SCORE:" + lerpScore;
 
-		ship.x = FlxMath.lerp(ship.x, weekXvalues[curWeek], 0.06);
-		ship.y = FlxMath.lerp(ship.y, weekYvalues[curWeek], 0.06);
+		ship.x = FlxMath.lerp(ship.x, weekXvalues[curWeek], 0.13);
+		ship.y = FlxMath.lerp(ship.y, weekYvalues[curWeek], 0.13);
 		starsBG.x = FlxMath.lerp(starsBG.x, starsBG.x - 0.5, CoolUtil.boundTo(elapsed * 9, 0, 1));
 		starsFG.x = FlxMath.lerp(starsFG.x, starsFG.x - 1, CoolUtil.boundTo(elapsed * 9, 0, 1));
 
@@ -454,8 +461,11 @@ class AmongStoryMenuState extends MusicBeatState
 
 		if (!movedBack && !selectedWeek)
 		{
-			if (!selectingDifficulty)
+			if (!selectingDifficulty && canMove)
 			{
+				if(controls.UI_UP_P || controls.UI_DOWN_P || controls.UI_RIGHT_P || controls.UI_LEFT_P){
+					//startMove();
+				}
 				switch(curWeek)
 				{
 					case 0:
@@ -745,6 +755,8 @@ class AmongStoryMenuState extends MusicBeatState
 			if (curWeek < 0)
 				curWeek = 4;
 		}
+
+		canMove = false;
 		
 		if (curWeek == 0)
 		{
@@ -771,36 +783,83 @@ class AmongStoryMenuState extends MusicBeatState
 		txtWeekTitle.text = leName.toUpperCase();
 		txtWeekTitle.setFormat(Paths.font('AmaticSC-Bold.ttf'), 64, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		txtWeekNumber.text = leWeekName.toUpperCase();
+		if(!leWeekName.startsWith("Week")) 
+			txtWeekNumber.x = ((FlxG.width / 2) - (txtWeekNumber.width / 2));
+		else
+			txtWeekNumber.x = FlxG.width / 2.4;
+		txtWeekTitle.borderSize = 2.2;
 
 		weekHealthIcon.changeIcon(leWeek.songs[0][1]);
 		weekHealthIconLose.changeIcon(leWeek.songs[0][1]);
+		txtWeekNumber.updateHitbox();
 		weekHealthIcon.animation.curAnim.curFrame = 0;
 		weekHealthIconLose.animation.curAnim.curFrame = 1;
 
 		switch (leWeek.songs.length)
 		{
+			case 2:
+				txtTracklist.setFormat(Paths.font('AmaticSC-Bold.ttf'), 50, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				txtTracklist.borderSize = 1.8;
+				txtTracklist.y = 75;
 			case 3:
 				txtTracklist.setFormat(Paths.font('AmaticSC-Bold.ttf'), 40, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				txtTracklist.borderSize = 1.6;
+				txtTracklist.y = 62;
 			case 4:
 				txtTracklist.setFormat(Paths.font('AmaticSC-Bold.ttf'), 34, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				txtTracklist.borderSize = 1.5;
+				txtTracklist.y = 55;
 			case 5:
 				txtTracklist.setFormat(Paths.font('AmaticSC-Bold.ttf'), 26, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				txtTracklist.borderSize = 1.3;
+				txtTracklist.y = 55;
+			default:
+				txtTracklist.y = 55;
 		}
 
-		switch (curWeek)
-		{
-			case 1:
-				txtTracklist.x = FlxG.width * 0.75 - 17;
-				txtTracklist.y = 65;
-			case 2:
-				txtTracklist.x = FlxG.width * 0.75 - 10;
-				txtTracklist.y = 55;
-			case 3:
-				txtTracklist.x = FlxG.width * 0.75 + 23;
-				txtTracklist.y = 58;
+		txtWeekTitle.x = ((FlxG.width / 2) - (txtWeekTitle.width / 2));
+
+		switch(curWeek){
 			case 4:
-				txtTracklist.x = FlxG.width * 0.75 + 15;
-				txtTracklist.y = 65;
+				weekHealthIcon.x = FlxG.width / 2.4 - 115;
+				weekHealthIconLose.x = FlxG.width / 2.4 + 180;
+				weekHealthIcon.y = 55;
+				weekHealthIconLose.y = 55;
+			case 5:
+				weekHealthIcon.x = FlxG.width / 2.4 - 135;
+				weekHealthIconLose.x = FlxG.width / 2.4 + 220;
+				weekHealthIcon.y = 45;
+				weekHealthIconLose.y = 45;
+			case 6:
+				weekHealthIcon.x = FlxG.width / 2.4 - 135;
+				weekHealthIconLose.x = FlxG.width / 2.4 + 220;
+				weekHealthIcon.y = 45;
+				weekHealthIconLose.y = 45;
+			case 7:
+				weekHealthIcon.x = FlxG.width / 2.4 - 135;
+				weekHealthIconLose.x = FlxG.width / 2.4 + 220;
+				weekHealthIcon.y = 40;
+				weekHealthIconLose.y = 40;
+			case 9:
+				weekHealthIcon.x = FlxG.width / 2.4 - 115;
+				weekHealthIconLose.x = FlxG.width / 2.4 + 180;
+				weekHealthIcon.y = 40;
+				weekHealthIconLose.y = 40;
+			case 10:
+				weekHealthIcon.x = FlxG.width / 2.4 - 205;
+				weekHealthIconLose.x = FlxG.width / 2.4 + 270;
+				weekHealthIcon.y = 55;
+				weekHealthIconLose.y = 55;
+			case 11:
+				weekHealthIcon.x = FlxG.width / 2.4 - 215;
+				weekHealthIconLose.x = FlxG.width / 2.4 + 270;
+				weekHealthIcon.y = 45;
+				weekHealthIconLose.y = 45;
+			default:
+				weekHealthIcon.x = FlxG.width / 2.4 - 115;
+				weekHealthIconLose.x = FlxG.width / 2.4 + 200;
+				weekHealthIcon.y = 55;
+				weekHealthIconLose.y = 55;
 		}
 
 		var bullShit:Int = 0;
@@ -814,6 +873,12 @@ class AmongStoryMenuState extends MusicBeatState
 				item.alpha = 0.6;
 			bullShit++;
 		}
+
+		new FlxTimer().start(0.5, function(tmr:FlxTimer)
+		{
+			canMove = true;
+		});
+		
 		updateText();
 	}
 
@@ -845,6 +910,7 @@ class AmongStoryMenuState extends MusicBeatState
 		}
 
 		txtTracklist.text = txtTracklist.text.toUpperCase();
+		txtTracklist.x = ((FlxG.width / 2) - (txtTracklist.width / 2)) + 400;
 
 		#if !switch
 		intendedScore = Highscore.getWeekScore(WeekData.weeksList[curWeek], curDifficulty);
@@ -880,5 +946,13 @@ class AmongStoryMenuState extends MusicBeatState
 	function shipAddOffset(name:String, x:Float = 0, y:Float = 0)
 	{
 		shipAnimOffsets[name] = [x, y];
+	}
+
+	function startMove()
+	{
+		new FlxTimer().start(0.5, function(tmr:FlxTimer)
+		{
+			canMove = true;
+		});
 	}
 }
