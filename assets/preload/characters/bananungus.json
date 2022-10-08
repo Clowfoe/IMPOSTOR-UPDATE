@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-40,
 				-150
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "bidle"
+			"fps": 24,
+			"name": "bidle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-280,
 				-527
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "bright"
+			"fps": 24,
+			"name": "bright",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-175,
 				-439
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "bdown"
+			"fps": 24,
+			"name": "bdown",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				191,
 				-317
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "bleft"
+			"fps": 24,
+			"name": "bleft",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-219,
 				-139
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "bup"
+			"fps": 24,
+			"name": "bup",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -66,8 +66,8 @@
 	"flip_x": false,
 	"healthbar_colors": [
 		255,
-		224,
-		160
+		212,
+		82
 	],
 	"camera_position": [
 		-253,
