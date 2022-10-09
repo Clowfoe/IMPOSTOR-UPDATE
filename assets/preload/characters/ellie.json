@@ -1,77 +1,77 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-30,
 				-90
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "Ellie Idle",
-			"indices": []
+			"indices": [],
+			"name": "Ellie Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				44,
-				-106
+				214,
+				-105
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Ellie Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Ellie Left"
 		},
 		{
+			"offsets": [
+				-80,
+				-151
+			],
 			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Ellie Down"
+		},
+		{
 			"offsets": [
 				-91,
-				-218
+				-39
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Ellie Down",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Ellie Up"
 		},
 		{
+			"offsets": [
+				-39,
+				-30
+			],
 			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Ellie Right"
+		},
+		{
 			"offsets": [
 				-30,
-				-79
+				973
 			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "Ellie Up",
-			"indices": []
-		},
-		{
 			"loop": false,
-			"offsets": [
-				-94,
-				-141
-			],
-			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "Ellie Right",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				49,
-				1123
-			],
 			"anim": "enter",
-			"fps": 24,
-			"name": "Ellie Enter Animation",
-			"indices": []
+			"indices": [],
+			"name": "Ellie Enter Animation"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Ellie_Assets",
 	"position": [
-		-40,
-		10
+		-30,
+		30
 	],
 	"healthicon": "ellie",
 	"flip_x": false,
@@ -81,7 +81,7 @@
 		255
 	],
 	"camera_position": [
-		-60,
+		-260,
 		110
 	],
 	"sing_duration": 6.1,

@@ -4,16 +4,16 @@ local r = 0;
 local shot = false;
 local agent = 1
 local health = 0;
-local xx = 130;
-local yy = 450;
-local xx2 = 130;
-local yy2 = 450;
+local xx = 700;
+local yy = 500;
+local xx2 = 700;
+local yy2 = 500;
 local ofs = 0;
 local followchars = true;
 local del = 0;
 local del2 = 0;
 function onCreate()
-
+   
 end
 
 
@@ -28,7 +28,6 @@ function onUpdate()
 	end
     if followchars == true then
         if mustHitSection == false then
-            setProperty('defaultCamZoom',1.3)
             if getProperty('dad.animation.curAnim.name') == 'idle-alt' then
                 triggerEvent('Camera Follow Pos',xx,yy)
             end
@@ -60,8 +59,6 @@ function onUpdate()
                 triggerEvent('Camera Follow Pos',xx,yy+ofs)
             end
         else
-
-            setProperty('defaultCamZoom',1.3)
             if getProperty('boyfriend.animation.curAnim.name') == 'singLEFT' then
                 triggerEvent('Camera Follow Pos',xx2-ofs,yy2)
             end
@@ -84,6 +81,16 @@ function onUpdate()
     else
         triggerEvent('Camera Follow Pos','','')
     end
-    
+
+    if curStep >= 32 then
+        setProperty('defaultCamZoom',1.3)
+        xx = 130
+        xx2 = 130
+        yy = 450;
+        yy2 = 450;
+    end
+    if curStep == 45 then
+        triggerEvent('Charles Enter')
+    end
 end
 

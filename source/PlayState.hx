@@ -230,6 +230,8 @@ class PlayState extends MusicBeatState
 	// airship shit
 	var henryTeleporter:FlxSprite;
 
+	var charlesEnter:Bool = false;
+
 	var tests:CCShader;
 	// ejected SHIT
 	var cloudScroll:FlxTypedGroup<FlxSprite>;
@@ -1273,6 +1275,8 @@ class PlayState extends MusicBeatState
 				add(bg);
 
 			case 'charles': // harles
+				charlesEnter = false;
+
 				GameOverSubstate.deathSoundName = 'henryDeath';
 				GameOverSubstate.loopSoundName = 'deathHenryMusicLoop';
 				GameOverSubstate.endSoundName = 'deathHenryMusicEnd';
@@ -1862,45 +1866,33 @@ class PlayState extends MusicBeatState
 		if (curStage == 'limo')
 			add(limo);
 
-		if (curSong == 'armed')
-			add(momGroup);
 
 		switch (curStage.toLowerCase())
 		{
 			case 'cargo':
 				add(momGroup);
+			case 'voting':
+				add(momGroup);
+			case 'charles':
+				add(momGroup);
 		}
 
-		//	if (curStage == 'charles')
-		//	{
-		//		add(boyfriendGroup);
-		//		add(dadGroup);
-		// add(momGroup);
-
-		//		}
-		//	else
-		//		{
-		if (curSong == 'voting')
+		add(dadGroup);
+		
+		if(curStage.toLowerCase() == 'henry' && SONG.song.toLowerCase() == 'armed')
 			add(momGroup);
 
-		add(dadGroup);
-		// add(momGroup);
 		add(boyfriendGroup);
-		//		}
 
-		if (curStage == 'defeat')
-			add(bodiesfront);
-
-		if (curStage == 'voting')
-			add(table);
-
-		if (curStage == 'banana')
-			add(bananas);
-		add(bunches);
-		add(leaves);
-
-		switch (curStage)
-		{
+		switch(curStage.toLowerCase()){
+			case 'defeat':
+				add(bodiesfront);
+			case 'voting':
+				add(table);
+			case 'banana':
+				add(bananas);
+				add(bunches);
+				add(leaves);
 			case 'plantroom':
 				add(bluemira);
 				add(pot);
@@ -2236,6 +2228,8 @@ class PlayState extends MusicBeatState
 		mom = new Character(0, 0, SONG.player4);
 		startCharacterPos(mom, true);
 		momGroup.add(mom);
+
+		if(curStage.toLowerCase() == 'charles') mom.flipX = false;
 
 		if (SONG.player1 == 'bf-running')
 		{
@@ -3166,6 +3160,9 @@ class PlayState extends MusicBeatState
 				switch (swagCounter)
 				{
 					case 0:
+						if(curStage.toLowerCase() == 'charles')
+							triggerEventNote('Play Animation', 'intro', 'bf');
+
 						FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
 						if (task != null)
 						{
@@ -3895,6 +3892,11 @@ class PlayState extends MusicBeatState
 			{
 				plat.setPosition(boyfriend.x + boyfriend.platformPos[0], boyfriend.y + boyfriend.platformPos[1]);
 			}
+		}
+
+		if(charlesEnter)
+		{
+			dad.x = FlxMath.lerp(dad.x, -600, CoolUtil.boundTo(elapsed * 2.1, 0, 1));
 		}
 
 		callOnLuas('onUpdate', [elapsed]);
@@ -4736,6 +4738,9 @@ class PlayState extends MusicBeatState
 		{
 			switch (eventName)
 			{
+				case 'Charles Enter':
+					charlesEnter = true;
+
 				case 'Extra Cam Zoom':
 					var _zoom:Float = Std.parseFloat(value1);
 					if (Math.isNaN(_zoom))

@@ -46,10 +46,21 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		Conductor.songPosition = 0;
 
+		if(characterName == 'henryphone')
+		{
+			FlxG.camera.zoom = 0.9;
+		}
+
 		bf = new Boyfriend(x, y, characterName);
 		add(bf);
 
-		camFollow = new FlxPoint(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y);
+		if(characterName == 'henryphone')
+		{
+			FlxG.camera.zoom = 0.9;
+			camFollow = new FlxPoint(bf.getGraphicMidpoint().x - 30, bf.getGraphicMidpoint().y - 60);
+		}
+		else
+			camFollow = new FlxPoint(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y);
 
 		FlxG.sound.play(Paths.sound(deathSoundName));
 

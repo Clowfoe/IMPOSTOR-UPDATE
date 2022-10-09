@@ -2,119 +2,120 @@
 <TextureAtlas imagePath="Ellie_Assets.png">
 	<!-- Created with Adobe Animate version 21.0.0.35450 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Ellie Down0000" x="13" y="13" width="466" height="550" frameX="0" frameY="-12" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0001" x="13" y="13" width="466" height="550" frameX="0" frameY="-12" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0002" x="492" y="13" width="456" height="563" frameX="-10" frameY="0" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0003" x="492" y="13" width="456" height="563" frameX="-10" frameY="0" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0004" x="961" y="13" width="457" height="563" frameX="-10" frameY="0" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0005" x="961" y="13" width="457" height="563" frameX="-10" frameY="0" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0006" x="961" y="13" width="457" height="563" frameX="-10" frameY="0" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0007" x="961" y="13" width="457" height="563" frameX="-10" frameY="0" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0008" x="961" y="13" width="457" height="563" frameX="-10" frameY="0" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0009" x="961" y="13" width="457" height="563" frameX="-10" frameY="0" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0010" x="961" y="13" width="457" height="563" frameX="-10" frameY="0" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0011" x="961" y="13" width="457" height="563" frameX="-10" frameY="0" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0012" x="961" y="13" width="457" height="563" frameX="-10" frameY="0" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0013" x="961" y="13" width="457" height="563" frameX="-10" frameY="0" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Down0014" x="961" y="13" width="457" height="563" frameX="-10" frameY="0" frameWidth="467" frameHeight="563"/>
-	<SubTexture name="Ellie Enter Animation0000" x="1431" y="13" width="496" height="1376" frameX="-13" frameY="0" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0001" x="1940" y="13" width="496" height="1381" frameX="-13" frameY="-439" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0002" x="1940" y="13" width="496" height="1381" frameX="-13" frameY="-439" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0003" x="2449" y="13" width="496" height="1380" frameX="-13" frameY="-364" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0004" x="2449" y="13" width="496" height="1380" frameX="-13" frameY="-364" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0005" x="2958" y="13" width="496" height="1389" frameX="-13" frameY="-374" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0006" x="2958" y="13" width="496" height="1389" frameX="-13" frameY="-374" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0007" x="2958" y="13" width="496" height="1389" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0008" x="2958" y="13" width="496" height="1389" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0009" x="3467" y="13" width="504" height="1390" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0010" x="3467" y="13" width="504" height="1390" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0011" x="3984" y="13" width="500" height="1390" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0012" x="3984" y="13" width="500" height="1390" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0013" x="4497" y="13" width="500" height="1396" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0014" x="4497" y="13" width="500" height="1396" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0015" x="5010" y="13" width="496" height="1402" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0016" x="5519" y="13" width="509" height="1402" frameX="0" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0017" x="6041" y="13" width="477" height="1450" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0018" x="6531" y="13" width="461" height="1531" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0019" x="6531" y="13" width="461" height="1531" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0020" x="7005" y="13" width="469" height="1531" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0021" x="7005" y="13" width="469" height="1531" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0022" x="7487" y="13" width="472" height="1531" frameX="-13" frameY="-369" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0023" x="13" y="1557" width="472" height="1479" frameX="-13" frameY="-421" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0024" x="498" y="1557" width="472" height="1349" frameX="-13" frameY="-551" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0025" x="498" y="1557" width="472" height="1349" frameX="-13" frameY="-551" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0026" x="983" y="1557" width="472" height="1506" frameX="-13" frameY="-394" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0027" x="983" y="1557" width="472" height="1506" frameX="-13" frameY="-394" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0028" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0029" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0030" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0031" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0032" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0033" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0034" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0035" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0036" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0037" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0038" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0039" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0040" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Enter Animation0041" x="1468" y="1557" width="388" height="688" frameX="-97" frameY="-1212" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Idle0000" x="1869" y="1557" width="406" height="665" frameX="0" frameY="-23" frameWidth="406" frameHeight="688"/>
-	<SubTexture name="Ellie Idle0001" x="1869" y="1557" width="406" height="665" frameX="0" frameY="-23" frameWidth="406" frameHeight="688"/>
-	<SubTexture name="Ellie Idle0002" x="2288" y="1557" width="406" height="666" frameX="0" frameY="-22" frameWidth="406" frameHeight="688"/>
-	<SubTexture name="Ellie Idle0003" x="2288" y="1557" width="406" height="666" frameX="0" frameY="-22" frameWidth="406" frameHeight="688"/>
-	<SubTexture name="Ellie Idle0004" x="2707" y="1557" width="397" height="671" frameX="-6" frameY="-17" frameWidth="406" frameHeight="688"/>
-	<SubTexture name="Ellie Idle0005" x="2707" y="1557" width="397" height="671" frameX="-6" frameY="-17" frameWidth="406" frameHeight="688"/>
-	<SubTexture name="Ellie Idle0006" x="3117" y="1557" width="386" height="688" frameX="-17" frameY="0" frameWidth="406" frameHeight="688"/>
-	<SubTexture name="Ellie Idle0007" x="3117" y="1557" width="386" height="688" frameX="-17" frameY="0" frameWidth="406" frameHeight="688"/>
-	<SubTexture name="Ellie Idle0008" x="1468" y="1557" width="388" height="688" frameX="-17" frameY="0" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Idle0009" x="1468" y="1557" width="388" height="688" frameX="-17" frameY="0" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Idle0010" x="1468" y="1557" width="388" height="688" frameX="-17" frameY="0" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Idle0011" x="1468" y="1557" width="388" height="688" frameX="-17" frameY="0" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Idle0012" x="1468" y="1557" width="388" height="688" frameX="-17" frameY="0" frameWidth="517" frameHeight="1900"/>
-	<SubTexture name="Ellie Idle0013" x="3516" y="1557" width="390" height="686" frameX="-16" frameY="-2" frameWidth="406" frameHeight="688"/>
-	<SubTexture name="Ellie Idle0014" x="3516" y="1557" width="390" height="686" frameX="-16" frameY="-2" frameWidth="406" frameHeight="688"/>
-	<SubTexture name="Ellie Left0000" x="3919" y="1557" width="458" height="666" frameX="0" frameY="-7" frameWidth="467" frameHeight="673"/>
-	<SubTexture name="Ellie Left0001" x="3919" y="1557" width="458" height="666" frameX="0" frameY="-7" frameWidth="467" frameHeight="673"/>
-	<SubTexture name="Ellie Left0002" x="4390" y="1557" width="451" height="673" frameX="-16" frameY="0" frameWidth="467" frameHeight="673"/>
-	<SubTexture name="Ellie Left0003" x="4390" y="1557" width="451" height="673" frameX="-16" frameY="0" frameWidth="467" frameHeight="673"/>
-	<SubTexture name="Ellie Left0004" x="4854" y="1557" width="451" height="673" frameX="-16" frameY="0" frameWidth="467" frameHeight="673"/>
-	<SubTexture name="Ellie Left0005" x="4854" y="1557" width="451" height="673" frameX="-16" frameY="0" frameWidth="467" frameHeight="673"/>
-	<SubTexture name="Ellie Left0006" x="4854" y="1557" width="451" height="673" frameX="-16" frameY="0" frameWidth="467" frameHeight="673"/>
-	<SubTexture name="Ellie Left0007" x="4854" y="1557" width="451" height="673" frameX="-16" frameY="0" frameWidth="467" frameHeight="673"/>
-	<SubTexture name="Ellie Left0008" x="4854" y="1557" width="451" height="673" frameX="-16" frameY="0" frameWidth="467" frameHeight="673"/>
-	<SubTexture name="Ellie Left0009" x="4854" y="1557" width="451" height="673" frameX="-16" frameY="0" frameWidth="467" frameHeight="673"/>
-	<SubTexture name="Ellie Left0010" x="4854" y="1557" width="451" height="673" frameX="-16" frameY="0" frameWidth="467" frameHeight="673"/>
-	<SubTexture name="Ellie Left0011" x="4854" y="1557" width="451" height="673" frameX="-16" frameY="0" frameWidth="467" frameHeight="673"/>
-	<SubTexture name="Ellie Left0012" x="4854" y="1557" width="451" height="673" frameX="-16" frameY="0" frameWidth="467" frameHeight="673"/>
-	<SubTexture name="Ellie Right0000" x="5318" y="1557" width="441" height="621" frameX="-5" frameY="-14" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0001" x="5318" y="1557" width="441" height="621" frameX="-5" frameY="-14" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0002" x="5772" y="1557" width="424" height="634" frameX="0" frameY="-1" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0003" x="5772" y="1557" width="424" height="634" frameX="0" frameY="-1" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0004" x="6209" y="1557" width="420" height="635" frameX="0" frameY="0" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0005" x="6209" y="1557" width="420" height="635" frameX="0" frameY="0" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0006" x="6209" y="1557" width="420" height="635" frameX="0" frameY="0" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0007" x="6209" y="1557" width="420" height="635" frameX="0" frameY="0" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0008" x="6209" y="1557" width="420" height="635" frameX="0" frameY="0" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0009" x="6209" y="1557" width="420" height="635" frameX="0" frameY="0" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0010" x="6209" y="1557" width="420" height="635" frameX="0" frameY="0" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0011" x="6209" y="1557" width="420" height="635" frameX="0" frameY="0" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0012" x="6209" y="1557" width="420" height="635" frameX="0" frameY="0" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0013" x="6209" y="1557" width="420" height="635" frameX="0" frameY="0" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Right0014" x="6209" y="1557" width="420" height="635" frameX="0" frameY="0" frameWidth="446" frameHeight="635"/>
-	<SubTexture name="Ellie Up0000" x="6642" y="1557" width="437" height="708" frameX="-12" frameY="0" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0001" x="6642" y="1557" width="437" height="708" frameX="-12" frameY="0" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0002" x="7092" y="1557" width="431" height="701" frameX="-2" frameY="-7" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0003" x="7092" y="1557" width="431" height="701" frameX="-2" frameY="-7" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0004" x="7536" y="1557" width="430" height="699" frameX="0" frameY="-9" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0005" x="7536" y="1557" width="430" height="699" frameX="0" frameY="-9" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0006" x="7536" y="1557" width="430" height="699" frameX="0" frameY="-9" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0007" x="7536" y="1557" width="430" height="699" frameX="0" frameY="-9" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0008" x="7536" y="1557" width="430" height="699" frameX="0" frameY="-9" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0009" x="7536" y="1557" width="430" height="699" frameX="0" frameY="-9" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0010" x="7536" y="1557" width="430" height="699" frameX="0" frameY="-9" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0011" x="7536" y="1557" width="430" height="699" frameX="0" frameY="-9" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0012" x="7536" y="1557" width="430" height="699" frameX="0" frameY="-9" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0013" x="7536" y="1557" width="430" height="699" frameX="0" frameY="-9" frameWidth="449" frameHeight="708"/>
-	<SubTexture name="Ellie Up0014" x="7536" y="1557" width="430" height="699" frameX="0" frameY="-9" frameWidth="449" frameHeight="708"/>
+	<SubTexture name="Ellie Down0000" x="30" y="30" width="460" height="630" frameX="0" frameY="-7" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0001" x="30" y="30" width="460" height="630" frameX="0" frameY="-7" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0002" x="520" y="30" width="444" height="637" frameX="-7" frameY="0" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0003" x="520" y="30" width="444" height="637" frameX="-7" frameY="0" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0004" x="520" y="30" width="444" height="637" frameX="-7" frameY="0" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0005" x="520" y="30" width="444" height="637" frameX="-7" frameY="0" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0006" x="520" y="30" width="444" height="637" frameX="-7" frameY="0" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0007" x="520" y="30" width="444" height="637" frameX="-7" frameY="0" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0008" x="520" y="30" width="444" height="637" frameX="-7" frameY="0" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0009" x="520" y="30" width="444" height="637" frameX="-7" frameY="0" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0010" x="520" y="30" width="444" height="637" frameX="-7" frameY="0" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0011" x="520" y="30" width="444" height="637" frameX="-7" frameY="0" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0012" x="520" y="30" width="444" height="637" frameX="-7" frameY="0" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0013" x="520" y="30" width="444" height="637" frameX="-7" frameY="0" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Down0014" x="520" y="30" width="444" height="637" frameX="-7" frameY="0" frameWidth="460" frameHeight="637"/>
+	<SubTexture name="Ellie Enter Animation0000" x="994" y="30" width="582" height="963" frameX="-54" frameY="0" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0001" x="1606" y="30" width="582" height="963" frameX="-54" frameY="-691" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0002" x="1606" y="30" width="582" height="963" frameX="-54" frameY="-691" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0003" x="1606" y="30" width="582" height="963" frameX="-54" frameY="-669" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0004" x="1606" y="30" width="582" height="963" frameX="-54" frameY="-669" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0005" x="1606" y="30" width="582" height="963" frameX="-54" frameY="-673" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0006" x="1606" y="30" width="582" height="963" frameX="-54" frameY="-673" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0007" x="1606" y="30" width="582" height="963" frameX="-54" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0008" x="1606" y="30" width="582" height="963" frameX="-54" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0009" x="1606" y="30" width="582" height="963" frameX="-54" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0010" x="1606" y="30" width="582" height="963" frameX="-54" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0011" x="2218" y="30" width="586" height="958" frameX="-50" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0012" x="2834" y="30" width="586" height="958" frameX="-50" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0013" x="3450" y="30" width="588" height="972" frameX="-48" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0014" x="3450" y="30" width="588" height="972" frameX="-48" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0015" x="4068" y="30" width="605" height="1036" frameX="-31" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0016" x="4068" y="30" width="605" height="1036" frameX="-31" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0017" x="4703" y="30" width="633" height="1087" frameX="-3" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0018" x="4703" y="30" width="633" height="1087" frameX="-3" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0019" x="5366" y="30" width="635" height="1087" frameX="-1" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0020" x="5366" y="30" width="635" height="1087" frameX="-1" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0021" x="6031" y="30" width="634" height="1087" frameX="-2" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0022" x="6031" y="30" width="634" height="1087" frameX="-2" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0023" x="6695" y="30" width="636" height="1087" frameX="0" frameY="-672" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0024" x="7361" y="30" width="636" height="1057" frameX="0" frameY="-702" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0025" x="30" y="1147" width="635" height="1057" frameX="-1" frameY="-702" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0026" x="695" y="1147" width="635" height="1119" frameX="-1" frameY="-640" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0027" x="1360" y="1147" width="635" height="1119" frameX="-1" frameY="-640" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0028" x="2025" y="1147" width="635" height="1410" frameX="-1" frameY="-349" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0029" x="2025" y="1147" width="635" height="1410" frameX="-1" frameY="-349" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0030" x="2025" y="1147" width="635" height="1410" frameX="-1" frameY="-349" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0031" x="2025" y="1147" width="635" height="1410" frameX="-1" frameY="-349" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0032" x="2025" y="1147" width="635" height="1410" frameX="-1" frameY="-349" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0033" x="2025" y="1147" width="635" height="1410" frameX="-1" frameY="-349" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0034" x="2025" y="1147" width="635" height="1410" frameX="-1" frameY="-349" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0035" x="2025" y="1147" width="635" height="1410" frameX="-1" frameY="-349" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0036" x="2025" y="1147" width="635" height="1410" frameX="-1" frameY="-349" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0037" x="2025" y="1147" width="635" height="1410" frameX="-1" frameY="-349" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0038" x="2025" y="1147" width="635" height="1410" frameX="-1" frameY="-349" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0039" x="2025" y="1147" width="635" height="1410" frameX="-1" frameY="-349" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Enter Animation0040" x="2025" y="1147" width="635" height="1410" frameX="-1" frameY="-349" frameWidth="636" frameHeight="1759"/>
+	<SubTexture name="Ellie Idle0000" x="2690" y="1147" width="412" height="673" frameX="-2" frameY="-21" frameWidth="427" frameHeight="694"/>
+	<SubTexture name="Ellie Idle0001" x="2690" y="1147" width="412" height="673" frameX="-2" frameY="-21" frameWidth="427" frameHeight="694"/>
+	<SubTexture name="Ellie Idle0002" x="3132" y="1147" width="410" height="674" frameX="-1" frameY="-20" frameWidth="427" frameHeight="694"/>
+	<SubTexture name="Ellie Idle0003" x="3132" y="1147" width="410" height="674" frameX="-1" frameY="-20" frameWidth="427" frameHeight="694"/>
+	<SubTexture name="Ellie Idle0004" x="3572" y="1147" width="416" height="678" frameX="-2" frameY="-16" frameWidth="427" frameHeight="694"/>
+	<SubTexture name="Ellie Idle0005" x="3572" y="1147" width="416" height="678" frameX="-2" frameY="-16" frameWidth="427" frameHeight="694"/>
+	<SubTexture name="Ellie Idle0006" x="4018" y="1147" width="427" height="693" frameX="0" frameY="-1" frameWidth="427" frameHeight="694"/>
+	<SubTexture name="Ellie Idle0007" x="4018" y="1147" width="427" height="693" frameX="0" frameY="-1" frameWidth="427" frameHeight="694"/>
+	<SubTexture name="Ellie Idle0008" x="4475" y="1147" width="427" height="694"/>
+	<SubTexture name="Ellie Idle0009" x="4475" y="1147" width="427" height="694"/>
+	<SubTexture name="Ellie Idle0010" x="4932" y="1147" width="427" height="694"/>
+	<SubTexture name="Ellie Idle0011" x="4932" y="1147" width="427" height="694"/>
+	<SubTexture name="Ellie Idle0012" x="4932" y="1147" width="427" height="694"/>
+	<SubTexture name="Ellie Idle0013" x="4932" y="1147" width="427" height="694"/>
+	<SubTexture name="Ellie Idle0014" x="4932" y="1147" width="427" height="694"/>
+	<SubTexture name="Ellie Left0000" x="5389" y="1147" width="651" height="680" frameX="0" frameY="-6" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0001" x="5389" y="1147" width="651" height="680" frameX="0" frameY="-6" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0002" x="6070" y="1147" width="659" height="686" frameX="-6" frameY="0" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0003" x="6070" y="1147" width="659" height="686" frameX="-6" frameY="0" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0004" x="6070" y="1147" width="659" height="686" frameX="-6" frameY="0" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0005" x="6070" y="1147" width="659" height="686" frameX="-6" frameY="0" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0006" x="6070" y="1147" width="659" height="686" frameX="-6" frameY="0" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0007" x="6070" y="1147" width="659" height="686" frameX="-6" frameY="0" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0008" x="6070" y="1147" width="659" height="686" frameX="-6" frameY="0" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0009" x="6070" y="1147" width="659" height="686" frameX="-6" frameY="0" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0010" x="6070" y="1147" width="659" height="686" frameX="-6" frameY="0" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0011" x="6070" y="1147" width="659" height="686" frameX="-6" frameY="0" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0012" x="6070" y="1147" width="659" height="686" frameX="-6" frameY="0" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0013" x="6070" y="1147" width="659" height="686" frameX="-6" frameY="0" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Left0014" x="6070" y="1147" width="659" height="686" frameX="-6" frameY="0" frameWidth="665" frameHeight="686"/>
+	<SubTexture name="Ellie Right0000" x="6759" y="1147" width="489" height="681" frameX="-49" frameY="-81" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0001" x="6759" y="1147" width="489" height="681" frameX="-49" frameY="-81" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0002" x="7278" y="1147" width="529" height="762" frameX="0" frameY="0" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0003" x="7278" y="1147" width="529" height="762" frameX="0" frameY="0" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0004" x="7278" y="1147" width="529" height="762" frameX="0" frameY="0" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0005" x="7278" y="1147" width="529" height="762" frameX="0" frameY="0" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0006" x="7278" y="1147" width="529" height="762" frameX="0" frameY="0" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0007" x="7278" y="1147" width="529" height="762" frameX="0" frameY="0" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0008" x="7278" y="1147" width="529" height="762" frameX="0" frameY="0" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0009" x="7278" y="1147" width="529" height="762" frameX="0" frameY="0" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0010" x="7278" y="1147" width="529" height="762" frameX="0" frameY="0" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0011" x="7278" y="1147" width="529" height="762" frameX="0" frameY="0" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0012" x="7278" y="1147" width="529" height="762" frameX="0" frameY="0" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0013" x="7278" y="1147" width="529" height="762" frameX="0" frameY="0" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Right0014" x="7278" y="1147" width="529" height="762" frameX="0" frameY="0" frameWidth="538" frameHeight="762"/>
+	<SubTexture name="Ellie Up0000" x="30" y="2587" width="375" height="742" frameX="-8" frameY="0" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0001" x="30" y="2587" width="375" height="742" frameX="-8" frameY="0" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0002" x="435" y="2587" width="380" height="734" frameX="0" frameY="-8" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0003" x="435" y="2587" width="380" height="734" frameX="0" frameY="-8" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0004" x="435" y="2587" width="380" height="734" frameX="0" frameY="-8" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0005" x="435" y="2587" width="380" height="734" frameX="0" frameY="-8" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0006" x="435" y="2587" width="380" height="734" frameX="0" frameY="-8" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0007" x="435" y="2587" width="380" height="734" frameX="0" frameY="-8" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0008" x="435" y="2587" width="380" height="734" frameX="0" frameY="-8" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0009" x="435" y="2587" width="380" height="734" frameX="0" frameY="-8" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0010" x="435" y="2587" width="380" height="734" frameX="0" frameY="-8" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0011" x="435" y="2587" width="380" height="734" frameX="0" frameY="-8" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0012" x="435" y="2587" width="380" height="734" frameX="0" frameY="-8" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0013" x="435" y="2587" width="380" height="734" frameX="0" frameY="-8" frameWidth="383" frameHeight="742"/>
+	<SubTexture name="Ellie Up0014" x="435" y="2587" width="380" height="734" frameX="0" frameY="-8" frameWidth="383" frameHeight="742"/>
 </TextureAtlas>
