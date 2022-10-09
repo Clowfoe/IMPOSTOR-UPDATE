@@ -12,6 +12,7 @@ using StringTools;
 
 class Note extends FlxSprite
 {
+	public var row:Int = 0;
 	public var strumTime:Float = 0;
 
 	public var mustPress:Bool = false;
