@@ -1897,15 +1897,17 @@ class PlayState extends MusicBeatState
 
 		add(boyfriendGroup);
 
+		if (curStage == 'defeat')
+			add(bodiesfront);
+
+		if (curStage == 'voting')
+			add(table);
+
+		if (curStage == 'banana')
+			add(bananas);
+			add(bunches);
+
 		switch(curStage.toLowerCase()){
-			case 'defeat':
-				add(bodiesfront);
-			case 'voting':
-				add(table);
-			case 'banana':
-				add(bananas);
-				add(bunches);
-				add(leaves);
 			case 'plantroom':
 				add(bluemira);
 				add(pot);
@@ -5666,7 +5668,7 @@ class PlayState extends MusicBeatState
 					{
 						CustomFadeTransition.nextCamera = null;
 					}
-					MusicBeatState.switchState(new StoryMenuState());
+					MusicBeatState.switchState(new AmongStoryMenuState());
 
 					// if ()
 					if (!usedPractice)
