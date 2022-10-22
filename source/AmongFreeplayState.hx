@@ -168,6 +168,8 @@ class AmongFreeplayState extends MusicBeatState
 		portrait.animation.addByIndices('monotone', 'Character', [28], null, 24, true);
 		portrait.animation.addByIndices('charles', 'Character', [29], null, 24, true);
 		portrait.animation.addByIndices('finale', 'Character', [30], null, 24, true);
+		portrait.animation.addByIndices('pop', 'Character', [31], null, 24, true);
+		portrait.animation.addByIndices('torture', 'Character', [32], null, 24, true);
 		portrait.animation.play('red');
 		portrait.antialiasing = true;
 		portrait.setPosition(304.65, -100);
@@ -532,7 +534,7 @@ class AmongFreeplayState extends MusicBeatState
 				["Tomongus Tuesday", "tuesday", 'tomo', FlxColor.fromRGB(255, 90, 134)],
 				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK],
 				["Who", "whoguys", 'who', FlxColor.fromRGB(22, 65, 240)],
-				["Drippypop", "drippy", 'red', FlxColor.fromRGB(84, 167, 202)],
+				["Drippypop", "drippy", 'pop', FlxColor.fromRGB(188, 106, 223)],
 				["Crewicide", "dave", 'red', FlxColor.fromRGB(84, 167, 202)],
 				["Triple Trouble", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)],
 				["Monochrome", "dead", 'red', FlxColor.fromRGB(84, 167, 202)],
@@ -544,9 +546,9 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Chippin", "skinnynuts", 'chips', FlxColor.fromRGB(255, 60, 38)],
-				["Chipping", "skinnynuts", 'chips', FlxColor.fromRGB(255, 60, 38)],
-				["Skinny Nuts", "skinnynuts", 'clow', FlxColor.fromRGB(255, 60, 38)]
+				["Chippin", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38)],
+				["Chipping", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38)],
+				["Torture", "ziffy", 'torture', FlxColor.fromRGB(188, 106, 223)]
 			],
 
 			section: 7
