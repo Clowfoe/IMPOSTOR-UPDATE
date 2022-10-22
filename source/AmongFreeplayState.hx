@@ -165,6 +165,9 @@ class AmongFreeplayState extends MusicBeatState
 		portrait.animation.addByIndices('kills', 'Character', [25], null, 24, true);
 		portrait.animation.addByIndices('jerma', 'Character', [26], null, 24, true);
 		portrait.animation.addByIndices('who', 'Character', [27], null, 24, true);
+		portrait.animation.addByIndices('monotone', 'Character', [28], null, 24, true);
+		portrait.animation.addByIndices('charles', 'Character', [29], null, 24, true);
+		portrait.animation.addByIndices('finale', 'Character', [30], null, 24, true);
 		portrait.animation.play('red');
 		portrait.antialiasing = true;
 		portrait.setPosition(304.65, -100);
@@ -427,14 +430,14 @@ class AmongFreeplayState extends MusicBeatState
 			songs: [
 				["Defeat", "black", 'black', FlxColor.fromRGB(179, 0, 255)],
 				["Ominous", "black", 'black', FlxColor.fromRGB(179, 0, 255)],
-				["Finale", "black", 'black', FlxColor.fromRGB(179, 0, 255)]
+				["Finale", "black", 'finale', FlxColor.fromRGB(179, 0, 255)]
 			],
 
 			section: 0
 		});
 
 		weeks.push({
-			songs: [["Compromised Persona", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)]],
+			songs: [["Compromised Persona", "monotone", 'monotone', FlxColor.BLACK]],
 			section: 0
 		});
 
@@ -506,7 +509,7 @@ class AmongFreeplayState extends MusicBeatState
 		weeks.push({
 			songs: [
 				["Titular", "henry", 'tit', FlxColor.ORANGE],
-				["Greatest Plan", "charles", 'tit', FlxColor.ORANGE],
+				["Greatest Plan", "charles", 'charles', FlxColor.RED],
 				["Reinforcements", "ellie", 'tit', FlxColor.ORANGE],
 				["Armed", "rhm", 'tit', FlxColor.ORANGE]
 			],
