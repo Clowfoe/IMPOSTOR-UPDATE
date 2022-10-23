@@ -170,6 +170,7 @@ class AmongFreeplayState extends MusicBeatState
 		portrait.animation.addByIndices('finale', 'Character', [30], null, 24, true);
 		portrait.animation.addByIndices('pop', 'Character', [31], null, 24, true);
 		portrait.animation.addByIndices('torture', 'Character', [32], null, 24, true);
+		portrait.animation.addByIndices('dave', 'Character', [33], null, 24, true);
 		portrait.animation.play('red');
 		portrait.antialiasing = true;
 		portrait.setPosition(304.65, -100);
@@ -535,7 +536,7 @@ class AmongFreeplayState extends MusicBeatState
 				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK],
 				["Who", "whoguys", 'who', FlxColor.fromRGB(22, 65, 240)],
 				["Drippypop", "drippy", 'pop', FlxColor.fromRGB(188, 106, 223)],
-				["Crewicide", "dave", 'red', FlxColor.fromRGB(84, 167, 202)],
+				["Crewicide", "dave", 'dave', FlxColor.BLUE],
 				["Triple Trouble", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)],
 				["Monochrome", "dead", 'red', FlxColor.fromRGB(84, 167, 202)],
 				["Top 10", "top", 'top', FlxColor.RED]
