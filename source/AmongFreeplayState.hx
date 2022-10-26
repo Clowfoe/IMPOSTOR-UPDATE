@@ -411,6 +411,7 @@ class AmongFreeplayState extends MusicBeatState
 			songs: [
 				["Sussy Bussy", "tomongus", 'tomo', FlxColor.fromRGB(255, 90, 134)],
 				["Rivals", "tomongus", 'tomo', FlxColor.fromRGB(255, 90, 134)],
+				["Rivals Old", "tomongus", 'tomo', FlxColor.fromRGB(255, 90, 134)],
 				["Chewmate", "hamster", 'ham', FlxColor.fromRGB(255, 90, 134)]
 			],
 

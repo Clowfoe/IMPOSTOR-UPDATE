@@ -349,6 +349,15 @@ class PlayState extends MusicBeatState
 	var vt_light:FlxSprite;
 	var bars:FlxSprite;
 
+	//turbulence! :D
+	var turbsky:FlxSprite;
+	var backerclouds:FlxSprite;
+	var hotairballoon:FlxSprite;
+	var midderclouds:FlxSprite;
+	var hookarm:FlxSprite;
+	var clawshands:FlxSprite;
+	var turbFrontCloud:FlxTypedGroup<FlxSprite>;
+
 	// bananungus
 	var bananas:FlxSprite;
 	var bunches:FlxSprite;
@@ -713,7 +722,7 @@ class PlayState extends MusicBeatState
 				loungebg.active = false;
 				add(loungebg);
 
-			case 'voting': // lotowncorry + 02
+				case 'voting': // lotowncorry + 02
 				var otherroom:FlxSprite = new FlxSprite(387.3, 194.1).loadGraphic(Paths.image('airship/backer_groung_voting', 'impostor'));
 				otherroom.antialiasing = true;
 				otherroom.scrollFactor.set(0.8, 0.8);
@@ -770,6 +779,48 @@ class PlayState extends MusicBeatState
 				leaves.antialiasing = true;
 				leaves.scrollFactor.set(1.5, 1.5);
 				leaves.active = false;
+
+
+			case 'turbulence': // TURBULENCE!!!
+
+				turbFrontCloud = new FlxTypedGroup<FlxSprite>();	
+
+				var turbsky:FlxSprite = new FlxSprite(-866.9, -400.05).loadGraphic(Paths.image('airship/turbulence/turbsky', 'impostor'));
+				turbsky.antialiasing = true;
+				turbsky.scrollFactor.set(0.5, 0.5);
+				turbsky.active = false;
+				add(turbsky);
+				
+				var backerclouds:FlxSprite = new FlxSprite(1296.55, 175.55).loadGraphic(Paths.image('airship/turbulence/backclouds', 'impostor'));
+				backerclouds.antialiasing = true;
+				backerclouds.scrollFactor.set(0.65, 0.65);
+				backerclouds.active = false;
+				add(backerclouds);
+
+				var hotairballoon:FlxSprite = new FlxSprite(134.7, 147.05).loadGraphic(Paths.image('airship/turbulence/hotairballoon', 'impostor'));
+				hotairballoon.antialiasing = true;
+				hotairballoon.scrollFactor.set(0.65, 0.65);
+				hotairballoon.active = false;
+				add(hotairballoon);
+
+				var midderclouds:FlxSprite = new FlxSprite(-313.55, 253.05).loadGraphic(Paths.image('airship/turbulence/midclouds', 'impostor'));
+				midderclouds.antialiasing = true;
+				midderclouds.scrollFactor.set(0.8, 0.8);
+				midderclouds.active = false;
+				add(midderclouds);
+
+				var hookarm:FlxSprite = new FlxSprite(-567.85, 888.4).loadGraphic(Paths.image('airship/turbulence/clawback', 'impostor'));
+				hookarm.antialiasing = true;
+				hookarm.scrollFactor.set(1, 1);
+				hookarm.active = false;
+
+				clawshands = new FlxSprite(1873, 690.1);
+				clawshands.frames = Paths.getSparrowAtlas('airship/turbulence/clawfront', 'impostor');
+				clawshands.animation.addByPrefix('squeeze', 'clawhands', 24, false);
+				clawshands.animation.play('squeeze');
+				clawshands.antialiasing = true;
+				clawshands.scrollFactor.set(1, 1);
+				clawshands.active = true;
 
 			case 'who': // dead dead guy
 				var bg:FlxSprite = new FlxSprite(0, 100).loadGraphic(Paths.image('polus/deadguy', 'impostor'));
@@ -1891,6 +1942,9 @@ class PlayState extends MusicBeatState
 		}
 
 		add(dadGroup);
+
+		if (curStage == 'turbulence')
+			add(hookarm);
 		
 		if(curStage.toLowerCase() == 'henry' && SONG.song.toLowerCase() == 'armed')
 			add(momGroup);
@@ -2001,6 +2055,37 @@ class PlayState extends MusicBeatState
 				loungelight.alpha = 0.33;
 				loungelight.blend = ADD;
 				add(loungelight);
+
+			case 'turbulence':
+
+				add(clawshands);
+
+				for (i in 0...2)
+					{
+						var frontercloud:FlxSprite = new FlxSprite(-1399.75,1012.65).loadGraphic(Paths.image('airship/turbulence/frontclouds', 'impostor'));
+						switch (i)
+						{
+							case 1:
+								frontercloud.setPosition(-1399.75, 1012.65);
+	
+							case 2:
+								frontercloud.setPosition(4102, 1012.65);
+						}
+						frontercloud.antialiasing = true;
+						frontercloud.updateHitbox();
+						frontercloud.scrollFactor.set(1, 1);
+						add(frontercloud);
+						turbFrontCloud.add(frontercloud);
+					}
+
+				var turblight:FlxSprite = new FlxSprite(-83.1, -876.7).loadGraphic(Paths.image('airship/turbulence/TURBLIGHTING', 'impostor'));
+				turblight.antialiasing = true;
+				turblight.scrollFactor.set(1.3, 1.3);
+				turblight.active = false;
+				turblight.alpha = 0.41;
+				turblight.blend = ADD;
+				add(turblight);
+
 			case 'banana':
 				var lightoverlay:FlxSprite = new FlxSprite(-221.85, -167.7).loadGraphic(Paths.image('banana/LIGHTSOURCE', 'impostor'));
 				lightoverlay.antialiasing = true;
@@ -2009,6 +2094,7 @@ class PlayState extends MusicBeatState
 				lightoverlay.alpha = 0.41;
 				lightoverlay.blend = ADD;
 				add(lightoverlay);
+				
 			case 'monotone':
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/overlay', 'impostor'));
 				lightoverlay.antialiasing = true;
