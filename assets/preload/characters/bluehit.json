@@ -1,111 +1,111 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				17,
 				-302
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "hit right",
-			"indices": []
+			"indices": [],
+			"name": "hit right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				55,
 				-331
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "hit down",
-			"indices": []
+			"indices": [],
+			"name": "hit down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				40,
 				-212
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "hit left",
-			"indices": []
+			"indices": [],
+			"name": "hit left"
 		},
 		{
+			"offsets": [
+				24,
+				-195
+			],
 			"loop": false,
-			"offsets": [
-				24,
-				-195
-			],
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "hit up",
-			"indices": []
-		},
-		{
-			"loop": true,
-			"offsets": [
-				17,
-				-302
-			],
-			"anim": "singRIGHT-loop",
-			"fps": 24,
-			"name": "hit right",
-			"indices": [
-				2
-			]
-		},
-		{
-			"loop": true,
-			"offsets": [
-				55,
-				-331
-			],
-			"anim": "singDOWN-loop",
-			"fps": 24,
-			"name": "hit down",
-			"indices": [
-				2
-			]
-		},
-		{
-			"loop": true,
-			"offsets": [
-				40,
-				-212
-			],
-			"anim": "singLEFT-loop",
-			"fps": 24,
-			"name": "hit left",
-			"indices": [
-				2
-			]
-		},
-		{
-			"offsets": [
-				24,
-				-195
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singUP-loop",
-			"indices": [
-				2
-			],
+			"indices": [],
 			"name": "hit up"
 		},
 		{
 			"offsets": [
+				17,
+				-302
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"indices": [
+				2
+			],
+			"name": "hit right"
+		},
+		{
+			"offsets": [
+				55,
+				-331
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN-loop",
+			"indices": [
+				2
+			],
+			"name": "hit down"
+		},
+		{
+			"offsets": [
+				40,
+				-212
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"indices": [
+				2
+			],
+			"name": "hit left"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				24,
+				-195
+			],
+			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "hit up",
+			"indices": [
+				2
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
 				41,
 				-308
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "hit idle"
+			"fps": 24,
+			"name": "hit idle",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
