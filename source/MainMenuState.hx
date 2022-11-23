@@ -317,7 +317,7 @@ class MainMenuState extends MusicBeatState
 				FlxG.switchState(new OptionsState());
 				trace("Options Menu Selected");
 			case 'Gallery':
-				FlxG.switchState(new OptionsState());
+				FlxG.switchState(new AmongCreditsState());
 				trace("Gallery Menu Selected");
 			case 'Innersloth':
 				FlxG.switchState(new OptionsState());
