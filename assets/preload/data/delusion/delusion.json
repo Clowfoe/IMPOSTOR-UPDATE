@@ -1,16 +1,16 @@
 {
 	"song": {
-		"player1": "bf",
+		"player1": "bfairship",
 		"notes": [
 			{
 				"sectionNotes": [],
 				"lengthInSteps": 16,
-				"mustHitSection": true
+				"mustHitSection": false
 			},
 			{
 				"sectionNotes": [],
 				"lengthInSteps": 16,
-				"mustHitSection": true
+				"mustHitSection": false
 			},
 			{
 				"sectionNotes": [
@@ -5328,6 +5328,24 @@
 			},
 			{
 				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 158,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 158
+			},
+			{
+				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
@@ -5339,6 +5357,7 @@
 		"player2": "grey",
 		"player3": "gf",
 		"song": "Delusion",
+		"stage": "grey",
 		"needsVoices": true,
 		"validScore": true,
 		"bpm": 158,
