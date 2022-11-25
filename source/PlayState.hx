@@ -4563,10 +4563,13 @@ class PlayState extends MusicBeatState
 				
 									dad.mostRecentRow = daNote.row;
 									// dad.angle += 15; lmaooooo
-									doGhostAnim('dad', animToPlay);
+									if (!daNote.noAnimation)
+									{
+										doGhostAnim('dad', animToPlay + altAnim);
+									}
 								}
 								else{
-									dad.playAnim(animToPlay, true);
+									dad.playAnim(animToPlay + altAnim, true);
 									// dad.angle = 0;
 								}
 						}
@@ -4961,9 +4964,12 @@ class PlayState extends MusicBeatState
 				case 'Reactor Beep':
 					var charType:Float = Std.parseFloat(value1);
 					if (Math.isNaN(charType))
-						charType = 0;
+						charType = 0.4;
 
 					flashSprite.alpha = charType;
+
+					FlxG.camera.zoom += 0.015;
+					camHUD.zoom += 0.03;
 
 				case 'Dave AUGH':
 					var targetsArray:Array<FlxCamera> = [camGame, camHUD];
@@ -6362,10 +6368,13 @@ class PlayState extends MusicBeatState
 		
 							boyfriend.mostRecentRow = note.row;
 							// dad.angle += 15; lmaooooo
-							doGhostAnim('bf', animToPlay);
+							if (!note.noAnimation)
+							{
+								doGhostAnim('bf', animToPlay + daAlt);
+							}
 						}
 						else{
-							boyfriend.playAnim(animToPlay, true);
+							boyfriend.playAnim(animToPlay + daAlt, true);
 							// dad.angle = 0;
 						}
 				}
