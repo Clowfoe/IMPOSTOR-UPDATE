@@ -409,17 +409,6 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Sussy Bussy", "tomongus", 'tomo', FlxColor.fromRGB(255, 90, 134)],
-				["Rivals", "tomongus", 'tomo', FlxColor.fromRGB(255, 90, 134)],
-				["Rivals Old", "tomongus", 'tomo', FlxColor.fromRGB(255, 90, 134)],
-				["Chewmate", "hamster", 'ham', FlxColor.fromRGB(255, 90, 134)]
-			],
-
-			section: 0
-		});
-
-		weeks.push({
-			songs: [
 				["Mando", "yellow", 'yellow', FlxColor.fromRGB(255, 218, 67)],
 				["Dlow", "yellow", 'yellow', FlxColor.fromRGB(255, 218, 67)],
 				["Oversight", "white", 'white', FlxColor.WHITE],
@@ -495,6 +484,7 @@ class AmongFreeplayState extends MusicBeatState
 		weeks.push({
 			songs: [
 				["ROOMCODE", "powers", 'powers', FlxColor.fromRGB(80, 173, 235)],
+				["Crewicide", "dave", 'dave', FlxColor.BLUE],
 				["Posussium", "bananungus", 'bananungus', FlxColor.fromRGB(235, 188, 80)]
 			],
 
@@ -503,8 +493,10 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Alpha Moogus", "oldpostor", 'oldpostor', FlxColor.RED],
-				["Actin Sus", "oldpostor", 'oldpostor', FlxColor.RED]
+				["Titular", "henry", 'tit', FlxColor.ORANGE],
+				["Greatest Plan", "charles", 'charles', FlxColor.RED],
+				["Reinforcements", "ellie", 'tit', FlxColor.ORANGE],
+				["Armed", "rhm", 'tit', FlxColor.ORANGE]
 			],
 
 			section: 3
@@ -512,10 +504,26 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Titular", "henry", 'tit', FlxColor.ORANGE],
-				["Greatest Plan", "charles", 'charles', FlxColor.RED],
-				["Reinforcements", "ellie", 'tit', FlxColor.ORANGE],
-				["Armed", "rhm", 'tit', FlxColor.ORANGE]
+				["Sussy Bussy", "tomongus", 'tomo', FlxColor.fromRGB(255, 90, 134)],
+				["Rivals", "tomongus", 'tomo', FlxColor.fromRGB(255, 90, 134)],
+				["Chewmate", "hamster", 'ham', FlxColor.fromRGB(255, 90, 134)]
+			],
+
+			section: 4
+		});
+
+		weeks.push({
+			songs: [
+				["Tomongus Tuesday", "tuesday", 'tomo', FlxColor.fromRGB(255, 90, 134)],
+			],
+
+			section: 4
+		});
+
+		weeks.push({
+			songs: [
+				["Alpha Moogus", "oldpostor", 'oldpostor', FlxColor.RED],
+				["Actin Sus", "oldpostor", 'oldpostor', FlxColor.RED]
 			],
 
 			section: 4
@@ -527,23 +535,21 @@ class AmongFreeplayState extends MusicBeatState
 				["Spookpostor", "boo", 'loggo', FlxColor.fromRGB(0, 255, 0)]
 			],
 
-			section: 5
+			section: 4
 		});
 
 		weeks.push({
 			songs: [
 				["Ow", "kills", 'kills', FlxColor.fromRGB(84, 167, 202)],
-				["Tomongus Tuesday", "tuesday", 'tomo', FlxColor.fromRGB(255, 90, 134)],
-				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK],
 				["Who", "whoguys", 'who', FlxColor.fromRGB(22, 65, 240)],
+				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK],
 				["Drippypop", "drippy", 'pop', FlxColor.fromRGB(188, 106, 223)],
-				["Crewicide", "dave", 'dave', FlxColor.BLUE],
 				["Triple Trouble", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)],
 				["Monochrome", "dead", 'red', FlxColor.fromRGB(84, 167, 202)],
 				["Top 10", "top", 'top', FlxColor.RED]
 			],
 
-			section: 6
+			section: 5
 		});
 
 		weeks.push({
@@ -553,7 +559,7 @@ class AmongFreeplayState extends MusicBeatState
 				["Torture", "ziffy", 'torture', FlxColor.fromRGB(188, 106, 223)]
 			],
 
-			section: 7
+			section: 6
 		});
 
 		return weeks;
@@ -565,13 +571,13 @@ class AmongFreeplayState extends MusicBeatState
 
 		curWeek += change;
 
-		if (curWeek > 7)
+		if (curWeek > 6)
 		{
 			curWeek = 0;
 		}
 		if (curWeek < 0)
 		{
-			curWeek = 7;
+			curWeek = 6;
 		}
 
 		trace(curWeek + ' ' + weeks.length);

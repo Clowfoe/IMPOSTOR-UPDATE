@@ -14,25 +14,31 @@ class AmongCreditsState extends MusicBeatState
         ['creeper\ncrunch',	'crunch',		'yo, im crunch, i directed jorsawsee and did a good bit of scattered work across the mod, working on this mod was awesome, i hope everyone loves it as much as i do!','https://twitter.com/creepercrunch'],
        
         //coders
+        ['aqua',			'aqua',			"local sexy babe and hot programmer\ni coded some of this mod and lost sleep working on it",				'https://twitter.com/gedehari'],   
+        ['DuskieWhy',			'duskie',			"What's up bros! It's me! DuckieWow! DurkieWho! DuskieWhy! errrr this mod is cool i think... i did the double note ghost animation system thingy ... follow me on twitter dot com",				'https://twitter.com/gedehari'],   
 
         //artists
+        ['loggo',			'lojo',			'halloween',				'https://twitter.com/gedehari'],   
         ['mayhew',			'mayhew',		'i got in here because of stupid fan concept\ni loved working on this mod its so awesome vs impostor fnf mod vs impostor\nadd me on fall guys',		'https://twitter.com/SandPlanetNG'],
         ['mayo',				'mayo',		"Hi I'm Mayokiddo\nI'm an artist for the mod and I made a bunch of the playable mini impostor skins, and i also made a few sprites\nshout out to everyone currently in silly squad",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
         ['neato',				'neato',		'im neato i made sprites for drippypop insane streamer and turbulance\nand made some of the instrumental for insane streamer im gon get hit by a truck and break my spine',	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
-        ['squidboy84',	'squid',	'hi im squid you may or may not know me for moderating the impostorm discord server\nive also been working for impostor ever since its beginning so thats cool i guess\nlove u zial <3<3<3',							'https://twitter.com/Keoiki_'],
+        ['orbyy',			'orb',			"Im really happy i got to work on this, i was brought on v3 to do pixel art for tomongus and i'm grateful for being given the opportunity. I hope yall love the new pixel art for tomongus week and i apologize for v3's defeat chart.",    'https://twitter.com/gedehari'],   
+        ['squidboy',	'squid',	'hi im squid you may or may not know me for moderating the impostorm discord server\nive also been working for impostor ever since its beginning so thats cool i guess\nlove u zial <3<3<3',		'https://twitter.com/Keoiki_'],
         ['pip',			'pip',			'mole',				'https://twitter.com/gedehari'],   
         ['crocidy',				'croc',		"can you follow me i made fourth wall",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
-        ['LayLasagna7',				'lay',		"#1 giggleboy and omfg fan\nhello mommy!!!!!!! :)))) i'm a big boy now!!!!",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
- 
+        ['Lay\nLasagna',				'lay',		"#1 giggleboy and omfg fan\nhello mommy!!!!!!! :)))) i'm a big boy now!!!!",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
+        ['coti',			'coti',			'hi !! im coti-- i didnt really do much except for a drawing or visual tweaking here and there, but im happy i got to work on the mod anyway !! remember to always be silly',	'https://twitter.com/gedehari'],   
+  
         //musicians
+        ['keoni',				'keoni',			"keoni",	'https://twitter.com/emihead'],
         ['emihead',				'emihead',			"im emihead i made tomonjus tuesday and the credits song also i am canonically the black impostor's lover so please draw us making out and tag me on twitter @ emihead",	'https://twitter.com/emihead'],
-		['Keegan',		'keegan',	"Hey Gamers, I'm Keegan, I made Turbulence and all the midi sections of Room Code.\nI like ENA and I draw occasionally you should follow me @__Keegan_",						'https://twitter.com/polybiusproxy'],
+		['Keegan',		'keegan',	"Hey Gamers, I'm Keegan, I made Turbulence and all the midi sections of Room Code.\nI like ENA and I draw occasionally you should follow me @__Keegan_",		'https://twitter.com/polybiusproxy'],
        
         //charters
         ['gibz',				'gibz',		" shit idk , charted a few songs",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
 
         //misc
-        ['amongusfan24',				'cooper',		"i did nothing for this mod but let them use red mungus but i get a quote for having cancer",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
+        ['amongusfan',				'cooper',		"i did nothing for this mod but let them use red mungus but i get a quote for having cancer",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
     ];
 
     var nameText:FlxText;
