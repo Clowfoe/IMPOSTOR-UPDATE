@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-125,
+				50
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Henry Idle"
+		},
+		{
+			"offsets": [
+				-72,
+				-22
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Henry Down"
+		},
+		{
+			"offsets": [
+				-57,
+				80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Henry Up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				8,
+				6
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Henry Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-103,
+				19
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Henry Left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/henry",
+	"position": [
+		-20,
+		150
+	],
+	"healthicon": "henry",
+	"flip_x": false,
+	"healthbar_colors": [
+		213,
+		235,
+		235
+	],
+	"camera_position": [
+		20,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

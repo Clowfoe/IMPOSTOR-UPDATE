@@ -11,11 +11,16 @@ class AmongCreditsState extends MusicBeatState
         //important people
         ['Clowfoe',		'clow',	    'im clowfoe.... i directed the mod and i coded a SHIT TON of it\nim really proud of this whole team ty all for playing and hope it was worth the wait',	'https://twitter.com/Clowfoe'],		
         ['Ethan\nTheDoodler',	'ethan',		'im a real doodler now, mama','https://twitter.com/creepercrunch'],
-        ['creeper\ncrunch',	'crunch',		'yo, im crunch, i directed jorsawsee and did a good bit of scattered work across the mod, working on this mod was awesome, i hope everyone loves it as much as i do!','https://twitter.com/creepercrunch'],
+        ['creeper\ncrunch',	'crunch',		'i have no idea how boyfriend aint bricked the fuck up in black week','https://twitter.com/creepercrunch'],
        
         //coders
         ['aqua',			'aqua',			"local sexy babe and hot programmer\ni coded some of this mod and lost sleep working on it",				'https://twitter.com/gedehari'],   
         ['DuskieWhy',			'duskie',			"What's up bros! It's me! DuckieWow! DurkieWho! DuskieWhy! errrr this mod is cool i think... i did the double note ghost animation system thingy ... follow me on twitter dot com",				'https://twitter.com/gedehari'],   
+
+        //musicians
+        ['keoni',				'keoni',			"keoni",	'https://twitter.com/emihead'],
+        ['emihead',				'emihead',			"im emihead i made tomonjus tuesday and the credits song also i am canonically the black impostor's lover so please draw us making out and tag me on twitter @ emihead",	'https://twitter.com/emihead'],
+		['Keegan',		'keegan',	"Hey Gamers, I'm Keegan, I made Turbulence and all the midi sections of Room Code.\nI like ENA and I draw occasionally you should follow me @__Keegan_",		'https://twitter.com/polybiusproxy'],
 
         //artists
         ['loggo',			'lojo',			'halloween',				'https://twitter.com/gedehari'],   
@@ -24,16 +29,11 @@ class AmongCreditsState extends MusicBeatState
         ['neato',				'neato',		'im neato i made sprites for drippypop insane streamer and turbulance\nand made some of the instrumental for insane streamer im gon get hit by a truck and break my spine',	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
         ['orbyy',			'orb',			"Im really happy i got to work on this, i was brought on v3 to do pixel art for tomongus and i'm grateful for being given the opportunity. I hope yall love the new pixel art for tomongus week and i apologize for v3's defeat chart.",    'https://twitter.com/gedehari'],   
         ['squidboy',	'squid',	'hi im squid you may or may not know me for moderating the impostorm discord server\nive also been working for impostor ever since its beginning so thats cool i guess\nlove u zial <3<3<3',		'https://twitter.com/Keoiki_'],
-        ['pip',			'pip',			'mole',				'https://twitter.com/gedehari'],   
+        ['pip',			'pip',			'"            "',				'https://twitter.com/DojimaDog'],   
         ['crocidy',				'croc',		"can you follow me i made fourth wall",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
         ['Lay\nLasagna',				'lay',		"#1 giggleboy and omfg fan\nhello mommy!!!!!!! :)))) i'm a big boy now!!!!",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
         ['coti',			'coti',			'hi !! im coti-- i didnt really do much except for a drawing or visual tweaking here and there, but im happy i got to work on the mod anyway !! remember to always be silly',	'https://twitter.com/gedehari'],   
   
-        //musicians
-        ['keoni',				'keoni',			"keoni",	'https://twitter.com/emihead'],
-        ['emihead',				'emihead',			"im emihead i made tomonjus tuesday and the credits song also i am canonically the black impostor's lover so please draw us making out and tag me on twitter @ emihead",	'https://twitter.com/emihead'],
-		['Keegan',		'keegan',	"Hey Gamers, I'm Keegan, I made Turbulence and all the midi sections of Room Code.\nI like ENA and I draw occasionally you should follow me @__Keegan_",		'https://twitter.com/polybiusproxy'],
-       
         //charters
         ['gibz',				'gibz',		" shit idk , charted a few songs",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
 
@@ -54,6 +54,8 @@ class AmongCreditsState extends MusicBeatState
     var tree2:FlxSprite;
 
     var portrait:FlxSprite;
+
+    var mole:FlxSprite; //hey pip :]
 
     override public function create()
     {
@@ -83,6 +85,7 @@ class AmongCreditsState extends MusicBeatState
         lamplight = new FlxSprite(0, 50).loadGraphic(Paths.image('credits/lamplight', 'impostor'));
 		lamplight.antialiasing = true;
         lamplight.x = (FlxG.width / 2)  - (lamplight.width / 2);
+        lamplight.blend = ADD;
         lamplight.alpha = 0.2;
 		//add(lamplight);
 
@@ -94,6 +97,10 @@ class AmongCreditsState extends MusicBeatState
 		tree2.antialiasing = true;
 		add(tree2);
 
+        mole = new FlxSprite(601, 620).loadGraphic(Paths.image('credits/mole', 'impostor'));
+		mole.antialiasing = false;
+        add(mole);
+
         descText = new FlxText(0, 600, 1200, "", 0);
 		descText.setFormat(Paths.font("AmaticSC-Bold.ttf"), 40, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		descText.scrollFactor.set();
@@ -103,14 +110,24 @@ class AmongCreditsState extends MusicBeatState
         nameText = new FlxText(560, 120, 800, "", 0);
 		nameText.setFormat(Paths.font("Dum-Regular.ttf"), 45, FlxColor.BLACK, CENTER);
 		nameText.angle = -12;
+        nameText.updateHitbox();
         add(nameText);
-
+        
         updateDescription();
     }
 
     override public function update(elapsed:Float):Void
     {
         super.update(elapsed);
+
+        if (amongCreditsStuff[curDesc][1] == 'pip')
+        {
+            mole.alpha = 1;
+        }
+        else
+        {
+            mole.alpha = 0;
+        }
      
 		var leftP = controls.UI_LEFT_P;
 		var rightP = controls.UI_RIGHT_P;
@@ -128,6 +145,10 @@ class AmongCreditsState extends MusicBeatState
         {
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			MusicBeatState.switchState(new MainMenuState());
+		}
+        if(controls.ACCEPT) {
+            FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+			CoolUtil.browserLoad(amongCreditsStuff[curDesc][3]);
 		}
     }
 

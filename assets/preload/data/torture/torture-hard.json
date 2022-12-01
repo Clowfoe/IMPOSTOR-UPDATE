@@ -1,90 +1,98 @@
 {
 	"song": {
-		"player1": "blackp",
-		"player2": "cval",
+		"player1": "ziffytorture",
+		"events": [],
+		"gfVersion": "gf",
 		"notes": [
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
+				"sectionNotes": [
+					[
+						10322.5806451613,
+						-1,
+						"HUD Fade",
+						"",
+						""
+					]
+				],
 				"lengthInSteps": 16,
-				"sectionNotes": [],
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						20967.7419354839,
@@ -127,10 +135,10 @@
 						0
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						22096.7741935484,
@@ -168,10 +176,10 @@
 						80.6451612903226
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						23225.8064516129,
@@ -229,10 +237,10 @@
 						241.935483870968
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						24677.4193548387,
@@ -265,10 +273,10 @@
 						0
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						25806.4516129032,
@@ -321,10 +329,10 @@
 						0
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						27258.064516129,
@@ -362,10 +370,10 @@
 						80.6451612903226
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						28387.0967741936,
@@ -423,10 +431,10 @@
 						241.935483870968
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						29838.7096774194,
@@ -459,10 +467,10 @@
 						0
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						30967.7419354839,
@@ -477,172 +485,195 @@
 					[
 						30967.7419354839,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						31129.0322580645,
 						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						31290.3225806452,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						31451.6129032258,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						31774.1935483871,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						31854.8387096774,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						31935.4838709678,
 						3,
-						80.6451612903226
+						80.6451612903226,
+						"Opponent 2 Sing"
 					],
 					[
 						32096.7741935484,
 						1,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						32419.3548387097,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						32580.6451612903,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						32741.935483871,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						32903.2258064516,
 						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						33064.5161290323,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						33145.1612903226,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						33225.8064516129,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						33387.0967741936,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						33548.3870967742,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						33709.6774193549,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						33870.9677419355,
 						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						34032.2580645161,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						34354.8387096774,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						34677.4193548387,
 						1,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						35000,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						35161.2903225807,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						35322.5806451613,
 						1,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					],
 					[
 						35645.1612903226,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						35806.4516129032,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						35967.7419354839,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
-					[
-						36129.0322580645,
-						6,
-						322.58064516129
-					],
 					[
 						36451.6129032258,
 						0,
@@ -672,12 +703,18 @@
 						37258.064516129,
 						1,
 						241.935483870968
+					],
+					[
+						36129.0322580645,
+						6,
+						241.935483870968,
+						"Opponent 2 Sing"
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						37580.6451612903,
@@ -720,10 +757,10 @@
 						0
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						38709.6774193549,
@@ -751,10 +788,10 @@
 						0
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
 			{
-				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						40000,
@@ -767,122 +804,135 @@
 						241.935483870968
 					],
 					[
+						40967.7419354839,
+						3,
+						241.935483870968
+					],
+					[
 						40483.8709677419,
 						0,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					],
 					[
 						40806.4516129032,
 						1,
-						241.935483870968
-					],
-					[
-						40967.7419354839,
-						3,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					]
 				],
+				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
+					[
+						41451.6129032258,
+						1,
+						0,
+						"Opponent 2 Sing"
+					],
 					[
 						41290.3225806452,
 						2,
 						241.935483870968
 					],
 					[
-						41451.6129032258,
-						1,
-						0
-					],
-					[
 						41612.9032258065,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						41774.1935483871,
 						0,
-						80.6451612903226
+						80.6451612903226,
+						"Opponent 2 Sing"
 					],
 					[
 						41935.4838709677,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						42096.7741935484,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						42258.064516129,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						42419.3548387097,
 						2,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 100,
 				"changeBPM": false,
-				"bpm": 100
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						42741.935483871,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
-						42866.935483871,
+						42862.9032258065,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						42903.2258064516,
 						1,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					],
 					[
 						43225.8064516129,
 						2,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					],
 					[
 						43548.3870967742,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						43709.6774193548,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						43870.9677419355,
-						5,
-						403.225806451613
-					],
 					[
 						44032.2580645161,
 						1,
@@ -917,17 +967,23 @@
 						45000,
 						2,
 						241.935483870968
+					],
+					[
+						43870.9677419355,
+						5,
+						403.225806451613,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": true,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						45322.5806451613,
@@ -960,128 +1016,116 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": true,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						46451.6129032258,
 						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						46612.9032258064,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						46774.1935483871,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						46935.4838709677,
 						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						47096.7741935484,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						47258.064516129,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						47338.7096774193,
 						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						47419.3548387097,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						47580.6451612903,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						47741.935483871,
 						0,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					],
 					[
 						48064.5161290323,
 						1,
-						80.6451612903226
+						80.6451612903226,
+						"Opponent 2 Sing"
+					],
+					[
+						48467.7419354839,
+						1,
+						483.870967741935,
+						"Opponent 2 Sing"
 					],
 					[
 						48225.8064516129,
 						0,
-						241.935483870968
-					],
-					[
-						48548.3870967742,
-						1,
-						403.225806451613
+						161.290322580645,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						49193.5483870968,
-						5,
-						0
-					],
-					[
-						49516.1290322581,
-						5,
-						0
-					],
-					[
-						49677.4193548387,
-						7,
-						241.935483870968
-					],
-					[
-						50000,
-						5,
-						0
-					],
-					[
-						50161.2903225806,
-						5,
-						0
-					],
 					[
 						49032.2580645161,
 						1,
@@ -1126,17 +1170,47 @@
 						49516.1290322581,
 						2,
 						0
+					],
+					[
+						49193.5483870968,
+						5,
+						0,
+						"Opponent 2 Sing"
+					],
+					[
+						49516.1290322581,
+						5,
+						0,
+						"Opponent 2 Sing"
+					],
+					[
+						49677.4193548387,
+						7,
+						241.935483870968,
+						"Opponent 2 Sing"
+					],
+					[
+						50000,
+						5,
+						0,
+						"Opponent 2 Sing"
+					],
+					[
+						50161.2903225806,
+						5,
+						0,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": true,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						50322.5806451613,
@@ -1149,45 +1223,49 @@
 						80.6451612903226
 					],
 					[
-						50806.4516129032,
-						0,
-						241.935483870968
+						51048.3870967742,
+						5,
+						483.870967741935,
+						"Opponent 2 Sing"
 					],
 					[
-						51129.0322580645,
+						51048.3870967742,
 						1,
-						403.225806451613
+						483.870967741935
 					],
 					[
-						50322.5806451613,
+						50806.4516129032,
 						4,
-						241.935483870968
+						161.290322580645,
+						"Opponent 2 Sing"
 					],
 					[
 						50645.1612903226,
 						5,
-						80.6451612903226
+						80.6451612903226,
+						"Opponent 2 Sing"
+					],
+					[
+						50322.5806451613,
+						4,
+						241.935483870968,
+						"Opponent 2 Sing"
 					],
 					[
 						50806.4516129032,
-						4,
-						241.935483870968
-					],
-					[
-						51129.0322580645,
-						5,
-						403.225806451613
+						0,
+						161.290322580645
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": true,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						51612.9032258064,
@@ -1197,74 +1275,90 @@
 					[
 						51935.4838709677,
 						1,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
+					],
+					[
+						51612.9032258064,
+						3,
+						241.935483870968,
+						"Opponent 2 Sing"
 					],
 					[
 						52258.064516129,
 						0,
-						403.225806451613
+						403.225806451613,
+						"Opponent 2 Sing"
 					],
 					[
 						52741.935483871,
 						1,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						53064.5161290322,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						53225.8064516129,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						53387.0967741935,
 						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						53548.3870967742,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						53709.6774193548,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						53870.9677419355,
 						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						54032.2580645161,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						54516.1290322581,
@@ -1284,23 +1378,25 @@
 					[
 						54193.5483870968,
 						3,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					],
 					[
 						54354.8387096774,
 						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						55645.1612903226,
@@ -1338,15 +1434,15 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						57096.7741935484,
@@ -1374,15 +1470,15 @@
 						241.935483870968
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": true,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						58225.8064516129,
@@ -1420,15 +1516,15 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": true,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						59677.4193548387,
@@ -1456,15 +1552,15 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": true,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						60967.7419354838,
@@ -1502,15 +1598,15 @@
 						80.6451612903226
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": true,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						61935.4838709677,
@@ -1548,15 +1644,15 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						63225.8064516129,
@@ -1599,113 +1695,121 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						64677.4193548387,
-						1,
-						0
-					],
-					[
-						64838.7096774193,
-						0,
-						0
-					],
-					[
-						65000,
-						1,
-						0
-					],
-					[
-						65322.5806451613,
-						1,
-						0
-					],
-					[
-						65483.8709677419,
-						2,
-						0
-					],
-					[
-						65645.1612903225,
-						1,
-						0
-					],
 					[
 						64677.4193548387,
 						3,
 						403.225806451613
+					],
+					[
+						64677.4193548387,
+						1,
+						0,
+						"Opponent 2 Sing"
+					],
+					[
+						64838.7096774193,
+						0,
+						0,
+						"Opponent 2 Sing"
+					],
+					[
+						65000,
+						1,
+						0,
+						"Opponent 2 Sing"
+					],
+					[
+						65322.5806451613,
+						1,
+						0,
+						"Opponent 2 Sing"
+					],
+					[
+						65483.8709677419,
+						2,
+						0,
+						"Opponent 2 Sing"
+					],
+					[
+						65645.1612903225,
+						1,
+						0,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						65931.4516129032,
+						65927.4193548387,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						65967.7419354838,
 						3,
-						241.935483870968
-					],
-					[
-						66612.9032258064,
-						2,
-						80.6451612903226
-					],
-					[
-						66774.1935483871,
-						1,
-						0
-					],
-					[
-						66935.4838709677,
-						2,
-						80.6451612903226
-					],
-					[
-						66451.6129032258,
-						0,
-						0
+						241.935483870968,
+						"Opponent 2 Sing"
 					],
 					[
 						66290.3225806451,
 						1,
-						0
+						0,
+						"Opponent 2 Sing"
+					],
+					[
+						66451.6129032258,
+						0,
+						0,
+						"Opponent 2 Sing"
+					],
+					[
+						66612.9032258064,
+						2,
+						80.6451612903226,
+						"Opponent 2 Sing"
+					],
+					[
+						66774.1935483871,
+						1,
+						0,
+						"Opponent 2 Sing"
+					],
+					[
+						66935.4838709677,
+						2,
+						0,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						67096.7741935484,
-						7,
-						241.935483870968
-					],
 					[
 						67258.064516129,
 						2,
@@ -1740,17 +1844,23 @@
 						68225.8064516129,
 						3,
 						0
+					],
+					[
+						67096.7741935484,
+						7,
+						241.935483870968,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": true,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						68387.0967741935,
@@ -1798,15 +1908,15 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": true,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						69838.7096774193,
@@ -1839,15 +1949,15 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": true,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						70967.7419354839,
@@ -1865,15 +1975,15 @@
 						403.225806451613
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": true,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						72258.064516129,
@@ -1883,79 +1993,90 @@
 					[
 						72258.064516129,
 						0,
-						0
-					],
-					[
-						72741.935483871,
-						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						72419.3548387097,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
+					],
+					[
+						72741.935483871,
+						1,
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						72903.2258064516,
 						0,
-						161.290322580645
+						161.290322580645,
+						"Opponent 2 Sing"
 					],
 					[
 						73225.8064516129,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						73387.0967741935,
 						2,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						73709.6774193548,
 						0,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					],
 					[
 						74032.2580645161,
 						1,
-						241.935483870968
+						161.290322580645,
+						"Opponent 2 Sing"
 					],
 					[
 						74354.8387096774,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						74516.1290322581,
 						3,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						74677.4193548387,
 						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						75806.4516129032,
@@ -1993,17 +2114,13 @@
 						241.935483870968
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
 				"altAnim": false,
-				"mustHitSection": false,
+				"gfSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						76290.3225806452,
@@ -2031,14 +2148,14 @@
 						0
 					]
 				],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"altAnim": false,
-				"bpm": 140,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 140
 			},
 			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						77419.3548387097,
@@ -2076,14 +2193,14 @@
 						0
 					]
 				],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"altAnim": false,
-				"bpm": 140,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 140
 			},
 			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						78709.6774193549,
@@ -2126,12 +2243,16 @@
 						0
 					]
 				],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"altAnim": false,
-				"bpm": 140,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 140
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						80000,
@@ -2169,14 +2290,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
 				"altAnim": false,
-				"mustHitSection": true,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						81290.3225806452,
@@ -2204,58 +2325,91 @@
 						241.935483870968
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
 				"altAnim": false,
-				"mustHitSection": true,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": true
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						82580.6451612904,
+						-1,
+						"HUD Fade",
+						"",
+						"0"
+					],
+					[
+						82620.9677419355,
+						-1,
+						"Play Animation",
+						"ROZEBUD",
+						"1"
+					],
+					[
+						82822.5806451613,
+						-1,
+						"Play Animation",
+						"rozebud?",
+						"3"
+					]
+				],
+				"altAnim": false,
+				"bpm": 140,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						84274.1935483871,
+						-1,
+						"Play Animation",
+						"GETOUT",
+						"0"
+					]
+				],
+				"altAnim": false,
+				"bpm": 140,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
 				"altAnim": false,
-				"mustHitSection": true,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
 				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						87500.0000000001,
+						-1,
+						"HUD Fade",
+						"",
+						""
+					]
+				],
 				"altAnim": false,
-				"mustHitSection": true,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
 				"lengthInSteps": 16,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 140
-			},
-			{
-				"sectionNotes": [],
 				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 140
-			},
-			{
 				"sectionNotes": [
 					[
 						88064.5161290323,
-						3,
-						161.290322580645
-					],
-					[
-						87741.935483871,
 						3,
 						161.290322580645
 					],
@@ -2273,19 +2427,19 @@
 						88870.9677419355,
 						0,
 						0
+					],
+					[
+						87741.935483871,
+						3,
+						161.290322580645
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
 				"altAnim": false,
-				"mustHitSection": false,
+				"bpm": 140,
 				"changeBPM": false,
-				"bpm": 140
+				"mustHitSection": false
 			},
 			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						89032.2580645162,
@@ -2328,204 +2482,234 @@
 						0
 					]
 				],
-				"bpm": 140,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 140
+			},
+			{
 				"sectionNotes": [
+					[
+						90322.5806451614,
+						3,
+						161.290322580645,
+						"Opponent 2 Sing"
+					],
 					[
 						90645.1612903226,
 						3,
-						161.290322580645
-					],
-					[
-						90322.5806451613,
-						3,
-						161.290322580645
+						161.290322580645,
+						"Opponent 2 Sing"
 					],
 					[
 						90967.7419354839,
 						3,
-						161.290322580645
+						161.290322580645,
+						"Opponent 2 Sing"
 					],
 					[
 						91290.3225806452,
 						3,
-						80.6451612903226
+						80.6451612903226,
+						"Opponent 2 Sing"
 					],
 					[
 						91451.6129032259,
 						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						91612.9032258065,
 						3,
-						80.6451612903226
+						80.6451612903226,
+						"Opponent 2 Sing"
 					],
 					[
 						91774.1935483872,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						91935.4838709678,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						92096.7741935485,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						92258.0645161291,
 						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
-						92419.3548387097,
+						92419.3548387098,
 						3,
-						0
-					],
-					[
-						92741.935483871,
-						1,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						92580.6451612904,
 						2,
-						0
+						0,
+						"Opponent 2 Sing"
+					],
+					[
+						92741.935483871,
+						1,
+						0,
+						"Opponent 2 Sing"
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						92903.2258064517,
 						2,
-						241.935483870968
+						241.935483870968,
+						"Opponent 2 Sing"
 					],
 					[
 						93064.5161290323,
 						1,
-						0
-					],
-					[
-						93225.806451613,
-						3,
-						0
-					],
-					[
-						93306.4516129033,
-						2,
-						0
-					],
-					[
-						93387.0967741936,
-						3,
-						0
-					],
-					[
-						93548.3870967743,
 						0,
-						0
+						"Opponent 2 Sing"
 					],
 					[
 						93709.6774193549,
 						2,
-						0
+						0,
+						"Both Opponents Sing"
+					],
+					[
+						93225.806451613,
+						3,
+						0,
+						"Both Opponents Sing"
+					],
+					[
+						93306.4516129033,
+						2,
+						0,
+						"Both Opponents Sing"
+					],
+					[
+						93387.0967741936,
+						3,
+						0,
+						"Both Opponents Sing"
+					],
+					[
+						93548.3870967743,
+						0,
+						0,
+						"Both Opponents Sing"
 					],
 					[
 						93870.9677419356,
 						2,
-						0
+						0,
+						"Both Opponents Sing"
 					],
 					[
 						94032.2580645162,
 						3,
-						0
+						0,
+						"Both Opponents Sing"
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						94193.5483870969,
 						2,
-						80.6451612903226
+						80.6451612903226,
+						"Both Opponents Sing"
 					],
 					[
 						94354.8387096775,
 						1,
-						0
+						0,
+						"Both Opponents Sing"
 					],
 					[
 						94516.1290322581,
 						3,
-						0
+						0,
+						"Both Opponents Sing"
 					],
 					[
 						94677.4193548388,
 						2,
-						0
+						0,
+						"Both Opponents Sing"
 					],
 					[
 						94838.7096774194,
 						0,
-						0
+						0,
+						"Both Opponents Sing"
 					],
 					[
 						95000.0000000001,
 						2,
-						0
+						0,
+						"Both Opponents Sing"
 					],
 					[
 						95161.2903225807,
 						3,
-						0
+						0,
+						"Both Opponents Sing"
 					],
 					[
 						95322.5806451614,
 						1,
-						0
+						0,
+						"Both Opponents Sing"
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						95483.870967742,
@@ -2550,32 +2734,36 @@
 					[
 						96129.0322580646,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						96370.9677419356,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						96612.9032258065,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					],
 					[
 						96693.5483870969,
 						0,
-						0
+						0,
+						"Opponent 2 Sing"
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						96774.1935483872,
@@ -2584,16 +2772,6 @@
 					],
 					[
 						96935.4838709678,
-						1,
-						0
-					],
-					[
-						97096.7741935485,
-						0,
-						241.935483870968
-					],
-					[
-						97258.0645161291,
 						1,
 						0
 					],
@@ -2608,34 +2786,50 @@
 						0
 					],
 					[
+						97096.7741935485,
+						0,
+						241.935483870968,
+						"Opponent 2 Sing"
+					],
+					[
+						97258.0645161291,
+						1,
+						0,
+						"Opponent 2 Sing"
+					],
+					[
 						97741.9354838711,
 						2,
-						0
+						0,
+						"Both Opponents Sing"
 					],
 					[
 						97822.5806451614,
 						2,
-						0
+						0,
+						"Both Opponents Sing"
 					],
 					[
 						97903.2258064517,
 						2,
-						0
+						0,
+						"Both Opponents Sing"
 					],
 					[
 						97983.870967742,
 						2,
-						0
+						0,
+						"Both Opponents Sing"
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						98387.0967741936,
@@ -2658,14 +2852,14 @@
 						161.290322580645
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						99354.8387096775,
@@ -2708,14 +2902,14 @@
 						0
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						100967.741935484,
@@ -2753,14 +2947,14 @@
 						0
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						101935.483870968,
@@ -2803,14 +2997,14 @@
 						0
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						103225.806451613,
@@ -2858,14 +3052,14 @@
 						0
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						104516.129032258,
@@ -2908,14 +3102,14 @@
 						0
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						105806.451612903,
@@ -2953,14 +3147,14 @@
 						0
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						107096.774193548,
@@ -3003,14 +3197,14 @@
 						0
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						108387.096774194,
@@ -3028,14 +3222,14 @@
 						241.935483870968
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						110000,
@@ -3043,14 +3237,14 @@
 						887.096774193548
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						110967.741935484,
@@ -3083,14 +3277,14 @@
 						0
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						112741.935483871,
@@ -3103,14 +3297,14 @@
 						564.516129032258
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						113548.387096774,
@@ -3138,14 +3332,14 @@
 						0
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						115000,
@@ -3163,14 +3357,14 @@
 						564.516129032258
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						116129.032258065,
@@ -3203,14 +3397,14 @@
 						0
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
 					[
 						118064.516129032,
@@ -3230,78 +3424,121 @@
 					[
 						118225.806451613,
 						5,
-						0
+						0,
+						"Both Opponents Sing"
 					],
 					[
 						118387.096774194,
 						4,
-						0
+						0,
+						"Both Opponents Sing"
 					],
 					[
 						118548.387096774,
 						5,
-						0
+						0,
+						"Both Opponents Sing"
 					]
 				],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
 				"sectionNotes": [
-					[
-						118709.677419355,
-						2,
-						403.225806451613
-					],
 					[
 						118709.677419355,
 						6,
 						403.225806451613
+					],
+					[
+						118709.677419355,
+						2,
+						403.225806451613,
+						"Both Opponents Sing"
 					]
 				],
-				"bpm": 186,
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 186
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
 				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 186,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
 				"bpm": 186,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 186
 			},
 			{
 				"lengthInSteps": 16,
@@ -3313,14 +3550,14 @@
 				"mustHitSection": true
 			}
 		],
-		"gfVersion": "gf",
-		"events": [],
+		"player2": "cvaltorture",
 		"player3": "gf",
+		"player4": "piptorture",
 		"song": "Torture",
-		"validScore": true,
+		"stage": "warehouse",
 		"needsVoices": true,
-		"stage": "piptowers",
-		"speed": 3,
-		"bpm": 186
+		"validScore": true,
+		"bpm": 186,
+		"speed": 3
 	}
 }

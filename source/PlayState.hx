@@ -384,6 +384,16 @@ class PlayState extends MusicBeatState
 	var walker:WalkingCrewmate;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
 
+	// torture
+	var torfloor:FlxSprite;
+	var torwall:FlxSprite;
+	var torglasses:FlxSprite;
+	var windowlights:FlxSprite;
+	var leftblades:FlxSprite;
+	var rightblades:FlxSprite;
+	var montymole:FlxSprite;
+	var torlight:FlxSprite;
+
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
@@ -1307,6 +1317,51 @@ class PlayState extends MusicBeatState
 				daveDIE.alpha = 0.00000001;
 				add(daveDIE);
 
+			case 'warehouse': //ziffy tourture
+				curStage = 'warehouse';
+				var torfloor:FlxSprite = new FlxSprite(-1376.3, 494.65).loadGraphic(Paths.image('tort_floor'));
+				torfloor.updateHitbox();
+				torfloor.antialiasing = true;
+				torfloor.scrollFactor.set(1, 1);
+				torfloor.active = false;
+				add(torfloor);
+
+				var torwall:FlxSprite = new FlxSprite(-921.95, -850).loadGraphic(Paths.image('torture_wall'));
+				torwall.updateHitbox();
+				torwall.antialiasing = true;
+				torwall.scrollFactor.set(0.8, 0.8);
+				torwall.active = false;
+				add(torwall);
+
+				var torglasses:FlxSprite = new FlxSprite(551.8, 594.3).loadGraphic(Paths.image('ziffyglasses'));
+				torglasses.updateHitbox();
+				torglasses.antialiasing = true;
+				torglasses.scrollFactor.set(1.2, 1.2);
+				torglasses.active = false;	
+
+				var windowlights:FlxSprite = new FlxSprite(-159.2, -605.95).loadGraphic(Paths.image('windowlights'));
+				windowlights.antialiasing = true;
+				windowlights.scrollFactor.set(1, 1);
+				windowlights.active = false;
+				windowlights.alpha = 0.31;
+				windowlights.blend = ADD;
+
+				leftblades = new FlxSprite(203.05, -160);
+				leftblades.frames = Paths.getSparrowAtlas('leftblades');
+				leftblades.animation.addByPrefix('spin', 'blad', 24, false);
+				leftblades.animation.play('spin');
+				leftblades.antialiasing = true;
+				leftblades.scrollFactor.set(1.4, 1.4);
+				leftblades.active = true;
+
+				rightblades = new FlxSprite(837.75, -160);
+				rightblades.frames = Paths.getSparrowAtlas('rightblades');
+				rightblades.animation.addByPrefix('spin', 'blad', 24, false);
+				rightblades.animation.play('spin');
+				rightblades.antialiasing = true;
+				rightblades.scrollFactor.set(1.4, 1.4);
+				rightblades.active = true;
+
 			case 'grey': // SHIT ASS
 				curStage = 'grey';
 				var thebackground = new FlxSprite(0, 0);
@@ -2010,6 +2065,8 @@ class PlayState extends MusicBeatState
 			add(limo);
 
 
+		if (curStage == 'warehouse')
+			
 		switch (curStage.toLowerCase())
 		{
 			case 'cargo':
@@ -2020,7 +2077,14 @@ class PlayState extends MusicBeatState
 				add(momGroup);
 		}
 
-		add(dadGroup);
+		if (curStage == 'warehouse')
+		{
+			//EVERYBODY FART;
+		}
+		else
+		{
+			add(dadGroup);
+		}
 
 		if (curStage == 'turbulence')
 			add(hookarm);
@@ -2134,6 +2198,31 @@ class PlayState extends MusicBeatState
 				loungelight.alpha = 0.33;
 				loungelight.blend = ADD;
 				add(loungelight);
+
+			case 'warehouse':
+				add(torglasses);
+				add(windowlights);
+				add(leftblades);
+				add(rightblades);
+				add(dadGroup);
+				add(momGroup);
+
+				montymole = new FlxSprite(14.05, 439.7);
+				montymole.frames = Paths.getSparrowAtlas('monty');
+				montymole.animation.addByPrefix('idle', 'mole idle', 24, true);
+				montymole.animation.play('idle');
+				montymole.antialiasing = true;
+				montymole.scrollFactor.set(1.6, 1.6);
+				montymole.active = true;
+				add(montymole);
+				
+				var torlight:FlxSprite = new FlxSprite(-646.8, -480.45).loadGraphic(Paths.image('torture_overlay'));
+				torlight.antialiasing = true;
+				torlight.scrollFactor.set(1.6, 1.6);
+				torlight.active = false;
+				torlight.alpha = 0.16;
+				torlight.blend = ADD;
+				add(torlight);
 
 			case 'turbulence':
 
@@ -2435,6 +2524,17 @@ class PlayState extends MusicBeatState
 		startCharacterPos(mom, true);
 		momGroup.add(mom);
 
+		if(curStage.toLowerCase() == 'warehouse') 
+			{
+				dad.scrollFactor.set(1.6, 1.6);
+				mom.scrollFactor.set(1.6, 1.6);
+			}
+			else
+			{
+				dad.scrollFactor.set(1, 1);
+				mom.scrollFactor.set(1, 1);
+			}
+
 		if(curStage.toLowerCase() == 'charles') mom.flipX = false;
 
 		if (SONG.player1 == 'bf-running')
@@ -2450,7 +2550,15 @@ class PlayState extends MusicBeatState
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
-
+		if (curStage == 'turbulence')
+			{
+				boyfriend.angle = -90;
+			}
+		else
+			{
+				boyfriend.angle = 0;
+			}
+			
 		dadGhost.visible = false;
 		dadGhost.antialiasing = true;
 		dadGhost.alpha = 0.6;
@@ -2535,7 +2643,7 @@ class PlayState extends MusicBeatState
 		bars.scrollFactor.set();
 		bars.screenCenter();
 
-		if (songName == 'voting-time')
+		if(curStage.toLowerCase() == 'voting')
 		{
 			add(vt_light);
 			add(bars);
@@ -3339,11 +3447,16 @@ class PlayState extends MusicBeatState
 					santa.dance(true);
 				}
 
+				var blackScreen:FlxSprite = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
+
 				switch (swagCounter)
 				{
 					case 0:
 						if(curStage.toLowerCase() == 'charles')
 							triggerEventNote('Play Animation', 'intro', 'bf');
+
+						if(curStage.toLowerCase() == 'warehouse')
+							camHUD.alpha = 0;
 
 						FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
 						if (task != null)
@@ -5605,6 +5718,7 @@ class PlayState extends MusicBeatState
 							{
 								case 1: char = boyfriend;
 								case 2: char = gf;
+								case 3: char = mom;
 							}
 					}
 					char.playAnim(value1, true);
@@ -6941,6 +7055,13 @@ class PlayState extends MusicBeatState
 				if (curBeat % 4 == 0)
 				{
 					clawshands.animation.play('squeeze', true);
+				}
+
+			case 'warehouse':
+				if (curBeat % 1 == 0)
+				{
+					leftblades.animation.play('spin', true);
+					rightblades.animation.play('spin', true);
 				}
 	
 			case 'victory':

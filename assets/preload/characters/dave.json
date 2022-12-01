@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				160,
 				0
 			],
-			"indices": [],
-			"fps": 12,
 			"anim": "idle",
-			"loop": false,
-			"name": "Dave Idle"
-		},
-		{
-			"offsets": [
-				166,
-				2
-			],
-			"indices": [],
 			"fps": 12,
-			"anim": "singRIGHT",
-			"loop": false,
-			"name": "Dave Right"
+			"name": "Dave Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				152,
+				159,
 				3
 			],
-			"indices": [],
+			"anim": "singRIGHT",
 			"fps": 12,
-			"anim": "singLEFT",
-			"loop": false,
-			"name": "Dave Left"
+			"name": "Dave Right",
+			"indices": []
 		},
 		{
+			"loop": false,
+			"offsets": [
+				156,
+				1
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "Dave Left",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				160,
 				5
 			],
-			"indices": [],
-			"fps": 12,
 			"anim": "singUP",
-			"loop": false,
-			"name": "Dave Up"
-		},
-		{
-			"offsets": [
-				153,
-				2
-			],
-			"indices": [],
 			"fps": 12,
-			"anim": "singDOWN",
-			"loop": false,
-			"name": "Dave Down"
+			"name": "Dave Up",
+			"indices": []
 		},
 		{
+			"loop": false,
+			"offsets": [
+				163,
+				1
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "Dave Down",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				159,
 				-3
 			],
-			"indices": [],
-			"fps": 12,
 			"anim": "die",
-			"loop": false,
-			"name": "Dave Death"
+			"fps": 12,
+			"name": "Dave Death",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

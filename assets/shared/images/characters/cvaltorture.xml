@@ -1,208 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="cvaltorture.png">
-	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- Created with Adobe Animate version 21.0.3.38773 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="cval down0000" x="0" y="0" width="905" height="949" frameX="-8" frameY="-6" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0001" x="0" y="0" width="905" height="949" frameX="-8" frameY="-6" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0002" x="910" y="0" width="908" height="955" frameX="-1" frameY="0" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0003" x="910" y="0" width="908" height="955" frameX="-1" frameY="0" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0004" x="1823" y="0" width="906" height="955" frameX="0" frameY="0" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0005" x="1823" y="0" width="906" height="955" frameX="0" frameY="0" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0006" x="910" y="0" width="908" height="955" frameX="-1" frameY="0" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0007" x="910" y="0" width="908" height="955" frameX="-1" frameY="0" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0008" x="1823" y="0" width="906" height="955" frameX="0" frameY="0" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0009" x="1823" y="0" width="906" height="955" frameX="0" frameY="0" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0010" x="910" y="0" width="908" height="955" frameX="-1" frameY="0" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0011" x="910" y="0" width="908" height="955" frameX="-1" frameY="0" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0012" x="1823" y="0" width="906" height="955" frameX="0" frameY="0" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0013" x="1823" y="0" width="906" height="955" frameX="0" frameY="0" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval down0014" x="910" y="0" width="908" height="955" frameX="-1" frameY="0" frameWidth="913" frameHeight="955"/>
-	<SubTexture name="cval right0000" x="2734" y="0" width="911" height="977" frameX="0" frameY="0" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0001" x="2734" y="0" width="911" height="977" frameX="0" frameY="0" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0002" x="3650" y="0" width="911" height="971" frameX="-16" frameY="-7" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0003" x="3650" y="0" width="911" height="971" frameX="-16" frameY="-7" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0004" x="4566" y="0" width="908" height="970" frameX="-15" frameY="-7" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0005" x="4566" y="0" width="908" height="970" frameX="-15" frameY="-7" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0006" x="3650" y="0" width="911" height="971" frameX="-16" frameY="-7" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0007" x="3650" y="0" width="911" height="971" frameX="-16" frameY="-7" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0008" x="4566" y="0" width="908" height="970" frameX="-15" frameY="-7" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0009" x="4566" y="0" width="908" height="970" frameX="-15" frameY="-7" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0010" x="3650" y="0" width="911" height="971" frameX="-16" frameY="-7" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0011" x="3650" y="0" width="911" height="971" frameX="-16" frameY="-7" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0012" x="4566" y="0" width="908" height="970" frameX="-15" frameY="-7" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0013" x="4566" y="0" width="908" height="970" frameX="-15" frameY="-7" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval right0014" x="3650" y="0" width="911" height="971" frameX="-16" frameY="-7" frameWidth="927" frameHeight="978"/>
-	<SubTexture name="cval rozebud0000" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0001" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0002" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0003" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0004" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0005" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0006" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0007" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0008" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0009" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0010" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0011" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0012" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0013" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0014" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0015" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0016" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0017" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0018" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0019" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0020" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0021" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0022" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0023" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0024" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0025" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0026" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0027" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0028" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0029" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0030" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0031" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0032" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0033" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0034" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0035" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0036" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0037" x="5479" y="0" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0038" x="6388" y="0" width="906" height="968" frameX="-18" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0039" x="0" y="982" width="907" height="968" frameX="-5" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0040" x="912" y="982" width="904" height="969" frameX="-4" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0041" x="1821" y="982" width="909" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0042" x="2735" y="982" width="908" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0043" x="3648" y="982" width="908" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0044" x="4561" y="982" width="909" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0045" x="1821" y="982" width="909" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0046" x="2735" y="982" width="908" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0047" x="5475" y="982" width="907" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0048" x="6387" y="982" width="908" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0049" x="0" y="1956" width="903" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0050" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0051" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0052" x="1834" y="1956" width="922" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0053" x="1834" y="1956" width="922" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0054" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0055" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0056" x="1834" y="1956" width="922" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0057" x="1834" y="1956" width="922" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0058" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0059" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0060" x="1834" y="1956" width="922" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0061" x="1834" y="1956" width="922" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0062" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0063" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0064" x="1834" y="1956" width="922" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0065" x="1834" y="1956" width="922" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0066" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0067" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0068" x="1834" y="1956" width="922" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0069" x="1834" y="1956" width="922" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0070" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0071" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0072" x="1834" y="1956" width="922" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0073" x="1834" y="1956" width="922" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0074" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0075" x="908" y="1956" width="921" height="968" frameX="-1" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0076" x="1834" y="1956" width="922" height="969" frameX="0" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0077" x="2761" y="1956" width="920" height="936" frameX="-18" frameY="-267" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0078" x="3686" y="1956" width="918" height="934" frameX="-20" frameY="-267" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0079" x="4609" y="1956" width="929" height="1150" frameX="-190" frameY="-52" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0080" x="5543" y="1956" width="927" height="1150" frameX="-193" frameY="-52" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0081" x="6475" y="1956" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0082" x="0" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0083" x="943" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0084" x="1886" y="3111" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0085" x="6475" y="1956" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0086" x="0" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0087" x="943" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0088" x="1886" y="3111" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0089" x="6475" y="1956" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0090" x="0" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0091" x="943" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0092" x="1886" y="3111" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0093" x="6475" y="1956" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0094" x="0" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0095" x="943" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0096" x="1886" y="3111" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0097" x="6475" y="1956" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0098" x="0" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0099" x="943" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0100" x="1886" y="3111" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0101" x="6475" y="1956" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0102" x="0" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0103" x="943" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0104" x="1886" y="3111" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0105" x="6475" y="1956" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0106" x="0" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0107" x="943" y="3111" width="938" height="1126" frameX="-171" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0108" x="1886" y="3111" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0109" x="6475" y="1956" width="937" height="1126" frameX="-174" frameY="-75" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0110" x="2828" y="3111" width="1003" height="1065" frameX="-142" frameY="-135" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0111" x="3836" y="3111" width="1003" height="1065" frameX="-142" frameY="-135" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0112" x="4844" y="3111" width="976" height="944" frameX="-172" frameY="-231" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0113" x="5825" y="3111" width="984" height="944" frameX="-167" frameY="-231" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0114" x="6814" y="3111" width="974" height="955" frameX="-181" frameY="-218" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0115" x="0" y="4242" width="966" height="955" frameX="-186" frameY="-218" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0116" x="971" y="4242" width="985" height="1236" frameX="-378" frameY="0" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0117" x="1961" y="4242" width="982" height="1236" frameX="-381" frameY="0" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0118" x="2948" y="4242" width="983" height="1241" frameX="-381" frameY="0" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0119" x="3936" y="4242" width="986" height="1241" frameX="-378" frameY="0" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0120" x="4927" y="4242" width="984" height="1236" frameX="-378" frameY="0" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0121" x="5916" y="4242" width="981" height="1236" frameX="-381" frameY="0" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0122" x="5916" y="4242" width="981" height="1236" frameX="-381" frameY="0" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0123" x="4927" y="4242" width="984" height="1236" frameX="-378" frameY="0" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0124" x="4927" y="4242" width="984" height="1236" frameX="-378" frameY="0" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0125" x="5916" y="4242" width="981" height="1236" frameX="-381" frameY="0" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0126" x="6902" y="4242" width="981" height="1236" frameX="-381" frameY="0" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0127" x="0" y="5488" width="959" height="1197" frameX="-345" frameY="-34" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0128" x="964" y="5488" width="945" height="1158" frameX="-309" frameY="-69" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0129" x="1914" y="5488" width="936" height="1121" frameX="-273" frameY="-103" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0130" x="2855" y="5488" width="927" height="1092" frameX="-236" frameY="-128" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0131" x="3787" y="5488" width="918" height="1065" frameX="-200" frameY="-151" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0132" x="4710" y="5488" width="910" height="1040" frameX="-163" frameY="-173" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0133" x="5625" y="5488" width="902" height="1019" frameX="-126" frameY="-190" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0134" x="6532" y="5488" width="893" height="1001" frameX="-90" frameY="-205" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0135" x="0" y="6690" width="894" height="984" frameX="-54" frameY="-219" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0136" x="899" y="6690" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0137" x="899" y="6690" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0138" x="899" y="6690" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0139" x="899" y="6690" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval rozebud0140" x="899" y="6690" width="904" height="967" frameX="-16" frameY="-234" frameWidth="1364" frameHeight="1241"/>
-	<SubTexture name="cval up0000" x="1808" y="6690" width="911" height="990" frameX="0" frameY="0" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0001" x="1808" y="6690" width="911" height="990" frameX="0" frameY="0" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0002" x="2724" y="6690" width="911" height="986" frameX="-8" frameY="-5" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0003" x="2724" y="6690" width="911" height="986" frameX="-8" frameY="-5" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0004" x="3640" y="6690" width="910" height="985" frameX="-6" frameY="-5" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0005" x="3640" y="6690" width="910" height="985" frameX="-6" frameY="-5" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0006" x="2724" y="6690" width="911" height="986" frameX="-8" frameY="-5" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0007" x="2724" y="6690" width="911" height="986" frameX="-8" frameY="-5" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0008" x="3640" y="6690" width="910" height="985" frameX="-6" frameY="-5" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0009" x="3640" y="6690" width="910" height="985" frameX="-6" frameY="-5" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0010" x="2724" y="6690" width="911" height="986" frameX="-8" frameY="-5" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0011" x="2724" y="6690" width="911" height="986" frameX="-8" frameY="-5" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0012" x="3640" y="6690" width="910" height="985" frameX="-6" frameY="-5" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0013" x="3640" y="6690" width="910" height="985" frameX="-6" frameY="-5" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cval up0014" x="2724" y="6690" width="911" height="986" frameX="-8" frameY="-5" frameWidth="919" frameHeight="991"/>
-	<SubTexture name="cvale0000" x="4555" y="6690" width="904" height="967" frameX="0" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0001" x="4555" y="6690" width="904" height="967" frameX="0" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0002" x="5464" y="6690" width="906" height="968" frameX="-2" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0003" x="5464" y="6690" width="906" height="968" frameX="-2" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0004" x="4555" y="6690" width="904" height="967" frameX="0" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0005" x="4555" y="6690" width="904" height="967" frameX="0" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0006" x="5464" y="6690" width="906" height="968" frameX="-2" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0007" x="5464" y="6690" width="906" height="968" frameX="-2" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0008" x="4555" y="6690" width="904" height="967" frameX="0" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0009" x="4555" y="6690" width="904" height="967" frameX="0" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0010" x="5464" y="6690" width="906" height="968" frameX="-2" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0011" x="5464" y="6690" width="906" height="968" frameX="-2" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0012" x="4555" y="6690" width="904" height="967" frameX="0" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0013" x="4555" y="6690" width="904" height="967" frameX="0" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale0014" x="5464" y="6690" width="906" height="968" frameX="-2" frameY="0" frameWidth="908" frameHeight="968"/>
-	<SubTexture name="cvale left0000" x="6375" y="6690" width="923" height="984" frameX="-8" frameY="0" frameWidth="931" frameHeight="985"/>
-	<SubTexture name="cvale left0001" x="6375" y="6690" width="923" height="984" frameX="-8" frameY="0" frameWidth="931" frameHeight="985"/>
+	<SubTexture name="cval down0000" x="0" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0001" x="0" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0002" x="922" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0003" x="922" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0004" x="1844" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0005" x="1844" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0006" x="922" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0007" x="922" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0008" x="1844" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0009" x="1844" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0010" x="922" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0011" x="922" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0012" x="1844" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0013" x="1844" y="0" width="913" height="955"/>
+	<SubTexture name="cval down0014" x="922" y="0" width="913" height="955"/>
+	<SubTexture name="cval left0000" x="2766" y="0" width="931" height="985"/>
+	<SubTexture name="cval left0001" x="2766" y="0" width="931" height="985"/>
+	<SubTexture name="cval left0002" x="0" y="994" width="931" height="985"/>
+	<SubTexture name="cval left0003" x="0" y="994" width="931" height="985"/>
+	<SubTexture name="cval left0004" x="940" y="994" width="931" height="985"/>
+	<SubTexture name="cval left0005" x="940" y="994" width="931" height="985"/>
+	<SubTexture name="cval left0006" x="1880" y="994" width="931" height="985"/>
+	<SubTexture name="cval left0007" x="1880" y="994" width="931" height="985"/>
+	<SubTexture name="cval left0008" x="940" y="994" width="931" height="985"/>
+	<SubTexture name="cval left0009" x="940" y="994" width="931" height="985"/>
+	<SubTexture name="cval left0010" x="1880" y="994" width="931" height="985"/>
+	<SubTexture name="cval left0011" x="1880" y="994" width="931" height="985"/>
+	<SubTexture name="cval left0012" x="940" y="994" width="931" height="985"/>
+	<SubTexture name="cval left0013" x="940" y="994" width="931" height="985"/>
+	<SubTexture name="cval left0014" x="1880" y="994" width="931" height="985"/>
+	<SubTexture name="cval right0000" x="2820" y="994" width="927" height="978"/>
+	<SubTexture name="cval right0001" x="2820" y="994" width="927" height="978"/>
+	<SubTexture name="cval right0002" x="0" y="1988" width="927" height="978"/>
+	<SubTexture name="cval right0003" x="0" y="1988" width="927" height="978"/>
+	<SubTexture name="cval right0004" x="936" y="1988" width="927" height="978"/>
+	<SubTexture name="cval right0005" x="936" y="1988" width="927" height="978"/>
+	<SubTexture name="cval right0006" x="0" y="1988" width="927" height="978"/>
+	<SubTexture name="cval right0007" x="0" y="1988" width="927" height="978"/>
+	<SubTexture name="cval right0008" x="936" y="1988" width="927" height="978"/>
+	<SubTexture name="cval right0009" x="936" y="1988" width="927" height="978"/>
+	<SubTexture name="cval right0010" x="0" y="1988" width="927" height="978"/>
+	<SubTexture name="cval right0011" x="0" y="1988" width="927" height="978"/>
+	<SubTexture name="cval right0012" x="936" y="1988" width="927" height="978"/>
+	<SubTexture name="cval right0013" x="936" y="1988" width="927" height="978"/>
+	<SubTexture name="cval right0014" x="0" y="1988" width="927" height="978"/>
+	<SubTexture name="cval up0000" x="1872" y="1988" width="919" height="991"/>
+	<SubTexture name="cval up0001" x="1872" y="1988" width="919" height="991"/>
+	<SubTexture name="cval up0002" x="2800" y="1988" width="919" height="991"/>
+	<SubTexture name="cval up0003" x="2800" y="1988" width="919" height="991"/>
+	<SubTexture name="cval up0004" x="0" y="2988" width="919" height="991"/>
+	<SubTexture name="cval up0005" x="0" y="2988" width="919" height="991"/>
+	<SubTexture name="cval up0006" x="2800" y="1988" width="919" height="991"/>
+	<SubTexture name="cval up0007" x="2800" y="1988" width="919" height="991"/>
+	<SubTexture name="cval up0008" x="0" y="2988" width="919" height="991"/>
+	<SubTexture name="cval up0009" x="0" y="2988" width="919" height="991"/>
+	<SubTexture name="cval up0010" x="2800" y="1988" width="919" height="991"/>
+	<SubTexture name="cval up0011" x="2800" y="1988" width="919" height="991"/>
+	<SubTexture name="cval up0012" x="0" y="2988" width="919" height="991"/>
+	<SubTexture name="cval up0013" x="0" y="2988" width="919" height="991"/>
+	<SubTexture name="cval up0014" x="2800" y="1988" width="919" height="991"/>
+	<SubTexture name="cvale0000" x="928" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0001" x="928" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0002" x="1845" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0003" x="1845" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0004" x="928" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0005" x="928" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0006" x="1845" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0007" x="1845" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0008" x="928" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0009" x="928" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0010" x="1845" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0011" x="1845" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0012" x="928" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0013" x="928" y="2988" width="908" height="968"/>
+	<SubTexture name="cvale0014" x="1845" y="2988" width="908" height="968"/>
 </TextureAtlas>

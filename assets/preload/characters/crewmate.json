@@ -1,92 +1,103 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-82,
 				-220
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "green idle"
+			"fps": 24,
+			"name": "green idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-89,
 				-229
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "green right"
+			"fps": 24,
+			"name": "green right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				46,
 				-241
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "green down"
+			"fps": 24,
+			"name": "green down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				164,
 				-216
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "green left"
+			"fps": 24,
+			"name": "green left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				61,
 				-96
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "green up"
+			"fps": 24,
+			"name": "green up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-77,
 				-199
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "bopL",
-			"indices": [],
-			"name": "silly dance left"
+			"fps": 24,
+			"name": "silly dance left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-80,
 				-201
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "bopR",
-			"indices": [],
-			"name": "silly dance right"
+			"fps": 24,
+			"name": "silly dance right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				92,
 				-218
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "notice",
+			"fps": 24,
+			"name": "green notice",
+			"indices": []
+		},
+		{
 			"loop": false,
-			"name": "green notice"
+			"offsets": [
+				89,
+				-218
+			],
+			"anim": "handbye",
+			"fps": 24,
+			"name": "green unwave",
+			"indices": []
 		},
 		{
 			"offsets": [
@@ -96,19 +107,8 @@
 			"indices": [],
 			"fps": 24,
 			"anim": "wave",
-			"loop": false,
+			"loop": true,
 			"name": "green wave"
-		},
-		{
-			"offsets": [
-				89,
-				-218
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "handbye",
-			"loop": false,
-			"name": "green unwave"
 		}
 	],
 	"no_antialiasing": false,
@@ -120,9 +120,9 @@
 	"healthicon": "crewmate",
 	"flip_x": false,
 	"healthbar_colors": [
-		31,
-		107,
-		43
+		0,
+		119,
+		27
 	],
 	"camera_position": [
 		30,
