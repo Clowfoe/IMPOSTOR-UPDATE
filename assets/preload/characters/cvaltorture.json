@@ -1,0 +1,169 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				21,
+				67
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "cval down"
+		},
+		{
+			"offsets": [
+				-12,
+				102
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "cval up"
+		},
+		{
+			"offsets": [
+				-60,
+				89
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "cval right"
+		},
+		{
+			"offsets": [
+				0,
+				80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "cvale"
+		},
+		{
+			"offsets": [
+				0,
+				80
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-LOOP",
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"name": "cvale"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				87,
+				97
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "cval left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				87,
+				97
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"name": "cval left"
+		},
+		{
+			"offsets": [
+				-60,
+				89
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"name": "cval right"
+		},
+		{
+			"offsets": [
+				-12,
+				102
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP-loop",
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"name": "cval up"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				21,
+				67
+			],
+			"anim": "singDOWN-loop",
+			"fps": 24,
+			"name": "cval down",
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			]
+		},
+		{
+			"offsets": [
+				439,
+				314
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "GETOUT",
+			"loop": false,
+			"name": "cval rozebud"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/cvaltorture",
+	"position": [
+		-60,
+		-70
+	],
+	"healthicon": "cval",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		102,
+		204
+	],
+	"camera_position": [
+		-610,
+		90
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="mungus.png">
+	<!-- Created with Adobe Animate version 21.0.3.38773 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down0000" x="0" y="0" width="252" height="294"/>
+	<SubTexture name="down0001" x="261" y="0" width="252" height="294"/>
+	<SubTexture name="down0002" x="522" y="0" width="252" height="294"/>
+	<SubTexture name="down0003" x="783" y="0" width="252" height="294"/>
+	<SubTexture name="idle0000" x="1044" y="0" width="232" height="321"/>
+	<SubTexture name="idle0001" x="1285" y="0" width="232" height="321"/>
+	<SubTexture name="idle0002" x="1526" y="0" width="232" height="321"/>
+	<SubTexture name="idle0003" x="1767" y="0" width="232" height="321"/>
+	<SubTexture name="idle0004" x="1767" y="0" width="232" height="321"/>
+	<SubTexture name="idle0005" x="1767" y="0" width="232" height="321"/>
+	<SubTexture name="idle0006" x="1767" y="0" width="232" height="321"/>
+	<SubTexture name="left0000" x="0" y="330" width="253" height="320"/>
+	<SubTexture name="left0001" x="262" y="330" width="253" height="320"/>
+	<SubTexture name="left0002" x="524" y="330" width="253" height="320"/>
+	<SubTexture name="left0003" x="786" y="330" width="253" height="320"/>
+	<SubTexture name="right0000" x="1048" y="330" width="275" height="320"/>
+	<SubTexture name="right0001" x="1332" y="330" width="275" height="320"/>
+	<SubTexture name="right0002" x="1616" y="330" width="275" height="320"/>
+	<SubTexture name="right0003" x="0" y="659" width="275" height="320"/>
+	<SubTexture name="up0000" x="284" y="659" width="251" height="336"/>
+	<SubTexture name="up0001" x="544" y="659" width="251" height="336"/>
+	<SubTexture name="up0002" x="804" y="659" width="251" height="336"/>
+	<SubTexture name="up0003" x="1064" y="659" width="251" height="336"/>
+</TextureAtlas>

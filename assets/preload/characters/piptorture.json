@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "piple"
+		},
+		{
+			"offsets": [
+				19,
+				71
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "pip down"
+		},
+		{
+			"offsets": [
+				23,
+				112
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "pip up"
+		},
+		{
+			"offsets": [
+				-8,
+				86
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "pip righ"
+		},
+		{
+			"offsets": [
+				56,
+				89
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "pip lef"
+		},
+		{
+			"offsets": [
+				10,
+				121
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "rozebud?",
+			"loop": false,
+			"name": "piprozebud"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/piptorture",
+	"position": [
+		-200,
+		95
+	],
+	"healthicon": "pip",
+	"flip_x": false,
+	"healthbar_colors": [
+		254,
+		170,
+		71
+	],
+	"camera_position": [
+		-610,
+		90
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
