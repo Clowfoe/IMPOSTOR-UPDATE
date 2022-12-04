@@ -485,7 +485,7 @@ class AmongFreeplayState extends MusicBeatState
 			songs: [
 				["ROOMCODE", "powers", 'powers', FlxColor.fromRGB(80, 173, 235)],
 				["Posussium", "bananungus", 'bananungus', FlxColor.fromRGB(235, 188, 80)],
-				["Kyubism", "warchief", 'warchief', FlxColor.fromRGB(235, 188, 80)]
+				["Kyubism", "kyubi", 'warchief', FlxColor.PURPLE]
 			],
 
 			section: 2

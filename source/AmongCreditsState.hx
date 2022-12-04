@@ -26,7 +26,7 @@ class AmongCreditsState extends MusicBeatState
         ['loggo',			'lojo',			'halloween',				'https://twitter.com/gedehari'],   
         ['mayhew',			'mayhew',		'i got in here because of stupid fan concept\ni loved working on this mod its so awesome vs impostor fnf mod vs impostor\nadd me on fall guys',		'https://twitter.com/SandPlanetNG'],
         ['mayo',				'mayo',		"Hi I'm Mayokiddo\nI'm an artist for the mod and I made a bunch of the playable mini impostor skins, and i also made a few sprites\nshout out to everyone currently in silly squad",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
-        ['neato',				'neato',		'im neato i made sprites for drippypop insane streamer and turbulance\nand made some of the instrumental for insane streamer im gon get hit by a truck and break my spine',	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
+        ['neato',				'neato',		'if she yo girl why my leitmotif in her theme',	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
         ['orbyy',			'orb',			"Im really happy i got to work on this, i was brought on v3 to do pixel art for tomongus and i'm grateful for being given the opportunity. I hope yall love the new pixel art for tomongus week and i apologize for v3's defeat chart.",    'https://twitter.com/gedehari'],   
         ['squidboy',	'squid',	'hi im squid you may or may not know me for moderating the impostorm discord server\nive also been working for impostor ever since its beginning so thats cool i guess\nlove u zial <3<3<3',		'https://twitter.com/Keoiki_'],
         ['pip',			'pip',			'"            "',				'https://twitter.com/DojimaDog'],   

@@ -375,6 +375,12 @@ class PlayState extends MusicBeatState
 	var bunches:FlxSprite;
 	var leaves:FlxSprite;
 
+	// kyubism
+	var bfbubblebg:FlxSprite;
+	var messyroom:FlxSprite;
+	var ytlayout:FlxSprite;
+	var ytoverlay:FlxSprite;
+
 	// toogus
 	var saxguy:FlxSprite;
 	var lightoverlay:FlxSprite;
@@ -805,6 +811,14 @@ class PlayState extends MusicBeatState
 				leaves.scrollFactor.set(1.5, 1.5);
 				leaves.active = false;
 
+			case 'youtuber': // cory post thanks ethan
+
+				var bfbubblebg:FlxSprite = new FlxSprite(934.35, 26.9).loadGraphic(Paths.image('youtube/stage', 'impostor'));
+				bfbubblebg.updateHitbox();
+				bfbubblebg.antialiasing = true;
+				bfbubblebg.scrollFactor.set(1, 1);
+				bfbubblebg.active = false;
+				add(bfbubblebg);
 
 			case 'turbulence': // TURBULENCE!!!
 
@@ -2077,7 +2091,7 @@ class PlayState extends MusicBeatState
 				add(momGroup);
 		}
 
-		if (curStage == 'warehouse')
+		if (curStage == 'warehouse'  || curStage == 'youtuber')
 		{
 			//EVERYBODY FART;
 		}
@@ -2085,6 +2099,7 @@ class PlayState extends MusicBeatState
 		{
 			add(dadGroup);
 		}
+
 
 		if (curStage == 'turbulence')
 			add(hookarm);
@@ -2288,7 +2303,16 @@ class PlayState extends MusicBeatState
 				lightoverlay.alpha = 0.41;
 				lightoverlay.blend = ADD;
 				add(lightoverlay);
-				
+
+			case 'youtuber':
+				var messyroom:FlxSprite = new FlxSprite(-20.45, -48.3).loadGraphic(Paths.image('youtube/bg', 'impostor'));
+				messyroom.updateHitbox();
+				messyroom.antialiasing = true;
+				messyroom.scrollFactor.set(1, 1);
+				messyroom.active = false;
+				add(messyroom);
+				add(dadGroup);
+
 			case 'monotone':
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/overlay', 'impostor'));
 				lightoverlay.antialiasing = true;
@@ -2622,14 +2646,25 @@ class PlayState extends MusicBeatState
 			strumLine.y = FlxG.height - 150;
 		strumLine.scrollFactor.set();
 
-		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 585, 20, 400, "", 32);
-		timeTxt.setFormat(Paths.font("vcr.ttf"), 14, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		timeTxt.scrollFactor.set();
-		timeTxt.alpha = 0;
-		timeTxt.borderSize = 1;
-		timeTxt.visible = !ClientPrefs.hideTime;
-		if (ClientPrefs.downScroll)
-			timeTxt.y = FlxG.height - 45;
+		if(curStage.toLowerCase() == 'youtuber')
+		{
+			timeTxt = new FlxText(-300, 0, 400, "", 32);
+			timeTxt.setFormat(Paths.font("arial.ttf"), 14, 0xFFc9c6c3);
+			timeTxt.scrollFactor.set();
+			timeTxt.alpha = 0;
+			timeTxt.visible = !ClientPrefs.hideTime;
+		}
+		else
+		{
+			timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 585, 20, 400, "", 32);
+			timeTxt.setFormat(Paths.font("vcr.ttf"), 14, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			timeTxt.scrollFactor.set();
+			timeTxt.alpha = 0;
+			timeTxt.borderSize = 1;
+			timeTxt.visible = !ClientPrefs.hideTime;
+			if (ClientPrefs.downScroll)
+				timeTxt.y = FlxG.height - 45;
+		}
 
 		vt_light = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/light_voting', 'impostor'));
 		vt_light.updateHitbox();
@@ -2660,19 +2695,33 @@ class PlayState extends MusicBeatState
 		timeBarBG.xAdd = -4;
 		timeBarBG.yAdd = -4;
 		add(timeBarBG);
+		
 
-		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
-			'songPercent', 0, 1);
-		timeBar.scrollFactor.set();
-		timeBar.createFilledBar(0xFF2e412e, 0xFF44d844);
-		timeBar.numDivisions = 800; // How much lag this causes?? Should i tone it down to idk, 400 or 200?
-		timeBar.alpha = 0;
-		timeBar.visible = !ClientPrefs.hideTime;
-		add(timeBar);
-		add(timeTxt);
-		timeBarBG.sprTracker = timeBar;
-		timeTxt.x += 10;
-		timeTxt.y += 4;
+		if(curStage.toLowerCase() == 'youtuber')
+		{
+			timeBar = new FlxBar(13.75, 678.95, LEFT_TO_RIGHT, Std.int(1247.85), Std.int(3.35), this,
+				'songPercent', 0, 1);
+			timeBar.scrollFactor.set();
+			timeBar.createFilledBar(0xFFc9c6c3, 0xFFcc0000);
+			timeBar.numDivisions = 800; // How much lag this causes?? Should i tone it down to idk, 400 or 200?
+			timeBar.alpha = 0;
+			timeBar.visible = !ClientPrefs.hideTime;
+		}
+		else
+		{
+			timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
+				'songPercent', 0, 1);
+			timeBar.scrollFactor.set();
+			timeBar.createFilledBar(0xFF2e412e, 0xFF44d844);
+			timeBar.numDivisions = 800; // How much lag this causes?? Should i tone it down to idk, 400 or 200?
+			timeBar.alpha = 0;
+			timeBar.visible = !ClientPrefs.hideTime;
+			add(timeBar);
+			add(timeTxt);
+			timeBarBG.sprTracker = timeBar;
+			timeTxt.x += 10;
+			timeTxt.y += 4;
+		}
 
 		victoryDarkness = new FlxSprite(0, 0).makeGraphic(3000, 3000, 0xff000000);
 		victoryDarkness.alpha = 0;
@@ -2756,6 +2805,17 @@ class PlayState extends MusicBeatState
 		ass2.scrollFactor.set();
 		ass2.screenCenter();
 
+		ytlayout = new FlxSprite(0, 0).loadGraphic(Paths.image('ui'));
+		ytlayout.scrollFactor.set();
+		ytlayout.screenCenter();
+		ytlayout.alpha = 0;
+		
+		ytoverlay = new FlxSprite(0, 0).loadGraphic(Paths.image('overlay'));
+		ytoverlay.scrollFactor.set();
+		ytoverlay.screenCenter();
+		ytoverlay.blend = MULTIPLY;
+		ytoverlay.alpha = 0;
+
 		overlay = new FlxSprite(-1000, -2000).loadGraphic(Paths.image('polus/overlay', 'impostor'));
 		overlay.updateHitbox();
 		overlay.setGraphicSize(Std.int(overlay.width * 0.4));
@@ -2822,6 +2882,8 @@ class PlayState extends MusicBeatState
 		add(flashSprite);
 		flashSprite.alpha = 0;
 
+		ytoverlay.cameras = [camHUD];
+		ytlayout.cameras = [camHUD];
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		flashSprite.cameras = [camOther];
@@ -2850,6 +2912,15 @@ class PlayState extends MusicBeatState
 			timeBar.alpha = 0;
 			timeBarBG.alpha = 0;
 			timeTxt.alpha = 0;
+			}
+
+		if (curStage == 'youtuber')
+			{
+			timeBarBG.alpha = 0;
+			add(ytoverlay);
+			add(ytlayout);
+			add(timeBar);
+			add(timeTxt);
 			}
 
 		// if (SONG.song == 'South')
@@ -3587,6 +3658,8 @@ class PlayState extends MusicBeatState
 		songLength = FlxG.sound.music.length;
 		FlxTween.tween(timeBar, {alpha: 1}, 0.5, {ease: FlxEase.circOut});
 		FlxTween.tween(timeTxt, {alpha: 1}, 0.5, {ease: FlxEase.circOut});
+		FlxTween.tween(ytoverlay, {alpha: 0.54}, 0.5, {ease: FlxEase.circOut});
+		FlxTween.tween(ytlayout, {alpha: 1}, 0.5, {ease: FlxEase.circOut});
 
 		switch (dad.curCharacter)
 		{
@@ -4537,7 +4610,14 @@ class PlayState extends MusicBeatState
 					var secondsRemaining:String = '' + secondsTotal % 60;
 					if (secondsRemaining.length < 2)
 						secondsRemaining = '0' + secondsRemaining; // Dunno how to make it display a zero first in Haxe lol
-					timeTxt.text = '' + curSong.toUpperCase();
+					if(curStage.toLowerCase() == 'youtuber') 
+					{
+						timeTxt.text = (FlxStringUtil.formatTime(secondsTotal, false) + '/' + FlxStringUtil.formatTime(minutesRemaining, false));
+					}
+					else
+					{
+						timeTxt.text = '' + curSong.toUpperCase();
+					}
 				}
 			}
 
