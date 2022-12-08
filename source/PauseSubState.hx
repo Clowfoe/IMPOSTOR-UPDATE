@@ -48,12 +48,11 @@ class PauseSubState extends MusicBeatSubstate
 			pauseMusic = new FlxSound().loadEmbedded(Paths.music('tomongusPause'), true, true);
 		else if (PlayState.SONG.stage.toLowerCase() == 'finale')
 			pauseMusic = new FlxSound().loadEmbedded(Paths.music('finalePause'), true, true);
-		else if (PlayState.SONG.stage.toLowerCase() == 'banana')
-			pauseMusic = new FlxSound().loadEmbedded(Paths.music('bananaPause'), true, true);
 		else if (PlayState.SONG.stage.toLowerCase() == 'alpha')
 			pauseMusic = new FlxSound().loadEmbedded(Paths.music('untitled'), true, true);
 		else
 			pauseMusic = new FlxSound().loadEmbedded(Paths.music('sussus_muzak'), true, true);
+
 		pauseMusic.volume = 0;
 		pauseMusic.play(false, FlxG.random.int(0, Std.int(pauseMusic.length / 2)));
 

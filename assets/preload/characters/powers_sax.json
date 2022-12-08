@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-51,
+				-28
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "sax idle"
+		},
+		{
+			"offsets": [
+				-74,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "sax right"
+		},
+		{
+			"offsets": [
+				70,
+				-54
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "sax down"
+		},
+		{
+			"offsets": [
+				21,
+				66
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "sax up"
+		},
+		{
+			"offsets": [
+				-38,
+				-60
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "sax left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/powers_sax",
+	"position": [
+		-10,
+		200
+	],
+	"healthicon": "powers",
+	"flip_x": false,
+	"healthbar_colors": [
+		100,
+		195,
+		255
+	],
+	"camera_position": [
+		-130,
+		120
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

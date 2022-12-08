@@ -36,8 +36,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				80,
-				-38
+				85,
+				-41
 			],
 			"anim": "singDOWNmiss",
 			"fps": 24,
@@ -48,7 +48,7 @@
 			"loop": false,
 			"offsets": [
 				28,
-				67
+				59
 			],
 			"anim": "singUPmiss",
 			"fps": 24,
@@ -79,8 +79,8 @@
 		},
 		{
 			"offsets": [
-				-45,
-				50
+				-41,
+				43
 			],
 			"loop": false,
 			"fps": 24,
@@ -91,13 +91,46 @@
 		{
 			"offsets": [
 				83,
-				28
+				20
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singLEFTmiss",
 			"indices": [],
 			"name": "Pico NOTE LEFT miss"
+		},
+		{
+			"offsets": [
+				11,
+				8
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "picoDeathSTART"
+		},
+		{
+			"offsets": [
+				3,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathLoop",
+			"loop": true,
+			"name": "picoDeathLOOP"
+		},
+		{
+			"offsets": [
+				3,
+				30
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathConfirm",
+			"loop": false,
+			"name": "picoDeathCONFIRM"
 		}
 	],
 	"no_antialiasing": false,
@@ -114,8 +147,8 @@
 		85
 	],
 	"camera_position": [
-		150,
-		0
+		50,
+		70
 	],
 	"sing_duration": 4,
 	"scale": 1

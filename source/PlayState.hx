@@ -848,7 +848,7 @@ class PlayState extends MusicBeatState
 				midderclouds.active = false;
 				add(midderclouds);
 
-				var hookarm:FlxSprite = new FlxSprite(-567.85, 888.4).loadGraphic(Paths.image('airship/turbulence/clawback', 'impostor'));
+				var hookarm:FlxSprite = new FlxSprite(-567.85, 388.4).loadGraphic(Paths.image('airship/turbulence/clawback', 'impostor'));
 				hookarm.antialiasing = true;
 				hookarm.scrollFactor.set(1, 1);
 				hookarm.active = false;
@@ -924,6 +924,21 @@ class PlayState extends MusicBeatState
 				fog_mid.active = false;
 				fog_mid.alpha = 0.19;
 				add(fog_mid);
+
+			case 'lobby': // powers!
+
+				GameOverSubstate.deathSoundName = 'picoDeath';
+				GameOverSubstate.loopSoundName = 'deathPicoMusicLoop';
+				GameOverSubstate.endSoundName = 'deathPicoMusicEnd';
+				GameOverSubstate.characterName = 'picolobby';
+
+				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
+				add(bg);
+
+				var stageFront:BGSprite = new BGSprite('stagefront', -650, 600, 0.9, 0.9);
+				stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+				stageFront.updateHitbox();
+				add(stageFront);
 
 			case 'who': // dead dead guy
 				var bg:FlxSprite = new FlxSprite(0, 100).loadGraphic(Paths.image('polus/deadguy', 'impostor'));
@@ -2574,15 +2589,11 @@ class PlayState extends MusicBeatState
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
-		if (curStage == 'turbulence')
-			{
-				boyfriend.angle = -90;
-			}
-		else
-			{
-				boyfriend.angle = 0;
-			}
-			
+		//if (curStage.toLowerCase() == 'turbulence')
+		//{
+			//boyfriendGroup.angle = -90;
+		//}
+		
 		dadGhost.visible = false;
 		dadGhost.antialiasing = true;
 		dadGhost.alpha = 0.6;

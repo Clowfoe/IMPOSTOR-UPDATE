@@ -1,7 +1,7 @@
 {
 	"song": {
 		"player1": "picolobby",
-		"player2": "crewmate",
+		"player2": "powers",
 		"notes": [
 			{
 				"lengthInSteps": 16,
@@ -4614,6 +4614,7 @@
 		"song": "ROOMCODE",
 		"arrowSkin": "",
 		"needsVoices": true,
+		"stage": "lobby",
 		"validScore": true,
 		"speed": 2.8,
 		"bpm": 135
