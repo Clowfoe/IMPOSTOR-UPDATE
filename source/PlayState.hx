@@ -6095,9 +6095,9 @@ class PlayState extends MusicBeatState
 					defaultCamZoom = 0.75;
 
 					FlxTween.tween(camHUD, {alpha: 0}, 0.4);
-					FlxTween.tween(gf, {alpha: 0}, 0.4);
-					FlxTween.tween(dad, {alpha: 0}, 0.4);
-					FlxTween.tween(boyfriend, {alpha: 0}, 0.4);
+					FlxTween.tween(gf, {alpha: 0.1}, 0.4);
+					FlxTween.tween(dad, {alpha: 0.25}, 0.4);
+					FlxTween.tween(boyfriend, {alpha: 0.25}, 0.4);
 
 					new FlxTimer().start(9, function(tmr:FlxTimer)
 					{
