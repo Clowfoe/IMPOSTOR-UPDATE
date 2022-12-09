@@ -87,3 +87,7 @@ function onUpdate()
     
 end
 
+function onEndSong()
+    followchars = false;
+    triggerEvent('Camera Follow Pos','400','150')
+end
