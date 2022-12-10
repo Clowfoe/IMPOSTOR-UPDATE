@@ -1,14 +1,10 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				4,
 				26
 			],
-			"anim": "danceLeft",
-			"fps": 24,
-			"name": "GF Dancing Beat instance 100",
 			"indices": [
 				30,
 				0,
@@ -26,17 +22,17 @@
 				12,
 				13,
 				14
-			]
+			],
+			"fps": 24,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "GF Dancing Beat"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				4,
 				26
 			],
-			"anim": "danceRight",
-			"fps": 24,
-			"name": "GF Dancing Beat instance 100",
 			"indices": [
 				15,
 				16,
@@ -53,7 +49,11 @@
 				27,
 				28,
 				29
-			]
+			],
+			"fps": 24,
+			"anim": "danceRight",
+			"loop": false,
+			"name": "GF Dancing Beat"
 		}
 	],
 	"no_antialiasing": false,
