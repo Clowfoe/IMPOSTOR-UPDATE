@@ -81,7 +81,7 @@ class CharacterEditorState extends MusicBeatState
 	{
 		super.create();
 		
-		FlxG.sound.playMusic(Paths.music('breakfast'), 0.5);
+		FlxG.sound.playMusic(Paths.music('sussus_muzak'), 0.5);
 
 		camEditor = new FlxCamera();
 		camHUD = new FlxCamera();
