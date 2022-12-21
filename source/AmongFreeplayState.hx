@@ -173,6 +173,8 @@ class AmongFreeplayState extends MusicBeatState
 		portrait.animation.addByIndices('pop', 'Character', [33], null, 24, true);
 		portrait.animation.addByIndices('torture', 'Character', [34], null, 24, true);
 		portrait.animation.addByIndices('dave', 'Character', [35], null, 24, true);
+		portrait.animation.addByIndices('bpmar', 'Character', [36], null, 24, true);
+		portrait.animation.addByIndices('grinch', 'Character', [37], null, 24, true);
 		portrait.animation.play('red');
 		portrait.antialiasing = true;
 		portrait.setPosition(304.65, -100);
@@ -440,7 +442,7 @@ class AmongFreeplayState extends MusicBeatState
 			songs: [
 				["Ashes", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0)],
 				["Magmatic", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0)],
-				["Boiling Point", "boilingpoint", 'maroon', FlxColor.fromRGB(181, 0, 0)]
+				["Boiling Point", "boilingpoint", 'bpmar', FlxColor.fromRGB(181, 0, 0)]
 			],
 
 			section: 1
@@ -522,7 +524,7 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Grinch", "fella", 'loggo', FlxColor.fromRGB(0, 255, 0)]
+				["Grinch", "fella", 'grinch', FlxColor.fromRGB(0, 255, 0)]
 			],
 
 			section: 4
@@ -555,8 +557,8 @@ class AmongFreeplayState extends MusicBeatState
 				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK],
 				["Drippypop", "drippy", 'pop', FlxColor.fromRGB(188, 106, 223)],
 				["Crewicide", "dave", 'dave', FlxColor.BLUE],
-				["Triple Trouble", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)],
-				["Monochrome", "dead", 'red', FlxColor.fromRGB(84, 167, 202)],
+				["Monotone Attack", "attack", 'loggo',FlxColor.BLACK],
+				["Monosus", "dead", 'red', FlxColor.fromRGB(84, 167, 202)],
 				["Top 10", "top", 'top', FlxColor.RED]
 			],
 

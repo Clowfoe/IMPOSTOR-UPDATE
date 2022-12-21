@@ -382,6 +382,7 @@ class PlayState extends MusicBeatState
 	var bananas:FlxSprite;
 	var bunches:FlxSprite;
 	var leaves:FlxSprite;
+	var sneakySnitch:FlxSprite;
 	var bananaCrowd:FlxSprite;
 	var bananaChef:FlxSprite;
 	var tomato:FlxSprite;
@@ -868,6 +869,14 @@ class PlayState extends MusicBeatState
 				ground.scrollFactor.set(1.0, 1.0);
 				ground.active = false;
 				add(ground);
+
+				sneakySnitch = new FlxSprite(106.65, 458.45);
+				sneakySnitch.frames = Paths.getSparrowAtlas('banana/tone', 'impostor');
+				sneakySnitch.animation.addByPrefix('hide', 'sneaky', 24, true);
+				sneakySnitch.antialiasing = true;
+				sneakySnitch.scrollFactor.set(1, 1);
+				sneakySnitch.active = true;
+				add(sneakySnitch);
 
 				bananaCrowd = new FlxSprite(1473, 430.1);
 				bananaCrowd.frames = Paths.getSparrowAtlas('banana/bananabgboppers', 'impostor');
@@ -3422,6 +3431,8 @@ class PlayState extends MusicBeatState
 					var newBoyfriend:Boyfriend = new Boyfriend(0, 0, newCharacter);
 					boyfriendMap.set(newCharacter, newBoyfriend);
 					boyfriendGroup.add(newBoyfriend);
+					remove(pet);
+					add(pet);
 					startCharacterPos(newBoyfriend);
 					newBoyfriend.alpha = 0.00001;
 					newBoyfriend.alreadyLoaded = false;
@@ -3448,6 +3459,17 @@ class PlayState extends MusicBeatState
 					startCharacterPos(newGf);
 					newGf.alpha = 0.00001;
 					newGf.alreadyLoaded = false;
+				}
+			case 3:
+				if (!momMap.exists(newCharacter))
+				{
+					var newMom:Character = new Character(0, 0, newCharacter);
+					newMom.scrollFactor.set(0.95, 0.95);
+					momMap.set(newCharacter, newMom);
+					momGroup.add(newMom);
+					startCharacterPos(newMom);
+					newMom.alpha = 0.00001;
+					newMom.alreadyLoaded = false;
 				}
 		}
 	}
@@ -4056,6 +4078,8 @@ class PlayState extends MusicBeatState
 				var charType:Int = 0;
 				switch (event[3].toLowerCase())
 				{
+					case 'mom' | 'opponent2':
+						charType = 3;
 					case 'gf' | 'girlfriend':
 						charType = 2;
 					case 'dad' | 'opponent':
@@ -6187,6 +6211,22 @@ class PlayState extends MusicBeatState
 									gf.alreadyLoaded = true;
 								}
 							}
+						case 3:
+							if (mom.curCharacter != value2)
+								{
+									if (!momMap.exists(value2))
+									{
+										addCharacterToList(value2, charType);
+									}
+	
+									mom.visible = false;
+									mom = momMap.get(value2);
+									if (!mom.alreadyLoaded)
+									{
+										mom.alpha = 1;
+										mom.alreadyLoaded = true;
+									}
+								}
 					}
 					reloadHealthBarColors();
 			}
