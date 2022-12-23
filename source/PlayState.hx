@@ -1529,6 +1529,18 @@ class PlayState extends MusicBeatState
 				thebackground.active = true;
 				add(thebackground);
 
+			case 'nuzzus': // SHIT ASS
+				curStage = 'nuzzus';
+				var thebackground = new FlxSprite(0, 0);
+				thebackground.frames = Paths.getSparrowAtlas('skeld/nuzzus', 'impostor');
+				thebackground.animation.addByPrefix('bop', 'bg', 24, true);
+				thebackground.animation.play('bop');
+				thebackground.antialiasing = false;
+				thebackground.scrollFactor.set(1, 1);
+				thebackground.setGraphicSize(Std.int(thebackground.width * 5));
+				thebackground.active = true;
+				add(thebackground);
+
 			case 'drippypop': // SHIT ASS
 				curStage = 'drippypop';
 
@@ -3894,37 +3906,83 @@ class PlayState extends MusicBeatState
 			case "impostor2":
 				curPortrait = "red";
 
+			case "crewmate":
+				curPortrait = "crewmate";
+
 			case "impostor3":
-				curPortrait = "green";
+				curPortrait = "greenimp";
+
+			case "impostorr":
+				curPortrait = "greenimp";
 
 			case "tomongus":
 				curPortrait = "tomongus";
 
 			case "chewmate":
-				curPortrait = "hamster";
+				curPortrait = "tomongus";
 
 			case "black":
 				curPortrait = "black";
+
+			case "charles":
+				curPortrait = "charles";
+
+			case "henry":
+				curPortrait = "henry";
+
+			case "rhm":
+				curPortrait = "armed";
+			
+			case "fella":
+				curPortrait = "loggo";
+
+			case "boo":
+				curPortrait = "loggo";
+
+			case "parasite":
+				curPortrait = "parasite";
+			
+			case "nuzzus":
+				curPortrait = "nuzzus";
+
+			case "drippypop":
+				curPortrait = "drippypop";
+			
+			case "tuesday":
+				curPortrait = "tuesday";
+
+			case "pink":
+				curPortrait = "pink";
+			
+			case "grey":
+				curPortrait = "grey";
+
+			case "yellow":
+				curPortrait = "yellow";
+
+			case "white":
+				curPortrait = "white";
+
+			case "jorsawsee":
+				curPortrait = "jorsawsee";
+
+			case "warchief":
+				curPortrait = "warchief";
+
+			case "powers":
+				curPortrait = "powers";
 		}
 
 		switch (curSong)
 		{
-			case "Lights-Down":
-				curPortrait = "greendark";
-			case "Defeat":
-				curPortrait = "black";
-			case "Mando":
-				curPortrait = "yellow";
-			case "Dlow":
-				curPortrait = "yellow";
-			case "Oversight":
-				curPortrait = "white";
-			case "Double-Kill":
-				curPortrait = "blackairship";
-			case "Danger":
-				curPortrait = "blackairship";
-			case "Titular":
-				curPortrait = "secret";
+			case "Double Kill":
+				curPortrait = "doublekill";
+			
+			case "Reinforcements":
+				curPortrait = "ellie";
+
+			case "Who":
+				curPortrait = "who";
 		}
 
 		#if desktop

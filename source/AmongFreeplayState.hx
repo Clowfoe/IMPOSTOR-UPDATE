@@ -547,6 +547,7 @@ class AmongFreeplayState extends MusicBeatState
 				["Ow", "kills", 'kills', FlxColor.fromRGB(84, 167, 202)],
 				["Who", "whoguys", 'who', FlxColor.fromRGB(22, 65, 240)],
 				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK],
+				["Sussus Nuzzus", "red", 'red', FlxColor.RED],
 				["Drippypop", "drippy", 'pop', FlxColor.fromRGB(188, 106, 223)],
 				["Crewicide", "dave", 'dave', FlxColor.BLUE],
 				["Monotone Attack", "attack", 'red', FlxColor.fromRGB(84, 167, 202)],
