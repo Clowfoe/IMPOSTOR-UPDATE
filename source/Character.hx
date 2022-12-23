@@ -71,7 +71,6 @@ class Character extends FlxSprite
 
 	//Used on Character Editor
 	public var imageFile:String = '';
-	public static var curStage:String = '';
 	public var jsonScale:Float = 1;
 	public var noAntialiasing:Bool = false;
 	public var originalFlipX:Bool = false;
@@ -80,7 +79,7 @@ class Character extends FlxSprite
 	public var alreadyLoaded:Bool = true; //Used by "Change Character" event
 
 	public static var DEFAULT_CHARACTER:String = 'bf'; //In case a character is missing, it will use BF on its place
-	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false, ?noStage:Bool = false)
+	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
 		super(x, y);
 
@@ -92,14 +91,6 @@ class Character extends FlxSprite
 		curCharacter = character;
 		this.isPlayer = isPlayer;
 		antialiasing = ClientPrefs.globalAntialiasing;
-
-		//y'all might be dumb or somethin -rzbd
-		if(!noStage){
-			curStage = PlayState.SONG.stage; // this might just be stupid but we'll make this work brah -cc
-		}
-		else{
-			curStage = "";
-		}
 		
 
 
@@ -314,29 +305,6 @@ class Character extends FlxSprite
 			if (AnimName == 'singUP' || AnimName == 'singDOWN')
 			{
 				danced = !danced;
-			}
-		}
-		if (curStage.toLowerCase() == 'turbulence' && isPlayer)
-		{
-			if(AnimName.startsWith('idle'))
-			{
-				offset.set(daOffset[0], daOffset[1]);
-			}
-			if(AnimName.startsWith('singLEFT'))
-			{
-				offset.set(daOffset[0], daOffset[1]);
-			}
-			if(AnimName.startsWith('singRIGHT'))
-			{
-				offset.set(daOffset[0], daOffset[1]);
-			}
-			if(AnimName.startsWith('singUP'))
-			{
-				offset.set(daOffset[0], daOffset[1]);
-			}
-			if(AnimName.startsWith('singDOWN'))
-			{
-				offset.set(daOffset[0], daOffset[1]);
 			}
 		}
 	}
