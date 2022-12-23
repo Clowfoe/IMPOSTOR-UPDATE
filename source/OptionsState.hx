@@ -757,7 +757,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 	{
 		super();
 		// avoids lagspikes while scrolling through menus!
-		showCharacter = new Character(840, 170, 'bf', true);
+		showCharacter = new Character(840, 170, 'bf', true, true);
 		showCharacter.setGraphicSize(Std.int(showCharacter.width * 0.8));
 		showCharacter.updateHitbox();
 		showCharacter.dance();
