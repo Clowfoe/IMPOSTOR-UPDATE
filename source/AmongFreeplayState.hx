@@ -426,7 +426,6 @@ class AmongFreeplayState extends MusicBeatState
 		weeks.push({
 			songs: [
 				["Defeat", "black", 'black', FlxColor.fromRGB(179, 0, 255)],
-				["Ominous", "black", 'black', FlxColor.fromRGB(179, 0, 255)],
 				["Finale", "black", 'finale', FlxColor.fromRGB(179, 0, 255)]
 			],
 
@@ -434,7 +433,7 @@ class AmongFreeplayState extends MusicBeatState
 		});
 
 		weeks.push({
-			songs: [["Compromised Persona", "monotone", 'monotone', FlxColor.BLACK]],
+			songs: [["Identity Crisis", "monotone", 'monotone', FlxColor.BLACK]],
 			section: 0
 		});
 
@@ -524,14 +523,6 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Grinch", "fella", 'grinch', FlxColor.fromRGB(0, 255, 0)]
-			],
-
-			section: 4
-		});
-
-		weeks.push({
-			songs: [
 				["Titular", "henry", 'tit', FlxColor.ORANGE],
 				["Greatest Plan", "charles", 'charles', FlxColor.RED],
 				["Reinforcements", "ellie", 'ellie', FlxColor.ORANGE],
@@ -557,8 +548,8 @@ class AmongFreeplayState extends MusicBeatState
 				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK],
 				["Drippypop", "drippy", 'pop', FlxColor.fromRGB(188, 106, 223)],
 				["Crewicide", "dave", 'dave', FlxColor.BLUE],
-				["Monotone Attack", "attack", 'loggo',FlxColor.BLACK],
-				["Monosus", "dead", 'red', FlxColor.fromRGB(84, 167, 202)],
+				["Triple Trouble", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)],
+				["Monochrome", "dead", 'red', FlxColor.fromRGB(84, 167, 202)],
 				["Top 10", "top", 'top', FlxColor.RED]
 			],
 
