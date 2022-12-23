@@ -88,7 +88,7 @@
 						10322.5806451613,
 						-1,
 						"HUD Fade",
-						"",
+						"0",
 						""
 					]
 				],
@@ -597,13 +597,6 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						82580.6451612904,
-						-1,
-						"HUD Fade",
-						"",
-						"0"
-					],
-					[
 						82620.9677419355,
 						-1,
 						"Play Animation",
@@ -616,6 +609,13 @@
 						"Play Animation",
 						"rozebud?",
 						"3"
+					],
+					[
+						82580.6451612904,
+						-1,
+						"HUD Fade",
+						"1",
+						""
 					]
 				],
 				"bpm": 0,
@@ -657,10 +657,28 @@
 						87500.0000000001,
 						-1,
 						"HUD Fade",
-						"",
+						"0",
 						""
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false

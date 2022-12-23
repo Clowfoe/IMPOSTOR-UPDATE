@@ -408,6 +408,7 @@ class PlayState extends MusicBeatState
 	var wiggleShit:WiggleEffect = new WiggleEffect();
 
 	// torture
+	var ROZEBUD_ILOVEROZEBUD_HEISAWESOME:FlxSprite; // this is the var name and you can't stop me -rzbd
 	var torfloor:FlxSprite;
 	var torwall:FlxSprite;
 	var torglasses:FlxSprite;
@@ -1467,34 +1468,34 @@ class PlayState extends MusicBeatState
 
 			case 'warehouse': //ziffy tourture
 				curStage = 'warehouse';
-				var torfloor:FlxSprite = new FlxSprite(-1376.3, 494.65).loadGraphic(Paths.image('tort_floor'));
+				torfloor = new FlxSprite(-1376.3, 494.65).loadGraphic(Paths.image('tort_floor'));
 				torfloor.updateHitbox();
 				torfloor.antialiasing = true;
 				torfloor.scrollFactor.set(1, 1);
 				torfloor.active = false;
 				add(torfloor);
 
-				var torwall:FlxSprite = new FlxSprite(-921.95, -850).loadGraphic(Paths.image('torture_wall'));
+				torwall = new FlxSprite(-921.95, -850).loadGraphic(Paths.image('torture_wall'));
 				torwall.updateHitbox();
 				torwall.antialiasing = true;
 				torwall.scrollFactor.set(0.8, 0.8);
 				torwall.active = false;
 				add(torwall);
 
-				var torglasses:FlxSprite = new FlxSprite(551.8, 594.3).loadGraphic(Paths.image('ziffyglasses'));
+				torglasses = new FlxSprite(551.8, 594.3).loadGraphic(Paths.image('torture_glasses_preblended'));
 				torglasses.updateHitbox();
 				torglasses.antialiasing = true;
 				torglasses.scrollFactor.set(1.2, 1.2);
 				torglasses.active = false;	
 
-				var windowlights:FlxSprite = new FlxSprite(-159.2, -605.95).loadGraphic(Paths.image('windowlights'));
+				windowlights = new FlxSprite(-159.2, -605.95).loadGraphic(Paths.image('windowlights'));
 				windowlights.antialiasing = true;
 				windowlights.scrollFactor.set(1, 1);
 				windowlights.active = false;
 				windowlights.alpha = 0.31;
 				windowlights.blend = ADD;
 
-				leftblades = new FlxSprite(203.05, -160);
+				leftblades = new FlxSprite(203.05, -270);
 				leftblades.frames = Paths.getSparrowAtlas('leftblades');
 				leftblades.animation.addByPrefix('spin', 'blad', 24, false);
 				leftblades.animation.play('spin');
@@ -1502,13 +1503,19 @@ class PlayState extends MusicBeatState
 				leftblades.scrollFactor.set(1.4, 1.4);
 				leftblades.active = true;
 
-				rightblades = new FlxSprite(837.75, -160);
+				rightblades = new FlxSprite(837.75, -270);
 				rightblades.frames = Paths.getSparrowAtlas('rightblades');
 				rightblades.animation.addByPrefix('spin', 'blad', 24, false);
 				rightblades.animation.play('spin');
 				rightblades.antialiasing = true;
 				rightblades.scrollFactor.set(1.4, 1.4);
 				rightblades.active = true;
+
+				ROZEBUD_ILOVEROZEBUD_HEISAWESOME = new  FlxSprite(-390, -190);
+				ROZEBUD_ILOVEROZEBUD_HEISAWESOME.frames = Paths.getSparrowAtlas('torture_roze');
+				ROZEBUD_ILOVEROZEBUD_HEISAWESOME.animation.addByPrefix('thing', '', 24, false);
+				ROZEBUD_ILOVEROZEBUD_HEISAWESOME.antialiasing = true;
+				ROZEBUD_ILOVEROZEBUD_HEISAWESOME.visible = false;
 
 			case 'grey': // SHIT ASS
 				curStage = 'grey';
@@ -2358,6 +2365,7 @@ class PlayState extends MusicBeatState
 				add(windowlights);
 				add(leftblades);
 				add(rightblades);
+				add(ROZEBUD_ILOVEROZEBUD_HEISAWESOME);
 				add(dadGhost);
 				add(dadGroup);
 				add(momGhost);
@@ -2372,13 +2380,21 @@ class PlayState extends MusicBeatState
 				montymole.active = true;
 				add(montymole);
 				
-				var torlight:FlxSprite = new FlxSprite(-646.8, -480.45).loadGraphic(Paths.image('torture_overlay'));
+				torlight = new FlxSprite(-410, -480.45).loadGraphic(Paths.image('torture_glow'));
+				torlight.antialiasing = true;
+				torlight.scrollFactor.set(1.3, 1.3);
+				torlight.active = false;
+				torlight.alpha = 0.25;
+				torlight.blend = ADD;
+				add(torlight);
+
+				/*var torGlow:FlxSprite = new FlxSprite(-646.8, -480.45).loadGraphic(Paths.image('torture_overlay'));
 				torlight.antialiasing = true;
 				torlight.scrollFactor.set(1.6, 1.6);
 				torlight.active = false;
 				torlight.alpha = 0.16;
 				torlight.blend = ADD;
-				add(torlight);
+				add(torlight);*/
 
 			case 'turbulence':
 
@@ -7568,6 +7584,23 @@ class PlayState extends MusicBeatState
 				{
 					leftblades.animation.play('spin', true);
 					rightblades.animation.play('spin', true);
+				}
+
+				if(curBeat == 256){
+					camZooming = false;
+					cameraLocked = true;
+
+					ROZEBUD_ILOVEROZEBUD_HEISAWESOME.visible = true;
+					ROZEBUD_ILOVEROZEBUD_HEISAWESOME.animation.play("thing");
+					ROZEBUD_ILOVEROZEBUD_HEISAWESOME.animation.finishCallback = function(name){
+						ROZEBUD_ILOVEROZEBUD_HEISAWESOME.destroy();
+					}
+					FlxTween.tween(camGame.camera, {zoom: defaultCamZoom - 0.5}, 4*Conductor.crochet/1000, {ease: FlxEase.quintOut});
+					//defaultCamZoom -= 0.3;
+				}
+				if(curBeat == 271){
+					camZooming = true;
+					cameraLocked = false;
 				}
 	
 			case 'victory':

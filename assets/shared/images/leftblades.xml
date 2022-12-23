@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="leftblades.png">
-	<!-- Created with Adobe Animate version 21.0.3.38773 -->
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="blad0000" x="0" y="0" width="269" height="353"/>
-	<SubTexture name="blad0001" x="278" y="0" width="269" height="353"/>
-	<SubTexture name="blad0002" x="556" y="0" width="269" height="353"/>
-	<SubTexture name="blad0003" x="834" y="0" width="269" height="353"/>
-	<SubTexture name="blad0004" x="1112" y="0" width="269" height="353"/>
-	<SubTexture name="blad0005" x="1390" y="0" width="269" height="353"/>
-	<SubTexture name="blad0006" x="1668" y="0" width="269" height="353"/>
-	<SubTexture name="blad0007" x="0" y="362" width="269" height="353"/>
+	<SubTexture name="blad instance 10000" x="264" y="1373" width="252" height="452" frameX="-2" frameY="-2" frameWidth="269" frameHeight="460"/>
+	<SubTexture name="blad instance 10001" x="273" y="2" width="260" height="439" frameX="-2" frameY="-2" frameWidth="269" frameHeight="460"/>
+	<SubTexture name="blad instance 10002" x="2" y="2" width="269" height="455" frameX="0" frameY="0" frameWidth="269" frameHeight="460"/>
+	<SubTexture name="blad instance 10003" x="2" y="918" width="257" height="451" frameX="0" frameY="0" frameWidth="269" frameHeight="460"/>
+	<SubTexture name="blad instance 10004" x="269" y="459" width="252" height="454" frameX="-6" frameY="-6" frameWidth="269" frameHeight="460"/>
+	<SubTexture name="blad instance 10005" x="2" y="1371" width="260" height="441" frameX="-6" frameY="-6" frameWidth="269" frameHeight="460"/>
+	<SubTexture name="blad instance 10006" x="2" y="459" width="265" height="457" frameX="-4" frameY="-2" frameWidth="269" frameHeight="460"/>
+	<SubTexture name="blad instance 10007" x="264" y="918" width="253" height="453" frameX="-4" frameY="-2" frameWidth="269" frameHeight="460"/>
 </TextureAtlas>
