@@ -874,7 +874,7 @@ class AmongStoryMenuState extends MusicBeatState
 			bullShit++;
 		}
 
-		new FlxTimer().start(0.5, function(tmr:FlxTimer)
+		new FlxTimer().start(0.08, function(tmr:FlxTimer)
 		{
 			canMove = true;
 		});
@@ -946,13 +946,5 @@ class AmongStoryMenuState extends MusicBeatState
 	function shipAddOffset(name:String, x:Float = 0, y:Float = 0)
 	{
 		shipAnimOffsets[name] = [x, y];
-	}
-
-	function startMove()
-	{
-		new FlxTimer().start(0.5, function(tmr:FlxTimer)
-		{
-			canMove = true;
-		});
 	}
 }

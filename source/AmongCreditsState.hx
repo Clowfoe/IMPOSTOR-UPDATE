@@ -21,6 +21,7 @@ class AmongCreditsState extends MusicBeatState
         ['keoni',				'keoni',			"keoni",	'https://twitter.com/emihead'],
         ['emihead',				'emihead',			"im emihead i made tomonjus tuesday and the credits song also i am canonically the black impostor's lover so please draw us making out and tag me on twitter @ emihead",	'https://twitter.com/emihead'],
 		['Keegan',		'keegan',	"Hey Gamers, I'm Keegan, I made Turbulence and all the midi sections of Room Code.\nI like ENA and I draw occasionally you should follow me @__Keegan_",		'https://twitter.com/polybiusproxy'],
+		['Rozebud',		'rozebud',	"Download Bunker Bumrush.\nPlay my new game Bunker Bumrush.",		'https://twitter.com/helpme_thebigt'],
 
         //artists
         ['loggo',			'lojo',			'halloween',				'https://twitter.com/gedehari'],   
@@ -56,6 +57,7 @@ class AmongCreditsState extends MusicBeatState
     var portrait:FlxSprite;
 
     var mole:FlxSprite; //hey pip :]
+    var baritone:FlxSprite; //hey pip again :]
 
     override public function create()
     {
@@ -75,6 +77,7 @@ class AmongCreditsState extends MusicBeatState
 
         dumnote = new FlxSprite(0, 30).loadGraphic(Paths.image('credits/stickynote', 'impostor'));
 		dumnote.antialiasing = true;
+		dumnote.scale.set(1.2, 1.2);
 		add(dumnote);
 
         lamp = new FlxSprite(0, -50).loadGraphic(Paths.image('credits/lamp', 'impostor'));
@@ -112,6 +115,10 @@ class AmongCreditsState extends MusicBeatState
 		nameText.angle = -12;
         nameText.updateHitbox();
         add(nameText);
+
+        baritone = new FlxSprite(602, 613).loadGraphic(Paths.image('credits/baritoneAd', 'impostor'));
+		baritone.antialiasing = false;
+        add(baritone);
         
         updateDescription();
     }
@@ -120,14 +127,11 @@ class AmongCreditsState extends MusicBeatState
     {
         super.update(elapsed);
 
-        if (amongCreditsStuff[curDesc][1] == 'pip')
-        {
-            mole.alpha = 1;
-        }
-        else
-        {
-            mole.alpha = 0;
-        }
+        if (amongCreditsStuff[curDesc][1] == 'pip'){ mole.visible = true; }
+        else{ mole.visible = false; }
+
+        if (amongCreditsStuff[curDesc][1] == 'rozebud'){ baritone.visible = true; }
+        else{ baritone.visible = false; }
      
 		var leftP = controls.UI_LEFT_P;
 		var rightP = controls.UI_RIGHT_P;
@@ -179,6 +183,6 @@ class AmongCreditsState extends MusicBeatState
         portrait.loadGraphic(Paths.image('credits/portraits/' + amongCreditsStuff[curDesc][1], 'impostor'));
         portrait.x = ((FlxG.width / 2) - (portrait.width / 2));
         frame.x = portrait.x - 55;
-        dumnote.x = frame.x + 540;
+        dumnote.x = frame.x + 560;
     }
 }
