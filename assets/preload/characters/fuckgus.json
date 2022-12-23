@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				54,
+				29
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				95,
+				69
+			],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				56
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				-11,
+				56
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "DANCERIGHT"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				130,
+				54
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				39,
+				54
+			],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				109,
+				66
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "FUCK",
+			"indices": [],
+			"name": "FUUUUCK"
+		},
+		{
+			"offsets": [
+				-21,
+				57
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "FUCKlooper",
+			"indices": [],
+			"name": "Ye"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/REAL_FUCKMUNGUS",
+	"position": [
+		144,
+		436
+	],
+	"healthicon": "redmungus",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		40,
+		40
+	],
+	"camera_position": [
+		-270,
+		10
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

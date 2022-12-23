@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				90,
+				47,
 				50
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 12,
-			"name": "right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				50,
 				50
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 12,
-			"name": "idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				19,
+				111,
 				50
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 12,
-			"name": "left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				41,
+				87,
 				22
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 12,
-			"name": "down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				72,
-				70
+				50,
+				67
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 12,
-			"name": "up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
 		}
 	],
 	"no_antialiasing": false,
@@ -63,7 +63,7 @@
 		430
 	],
 	"healthicon": "redmungus",
-	"flip_x": true,
+	"flip_x": false,
 	"healthbar_colors": [
 		255,
 		40,

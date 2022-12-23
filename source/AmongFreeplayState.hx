@@ -175,6 +175,7 @@ class AmongFreeplayState extends MusicBeatState
 		portrait.animation.addByIndices('dave', 'Character', [35], null, 24, true);
 		portrait.animation.addByIndices('bpmar', 'Character', [36], null, 24, true);
 		portrait.animation.addByIndices('grinch', 'Character', [37], null, 24, true);
+		portrait.animation.addByIndices('redmunp', 'Character', [38], null, 24, true);
 		portrait.animation.play('red');
 		portrait.antialiasing = true;
 		portrait.setPosition(304.65, -100);
@@ -475,9 +476,9 @@ class AmongFreeplayState extends MusicBeatState
 		weeks.push({
 			songs: [
 				["Lotowncorry", "jorsawsee", 'jorsawsee', FlxColor.fromRGB(22, 65, 240)],
-				["O2", "o2", 'jorsawsee', FlxColor.fromRGB(22, 65, 240)],
+				["O2", "o2", 'redmungus', FlxColor.RED],
 				["Voting Time", "votingtime", 'warchief', FlxColor.fromRGB(153, 67, 196)],
-				["Turbulence", "redmungus", 'redmungus', FlxColor.RED],
+				["Turbulence", "redmungus", 'redmunp', FlxColor.RED],
 				["Victory", "warchief", 'warchief', FlxColor.fromRGB(153, 67, 196)]
 			],
 
@@ -548,8 +549,7 @@ class AmongFreeplayState extends MusicBeatState
 				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK],
 				["Drippypop", "drippy", 'pop', FlxColor.fromRGB(188, 106, 223)],
 				["Crewicide", "dave", 'dave', FlxColor.BLUE],
-				["Triple Trouble", "placeholder", 'red', FlxColor.fromRGB(84, 167, 202)],
-				["Monochrome", "dead", 'red', FlxColor.fromRGB(84, 167, 202)],
+				["Monotone Attack", "attack", 'red', FlxColor.fromRGB(84, 167, 202)],
 				["Top 10", "top", 'top', FlxColor.RED]
 			],
 

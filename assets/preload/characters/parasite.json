@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"offsets": [
+				322,
+				140
+			],
 			"loop": true,
-			"offsets": [
-				442,
-				150
-			],
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "mungus idle instance 1",
-			"indices": []
+			"indices": [],
+			"name": "idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				423,
-				109
+				67,
+				-1
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "parasite right new instance 1",
-			"indices": []
+			"indices": [],
+			"name": "right"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				404,
-				-97
+				187,
+				-110
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "paracite down instance 1",
-			"indices": []
+			"indices": [],
+			"name": "down"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				592,
-				269
+				412,
+				29
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "parasite left instance 1",
-			"indices": []
+			"indices": [],
+			"name": "left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				381,
-				741
+				171,
+				191
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "parashite up instance 1",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
 		}
 	],
 	"no_antialiasing": false,
@@ -74,5 +74,5 @@
 		-490
 	],
 	"sing_duration": 6.1,
-	"scale": 1.6
+	"scale": 2
 }
