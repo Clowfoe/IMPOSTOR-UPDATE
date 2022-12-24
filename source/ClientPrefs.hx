@@ -26,7 +26,8 @@ class ClientPrefs {
 	public static var ghostTapping:Bool = true;
 	public static var hideTime:Bool = false;
 
-	public static var charOverride:String = '';
+	public static var charOverrides:Array<String> = ['', '', ''];
+	public static var beans:Int = 0;
 	public static var boughtArray:Array<Bool> = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 	// should be enough if u add more stuff fuck you >:(
 		
@@ -78,8 +79,9 @@ class ClientPrefs {
 	public static var defaultKeys:Map<String, Array<FlxKey>> = null;
 
 	public static function saveSettings() {
-		FlxG.save.data.charOverride = charOverride;
+		FlxG.save.data.charOverrides = charOverrides;
 		FlxG.save.data.boughtArray = boughtArray;
+		FlxG.save.data.beans = beans;
 
 		FlxG.save.data.downScroll = downScroll;
 		FlxG.save.data.middleScroll = middleScroll;
@@ -117,11 +119,14 @@ class ClientPrefs {
 	}
 
 	public static function loadPrefs() {
-		if(FlxG.save.data.charOverride != null) {
-			charOverride = FlxG.save.data.charOverride;
+		if(FlxG.save.data.charOverrides != null) {
+			charOverrides = FlxG.save.data.charOverrides;
 		}
 		if(FlxG.save.data.boughtArray != null){
 			boughtArray = FlxG.save.data.boughtArray;
+		}
+		if(FlxG.save.data.beans != null){
+			beans = FlxG.save.data.beans;
 		}
 
 		if(FlxG.save.data.downScroll != null) {

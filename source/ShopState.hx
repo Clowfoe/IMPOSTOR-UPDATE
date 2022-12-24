@@ -23,8 +23,21 @@ import flixel.input.mouse.FlxMouseEventManager;
 
 using StringTools;
 
+enum RequirementType{
+    PERCENT95;
+    COMPLETED;
+}
+
+enum SkinType{
+    BF;
+    GF;
+    PET;
+}
+
 class ShopState extends MusicBeatState
 {
+    var buttonTween:FlxTween;
+    var textTween:FlxTween;
     
     var charList:Array<String> = ['none','amongbf','redp','greenp', 'blackp','bfairship', 'bfg', 'bfmira', 'bfpolus', 'bfsauce', 'dripbf', 'picolobby']; // STOP ADDING TO THIS LIST IM TRYNA GETSHIT WORKING
     var curSelected:Int = 0;
@@ -48,6 +61,7 @@ class ShopState extends MusicBeatState
     public var camGame:FlxCamera;
     public var camUpper:FlxCamera;
     public var camOther:FlxCamera;
+    public var camStars:FlxCamera;
 
     var offset:Float = 250;
     var offset2:Float = 112;
@@ -68,20 +82,19 @@ class ShopState extends MusicBeatState
     var equipText:FlxText;
 
     var charName:FlxText;
+    var charDesc:FlxText;
 
-    var starsBG:FlxBackdrop;
-    var starsFG:FlxBackdrop;
+    var starsBG:Haxe5Backdrop;
+    var starsFG:Haxe5Backdrop;
 
     var upperBar:FlxSprite;
     var crossImage:FlxSprite;
 
     // top bar
 
-    var cosmicubeButton:FlxSprite;
-    var petsButton:FlxSprite;
-    var skinsButton:FlxSprite;
-
     var _state:String;
+
+    var localBeans:Int;
 
     /*
         DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS 
@@ -108,34 +121,58 @@ class ShopState extends MusicBeatState
 
         - TODO: expand on this menu with more tabs and shit but ehhhhhh im bored lol ill do it later
         jus saving this here to remember
+
+
+        okay more shit
+
+        OH AND THE CHARACTER TYPE           \/ - right here
+        next four are the name, description, nd the requirements, then if its secret and if it is then u get a description to cover the real one
     */
     var nodeData:Array<Dynamic> = [
-        ['bottom', 'root', 'redp', 125, false],
-        ['right', 'redp', 'greenp', 250, false],
-        ['left', 'redp', 'amongbf', 400, false],
-        ['right', 'greenp', 'blackp', 450, false],
-        ['bottom', 'redp', 'bfg', 200, false],
-        ['right', 'bfg', 'ghostgf', 450, false],
-        ['top', 'root', 'bfpolus', 175, false],
-        ['right', 'root', 'dripbf', 225, false],
-        ['right', 'bfpolus', 'bfmira', 225, false],
-        ['left', 'bfpolus', 'bfairship', 200, false],
-        ['right', 'bfmira', 'gfmira', 250, false],
-        ['top', 'bfmira', 'bfsauce', 250, false],
-        ['left', 'root', 'bf', 0, true],
-        ['left', 'bf', 'stick-bf', 375, false]
+        ['bottom', 'root', 'redp', 125, false, 'Red', 'Unlocked by completing the first week.', BF, COMPLETED, ['sussus-moogus', 'sabotage', 'meltdown']],
+        ['right', 'redp', 'greenp', 250, false, 'Green', 'Unlocked by completing the second week.', BF, COMPLETED, ['sussus-toogus', 'lights-down', 'ejected']],
+        ['right', 'greenp', 'blackp', 450, false, 'Black', "Unlocked by completing the black week", BF, COMPLETED, ['defeat', 'ominous', 'finale'], true, "It's a secret!"],
+        ['top', 'blackp', 'amongbf', 400, false, 'Crewmate', "Unlocked by completing all of the main story's songs.", BF, COMPLETED, ['sussus-moogus', 'sabotage', 'meltdown', 'sussus-toogus', 'lights-down', 'ejected', 'mando', 'dlow', 'oversight', 'danger', 'double-kill']],
+        ['bottom', 'redp', 'bfg', 200, false, 'Ghost BF', "Unlocked by achieving an accuracy higher than 95% on all of the first week's songs.", BF, PERCENT95, ['sussus-moogus', 'sabotage', 'meltdown']],
+        ['right', 'bfg', 'ghostgf', 450, false, 'Ghost GF', "Unlocked by achieving an accuracy higher than 95% on all of the first week's songs.", GF, PERCENT95, ['sussus-moogus', 'sabotage', 'meltdown']],
+        ['top', 'root', 'bfpolus', 175, false, 'Polus BF', 'Unlocked by completing the fifth week.', BF, COMPLETED, ['magmatic', 'ashes', 'boiling-point']],
+        ['right', 'root', 'dripbf', 225, false, 'Drippypop BF', 'Unlocked by achieving an accuracy higher than 95% on Drippypop.', BF, PERCENT95, ['drippypop']],
+        ['right', 'bfpolus', 'bfmira', 225, false, 'Mira BF', 'Unlocked by completing the sixth week.', BF, COMPLETED, ['heartbeat', 'pinkwave', 'pretender']],
+        ['left', 'bfpolus', 'bfairship', 200, false, 'Airship BF', 'Unlocked by completing the seventh week.', COMPLETED, BF, ['delusion', 'blackout', 'neurotic']],
+        ['right', 'bfmira', 'gfmira', 250, false, 'Mira GF', 'Unlocked by completing the sixth week.', GF, COMPLETED, ['heartbeat', 'pinkwave', 'pretender']],
+        ['top', 'bfmira', 'bfsauce', 250, false, 'Chef BF', 'Unlocked by achieving an accuracy higher than 95% on Sauces Moogus.', BF, PERCENT95, ['sauces-moogus']],
+        ['left', 'root', 'bf', 0, true, 'BF', "The default Boyfriend skin. Just in case you're not feeling the new looks.", BF],
+        ['left', 'bf', 'gf', 0, true, 'GF', "The default Girlfriend skin. Just in case you're not feeling the new looks.", GF],
+
+        ['top', 'bfpolus', 'snowball', 300, false, 'Snowball', "pet", PET],
+        ['right', 'bfsauce', 'ham', 300, false, 'Hammy', "pet", PET],
+
+        ['bottom', 'bfg', 'dog', 300, false, 'Doggy', "pet", PET],
+        ['bottom', 'ghostgf', 'frankendog', 300, false, 'Frankendog', "pet", PET],
+
+        ['left', 'redp', 'minicrewmate', 300, false, 'Crewmate', "pet", PET],
+        ['left', 'minicrewmate', 'tomong', 300, false, 'Tomongus', "pet", PET],
+
+        ['top', 'bfairship', 'crab', 300, false, 'Bedcrab', "pet", PET],
+        ['left', 'crab', 'ufo', 300, false, 'UFO', "pet", PET],
+
+        
+        ['left', 'gf', 'stick-bf', 375, false, 'Stickmin BF', "Unlocked by completing Henry's week.", BF, COMPLETED, ['titular', 'reinforcements', 'greatest-plan', 'armed'], true, "Someone told me about some broken old device lying around the airship and i dont think anyones cleaned it up yet.\nMight wanna check that out sometime."],
+
+        ['top', 'stick-bf', 'stickmin', 300, false, 'H. Stickmin', "pet", PET],
+        ['left', 'stickmin', 'elliepet', 300, false, 'E. Rose', "pet", PET]
     ];
+
     var root:ShopNode;
 
     override function create()
 	{
 		super.create();
 
-        // TODO: FIX THIS SHITTY ASS LOADING SYSTEM
-        // its really janky and not a good way of loading it but im tired idgaf
         for(i in 0... nodeData.length){
             nodeData[i][4] = ClientPrefs.boughtArray[i];
         }
+        localBeans = ClientPrefs.beans;
 
         persistentUpdate = true;
         FlxG.mouse.visible = true;
@@ -167,17 +204,20 @@ class ShopState extends MusicBeatState
 		camFollowPos = new FlxObject(0, 0, 1, 1);
 
         FlxG.camera.follow(camFollowPos, null, 2);
+        //camStars.follow(camFollowPos, null, 2);
 
-        starsBG = new FlxBackdrop(Paths.image('shop/starBG', 'impostor'), 0.3, 0.3, true, true);
+        starsBG = new Haxe5Backdrop(Paths.image('shop/starBG', 'impostor'), XY, 0, 0);
         starsBG.antialiasing = true;
         starsBG.updateHitbox();
-       // starsBG.scrollFactor.set(0.3, 0.3);
+        //starsBG.cameras = [camStars];
+        starsBG.scrollFactor.set(0.3, 0.3);
         add(starsBG);
         
-        starsFG = new FlxBackdrop(Paths.image('shop/starFG', 'impostor'), 0.5, 0.5, true, true);
+        starsFG = new Haxe5Backdrop(Paths.image('shop/starFG', 'impostor'), XY, 0, 0);
         starsFG.updateHitbox();
         starsFG.antialiasing = true;
-       // starsFG.scrollFactor.set(0.5, 0.5);
+        //starsFG.cameras = [camStars];
+        starsFG.scrollFactor.set(0.5, 0.5);
         add(starsFG);
 
 
@@ -192,12 +232,12 @@ class ShopState extends MusicBeatState
         add(overlays);
         add(texts);
 
-        root = new ShopNode('root', FlxColor.RED, null, null, 0, true);
+        root = new ShopNode('root', 'root', 'description', FlxColor.RED, BF, null, null, 0, true);
         nodes.add(root);
         trace('root name is ' + root.name);
 
         for(i in 0... nodeData.length){
-            var node:ShopNode = new ShopNode(nodeData[i][2], FlxColor.ORANGE, nodeData[i][1], nodeData[i][0], nodeData[i][3], nodeData[i][4]);
+            var node:ShopNode = new ShopNode(nodeData[i][2], nodeData[i][5], nodeData[i][6], FlxColor.ORANGE, nodeData[i][7], nodeData[i][1], nodeData[i][0], nodeData[i][3], nodeData[i][4]);
             node.ID = i;
             connectors.add(node.connector);
             outlines.add(node.outline);
@@ -206,6 +246,12 @@ class ShopState extends MusicBeatState
             portraits.add(node.portrait);
             overlays.add(node.overlay);
             texts.add(node.text);
+
+            node.setUnlockState(nodeData[i][8], nodeData[i][9]);
+
+            if(nodeData[i][10] == true){
+                node.updateSecret(nodeData[i][11]);
+            }
         }
 
         arrangeNodes();
@@ -221,6 +267,7 @@ class ShopState extends MusicBeatState
 		equipbutton.animation.addByPrefix('buy', 'buy', 0, false);
         equipbutton.animation.addByPrefix('equipped', 'equipped', 0, false);
         equipbutton.animation.addByPrefix('grey', 'grey', 0, false);
+        equipbutton.animation.addByPrefix('locked', 'locked', 0, false);
 		equipbutton.animation.play('buy');
 		equipbutton.antialiasing = true;
         equipbutton.scale.set(0.8, 0.8);
@@ -247,6 +294,15 @@ class ShopState extends MusicBeatState
         charName.cameras = [camUpper];
         add(charName);
 
+        charDesc = new FlxText(0, 0, panel.width, 'this is a test', 20);
+		charDesc.setFormat(Paths.font("ariblk.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        charDesc.updateHitbox();
+		charDesc.borderSize = 1;
+        charDesc.scrollFactor.set();
+        charDesc.antialiasing = true;
+        charDesc.cameras = [camUpper];
+        add(charDesc);
+
         upperBar = new FlxSprite(-2, -1.4).loadGraphic(Paths.image('freeplay/topBar', 'impostor'));
 		upperBar.antialiasing = true;
 		upperBar.updateHitbox();
@@ -265,52 +321,13 @@ class ShopState extends MusicBeatState
 			goBack();
 		}, null, null);
 
-        cosmicubeButton = new FlxSprite(0, 8.05).loadGraphic(Paths.image('shop/icons/cosmicube', 'impostor'));
-		cosmicubeButton.antialiasing = true;
-		cosmicubeButton.scrollFactor.set();
-		cosmicubeButton.updateHitbox();
-        cosmicubeButton.screenCenter(X);
-        cosmicubeButton.x += 100;
-		cosmicubeButton.cameras = [camUpper];
-		add(cosmicubeButton);
-        FlxMouseEventManager.add(cosmicubeButton, function onMouseDown(s:FlxSprite)
-		{
-			changeFocus('cosmicube');
-		}, null, null);
-
-        petsButton = new FlxSprite(0, 8.05).loadGraphic(Paths.image('shop/icons/pets', 'impostor'));
-		petsButton.antialiasing = true;
-		petsButton.scrollFactor.set();
-		petsButton.updateHitbox();
-        petsButton.screenCenter(X);
-		petsButton.cameras = [camUpper];
-		add(petsButton);
-        FlxMouseEventManager.add(petsButton, function onMouseDown(s:FlxSprite)
-		{
-			changeFocus('inventory', 'pets');
-		}, null, null);
-
-        skinsButton = new FlxSprite(0, 8.05).loadGraphic(Paths.image('shop/icons/skins', 'impostor'));
-		skinsButton.antialiasing = true;
-		skinsButton.scrollFactor.set();
-		skinsButton.updateHitbox();
-        skinsButton.screenCenter(X);
-        skinsButton.x -= 100;
-		skinsButton.cameras = [camUpper];
-		add(skinsButton);
-        FlxMouseEventManager.add(skinsButton, function onMouseDown(s:FlxSprite)
-        {
-            changeFocus('inventory', 'skins');
-        }, null, null);
-    
-
 		topBean = new FlxSprite(30, 100).loadGraphic(Paths.image('shop/bean', 'impostor'));
         topBean.antialiasing = true;
         topBean.cameras = [camUpper];
         topBean.updateHitbox();
 		add(topBean);	
 
-        beanText = new FlxText(110, 105, 200, '18381', 35);
+        beanText = new FlxText(110, 105, 200, '---', 35);
 		beanText.setFormat(Paths.font("ariblk.ttf"), 35, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         beanText.updateHitbox();
 		beanText.borderSize = 3;
@@ -319,46 +336,8 @@ class ShopState extends MusicBeatState
         beanText.cameras = [camUpper];
         add(beanText);
 
-        changeFocus('inventory', 'skins');
-    }
+        beanText.text = Std.string(localBeans);
 
-    function changeFocus(_destination:String, ?_category:String){
-        switch(_destination){
-            case 'cosmicube':
-                _state = 'cosmicube';
-                connectors.visible = true;
-                outlines.visible = true;
-                nodes.visible = true;
-                icons.visible = true;
-                portraits.visible = true;
-                overlays.visible = true;
-                texts.visible = true;
-
-                connectors.active = true;
-                outlines.active = true;
-                nodes.active = true;
-                icons.active = true;
-                portraits.active = true;
-                overlays.active = true;
-                texts.active = true;
-            case 'inventory':
-                _state = 'inventory';
-                connectors.visible = false;
-                outlines.visible = false;
-                nodes.visible = false;
-                icons.visible = false;
-                portraits.visible = false;
-                overlays.visible = false;
-                texts.visible = false;
-
-                connectors.active = false;
-                outlines.active = false;
-                nodes.active = false;
-                icons.active = false;
-                portraits.active = false;
-                overlays.active = false;
-                texts.active = false;
-        }
     }
 
     function arrangeNodes(){
@@ -413,11 +392,19 @@ class ShopState extends MusicBeatState
                     node.portrait.color = 0xFF000000;
                     node.icon.visible = false;
                     node.text.visible = false;
+                    node.visibleName = '???';
                 }
             }
 
             if(node.bought){
                 node.text.visible = false;
+            }
+
+            if(node.gotRequirements == false){
+                node.portrait.color = 0xFF000000;
+                node.icon.visible = false;
+                node.text.visible = false;
+                node.visibleName = '???';
             }
         });
     }
@@ -461,6 +448,8 @@ class ShopState extends MusicBeatState
 
     function updateButton(?node:ShopNode = null){
         if(node != null){
+            var connectedBought:Bool = true;
+            connectedBought = checkPurchased(node.connection);
             if(!node.bought){
                 equipbutton.animation.play('buy');
                 equipText.text = 'BUY X' + node.price;
@@ -468,9 +457,13 @@ class ShopState extends MusicBeatState
                 equipbutton.animation.play('equipped');
                 equipText.text = 'EQUIP';
             }
-            if(node.name == ClientPrefs.charOverride){
+            if(node.name == ClientPrefs.charOverrides[0] || node.name == ClientPrefs.charOverrides[1] || node.name == ClientPrefs.charOverrides[2]){
                 equipbutton.animation.play('grey');
                 equipText.text = 'EQUIPPED';
+            }
+            if(!node.gotRequirements || !connectedBought){
+                equipbutton.animation.play('locked');
+                equipText.text = 'LOCKED';
             }
         }
     }
@@ -480,24 +473,35 @@ class ShopState extends MusicBeatState
         FlxG.sound.play(Paths.sound('pop', 'impostor'), 0.9);
         focusedNode = node;
         updateButton(node);
-        charName.text = node.name;
+        charName.text = node.visibleName;
+        charDesc.text = node.description;
+        if(node.secret && !node.gotRequirements) charDesc.text = node.secretDesc;
         showPanel();
     }
 
     function buyNode(node:ShopNode){
         node.bought = true;
+        localBeans -= node.price;
         updateButton(node);
         updateNodeVisibility();
+
+        beanText.text = Std.string(localBeans);
     }
 
-    /*
     function equipNode(node:ShopNode){
-        ClientPrefs.charOverride = node.name;
-        equipThing.animation.play('check');
+        switch(node.skinType){
+            case BF:
+                ClientPrefs.charOverrides[0] = node.name;
+            case GF:
+                ClientPrefs.charOverrides[1] = node.name;
+            case PET:
+                ClientPrefs.charOverrides[2] = node.name;
+        }
+        // equipThing.animation.play('check');
         updateButton(node);
         ClientPrefs.saveSettings();
         updateNodeVisibility();
-    }*/
+    }
 
     function unfocusNode(node:ShopNode){
         isFocused = false;
@@ -527,85 +531,128 @@ class ShopState extends MusicBeatState
         var accepted = controls.ACCEPT;
         var space = FlxG.keys.justPressed.SPACE;
 
-        switch(_state){
-            case 'cosmicube':
-                equipbutton.setPosition(panel.getGraphicMidpoint().x - (equipbutton.width / 2), FlxG.height * 0.75);
-                equipText.setPosition(panel.getGraphicMidpoint().x - (equipText.width / 2), FlxG.height * 0.785);
-                charName.setPosition(panel.getGraphicMidpoint().x - (charName.width / 2), FlxG.height * 0.1);
+        equipbutton.setPosition(panel.getGraphicMidpoint().x - (equipbutton.width / 2), FlxG.height * 0.75);
+        equipText.setPosition(panel.getGraphicMidpoint().x - (equipText.width / 2), FlxG.height * 0.785);
+        charName.setPosition(panel.getGraphicMidpoint().x - (charName.width / 2), FlxG.height * 0.15);
+        charDesc.setPosition(panel.getGraphicMidpoint().x - (charDesc.width / 2), FlxG.height * 0.39);
 
-                starsBG.x = FlxMath.lerp(starsBG.x, starsBG.x - 0.5, CoolUtil.boundTo(elapsed * 9, 0, 1));
-                starsFG.x = FlxMath.lerp(starsFG.x, starsFG.x - 1, CoolUtil.boundTo(elapsed * 9, 0, 1));
+        starsBG.x = FlxMath.lerp(starsBG.x, starsBG.x - 0.5, CoolUtil.boundTo(elapsed * 9, 0, 1));
+        starsFG.x = FlxMath.lerp(starsFG.x, starsFG.x - 1, CoolUtil.boundTo(elapsed * 9, 0, 1));
         
-                //trace(FlxG.camera.zoom);
-                nodes.forEach(function(node:ShopNode) {
-                    if (FlxG.mouse.overlaps(node) && FlxG.mouse.justPressed && node.name != 'root' && !FlxG.mouse.overlaps(equipbutton))
-                    {
-                        canUnfocus = false;
-                        focusNode(node);
-                        new FlxTimer().start(0.5, function(tmr:FlxTimer) {
-                            canUnfocus = true;
-                        });
-                        focusTarget.x = (node.x + (node.width / 2)) + (FlxG.width * 0.18);
-                        focusTarget.y = node.y + (node.height / 2);
-                    }
+        //trace(FlxG.camera.zoom);
+        nodes.forEach(function(node:ShopNode) {
+            if (FlxG.mouse.overlaps(node) && FlxG.mouse.justPressed && node.name != 'root' && !FlxG.mouse.overlaps(equipbutton))
+            {
+                canUnfocus = false;
+                focusNode(node);
+                new FlxTimer().start(0.5, function(tmr:FlxTimer) {
+                    canUnfocus = true;
                 });
+                focusTarget.x = (node.x + (node.width / 2)) + (FlxG.width * 0.18);
+                focusTarget.y = node.y + (node.height / 2);
+            }
+        });
 
-                if (FlxG.mouse.overlaps(equipbutton) && FlxG.mouse.justPressed)
-                {
-                    if(!focusedNode.bought){
-                        buyNode(focusedNode);
-                    }else{
-                     /*
-                        equipNode(focusedNode);
-                        */
-                    }
-                }
+        if (FlxG.mouse.overlaps(equipbutton) && FlxG.mouse.justPressed)
+        {
+            var pulseColor:FlxColor;
 
-                if (FlxG.sound.music.volume < 0.7)
-                {
-                    FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
-                }
-        
-                if(!isFocused){
-                    if(FlxG.mouse.justPressed){ // convoluted but working way of clicking and dragging
-                        handleCamPress();
-                }
-    
-                if(FlxG.mouse.pressed){
-                    handleCamDrag();
-                }
+            var connectedBought:Bool = true;
 
-                if (FlxG.mouse.wheel != 0)
-                {
-                    FlxG.camera.zoom += ((FlxG.mouse.wheel / 10) * FlxG.camera.zoom);
-                }
+            if(focusedNode.connection != null || focusedNode.connection != 'root'){
+                connectedBought = checkPurchased(focusedNode.connection);
+                trace(connectedBought, focusedNode.connection);
+            }
+
+            if(!focusedNode.bought && focusedNode.gotRequirements && localBeans >= focusedNode.price && connectedBought){
+                buyNode(focusedNode);
+                FlxG.sound.play(Paths.sound('shopbuy', 'impostor'), 1);
+                pulseColor = 0xFF30FF86;
+                //FlxG.sound.play(Paths.sound('pop', 'impostor'), 0.9);
+            }else if(!focusedNode.bought && focusedNode.gotRequirements && localBeans < focusedNode.price || !connectedBought){
+                FlxG.sound.play(Paths.sound('locked', 'impostor'), 1);
+                camUpper.shake(0.01, 0.35);
+                FlxG.camera.shake(0.005, 0.35);
+                pulseColor = 0xFFFF4444;
+            }else if(!focusedNode.gotRequirements){
+                FlxG.sound.play(Paths.sound('locked', 'impostor'), 1);
+                camUpper.shake(0.01, 0.35);
+                FlxG.camera.shake(0.005, 0.35);
+                pulseColor = 0xFFFF4444;
+            }else{
+                equipNode(focusedNode);
+                if(focusedNode.skinType == PET){
+                    FlxG.sound.play(Paths.sound('equippet', 'impostor'), 1);
                 }else{
-                    if(canUnfocus && FlxG.mouse.screenX < FlxG.width * 0.6){
-                        if(FlxG.mouse.justPressed || FlxG.mouse.wheel != 0){
-                            isFocused = false;
-                            canUnfocus = false;
-                            hidePanel();
-                            handleCamPress();
-                        }
-                    }
-                    var lerpVal:Float = CoolUtil.boundTo(elapsed * 2.4 * 3, 0, 1);
-                    camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, focusTarget.x, lerpVal), FlxMath.lerp(camFollowPos.y, focusTarget.y, lerpVal));
-                    FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, lerpVal);
+                    FlxG.sound.play(Paths.sound('equip', 'impostor'), 1);
                 }
+                pulseColor = 0xFFFFA143;
+            }
 
-                if(FlxG.keys.justPressed.R){
-                    nodes.forEach(function(node:ShopNode) {
-                        node.bought = false;
-                    });
-                    updateNodeVisibility();
-                    ClientPrefs.saveSettings();
-                }
+            if(buttonTween != null) buttonTween.cancel();
+            buttonTween = FlxTween.color(equipbutton, 0.6, pulseColor, 0xFFFFFFFF, { ease: FlxEase.sineOut });
+            if(textTween != null) textTween.cancel();
+            textTween = FlxTween.color(equipText, 0.5, pulseColor, 0xFFFFFFFF, { ease: FlxEase.sineOut });
+        }
 
-                if(FlxG.keys.justPressed.B){
-                    add(new BeansPopup(500, camUpper));
-                    FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-                    trace('Giving beans');
+        if (FlxG.sound.music.volume < 0.3)
+        {
+            FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
+        }
+        if (FlxG.sound.music.volume > 0.3)
+        {
+            FlxG.sound.music.volume -= 0.5 * FlxG.elapsed;
+        }
+        
+        
+        if(!isFocused){
+            if(FlxG.mouse.justPressed){ // convoluted but working way of clicking and dragging
+                handleCamPress();
+        }
+    
+        if(FlxG.mouse.pressed){
+            handleCamDrag();
+        }
+
+        if (FlxG.mouse.wheel != 0)
+        {
+            FlxG.camera.zoom += ((FlxG.mouse.wheel / 10) * FlxG.camera.zoom);
+        }
+        }else{
+            if(canUnfocus && FlxG.mouse.screenX < FlxG.width * 0.6){
+                if(FlxG.mouse.justPressed || FlxG.mouse.wheel != 0){
+                    isFocused = false;
+                    canUnfocus = false;
+                    hidePanel();
+                    handleCamPress();
                 }
+            }
+            var lerpVal:Float = CoolUtil.boundTo(elapsed * 2.4 * 3, 0, 1);
+            camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, focusTarget.x, lerpVal), FlxMath.lerp(camFollowPos.y, focusTarget.y, lerpVal));
+            FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, lerpVal);
+        }
+
+        if(FlxG.keys.justPressed.R){
+            nodes.forEach(function(node:ShopNode) {
+                node.bought = false;
+            });
+            updateNodeVisibility();
+            ClientPrefs.saveSettings();
+        }
+
+        if(FlxG.keys.justPressed.B){
+            add(new BeansPopup(50, camUpper));
+            localBeans += 50;
+            beanText.text = Std.string(localBeans);
+            FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+            trace('Giving beans');
+        }
+        if(FlxG.keys.justPressed.N){
+            add(new BeansPopup(-10, camUpper));
+            localBeans -= 10;
+            beanText.text = Std.string(localBeans);
+            FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+            trace('Giving beans');
         }
 
         if (controls.BACK)
@@ -620,6 +667,7 @@ class ShopState extends MusicBeatState
         nodes.forEach(function(node:ShopNode) {
             ClientPrefs.boughtArray[node.ID] = node.bought;
         });
+        ClientPrefs.beans = localBeans;
 
         ClientPrefs.saveSettings();
         FlxG.sound.play(Paths.sound('cancelMenu'));
@@ -640,6 +688,8 @@ class BeansPopup extends FlxSpriteGroup {
 		super(x, y);
         this.y -= 100;
         lerpScore = amount;
+
+        ClientPrefs.beans += amount;
 
         var colorShader:ColorShader = new ColorShader(0);
 
@@ -675,6 +725,7 @@ class BeansPopup extends FlxSpriteGroup {
             canLerp = true;
             colorShader.amount = 1;
             FlxTween.tween(colorShader, {amount: 0}, 0.8, {ease: FlxEase.expoOut});
+            FlxG.sound.play(Paths.sound('getbeans', 'impostor'), 0.9);
         });
 
 		var cam:Array<FlxCamera> = FlxCamera.defaultCameras;
@@ -687,7 +738,7 @@ class BeansPopup extends FlxSpriteGroup {
 		popupBG.cameras = cam;
 		alphaTween = FlxTween.tween(this, {alpha: 1}, 0.5, {onComplete: function (twn:FlxTween) {
 			alphaTween = FlxTween.tween(this, {alpha: 0}, 0.5, {
-				startDelay: 1.8,
+				startDelay: 2.5,
 				onComplete: function(twn:FlxTween) {
 					alphaTween = null;
 					remove(this);
@@ -700,7 +751,7 @@ class BeansPopup extends FlxSpriteGroup {
     override function update(elapsed:Float){
         super.update(elapsed);
         if(canLerp){
-            lerpScore = Math.floor(FlxMath.lerp(lerpScore, 0, CoolUtil.boundTo(elapsed * 6, 0, 1)));
+            lerpScore = Math.floor(FlxMath.lerp(lerpScore, 0, CoolUtil.boundTo(elapsed * 4, 0, 1)/1.5));
             if(Math.abs(0 - lerpScore) < 10) lerpScore = 0;
         }
 

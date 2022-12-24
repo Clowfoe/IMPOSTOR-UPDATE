@@ -27,6 +27,8 @@ typedef SwagSong =
 	var fabs:String;
 	var stage:String;
 
+	//var blockSkins:Array<Bool>;
+
 	var arrowSkin:String;
 	var splashSkin:String;
 	var validScore:Bool;
@@ -48,6 +50,8 @@ class Song
 	public var player4:String = 'mom';
 	public var player3:String = 'gf';
 	public var fabs:String = 'fabs';
+
+	//public var blockSkins:Array<Bool> = [false, false, false];
 
 	public function new(song, notes, bpm)
 	{

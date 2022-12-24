@@ -16,7 +16,7 @@ class Highscore
 	public static var songRating:Map<String, Float> = new Map<String, Float>();
 	#end
 
-
+// jus adding this to keep you in my FUcking vscode tab
 	public static function resetSong(song:String, diff:Int = 0):Void
 	{
 		var daSong:String = formatSong(song, diff);

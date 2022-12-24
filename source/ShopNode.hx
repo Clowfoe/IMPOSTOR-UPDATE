@@ -2,12 +2,16 @@ import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.text.FlxText;
 import flixel.FlxSprite;
-import Character.CharacterFile;
 import openfl.utils.Assets;
 import haxe.Json;
 import haxe.format.JsonParser;
 using Character.CharacterFile;
 using StringTools;
+
+import ShopState.RequirementType;
+import ShopState.SkinType;
+
+import Pet.PetFile;
 
 class ShopNode extends FlxSprite
 {
@@ -24,21 +28,36 @@ class ShopNode extends FlxSprite
 
     public var name:String;
     public var charData:CharacterFile;
+    public var petData:PetFile;
+
+    public var gotRequirements:Bool = true;
+
+    public var visibleName:String;
+    public var description:String;
+
+    public var secret:Bool = false;
+    public var secretDesc:String = '';
+
+    public var skinType:SkinType = BF;
 
     // CONNECTIONS
     public var connectionDirection:String;
 
     public var connection:String;
 
-	public function new(_name:String, _color:FlxColor, ?_connection:String, ?_conDir:String, ?_price:Int, ?_bought:Bool)
+	public function new(_name:String, _visibleName:String, _description:String, _color:FlxColor, _skinType:SkinType, ?_connection:String, ?_conDir:String, ?_price:Int, ?_bought:Bool)
 	{
 		super(x, y);
 
         name = _name;
+        visibleName = _visibleName;
+        description = _description;
         connection = _connection;
         connectionDirection = _conDir;
         price = _price;
         bought = _bought;
+
+        skinType = _skinType;
 
         connector = new FlxSprite(0, 0).loadGraphic(Paths.image('shop/connector', 'impostor'));
 		connector.antialiasing = true;
@@ -65,15 +84,19 @@ class ShopNode extends FlxSprite
 		overlay.antialiasing = true;
         overlay.updateHitbox();
 
-        charData = grabCharData(name);
-
-        _color = FlxColor.fromRGB(charData.healthbar_colors[0], charData.healthbar_colors[1], charData.healthbar_colors[2]);
+        if(skinType == PET){
+            petData = grabPetData(name);
+            _color = FlxColor.fromRGB(petData.healthbar_colors[0], petData.healthbar_colors[1], petData.healthbar_colors[2]);
+            setupIcon('face');
+        }else{
+            charData = grabCharData(name);
+            _color = FlxColor.fromRGB(charData.healthbar_colors[0], charData.healthbar_colors[1], charData.healthbar_colors[2]);
+            setupIcon(charData.healthicon);
+        }
 
         outline.color = _color;
         overlay.color = _color;
         
-        setupIcon(charData.healthicon);
-
         setupPortrait(name);
 
         text = new FlxText(0, 0, width, Std.string(price), 36);
@@ -81,6 +104,30 @@ class ShopNode extends FlxSprite
 		text.borderSize = 3;
         text.antialiasing = true;
         text.updateHitbox();
+
+    }
+
+    public function updateSecret(desc:String){
+        secret = true;
+        secretDesc = desc;
+    }
+
+    public function setUnlockState(requirement:RequirementType, songs:Array<String>){
+        gotRequirements = true;
+        if(requirement == PERCENT95){
+            for(song in songs){
+                if(Highscore.getRating(song, 1) < 0.95 && Highscore.getRating(song, 2) < 0.95){
+                    gotRequirements = false;
+                }
+            }
+        }
+        if(requirement == COMPLETED){
+            for(song in songs){
+                if(Highscore.getScore(song, 1) == 0 && Highscore.getScore(song, 2) == 0 ){
+                    gotRequirements = false;
+                }
+            }
+        }
     }
 
     function setupPortrait(name:String){
@@ -109,6 +156,8 @@ class ShopNode extends FlxSprite
         icon.animation.add('ball', [0], 0, false, false);
         icon.animation.play('ball');
         icon.antialiasing = true;
+
+        if(skinType == PET) icon.alpha = 0;
     }
 
 	override function update(elapsed:Float)
@@ -141,6 +190,20 @@ class ShopNode extends FlxSprite
 		var rawJson = Assets.getText(path);
 
 		var json:CharacterFile = cast Json.parse(rawJson);
+        return json;
+    }
+
+    function grabPetData(_pet:String):PetFile{
+        var characterPath:String = 'pets/' + _pet + '.json';
+		var path:String = Paths.getPreloadPath(characterPath);
+		if (!Assets.exists(path))
+		{
+			path = Paths.getPreloadPath('pets/crab.json'); //If a character couldn't be found, change him to BF just to prevent a crash
+		}
+
+		var rawJson = Assets.getText(path);
+
+		var json:PetFile = cast Json.parse(rawJson);
         return json;
     }
 }

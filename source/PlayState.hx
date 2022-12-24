@@ -63,6 +63,7 @@ import openfl8.blends.*;
 import openfl8.effects.*;
 import openfl8.effects.BlendModeEffect.BlendModeShader;
 import openfl8.effects.WiggleEffect.WiggleEffectType;
+import ShopState.BeansPopup;
 
 using StringTools;
 
@@ -2669,6 +2670,11 @@ class PlayState extends MusicBeatState
 		blammedLightsBlack.alpha = 0.0;
 		#end
 
+		if (ClientPrefs.charOverrides[1] != '' && ClientPrefs.charOverrides[1] != 'gf')
+		{
+			SONG.player3 = ClientPrefs.charOverrides[1];
+		}
+
 		var gfVersion:String = SONG.player3;
 		if (gfVersion == null || gfVersion.length < 1)
 		{
@@ -2738,9 +2744,9 @@ class PlayState extends MusicBeatState
 			boyfriendGroup.add(bfLegs);
 		}
 
-		if (ClientPrefs.charOverride != '' && ClientPrefs.charOverride != 'bf')
+		if (ClientPrefs.charOverrides[0] != '' && ClientPrefs.charOverrides[0] != 'bf')
 		{
-			SONG.player1 = ClientPrefs.charOverride;
+			SONG.player1 = ClientPrefs.charOverrides[0];
 		}
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
@@ -2763,7 +2769,7 @@ class PlayState extends MusicBeatState
 		bfGhost.scale.copyFrom(boyfriend.scale);
 		bfGhost.updateHitbox();
 
-		pet = new Pet(0, 0, 'crab');
+		pet = new Pet(0, 0, ClientPrefs.charOverrides[2]);
 		pet.x += pet.positionArray[0];
 		pet.y += pet.positionArray[1];
 		if (curStage.toLowerCase() != 'alpha')
@@ -3264,11 +3270,6 @@ class PlayState extends MusicBeatState
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
 
 		Paths.clearUnusedMemory();
-
-		if (ClientPrefs.charOverride != '')
-		{
-			trace(ClientPrefs.charOverride);
-		}
 
 		// tests = new CCShader(-10,50,0,0,0x00FFFFFF,-0.0039,-0.0039,0xFFFFFFFF,boyfriend);
 		// boyfriend.shader = tests.shader;
@@ -6490,6 +6491,10 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
+					var beansValue:Int = Std.int(campaignScore / 600);
+					add(new BeansPopup(beansValue, camOther));
+					new FlxTimer().start(4, function(tmr:FlxTimer)
+					{
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
 					cancelFadeTween();
@@ -6516,6 +6521,7 @@ class PlayState extends MusicBeatState
 					usedPractice = false;
 					changedDifficulty = false;
 					cpuControlled = false;
+					});
 				}
 				else
 				{
@@ -6631,11 +6637,16 @@ class PlayState extends MusicBeatState
 					{
 						CustomFadeTransition.nextCamera = null;
 					}
-					MusicBeatState.switchState(new AmongFreeplayState());
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
-					usedPractice = false;
-					changedDifficulty = false;
-					cpuControlled = false;
+					var beansValue:Int = Std.int(songScore / 600);
+					add(new BeansPopup(beansValue, camOther));
+					new FlxTimer().start(4, function(tmr:FlxTimer)
+					{
+						MusicBeatState.switchState(new AmongFreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+						usedPractice = false;
+						changedDifficulty = false;
+						cpuControlled = false;
+					});
 				}
 			}
 			transitioning = true;

@@ -23,6 +23,8 @@ typedef PetFile = {
 	var image:String;
 	var scale:Float;
 
+	var healthbar_colors:Array<Int>;
+
 	var position:Array<Float>;
 
 	var flip_x:Bool;
@@ -56,10 +58,14 @@ class Pet extends FlxSprite
 	public var originalFlipX:Bool = false;
 	public var alreadyLoaded:Bool = true; //Used by "Change Character" event
 
+	public var healthColorArray:Array<Int> = [255, 0, 0];
+
 	public static var DEFAULT_PET:String = 'crab'; //In case a character is missing, it will use BF on its place
 	public function new(x:Float, y:Float, ?pet:String = 'crab')
 	{
 		super(x, y);
+
+		curPet = pet;
 
 		#if (haxe >= "4.0.0")
 		animOffsets = new Map();
@@ -117,6 +123,9 @@ class Pet extends FlxSprite
 					antialiasing = false;
 					noAntialiasing = true;
 				}
+
+				if(json.healthbar_colors != null && json.healthbar_colors.length > 2)
+					healthColorArray = json.healthbar_colors;
 
 				antialiasing = !noAntialiasing;
 				if(!ClientPrefs.globalAntialiasing) antialiasing = false;
