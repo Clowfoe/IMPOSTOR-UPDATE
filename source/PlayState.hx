@@ -3052,27 +3052,45 @@ class PlayState extends MusicBeatState
 
         if (curStage != 'alpha') {
             scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-            scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			if (curSong == 'Sussus Nuzzus')
+				{
+					scoreTxt.setFormat(Paths.font("apple_kid.ttf"), 50, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				}
+			else
+				{
+					scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				}
             scoreTxt.scrollFactor.set();
             scoreTxt.borderSize = 1.25;
             scoreTxt.visible = !ClientPrefs.hideHud;
             add(scoreTxt);
             
+			
         } else {
             
             scoreTxt = new FlxText(FlxG.width / 2 - 235, healthBarBG.y + 62, 0, "", 20);
             scoreTxt.screenCenter(X);
             scoreTxt.scrollFactor.set();
+
             scoreTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
             add(scoreTxt);
             add(sussusPenisLOL);
+
+			
 
 
 
         }
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		if (curSong == 'Sussus Nuzzus')
+			{
+				scoreTxt.setFormat(Paths.font("apple_kid.ttf"), 50, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			}
+		else
+			{
+				scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			}
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.hideHud;
