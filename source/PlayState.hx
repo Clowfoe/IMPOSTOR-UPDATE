@@ -3255,13 +3255,9 @@ class PlayState extends MusicBeatState
 					startVideo('polus1');
 					piss = false;
 				case 'sussus-toogus':
-<<<<<<< Updated upstream
-					startVideo('mira1');
-=======
 					startVideo('toogus');
 					piss = false;
 				case 'sabotage' | 'meltdown'| 'lights-down'| 'reactor':
->>>>>>> Stashed changes
 					schoolIntro(doof);
 
 				case 'oversight':
