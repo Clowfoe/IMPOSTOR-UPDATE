@@ -134,8 +134,6 @@ class PlayState extends MusicBeatState
 	public var GF_Y:Float = 130;
 	public var MOM_X:Float = 100;
 	public var MOM_Y:Float = 100;
-	public var doof:DialogueBox;
-	public var piss:Bool = true;
 
 	// var wiggleEffect:WiggleEffect;
 	public var boyfriendGroup:FlxSpriteGroup;
@@ -2814,7 +2812,7 @@ class PlayState extends MusicBeatState
 		{
 			dialogue = CoolUtil.coolTextFile(file);
 		}
-		doof = new DialogueBox(false, dialogue);
+		var doof:DialogueBox = new DialogueBox(false, dialogue);
 		// doof.x += 70;
 		// doof.y = FlxG.height * 0.5;
 		doof.scrollFactor.set();
@@ -3253,15 +3251,8 @@ class PlayState extends MusicBeatState
 
 				case 'sussus-moogus':
 					startVideo('polus1');
-					piss = false;
 				case 'sussus-toogus':
-<<<<<<< Updated upstream
 					startVideo('mira1');
-=======
-					startVideo('toogus');
-					piss = false;
-				case 'sabotage' | 'meltdown'| 'lights-down'| 'reactor':
->>>>>>> Stashed changes
 					schoolIntro(doof);
 
 				case 'oversight':
@@ -3585,13 +3576,7 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					if(piss == false) {
-                        trace('oh  nvm');
-                        schoolIntro(doof);
-                    }
-                    if(piss == true) {
-                        startCountdown();
-                    }
+					startCountdown();
 				}
 			}
 			return;
@@ -3607,13 +3592,7 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			if(piss == false) {
-                trace('oh  nvm');
-                schoolIntro(doof);
-            }
-                if(piss == true) {
-                    startCountdown();
-                }
+			startCountdown();
 		}
 	}
 
