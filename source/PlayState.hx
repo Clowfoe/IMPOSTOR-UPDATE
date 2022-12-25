@@ -1432,13 +1432,6 @@ class PlayState extends MusicBeatState
 					farClouds.add(newCloud);
 				}
 
-				plat = new FlxSprite();
-				plat.frames = Paths.getSparrowAtlas('airship/floating_platform', 'impostor');
-				plat.animation.addByPrefix('the', 'floating copy', 24, true);
-				plat.animation.play('the');
-				plat.updateHitbox();
-				add(plat);
-
 				speedLines = new FlxBackdrop(Paths.image('ejected/speedLines', 'impostor'), 1, 1, true, true);
 				speedLines.antialiasing = true;
 				speedLines.updateHitbox();
@@ -2720,6 +2713,11 @@ class PlayState extends MusicBeatState
 			dadlegs.x = dad.x;
 			dadlegs.y = dad.y;
 		}
+		
+		if (curStage.toLowerCase() == 'charles')
+		{
+			SONG.player4 = ClientPrefs.charOverrides[0];
+		}
 
 		mom = new Character(0, 0, SONG.player4);
 		startCharacterPos(mom, true);
@@ -2744,7 +2742,11 @@ class PlayState extends MusicBeatState
 			boyfriendGroup.add(bfLegs);
 		}
 
-		if (ClientPrefs.charOverrides[0] != '' && ClientPrefs.charOverrides[0] != 'bf')
+		if (curStage.toLowerCase() == 'charles')
+		{
+			SONG.player1 = 'henryphone';
+		}
+		else if (ClientPrefs.charOverrides[0] != '' && ClientPrefs.charOverrides[0] != 'bf')
 		{
 			SONG.player1 = ClientPrefs.charOverrides[0];
 		}
@@ -3250,6 +3252,7 @@ class PlayState extends MusicBeatState
 				case 'sussus-moogus':
 					startVideo('polus1');
 				case 'sussus-toogus':
+					startVideo('mira1');
 					schoolIntro(doof);
 
 				case 'oversight':
@@ -4563,10 +4566,10 @@ class PlayState extends MusicBeatState
 					});
 			}
 
-			if (boyfriend.platformPos != null)
+			/*if (boyfriend.platformPos != null)
 			{
 				plat.setPosition(boyfriend.x + boyfriend.platformPos[0], boyfriend.y + boyfriend.platformPos[1]);
-			}
+			}*/
 		}
 
 		if(charlesEnter)
@@ -5139,6 +5142,13 @@ class PlayState extends MusicBeatState
 							gf.playAnim(animToPlay + altAnim, true);
 							gf.holdTimer = 0;
 						}
+						else if (daNote.noteType == 'Both Opponents Sing' || bothOpponentsSing == true)
+						{
+							mom.playAnim(animToPlay + altAnim, true);
+							mom.holdTimer = 0;
+							dad.playAnim(animToPlay + altAnim, true);
+							dad.holdTimer = 0;
+						}
 						else if (daNote.noteType == 'Opponent 2 Sing' || opponent2sing == true)
 						{
 							mom.holdTimer = 0;
@@ -5167,13 +5177,6 @@ class PlayState extends MusicBeatState
 									mom.playAnim(animToPlay + altAnim, true);
 									// mom.angle = 0;
 								}
-						}
-						else if (daNote.noteType == 'Both Opponents Sing' || bothOpponentsSing == true)
-						{
-							mom.playAnim(animToPlay + altAnim, true);
-							mom.holdTimer = 0;
-							dad.playAnim(animToPlay + altAnim, true);
-							dad.holdTimer = 0;
 						}
 						else
 						{
@@ -5755,29 +5758,6 @@ class PlayState extends MusicBeatState
 							FlxG.camera.zoom = 0.5;
 							camFollowPos.setPosition(1100, 1150);
 							FlxG.camera.focusOn(camFollowPos.getPosition());
-
-							var whoArray:Array<String> = [
-								"G", "o", "i", "n", "g", "2", "k", "i", "l", "l", "e", "v", "e", "r", "y", "1", "s", "t", "a", "r", "t", "i", "n", "g", "w",
-								"i",
-								"t", "h", "U", " ", "w", "a", "s", " ", "n", "o", "t", " ", "T", "h", "e", " ", "I", "m", "p", "o", "s", "t", "o", "r", "."
-							];
-
-							var ejectText:FlxText;
-							ejectText = new FlxText();
-							ejectText.setFormat(Paths.font("arial.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-							ejectText.scrollFactor.set();
-							ejectText.alpha = 0;
-							ejectText.borderSize = 1;
-							ejectText.text = '';
-							ejectText.screenCenter();
-							add(ejectText);
-
-							for (i in 0...whoArray.length)
-							{
-								var addChar:String = whoArray[i];
-								ejectText.text = ejectText.text + addChar;
-								new FlxTimer().start(0.1);
-							}
 					}
 				case 'Cam lock in Who':
 					if (value1 == 'in')
@@ -5859,36 +5839,19 @@ class PlayState extends MusicBeatState
 						FlxG.camera.focusOn(camFollowPos.getPosition());
 					}
 
+				case 'Opponent Two':
+					opponent2sing = !opponent2sing;
+					bothOpponentsSing = false;
+					
 				case 'Both Opponents':
-					var charType:Int = Std.parseInt(value1);
-					if (Math.isNaN(charType))
-						charType = 0;
-					switch (charType)
-					{
-						case 0:
-							bothOpponentsSing = false;
-						case 1:
-							bothOpponentsSing = true;
-					}
-
+					bothOpponentsSing = !bothOpponentsSing;
+	
 				case 'scream danger':
 					airshipskyflash.alpha = 1;
 					airshipskyflash.animation.play('bop', false);
 
 				case 'unscream danger':
 					airshipskyflash.alpha = 0;
-
-				case 'Opponent Two':
-					var charType:Int = Std.parseInt(value1);
-					if (Math.isNaN(charType))
-						charType = 0;
-					switch (charType)
-					{
-						case 0:
-							opponent2sing = false;
-						case 1:
-							opponent2sing = true;
-					}
 
 				case 'Ellie Drop':
 					add(momGroup);
@@ -6737,6 +6700,9 @@ class PlayState extends MusicBeatState
 			ghost.blend = HARDLIGHT;
 			ghost.alpha = 0.8;
 			ghost.visible = true;
+
+			FlxG.camera.zoom += 0.015;
+			camHUD.zoom += 0.03;
 	
 			switch (char.toLowerCase().trim())
 			{

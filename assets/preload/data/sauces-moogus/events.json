@@ -4,7 +4,7 @@
 		"stage": "chef",
 		"player1": "bfsauce",
 		"player2": "chefogus",
-		"player3": "gf-car",
+		"player3": "gfmira",
 		"player4": null,
 		"notes": [
 			{
@@ -97,29 +97,25 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						8483.60655737705,
-						-1,
-						"Add Camera Zoom",
-						"",
-						""
-					],
-					[
-						8360.65573770492,
-						-1,
-						"Add Camera Zoom",
-						"",
-						""
-					],
-					[
-						8422.13114754098,
-						-1,
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				],
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -155,77 +151,7 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						16229.5081967213,
-						-1,
-						"Add Camera Zoom",
-						"",
-						""
-					],
-					[
-						16352.4590163934,
-						-1,
-						"Add Camera Zoom",
-						"",
-						""
-					],
-					[
-						16290.9836065574,
-						-1,
-						"",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						17704.9180327869,
-						-1,
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						21024.5901639344,
-						-1,
-						"Add Camera Zoom",
-						"",
-						""
-					],
-					[
-						21086.0655737705,
-						-1,
-						"Add Camera Zoom",
-						"",
-						""
-					],
-					[
-						21147.5409836066,
-						-1,
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				],
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -628,6 +554,15 @@
 						""
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
