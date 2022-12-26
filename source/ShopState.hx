@@ -144,7 +144,8 @@ class ShopState extends MusicBeatState
         ['left', 'root', 'bf', 0, true, 'BF', "The default Boyfriend skin. Just in case you're not feeling the new looks.", BF],
         ['left', 'bf', 'gf', 0, true, 'GF', "The default Girlfriend skin. Just in case you're not feeling the new looks.", GF],
 
-        ['top', 'bfpolus', 'snowball', 300, false, 'Snowball', "pet", PET],
+        ['top', 'bfpolus', 'gfpolus', 450, false, 'Polus GF', "Unlocked by completing the fifth week.", GF, COMPLETED, ['magmatic', 'ashes', 'boiling-point']],
+        ['top', 'gfpolus', 'snowball', 300, false, 'Snowball', "pet", PET],
         ['right', 'bfsauce', 'ham', 300, false, 'Hammy', "pet", PET],
 
         ['bottom', 'bfg', 'dog', 300, false, 'Doggy', "pet", PET],

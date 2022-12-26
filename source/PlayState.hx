@@ -1321,6 +1321,7 @@ class PlayState extends MusicBeatState
 				chefBluelight.antialiasing = true;
 				chefBluelight.scrollFactor.set(1, 1);
 				chefBluelight.active = false;
+				chefBluelight.blend = ADD;
 
 				chefBlacklight = new FlxSprite(0, -300).loadGraphic(Paths.image('chef/black_overhead_shadow', 'impostor'));
 				chefBlacklight.antialiasing = true;
@@ -1538,15 +1539,33 @@ class PlayState extends MusicBeatState
 
 			case 'grey': // SHIT ASS
 				curStage = 'grey';
-				var thebackground = new FlxSprite(0, 0);
-				thebackground.frames = Paths.getSparrowAtlas('airship/Gray_BG', 'impostor');
-				thebackground.animation.addByPrefix('bop', 'BG', 24, true);
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/graybg', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				add(bg);
+
+				var thebackground = new FlxSprite(1930, 400);
+				thebackground.frames = Paths.getSparrowAtlas('airship/grayglowy', 'impostor');
+				thebackground.animation.addByPrefix('bop', 'jar??', 24, true);
 				thebackground.animation.play('bop');
 				thebackground.antialiasing = true;
 				thebackground.scrollFactor.set(1, 1);
-				thebackground.setGraphicSize(Std.int(thebackground.width * 0.8));
+				thebackground.setGraphicSize(Std.int(thebackground.width * 1));
 				thebackground.active = true;
 				add(thebackground);
+
+				crowd = new FlxSprite(240, 350);
+				crowd.frames = Paths.getSparrowAtlas('airship/grayblack', 'impostor');
+				crowd.animation.addByPrefix('bop', 'whoisthismf', 24, false);
+				crowd.animation.play('bop');
+				crowd.antialiasing = true;
+				crowd.scrollFactor.set(1, 1);
+				crowd.setGraphicSize(Std.int(crowd.width * 1));
+				crowd.active = true;
+				add(crowd);
+
 
 			case 'nuzzus': // SHIT ASS
 				curStage = 'nuzzus';
@@ -2408,7 +2427,7 @@ class PlayState extends MusicBeatState
 				mainoverlay.active = false;
 				add(mainoverlay);
 			case 'cargo':
-				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/lights help', 'impostor'));
+				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/scavd', 'impostor'));
 				lightoverlay.antialiasing = true;
 				lightoverlay.scrollFactor.set(1, 1);
 				lightoverlay.active = false;
@@ -2416,7 +2435,7 @@ class PlayState extends MusicBeatState
 				lightoverlay.blend = ADD;
 				add(lightoverlay);
 
-				var mainoverlay:FlxSprite = new FlxSprite(-100, 0).loadGraphic(Paths.image('airship/lights help', 'impostor'));
+				var mainoverlay:FlxSprite = new FlxSprite(-100, 0).loadGraphic(Paths.image('airship/overlay ass dk', 'impostor'));
 				mainoverlay.antialiasing = true;
 				mainoverlay.scrollFactor.set(1, 1);
 				mainoverlay.active = false;
@@ -2574,11 +2593,27 @@ class PlayState extends MusicBeatState
 				add(saxguy);
 				
 			case 'grey':
-				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/coolthing', 'impostor'));
+				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/grayfg', 'impostor'));
 				lightoverlay.antialiasing = true;
 				lightoverlay.scrollFactor.set(1, 1);
 				lightoverlay.active = false;
-				lightoverlay.alpha = 0.83;
+				lightoverlay.alpha = 1;
+				//lightoverlay.blend = MULTIPLY;
+				add(lightoverlay);
+
+				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/graymultiply', 'impostor'));
+				lightoverlay.antialiasing = true;
+				lightoverlay.scrollFactor.set(1, 1);
+				lightoverlay.active = false;
+				lightoverlay.alpha = 1;
+				lightoverlay.blend = MULTIPLY;
+				add(lightoverlay);
+
+				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/grayoverlay', 'impostor'));
+				lightoverlay.antialiasing = true;
+				lightoverlay.scrollFactor.set(1, 1);
+				lightoverlay.active = false;
+				lightoverlay.alpha = 0.4;
 				lightoverlay.blend = MULTIPLY;
 				add(lightoverlay);
 
@@ -7681,6 +7716,11 @@ class PlayState extends MusicBeatState
 					crowd2.animation.play('bop');
 				}
 			case 'polus2':
+				if (curBeat % 2 == 0)
+				{
+					crowd.animation.play('bop');
+				}
+			case 'grey':
 				if (curBeat % 2 == 0)
 				{
 					crowd.animation.play('bop');

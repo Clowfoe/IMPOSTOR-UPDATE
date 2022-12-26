@@ -7,6 +7,7 @@ import sys.thread.Thread;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
+import openfl.utils.Assets as OpenFlAssets;
 import flixel.addons.display.FlxBackdrop;
 import flixel.input.keyboard.FlxKey;
 import flixel.addons.display.FlxGridOverlay;
@@ -28,6 +29,10 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
 import openfl.Assets;
+
+#if sys
+import sys.FileSystem;
+#end
 
 
 using StringTools;
@@ -116,8 +121,9 @@ class TitleState extends MusicBeatState
 			});
 			#end
 			new FlxTimer().start(1, function(tmr:FlxTimer)
-			{
-				startIntro();
+			{	
+				startVideo('v4_startup');
+				
 			});
 		}
 		#end
@@ -515,4 +521,48 @@ class TitleState extends MusicBeatState
 			skippedIntro = true;
 		}
 	}
+
+	public function startVideo(name:String):Void
+	{
+	#if VIDEOS_ALLOWED
+	var foundFile:Bool = false;
+	var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
+	#if sys
+	if (FileSystem.exists(fileName))
+	{
+		foundFile = true;
+	}
+	#end
+
+	if (!foundFile)
+	{
+		fileName = Paths.video(name);
+		#if sys
+		if (FileSystem.exists(fileName))
+		{
+		#else
+		if (OpenFlAssets.exists(fileName))
+		{
+		#end
+			foundFile = true;
+		}
+		} if (foundFile)
+		{
+			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+			bg.scrollFactor.set();
+			add(bg);
+
+			(new FlxVideo(fileName)).finishCallback = function()
+			{
+				startIntro();
+			}
+			return;
+		}
+		else
+		{
+			FlxG.log.warn('Couldnt find video file: ' + fileName);
+		}
+		#end
+	}
+
 }
