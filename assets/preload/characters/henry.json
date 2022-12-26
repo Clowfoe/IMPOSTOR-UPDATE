@@ -1,59 +1,70 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-30,
 				10
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Henry Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				149,
 				-22
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Henry Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				137,
 				-150
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Henry Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				19,
 				2
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Henry Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				14,
 				-64
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Henry Right"
+		},
+		{
+			"offsets": [
+				-4,
+				10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "shock",
+			"loop": false,
+			"name": "henry shock omg"
 		}
 	],
 	"no_antialiasing": false,

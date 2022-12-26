@@ -35,7 +35,7 @@ class MainMenuState extends MusicBeatState
 	public static var firstStart:Bool = true;
 	public static var finishedFunnyMove:Bool = false;
 	
-	var optionShit:Array<String> = ['Story', 'Freeplay', 'Options', 'Shop', 'Gallery', 'Innersloth'];
+	var optionShit:Array<String> = ['Story Mode', 'Freeplay', 'Gallery', 'Credits', 'Options', 'Shop', 'Innersloth'];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -122,9 +122,12 @@ class MainMenuState extends MusicBeatState
 		for(i in 0...optionShit.length) {
 			var testButton:FlxSprite = new FlxSprite(0, 130);
 			testButton.ID = i;
-			testButton.frames = Paths.getSparrowAtlas('menuBooba/ButtonSheet', 'impostor');
-			testButton.animation.addByPrefix('idle', optionShit[i] + 'Idle', 24, true);
-			testButton.animation.addByPrefix('hover', optionShit[i] + 'Hover', 24, true);
+			if(i > 3)
+				testButton.frames = Paths.getSparrowAtlas('menuBooba/Buttons_UI', 'impostor');
+			else
+				testButton.frames = Paths.getSparrowAtlas('menuBooba/Big_Buttons_UI', 'impostor');
+			testButton.animation.addByPrefix('idle', optionShit[i] + ' Button', 24, true);
+			testButton.animation.addByPrefix('hover', optionShit[i] + ' Select', 24, true);
 			testButton.animation.play('idle');
 			testButton.antialiasing = true;
 			testButton.scale.set(0.50 ,0.50);
@@ -138,13 +141,15 @@ class MainMenuState extends MusicBeatState
 				case 1:
 					testButton.setPosition(633, 475);
 				case 2:
-					testButton.setPosition(455, 640);
+					testButton.setPosition(400, 580);
 				case 3:
-					testButton.setPosition(715, 640);
+					testButton.setPosition(633, 580);
 				case 4:
-					testButton.setPosition(515, 575);
+					testButton.setPosition(455, 640);
 				case 5:
-					testButton.setPosition(585, 640);
+					testButton.setPosition(590, 640);
+				case 6:
+					testButton.setPosition(725, 640);
 			}
 			menuItems.add(testButton);
 		}		
@@ -304,7 +309,7 @@ class MainMenuState extends MusicBeatState
 
 		switch (daChoice)
 		{
-			case 'Story':
+			case 'Story Mode':
 				FlxG.switchState(new AmongStoryMenuState());
 				trace("Story Menu Selected");
 			case 'Freeplay':

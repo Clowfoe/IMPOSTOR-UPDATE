@@ -20,6 +20,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.net.curl.CURLCode;
+import flixel.input.mouse.FlxMouseEventManager;
 
 using StringTools;
 
@@ -47,7 +48,6 @@ class AmongStoryMenuState extends MusicBeatState
 
 	var grpLocks:FlxTypedGroup<FlxSprite>;
 
-	var difficultySelectors:FlxGroup;
 	var sprDifficultyGroup:FlxTypedGroup<FlxSprite>;
 	var selectingDifficulty:Bool = false;
 	var panel:FlxSprite;
@@ -87,7 +87,6 @@ class AmongStoryMenuState extends MusicBeatState
 		FlxCamera.defaultCameras = [camSpace];
 
 		camSpace.zoom = 0.7;
-		//croc is so big and chonky i wanna rub their big belly
 
 		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
 		starsBG.setPosition(111.3, 67.95);
@@ -130,9 +129,9 @@ class AmongStoryMenuState extends MusicBeatState
 		weekLines = new FlxTypedGroup<FlxSprite>();
 		add(weekLines);
 
-		scoreText = new FlxText(100, 100, 0, "SCORE: 49324858");
-		scoreText.setFormat(Paths.font('AmaticSC-Bold.ttf'), 32, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		scoreText.borderSize = 1.6;
+		scoreText = new FlxText(80, 170, 0, "SCORE: 49324858");
+		scoreText.setFormat(Paths.font('AmaticSC-Bold.ttf'), 54, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreText.borderSize = 2;
 		scoreText.cameras = [camScreen];
 
 		txtWeekNumber = new FlxText(FlxG.width / 2.4 - 10, 40, 0, "");
@@ -170,21 +169,6 @@ class AmongStoryMenuState extends MusicBeatState
         blackPanel.alpha = 0;
         add(blackPanel);
 
-        panel = new FlxSprite();
-        panel.frames = Paths.getSparrowAtlas('freeplay/difficultyPanel', 'impostor');
-        panel.animation.addByPrefix('idle', 'DifficultyScreenIdle', 24, false);
-        panel.animation.addByPrefix('left', 'DifficultyScreenLeft', 24, false);
-        panel.animation.addByPrefix('right', 'DifficultyScreenRight', 24, false);
-        panel.animation.play('idle');
-        panel.antialiasing = true;
-        panel.updateHitbox();
-        panel.scrollFactor.set();
-        panel.cameras = [camScreen];
-        panel.screenCenter();
-        panel.visible = false;
-        panel.scale.set(0, 0);
-        add(panel);
-
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 
 		grpWeekText = new FlxTypedGroup<MenuItem>();
@@ -194,6 +178,17 @@ class AmongStoryMenuState extends MusicBeatState
 		var border:FlxSprite = new FlxSprite().loadGraphic(Paths.image('storymenu/border', 'impostor'));
 		add(border);
 		border.cameras = [camScreen];
+
+		var back:FlxSprite = new FlxSprite(85, 65).loadGraphic(Paths.image('storymenu/menuBack', 'impostor'));
+		add(back);
+		back.cameras = [camScreen];
+
+		FlxMouseEventManager.add(back, function onMouseDown(back:FlxSprite){
+			FlxG.sound.play(Paths.sound('cancelMenu'));
+			movedBack = true;
+			MusicBeatState.switchState(new MainMenuState());
+			trace("worked");
+		}, null);
 
 		grpWeekCharacters = new FlxTypedGroup<MenuCharacter>();
 
@@ -211,6 +206,28 @@ class AmongStoryMenuState extends MusicBeatState
 
 			var weekCircle:FlxSprite = new FlxSprite(0, 50).loadGraphic(Paths.image('storymenu/circle', 'impostor'));
 			weekCircle.antialiasing = ClientPrefs.globalAntialiasing;
+			FlxMouseEventManager.add(weekCircle, function onMouseDown(weekCircle:FlxSprite){
+				if(curWeek == i && curWeek != 0){
+					openDiff();
+					FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
+					selectingDifficulty = true;
+					selectedWeek = true;
+					trace("worked2");
+				}
+				else{
+					if(i > curWeek)
+						shipPlayAnim('right');
+					if(i < curWeek)
+						shipPlayAnim('left');
+					
+					curWeek = i;
+
+					changeWeek();
+					FlxG.sound.play(Paths.sound('scrollMenu'));
+
+					trace("worked3");
+				}
+			}, null);
 
 			if (i == 5)
 			{
@@ -398,22 +415,6 @@ class AmongStoryMenuState extends MusicBeatState
 
 		WeekData.setDirectoryFromWeek(WeekData.weeksLoaded.get(WeekData.weeksList[0]));
 
-		difficultySelectors = new FlxGroup();
-		add(difficultySelectors);
-
-		sprDifficultyGroup = new FlxTypedGroup<FlxSprite>();
-		add(sprDifficultyGroup);
-
-		for (i in 0...CoolUtil.difficultyStuff.length)
-		{
-			var sprDifficulty:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menudifficulties/' + CoolUtil.difficultyStuff[i][0].toLowerCase()));
-			sprDifficulty.x += (308 - sprDifficulty.width) / 2;
-			sprDifficulty.ID = i;
-			sprDifficulty.antialiasing = ClientPrefs.globalAntialiasing;
-			sprDifficultyGroup.add(sprDifficulty);
-		}
-		changeDifficulty();
-
 		txtTracklist = new FlxText(FlxG.width * 0.75, 55, 0);
 		txtTracklist.alignment = CENTER;
 		txtTracklist.setFormat(Paths.font('AmaticSC-Bold.ttf'), 32, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -427,6 +428,43 @@ class AmongStoryMenuState extends MusicBeatState
 
 		add(weekHealthIcon);
 		add(weekHealthIconLose);
+
+		panel = new FlxSprite();
+        panel.frames = Paths.getSparrowAtlas('freeplay/difficultyPanel', 'impostor');
+        panel.animation.addByPrefix('idle', 'DifficultyScreenIdle', 24, false);
+        panel.animation.addByPrefix('left', 'DifficultyScreenLeft', 24, false);
+        panel.animation.addByPrefix('right', 'DifficultyScreenRight', 24, false);
+        panel.animation.play('idle');
+        panel.antialiasing = true;
+        panel.updateHitbox();
+        panel.scrollFactor.set();
+        panel.cameras = [camScreen];
+        panel.screenCenter();
+        panel.visible = false;
+        panel.scale.set(0, 0);
+        add(panel);
+		panel.cameras = [camScreen];
+
+		FlxMouseEventManager.add(panel, function onMouseDown(panel:FlxSprite){
+			changeDifficulty(1);
+		}, null);
+
+		sprDifficultyGroup = new FlxTypedGroup<FlxSprite>();
+		add(sprDifficultyGroup);
+
+		for (i in 0...CoolUtil.difficultyStuff.length)
+		{
+			var sprDifficulty:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menudifficulties/' + CoolUtil.difficultyStuff[i][0].toLowerCase()));
+			sprDifficulty.screenCenter();
+			sprDifficulty.x += 15;
+			sprDifficulty.ID = i;
+			sprDifficulty.antialiasing = ClientPrefs.globalAntialiasing;
+			sprDifficulty.cameras = [camScreen];
+			sprDifficultyGroup.add(sprDifficulty);
+		}
+		sprDifficultyGroup.visible = false;
+		
+		changeDifficulty();
 
 		FlxG.camera.follow(ship, LOCKON, 1);
 
@@ -447,15 +485,12 @@ class AmongStoryMenuState extends MusicBeatState
 		if (Math.abs(intendedScore - lerpScore) < 10)
 			lerpScore = intendedScore;
 
-		scoreText.text = "WEEK SCORE:" + lerpScore;
+		scoreText.text = "HIGH SCORE:" + lerpScore;
 
-		ship.x = FlxMath.lerp(ship.x, weekXvalues[curWeek], 0.13);
-		ship.y = FlxMath.lerp(ship.y, weekYvalues[curWeek], 0.13);
+		ship.x = FlxMath.lerp(ship.x, weekXvalues[curWeek], CoolUtil.boundTo(elapsed * 9, 0, 1));
+		ship.y = FlxMath.lerp(ship.y, weekYvalues[curWeek], CoolUtil.boundTo(elapsed * 9, 0, 1));
 		starsBG.x = FlxMath.lerp(starsBG.x, starsBG.x - 0.5, CoolUtil.boundTo(elapsed * 9, 0, 1));
 		starsFG.x = FlxMath.lerp(starsFG.x, starsFG.x - 1, CoolUtil.boundTo(elapsed * 9, 0, 1));
-
-		// difficultySelectors.visible = !weekIsLocked(curWeek);
-		sprDifficultyGroup.visible = false;
 
 		var accepted = controls.ACCEPT;
 
@@ -463,9 +498,6 @@ class AmongStoryMenuState extends MusicBeatState
 		{
 			if (!selectingDifficulty && canMove)
 			{
-				if(controls.UI_UP_P || controls.UI_DOWN_P || controls.UI_RIGHT_P || controls.UI_LEFT_P){
-					//startMove();
-				}
 				switch(curWeek)
 				{
 					case 0:
@@ -476,14 +508,14 @@ class AmongStoryMenuState extends MusicBeatState
 							shipPlayAnim("right");
 						}
 
-						if (controls.UI_DOWN_P)
+						if (controls.UI_DOWN_P || FlxG.mouse.wheel < 0)
 						{
 							changeWeek(5);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("down");
 						}
 
-						if (controls.UI_UP_P)
+						if (controls.UI_UP_P || FlxG.mouse.wheel > 0)
 						{
 							changeWeek(8);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -520,14 +552,14 @@ class AmongStoryMenuState extends MusicBeatState
 							shipPlayAnim("right");
 						}
 
-						if (controls.UI_UP_P)
+						if (controls.UI_UP_P || FlxG.mouse.wheel > 0)
 						{
 							changeWeek(9);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("up");
 						}
 
-						if (controls.UI_DOWN_P)
+						if (controls.UI_DOWN_P || FlxG.mouse.wheel < 0)
 						{
 							changeWeek(8);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -549,7 +581,7 @@ class AmongStoryMenuState extends MusicBeatState
 							shipPlayAnim("right");
 						}
 
-						if (controls.UI_DOWN_P)
+						if (controls.UI_DOWN_P || FlxG.mouse.wheel < 0)
 						{
 							changeWeek(6);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -572,7 +604,7 @@ class AmongStoryMenuState extends MusicBeatState
 							shipPlayAnim("left");
 						}
 
-						if (controls.UI_UP_P)
+						if (controls.UI_UP_P || FlxG.mouse.wheel > 0)
 						{
 							changeWeek(-5);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -603,7 +635,7 @@ class AmongStoryMenuState extends MusicBeatState
 						}
 					
 					case 8:
-						if (controls.UI_DOWN_P)
+						if (controls.UI_DOWN_P || FlxG.mouse.wheel < 0)
 						{
 							changeWeek(-8);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -611,7 +643,7 @@ class AmongStoryMenuState extends MusicBeatState
 						}
 
 					case 9:
-						if (controls.UI_UP_P)
+						if (controls.UI_UP_P || FlxG.mouse.wheel > 0)
 						{
 							changeWeek(-6);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -619,7 +651,7 @@ class AmongStoryMenuState extends MusicBeatState
 						}
 
 					case 10:
-						if (controls.UI_UP_P)
+						if (controls.UI_UP_P || FlxG.mouse.wheel > 0)
 						{
 							changeWeek(-8);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -627,7 +659,7 @@ class AmongStoryMenuState extends MusicBeatState
 						}
 
 					case 11:
-						if (controls.UI_DOWN_P)
+						if (controls.UI_DOWN_P || FlxG.mouse.wheel < 0)
 						{
 							changeWeek(-9);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -637,7 +669,10 @@ class AmongStoryMenuState extends MusicBeatState
 
 				if (controls.ACCEPT && curWeek != 0)
 				{
-					selectWeek();
+					openDiff();
+					FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
+					selectingDifficulty = true;
+					selectedWeek = true;
 				}
 				else if (controls.RESET && curWeek != 0)
 				{
@@ -645,29 +680,31 @@ class AmongStoryMenuState extends MusicBeatState
 					openSubState(new ResetScoreSubState('', curDifficulty, '', curWeek));
 					FlxG.sound.play(Paths.sound('scrollMenu'));
 				}
-			}
-			else
-			{
-				if (controls.UI_RIGHT_P)
-					changeDifficulty(1);
-
-				if (controls.UI_LEFT_P)
-					changeDifficulty(-1);
-
-				if (controls.ACCEPT && curWeek != 0)
+				if (controls.BACK && !movedBack && !selectedWeek && !selectingDifficulty)
 				{
-					openDiff();
-					FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
-					selectingDifficulty = true;
+					FlxG.sound.play(Paths.sound('cancelMenu'));
+					movedBack = true;
+					MusicBeatState.switchState(new MainMenuState());
 				}
 			}
 		}
+		else if(selectedWeek && selectingDifficulty){
+			if (controls.UI_RIGHT_P)
+				changeDifficulty(1);
 
-		if (controls.BACK && !movedBack && !selectedWeek)
-		{
-			FlxG.sound.play(Paths.sound('cancelMenu'));
-			movedBack = true;
-			MusicBeatState.switchState(new MainMenuState());
+			if (controls.UI_LEFT_P)
+				changeDifficulty(-1);
+
+			if (controls.ACCEPT && curWeek != 0)
+			{
+				selectWeek();
+			}
+			if (controls.BACK){
+				closeDiff();
+				FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
+				selectingDifficulty = false;
+				selectedWeek = false;
+			}
 		}
 
 		super.update(elapsed);
@@ -737,8 +774,33 @@ class AmongStoryMenuState extends MusicBeatState
 			curDifficulty = 0;
 
 		#if !switch
-		intendedScore = Highscore.getWeekScore(WeekData.weeksList[curWeek], curDifficulty);
+		intendedScore = Highscore.getWeekScore(WeekData.weeksList[curWeek], 2);
 		#end
+
+		sprDifficultyGroup.forEach(function(spr:FlxSprite)
+		{
+			spr.visible = false;
+			if (curDifficulty == spr.ID)
+			{
+				spr.visible = true;
+				if (change == 1)
+				{
+					spr.alpha = 0;
+					spr.screenCenter();
+					spr.x -= 15;
+					FlxTween.tween(spr, {x: spr.x + 15, alpha: 1}, 0.1, {ease: FlxEase.circOut});
+					panel.animation.play('right', true);
+				}
+				else if (change == -1)
+				{
+					spr.alpha = 0;
+					spr.screenCenter();
+					spr.x += 15;
+					panel.animation.play('left', true);
+					FlxTween.tween(spr, {x: spr.x - 15, alpha: 1}, 0.1, {ease: FlxEase.circOut});
+				}
+			}
+		});
 	}
 
 	var lerpScore:Int = 0;
@@ -765,6 +827,7 @@ class AmongStoryMenuState extends MusicBeatState
 			txtWeekTitle.visible = false;
 			weekHealthIcon.visible = false;
 			weekHealthIconLose.visible = false;
+			scoreText.visible = false;
 		}
 		else
 		{
@@ -773,6 +836,7 @@ class AmongStoryMenuState extends MusicBeatState
 			txtWeekTitle.visible = true;
 			weekHealthIcon.visible = true;
 			weekHealthIconLose.visible = true;
+			scoreText.visible = true;
 		}
 
 		var leWeek:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[curWeek]);
@@ -788,6 +852,10 @@ class AmongStoryMenuState extends MusicBeatState
 		else
 			txtWeekNumber.x = FlxG.width / 2.4;
 		txtWeekTitle.borderSize = 2.2;
+
+		#if !switch
+		intendedScore = Highscore.getWeekScore(WeekData.weeksList[curWeek], 2);
+		#end
 
 		weekHealthIcon.changeIcon(leWeek.songs[0][1]);
 		weekHealthIconLose.changeIcon(leWeek.songs[0][1]);
@@ -812,7 +880,7 @@ class AmongStoryMenuState extends MusicBeatState
 			case 5:
 				txtTracklist.setFormat(Paths.font('AmaticSC-Bold.ttf'), 26, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 				txtTracklist.borderSize = 1.3;
-				txtTracklist.y = 55;
+				txtTracklist.y = 58;
 			default:
 				txtTracklist.y = 55;
 		}
@@ -851,8 +919,8 @@ class AmongStoryMenuState extends MusicBeatState
 				weekHealthIcon.y = 55;
 				weekHealthIconLose.y = 55;
 			case 11:
-				weekHealthIcon.x = FlxG.width / 2.4 - 215;
-				weekHealthIconLose.x = FlxG.width / 2.4 + 270;
+				weekHealthIcon.x = FlxG.width / 2.4 - 115;
+				weekHealthIconLose.x = FlxG.width / 2.4 + 170;
 				weekHealthIcon.y = 45;
 				weekHealthIconLose.y = 45;
 			default:
@@ -913,7 +981,7 @@ class AmongStoryMenuState extends MusicBeatState
 		txtTracklist.x = ((FlxG.width / 2) - (txtTracklist.width / 2)) + 400;
 
 		#if !switch
-		intendedScore = Highscore.getWeekScore(WeekData.weeksList[curWeek], curDifficulty);
+		intendedScore = Highscore.getWeekScore(WeekData.weeksList[curWeek], 2);
 		#end
 	}
 
@@ -922,9 +990,23 @@ class AmongStoryMenuState extends MusicBeatState
 		panel.visible = true;
 		FlxTween.tween(blackPanel, {alpha: 0.4}, 0.25, {ease: FlxEase.circOut});
 		FlxTween.tween(panel.scale, {x: 1, y: 1}, 0.25, {ease: FlxEase.circOut});
+		sprDifficultyGroup.visible = true;
 		sprDifficultyGroup.forEach(function(spr:FlxSprite)
 		{
+			spr.scale.set(0, 0);
 			FlxTween.tween(spr.scale, {x: 1, y: 1}, 0.25, {ease: FlxEase.circOut});
+		});
+		curDifficulty = 1;
+		changeDifficulty(0);
+	}
+	function closeDiff()
+	{
+		panel.visible = true;
+		FlxTween.tween(blackPanel, {alpha: 0}, 0.25, {ease: FlxEase.circOut});
+		FlxTween.tween(panel.scale, {x: 0, y: 0}, 0.25, {ease: FlxEase.circOut});
+		sprDifficultyGroup.forEach(function(spr:FlxSprite)
+		{
+			FlxTween.tween(spr.scale, {x: 0, y: 0}, 0.25, {ease: FlxEase.circOut});
 		});
 		curDifficulty = 1;
 		changeDifficulty(0);

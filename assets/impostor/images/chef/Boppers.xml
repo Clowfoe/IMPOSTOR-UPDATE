@@ -1,50 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="Boppers.png">
-	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Gray bop0000" x="0" y="0" width="266" height="396" frameX="0" frameY="-12" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0001" x="0" y="0" width="266" height="396" frameX="0" frameY="-12" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0002" x="296" y="0" width="264" height="399" frameX="-1" frameY="-9" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0003" x="296" y="0" width="264" height="399" frameX="-1" frameY="-9" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0004" x="590" y="0" width="260" height="405" frameX="-3" frameY="-3" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0005" x="590" y="0" width="260" height="405" frameX="-3" frameY="-3" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0006" x="880" y="0" width="262" height="408" frameX="-2" frameY="0" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0007" x="880" y="0" width="262" height="408" frameX="-2" frameY="0" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0008" x="1172" y="0" width="262" height="408" frameX="-2" frameY="0" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0009" x="1172" y="0" width="262" height="408" frameX="-2" frameY="0" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0010" x="1172" y="0" width="262" height="408" frameX="-2" frameY="0" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0011" x="1172" y="0" width="262" height="408" frameX="-2" frameY="0" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0012" x="1172" y="0" width="262" height="408" frameX="-2" frameY="0" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0013" x="1172" y="0" width="262" height="408" frameX="-2" frameY="0" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Gray bop0014" x="1172" y="0" width="262" height="408" frameX="-2" frameY="0" frameWidth="266" frameHeight="408"/>
-	<SubTexture name="Sas bop0000" x="1464" y="0" width="432" height="388" frameX="0" frameY="-8" frameWidth="432" frameHeight="396"/>
-	<SubTexture name="Sas bop0001" x="1464" y="0" width="432" height="388" frameX="0" frameY="-8" frameWidth="432" frameHeight="396"/>
-	<SubTexture name="Sas bop0002" x="0" y="438" width="432" height="390" frameX="0" frameY="-6" frameWidth="432" frameHeight="396"/>
-	<SubTexture name="Sas bop0003" x="0" y="438" width="432" height="390" frameX="0" frameY="-6" frameWidth="432" frameHeight="396"/>
-	<SubTexture name="Sas bop0004" x="462" y="438" width="431" height="391" frameX="0" frameY="-5" frameWidth="432" frameHeight="396"/>
-	<SubTexture name="Sas bop0005" x="462" y="438" width="431" height="391" frameX="0" frameY="-5" frameWidth="432" frameHeight="396"/>
-	<SubTexture name="Sas bop0006" x="923" y="438" width="432" height="395" frameX="0" frameY="-1" frameWidth="432" frameHeight="396"/>
-	<SubTexture name="Sas bop0007" x="923" y="438" width="432" height="395" frameX="0" frameY="-1" frameWidth="432" frameHeight="396"/>
-	<SubTexture name="Sas bop0008" x="1385" y="438" width="432" height="396"/>
-	<SubTexture name="Sas bop0009" x="1385" y="438" width="432" height="396"/>
-	<SubTexture name="Sas bop0010" x="0" y="864" width="432" height="396"/>
-	<SubTexture name="Sas bop0011" x="0" y="864" width="432" height="396"/>
-	<SubTexture name="Sas bop0012" x="0" y="864" width="432" height="396"/>
-	<SubTexture name="Sas bop0013" x="0" y="864" width="432" height="396"/>
-	<SubTexture name="Sas bop0014" x="0" y="864" width="432" height="396"/>
-	<SubTexture name="neato bop0000" x="462" y="864" width="462" height="493" frameX="0" frameY="-13" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0001" x="462" y="864" width="462" height="493" frameX="0" frameY="-13" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0002" x="954" y="864" width="459" height="496" frameX="-1" frameY="-10" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0003" x="954" y="864" width="459" height="496" frameX="-1" frameY="-10" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0004" x="1443" y="864" width="452" height="502" frameX="-5" frameY="-4" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0005" x="1443" y="864" width="452" height="502" frameX="-5" frameY="-4" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0006" x="0" y="1396" width="448" height="506" frameX="-7" frameY="0" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0007" x="0" y="1396" width="448" height="506" frameX="-7" frameY="0" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0008" x="478" y="1396" width="448" height="506" frameX="-7" frameY="0" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0009" x="478" y="1396" width="448" height="506" frameX="-7" frameY="0" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0010" x="478" y="1396" width="448" height="506" frameX="-7" frameY="0" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0011" x="478" y="1396" width="448" height="506" frameX="-7" frameY="0" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0012" x="478" y="1396" width="448" height="506" frameX="-7" frameY="0" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0013" x="478" y="1396" width="448" height="506" frameX="-7" frameY="0" frameWidth="462" frameHeight="506"/>
-	<SubTexture name="neato bop0014" x="478" y="1396" width="448" height="506" frameX="-7" frameY="0" frameWidth="462" frameHeight="506"/>
+	<SubTexture name="grey0000" x="0" y="590" width="303" height="570"/>
+	<SubTexture name="grey0001" x="0" y="590" width="303" height="570"/>
+	<SubTexture name="grey0002" x="313" y="590" width="303" height="570"/>
+	<SubTexture name="grey0003" x="313" y="590" width="303" height="570"/>
+	<SubTexture name="grey0004" x="626" y="590" width="303" height="570"/>
+	<SubTexture name="grey0005" x="626" y="590" width="303" height="570"/>
+	<SubTexture name="grey0006" x="939" y="590" width="303" height="570"/>
+	<SubTexture name="grey0007" x="939" y="590" width="303" height="570"/>
+	<SubTexture name="grey0008" x="1252" y="590" width="303" height="570"/>
+	<SubTexture name="grey0009" x="1252" y="590" width="303" height="570"/>
+	<SubTexture name="grey0010" x="1565" y="590" width="303" height="570"/>
+	<SubTexture name="grey0011" x="1565" y="590" width="303" height="570"/>
+	<SubTexture name="grey0012" x="1565" y="590" width="303" height="570"/>
+	<SubTexture name="grey0013" x="1565" y="590" width="303" height="570"/>
+	<SubTexture name="grey0014" x="1565" y="590" width="303" height="570"/>
+	<SubTexture name="saster0000" x="0" y="0" width="397" height="580"/>
+	<SubTexture name="saster0001" x="0" y="0" width="397" height="580"/>
+	<SubTexture name="saster0002" x="407" y="0" width="397" height="580"/>
+	<SubTexture name="saster0003" x="407" y="0" width="397" height="580"/>
+	<SubTexture name="saster0004" x="814" y="0" width="397" height="580"/>
+	<SubTexture name="saster0005" x="814" y="0" width="397" height="580"/>
+	<SubTexture name="saster0006" x="1221" y="0" width="397" height="580"/>
+	<SubTexture name="saster0007" x="1221" y="0" width="397" height="580"/>
+	<SubTexture name="saster0008" x="1628" y="0" width="397" height="580"/>
+	<SubTexture name="saster0009" x="1628" y="0" width="397" height="580"/>
+	<SubTexture name="saster0010" x="1628" y="0" width="397" height="580"/>
+	<SubTexture name="saster0011" x="1628" y="0" width="397" height="580"/>
+	<SubTexture name="saster0012" x="1628" y="0" width="397" height="580"/>
+	<SubTexture name="saster0013" x="1628" y="0" width="397" height="580"/>
+	<SubTexture name="saster0014" x="1628" y="0" width="397" height="580"/>
 </TextureAtlas>
