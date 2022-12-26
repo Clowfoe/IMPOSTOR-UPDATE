@@ -22,6 +22,7 @@ import flixel.addons.display.FlxBackdrop;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.effects.FlxTrail;
 import flixel.addons.effects.FlxTrailArea;
+import flixel.effects.particles.FlxEmitter;
 import flixel.addons.effects.chainable.FlxEffectSprite;
 import flixel.addons.effects.chainable.FlxWaveEffect;
 import flixel.addons.transition.FlxTransitionableState;
@@ -321,6 +322,10 @@ class PlayState extends MusicBeatState
 	var ass3:FlxSprite;
 	var orb:FlxSprite = new FlxSprite();
 
+	//boiling point
+	var bpFire:FlxEmitter;
+	var bpFire2:FlxEmitter;
+
 	// pink
 	var cloud1:FlxBackdrop;
 	var cloud2:FlxBackdrop;
@@ -341,6 +346,10 @@ class PlayState extends MusicBeatState
 	var noootomatomongus:FlxSprite;
 	var longfuckery:FlxSprite;
 
+	//chef
+	var chefBluelight:FlxSprite;
+	var chefBlacklight:FlxSprite;
+
 	// who
 	var space:FlxSprite;
 	var starsBG:FlxBackdrop;
@@ -348,6 +357,7 @@ class PlayState extends MusicBeatState
 	var meeting:FlxSprite;
 	var emergency:FlxSprite;
 	var furiousRage:FlxSprite;
+	var whoAngered:FlxSprite;
 
 	// jorsawsee
 	var loungebg:FlxSprite;
@@ -1070,23 +1080,30 @@ class PlayState extends MusicBeatState
 				bg.active = false;
 				add(bg);
 
-				meeting = new FlxSprite(400, 775);
+				meeting = new FlxSprite(300, 1075);
 				meeting.frames = Paths.getSparrowAtlas('polus/meeting', 'impostor');
-				meeting.animation.addByPrefix('bop', 'meeting buzz', 24, false);
+				meeting.animation.addByPrefix('bop', 'meeting buzz', 16, false);
 				meeting.antialiasing = true;
 				meeting.scrollFactor.set(1, 1);
 				meeting.active = true;
-				meeting.visible = true;
-				meeting.setGraphicSize(Std.int(meeting.width * 0.7));
-				// meeting.screenCenter();
+				meeting.setGraphicSize(Std.int(meeting.width * 1.2));
+				meeting.alpha = 0.001;
 
-				furiousRage = new FlxSprite(400, 775).loadGraphic(Paths.image('polus/KILLYOURSELF', 'impostor'));
+				whoAngered = new FlxSprite(-1000, 975).loadGraphic(Paths.image('polus/mad mad dude', 'impostor'));
+				whoAngered.antialiasing = true;
+				whoAngered.alpha = 0.001;
+
+				furiousRage = new FlxSprite(450, 905).loadGraphic(Paths.image('polus/KILLYOURSELF', 'impostor'));
 				furiousRage.antialiasing = true;
+				furiousRage.setGraphicSize(Std.int(furiousRage.width * 0.7));
+				furiousRage.alpha = 0.001;
 
-				emergency = new FlxSprite(400, 775).loadGraphic(Paths.image('polus/emergency', 'impostor'));
+				emergency = new FlxSprite(400, 1175).loadGraphic(Paths.image('polus/emergency', 'impostor'));
 				emergency.antialiasing = true;
+				emergency.setGraphicSize(Std.int(emergency.width * 0.5));
+				emergency.alpha = 0.001;
 
-				space = new FlxSprite(-300, -300).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+				space = new FlxSprite(-1000, -1000).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 				space.antialiasing = true;
 				space.updateHitbox();
 				space.scrollFactor.set();
@@ -1253,23 +1270,29 @@ class PlayState extends MusicBeatState
 				wall.active = false;
 				add(wall);
 
-				var floor:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('chef/Chef Floor', 'impostor'));
+				var floor:FlxSprite = new FlxSprite(-850, 1000).loadGraphic(Paths.image('chef/Chef Floor', 'impostor'));
 				floor.antialiasing = true;
 				floor.scrollFactor.set(1, 1);
-				floor.setGraphicSize(Std.int(floor.width * 0.8));
 				floor.active = false;
 				add(floor);
 
-				var backshit:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('chef/Back Table Kitchen', 'impostor'));
+				var backshit:FlxSprite = new FlxSprite(-50, 170).loadGraphic(Paths.image('chef/Back Table Kitchen', 'impostor'));
 				backshit.antialiasing = true;
 				backshit.scrollFactor.set(1, 1);
 				backshit.setGraphicSize(Std.int(backshit.width * 0.8));
 				backshit.active = false;
 				add(backshit);
 
+				var oven:FlxSprite = new FlxSprite(1600, 400).loadGraphic(Paths.image('chef/oven', 'impostor'));
+				oven.antialiasing = true;
+				oven.scrollFactor.set(1, 1);
+				oven.setGraphicSize(Std.int(oven.width * 0.8));
+				oven.active = false;
+				add(oven);
+
 				gray = new FlxSprite(1000, 525);
 				gray.frames = Paths.getSparrowAtlas('chef/Boppers', 'impostor');
-				gray.animation.addByPrefix('bop', 'Gray bop', 24, false);
+				gray.animation.addByPrefix('bop', 'grey', 24, false);
 				gray.animation.play('bop');
 				gray.antialiasing = true;
 				gray.scrollFactor.set(1, 1);
@@ -1279,7 +1302,7 @@ class PlayState extends MusicBeatState
 
 				saster = new FlxSprite(1300, 525);
 				saster.frames = Paths.getSparrowAtlas('chef/Boppers', 'impostor');
-				saster.animation.addByPrefix('bop', 'Sas bop', 24, false);
+				saster.animation.addByPrefix('bop', 'saster', 24, false);
 				saster.animation.play('bop');
 				saster.antialiasing = true;
 				saster.scrollFactor.set(1, 1);
@@ -1287,23 +1310,22 @@ class PlayState extends MusicBeatState
 				saster.active = true;
 				add(saster);
 
-				neato = new FlxSprite(1900, 625);
-				neato.frames = Paths.getSparrowAtlas('chef/Boppers', 'impostor');
-				neato.animation.addByPrefix('bop', 'neato bop', 24, false);
-				neato.animation.play('bop');
-				neato.antialiasing = true;
-				neato.scrollFactor.set(1, 1);
-				neato.setGraphicSize(Std.int(neato.width * 1.2));
-				neato.active = true;
-				add(neato);
-
-				var frontable:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('chef/Kitchen Counter', 'impostor'));
+				var frontable:FlxSprite = new FlxSprite(800, 700).loadGraphic(Paths.image('chef/Kitchen Counter', 'impostor'));
 				frontable.antialiasing = true;
 				frontable.scrollFactor.set(1, 1);
-				frontable.setGraphicSize(Std.int(frontable.width * 0.8));
 				frontable.active = false;
 				add(frontable);
 
+				chefBluelight = new FlxSprite(0, -300).loadGraphic(Paths.image('chef/bluelight', 'impostor'));
+				chefBluelight.antialiasing = true;
+				chefBluelight.scrollFactor.set(1, 1);
+				chefBluelight.active = false;
+
+				chefBlacklight = new FlxSprite(0, -300).loadGraphic(Paths.image('chef/black_overhead_shadow', 'impostor'));
+				chefBlacklight.antialiasing = true;
+				chefBlacklight.scrollFactor.set(1, 1);
+				chefBlacklight.active = false;
+	
 			case 'ejected':
 				defaultCamZoom = 0.45;
 				curStage = 'ejected';
@@ -1550,6 +1572,13 @@ class PlayState extends MusicBeatState
 			case 'tomtus': // emihead made peak
 				curStage = 'tomtus';
 
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/space', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				add(bg);
+
 				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/tuesday', 'impostor'));
 				bg.updateHitbox();
 				bg.antialiasing = true;
@@ -1775,7 +1804,7 @@ class PlayState extends MusicBeatState
 				//		add(rocks);
 			
 
-				var lava = new FlxSprite(0, -300);
+				var lava = new FlxSprite(-400, -650);
 				lava.frames = Paths.getSparrowAtlas('polus/wallBP', 'impostor');
 				lava.animation.addByPrefix('bop', 'Back wall and lava', 24, true);
 				lava.animation.play('bop');
@@ -1785,7 +1814,7 @@ class PlayState extends MusicBeatState
 				lava.active = true;
 				add(lava);
 
-				var ground:FlxSprite = new FlxSprite(1450, 1000).loadGraphic(Paths.image('polus/platform', 'impostor'));
+				var ground:FlxSprite = new FlxSprite(1050, 650).loadGraphic(Paths.image('polus/platform', 'impostor'));
 				ground.updateHitbox();
 				ground.setGraphicSize(Std.int(ground.width * 1));
 				ground.antialiasing = true;
@@ -1793,7 +1822,7 @@ class PlayState extends MusicBeatState
 				ground.active = false;
 				add(ground);
 
-				var bubbles = new FlxSprite(1200, 1200);
+				var bubbles = new FlxSprite(800, 850);
 				bubbles.frames = Paths.getSparrowAtlas('polus/bubbles', 'impostor');
 				bubbles.animation.addByPrefix('bop', 'Lava Bubbles', 24, true);
 				bubbles.animation.play('bop');
@@ -1802,6 +1831,29 @@ class PlayState extends MusicBeatState
 				bubbles.scrollFactor.set(1, 1);
 				bubbles.active = true;
 				add(bubbles);
+
+				bpFire = new FlxEmitter(-2080.5, 1532.4);
+				bpFire.launchMode = FlxEmitterMode.SQUARE;
+				bpFire.velocity.set(-50, -400, 50, -800, -100, 0, 100, -800);
+				bpFire.scale.set(4, 4, 4, 4, 0, 0, 0, 0);
+				bpFire.drag.set(0, 0, 0, 0, 5, 5, 10, 10);
+				bpFire.width = 4787.45;
+				bpFire.alpha.set(1, 1);
+				bpFire.lifespan.set(4, 4.5);
+				bpFire.loadParticles(Paths.image('polus/ember1', 'impostor'), 500, 16, true);
+						
+				bpFire.start(false, FlxG.random.float(0.3, 0.4), 100000);
+
+				bpFire2 = new FlxEmitter(-2080.5, 1532.4);
+				bpFire2.launchMode = FlxEmitterMode.SQUARE;
+				bpFire2.velocity.set(-50, -400, 50, -800, -100, 0, 100, -800);
+				bpFire2.scale.set(4, 4, 4, 4, 0, 0, 0, 0);
+				bpFire2.drag.set(0, 0, 0, 0, 5, 5, 10, 10);
+				bpFire2.width = 4787.45;
+				bpFire2.alpha.set(1, 1);
+				bpFire2.lifespan.set(4, 4.5);
+				bpFire2.loadParticles(Paths.image('polus/ember2', 'impostor'), 500, 16, true);
+				bpFire2.start(false, FlxG.random.float(0.3, 0.4), 100000);
 
 			case 'toogus':
 				curStage = 'toogus';
@@ -2213,6 +2265,14 @@ class PlayState extends MusicBeatState
 		dadGhost = new FlxSprite();
 		momGhost = new FlxSprite();
 		bfGhost = new FlxSprite();
+		
+		switch (curStage.toLowerCase())
+		{
+			case 'cargo':
+				add(momGhost);
+				add(momGroup);
+		}
+
 		add(gfGroup);
 		add(bfGhost);
 		add(dadGhost);
@@ -2235,9 +2295,6 @@ class PlayState extends MusicBeatState
 
 		switch (curStage.toLowerCase())
 		{
-			case 'cargo':
-				add(momGhost);
-				add(momGroup);
 			case 'voting':
 				add(momGhost);
 				add(momGroup);
@@ -2273,6 +2330,12 @@ class PlayState extends MusicBeatState
 			add(bunches);
 
 		switch(curStage.toLowerCase()){
+			case 'polus3':
+				add(bpFire);
+				add(bpFire2);
+			case 'chef':
+				add(chefBluelight);
+				add(chefBlacklight);
 			case 'plantroom':
 				add(bluemira);
 				add(pot);
@@ -2570,12 +2633,14 @@ class PlayState extends MusicBeatState
 				add(snow);
 
 			case 'who':
+				cameraLocked = true;
 				add(meeting);
 				add(furiousRage);
 				add(emergency);
+				add(whoAngered);
 
 			case 'polus3':
-
+				//thing
 			case 'spooky':
 				add(halloweenWhite);
 			case 'airship':
@@ -2965,6 +3030,9 @@ class PlayState extends MusicBeatState
 			prevCamFollowPos = null;
 		}
 		add(camFollowPos);
+
+		if(curStage.toLowerCase() == 'who')
+			camFollowPos.setPosition(1100, 1150);
 
 		FlxG.camera.follow(camFollowPos, LOCKON, 1);
 		// FlxG.camera.setScrollBounds(0, FlxG.width, 0, FlxG.height);
@@ -5758,18 +5826,25 @@ class PlayState extends MusicBeatState
 					{
 						case 0:
 							camHUD.visible = false;
-							meeting.visible = true;
+							meeting.alpha = 1;
 							meeting.animation.play('bop');
+							meeting.animation.finishCallback = function(pog:String)
+							{
+								furiousRage.alpha = 1;
+								emergency.alpha = 1;
+							}
 						case 1:
-							meeting.visible = false;
-							dad.visible = false;
+							furiousRage.alpha = 0.001;
+							emergency.alpha = 0.001;
+							meeting.alpha = 0.001;
+							boyfriendGroup.visible = false;
+							dadGroup.visible = false;
 							space.visible = true;
 							starsBG.visible = true;
 							starsFG.visible = true;
-							boyfriend.screenCenter(Y);
-							boyfriend.x = -1000;
-							FlxTween.angle(boyfriend, 0, 720, 10);
-							FlxTween.tween(boyfriend, {x: 3000}, 10);
+							whoAngered.alpha = 1;
+							FlxTween.angle(whoAngered, 0, 720, 10);
+							FlxTween.tween(whoAngered, {x: 3000}, 10);
 							// cameraLocked = false;
 							defaultCamZoom = 0.5;
 							FlxG.camera.zoom = 0.5;
@@ -5784,18 +5859,18 @@ class PlayState extends MusicBeatState
 						cameraLocked = true;
 						if (value2 == 'dad')
 						{
-							camFollowPos.setPosition(dad.getMidpoint().x + 150, dad.getMidpoint().y + 100);
+							camFollowPos.setPosition(dad.getMidpoint().x + 150, dad.getMidpoint().y + 150);
 							FlxG.camera.focusOn(camFollowPos.getPosition());
 						}
 						else
 						{
-							camFollowPos.setPosition(boyfriend.getMidpoint().x - 50, boyfriend.getMidpoint().y + 50);
+							camFollowPos.setPosition(boyfriend.getMidpoint().x - 150, boyfriend.getMidpoint().y + 150);
 							FlxG.camera.focusOn(camFollowPos.getPosition());
 						}
 					}
 					else
 					{
-						cameraLocked = false;
+						cameraLocked = true;
 						defaultCamZoom = 0.7;
 						FlxG.camera.zoom = 0.7;
 						camFollowPos.setPosition(1100, 1150);
@@ -5872,6 +5947,8 @@ class PlayState extends MusicBeatState
 
 				case 'Ellie Drop':
 					add(momGroup);
+					dad.playAnim('shock', false);
+					dad.specialAnim = true;
 					mom.playAnim('enter', false);
 					mom.specialAnim = true;
 					iconP2.changeIcon('ellie');
@@ -6718,8 +6795,13 @@ class PlayState extends MusicBeatState
 			ghost.alpha = 0.8;
 			ghost.visible = true;
 
-			FlxG.camera.zoom += 0.015;
-			camHUD.zoom += 0.03;
+			switch(curStage.toLowerCase()){
+				case 'who' | 'voting':
+					//erm
+				default:
+					FlxG.camera.zoom += 0.015;
+					camHUD.zoom += 0.03;
+			}
 	
 			switch (char.toLowerCase().trim())
 			{
@@ -7594,7 +7676,6 @@ class PlayState extends MusicBeatState
 				{
 					gray.animation.play('bop');
 					saster.animation.play('bop');
-					neato.animation.play('bop');
 				}
 			case 'reactor2':
 				if (curBeat % 4 == 0)

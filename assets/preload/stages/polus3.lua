@@ -5,10 +5,10 @@ local shot = false;
 local agent = 1
 local health = 0;
 local xx = 1800;
-local yy = 100;
+local yy = 400;
 local xx2 = 1850;
-local yy2 = 100;
-local ofs = 50;
+local yy2 = 400;
+local ofs = 0;
 local followchars = true;
 local del = 0;
 local del2 = 0;
@@ -20,6 +20,8 @@ end
 
 
 function onUpdate()
+    setProperty("gf.alpha", 0)
+
 	if del > 0 then
 		del = del - 1
 	end
@@ -28,7 +30,7 @@ function onUpdate()
 	end
     if followchars == true then
         if mustHitSection == false then
-            setProperty('defaultCamZoom',0.7)
+            setProperty('defaultCamZoom',0.55)
             if getProperty('dad.animation.curAnim.name') == 'singLEFT' then
                 triggerEvent('Camera Follow Pos',xx-ofs,yy)
             end

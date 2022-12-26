@@ -5,9 +5,9 @@ local shot = false;
 local agent = 1
 local health = 0;
 local xx = 1200;
-local yy = 750;
+local yy = 800;
 local xx2 = 1400;
-local yy2 = 750;
+local yy2 = 800;
 local ofs = 10;
 local followchars = true;
 local del = 0;
@@ -96,31 +96,31 @@ function onUpdate()
     if curBeat == 112 then
 		setProperty('defaultCamZoom',0.9)
 		xx = 1180;
-		yy = 770;
+		yy = 820;
 	end
 
 	if curBeat == 113 then
 		setProperty('defaultCamZoom',1)
 		xx = 1160;
-		yy = 790;
+		yy = 840;
 	end
 
 	if curBeat == 114 then
 		setProperty('defaultCamZoom',1.1)
 		xx = 1140;
-		yy = 810;
+		yy = 860;
 	end
 
 	if curBeat == 115 then
 		setProperty('defaultCamZoom',1.2)
 		xx = 1120;
-		yy = 830;
+		yy = 880;
 	end
 
 	if curBeat == 116 then
 		setProperty('defaultCamZoom',0.8)
 		xx = 1200;
-		yy = 750;
+		yy = 800;
 	end
 
 	if curStep == 206 or curStep == 207 then
@@ -150,55 +150,55 @@ function onUpdate()
 	if curBeat == 304 then
 		setProperty('defaultCamZoom',0.9)
 		xx = 1180;
-		yy = 770;
+		yy = 820;
 	end
 
 	if curBeat == 305 then
 		setProperty('defaultCamZoom',1)
 		xx = 1160;
-		yy = 790;
+		yy = 840;
 	end
 
 	if curBeat == 306 then
 		setProperty('defaultCamZoom',1.1)
 		xx = 1140;
-		yy = 810;
+		yy = 860;
 	end
 
 	if curBeat == 307 then
 		setProperty('defaultCamZoom',1.2)
 		xx = 1120;
-		yy = 830;
+		yy = 880;
 	end
 
 	if curBeat == 308 then
 		setProperty('defaultCamZoom',0.8)
 		xx = 1200;
-		yy = 750;
+		yy = 800;
 	end
 
 	if curBeat == 320 then
 		setProperty('defaultCamZoom',0.9)
 		xx = 1180;
-		yy = 770;
+		yy = 820;
 	end
 
 	if curBeat == 321 then
 		setProperty('defaultCamZoom',1)
 		xx = 1160;
-		yy = 790;
+		yy = 840;
 	end
 
 	if curBeat == 322 then
 		setProperty('defaultCamZoom',1.1)
 		xx = 1140;
-		yy = 810;
+		yy = 860;
 	end
 
 	if curBeat == 323 then
 		setProperty('defaultCamZoom',1.2)
 		xx = 1120;
-		yy = 830;
+		yy = 880;
 	end
 
 	if curBeat >= 324 then
