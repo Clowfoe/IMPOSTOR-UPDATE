@@ -3753,14 +3753,21 @@ class PlayState extends MusicBeatState
 				var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
 				introAssets.set('default', ['ready', 'set', 'go']);
 				introAssets.set('pixel', ['pixelUI/ready-pixel', 'pixelUI/set-pixel', 'pixelUI/date-pixel']);
+				introAssets.set('nuzzus', ['nuzzusUI/ready-nuzzus', 'nuzzusUI/set-nuzzus', 'nuzzusUI/date-nuzzus']);
 
 				var introAlts:Array<String> = introAssets.get('default');
 				var antialias:Bool = ClientPrefs.globalAntialiasing;
-				if (isPixelStage)
+
+				if (isPixelStage && curStage.toLowerCase() == 'nuzzus')
 				{
-					introAlts = introAssets.get('pixel');
+					introAlts = introAssets.get('nuzzus');
 					antialias = false;
 				}
+				else if (isPixelStage && curStage.toLowerCase() != 'nuzzus')
+					{
+						introAlts = introAssets.get('pixel');
+						antialias = false;
+					}
 
 				// head bopping for bg characters on Mall
 				if (curStage == 'mall')
@@ -4534,6 +4541,11 @@ class PlayState extends MusicBeatState
 		{
 			overlay.alpha = FlxMath.lerp(0.5, overlay.alpha, 0.40);
 		}
+		
+		//if (curStage.toLowerCase() == 'warehouse')
+		//{
+			//boyfriendGroup.y = FlxMath.lerp(boyfriendGroup.y, 1050.75+(FlxMath.bound(health, 0.2, 2) * 500), CoolUtil.boundTo(elapsed * 7, 0, 1));
+		//}
 
 		if (curStage == "ejected")
 		{
@@ -6863,6 +6875,7 @@ class PlayState extends MusicBeatState
 			pixelShitPart1 = 'pixelUI/';
 			pixelShitPart2 = '-pixel';
 		}
+		
 
 		if (curStage.toLowerCase() == 'alpha')
 		{

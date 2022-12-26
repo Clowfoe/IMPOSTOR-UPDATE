@@ -249,7 +249,7 @@ class Note extends FlxSprite
 
 		var lastScaleY:Float = scale.y;
 		var blahblah:String = arraySkin.join('/');
-		if(PlayState.isPixelStage) {
+		if(PlayState.isPixelStage && PlayState.curStage.toLowerCase() != 'nuzzus') {
 			if(isSustainNote) {
 				loadGraphic(Paths.image('pixelUI/' + blahblah + 'ENDS'));
 				width = width / 4;
@@ -260,6 +260,21 @@ class Note extends FlxSprite
 				width = width / 4;
 				height = height / 5;
 				loadGraphic(Paths.image('pixelUI/' + blahblah), true, Math.floor(width), Math.floor(height));
+			}
+			setGraphicSize(Std.int(width * PlayState.daPixelZoom));
+			loadPixelNoteAnims();
+			antialiasing = false;
+		} else if(PlayState.isPixelStage && PlayState.curStage.toLowerCase() == 'nuzzus') {
+			if(isSustainNote) {
+				loadGraphic(Paths.image('nuzzusUI/' + blahblah + 'ENDS'));
+				width = width / 4;
+				height = height / 2;
+				loadGraphic(Paths.image('nuzzusUI/' + blahblah + 'ENDS'), true, Math.floor(width), Math.floor(height));
+			} else {
+				loadGraphic(Paths.image('nuzzusUI/' + blahblah));
+				width = width / 4;
+				height = height / 5;
+				loadGraphic(Paths.image('nuzzusUI/' + blahblah), true, Math.floor(width), Math.floor(height));
 			}
 			setGraphicSize(Std.int(width * PlayState.daPixelZoom));
 			loadPixelNoteAnims();

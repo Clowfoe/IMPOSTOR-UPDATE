@@ -1,0 +1,126 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				48,
+				-283
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				151,
+				-255
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				70,
+				-280
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "jIDLE",
+			"indices": []
+		},
+		{
+			"offsets": [
+				70,
+				-280
+			],
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"fps": 24,
+			"anim": "idle-loop",
+			"loop": true,
+			"name": "jIDLE"
+		},
+		{
+			"offsets": [
+				14,
+				-148
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "jUP"
+		},
+		{
+			"offsets": [
+				174,
+				-298
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "jLEFT"
+		},
+		{
+			"offsets": [
+				14,
+				-148
+			],
+			"indices": [
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "singUP-loop",
+			"loop": true,
+			"name": "jUP"
+		},
+		{
+			"offsets": [
+				174,
+				-298
+			],
+			"indices": [
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"loop": true,
+			"name": "jLEFT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/jorsawdead",
+	"position": [
+		-30,
+		-20
+	],
+	"healthicon": "jorsawsee",
+	"flip_x": false,
+	"healthbar_colors": [
+		39,
+		127,
+		231
+	],
+	"camera_position": [
+		-130,
+		300
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
