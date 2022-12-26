@@ -422,6 +422,7 @@ class PlayState extends MusicBeatState
 
 	// torture
 	var ROZEBUD_ILOVEROZEBUD_HEISAWESOME:FlxSprite; // this is the var name and you can't stop me -rzbd
+	var ROZEBUD_ISGAY_KISSESBOYS:FlxSprite; // fixed for accuracy -cc
 	var torfloor:FlxSprite;
 	var torwall:FlxSprite;
 	var torglasses:FlxSprite;
