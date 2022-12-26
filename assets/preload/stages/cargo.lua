@@ -85,5 +85,25 @@ function onUpdate()
         triggerEvent('Camera Follow Pos','','')
     end
     
+    if curBeat >= 356 and curBeat < 420 then
+		setProperty('defaultCamZoom',1.1)
+        xx2 = 2750;
+        yy2 = 1150;  
+	end
+    if curBeat == 420 then
+		setProperty('defaultCamZoom',0.8)
+        xx2 = 2300;
+        yy2 = 1050;  
+	end
+    if curBeat >= 552 and curBeat < 556 then
+		setProperty('defaultCamZoom',1.2)
+        xx = 1550;
+        yy = 1250;  
+	end
+    if curBeat == 556 then
+        xx = 2000;
+        yy = 1050;  
+	end
+
 end
 

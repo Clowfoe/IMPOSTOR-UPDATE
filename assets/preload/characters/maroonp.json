@@ -5,55 +5,55 @@
 				249,
 				40
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "IDLE"
+			"loop": false,
+			"name": "Idle"
 		},
 		{
 			"offsets": [
-				271,
-				112
+				121,
+				42
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "RIGHT"
+			"loop": false,
+			"name": "Idle"
 		},
 		{
 			"offsets": [
-				170,
-				64
+				260,
+				-16
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "DOWN"
+			"loop": false,
+			"name": "Idle"
 		},
 		{
 			"offsets": [
-				288,
-				76
+				398,
+				26
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "LEFT"
+			"loop": false,
+			"name": "Idle"
 		},
 		{
 			"offsets": [
 				213,
-				162
+				202
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "UP"
+			"loop": false,
+			"name": "Idle"
 		}
 	],
 	"no_antialiasing": false,

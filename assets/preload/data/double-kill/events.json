@@ -2,9 +2,9 @@
 	"song": {
 		"speed": 3.4,
 		"stage": "cargo",
-		"player1": "greenp",
+		"player1": "bf",
 		"player2": "whitedk",
-		"player3": "gfmira",
+		"player3": "gf-car",
 		"player4": "blackdk",
 		"notes": [
 			{
@@ -20,7 +20,15 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						1200,
+						-1,
+						"flash",
+						"",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -962,7 +970,15 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						106800,
+						-1,
+						"Double Kill Events",
+						"darken",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -1106,7 +1122,15 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						126000,
+						-1,
+						"Double Kill Events",
+						"brighten",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -2165,6 +2189,15 @@
 						""
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
