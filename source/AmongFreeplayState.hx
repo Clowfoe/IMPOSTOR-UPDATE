@@ -176,6 +176,8 @@ class AmongFreeplayState extends MusicBeatState
 		portrait.animation.addByIndices('bpmar', 'Character', [36], null, 24, true);
 		portrait.animation.addByIndices('grinch', 'Character', [37], null, 24, true);
 		portrait.animation.addByIndices('redmunp', 'Character', [38], null, 24, true);
+		portrait.animation.addByIndices('nuzzus', 'Character', [39], null, 24, true);
+		portrait.animation.addByIndices('monotoner', 'Character', [40], null, 24, true);
 		portrait.animation.play('red');
 		portrait.antialiasing = true;
 		portrait.setPosition(304.65, -100);
@@ -547,10 +549,10 @@ class AmongFreeplayState extends MusicBeatState
 				["Ow", "kills", 'kills', FlxColor.fromRGB(84, 167, 202)],
 				["Who", "whoguys", 'who', FlxColor.fromRGB(22, 65, 240)],
 				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK],
-				["Sussus Nuzzus", "nuzzles", 'red', FlxColor.RED],
+				["Sussus Nuzzus", "nuzzles", 'nuzzus', FlxColor.BLACK],
 				["Drippypop", "drippy", 'pop', FlxColor.fromRGB(188, 106, 223)],
 				["Crewicide", "dave", 'dave', FlxColor.BLUE],
-				["Monotone Attack", "attack", 'red', FlxColor.fromRGB(84, 167, 202)],
+				["Monotone Attack", "attack", 'monotoner', FlxColor.WHITE],
 				["Top 10", "top", 'top', FlxColor.RED]
 			],
 

@@ -1348,6 +1348,8 @@ class PlayState extends MusicBeatState
 	
 			case 'ejected':
 				defaultCamZoom = 0.45;
+				GameOverSubstate.deathSoundName = 'ejected_death';
+				GameOverSubstate.characterName = 'bf-fall';
 				curStage = 'ejected';
 				cloudScroll = new FlxTypedGroup<FlxSprite>();
 				farClouds = new FlxTypedGroup<FlxSprite>();
