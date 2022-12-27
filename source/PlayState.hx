@@ -306,7 +306,14 @@ class PlayState extends MusicBeatState
 	//double kill
 	var cargoDark:FlxSprite;
 	var cargoDarkFG:FlxSprite;
+	var cargoAirsip:FlxSprite;
 	var cargoDarken:Bool;
+	var cargoReadyKill:Bool;
+	var showDlowDK:Bool;
+
+	var lightoverlayDK:FlxSprite;
+	var mainoverlayDK:FlxSprite;
+	var defeatDKoverlay:FlxSprite;
 	// defeat
 	var defeatthing:FlxSprite;
 	var defeatblack:FlxSprite;
@@ -836,6 +843,15 @@ class PlayState extends MusicBeatState
 				cargoDark.scrollFactor.set();
 				cargoDark.alpha = 0.001;
 				add(cargoDark);
+				
+				cargoAirsip = new FlxSprite(2200, 800).loadGraphic(Paths.image('airship/airshipFlashback', 'impostor'));
+				cargoAirsip.antialiasing = true;
+				cargoAirsip.updateHitbox();
+				cargoAirsip.scrollFactor.set(1,1);
+				cargoAirsip.setGraphicSize(Std.int(cargoAirsip.width * 1.3));
+				cargoAirsip.alpha = 0.001;
+				add(cargoAirsip);
+		
 
 				cargoDarkFG = new FlxSprite(-1000, -1000).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 				cargoDarkFG.antialiasing = true;
@@ -2450,21 +2466,29 @@ class PlayState extends MusicBeatState
 				mainoverlay.active = false;
 				add(mainoverlay);
 			case 'cargo':
-				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/scavd', 'impostor'));
-				lightoverlay.antialiasing = true;
-				lightoverlay.scrollFactor.set(1, 1);
-				lightoverlay.active = false;
-				lightoverlay.alpha = 0.51;
-				lightoverlay.blend = ADD;
-				add(lightoverlay);
+				lightoverlayDK = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/scavd', 'impostor'));
+				lightoverlayDK.antialiasing = true;
+				lightoverlayDK.scrollFactor.set(1, 1);
+				lightoverlayDK.active = false;
+				lightoverlayDK.alpha = 0.51;
+				lightoverlayDK.blend = ADD;
+				add(lightoverlayDK);
 
-				var mainoverlay:FlxSprite = new FlxSprite(-100, 0).loadGraphic(Paths.image('airship/overlay ass dk', 'impostor'));
-				mainoverlay.antialiasing = true;
-				mainoverlay.scrollFactor.set(1, 1);
-				mainoverlay.active = false;
-				mainoverlay.alpha = 0.6;
-				mainoverlay.blend = ADD;
-				add(mainoverlay);
+				mainoverlayDK = new FlxSprite(-100, 0).loadGraphic(Paths.image('airship/overlay ass dk', 'impostor'));
+				mainoverlayDK.antialiasing = true;
+				mainoverlayDK.scrollFactor.set(1, 1);
+				mainoverlayDK.active = false;
+				mainoverlayDK.alpha = 0.6;
+				mainoverlayDK.blend = ADD;
+				add(mainoverlayDK);
+
+				defeatDKoverlay = new FlxSprite(900, 350).loadGraphic(Paths.image('iluminao omaga'));
+				defeatDKoverlay.antialiasing = true;
+				defeatDKoverlay.scrollFactor.set(1, 1);
+				defeatDKoverlay.active = false;
+				defeatDKoverlay.blend = ADD;
+				defeatDKoverlay.alpha = 0.001;
+				add(defeatDKoverlay);
 
 				add(cargoDarkFG);
 			case 'lounge':
@@ -2791,7 +2815,7 @@ class PlayState extends MusicBeatState
 		blammedLightsBlack.alpha = 0.0;
 		#end
 
-		if (ClientPrefs.charOverrides[1] != '' && ClientPrefs.charOverrides[1] != 'gf')
+		if (ClientPrefs.charOverrides[1] != '' && ClientPrefs.charOverrides[1] != 'gf' && !isStoryMode)
 		{
 			SONG.player3 = ClientPrefs.charOverrides[1];
 		}
@@ -2874,7 +2898,7 @@ class PlayState extends MusicBeatState
 		{
 			SONG.player1 = 'henryphone';
 		}
-		else if (ClientPrefs.charOverrides[0] != '' && ClientPrefs.charOverrides[0] != 'bf')
+		else if (ClientPrefs.charOverrides[0] != '' && ClientPrefs.charOverrides[0] != 'bf' && !isStoryMode)
 		{
 			SONG.player1 = ClientPrefs.charOverrides[0];
 		}
@@ -5035,11 +5059,21 @@ class PlayState extends MusicBeatState
 					dad.alpha = FlxMath.lerp(dad.alpha, 0.001, CoolUtil.boundTo(elapsed * 1.4, 0, 1));
 					mom.alpha = FlxMath.lerp(mom.alpha, 0.001, CoolUtil.boundTo(elapsed * 1.4, 0, 1));
 					pet.alpha = FlxMath.lerp(pet.alpha, 0.001, CoolUtil.boundTo(elapsed * 1.4, 0, 1));
+					mainoverlayDK.alpha = FlxMath.lerp(mainoverlayDK.alpha, 0.001, CoolUtil.boundTo(elapsed * 1.4, 0, 1));
+					lightoverlayDK.alpha = FlxMath.lerp(lightoverlayDK.alpha, 0.001, CoolUtil.boundTo(elapsed * 1.4, 0, 1));					
 				}
 
-				if (Conductor.songPosition >= 0 && Conductor.songPosition < 1200){
+				if(showDlowDK){
+					cargoAirsip.alpha = FlxMath.lerp(cargoAirsip.alpha, 0.2, CoolUtil.boundTo(elapsed * 0.05, 0, 1));
+				}
+
+				if (Conductor.songPosition >= 0 && Conductor.songPosition < 1200 ){
 					cargoDarkFG.alpha -= 0.005;
-					FlxG.camera.zoom += 0.003;
+					FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, CoolUtil.boundTo(elapsed * 3, 0, 1));
+				}
+				if (cargoReadyKill){
+					cargoDarkFG.alpha += 0.015;
+					FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, CoolUtil.boundTo(elapsed * 3, 0, 1));
 				}
 		}
 
@@ -6111,14 +6145,44 @@ class PlayState extends MusicBeatState
 						case 'darken':
 							cargoDarken = true;
 							camGame.flash(FlxColor.BLACK, 0.55);
+						case 'airship':
+							showDlowDK = true;
 						case 'brighten':
+							showDlowDK = false;
 							cargoDarken = false;
+							cargoAirsip.alpha = 0.001;
 							cargoDark.alpha = 0.001;
 							dad.alpha = 1;
 							mom.alpha = 1;
 							pet.alpha = 1;
-							FlxG.camera.zoom += 0.1;
-							camHUD.zoom += 0.2;
+							lightoverlayDK.alpha = 1;
+							mainoverlayDK.alpha = 1;
+						
+						case 'gonnakill':
+							cargoReadyKill = true;
+						case 'readykill':
+							triggerEventNote('Change Character', '0', 'bf-defeat-normal');
+							defeatDKoverlay.alpha = 1;
+							lightoverlayDK.alpha = 0;
+							mainoverlayDK.alpha = 0;
+							cargoDarkFG.alpha = 0;
+							cargoDark.alpha = 1;
+							cargoReadyKill = false;
+							dad.alpha = 0;
+							pet.alpha = 0;
+							timeBar.alpha = 0;
+							timeBarBG.alpha = 0;
+							timeTxt.alpha = 0;
+							healthBar.alpha = 0;
+							healthBarBG.alpha = 0;
+							iconP1.alpha = 0;
+							iconP2.alpha = 0;
+						case 'kill':
+							camGame.flash(FlxColor.RED, 2.75);
+							mom.alpha = 0;
+							boyfriend.alpha = 0;
+							camHUD.visible = false;
+							defeatDKoverlay.alpha = 0;
 					}
 				case 'Reactor Beep':
 					var charType:Float = Std.parseFloat(value1);

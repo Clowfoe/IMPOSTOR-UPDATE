@@ -344,11 +344,13 @@ class AmongFreeplayState extends MusicBeatState
 		curSelected += change;
 		if (curSelected < 0)
 		{
+			changeWeek(-1);
 			curSelected = 0;
 		}
 		else if (curSelected > listOfButtons.length - 1)
 		{
-			curSelected = listOfButtons.length - 1;
+			changeWeek(1);
+			curSelected = 0;
 		}
 		else
 		{
@@ -407,8 +409,7 @@ class AmongFreeplayState extends MusicBeatState
 				["Sussus Toogus", "crewmate", 'green', FlxColor.fromRGB(0, 255, 0)],
 				["Lights Down", "impostor3", 'green', FlxColor.fromRGB(0, 255, 0)],
 				["Reactor", "impostor3", 'green', FlxColor.fromRGB(0, 255, 0)],
-				["Ejected", "parasite", 'para', FlxColor.fromRGB(0, 255, 0)],
-				["Double Trouble", 'dt', 'para', FlxColor.fromRGB(0, 255, 0)]
+				["Ejected", "parasite", 'para', FlxColor.fromRGB(0, 255, 0)]
 			],
 
 			section: 0

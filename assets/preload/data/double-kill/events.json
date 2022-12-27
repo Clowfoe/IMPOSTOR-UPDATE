@@ -2,9 +2,9 @@
 	"song": {
 		"speed": 3.4,
 		"stage": "cargo",
-		"player1": "bf",
+		"player1": "stick-bf",
 		"player2": "whitedk",
-		"player3": "gf-car",
+		"player3": "gfmira",
 		"player4": "blackdk",
 		"notes": [
 			{
@@ -718,13 +718,6 @@
 						"Both Opponents",
 						"1",
 						""
-					],
-					[
-						82794.375,
-						-1,
-						"Both Opponents",
-						"0",
-						""
 					]
 				],
 				"bpm": 0,
@@ -1050,7 +1043,15 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						116400,
+						-1,
+						"Double Kill Events",
+						"airship",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -1129,6 +1130,13 @@
 						"Double Kill Events",
 						"brighten",
 						""
+					],
+					[
+						126009.375,
+						-1,
+						"Add Camera Zoom",
+						"0.1",
+						"0.3"
 					]
 				],
 				"bpm": 0,
@@ -2175,17 +2183,41 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						246379.220779221,
+						246447.402597402,
 						-1,
 						"Opponent Two",
 						"",
 						""
 					],
 					[
-						246447.402597402,
+						246379.220779221,
+						-1,
+						"Double Kill Events",
+						"gonnakill",
+						""
+					],
+					[
+						246515.584415584,
 						-1,
 						"Opponent Two",
-						"",
+						"readykill",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						247470.12987013,
+						-1,
+						"Double Kill Events",
+						"readykill",
 						""
 					]
 				],
@@ -2476,16 +2508,15 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						282379.220779221,
+						-1,
+						"Double Kill Events",
+						"kill",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
