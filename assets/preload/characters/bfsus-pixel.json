@@ -1,114 +1,114 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				10,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "idle",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				10,
-				0
-			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "left",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				10,
-				0
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				10,
-				0
-			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "up",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				10,
-				0
-			],
-			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "right",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				10,
-				0
-			],
-			"anim": "singLEFTmiss",
-			"fps": 24,
-			"name": "missleft",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				10,
-				0
-			],
-			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "missdown",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				10,
-				0
-			],
-			"anim": "singUPmiss",
-			"fps": 24,
-			"name": "missup",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				10,
-				0
-			],
-			"anim": "singRIGHTmiss",
-			"fps": 24,
-			"name": "missright",
-			"indices": []
-		},
-		{
-			"offsets": [
-				10,
-				0
-			],
 			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				10,
+				0
+			],
+			"loop": false,
 			"fps": 24,
-			"anim": "shoot",
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				10,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				10,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				10,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				10,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "missleft"
+		},
+		{
+			"offsets": [
+				10,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "missdown"
+		},
+		{
+			"offsets": [
+				10,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "missup"
+		},
+		{
+			"offsets": [
+				10,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "missright"
+		},
+		{
 			"loop": true,
-			"name": "shoot"
+			"offsets": [
+				10,
+				0
+			],
+			"anim": "shoot",
+			"fps": 24,
+			"name": "shoot",
+			"indices": []
 		}
 	],
 	"no_antialiasing": true,
