@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "loggfriend"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "loggfriend"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/LOGGOFRIEND",
+	"position": [
+		100,
+		60
+	],
+	"healthicon": "fella",
+	"flip_x": false,
+	"healthbar_colors": [
+		40,
+		144,
+		86
+	],
+	"camera_position": [
+		-160,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

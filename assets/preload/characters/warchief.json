@@ -8,122 +8,58 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "WIdle",
+			"name": "idle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-17,
-				-89
+				-35,
+				-114
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "WLeft",
+			"name": "left",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-73,
-				-111
+				-153,
+				-161
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "WDown",
+			"name": "down",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-84,
-				-64
+				-86,
+				-115
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "WUp",
+			"name": "up",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-81,
-				-72
+				-167,
+				-114
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "WRight",
+			"name": "right",
 			"indices": []
-		},
-		{
-			"offsets": [
-				-73,
-				-111
-			],
-			"indices": [
-				2,
-				3,
-				4,
-				5
-			],
-			"fps": 24,
-			"anim": "singDOWN-loop",
-			"loop": true,
-			"name": "WDown"
-		},
-		{
-			"offsets": [
-				-84,
-				-64
-			],
-			"indices": [
-				2,
-				3,
-				4,
-				5
-			],
-			"fps": 24,
-			"anim": "singUP-loop",
-			"loop": true,
-			"name": "WUp"
-		},
-		{
-			"offsets": [
-				-17,
-				-89
-			],
-			"indices": [
-				2,
-				3,
-				4,
-				5
-			],
-			"fps": 24,
-			"anim": "singLEFT-loop",
-			"loop": true,
-			"name": "WLeft"
-		},
-		{
-			"offsets": [
-				-81,
-				-72
-			],
-			"indices": [
-				2,
-				3,
-				4,
-				5
-			],
-			"fps": 24,
-			"anim": "singRIGHT-loop",
-			"loop": true,
-			"name": "WRight"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/warchief",
 	"position": [
-		-120,
+		-150,
 		190
 	],
 	"healthicon": "warchief",
