@@ -1340,6 +1340,7 @@ class PlayState extends MusicBeatState
 				chefBluelight.antialiasing = true;
 				chefBluelight.scrollFactor.set(1, 1);
 				chefBluelight.active = false;
+				chefBluelight.blend = ADD;
 
 				chefBlacklight = new FlxSprite(0, -300).loadGraphic(Paths.image('chef/black_overhead_shadow', 'impostor'));
 				chefBlacklight.antialiasing = true;
@@ -1350,6 +1351,8 @@ class PlayState extends MusicBeatState
 				defaultCamZoom = 0.45;
 				GameOverSubstate.deathSoundName = 'ejected_death';
 				GameOverSubstate.characterName = 'bf-fall';
+				GameOverSubstate.loopSoundName = 'new_Gameover';
+				GameOverSubstate.endSoundName = 'gameover-New_end';
 				curStage = 'ejected';
 				cloudScroll = new FlxTypedGroup<FlxSprite>();
 				farClouds = new FlxTypedGroup<FlxSprite>();
@@ -2447,7 +2450,7 @@ class PlayState extends MusicBeatState
 				mainoverlay.active = false;
 				add(mainoverlay);
 			case 'cargo':
-				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/lights help', 'impostor'));
+				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/scavd', 'impostor'));
 				lightoverlay.antialiasing = true;
 				lightoverlay.scrollFactor.set(1, 1);
 				lightoverlay.active = false;
@@ -2455,7 +2458,7 @@ class PlayState extends MusicBeatState
 				lightoverlay.blend = ADD;
 				add(lightoverlay);
 
-				var mainoverlay:FlxSprite = new FlxSprite(-100, 0).loadGraphic(Paths.image('airship/lights help', 'impostor'));
+				var mainoverlay:FlxSprite = new FlxSprite(-100, 0).loadGraphic(Paths.image('airship/overlay ass dk', 'impostor'));
 				mainoverlay.antialiasing = true;
 				mainoverlay.scrollFactor.set(1, 1);
 				mainoverlay.active = false;
