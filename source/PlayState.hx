@@ -1558,7 +1558,7 @@ class PlayState extends MusicBeatState
 				windowlights.alpha = 0.31;
 				windowlights.blend = ADD;
 
-				leftblades = new FlxSprite(203.05, -270);
+				leftblades = new FlxSprite(213.05, -370);
 				leftblades.frames = Paths.getSparrowAtlas('leftblades');
 				leftblades.animation.addByPrefix('spin', 'blad', 24, false);
 				leftblades.animation.play('spin');
@@ -1566,7 +1566,7 @@ class PlayState extends MusicBeatState
 				leftblades.scrollFactor.set(1.4, 1.4);
 				leftblades.active = true;
 
-				rightblades = new FlxSprite(837.75, -270);
+				rightblades = new FlxSprite(827.75, -370);
 				rightblades.frames = Paths.getSparrowAtlas('rightblades');
 				rightblades.animation.addByPrefix('spin', 'blad', 24, false);
 				rightblades.animation.play('spin');
@@ -2541,7 +2541,7 @@ class PlayState extends MusicBeatState
 				
 				torlight = new FlxSprite(-410, -480.45).loadGraphic(Paths.image('torture_glow'));
 				torlight.antialiasing = true;
-				torlight.scrollFactor.set(1.3, 1.3);
+				torlight.scrollFactor.set(1.1, 1);
 				torlight.active = false;
 				torlight.alpha = 0.25;
 				torlight.blend = ADD;
@@ -8305,8 +8305,7 @@ class PlayState extends MusicBeatState
 				}
 
 				if(curBeat == 256){
-					camZooming = false;
-					cameraLocked = true;
+					camZooming = false; 	
 
 					ROZEBUD_ILOVEROZEBUD_HEISAWESOME.visible = true;
 					ROZEBUD_ILOVEROZEBUD_HEISAWESOME.animation.play("thing");
@@ -8316,9 +8315,8 @@ class PlayState extends MusicBeatState
 					FlxTween.tween(camGame.camera, {zoom: defaultCamZoom - 0.5}, 4*Conductor.crochet/1000, {ease: FlxEase.quintOut});
 					//defaultCamZoom -= 0.3;
 				}
-				if(curBeat == 271){
+				if(curBeat == 272){
 					camZooming = true;
-					cameraLocked = false;
 				}
 	
 			case 'victory':
