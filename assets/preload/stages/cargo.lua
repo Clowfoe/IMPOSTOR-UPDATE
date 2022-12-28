@@ -30,35 +30,35 @@ function onUpdate()
     if followchars == true then
         if mustHitSection == false then
             setProperty('defaultCamZoom',0.8)
-            if getProperty('dad.animation.curAnim.name') == 'singLEFT' then
-                triggerEvent('Camera Follow Pos',xx-ofs,yy)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singRIGHT' then
-                triggerEvent('Camera Follow Pos',xx+ofs,yy)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singUP' then
-                triggerEvent('Camera Follow Pos',xx,yy-ofs)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singDOWN' then
-                triggerEvent('Camera Follow Pos',xx,yy+ofs)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singLEFT-alt' then
-                triggerEvent('Camera Follow Pos',xx-ofs,yy)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singRIGHT-alt' then
-                triggerEvent('Camera Follow Pos',xx+ofs,yy)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singUP-alt' then
-                triggerEvent('Camera Follow Pos',xx,yy-ofs)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singDOWN-alt' then
-                triggerEvent('Camera Follow Pos',xx,yy+ofs)
-            end
             if getProperty('dad.animation.curAnim.name') == 'idle-alt' then
                 triggerEvent('Camera Follow Pos',xx,yy)
             end
             if getProperty('dad.animation.curAnim.name') == 'idle' then
                 triggerEvent('Camera Follow Pos',xx,yy)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singLEFT' or getProperty('mom.animation.curAnim.name') == 'singLEFT' then
+                triggerEvent('Camera Follow Pos',xx-ofs,yy)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singRIGHT' or getProperty('mom.animation.curAnim.name') == 'singRIGHT' then
+                triggerEvent('Camera Follow Pos',xx+ofs,yy)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singUP' or getProperty('mom.animation.curAnim.name') == 'singUP' then
+                triggerEvent('Camera Follow Pos',xx,yy-ofs)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singDOWN' or getProperty('mom.animation.curAnim.name') == 'singDOWN' then
+                triggerEvent('Camera Follow Pos',xx,yy+ofs)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singLEFT-alt' or getProperty('mom.animation.curAnim.name') == 'singLEFT-alt' then
+                triggerEvent('Camera Follow Pos',xx-ofs,yy)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singRIGHT-alt' or getProperty('mom.animation.curAnim.name') == 'singRIGHT-alt' then
+                triggerEvent('Camera Follow Pos',xx+ofs,yy)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singUP-alt' or getProperty('mom.animation.curAnim.name') == 'singUP-alt' then
+                triggerEvent('Camera Follow Pos',xx,yy-ofs)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singDOWN-alt' or getProperty('mom.animation.curAnim.name') == 'singDOWN-alt' then
+                triggerEvent('Camera Follow Pos',xx,yy+ofs)
             end
         else
 
@@ -98,8 +98,8 @@ function onUpdate()
 	end
     if curBeat >= 552 and curBeat < 556 then
 		setProperty('defaultCamZoom',1.2)
-        xx = 1550;
-        yy = 1250;  
+        xx = 1650;
+        yy = 1180;  
 	end
     if curBeat == 556 then
         xx = 2000;

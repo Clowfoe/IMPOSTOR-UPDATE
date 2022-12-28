@@ -446,6 +446,10 @@ class PlayState extends MusicBeatState
 	var montymole:FlxSprite;
 	var torlight:FlxSprite;
 
+	//drippypop arse
+	var redDropped:Bool;
+	var drippyRed:FlxSprite;
+
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
@@ -1627,6 +1631,15 @@ class PlayState extends MusicBeatState
 				bg.scrollFactor.set(1, 1);
 				bg.active = false;
 				add(bg);
+
+				drippyRed = new  FlxSprite(390, 190);
+				drippyRed.frames = Paths.getSparrowAtlas('drip/REDdripper', 'impostor');
+				drippyRed.animation.addByPrefix('idle', 'dripbodyred copy', 24, false);
+				drippyRed.animation.addByPrefix('drop', 'RED DROP DOWN', 24, false);
+				drippyRed.animation.addByPrefix('die', 'RED DIE', 24, false);
+				drippyRed.antialiasing = true;
+				drippyRed.animation.play('idle');
+				add(drippyRed);
 
 			case 'tomtus': // emihead made peak
 				curStage = 'tomtus';
@@ -3258,8 +3271,8 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
-		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
-		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt = new FlxText(400, healthBarBG.y - 55, FlxG.width - 800, "Be_Impostor.exe", 32);
+		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
@@ -5064,7 +5077,7 @@ class PlayState extends MusicBeatState
 				}
 
 				if(showDlowDK){
-					cargoAirsip.alpha = FlxMath.lerp(cargoAirsip.alpha, 0.2, CoolUtil.boundTo(elapsed * 0.05, 0, 1));
+					cargoAirsip.alpha = FlxMath.lerp(cargoAirsip.alpha, 0.3, CoolUtil.boundTo(elapsed * 0.1, 0, 1));
 				}
 
 				if (Conductor.songPosition >= 0 && Conductor.songPosition < 1200 ){
@@ -5075,6 +5088,15 @@ class PlayState extends MusicBeatState
 					cargoDarkFG.alpha += 0.015;
 					FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, CoolUtil.boundTo(elapsed * 3, 0, 1));
 				}
+			
+			case 'drippypop':
+				/*if(!SONG.notes[id].mustHitSection && !redDropped)
+				{
+					if(curStep % 4 == 0){
+						//wip drippy for later
+						trace("hello!");
+					}
+				}*/
 		}
 
 		if (!inCutscene)
@@ -5464,6 +5486,11 @@ class PlayState extends MusicBeatState
 							mom.holdTimer = 0;
 							dad.playAnim(animToPlay + altAnim, true);
 							dad.holdTimer = 0;
+							switch(curStage){
+								case 'cargo':
+									healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
+									iconP2.changeIcon('whiteblack');
+							}
 						}
 						else if (daNote.noteType == 'Opponent 2 Sing' || opponent2sing == true)
 						{
@@ -5482,16 +5509,23 @@ class PlayState extends MusicBeatState
 									// if (daNote != animNote)
 									// mom.playGhostAnim(chord.indexOf(daNote)-1, animToPlay, true);
 				
-									mom.mostRecentRow = daNote.row;
+									
 									// mom.angle += 15; lmaooooo
 									if (!daNote.noAnimation)
 									{
-										doGhostAnim('mom', animToPlay + altAnim);
+										if(mom.mostRecentRow != daNote.row)
+											doGhostAnim('mom', animToPlay + altAnim);
 									}
+									mom.mostRecentRow = daNote.row;
 								}
 								else{
 									mom.playAnim(animToPlay + altAnim, true);
 									// mom.angle = 0;
+								}
+								switch(curStage){
+									case 'cargo':
+										healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
+										iconP2.changeIcon('black');
 								}
 						}
 						else
@@ -5511,16 +5545,22 @@ class PlayState extends MusicBeatState
 									// if (daNote != animNote)
 									// dad.playGhostAnim(chord.indexOf(daNote)-1, animToPlay, true);
 				
-									dad.mostRecentRow = daNote.row;
 									// dad.angle += 15; lmaooooo
 									if (!daNote.noAnimation)
 									{
-										doGhostAnim('dad', animToPlay + altAnim);
+										if(dad.mostRecentRow != daNote.row)
+											doGhostAnim('dad', animToPlay + altAnim);
 									}
+									dad.mostRecentRow = daNote.row;
 								}
 								else{
 									dad.playAnim(animToPlay + altAnim, true);
 									// dad.angle = 0;
+								}
+								switch(curStage){
+									case 'cargo':
+										healthBar.createColoredEmptyBar(FlxColor.fromRGB(209,210,248));    
+										iconP2.changeIcon('white');
 								}
 						}
 
@@ -6155,8 +6195,8 @@ class PlayState extends MusicBeatState
 							dad.alpha = 1;
 							mom.alpha = 1;
 							pet.alpha = 1;
-							lightoverlayDK.alpha = 1;
-							mainoverlayDK.alpha = 1;
+							lightoverlayDK.alpha = 0.51;
+							mainoverlayDK.alpha = 0.6;
 						
 						case 'gonnakill':
 							cargoReadyKill = true;
@@ -6436,10 +6476,10 @@ class PlayState extends MusicBeatState
 				case 'Opponent Two':
 					opponent2sing = !opponent2sing;
 					bothOpponentsSing = false;
-					
+
 				case 'Both Opponents':
 					bothOpponentsSing = !bothOpponentsSing;
-	
+					
 				case 'scream danger':
 					airshipskyflash.alpha = 1;
 					airshipskyflash.animation.play('bop', false);
@@ -7823,12 +7863,14 @@ class PlayState extends MusicBeatState
 							// if (daNote != animNote)
 							// dad.playGhostAnim(chord.indexOf(daNote)-1, animToPlay, true);
 		
-							boyfriend.mostRecentRow = note.row;
+							
 							// dad.angle += 15; lmaooooo
 							if (!note.noAnimation)
 							{
-								doGhostAnim('bf', animToPlay + daAlt);
+								if(boyfriend.mostRecentRow != note.row)
+									doGhostAnim('bf', animToPlay + daAlt);
 							}
+							boyfriend.mostRecentRow = note.row;
 						}
 						else{
 							boyfriend.playAnim(animToPlay + daAlt, true);
