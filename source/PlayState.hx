@@ -511,6 +511,9 @@ class PlayState extends MusicBeatState
 	var stageFront3:FlxSprite;
 	var overlay:FlxSprite;
 
+	var bodies2:FlxSprite;
+	var bodies:FlxSprite;
+
 	//stealing from reactor for victory hey guys
 	var victoryDarkness:FlxSprite;
 
@@ -2138,18 +2141,20 @@ class PlayState extends MusicBeatState
 				defeatthing.active = true;
 				add(defeatthing);
 
-				var bodies2:FlxSprite = new FlxSprite(-500, 150).loadGraphic(Paths.image('lol thing'));
+				bodies2 = new FlxSprite(-500, 150).loadGraphic(Paths.image('lol thing'));
 				bodies2.antialiasing = true;
 				bodies2.setGraphicSize(Std.int(bodies2.width * 1.3));
 				bodies2.scrollFactor.set(0.9, 0.9);
 				bodies2.active = false;
+				bodies2.alpha = 0;
 				add(bodies2);
 
-				var bodies:FlxSprite = new FlxSprite(-2760, 0).loadGraphic(Paths.image('deadBG'));
+				bodies = new FlxSprite(-2760, 0).loadGraphic(Paths.image('deadBG'));
 				bodies.setGraphicSize(Std.int(bodies.width * 0.4));
 				bodies.antialiasing = true;
 				bodies.scrollFactor.set(0.9, 0.9);
 				bodies.active = false;
+				bodies.alpha = 0;
 				add(bodies);
 
 				defeatblack = new FlxSprite().makeGraphic(FlxG.width * 4, FlxG.height + 700, FlxColor.BLACK);
@@ -2158,11 +2163,21 @@ class PlayState extends MusicBeatState
 				defeatblack.screenCenter(Y);
 				add(defeatblack);
 
+				mainoverlayDK = new FlxSprite(250, 125).loadGraphic(Paths.image('defeatfnf'));
+				mainoverlayDK.antialiasing = true;
+				mainoverlayDK.scrollFactor.set(1, 1);
+				mainoverlayDK.active = false;
+				mainoverlayDK.setGraphicSize(Std.int(mainoverlayDK.width * 2));
+				mainoverlayDK.alpha = 0;
+				add(mainoverlayDK);
+				
+
 				bodiesfront = new FlxSprite(-2830, 0).loadGraphic(Paths.image('deadFG'));
 				bodiesfront.setGraphicSize(Std.int(bodiesfront.width * 0.4));
 				bodiesfront.antialiasing = true;
 				bodiesfront.scrollFactor.set(0.5, 1);
 				bodiesfront.active = false;
+				bodiesfront.alpha = 0;
 
 				missLimited = true;
 
@@ -2464,7 +2479,7 @@ class PlayState extends MusicBeatState
 				saxguy.setGraphicSize(Std.int(saxguy.width * 0.9));
 				saxguy.active = true;
 			case 'defeat':
-				var lightoverlay:FlxSprite = new FlxSprite(-550, -100).loadGraphic(Paths.image('iluminao omaga'));
+				lightoverlay = new FlxSprite(-550, -100).loadGraphic(Paths.image('iluminao omaga'));
 				lightoverlay.antialiasing = true;
 				lightoverlay.scrollFactor.set(1, 1);
 				lightoverlay.active = false;
@@ -4149,6 +4164,9 @@ class PlayState extends MusicBeatState
 			case "tomongus":
 				curPortrait = "tomongus";
 
+			case "idk":
+				curPortrait = "idk";
+
 			case "chewmate":
 				curPortrait = "tomongus";
 
@@ -4160,6 +4178,9 @@ class PlayState extends MusicBeatState
 
 			case "henry":
 				curPortrait = "henry";
+			
+			case "monotone":
+				curPortrait = "shifter";
 
 			case "rhm":
 				curPortrait = "armed";
@@ -4211,6 +4232,15 @@ class PlayState extends MusicBeatState
 			
 			case "Reinforcements":
 				curPortrait = "ellie";
+			
+			case "Turbulence":
+				curPortrait = "turbulence";
+			
+			case "Voting Time":
+				curPortrait = "votingtime";
+
+			case "Torture":
+				curPortrait = "torture";
 
 			case "Who":
 				curPortrait = "who";
@@ -6242,6 +6272,8 @@ class PlayState extends MusicBeatState
 
 					FlxG.camera.zoom += 0.015;
 					camHUD.zoom += 0.03;
+				
+				
 
 				case 'Victory Darkness': //prolly could be done easier but who cares brah
 					if (value1 == 'on')
@@ -6367,6 +6399,40 @@ class PlayState extends MusicBeatState
 							FlxTween.tween(camHUD, {alpha: 1}, 0.7, {ease: FlxEase.quadInOut});
 						case 1:
 							FlxTween.tween(camHUD, {alpha: 0}, 0.7, {ease: FlxEase.quadInOut});
+					}
+				case 'Defeat Fade':
+					var charType:Int = Std.parseInt(value1);
+					if (Math.isNaN(charType))
+						charType = 0;
+
+					switch (charType)
+					{
+						case 0:
+							FlxTween.tween(bodies, {alpha: 1}, 0.7, {ease: FlxEase.quadInOut});
+							FlxTween.tween(bodies2, {alpha: 1}, 0.7, {ease: FlxEase.quadInOut});
+							FlxTween.tween(bodiesfront, {alpha: 1}, 0.7, {ease: FlxEase.quadInOut});
+						case 1:
+							FlxTween.tween(bodies, {alpha: 0}, 0.7, {ease: FlxEase.quadInOut});
+							FlxTween.tween(bodies2, {alpha: 0}, 0.7, {ease: FlxEase.quadInOut});
+							FlxTween.tween(bodiesfront, {alpha: 0}, 0.7, {ease: FlxEase.quadInOut});
+					}
+				case 'Defeat Retro':
+					var charType:Int = Std.parseInt(value1);
+					if (Math.isNaN(charType))
+						charType = 0;
+
+					switch (charType)
+					{
+						case 0:
+							bodiesfront.alpha = 0;
+							lightoverlay.alpha = 0;
+							mainoverlayDK.alpha = 1;
+						case 1:
+							triggerEventNote('Change Character', '0', 'bf-defeat-scared');
+							triggerEventNote('Change Character', '1', 'black');
+							bodiesfront.alpha = 1;
+							lightoverlay.alpha = 1;
+							mainoverlayDK.alpha = 0;
 					}
 
 				case 'Who Buzz':

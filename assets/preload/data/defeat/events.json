@@ -155,7 +155,22 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						20396.875,
+						-1,
+						"Defeat Fade",
+						"0",
+						""
+					],
+					[
+						20393.75,
+						-1,
+						"flash",
+						"1",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -675,7 +690,36 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						87596.875,
+						-1,
+						"Defeat Retro",
+						"0",
+						""
+					],
+					[
+						87587.5,
+						-1,
+						"flash",
+						"0",
+						""
+					],
+					[
+						87590.625,
+						-1,
+						"Change Character",
+						"0",
+						"bf"
+					],
+					[
+						87593.75,
+						-1,
+						"Change Character",
+						"1",
+						"blackold"
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -843,6 +887,20 @@
 						"Add Camera Zoom",
 						"1",
 						""
+					],
+					[
+						107993.75,
+						-1,
+						"flash",
+						"1",
+						""
+					],
+					[
+						107996.875,
+						-1,
+						"Defeat Retro",
+						"1",
+						""
 					]
 				],
 				"bpm": 0,
@@ -862,6 +920,33 @@
 						""
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false

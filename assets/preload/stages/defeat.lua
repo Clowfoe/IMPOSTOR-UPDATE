@@ -178,6 +178,14 @@ function onUpdate()
         xx2 = 750
         yy2 = 500
     end
+    if curBeat == 292 then
+        setProperty('defaultCamZoom',0.75)
+		followchars = true
+        xx = 750
+        yy = 500
+        xx2 = 750
+        yy2 = 500
+    end
     if curBeat == 360 then
         setProperty('defaultCamZoom',0.6)
 		followchars = true

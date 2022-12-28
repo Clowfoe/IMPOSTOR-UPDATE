@@ -109,7 +109,9 @@ class ChartingState extends MusicBeatState
 		['HUD Fade', 'fades da hud'],
 		['Door Open', 'compromised door'],
 		['Victory Darkness', 'let there be dark'],
-		['Show Victory Guy', 'value one is character, value 2 is show or null']
+		['Show Victory Guy', 'value one is character, value 2 is show or null'],
+		['Defeat Fade', 'defeat bodies apear'],
+		['Defeat Retro', 'defeat bodies apear']
 	];
 
 	var _file:FileReference;
