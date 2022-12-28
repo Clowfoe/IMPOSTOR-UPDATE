@@ -5,10 +5,10 @@
 				580,
 				-27
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "black left"
 		},
 		{
@@ -16,10 +16,10 @@
 				365,
 				30
 			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
 			"anim": "idle",
-			"loop": true,
+			"indices": [],
 			"name": "black idle remast"
 		},
 		{
@@ -27,10 +27,10 @@
 				402,
 				-18
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "black right"
 		},
 		{
@@ -38,10 +38,10 @@
 				571,
 				270
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "black down"
 		},
 		{
@@ -49,17 +49,17 @@
 				684,
 				135
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "black up"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/black",
 	"position": [
-		0,
+		180,
 		80
 	],
 	"healthicon": "black",

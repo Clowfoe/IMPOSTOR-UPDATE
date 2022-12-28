@@ -1752,7 +1752,13 @@ class PlayState extends MusicBeatState
 			//	stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 			//	stageFront.updateHitbox();
 			//	add(stageFront);
-
+			case 'idk':
+				curStage = 'idk';
+				var sky:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image('toby'));
+				sky.antialiasing = false;
+				sky.scrollFactor.set(1, 1);
+				sky.active = false;
+				add(sky);
 			case 'polus':
 				curStage = 'polus';
 
