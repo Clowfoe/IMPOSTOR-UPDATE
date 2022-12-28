@@ -215,10 +215,18 @@ class AmongStoryMenuState extends MusicBeatState
 					trace("worked2");
 				}
 				else{
-					if(i > curWeek)
-						shipPlayAnim('right');
-					if(i < curWeek)
-						shipPlayAnim('left');
+					if(i > curWeek){
+						if(i == 5 || i == 6 || i == 7)
+							shipPlayAnim('left');
+						else
+							shipPlayAnim('right');
+					}
+					if(i < curWeek){
+						if(i == 5 || i == 6 || i == 7)
+							shipPlayAnim('right');
+						else
+							shipPlayAnim('left');
+					}
 					
 					curWeek = i;
 

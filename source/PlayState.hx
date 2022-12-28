@@ -3426,6 +3426,9 @@ class PlayState extends MusicBeatState
 				case 'sussus-moogus':
 					startVideo('polus1');
 					piss = false;
+				case 'sabotage':
+					startVideo('polus2');
+					piss = false;
 				case 'sussus-toogus':
 					startVideo('toogus');
 					piss = false;
@@ -7343,7 +7346,7 @@ class PlayState extends MusicBeatState
 			ghost.visible = true;
 
 			switch(curStage.toLowerCase()){
-				case 'who' | 'voting':
+				case 'who' | 'voting' | 'nuzzus':
 					//erm
 				case 'cargo' | 'finale':
 					FlxG.camera.zoom += 0.015;
