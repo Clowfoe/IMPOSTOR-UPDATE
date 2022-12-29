@@ -21,7 +21,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 	var sprDifficultyGroup:FlxTypedGroup<FlxSprite>;
 
 	// hey please automate this sometime soon I'm not a fan of hardcoding this
-	public static var songsWithMissLimits:Array<String> = ['defeat', 'insane streamer'];
+	public static var songsWithMissLimits:Array<String> = ['defeat'];
 
 	var missAmountArrow:FlxSprite;
 	var missTxt:FlxText;
