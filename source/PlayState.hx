@@ -2680,9 +2680,9 @@ class PlayState extends MusicBeatState
 				montymole.active = true;
 				add(montymole);
 				
-				torlight = new FlxSprite(-410, -480.45).loadGraphic(Paths.image('torture_glow'));
+				torlight = new FlxSprite(-410, -480.45).loadGraphic(Paths.image('torture_glow2'));
 				torlight.antialiasing = true;
-				torlight.scrollFactor.set(1.1, 1);
+				torlight.scrollFactor.set(1, 1);
 				torlight.active = false;
 				torlight.alpha = 0.25;
 				torlight.blend = ADD;
@@ -3518,7 +3518,7 @@ class PlayState extends MusicBeatState
 		if (doPush)
 			luaArray.push(new FunkinLua(luaFile));
 		#end
-
+		
 		var daSong:String = Paths.formatToSongPath(curSong);
 		if (isStoryMode && !seenCutscene)
 		{
@@ -3607,6 +3607,18 @@ class PlayState extends MusicBeatState
 					case 'titular':
 						startVideo('polus1'); */
 
+				case "torture":
+					
+					instantStart();
+					
+					if(curStage == "warehouse"){
+						ziffyStart.visible = true;
+						ziffyStart.animation.play("idle", true);
+						ziffyStart.screenCenter(XY);
+						ziffyStart.y -= 120;
+					}
+					camHUD.alpha = 0;
+
 				default:
 					startCountdown();
 			}
@@ -3614,7 +3626,23 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			startCountdown();
+			switch(daSong){
+				case "torture":
+
+					instantStart();
+					
+					if(curStage == "warehouse"){
+						ziffyStart.visible = true;
+						ziffyStart.animation.play("idle", true);
+						ziffyStart.screenCenter(XY);
+						ziffyStart.y -= 120;
+					}
+					camHUD.alpha = 0;
+
+				default:
+					startCountdown();
+			}
+			
 		}
 		RecalculateRating();
 
@@ -4151,8 +4179,7 @@ class PlayState extends MusicBeatState
 								healthBarBG.visible = false;
 								iconP1.visible = false;
 								iconP2.visible = false;
-							case 'warehouse':
-								camHUD.alpha = 0;
+							
 							case 'charles':
 								triggerEventNote('Play Animation', 'intro', 'bf');
 						}
@@ -4229,12 +4256,6 @@ class PlayState extends MusicBeatState
 						});
 						FlxG.sound.play(Paths.sound('introGo' + introSoundsSuffix), 0.6);
 					case 4:
-						if(curStage == "warehouse"){
-							ziffyStart.visible = true;
-							ziffyStart.animation.play("idle", true);
-							ziffyStart.screenCenter(XY);
-							ziffyStart.y -= 120;
-						}
 				}
 
 				notes.forEachAlive(function(note:Note)
@@ -4270,6 +4291,30 @@ class PlayState extends MusicBeatState
 	var previousFrameTime:Int = 0;
 	var lastReportedPlayheadPosition:Int = 0;
 	var songTime:Float = 0;
+
+	function instantStart():Void{
+
+		generateStaticArrows(0);
+		generateStaticArrows(1);
+		for (i in 0...playerStrums.length)
+		{
+			setOnLuas('defaultPlayerStrumX' + i, playerStrums.members[i].x);
+			setOnLuas('defaultPlayerStrumY' + i, playerStrums.members[i].y);
+		}
+		for (i in 0...opponentStrums.length)
+		{
+			setOnLuas('defaultOpponentStrumX' + i, opponentStrums.members[i].x);
+			setOnLuas('defaultOpponentStrumY' + i, opponentStrums.members[i].y);
+			if (ClientPrefs.middleScroll)
+				opponentStrums.members[i].visible = false;
+		}
+
+		startedCountdown = true;
+		canPause = true;
+
+		startSong();
+
+	}
 
 	function startSong():Void
 	{
@@ -4740,7 +4785,7 @@ class PlayState extends MusicBeatState
 				vocals.pause();
 			}
 
-			if (!startTimer.finished)
+			if (startTimer != null && !startTimer.finished)
 				startTimer.active = false;
 			if (finishTimer != null && !finishTimer.finished)
 				finishTimer.active = false;
@@ -4781,7 +4826,7 @@ class PlayState extends MusicBeatState
 				resyncVocals();
 			}
 
-			if (!startTimer.finished)
+			if (startTimer != null && !startTimer.finished)
 				startTimer.active = true;
 			if (finishTimer != null && !finishTimer.finished)
 				finishTimer.active = true;
@@ -4812,7 +4857,7 @@ class PlayState extends MusicBeatState
 			callOnLuas('onResume', []);
 
 			#if desktop
-			if (startTimer.finished)
+			if (startTimer == null || startTimer.finished)
 			{
 				DiscordClient.changePresence(detailsText, SONG.song
 					+ " ("
@@ -8548,7 +8593,7 @@ class PlayState extends MusicBeatState
 				leftblades.animation.play('spin', true);
 				rightblades.animation.play('spin', true);
 
-				if(curBeat == 19){
+				if(curBeat == 24){
 					ziffyStart.visible = false;
 					ziffyStart.destroy();
 				}
@@ -8560,6 +8605,7 @@ class PlayState extends MusicBeatState
 				}
 
 				if(curBeat == 62){
+					FlxG.sound.play(Paths.sound('ziffSaw'), 1);
 					FlxTween.tween(leftblades, {y: leftblades.y + 300}, (Conductor.crochet*4)/1000, {ease: FlxEase.quintOut});
 					FlxTween.tween(rightblades, {y: rightblades.y + 300}, (Conductor.crochet*4)/1000, {ease: FlxEase.quintOut});
 				}
