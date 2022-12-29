@@ -324,6 +324,7 @@ class PlayState extends MusicBeatState
 	var finaleBGStuff:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
 	var finaleFGStuff:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
 	var finaleDarkFG:FlxSprite;
+	var finaleBar:FlxSprite;
 
 	// loggo
 	var peopleloggo:FlxSprite;
@@ -3401,6 +3402,17 @@ class PlayState extends MusicBeatState
         sussusPenisLOL.scrollFactor.set();
         sussusPenisLOL.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         
+
+		if(curStage == 'finalem'){
+			finaleBar = new FlxSprite(0, 530).loadGraphic(Paths.image('healthBarFinale'));
+			finaleBar.setGraphicSize(Std.int(finaleBar.width * 0.6));
+			finaleBar.updateHitbox();
+			finaleBar.x = (FlxG.width / 2) - (finaleBar.width / 2);
+			finaleBar.visible = false;
+			finaleBar.antialiasing = true;
+			finaleBar.cameras = [camHUD];
+			add(finaleBar);
+		}
 
         if (curStage != 'alpha') {
             scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
@@ -6509,6 +6521,9 @@ class PlayState extends MusicBeatState
 					healthBarBG.visible = false;
 					iconP1.visible = false;
 					iconP2.visible = false;
+					finaleBar.visible = true;
+					scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, 0xFFff1266, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+					botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, 0xFFff1266, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
 					camGame.flash(FlxColor.RED, 0.75);
 				case 'Reactor Beep':
