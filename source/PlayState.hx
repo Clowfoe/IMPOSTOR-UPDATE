@@ -5059,6 +5059,11 @@ class PlayState extends MusicBeatState
 		var legPosY = [13, 7, -3, -1, -1, 2, 7, 9, 7, 2, 0, 0, 3, 1, 3, 7, 13];
 		var legPosX = [3, 4, 4, 5, 5, 4, 3, 2, 0, 0, -3, -4, -4, -5, -5, -4, -3];
 
+		if (curStage == 'warehouse'){
+			leftblades.x = (213.05 + 120) - (60 * health);
+			rightblades.x = (827.75 - 120) + (60 * health);
+		}
+
 		if (boyfriend.curCharacter == 'bf-running')
 		{
 			if (boyfriend.animation.curAnim.name.startsWith("sing"))
@@ -8636,10 +8641,15 @@ class PlayState extends MusicBeatState
 						ROZEBUD_ILOVEROZEBUD_HEISAWESOME.destroy();
 					}
 					FlxTween.tween(camGame.camera, {zoom: defaultCamZoom - 0.5}, 4*Conductor.crochet/1000, {ease: FlxEase.quintOut});
-					//defaultCamZoom -= 0.3;
 				}
+
+				if(curBeat == 258){
+					//FlxTween.tween(instance, {health: 2}, 4*Conductor.crochet/1000, {ease: FlxEase.smootherStepInOut});
+				}
+
 				if(curBeat == 272){
 					camZooming = true;
+					FlxTween.tween(instance, {health: 0.05}, 31*Conductor.crochet/1000, {ease: FlxEase.smootherStepOut});
 				}
 	
 			case 'victory':
