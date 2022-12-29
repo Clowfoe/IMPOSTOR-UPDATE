@@ -275,6 +275,8 @@ class PlayState extends MusicBeatState
 	var phillyCityLightsEvent:FlxTypedGroup<BGSprite>;
 	var phillyCityLightsEventTween:FlxTween;
 	var trainSound:FlxSound;
+	
+	var bg5:FlxSprite;
 
 	var limoKillingState:Int = 0;
 	var limo:BGSprite;
@@ -2140,7 +2142,6 @@ class PlayState extends MusicBeatState
 				bg2.scrollFactor.set(0.9, 0.9);
 				bg2.active = true;
 				bg2.scale.set(1.1, 1.1);
-				
 
 				var bg3:FlxSprite = new FlxSprite(370, 1200).loadGraphic(Paths.image('splat'));
 				bg3.updateHitbox();
@@ -2148,6 +2149,20 @@ class PlayState extends MusicBeatState
 				bg3.scrollFactor.set(1, 1);
 				bg3.active = true;
 				bg3.scale.set(1.1, 1.1);
+
+				var bg4:FlxSprite = new FlxSprite(1190, -280).loadGraphic(Paths.image('lamp'));
+				bg4.updateHitbox();
+				bg4.antialiasing = true;
+				bg4.scrollFactor.set(1, 1);
+				bg4.active = true;
+				bg4.scale.set(1.1, 1.1);
+
+				bg5 = new FlxSprite(-750, 160).loadGraphic(Paths.image('fore'));
+				bg5.updateHitbox();
+				bg5.antialiasing = true;
+				bg5.scrollFactor.set(1, 1);
+				bg5.active = true;
+				bg5.scale.set(1.1, 1.1);
 				
 				finaleBGStuff.add(bg0);
 				finaleBGStuff.add(bg1);
@@ -2529,6 +2544,7 @@ class PlayState extends MusicBeatState
 
 		if (curStage == 'finalem'){
 			add(dadGroup);
+			finaleBGStuff.add(bg5);
 		}
 
 		if (curStage == 'voting')
@@ -2604,6 +2620,7 @@ class PlayState extends MusicBeatState
 				lightoverlay.blend = ADD;
 				add(lightoverlay);
 			case 'finalem':
+				
 				lightoverlay = new FlxSprite(-550, 250).loadGraphic(Paths.image('iluminao omaga'));
 				lightoverlay.antialiasing = true;
 				lightoverlay.scrollFactor.set(1, 1);
