@@ -445,6 +445,8 @@ class PlayState extends MusicBeatState
 	var rightblades:FlxSprite;
 	var montymole:FlxSprite;
 	var torlight:FlxSprite;
+	var startDark:FlxSprite;
+	var ziffyStart:FlxSprite;
 
 	//drippypop arse
 	var redDropped:Bool;
@@ -1561,7 +1563,7 @@ class PlayState extends MusicBeatState
 				windowlights.alpha = 0.31;
 				windowlights.blend = ADD;
 
-				leftblades = new FlxSprite(213.05, -370);
+				leftblades = new FlxSprite(213.05, -670);
 				leftblades.frames = Paths.getSparrowAtlas('leftblades');
 				leftblades.animation.addByPrefix('spin', 'blad', 24, false);
 				leftblades.animation.play('spin');
@@ -1569,7 +1571,7 @@ class PlayState extends MusicBeatState
 				leftblades.scrollFactor.set(1.4, 1.4);
 				leftblades.active = true;
 
-				rightblades = new FlxSprite(827.75, -370);
+				rightblades = new FlxSprite(827.75, -670);
 				rightblades.frames = Paths.getSparrowAtlas('rightblades');
 				rightblades.animation.addByPrefix('spin', 'blad', 24, false);
 				rightblades.animation.play('spin');
@@ -2561,6 +2563,19 @@ class PlayState extends MusicBeatState
 				torlight.alpha = 0.25;
 				torlight.blend = ADD;
 				add(torlight);
+
+				startDark = new FlxSprite().makeGraphic(2000, 2000, 0xFF000000);
+				startDark.screenCenter(XY);
+				startDark.scrollFactor.set(0, 0);
+				add(startDark);
+
+				ziffyStart = new FlxSprite();
+				ziffyStart.frames = Paths.getSparrowAtlas('torture_startZiffy');
+				ziffyStart.animation.addByPrefix('idle', 'Opening', 24, false);
+				ziffyStart.visible = false;
+				ziffyStart.screenCenter(XY);
+				ziffyStart.scrollFactor.set(0, 0);
+				add(ziffyStart);
 
 				/*var torGlow:FlxSprite = new FlxSprite(-646.8, -480.45).loadGraphic(Paths.image('torture_overlay'));
 				torlight.antialiasing = true;
@@ -4081,6 +4096,12 @@ class PlayState extends MusicBeatState
 						});
 						FlxG.sound.play(Paths.sound('introGo' + introSoundsSuffix), 0.6);
 					case 4:
+						if(curStage == "warehouse"){
+							ziffyStart.visible = true;
+							ziffyStart.animation.play("idle", true);
+							ziffyStart.screenCenter(XY);
+							ziffyStart.y -= 120;
+						}
 				}
 
 				notes.forEachAlive(function(note:Note)
@@ -8364,10 +8385,23 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'warehouse':
-				if (curBeat % 1 == 0)
-				{
-					leftblades.animation.play('spin', true);
-					rightblades.animation.play('spin', true);
+				leftblades.animation.play('spin', true);
+				rightblades.animation.play('spin', true);
+
+				if(curBeat == 19){
+					ziffyStart.visible = false;
+					ziffyStart.destroy();
+				}
+
+				if(curBeat == 32){
+					FlxTween.tween(startDark, {alpha: 0}, (Conductor.crochet*28)/1000, {onComplete: function(t){
+						startDark.destroy();
+					}});
+				}
+
+				if(curBeat == 62){
+					FlxTween.tween(leftblades, {y: leftblades.y + 300}, (Conductor.crochet*4)/1000, {ease: FlxEase.quintOut});
+					FlxTween.tween(rightblades, {y: rightblades.y + 300}, (Conductor.crochet*4)/1000, {ease: FlxEase.quintOut});
 				}
 
 				if(curBeat == 256){

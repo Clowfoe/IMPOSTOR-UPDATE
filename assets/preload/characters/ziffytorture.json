@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				-15,
-				13
+				-16,
+				15
 			],
 			"loop": false,
 			"fps": 24,
@@ -24,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				-28,
-				-22
+				-26,
+				-21
 			],
 			"loop": false,
 			"fps": 24,
@@ -36,7 +36,7 @@
 		{
 			"offsets": [
 				-39,
-				51
+				48
 			],
 			"loop": false,
 			"fps": 24,
@@ -46,7 +46,7 @@
 		},
 		{
 			"offsets": [
-				-33,
+				-32,
 				-18
 			],
 			"loop": false,
@@ -57,8 +57,8 @@
 		},
 		{
 			"offsets": [
-				-6,
-				22
+				-9,
+				21
 			],
 			"loop": false,
 			"fps": 24,
@@ -69,7 +69,7 @@
 		{
 			"offsets": [
 				-8,
-				-11
+				-8
 			],
 			"loop": false,
 			"fps": 24,
@@ -79,8 +79,8 @@
 		},
 		{
 			"offsets": [
-				-40,
-				49
+				-41,
+				48
 			],
 			"loop": false,
 			"fps": 24,
@@ -90,8 +90,8 @@
 		},
 		{
 			"offsets": [
-				-39,
-				30
+				-36,
+				29
 			],
 			"loop": false,
 			"fps": 24,
@@ -120,67 +120,11 @@
 				20,
 				19
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "ROZEBUD",
-			"loop": false,
+			"indices": [],
 			"name": "Rozebud"
-		},
-		{
-			"offsets": [
-				-15,
-				13
-			],
-			"indices": [
-				4,
-				5
-			],
-			"fps": 24,
-			"anim": "singLEFT-loop",
-			"loop": true,
-			"name": "Left"
-		},
-		{
-			"offsets": [
-				-28,
-				-22
-			],
-			"indices": [
-				4,
-				5
-			],
-			"fps": 24,
-			"anim": "singDOWN-loop",
-			"loop": true,
-			"name": "Down"
-		},
-		{
-			"offsets": [
-				-39,
-				48
-			],
-			"indices": [
-				4,
-				5
-			],
-			"fps": 24,
-			"anim": "singUP-loop",
-			"loop": true,
-			"name": "Up"
-		},
-		{
-			"offsets": [
-				-33,
-				-18
-			],
-			"indices": [
-				4,
-				5
-			],
-			"fps": 24,
-			"anim": "singRIGHT-loop",
-			"loop": true,
-			"name": "Right"
 		}
 	],
 	"no_antialiasing": false,
@@ -197,7 +141,7 @@
 		51
 	],
 	"camera_position": [
-		-125,
+		-145,
 		70
 	],
 	"sing_duration": 4,
