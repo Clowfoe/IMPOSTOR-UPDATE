@@ -311,10 +311,18 @@ class PlayState extends MusicBeatState
 	var lightoverlayDK:FlxSprite;
 	var mainoverlayDK:FlxSprite;
 	var defeatDKoverlay:FlxSprite;
+
 	// defeat
 	var defeatthing:FlxSprite;
 	var defeatblack:FlxSprite;
 	var bodiesfront:FlxSprite;
+
+	//finale
+	var defeatFinaleStuff:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
+	var finaleBGStuff:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
+	var finaleFGStuff:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
+	var finaleDarkFG:FlxSprite;
+
 	// loggo
 	var peopleloggo:FlxSprite;
 	var toogusblue:FlxSprite;
@@ -2092,6 +2100,25 @@ class PlayState extends MusicBeatState
 
 			case 'finalem':
 				curStage = 'finalem';
+
+				defeatthing = new FlxSprite(-400, 2000);
+				defeatthing.frames = Paths.getSparrowAtlas('defeat');
+				defeatthing.animation.addByPrefix('bop', 'defeat', 24, false);
+				defeatthing.animation.play('bop');
+				defeatthing.setGraphicSize(Std.int(defeatthing.width * 1.3));
+				defeatthing.antialiasing = true;
+				defeatthing.scrollFactor.set(0.8, 0.8);
+				defeatthing.active = true;
+				defeatFinaleStuff.add(defeatthing);
+
+				mainoverlayDK = new FlxSprite(250, 475).loadGraphic(Paths.image('defeatfnf'));
+				mainoverlayDK.antialiasing = true;
+				mainoverlayDK.scrollFactor.set(1, 1);
+				mainoverlayDK.active = false;
+				mainoverlayDK.setGraphicSize(Std.int(mainoverlayDK.width * 2));
+				mainoverlayDK.alpha = 0;
+				defeatFinaleStuff.add(mainoverlayDK);
+
 				var bg0:FlxSprite = new FlxSprite(-600, -400).loadGraphic(Paths.image('bgg'));
 				bg0.updateHitbox();
 				bg0.antialiasing = true;
@@ -2107,7 +2134,6 @@ class PlayState extends MusicBeatState
 				bg1.active = true;
 				bg1.scale.set(1.1, 1.1);
 				
-
 				var bg2:FlxSprite = new FlxSprite(-790, -530).loadGraphic(Paths.image('bg'));
 				bg2.updateHitbox();
 				bg2.antialiasing = true;
@@ -2123,11 +2149,21 @@ class PlayState extends MusicBeatState
 				bg3.active = true;
 				bg3.scale.set(1.1, 1.1);
 				
+				finaleBGStuff.add(bg0);
+				finaleBGStuff.add(bg1);
+				finaleBGStuff.add(bg2);
+				finaleBGStuff.add(bg3);
 
-				add(bg0);
-				add(bg1);
-				add(bg2);
-				add(bg3);
+				finaleBGStuff.visible = false;
+				defeatFinaleStuff.visible = true;
+
+				add(defeatFinaleStuff);
+				add(finaleBGStuff);
+
+				finaleDarkFG = new FlxSprite(-1000, -1000).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+				finaleDarkFG.antialiasing = true;
+				finaleDarkFG.updateHitbox();
+				finaleDarkFG.scrollFactor.set();
 
 			//	add(stageCurtains);
 
@@ -2166,6 +2202,7 @@ class PlayState extends MusicBeatState
 				defeatblack.screenCenter(Y);
 				add(defeatblack);
 
+				
 				mainoverlayDK = new FlxSprite(250, 125).loadGraphic(Paths.image('defeatfnf'));
 				mainoverlayDK.antialiasing = true;
 				mainoverlayDK.scrollFactor.set(1, 1);
@@ -2444,7 +2481,7 @@ class PlayState extends MusicBeatState
 		add(bfGhost);
 		add(dadGhost);
 		add(dadGroup);
-		if (curStage.toLowerCase() == 'warehouse'  || curStage.toLowerCase() == 'youtuber') //kinda primitive but fuck it we ball
+		if (curStage.toLowerCase() == 'warehouse'  || curStage.toLowerCase() == 'youtuber' || curStage.toLowerCase() == 'defeat' || curStage.toLowerCase() == 'finalem') //kinda primitive but fuck it we ball
 		{
 			remove(dadGhost);
 			remove(dadGroup);
@@ -2485,16 +2522,23 @@ class PlayState extends MusicBeatState
 
 		add(boyfriendGroup);
 
-		if (curStage == 'defeat')
+		if (curStage == 'defeat'){
+			add(dadGroup);
 			add(bodiesfront);
+		}
+
+		if (curStage == 'finalem'){
+			add(dadGroup);
+		}
 
 		if (curStage == 'voting')
 			add(table);
 
-		if (curStage == 'banana')
+		if (curStage == 'banana'){
 			add(tomato);
 			add(bananas);
 			add(bunches);
+		}
 
 		switch(curStage.toLowerCase()){
 			case 'polus3':
@@ -2559,6 +2603,14 @@ class PlayState extends MusicBeatState
 				lightoverlay.active = false;
 				lightoverlay.blend = ADD;
 				add(lightoverlay);
+			case 'finalem':
+				lightoverlay = new FlxSprite(-550, 250).loadGraphic(Paths.image('iluminao omaga'));
+				lightoverlay.antialiasing = true;
+				lightoverlay.scrollFactor.set(1, 1);
+				lightoverlay.active = false;
+				lightoverlay.blend = ADD;
+				add(lightoverlay);
+				add(finaleDarkFG);
 			case 'reactor2':
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('reactor/frontblack', 'impostor'));
 				lightoverlay.antialiasing = true;
@@ -4093,6 +4145,12 @@ class PlayState extends MusicBeatState
 						switch(curStage.toLowerCase()){
 							case 'cargo':
 								camHUD.visible = false;
+							case 'finalem':
+								camHUD.alpha = 0.001;
+								healthBar.visible = false;
+								healthBarBG.visible = false;
+								iconP1.visible = false;
+								iconP2.visible = false;
 							case 'warehouse':
 								camHUD.alpha = 0;
 							case 'charles':
@@ -5222,6 +5280,12 @@ class PlayState extends MusicBeatState
 				if (cargoReadyKill){
 					cargoDarkFG.alpha += 0.015;
 					FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, CoolUtil.boundTo(elapsed * 3, 0, 1));
+				}
+
+			case 'finalem':
+				if (Conductor.songPosition >= 0 && Conductor.songPosition < 9600){
+					finaleDarkFG.alpha = FlxMath.lerp(finaleDarkFG.alpha, 0, CoolUtil.boundTo(elapsed * 0.5, 0, 1));
+					FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, CoolUtil.boundTo(elapsed * 0.01, 0, 1));
 				}
 			
 			case 'drippypop':
@@ -6369,6 +6433,17 @@ class PlayState extends MusicBeatState
 							camHUD.visible = false;
 							defeatDKoverlay.alpha = 0;
 					}
+				
+				case 'Finale Drop':
+					finaleBGStuff.visible = true;
+					defeatFinaleStuff.visible = false;
+					lightoverlay.visible = false;
+					healthBar.visible = false;
+					healthBarBG.visible = false;
+					iconP1.visible = false;
+					iconP2.visible = false;
+
+					camGame.flash(FlxColor.RED, 0.75);
 				case 'Reactor Beep':
 					var charType:Float = Std.parseFloat(value1);
 					if (Math.isNaN(charType))

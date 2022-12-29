@@ -1,7 +1,7 @@
 {
 	"song": {
 		"player1": "bf-defeat-scared",
-		"player2": "blackparasite",
+		"player2": "black",
 		"notes": [
 			{
 				"lengthInSteps": 16,
@@ -2706,9 +2706,9 @@
 						375
 					]
 				],
-				"mustHitSection": false,
 				"bpm": 190,
-				"changeBPM": false
+				"changeBPM": false,
+				"mustHitSection": false
 			},
 			{
 				"lengthInSteps": 16,
@@ -12612,6 +12612,24 @@
 			},
 			{
 				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 200,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 200
+			},
+			{
+				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
@@ -12627,7 +12645,7 @@
 		"arrowSkin": "",
 		"validScore": true,
 		"needsVoices": true,
-		"stage": "finale",
+		"stage": "finalem",
 		"speed": 3.2,
 		"bpm": 200
 	}

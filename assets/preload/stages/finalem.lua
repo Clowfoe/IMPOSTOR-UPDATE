@@ -22,13 +22,25 @@ end
 
 function onUpdate()
     setProperty('gf.alpha', 0);
-	if del > 0 then
-		del = del - 1
-	end
-	if del2 > 0 then
-		del2 = del2 - 1
-	end
-    if followchars == true then
+
+    if curBeat == 32 then
+        setProperty('defaultCamZoom',0.8)
+    end
+
+    if curBeat < 32 then --start
+        triggerEvent('Camera Follow Pos', 750, 800)
+    end
+
+    if curBeat >= 32 and curBeat < 48 then --first to black
+        triggerEvent('Camera Follow Pos', 450, 1000)
+    end
+    if curBeat >= 48 and curBeat < 64 then --to bf
+        triggerEvent('Camera Follow Pos', 1250, 1000)
+    end
+    if curBeat >= 64 and curBeat < 68 then --bf zoom in
+        triggerEvent('Camera Follow Pos', 1350, 1050)
+    end
+    if followchars == true and curBeat >= 68 then
         if mustHitSection == false then
             setProperty('defaultCamZoom',0.4)
             if getProperty('dad.animation.curAnim.name') == 'singLEFT' then
