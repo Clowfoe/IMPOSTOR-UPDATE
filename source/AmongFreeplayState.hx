@@ -479,7 +479,6 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Lotowncorry", "jorsawsee", 'jorsawsee', FlxColor.fromRGB(22, 65, 240)],
 				["O2", "o2", 'redmungus', FlxColor.RED],
 				["Voting Time", "votingtime", 'warchief', FlxColor.fromRGB(153, 67, 196)],
 				["Turbulence", "redmungus", 'redmunp', FlxColor.RED],
@@ -491,9 +490,7 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["ROOMCODE", "powers", 'powers', FlxColor.fromRGB(80, 173, 235)],
-				["Posussium", "bananungus", 'bananungus', FlxColor.fromRGB(235, 188, 80)],
-				["Kyubism", "kyubi", 'warchief', FlxColor.PURPLE]
+				["ROOMCODE", "powers", 'powers', FlxColor.fromRGB(80, 173, 235)]
 			],
 
 			section: 2

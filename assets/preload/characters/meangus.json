@@ -1,65 +1,65 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				50,
 				50
 			],
+			"loop": false,
+			"fps": 12,
 			"anim": "idle",
-			"fps": 12,
-			"name": "idle",
-			"indices": []
+			"indices": [],
+			"name": "idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				71,
-				26
+				74,
+				23
 			],
+			"loop": false,
+			"fps": 12,
 			"anim": "singDOWN",
-			"fps": 12,
-			"name": "down",
-			"indices": []
+			"indices": [],
+			"name": "down"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				162,
-				70
+				169,
+				69
 			],
+			"loop": false,
+			"fps": 12,
 			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				54
+			],
+			"anim": "singRIGHT",
 			"fps": 12,
-			"name": "up",
+			"name": "left",
 			"indices": []
 		},
 		{
-			"offsets": [
-				-18,
-				54
-			],
 			"loop": false,
-			"fps": 12,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "left"
-		},
-		{
 			"offsets": [
-				170,
-				54
+				174,
+				50
 			],
-			"loop": false,
-			"fps": 12,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "right"
+			"fps": 12,
+			"name": "right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/meangus",
 	"position": [
-		210,
+		160,
 		430
 	],
 	"healthicon": "redmungus",
