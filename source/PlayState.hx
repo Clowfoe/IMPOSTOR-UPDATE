@@ -3470,6 +3470,9 @@ class PlayState extends MusicBeatState
 				case 'sabotage':
 					startVideo('polus2');
 					piss = false;
+				case 'meltdown':
+					startVideo('meltdown');
+					piss = false;
 				case 'sussus-toogus':
 					startVideo('toogus');
 					piss = false;

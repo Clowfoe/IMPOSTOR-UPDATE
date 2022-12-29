@@ -1,100 +1,100 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				189,
-				-100
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-1,
+				-70
+			],
 			"anim": "idle",
-			"indices": [],
-			"name": "IDLE"
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
 		},
 		{
-			"offsets": [
-				15,
-				-99
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				42,
+				-78
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "RIGHT"
+			"fps": 24,
+			"name": "right",
+			"indices": []
 		},
 		{
-			"offsets": [
-				10,
-				-108
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-38,
+				-110
+			],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "DOWN"
+			"fps": 24,
+			"name": "down",
+			"indices": []
 		},
 		{
-			"offsets": [
-				72,
-				-87
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				62,
+				-85
+			],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "LEFT"
-		},
-		{
-			"offsets": [
-				33,
-				-113
-			],
-			"loop": false,
 			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				-31
+			],
 			"anim": "singUP",
-			"indices": [],
-			"name": "UP"
+			"fps": 24,
+			"name": "up",
+			"indices": []
 		},
 		{
 			"offsets": [
-				43,
-				-114
+				34,
+				-76
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singUP-alt",
 			"indices": [],
-			"name": "Vibrato UP"
+			"name": "vibrato up"
 		},
 		{
 			"offsets": [
-				17,
-				-127
+				-33,
+				-124
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN-alt",
 			"indices": [],
-			"name": "Vibrato DOWN"
+			"name": "vibrato down"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/chefogus",
 	"position": [
-		70,
-		70
+		200,
+		80
 	],
 	"healthicon": "chef",
 	"flip_x": false,
 	"healthbar_colors": [
-		242,
-		114,
+		235,
+		94,
 		28
 	],
 	"camera_position": [
-		-190,
+		-30,
 		200
 	],
 	"sing_duration": 6.1,
-	"scale": 0.9
+	"scale": 1
 }
