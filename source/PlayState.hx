@@ -2102,7 +2102,7 @@ class PlayState extends MusicBeatState
 				bg0.scrollFactor.set(0.8, 0.8);
 				bg0.active = true;
 				bg0.scale.set(1.1, 1.1);
-				add(bg0);
+				
 
 				var bg1:FlxSprite = new FlxSprite(800, -270).loadGraphic(Paths.image('dead'));
 				bg1.updateHitbox();
@@ -2110,7 +2110,7 @@ class PlayState extends MusicBeatState
 				bg1.scrollFactor.set(0.8, 0.8);
 				bg1.active = true;
 				bg1.scale.set(1.1, 1.1);
-				add(bg1);
+				
 
 				var bg2:FlxSprite = new FlxSprite(-790, -530).loadGraphic(Paths.image('bg'));
 				bg2.updateHitbox();
@@ -2118,7 +2118,7 @@ class PlayState extends MusicBeatState
 				bg2.scrollFactor.set(0.9, 0.9);
 				bg2.active = true;
 				bg2.scale.set(1.1, 1.1);
-				add(bg2);
+				
 
 				var bg3:FlxSprite = new FlxSprite(370, 1200).loadGraphic(Paths.image('splat'));
 				bg3.updateHitbox();
@@ -2126,6 +2126,11 @@ class PlayState extends MusicBeatState
 				bg3.scrollFactor.set(1, 1);
 				bg3.active = true;
 				bg3.scale.set(1.1, 1.1);
+				
+
+				add(bg0);
+				add(bg1);
+				add(bg2);
 				add(bg3);
 
 			//	add(stageCurtains);
