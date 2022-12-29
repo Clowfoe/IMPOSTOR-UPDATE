@@ -38,9 +38,6 @@ import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
 import flixel.system.FlxSound;
 import flixel.text.FlxText;
-import flixel.text.FlxText;
-import flixel.text.FlxText;
-import flixel.tweens.FlxEase;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxTween;
@@ -2095,7 +2092,6 @@ class PlayState extends MusicBeatState
 
 			case 'finalem':
 				curStage = 'finalem';
-
 				var bg0:FlxSprite = new FlxSprite(-600, -400).loadGraphic(Paths.image('bgg'));
 				bg0.updateHitbox();
 				bg0.antialiasing = true;
@@ -2187,6 +2183,77 @@ class PlayState extends MusicBeatState
 				bodiesfront.alpha = 0;
 
 				missLimited = true;
+
+			case 'finale':
+				curStage = 'defeat';
+
+				defeatthing = new FlxSprite(-400, -150);
+				defeatthing.frames = Paths.getSparrowAtlas('defeat');
+				defeatthing.animation.addByPrefix('bop', 'defeat', 24, false);
+				defeatthing.animation.play('bop');
+				defeatthing.setGraphicSize(Std.int(defeatthing.width * 1.3));
+				defeatthing.antialiasing = true;
+				defeatthing.scrollFactor.set(0.8, 0.8);
+				defeatthing.active = true;
+				add(defeatthing);
+
+				var bg0:FlxSprite = new FlxSprite(-600, -400).loadGraphic(Paths.image('bgg'));
+				bg0.updateHitbox();
+				bg0.antialiasing = true;
+				bg0.scrollFactor.set(0.8, 0.8);
+				bg0.active = true;
+				bg0.scale.set(1.1, 1.1);
+				add(bg0);
+
+				var bg1:FlxSprite = new FlxSprite(800, -270).loadGraphic(Paths.image('dead'));
+				bg1.updateHitbox();
+				bg1.antialiasing = true;
+				bg1.scrollFactor.set(0.8, 0.8);
+				bg1.active = true;
+				bg1.scale.set(1.1, 1.1);
+				add(bg1);
+
+				var bg2:FlxSprite = new FlxSprite(-790, -530).loadGraphic(Paths.image('bg'));
+				bg2.updateHitbox();
+				bg2.antialiasing = true;
+				bg2.scrollFactor.set(0.9, 0.9);
+				bg2.active = true;
+				bg2.scale.set(1.1, 1.1);
+				add(bg2);
+
+				/*splat = new FlxSprite(370, 1200).loadGraphic(Paths.image('splat'));
+				splat.updateHitbox();
+				splat.antialiasing = true;
+				splat.scrollFactor.set(1, 1);
+				splat.active = true;
+				splat.scale.set(1.1, 1.1);
+				add(bg3);
+
+				fore = new FlxSprite(-750, 160).loadGraphic(Paths.image('splat'));
+				splat.updateHitbox();
+				splat.antialiasing = true;
+				splat.scrollFactor.set(1, 1);
+				splat.active = true;
+				splat.scale.set(1.1, 1.1);
+				add(bg3);
+
+				dark = new FlxSprite(-720, -350).loadGraphic(Paths.image('splat'));
+				splat.updateHitbox();
+				splat.antialiasing = true;
+				splat.scrollFactor.set(1, 1);
+				splat.active = true;
+				splat.scale.set(1.1, 1.1);
+				add(bg3);
+
+				light = new FlxSprite(-230, -100);
+				light.frames = Paths.getSparrowAtlas('finale/light');
+				light.animation.addByPrefix('bop', 'scream sky  instance 1', 24, false);
+				light.updateHitbox();
+				light.antialiasing = true;
+				light.scrollFactor.set(1.05, 1.05);
+				light.active = true;
+				light.scale.set(1.1, 1.1);
+				add(light);*/
 
 			case 'tripletrouble':
 				curStage = 'tripletrouble';
@@ -6074,6 +6141,10 @@ class PlayState extends MusicBeatState
 				vocals.time = Conductor.songPosition;
 				vocals.play();
 			}
+			if (FlxG.keys.justPressed.THREE)
+			{ 
+				camHUD.visible = !camHUD.visible;
+			}
 		}
 		if (!cameraLocked)
 		{
@@ -6248,6 +6319,11 @@ class PlayState extends MusicBeatState
 					iconP2.shader = null;
 					loBlack.alpha = 0;
 				
+				case 'Meltdown Video':
+					canPause = false;
+					camGame.visible = false;
+					camHUD.visible = false;
+					startVideo('meltdown');
 				case 'Double Kill Events':
 					switch(value1.toLowerCase()){
 						case 'darken':
@@ -6269,6 +6345,7 @@ class PlayState extends MusicBeatState
 						case 'gonnakill':
 							cargoReadyKill = true;
 						case 'readykill':
+							camGame.flash(FlxColor.BLACK, 2.75);
 							triggerEventNote('Change Character', '0', 'bf-defeat-normal');
 							defeatDKoverlay.alpha = 1;
 							lightoverlayDK.alpha = 0;
@@ -7449,7 +7526,7 @@ class PlayState extends MusicBeatState
 			switch(curStage.toLowerCase()){
 				case 'who' | 'voting' | 'nuzzus':
 					//erm
-				case 'cargo' | 'finale':
+				case 'cargo' | 'finalem':
 					FlxG.camera.zoom += 0.015;
 					camHUD.zoom += 0.015;
 				default:
@@ -8161,7 +8238,7 @@ class PlayState extends MusicBeatState
 	}
 
 	public static var missLimited:Bool = false;
-	public static var missLimitCount:Int = 0;
+	public static var missLimitCount:Int = 5;
 
 	public function missLimitManager()
 	{

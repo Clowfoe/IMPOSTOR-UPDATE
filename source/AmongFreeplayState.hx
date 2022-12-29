@@ -346,7 +346,7 @@ class AmongFreeplayState extends MusicBeatState
 		if (curSelected < 0)
 		{
 			changeWeek(-1);
-			curSelected = 0;
+			curSelected = listOfButtons.length - 1;
 		}
 		else if (curSelected > listOfButtons.length - 1)
 		{

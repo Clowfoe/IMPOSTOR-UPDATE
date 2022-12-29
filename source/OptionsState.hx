@@ -23,6 +23,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
+import flixel.addons.display.FlxBackdrop;
 import Controls;
 
 using StringTools;
@@ -35,19 +36,28 @@ class OptionsState extends MusicBeatState
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;
 
+	var starsBG:FlxBackdrop;
+	var starsFG:FlxBackdrop;
+
 	override function create() {
 		super.create();
 		#if desktop
 		DiscordClient.changePresence("Options Menu", null);
 		#end
 
-		menuBG = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		menuBG.color = 0xFFea71fd;
-		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));
-		menuBG.updateHitbox();
-		menuBG.screenCenter();
-		menuBG.antialiasing = ClientPrefs.globalAntialiasing;
-		add(menuBG);
+		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
+		starsBG.setPosition(111.3, 67.95);
+        starsBG.antialiasing = true;
+        starsBG.updateHitbox();
+        starsBG.scrollFactor.set();
+        add(starsBG);
+        
+        starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'), 1, 1, true, true);
+        starsFG.setPosition(54.3, 59.45);
+        starsFG.updateHitbox();
+        starsFG.antialiasing = true;
+        starsFG.scrollFactor.set();
+        add(starsFG);
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
@@ -724,7 +734,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 	static var options:Array<String> = [
 		'GRAPHICS',
 		'Low Quality',
-		'Anti-Aliasing',
 		'Persistent Cached Data',
 		#if !html5
 		'Framerate', //Apparently 120FPS isn't correctly supported on Browser? Probably it has some V-Sync shit enabled by default, idk
@@ -773,7 +782,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 		for (i in 0...options.length)
 		{
 			var isCentered:Bool = unselectableCheck(i);
-			var optionText:Alphabet = new Alphabet(0, 70 * i, options[i], false, false);
+			var optionText:Alphabet = new Alphabet(0, 70 * i, options[i], true, false);
 			optionText.isMenuItem = true;
 			if(isCentered) {
 				optionText.screenCenter(X);
@@ -802,7 +811,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 					checkboxNumber.push(i);
 					add(checkbox);
 				} else {
-					var valueText:AttachedText = new AttachedText('0', optionText.width + 80);
+					var valueText:AttachedText = new AttachedText('0', optionText.width + 80, 0, true);
 					valueText.sprTracker = optionText;
 					grpTexts.add(valueText);
 					textNumber.push(i);
@@ -878,20 +887,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 					case 'Low Quality':
 						ClientPrefs.lowQuality = !ClientPrefs.lowQuality;
-
-					case 'Anti-Aliasing':
-						ClientPrefs.globalAntialiasing = !ClientPrefs.globalAntialiasing;
-						showCharacter.antialiasing = ClientPrefs.globalAntialiasing;
-						for (item in grpOptions) {
-							item.antialiasing = ClientPrefs.globalAntialiasing;
-						}
-						for (i in 0...checkboxArray.length) {
-							var spr:CheckboxThingie = checkboxArray[i];
-							if(spr != null) {
-								spr.antialiasing = ClientPrefs.globalAntialiasing;
-							}
-						}
-						OptionsState.menuBG.antialiasing = ClientPrefs.globalAntialiasing;
 
 					case 'Note Splashes':
 						ClientPrefs.noteSplashes = !ClientPrefs.noteSplashes;

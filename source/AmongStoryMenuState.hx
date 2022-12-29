@@ -214,26 +214,30 @@ class AmongStoryMenuState extends MusicBeatState
 					selectedWeek = true;
 					trace("worked2");
 				}
-				else{
-					if(i > curWeek){
-						if(i == 5 || i == 6 || i == 7)
-							shipPlayAnim('left');
-						else
-							shipPlayAnim('right');
+				else if (curWeek - 1 == i || curWeek + 1 == i){
+					if(curWeek == 9 || curWeek == 10){
+						trace('lmao u thought');
 					}
-					if(i < curWeek){
-						if(i == 5 || i == 6 || i == 7)
-							shipPlayAnim('right');
-						else
-							shipPlayAnim('left');
+					else{
+						if(i > curWeek){
+							if(i == 5 || i == 6 || i == 7)
+								shipPlayAnim('left');
+							else
+								shipPlayAnim('right');
+						}
+						if(i < curWeek){
+							if(i == 5 || i == 6 || i == 7)
+								shipPlayAnim('right');
+							else
+								shipPlayAnim('left');
+						}
+						curWeek = i;
+
+						changeWeek();
+						FlxG.sound.play(Paths.sound('scrollMenu'));
+
+						trace("worked3");
 					}
-					
-					curWeek = i;
-
-					changeWeek();
-					FlxG.sound.play(Paths.sound('scrollMenu'));
-
-					trace("worked3");
 				}
 			}, null);
 
