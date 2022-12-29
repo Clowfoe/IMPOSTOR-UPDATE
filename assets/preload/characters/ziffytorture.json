@@ -20,7 +20,7 @@
 			"fps": 24,
 			"anim": "singLEFT",
 			"indices": [],
-			"name": "Left"
+			"name": "Left Normal"
 		},
 		{
 			"offsets": [
@@ -31,7 +31,7 @@
 			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
-			"name": "Down"
+			"name": "Down Normal"
 		},
 		{
 			"offsets": [
@@ -42,7 +42,7 @@
 			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
-			"name": "Up"
+			"name": "Up Normal"
 		},
 		{
 			"offsets": [
@@ -53,7 +53,7 @@
 			"fps": 24,
 			"anim": "singRIGHT",
 			"indices": [],
-			"name": "Right"
+			"name": "Right Normal"
 		},
 		{
 			"offsets": [
@@ -125,6 +125,50 @@
 			"anim": "ROZEBUD",
 			"indices": [],
 			"name": "Rozebud"
+		},
+		{
+			"offsets": [
+				-16,
+				15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "Left Yell"
+		},
+		{
+			"offsets": [
+				-26,
+				-21
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "Down Yell"
+		},
+		{
+			"offsets": [
+				-39,
+				48
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "Up Yell"
+		},
+		{
+			"offsets": [
+				-32,
+				-18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "Right Yell"
 		}
 	],
 	"no_antialiasing": false,

@@ -455,6 +455,7 @@ class PlayState extends MusicBeatState
 	var torlight:FlxSprite;
 	var startDark:FlxSprite;
 	var ziffyStart:FlxSprite;
+	var bladeDistance:Float = 120;
 
 	//drippypop arse
 	var redDropped:Bool;
@@ -5072,8 +5073,8 @@ class PlayState extends MusicBeatState
 		var legPosX = [3, 4, 4, 5, 5, 4, 3, 2, 0, 0, -3, -4, -4, -5, -5, -4, -3];
 
 		if (curStage == 'warehouse'){
-			leftblades.x = (213.05 + 120) - (60 * health);
-			rightblades.x = (827.75 - 120) + (60 * health);
+			leftblades.x = (213.05 + bladeDistance) - (60 * health);
+			rightblades.x = (827.75 - bladeDistance) + (60 * health);
 		}
 
 		if (boyfriend.curCharacter == 'bf-running')
@@ -8658,13 +8659,13 @@ class PlayState extends MusicBeatState
 					FlxTween.tween(camGame.camera, {zoom: defaultCamZoom - 0.5}, 4*Conductor.crochet/1000, {ease: FlxEase.quintOut});
 				}
 
-				if(curBeat == 258){
-					//FlxTween.tween(instance, {health: 2}, 4*Conductor.crochet/1000, {ease: FlxEase.smootherStepInOut});
+				if(curBeat == 271){
+					
 				}
 
 				if(curBeat == 272){
 					camZooming = true;
-					FlxTween.tween(instance, {health: 0.05}, 31*Conductor.crochet/1000, {ease: FlxEase.smootherStepOut});
+					FlxTween.tween(instance, {health: 0.05, bladeDistance: 150}, 4*Conductor.crochet/1000, {ease: FlxEase.quartOut});
 				}
 	
 			case 'victory':
