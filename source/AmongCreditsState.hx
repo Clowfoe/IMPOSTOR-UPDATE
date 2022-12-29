@@ -11,22 +11,21 @@ class AmongCreditsState extends MusicBeatState
         //important people
         ['Clowfoe',		'clow',	    'im clowfoe.... i directed the mod and i coded a SHIT TON of it\nim really proud of this whole team ty all for playing and hope it was worth the wait',	'https://twitter.com/Clowfoe'],		
         ['Ethan\nTheDoodler',	'ethan',		'im a real doodler now, mama','https://twitter.com/creepercrunch'],
-        ['creeper\ncrunch',	'crunch',		'i have no idea how boyfriend aint bricked the fuck up in black week','https://twitter.com/creepercrunch'],
-       
+
         //coders
         ['aqua',			'aqua',			"local sexy babe and hot programmer\ni coded some of this mod and lost sleep working on it",				'https://twitter.com/gedehari'],   
-        ['DuskieWhy',			'duskie',			"What's up bros! It's me! DuckieWow! DurkieWho! DuskieWhy! errrr this mod is cool i think... i did the double note ghost animation system thingy ... follow me on twitter dot com",				'https://twitter.com/gedehari'],   
-
+    
         //musicians
-        ['keoni',				'keoni',			"keoni",	'https://twitter.com/emihead'],
         ['emihead',				'emihead',			"im emihead i made tomonjus tuesday and the credits song also i am canonically the black impostor's lover so please draw us making out and tag me on twitter @ emihead",	'https://twitter.com/emihead'],
-		['Keegan',		'keegan',	"Hey Gamers, I'm Keegan, I made Turbulence and all the midi sections of Room Code.\nI like ENA and I draw occasionally you should follow me @__Keegan_",		'https://twitter.com/polybiusproxy'],
-		['Rozebud',		'rozebud',	"Download Bunker Bumrush.\nPlay my new game Bunker Bumrush.",		'https://twitter.com/helpme_thebigt'],
+        ['keoni',				'keoni',			"keoni",	'https://twitter.com/emihead'],
+        ['Keegan',		'keegan',	"Hey Gamers, I'm Keegan, I made Turbulence and all the midi sections of Room Code.\nI like ENA and I draw occasionally you should follow me @__Keegan_",		'https://twitter.com/polybiusproxy'],
+        ['fluffyhairs',				'fluffyhair',			"subscribe to fluffyhairs",	'https://twitter.com/fluffyhairslol'],
+        ['Rozebud',		'rozebud',	"Download Bunker Bumrush.\nPlay my new game Bunker Bumrush.",		'https://twitter.com/helpme_thebigt'],
 
         //artists
         ['loggo',			'lojo',			'halloween',				'https://twitter.com/gedehari'],   
-        ['mayhew',			'mayhew',		'i got in here because of stupid fan concept\ni loved working on this mod its so awesome vs impostor fnf mod vs impostor\nadd me on fall guys',		'https://twitter.com/SandPlanetNG'],
-        ['mayo',				'mayo',		"Hi I'm Mayokiddo\nI'm an artist for the mod and I made a bunch of the playable mini impostor skins, and i also made a few sprites\nshout out to everyone currently in silly squad",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
+        ['mayhew',			'mayhew',		'i got in here because of stupid fan concept\ni loved working on this mod its so awesome vs impostor fnf mod vs impostor. add me on fall guys.',		'https://twitter.com/SandPlanetNG'],
+        ['mayo',				'mayo',		"Hi I'm Mayokiddo! I'm an artist for the mod and I made a bunch of the playable mini impostor skins, and i also made a few sprites\nshout out to everyone currently in silly squad",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
         ['neato',				'neato',		'if she yo girl why my leitmotif in her theme',	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
         ['orbyy',			'orb',			"Im really happy i got to work on this, i was brought on v3 to do pixel art for tomongus and i'm grateful for being given the opportunity. I hope yall love the new pixel art for tomongus week and i apologize for v3's defeat chart.",    'https://twitter.com/gedehari'],   
         ['squidboy',	'squid',	'hi im squid you may or may not know me for moderating the impostorm discord server\nive also been working for impostor ever since its beginning so thats cool i guess\nlove u zial <3<3<3',		'https://twitter.com/Keoiki_'],
@@ -36,9 +35,11 @@ class AmongCreditsState extends MusicBeatState
         ['coti',			'coti',			'hi !! im coti-- i didnt really do much except for a drawing or visual tweaking here and there, but im happy i got to work on the mod anyway !! remember to always be silly',	'https://twitter.com/gedehari'],   
   
         //charters
-        ['gibz',				'gibz',		" shit idk , charted a few songs",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
+        ['Gonk',				'gonk',		"Working on Impostor has been a ton of fun honestly, was really cool to be a part of something special like this. I'm also the reason crewicide is in, dumb joke song based off a dream I had and its probably my favourite thing I worked on in the mod, It Funny, makes Me Lol",	'https://www.twitter.com/StupidGoatMan'],
+        ['gibz',				'gibz',		"shit idk , charted a few songs",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
 
         //misc
+        ['monotonedoc',				'monotone',		"please help they trapped me in the code of the mod",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
         ['amongusfan',				'cooper',		"i did nothing for this mod but let them use red mungus but i get a quote for having cancer",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
     ];
 
