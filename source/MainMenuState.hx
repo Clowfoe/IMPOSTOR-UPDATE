@@ -323,11 +323,13 @@ class MainMenuState extends MusicBeatState
 				trace("Options Menu Selected");
 			case 'Gallery':
 				FlxG.openURL('https://vsimpostor.com/');
+				FlxG.switchState(new MainMenuState());
 			case 'Credits':
 				FlxG.switchState(new AmongCreditsState());
 				trace("Gallery Menu Selected");
 			case 'Innersloth':
 				FlxG.openURL('https://www.innersloth.com/');
+				FlxG.switchState(new MainMenuState());
 		}		
 	}
 

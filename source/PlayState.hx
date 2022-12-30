@@ -1028,10 +1028,11 @@ class PlayState extends MusicBeatState
 				midderclouds.active = false;
 				add(midderclouds);
 
-				var hookarm:FlxSprite = new FlxSprite(-567.85, 388.4).loadGraphic(Paths.image('airship/turbulence/clawback', 'impostor'));
+				var hookarm:FlxSprite = new FlxSprite(-797.85, 688.4).loadGraphic(Paths.image('airship/turbulence/clawback', 'impostor'));
 				hookarm.antialiasing = true;
 				hookarm.scrollFactor.set(1, 1);
 				hookarm.active = false;
+				add(hookarm);
 
 				clawshands = new FlxSprite(1873, 690.1);
 				clawshands.frames = Paths.getSparrowAtlas('airship/turbulence/clawfront', 'impostor');
@@ -3007,7 +3008,7 @@ class PlayState extends MusicBeatState
 		blammedLightsBlack.alpha = 0.0;
 		#end
 
-		if (ClientPrefs.charOverrides[1] != '' && ClientPrefs.charOverrides[1] != 'gf' && !isStoryMode)
+		if (ClientPrefs.charOverrides[1] != '' && ClientPrefs.charOverrides[1] != 'gf' && !isStoryMode && !SONG.allowGFskin)
 		{
 			SONG.player3 = ClientPrefs.charOverrides[1];
 		}
@@ -3090,7 +3091,7 @@ class PlayState extends MusicBeatState
 		{
 			SONG.player1 = 'henryphone';
 		}
-		else if (ClientPrefs.charOverrides[0] != '' && ClientPrefs.charOverrides[0] != 'bf' && !isStoryMode)
+		else if (ClientPrefs.charOverrides[0] != '' && ClientPrefs.charOverrides[0] != 'bf' && !isStoryMode && !SONG.allowBFskin)
 		{
 			SONG.player1 = ClientPrefs.charOverrides[0];
 		}
@@ -3118,8 +3119,10 @@ class PlayState extends MusicBeatState
 		pet = new Pet(0, 0, ClientPrefs.charOverrides[2]);
 		pet.x += pet.positionArray[0];
 		pet.y += pet.positionArray[1];
-		if (curStage.toLowerCase() != 'alpha')
+		pet.alpha = 0.001;
+		if (curStage.toLowerCase() != 'alpha' && curStage.toLowerCase() != 'defeat'  && curStage.toLowerCase() != 'who' && !SONG.allowPet)
 		{
+			pet.alpha = 1;
 			boyfriendGroup.add(pet);
 		}
 
@@ -8594,7 +8597,7 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'turbulence':
-				if (curBeat % 4 == 0)
+				if (curBeat % 2 == 0)
 				{
 					clawshands.animation.play('squeeze', true);
 				}

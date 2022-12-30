@@ -1,11 +1,12 @@
 {
 	"song": {
 		"speed": 2.8,
-		"stage": null,
+		"stage": "lounge",
 		"player1": "bf",
-		"player2": "whitedk",
-		"player3": "gf",
+		"player2": "jorsawsee",
+		"player3": "gfmira",
 		"player4": null,
+		"allowPet": null,
 		"notes": [
 			{
 				"lengthInSteps": 16,
@@ -295,9 +296,45 @@
 						-1,
 						"Change Character",
 						"1",
-						"sabotage"
+						"meangus"
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -938,6 +975,8 @@
 		"bpm": 135,
 		"arrowSkin": null,
 		"needsVoices": true,
+		"allowGFskin": null,
+		"allowBFskin": null,
 		"fabs": null,
 		"song": "O2"
 	}

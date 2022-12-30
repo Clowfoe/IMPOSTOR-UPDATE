@@ -261,6 +261,11 @@ class ChartingState extends MusicBeatState
 				player3: 'gf',
 				player4: 'mom',
 				fabs: 'fabs',
+
+				allowBFskin: true,
+				allowGFskin: true,
+				allowPet: true,
+
 				speed: 1,
 				stage: 'stage',
 				validScore: false
@@ -574,11 +579,38 @@ class ChartingState extends MusicBeatState
 			updateGrid();
 		});
 
+		var check_bfskin = new FlxUICheckBox(reloadNotesButton.x + 150, reloadNotesButton.y, null, null, "Don't Allow BF Skin", 100);
+		check_bfskin.checked = _song.allowBFskin;
+		check_bfskin.callback = function()
+		{
+			_song.allowBFskin = check_bfskin.checked;
+			trace('CHECKED!');
+		};
+
+		var check_gfskin = new FlxUICheckBox(check_bfskin.x, check_bfskin.y - 30, null, null, "Don't Allow GF Skin", 100);
+		check_gfskin.checked = _song.allowGFskin;
+		check_gfskin.callback = function()
+		{
+			_song.allowGFskin = check_gfskin.checked;
+			trace('CHECKED!');
+		};
+
+		var check_pet = new FlxUICheckBox(check_gfskin.x, check_gfskin.y - 30, null, null, "Don't Allow Pet", 100);
+		check_pet.checked = _song.allowPet;
+		check_pet.callback = function()
+		{
+			_song.allowPet = check_pet.checked;
+			trace('CHECKED!');
+		};
+
 		var tab_group_song = new FlxUI(null, UI_box);
 		tab_group_song.name = "Song";
 		tab_group_song.add(UI_songTitle);
 
 		tab_group_song.add(check_voices);
+		tab_group_song.add(check_bfskin);
+		tab_group_song.add(check_gfskin);
+		tab_group_song.add(check_pet);
 		tab_group_song.add(clear_events);
 		tab_group_song.add(clear_notes);
 		tab_group_song.add(saveButton);
@@ -2158,6 +2190,9 @@ class ChartingState extends MusicBeatState
 			fabs: _song.fabs,
 			player3: _song.player3,
 			player4: _song.player4,
+			allowBFskin: _song.allowBFskin,
+			allowGFskin: _song.allowGFskin,
+			allowPet: _song.allowPet,
 			stage: _song.stage,
 			validScore: false
 		};

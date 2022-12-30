@@ -27,6 +27,10 @@ typedef SwagSong =
 	var fabs:String;
 	var stage:String;
 
+	var allowBFskin:Bool;
+	var allowGFskin:Bool;
+	var allowPet:Bool;
+
 	//var blockSkins:Array<Bool>;
 
 	var arrowSkin:String;
@@ -44,6 +48,10 @@ class Song
 	public var splashSkin:String;
 	public var speed:Float = 1;
 	public var stage:String;
+
+	public var allowBFskin:Bool = true;
+	public var allowGFskin:Bool = true;
+	public var allowPet:Bool = true;
 
 	public var player1:String = 'bf';
 	public var player2:String = 'dad';

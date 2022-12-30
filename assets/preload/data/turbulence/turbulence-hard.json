@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "sans",
+		"player1": "bf_turb",
 		"events": [
 			[
 				55714.2857142857,
@@ -3513,9 +3513,9 @@
 					]
 				],
 				"lengthInSteps": 16,
-				"changeBPM": true,
 				"mustHitSection": true,
-				"bpm": 160
+				"bpm": 160,
+				"changeBPM": true
 			},
 			{
 				"sectionNotes": [
@@ -6586,12 +6586,30 @@
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
 				"bpm": 140,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 140,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
 			},
 			{
 				"lengthInSteps": 16,
@@ -6603,12 +6621,15 @@
 				"mustHitSection": true
 			}
 		],
-		"player2": "meangus",
-		"player3": "gf",
+		"player2": "redmungusp",
+		"player3": "gfmira",
+		"allowBFskin": true,
 		"song": "turbulence",
+		"allowGFskin": true,
 		"stage": "turbulence",
 		"needsVoices": true,
 		"validScore": true,
+		"allowPet": true,
 		"bpm": 140,
 		"speed": 2.8
 	}
