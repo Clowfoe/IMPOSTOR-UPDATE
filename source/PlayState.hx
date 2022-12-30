@@ -1834,7 +1834,7 @@ class PlayState extends MusicBeatState
 				add(bg);
 
 
-				bggreen = new FlxSprite(0, -800).loadGraphic(Paths.image('skeld/evilejected', 'impostor'));
+				bggreen = new FlxSprite(0, -1000).loadGraphic(Paths.image('skeld/evilejected', 'impostor'));
 				bggreen.updateHitbox();
 				bggreen.antialiasing = true;
 				bggreen.scrollFactor.set(0.7, 0.7);
