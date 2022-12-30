@@ -1028,11 +1028,10 @@ class PlayState extends MusicBeatState
 				midderclouds.active = false;
 				add(midderclouds);
 
-				var hookarm:FlxSprite = new FlxSprite(-797.85, 688.4).loadGraphic(Paths.image('airship/turbulence/clawback', 'impostor'));
+				hookarm = new FlxSprite(-797.85, 888.4).loadGraphic(Paths.image('airship/turbulence/clawback', 'impostor'));
 				hookarm.antialiasing = true;
 				hookarm.scrollFactor.set(1, 1);
 				hookarm.active = false;
-				add(hookarm);
 
 				clawshands = new FlxSprite(1873, 690.1);
 				clawshands.frames = Paths.getSparrowAtlas('airship/turbulence/clawfront', 'impostor');
@@ -2622,6 +2621,13 @@ class PlayState extends MusicBeatState
 				lightoverlay.active = false;
 				lightoverlay.blend = ADD;
 				add(lightoverlay);
+
+			case 'loggo2':
+				var darknessLojo:FlxSprite = new FlxSprite(-0, -0).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
+				darknessLojo.antialiasing = true;
+				darknessLojo.alpha = 0.5;
+				add(darknessLojo);
+
 			case 'finalem':
 				
 				lightoverlay = new FlxSprite(-550, 250).loadGraphic(Paths.image('iluminao omaga'));
@@ -2730,7 +2736,7 @@ class PlayState extends MusicBeatState
 				add(torlight);*/
 
 			case 'turbulence':
-
+				add(hookarm);
 				add(clawshands);
 
 				for (i in 0...2)
@@ -3465,7 +3471,7 @@ class PlayState extends MusicBeatState
 		add(scoreTxt);
 
 		botplayTxt = new FlxText(400, healthBarBG.y - 55, FlxG.width - 800, "Be_Impostor.exe", 32);
-		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
@@ -4660,8 +4666,7 @@ class PlayState extends MusicBeatState
 						swagNote.mustPress = gottaHitNote;
 						swagNote.sustainLength = songNotes[2];
 						swagNote.noteType = songNotes[3];
-						if (!Std.isOfType(songNotes[3], String))
-							swagNote.noteType = editors.ChartingState.noteTypeList[songNotes[3]]; // Backward compatibility + compatibility with Week 7 charts
+						swagNote.noteType = 'Behind Note';
 						swagNote.scrollFactor.set();
 						var susLength:Float = swagNote.sustainLength;
 
@@ -4974,6 +4979,9 @@ class PlayState extends MusicBeatState
 
 		triggerEventNote('Camera Follow Pos', '750', '500');
 		triggerEventNote('Change Character', '1', 'reaction');
+		dad.setPosition(-240, 175);
+		dad.animation.play('first', true);
+		dad.specialAnim = true;
 		stopEvents = true;
 
 		FlxG.sound.play(Paths.sound('teleport_sound'), 1);
@@ -4982,7 +4990,6 @@ class PlayState extends MusicBeatState
 		{
 			colorShader.amount = 1;
 			FlxTween.tween(colorShader, {amount: 0}, 0.73, {ease: FlxEase.expoOut});
-			dad.animation.play('first', true);
 			// dad.stunned = true;
 		});
 
@@ -4990,6 +4997,7 @@ class PlayState extends MusicBeatState
 		{
 			colorShader.amount = 1;
 			gf.shader = colorShader.shader;
+			pet.shader = colorShader.shader;
 			FlxTween.tween(colorShader, {amount: 0.1}, 0.55, {ease: FlxEase.expoOut});
 		});
 
@@ -4998,6 +5006,7 @@ class PlayState extends MusicBeatState
 			colorShader.amount = 1;
 			FlxTween.tween(colorShader, {amount: 0.2}, 0.2, {ease: FlxEase.expoOut});
 			dad.animation.play('second', true);
+			dad.specialAnim = true;
 		});
 
 		new FlxTimer().start(2.23, function(tmr:FlxTimer)
@@ -5028,9 +5037,16 @@ class PlayState extends MusicBeatState
 			FlxTween.tween(gf, {"scale.x": 3.5}, 0.7, {ease: FlxEase.expoOut});
 		});
 
+		new FlxTimer().start(2.75, function(tmr:FlxTimer)
+		{
+			FlxTween.tween(pet, {"scale.y": 0}, 0.7, {ease: FlxEase.expoOut});
+			FlxTween.tween(pet, {"scale.x": 3.5}, 0.7, {ease: FlxEase.expoOut});
+		});
+
 		new FlxTimer().start(2.9, function(tmr:FlxTimer)
 		{
 			dad.animation.play('third', true);
+			dad.specialAnim = true;
 		});
 
 		new FlxTimer().start(4.5, function(tmr:FlxTimer)
@@ -5771,7 +5787,9 @@ class PlayState extends MusicBeatState
 							switch(curStage){
 								case 'cargo':
 									healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
-									iconP2.changeIcon('whiteblack');
+									iconP2.changeIcon('whiteblack');	
+									botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+	
 							}
 						}
 						else if (daNote.noteType == 'Opponent 2 Sing' || opponent2sing == true)
@@ -5808,6 +5826,7 @@ class PlayState extends MusicBeatState
 									case 'cargo':
 										healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
 										iconP2.changeIcon('black');
+										botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 								}
 						}
 						else
@@ -5843,6 +5862,8 @@ class PlayState extends MusicBeatState
 									case 'cargo':
 										healthBar.createColoredEmptyBar(FlxColor.fromRGB(209,210,248));    
 										iconP2.changeIcon('white');
+										botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+	
 								}
 						}
 
@@ -6155,17 +6176,8 @@ class PlayState extends MusicBeatState
 						{
 							time += 0.15;
 						}
-						if (curStage != 'alpha') {
-							StrumPlayAnim(true, Std.int(Math.abs(daNote.noteData)) % 4, time);
-						}
+						
 						daNote.hitByOpponent = true;
-
-						callOnLuas('opponentNoteHit', [
-							votingnotes.members.indexOf(daNote),
-							Math.abs(daNote.noteData),
-							daNote.noteType,
-							daNote.isSustainNote
-						]);
 
 						if (!daNote.isSustainNote)
 						{
@@ -6176,20 +6188,20 @@ class PlayState extends MusicBeatState
 					}
 
 				
-					/*if (daNote.mustPress && cpuControlled)
+					if (daNote.mustPress)
 					{
 						if (daNote.isSustainNote)
 						{
 							if (daNote.canBeHit)
 							{
-								goodNoteHit(daNote);
+								goodVotingNoteHit(daNote);
 							}
 						}
 						else if (daNote.strumTime <= Conductor.songPosition || (daNote.isSustainNote && daNote.canBeHit && daNote.mustPress))
 						{
-							goodNoteHit(daNote);
+							goodVotingNoteHit(daNote);
 						}
-					}*/
+					}
 
 					var doKill:Bool = daNote.y < -daNote.height;
 					if (ClientPrefs.downScroll)
@@ -6202,7 +6214,6 @@ class PlayState extends MusicBeatState
 					{
 						daNote.active = false;
 						daNote.visible = false;
-
 						daNote.kill();
 						votingnotes.remove(daNote, true);
 						daNote.destroy();
@@ -6775,9 +6786,11 @@ class PlayState extends MusicBeatState
 							healthBar.createFilledBar(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
 							FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
 							healthBar.updateBar();
+							botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 						}
 						else
 						{
+							botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 							camFollowPos.setPosition(1470, 700);
 							FlxG.camera.focusOn(camFollowPos.getPosition());
 						}
@@ -6795,12 +6808,14 @@ class PlayState extends MusicBeatState
 							healthBar.createFilledBar(FlxColor.fromRGB(gf.healthColorArray[0], gf.healthColorArray[1], gf.healthColorArray[2]),
 							FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
 							healthBar.updateBar();
+							botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(gf.healthColorArray[0], gf.healthColorArray[1], gf.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 						}
 						else
 						{
 							camFollowPos.setPosition(1450, 680);
 							FlxG.camera.focusOn(camFollowPos.getPosition());
 							iconP2.changeIcon(mom.healthIcon);
+							botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(mom.healthColorArray[0], mom.healthColorArray[1], mom.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 							healthBar.createFilledBar(FlxColor.fromRGB(mom.healthColorArray[0], mom.healthColorArray[1], mom.healthColorArray[2]),
 							FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
 							healthBar.updateBar();
@@ -7201,6 +7216,7 @@ class PlayState extends MusicBeatState
 								}
 								boyfriend.visible = true;
 								iconP1.changeIcon(boyfriend.healthIcon);
+								botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 							}
 
 						case 1:
@@ -7232,6 +7248,7 @@ class PlayState extends MusicBeatState
 								}
 								dad.visible = true;
 								iconP2.changeIcon(dad.healthIcon);
+								botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 							}
 
 						case 2:
@@ -8308,6 +8325,48 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	function goodVotingNoteHit(note:Note):Void
+	{
+		if (cpuControlled && (note.ignoreNote || note.hitCausesMiss))
+			return;
+
+		trace('function gvnh called');
+		if (!note.ignoreNote)
+		{
+			if (!note.noAnimation)
+			{
+				var animToPlay:String = '';
+				switch (Math.abs(note.noteData))
+				{
+					case 0:
+						animToPlay = 'singLEFT';
+					case 1:
+						animToPlay = 'singDOWN';
+					case 2:
+						animToPlay = 'singUP';
+					case 3:
+						animToPlay = 'singRIGHT';
+				}
+				if (note.mustPress)
+				{
+					trace('remgnosus');
+					mom.holdTimer = 0;						
+					mom.playAnim(animToPlay, true);
+				}
+			}
+		}
+
+		note.wasGoodHit = true;
+		vocals.volume = 1;
+			
+		if (!note.isSustainNote)
+		{
+			note.kill();
+			notes.remove(note, true);
+			note.destroy();
+		}
+	}
+
 	function spawnNoteSplashOnNote(note:Note)
 	{
 		if (ClientPrefs.noteSplashes && note != null)
@@ -8691,7 +8750,7 @@ class PlayState extends MusicBeatState
 					overlay.alpha = 0.4;
 				}
 
-			case 'loggo':
+			case 'loggo' | 'loggo2':
 				if (curBeat % 2 == 0)
 				{
 					peopleloggo.animation.play('bop', true);

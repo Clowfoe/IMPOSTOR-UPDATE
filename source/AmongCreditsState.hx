@@ -17,6 +17,7 @@ class AmongCreditsState extends MusicBeatState
     
         //musicians
         ['emihead',				'emihead',			"im emihead i made tomonjus tuesday and the credits song also i am canonically the black impostor's lover so please draw us making out and tag me on twitter @ emihead",	'https://twitter.com/emihead'],
+        ['Saster',		'saster',	'"i hate you all"\nDJHNFUEWOI[FGHJWIEPG IM KIDDING IM KIDDING.',		'https://twitter.com/helpme_thebigt'],
         ['keoni',				'keoni',			"keoni",	'https://twitter.com/emihead'],
         ['Keegan',		'keegan',	"Hey Gamers, I'm Keegan, I made Turbulence and all the midi sections of Room Code.\nI like ENA and I draw occasionally you should follow me @__Keegan_",		'https://twitter.com/polybiusproxy'],
         ['fluffyhairs',				'fluffyhair',			"subscribe to fluffyhairs",	'https://twitter.com/fluffyhairslol'],
@@ -91,7 +92,7 @@ class AmongCreditsState extends MusicBeatState
         lamplight.x = (FlxG.width / 2)  - (lamplight.width / 2);
         lamplight.blend = ADD;
         lamplight.alpha = 0.2;
-		//add(lamplight);
+		add(lamplight);
 
         tree1 = new FlxSprite(-400, 0).loadGraphic(Paths.image('credits/tree', 'impostor'));
 		tree1.antialiasing = true;
@@ -111,7 +112,7 @@ class AmongCreditsState extends MusicBeatState
 		descText.borderSize = 1;
         add(descText);
 
-        nameText = new FlxText(560, 120, 800, "", 0);
+        nameText = new FlxText(565, 120, 800, "", 0);
 		nameText.setFormat(Paths.font("Dum-Regular.ttf"), 45, FlxColor.BLACK, CENTER);
 		nameText.angle = -12;
         nameText.updateHitbox();

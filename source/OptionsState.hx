@@ -158,7 +158,7 @@ class NotesSubstate extends MusicBeatSubstate
 		for (i in 0...ClientPrefs.arrowHSV.length) {
 			var yPos:Float = (165 * i) + 35;
 			for (j in 0...3) {
-				var optionText:Alphabet = new Alphabet(0, yPos, Std.string(ClientPrefs.arrowHSV[i][j]));
+				var optionText:Alphabet = new Alphabet(0, yPos + 30, Std.string(ClientPrefs.arrowHSV[i][j]), true);
 				optionText.x = posX + (225 * j) + 100 - ((optionText.lettersArray.length * 90) / 2);
 				grpNumbers.add(optionText);
 			}
@@ -186,7 +186,7 @@ class NotesSubstate extends MusicBeatSubstate
 			newShader.brightness = ClientPrefs.arrowHSV[i][2] / 100;
 			shaderArray.push(newShader);
 		}
-		hsvText = new Alphabet(0, 0, "Hue    Saturation  Brightness", false, false, 0, 0.65);
+		hsvText = new Alphabet(0, 0, "Hue    Saturation  Brightness", true, false, 0, 0.65);
 		add(hsvText);
 		changeSelection();
 	}
