@@ -4,7 +4,7 @@
 		"stage": "tomtus",
 		"player1": "bfsusreal",
 		"player2": "tuesday",
-		"player3": "gf",
+		"player3": "tuesdaygf",
 		"player4": null,
 		"notes": [
 			{
@@ -562,13 +562,6 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						89727.2727272728,
-						-1,
-						"Play Animation",
-						"pull",
-						"BF"
-					],
-					[
 						89772.7272727273,
 						-1,
 						"Play Animation",
@@ -621,6 +614,33 @@
 						"Dad"
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false

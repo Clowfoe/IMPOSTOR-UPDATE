@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-10,
 				673
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "BLACK UP"
+			"fps": 24,
+			"name": "BLACK UP",
+			"indices": []
 		},
 		{
-			"loop": true,
 			"offsets": [
 				60,
 				-90
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "abomination black idle instance 1",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "abomination black idle instance 1"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-484,
 				100
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "right ske instance 1",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right ske instance 1"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				276,
 				479
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "black down instance 1",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "black down instance 1"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				286,
-				-80
+				726,
+				330
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "left  instance 1",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left  instance 1"
 		}
 	],
 	"no_antialiasing": false,

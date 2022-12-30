@@ -2,124 +2,121 @@
 	"animations": [
 		{
 			"offsets": [
-				-27,
-				-26
+				0,
+				0
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singLEFTmiss",
 			"indices": [],
-			"name": "Zbf miss"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-27,
-				-26
-			],
-			"anim": "singRIGHTmiss",
 			"fps": 24,
-			"name": "Zbf miss",
-			"indices": []
-		},
-		{
+			"anim": "idle",
 			"loop": false,
-			"offsets": [
-				-26,
-				-26
-			],
-			"anim": "singUPmiss",
-			"fps": 24,
-			"name": "Zbf miss",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-26,
-				-26
-			],
-			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "Zbf miss",
-			"indices": []
+			"name": "BF idle dance afraid"
 		},
 		{
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"indices": [
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			],
 			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "Zbf idle scared"
+			"anim": "idle-loop",
+			"loop": true,
+			"name": "BF idle dance afraid"
 		},
 		{
 			"offsets": [
-				4,
-				-9
+				-27,
+				-6
 			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
 			"loop": false,
+			"name": "miss"
+		},
+		{
+			"offsets": [
+				-27,
+				-6
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "miss"
+		},
+		{
+			"offsets": [
+				-26,
+				-6
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "miss"
+		},
+		{
+			"offsets": [
+				-26,
+				-6
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "miss"
+		},
+		{
+			"offsets": [
+				11,
+				0
+			],
+			"indices": [],
 			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Zbf left scared"
+			"loop": false,
+			"name": "left"
 		},
 		{
 			"offsets": [
-				-6,
-				-60
+				-28,
+				-46
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Zbf down scared"
+			"loop": false,
+			"name": "down"
 		},
 		{
 			"offsets": [
-				-55,
-				44
+				-17,
+				74
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Zbf up scared"
+			"loop": false,
+			"name": "up"
 		},
 		{
 			"offsets": [
-				-43,
-				-7
+				-72,
+				-17
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 25,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Zbf right scared"
-		},
-		{
-			"offsets": [
-				-54,
-				50
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singUPfinish",
 			"loop": false,
-			"name": "Zbf up pass out"
-		},
-		{
-			"offsets": [
-				-32,
-				14
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "bfFinish",
-			"loop": false,
-			"name": "Zbf pass out"
+			"name": "right"
 		}
 	],
 	"no_antialiasing": false,

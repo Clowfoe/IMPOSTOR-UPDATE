@@ -1,103 +1,103 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-3,
 				-1
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "idle",
-			"indices": [],
-			"name": "BF idle dance"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-8,
-				-9
-			],
 			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "BF NOTE LEFT0"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-29,
-				-31
-			],
-			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "BF NOTE DOWN0"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-55,
-				18
-			],
-			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "BF NOTE UP0"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-45,
-				2
-			],
-			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "BF NOTE RIGHT0"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-37,
-				-36
-			],
-			"anim": "singLEFTmiss",
-			"fps": 24,
-			"name": "Zbf miss",
+			"name": "BF idle dance",
 			"indices": []
 		},
 		{
 			"offsets": [
+				-46,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-46,
+				-15
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "down"
+		},
+		{
+			"offsets": [
+				-47,
+				9
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-49,
+				-3
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "right"
+		},
+		{
+			"offsets": [
 				-37,
-				-36
+				4
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "miss"
+		},
+		{
+			"offsets": [
+				-37,
+				4
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"loop": true,
-			"name": "Zbf miss"
+			"loop": false,
+			"name": "miss"
 		},
 		{
 			"offsets": [
 				-38,
-				-37
+				3
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "singUPmiss",
-			"loop": true,
-			"name": "Zbf miss"
+			"loop": false,
+			"name": "miss"
 		},
 		{
 			"offsets": [
 				-38,
-				-37
+				3
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "singDOWNmiss",
-			"loop": true,
-			"name": "Zbf miss"
+			"loop": false,
+			"name": "miss"
 		}
 	],
 	"no_antialiasing": false,

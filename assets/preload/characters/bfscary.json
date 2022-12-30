@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-12,
+				-180
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Bf idle"
+		},
+		{
+			"offsets": [
+				-51,
+				-193
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "BF right"
+		},
+		{
+			"offsets": [
+				-11,
+				-219
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "BF down"
+		},
+		{
+			"offsets": [
+				12,
+				-185
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "BF left"
+		},
+		{
+			"offsets": [
+				-20,
+				-167
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "BF up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bfscary",
+	"position": [
+		90,
+		150
+	],
+	"healthicon": "bf",
+	"flip_x": false,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		-30,
+		200
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

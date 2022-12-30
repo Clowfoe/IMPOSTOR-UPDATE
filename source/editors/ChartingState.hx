@@ -91,7 +91,7 @@ class ChartingState extends MusicBeatState
 		['Double Kill Events', "Events for Double Kill\nDarken - Slowly darkens screen\nBrighten - Removes darkness"],
 		['DefeatDark', "black thingy"],
 		['Finale Drop', "fire ass song this shit fucks\n-aqua"],
-		['flash', "i eat children"],
+		['flash', "weirdly programmed flash event (dont change) \n 0 and 1 are normal flashes but 2 and 3 are \n for fades in identity crisis specifically"],
 		['Ellie Drop', "ellie dro p down"],
 		['Meltdown Video', "'Dead Body Reported'"],
 		['Toogus Sax', "blow"],
@@ -109,11 +109,14 @@ class ChartingState extends MusicBeatState
 		['unscream danger', 'based and Black Pilled ha ha memes'],
 		['tuesdayblast', 'loud sound'],
 		['HUD Fade', 'fades da hud'],
-		['Door Open', 'compromised door'],
+		['Identity Crisis line', 'dialogue'],
 		['Victory Darkness', 'let there be dark'],
 		['Show Victory Guy', 'value one is character, value 2 is show or null'],
 		['Defeat Fade', 'defeat bodies apear'],
-		['Defeat Retro', 'defeat bodies apear']
+		['Defeat Retro', 'defeat bodies apear'],
+		['Identity Crisis Events', 'Changes shifted background in identity crisis. 0 is default, 1 is red\n2 is black, 3 is green.'],
+		['Ejected Video', 'video at start ejected'],
+		['Ejected Start', 'start the actual song lol']
 	];
 
 	var _file:FileReference;

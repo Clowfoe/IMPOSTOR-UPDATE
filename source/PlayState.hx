@@ -276,6 +276,7 @@ class PlayState extends MusicBeatState
 	var phillyCityLightsEventTween:FlxTween;
 	var trainSound:FlxSound;
 	
+	var bg2:FlxSprite;
 	var bg5:FlxSprite;
 
 	var limoKillingState:Int = 0;
@@ -318,6 +319,23 @@ class PlayState extends MusicBeatState
 	var defeatthing:FlxSprite;
 	var defeatblack:FlxSprite;
 	var bodiesfront:FlxSprite;
+
+	//plague energy
+	// sorry for it being messy! Whoopsie! - aqua ( i wrote this )
+	var bgblue:FlxSprite;
+	var bgblue2:FlxSprite;
+	var bgblue3:FlxSprite;
+	var bgred:FlxSprite;
+	var bgred2:FlxSprite;	
+	var bgred3:FlxSprite;	
+	var bgpurple:FlxSprite;	
+	var bgpurple2:FlxSprite;	
+	var bgpurple3:FlxSprite;
+	var bggreen:FlxSprite;	
+	var plagueBGRED:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
+	var plagueBGPURPLE:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
+	var plagueBGBLUE:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
+	var plagueBGGREEN:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
 
 	//finale
 	var defeatFinaleStuff:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
@@ -518,6 +536,8 @@ class PlayState extends MusicBeatState
 	// hardcoded flashes because my ass aint redoing them as an event then retiming them all fuck that
 	var _cb = 0;
 	var flashSprite:FlxSprite;
+	var darkMono:FlxSprite;
+	
 	var stageFront2:FlxSprite;
 	var stageFront3:FlxSprite;
 	var overlay:FlxSprite;
@@ -1683,13 +1703,53 @@ class PlayState extends MusicBeatState
 				bg.setGraphicSize(Std.int(bg.width * 2));
 				add(bg);
 
-				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/BackThings', 'impostor'));
-				bg.updateHitbox();
-				bg.antialiasing = true;
-				bg.scrollFactor.set(1, 1);
-				bg.active = false;
-				bg.setGraphicSize(Std.int(bg.width * 2));
-				add(bg);
+				
+
+				bg2 = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/week1flashback', 'impostor'));
+				bg2.updateHitbox();
+				bg2.antialiasing = true;
+				bg2.scrollFactor.set(1, 1);
+				bg2.active = false;
+				bg2.setGraphicSize(Std.int(bg.width * 2));
+				
+
+				wiggleEffect = new WiggleEffect();
+				wiggleEffect.effectType = WiggleEffectType.DREAMY;
+				wiggleEffect.waveAmplitude = 0.1;
+				wiggleEffect.waveFrequency = 5;
+				wiggleEffect.waveSpeed = 2;
+				bg2.shader = wiggleEffect.shader;
+				//add(bg2);
+
+
+				// blue red and purple back things
+
+				bgblue = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/BackThings', 'impostor'));
+				bgblue.updateHitbox();
+				bgblue.antialiasing = true;
+				bgblue.scrollFactor.set(1, 1);
+				bgblue.active = false;
+				bgblue.setGraphicSize(Std.int(bgblue.width * 2));
+				plagueBGBLUE.add(bgblue);
+				
+
+				bgred = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/backthingsred', 'impostor'));
+				bgred.updateHitbox();
+				bgred.antialiasing = true;
+				bgred.scrollFactor.set(1, 1);
+				bgred.active = false;
+				bgred.setGraphicSize(Std.int(bgred.width * 2));
+				plagueBGRED.add(bgred);
+
+
+				bgpurple = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/backthingspurple', 'impostor'));
+				bgpurple.updateHitbox();
+				bgpurple.antialiasing = true;
+				bgpurple.scrollFactor.set(1, 1);
+				bgpurple.active = false;
+				bgpurple.setGraphicSize(Std.int(bgpurple.width * 2));
+				plagueBGPURPLE.add(bgpurple);
+
 
 				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/Floor', 'impostor'));
 				bg.updateHitbox();
@@ -1699,22 +1759,71 @@ class PlayState extends MusicBeatState
 				bg.setGraphicSize(Std.int(bg.width * 2));
 				add(bg);
 
-				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/Reactor', 'impostor'));
-				bg.updateHitbox();
-				bg.antialiasing = true;
-				bg.scrollFactor.set(1, 1);
-				bg.active = false;
-				bg.setGraphicSize(Std.int(bg.width * 2));
-				add(bg);
+				// blue red and purple reactors
 
-				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/Reactorlight', 'impostor'));
-				bg.updateHitbox();
-				bg.antialiasing = true;
-				bg.scrollFactor.set(1, 1);
-				bg.active = false;
-				bg.setGraphicSize(Std.int(bg.width * 2));
-				bg.blend = ADD;
-				add(bg);
+				bgblue2 = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/Reactor', 'impostor'));
+				bgblue2.updateHitbox();
+				bgblue2.antialiasing = true;
+				bgblue2.scrollFactor.set(1, 1);
+				bgblue2.active = false;
+				bgblue2.setGraphicSize(Std.int(bgblue2.width * 2));
+				plagueBGBLUE.add(bgblue2);
+
+				bgred2  = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/ReactorRed', 'impostor'));
+				bgred2.updateHitbox();
+				bgred2.antialiasing = true;
+				bgred2.scrollFactor.set(1, 1);
+				bgred2.active = false;
+				bgred2.setGraphicSize(Std.int(bgred2.width * 2));
+				plagueBGRED.add(bgred2);
+
+				bgpurple2 = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/ReactorBlue', 'impostor'));
+				bgpurple2.updateHitbox();
+				bgpurple2.antialiasing = true;
+				bgpurple2.scrollFactor.set(1, 1);
+				bgpurple2.active = false;
+				bgpurple2.setGraphicSize(Std.int(bgpurple2.width * 2));
+				plagueBGPURPLE.add(bgpurple2);
+
+
+				// lights
+
+				bgblue3 = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/Reactorlight', 'impostor'));
+				bgblue3.updateHitbox();
+				bgblue3.antialiasing = true;
+				bgblue3.scrollFactor.set(1, 1);
+				bgblue3.active = false;
+				bgblue3.setGraphicSize(Std.int(bgblue3.width * 2));
+				bgblue3.blend = ADD;
+				plagueBGBLUE.add(bgblue3);
+
+				bgred3 = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/ReactorLightRed', 'impostor'));
+				bgred3.updateHitbox();
+				bgred3.antialiasing = true;
+				bgred3.scrollFactor.set(1, 1);
+				bgred3.active = false;
+				bgred3.setGraphicSize(Std.int(bgred3.width * 2));
+				bgred3.blend = ADD;
+				plagueBGRED.add(bgred3);
+
+				bgpurple3 = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/ReactorLightPurple', 'impostor'));
+				bgpurple3.updateHitbox();
+				bgpurple3.antialiasing = true;
+				bgpurple3.scrollFactor.set(1, 1);
+				bgpurple3.active = false;
+				bgpurple3.setGraphicSize(Std.int(bgpurple3.width * 2));
+				bgpurple3.blend = ADD;
+				plagueBGPURPLE.add(bgpurple3);
+				
+				
+				add(plagueBGBLUE);
+				add(plagueBGRED);
+				add(plagueBGPURPLE);
+
+				plagueBGBLUE.visible = true;
+				plagueBGRED.visible = false;
+				plagueBGPURPLE.visible = false;
+
 
 				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/wires1', 'impostor'));
 				bg.updateHitbox();
@@ -1724,21 +1833,17 @@ class PlayState extends MusicBeatState
 				bg.setGraphicSize(Std.int(bg.width * 2));
 				add(bg);
 
-				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/wires2', 'impostor'));
-				bg.updateHitbox();
-				bg.antialiasing = true;
-				bg.scrollFactor.set(1, 1);
-				bg.active = false;
-				bg.setGraphicSize(Std.int(bg.width * 2));
-				add(bg);
 
-				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/wires3', 'impostor'));
-				bg.updateHitbox();
-				bg.antialiasing = true;
-				bg.scrollFactor.set(1, 1);
-				bg.active = false;
-				bg.setGraphicSize(Std.int(bg.width * 2));
-				add(bg);
+				bggreen = new FlxSprite(0, -800).loadGraphic(Paths.image('skeld/evilejected', 'impostor'));
+				bggreen.updateHitbox();
+				bggreen.antialiasing = true;
+				bggreen.scrollFactor.set(0.7, 0.7);
+				bggreen.active = false;
+				bggreen.setGraphicSize(Std.int(bg.width * 2));
+				plagueBGGREEN.add(bggreen);
+
+				add(plagueBGGREEN);
+				plagueBGGREEN.visible = false;
 
 
 
@@ -2580,6 +2685,10 @@ class PlayState extends MusicBeatState
 				}
 				add(cloudScroll);
 				add(speedLines);
+				canPause = false;
+				camGame.visible = false;
+				camHUD.visible = false;
+				
 
 			case 'polus':
 				snow = new FlxSprite(0, -250);
@@ -2612,7 +2721,7 @@ class PlayState extends MusicBeatState
 				saxguy.updateHitbox();
 				saxguy.antialiasing = true;
 				saxguy.scrollFactor.set(1, 1);
-				saxguy.setGraphicSize(Std.int(saxguy.width * 0.9));
+				saxguy.setGraphicSize(Std.int(saxguy.width * 0.6));
 				saxguy.active = true;
 			case 'defeat':
 				lightoverlay = new FlxSprite(-550, -100).loadGraphic(Paths.image('iluminao omaga'));
@@ -2828,17 +2937,34 @@ class PlayState extends MusicBeatState
 				lightoverlay.setGraphicSize(Std.int(lightoverlay.width * 2));
 				add(lightoverlay);
 
-				saxguy = new FlxSprite(120, 100);
-				saxguy.frames = Paths.getSparrowAtlas('skeld/doors', 'impostor');
-				saxguy.animation.addByPrefix('closed', 'Door Closed Shrunk', 24, false);
-				saxguy.animation.addByPrefix('open', 'Door Openin Animation Shrunk', 24, false);
-				saxguy.cameras = [camOther];
-				saxguy.animation.play('open');
+				speedLines = new FlxBackdrop(Paths.image('ejected/speedLines', 'impostor'), 1, 1, true, true);
+				speedLines.antialiasing = true;
+				speedLines.updateHitbox();
+				speedLines.scrollFactor.set(1.3, 1.3);
+				speedLines.alpha = 0.3;
+				plagueBGGREEN.add(speedLines);
+
+				darkMono = new FlxSprite(0, 0).makeGraphic(1280, 720, 0xff000000);
+				darkMono.cameras = [camOther];
+				add(darkMono);
+				darkMono.visible = false;
+
+				saxguy = new FlxSprite(0, 0);
+				saxguy.frames = Paths.getSparrowAtlas('skeld/dialogue', 'impostor');
+				saxguy.animation.addByPrefix('bop', 'dialogue', 24, false);
+				
 				saxguy.updateHitbox();
+				
 				saxguy.antialiasing = true;
-				saxguy.setGraphicSize(Std.int(saxguy.width * 2.4));
+				saxguy.scrollFactor.set(1, 1);
 				saxguy.active = true;
-				add(saxguy);
+				saxguy.cameras = [camOther];
+				saxguy.screenCenter();
+				
+				saxguy.visible = false;
+				
+
+				
 				
 			case 'grey':
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/grayfg', 'impostor'));
@@ -5386,6 +5512,10 @@ class PlayState extends MusicBeatState
 					finaleDarkFG.alpha = FlxMath.lerp(finaleDarkFG.alpha, 0, CoolUtil.boundTo(elapsed * 0.5, 0, 1));
 					FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, CoolUtil.boundTo(elapsed * 0.01, 0, 1));
 				}
+				
+			
+			case 'monotone':
+				speedLines.y = FlxMath.lerp(speedLines.y, speedLines.y - 1350, CoolUtil.boundTo(elapsed * 9, 0, 1));
 			
 			case 'drippypop':
 				/*if(!SONG.notes[id].mustHitSection && !redDropped)
@@ -6482,6 +6612,13 @@ class PlayState extends MusicBeatState
 					camGame.visible = false;
 					camHUD.visible = false;
 					startVideo('meltdown');
+				case 'Ejected Video':
+					startVideo('ejected');
+				case 'Ejected Start':
+					camGame.flash(FlxColor.WHITE, 0.35);
+					canPause = true;
+					camGame.visible = true;
+					camHUD.visible = true;
 				case 'Double Kill Events':
 					switch(value1.toLowerCase()){
 						case 'darken':
@@ -6677,6 +6814,36 @@ class PlayState extends MusicBeatState
 							FlxTween.tween(camHUD, {alpha: 1}, 0.7, {ease: FlxEase.quadInOut});
 						case 1:
 							FlxTween.tween(camHUD, {alpha: 0}, 0.7, {ease: FlxEase.quadInOut});
+					}
+
+				case 'Identity Crisis Events':
+					var charType:Int = Std.parseInt(value1);
+					if (Math.isNaN(charType))
+						charType = 0;
+
+					switch (charType)
+					{
+						case 0:
+							plagueBGBLUE.visible = true;
+							plagueBGRED.visible = false;
+							plagueBGPURPLE.visible = false;
+							plagueBGGREEN.visible = false;
+
+						case 1:
+							plagueBGBLUE.visible = false;
+							plagueBGRED.visible = true;
+							plagueBGPURPLE.visible = false;
+							plagueBGGREEN.visible = false;
+						case 2:
+							plagueBGBLUE.visible = false;
+							plagueBGRED.visible = false;
+							plagueBGPURPLE.visible = true;
+							plagueBGGREEN.visible = false;
+						case 3:
+							plagueBGBLUE.visible = false;
+							plagueBGRED.visible = false;
+							plagueBGPURPLE.visible = false;
+							plagueBGGREEN.visible = true;
 					}
 				case 'Defeat Fade':
 					var charType:Int = Std.parseInt(value1);
@@ -6904,8 +7071,15 @@ class PlayState extends MusicBeatState
 					
 					add(saxguy);
 
-				case 'Door Open':
-					saxguy.animation.play('open');
+				case 'Identity Crisis line':
+					
+					
+					saxguy.cameras = [camOther];
+					saxguy.setGraphicSize(Std.int(saxguy.width * 0.6));
+					add(saxguy);
+					saxguy.visible = true;
+					saxguy.animation.play('bop');
+					
 
 				case 'Blammed Lights':
 					var lightId:Int = Std.parseInt(value1);
@@ -7097,13 +7271,21 @@ class PlayState extends MusicBeatState
 					var charType:Int = Std.parseInt(value1);
 					if (Math.isNaN(charType))
 						charType = 0;
-
+					// also used for identity crisis idk why dont blame me shrug
 					switch (charType)
 					{
 						case 0:
 							camGame.flash(FlxColor.WHITE, 0.35);
 						case 1:
 							camGame.flash(FlxColor.WHITE, 0.35);
+						case 2:
+							camGame.flash(FlxColor.WHITE, 0.55);
+							darkMono.visible = true;
+						case 3:
+							camGame.flash(FlxColor.WHITE, 0.55);
+							darkMono.visible = false;
+							saxguy.visible = false;
+							
 					}
 
 					if(curStage.toLowerCase() == 'cargo'){
