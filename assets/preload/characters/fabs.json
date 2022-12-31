@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-40
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 28,
-			"name": "fabs idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "fabs idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				197,
 				-106
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 28,
-			"name": "fabs left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "fabs left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-79,
+				-89,
 				-143
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 28,
-			"name": "fabs right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "fabs right"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-118,
-				-425
+				-108,
+				-390
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "fabs down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "fabs down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-60,
 				31
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "fabs up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "fabs up"
 		}
 	],
 	"no_antialiasing": false,
@@ -74,5 +74,5 @@
 		110
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 0.9
 }

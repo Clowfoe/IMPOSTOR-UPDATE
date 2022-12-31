@@ -3115,7 +3115,7 @@ class PlayState extends MusicBeatState
 						frontercloud.updateHitbox();
 						frontercloud.scrollFactor.set(1, 1);
 						add(frontercloud);
-						turbFrontCloud.add(frontercloud);
+					//	turbFrontCloud.add(frontercloud);
 					}
 
 				var turblight:FlxSprite = new FlxSprite(-83.1, -876.7).loadGraphic(Paths.image('airship/turbulence/TURBLIGHTING', 'impostor'));
@@ -3230,11 +3230,7 @@ class PlayState extends MusicBeatState
 				
 				saxguy.visible = false;
 
-				defeatblack = new FlxSprite().makeGraphic(FlxG.width * 4, FlxG.height + 700, FlxColor.BLACK);
-				defeatblack.alpha = 1;
-				defeatblack.screenCenter(X);
-				defeatblack.screenCenter(Y);
-				add(defeatblack);
+			
 				
 
 				
