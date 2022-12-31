@@ -9,7 +9,7 @@ enum WiggleEffectType
 	WAVY;
 	HEAT_WAVE_HORIZONTAL;
 	HEAT_WAVE_VERTICAL;
-	FLAG;
+	FLAG;//
 }
 
 class WiggleEffect
