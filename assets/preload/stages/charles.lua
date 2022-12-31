@@ -89,6 +89,12 @@ function onUpdate()
         yy = 450;
         yy2 = 450;
     end
+    if curStep == 40 then
+        triggerEvent('Greatest Plan Icons', 'bf')
+    end
+    if curStep == 41 then
+        triggerEvent('Greatest Plan Icons', 'charles')
+    end
     if curStep == 45 then
         triggerEvent('Charles Enter')
     end

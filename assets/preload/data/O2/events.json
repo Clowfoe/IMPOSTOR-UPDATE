@@ -291,6 +291,13 @@
 						"Reactor Beep",
 						"0.4",
 						""
+					],
+					[
+						43555.5555555556,
+						-1,
+						"Lights Down O2",
+						"",
+						""
 					]
 				],
 				"bpm": 0,
@@ -307,6 +314,34 @@
 						-1,
 						"Reactor Beep",
 						"0.4",
+						""
+					],
+					[
+						44777.7777777778,
+						-1,
+						"WTF O2",
+						"what",
+						""
+					],
+					[
+						44888.8888888889,
+						-1,
+						"WTF O2",
+						"the",
+						""
+					],
+					[
+						45222.2222222222,
+						-1,
+						"WTF O2",
+						"fuck",
+						""
+					],
+					[
+						45333.3333333334,
+						-1,
+						"WTF O2",
+						"die",
 						""
 					]
 				],
@@ -400,6 +435,13 @@
 						"Change Character",
 						"1",
 						"meangus"
+					],
+					[
+						53444.4444444445,
+						-1,
+						"WTF O2",
+						"appear",
+						""
 					]
 				],
 				"bpm": 0,
@@ -674,33 +716,6 @@
 						""
 					]
 				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false

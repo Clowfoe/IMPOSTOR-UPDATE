@@ -1,59 +1,81 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-109,
 				190
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "RHM Idle"
+			"fps": 24,
+			"name": "RHM Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-152,
 				150
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "RHM Right"
+			"fps": 24,
+			"name": "RHM Right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-99,
 				366
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "RHM Up"
+			"fps": 24,
+			"name": "RHM Up",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				15,
 				190
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "RHM left pose",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "RHM left pose"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-83,
 				120
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "RHM down new",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "RHM down new"
+		},
+		{
+			"offsets": [
+				-94,
+				190
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "intro",
+			"loop": false,
+			"name": "RHM intro new"
+		},
+		{
+			"offsets": [
+				-150,
+				-340
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "animation",
+			"loop": false,
+			"name": "rhm animation"
 		}
 	],
 	"no_antialiasing": false,
