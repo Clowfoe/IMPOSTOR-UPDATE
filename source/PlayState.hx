@@ -348,7 +348,8 @@ class PlayState extends MusicBeatState
 	var finaleBGStuff:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
 	var finaleFGStuff:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
 	var finaleDarkFG:FlxSprite;
-	var finaleBar:FlxSprite;
+	var finaleBarRed:FlxSprite;
+	var finaleBarBlue:FlxSprite;
 
 
 	// nick
@@ -3762,14 +3763,31 @@ class PlayState extends MusicBeatState
 		healthBarBG.sprTracker = healthBar;
 
 		if(curStage == 'finalem'){
-			finaleBar = new FlxSprite(0, 530).loadGraphic(Paths.image('healthBarFinale'));
-			finaleBar.setGraphicSize(Std.int(finaleBar.width * 0.6));
-			finaleBar.updateHitbox();
-			finaleBar.x = (FlxG.width / 2) - (finaleBar.width / 2);
-			finaleBar.visible = false;
-			finaleBar.antialiasing = true;
-			finaleBar.cameras = [camHUD];
-			add(finaleBar);
+			finaleBarRed = new FlxSprite(0, 530).loadGraphic(Paths.image('healthBarFinaleRed'));
+			finaleBarRed.setGraphicSize(Std.int(finaleBarRed.width * 0.6));
+			finaleBarRed.updateHitbox();
+			finaleBarRed.x = (FlxG.width / 2) - (finaleBarRed.width / 2);
+			finaleBarRed.visible = false;
+			finaleBarRed.antialiasing = true;
+			finaleBarRed.cameras = [camHUD];
+			add(finaleBarRed);
+
+			finaleBarBlue = new FlxSprite(0, 530).loadGraphic(Paths.image('healthBarFinaleBlue'));
+			finaleBarBlue.setGraphicSize(Std.int(finaleBarBlue.width * 0.6));
+			finaleBarBlue.updateHitbox();
+			finaleBarBlue.x = (FlxG.width / 2) - (finaleBarBlue.width / 2);
+			finaleBarBlue.visible = false;
+			finaleBarBlue.antialiasing = true;
+			finaleBarBlue.cameras = [camHUD];
+			add(finaleBarBlue);
+
+			if(ClientPrefs.downScroll){
+				var pos = FlxG.height - (finaleBarRed.y + finaleBarRed.height);
+				finaleBarRed.y = pos;
+				finaleBarRed.flipY = true;
+				finaleBarBlue.y = pos;
+				finaleBarBlue.flipY = true;
+			}
 		}
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
@@ -5489,6 +5507,13 @@ class PlayState extends MusicBeatState
 		var legPosY = [13, 7, -3, -1, -1, 2, 7, 9, 7, 2, 0, 0, 3, 1, 3, 7, 13];
 		var legPosX = [3, 4, 4, 5, 5, 4, 3, 2, 0, 0, -3, -4, -4, -5, -5, -4, -3];
 
+		if(finaleBarRed != null){
+			var redClip = new FlxRect(0, 0, 19 + (1160 - (health * 580)), finaleBarRed.frameHeight);
+			var blueClip = new FlxRect(19 + (1160 - (health * 580)), 0, finaleBarBlue.frameWidth - (19 + (1160 - (health * 580))), finaleBarBlue.frameHeight);
+			finaleBarRed.clipRect = redClip;
+			finaleBarBlue.clipRect = blueClip;
+		}
+
 		if (curStage == 'warehouse'){
 			leftblades.x = (213.05 + bladeDistance) - (60 * health);
 			rightblades.x = (827.75 - bladeDistance) + (60 * health);
@@ -5909,13 +5934,16 @@ class PlayState extends MusicBeatState
 			iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (iconP2.width - iconOffset);
 		}
 		else{
-			iconP1.x = finaleBar.x + (finaleBar.width / 1.4);
-			iconP2.x = finaleBar.x - 90;
+			iconP1.x = finaleBarRed.x + (finaleBarRed.width / 1.4) + 50;
+			iconP2.x = finaleBarRed.x - 140;
 			iconP1.y = healthBar.y - (iconP1.height / 2) + 7;
 			if (healthBar.percent > 80)
 				iconP2.y = healthBar.y - (iconP2.height / 2) - 50;
 			else
 				iconP2.y = healthBar.y - (iconP2.height / 2) - 28;
+			if(ClientPrefs.downScroll){
+				iconP2.y += 50;
+			}
 		}
 
 		if (healthBar.percent < 20)
@@ -6997,7 +7025,8 @@ class PlayState extends MusicBeatState
 					healthBarBG.visible = false;
 					iconP1.visible = true;
 					iconP2.visible = true;
-					finaleBar.visible = true;
+					finaleBarRed.visible = true;
+					finaleBarBlue.visible = true;
 					scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, 0xFFff1266, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 					botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, 0xFFff1266, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 					iconP1.changeIcon('bffinale');
