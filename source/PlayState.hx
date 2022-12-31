@@ -1656,9 +1656,9 @@ class PlayState extends MusicBeatState
 				toogusblue.antialiasing = true;
 				add(toogusblue);
 
-				var thebackground = new FlxSprite(950, 775);
+				thebackground = new FlxSprite(950, 775);
 				thebackground.frames = Paths.getSparrowAtlas('attack/loggoattack', 'impostor');
-				thebackground.animation.addByPrefix('bop', 'loggfriend', 24, true);
+				thebackground.animation.addByPrefix('bop', 'loggfriend', 24, false);
 				thebackground.animation.play('bop');
 				thebackground.antialiasing = true;
 				thebackground.scrollFactor.set(1, 1);
@@ -9283,6 +9283,7 @@ class PlayState extends MusicBeatState
 				{
 					toogusorange.animation.play('bop');
 					toogusblue.animation.play('bop');
+					thebackground.animation.play('bop');
 				}
 			case 'chef':
 				if (curBeat % 2 == 0)
