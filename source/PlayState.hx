@@ -1658,7 +1658,7 @@ class PlayState extends MusicBeatState
 
 				var thebackground = new FlxSprite(950, 775);
 				thebackground.frames = Paths.getSparrowAtlas('attack/loggoattack', 'impostor');
-				thebackground.animation.addByPrefix('bop', 'loggfriend instance 1', 24, true);
+				thebackground.animation.addByPrefix('bop', 'loggfriend', 24, true);
 				thebackground.animation.play('bop');
 				thebackground.antialiasing = true;
 				thebackground.scrollFactor.set(1, 1);
