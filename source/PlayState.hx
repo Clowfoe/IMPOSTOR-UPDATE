@@ -4926,7 +4926,14 @@ class PlayState extends MusicBeatState
 		// NEW SHIT
 		noteData = songData.notes;
 
-		rmtjData = Song.loadFromJson('voting-time-other', 'voting-time').notes;
+		trace(curSong.toLowerCase());
+
+		var otherChartData:String = 'voting-time';
+		if(curSong.toLowerCase() == 'monotone attack'){
+			trace('attack!!!!!!!!!!!!!!!!!!!!');
+			otherChartData = 'monotone-attack';
+		}
+		rmtjData = Song.loadFromJson(otherChartData + '-other', otherChartData).notes;
 
 		var playerCounter:Int = 0;
 
@@ -5033,7 +5040,7 @@ class PlayState extends MusicBeatState
 			}
 			daBeats += 1;
 		}
-		if(curStage.toLowerCase() == 'voting'){
+		if(curStage.toLowerCase() == 'voting' || curStage.toLowerCase() == 'attack'){
 			for (section in rmtjData)
 			{
 				for (songNotes in section.sectionNotes)
@@ -5116,7 +5123,7 @@ class PlayState extends MusicBeatState
 		// playerCounter += 1;
 		unspawnNotes.sort(sortByShit);
 
-		if(curStage.toLowerCase() == 'voting')
+		if(curStage.toLowerCase() == 'voting' || curStage.toLowerCase() == 'attack')
 			unspawnVotingNotes.sort(sortByShit);
 
 		if (eventNotes.length > 1)
@@ -6426,7 +6433,7 @@ class PlayState extends MusicBeatState
 				}
 			});
 
-			if(curStage.toLowerCase() == 'voting'){
+			if(curStage.toLowerCase() == 'voting' || curStage.toLowerCase() == 'attack'){
 				votingnotes.forEachAlive(function(daNote:Note)
 				{
 					if (!daNote.mustPress && ClientPrefs.middleScroll)
