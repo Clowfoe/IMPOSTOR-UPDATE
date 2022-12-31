@@ -6,6 +6,7 @@
 		"player2": "black",
 		"player3": "gf",
 		"player4": null,
+		"allowPet": true,
 		"notes": [
 			{
 				"lengthInSteps": 16,
@@ -47,7 +48,15 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						4800,
+						-1,
+						"Finale Flashback Change",
+						"moog",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -56,7 +65,15 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						6000,
+						-1,
+						"Finale Flashback Change",
+						"toog",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -65,7 +82,15 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						7200,
+						-1,
+						"Finale Flashback Change",
+						"doog",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -74,7 +99,15 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						8400,
+						-1,
+						"Finale Flashback Change",
+						"flash",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -4817,6 +4850,42 @@
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
 			}
 		],
 		"splashSkin": null,
@@ -4824,6 +4893,8 @@
 		"bpm": 200,
 		"arrowSkin": "",
 		"needsVoices": true,
+		"allowGFskin": true,
+		"allowBFskin": true,
 		"fabs": null,
 		"song": "Finale"
 	}

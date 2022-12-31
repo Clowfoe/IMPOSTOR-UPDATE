@@ -90,6 +90,7 @@ class ChartingState extends MusicBeatState
 		['Reactor Beep', "beep beep value 1 changes the type"],
 		['Double Kill Events', "Events for Double Kill\nDarken - Slowly darkens screen\nBrighten - Removes darkness"],
 		['DefeatDark', "black thingy"],
+		['Finale Flashback Change', "eTHAN THINGY CODE IN GAME!!"],
 		['Finale Drop', "fire ass song this shit fucks\n-aqua"],
 		['flash', "weirdly programmed flash event (dont change) \n 0 and 1 are normal flashes but 2 and 3 are \n for fades in identity crisis specifically"],
 		['Ellie Drop', "ellie dro p down"],

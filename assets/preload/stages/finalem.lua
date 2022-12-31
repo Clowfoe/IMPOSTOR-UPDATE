@@ -38,7 +38,10 @@ function onUpdate()
         triggerEvent('Camera Follow Pos', 1250, 1000)
     end
     if curBeat >= 64 and curBeat < 68 then --bf zoom in
-        triggerEvent('Camera Follow Pos', 1350, 1050)
+        triggerEvent('Camera Follow Pos', 1400, 1050)
+    end
+    if curBeat == 67 then
+        setProperty('defaultCamZoom',2.4)
     end
     if followchars == true and curBeat >= 68 then
         if mustHitSection == false then
