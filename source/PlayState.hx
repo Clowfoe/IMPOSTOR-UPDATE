@@ -392,6 +392,8 @@ class PlayState extends MusicBeatState
 	var noootomatomongus:FlxSprite;
 	var longfuckery:FlxSprite;
 
+	var gfDeadPretender:FlxSprite;
+
 	//chef
 	var chefBluelight:FlxSprite;
 	var chefBlacklight:FlxSprite;
@@ -879,6 +881,130 @@ class PlayState extends MusicBeatState
 				pretenderDark.antialiasing = true;
 				pretenderDark.scrollFactor.set(1, 1);
 				pretenderDark.active = true;
+			
+			case 'pretender': // pink stage
+				var bg:FlxSprite = new FlxSprite(-1500, -800).loadGraphic(Paths.image('mira/pretender/bg sky', 'impostor'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				add(bg);
+
+				var bg:FlxSprite = new FlxSprite(-1300, -100).loadGraphic(Paths.image('mira/pretender/cloud fathest', 'impostor'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				add(bg);
+
+				var bg:FlxSprite = new FlxSprite(-1300, 0).loadGraphic(Paths.image('mira/pretender/cloud front', 'impostor'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				add(bg);
+
+				cloud1 = new FlxBackdrop(Paths.image('mira/pretender/cloud 1', 'impostor'), 1, 1, true, true);
+				cloud1.setPosition(0, -1000);
+				cloud1.updateHitbox();
+				cloud1.antialiasing = true;
+				cloud1.scrollFactor.set(1, 1);
+				add(cloud1);
+
+				cloud2 = new FlxBackdrop(Paths.image('mira/pretender/cloud 2', 'impostor'), 1, 1, true, true);
+				cloud2.setPosition(0, -1200);
+				cloud2.updateHitbox();
+				cloud2.antialiasing = true;
+				cloud2.scrollFactor.set(1, 1);
+				add(cloud2);
+
+				cloud3 = new FlxBackdrop(Paths.image('mira/pretender/cloud 3', 'impostor'), 1, 1, true, true);
+				cloud3.setPosition(0, -1400);
+				cloud3.updateHitbox();
+				cloud3.antialiasing = true;
+				cloud3.scrollFactor.set(1, 1);
+				add(cloud3);
+
+				cloud4 = new FlxBackdrop(Paths.image('mira/pretender/cloud 4', 'impostor'), 1, 1, true, true);
+				cloud4.setPosition(0, -1600);
+				cloud4.updateHitbox();
+				cloud4.antialiasing = true;
+				cloud4.scrollFactor.set(1, 1);
+				add(cloud4);
+
+				cloudbig = new FlxBackdrop(Paths.image('mira/pretender/bigcloud', 'impostor'), 1, 1, true, true);
+				cloudbig.setPosition(0, -1200);
+				cloudbig.updateHitbox();
+				cloudbig.antialiasing = true;
+				cloudbig.scrollFactor.set(1, 1);
+				add(cloudbig);
+
+				var bg:FlxSprite = new FlxSprite(-1200, -750).loadGraphic(Paths.image('mira/pretender/ground', 'impostor'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				add(bg);
+
+				var bg:FlxSprite = new FlxSprite(0, -650).loadGraphic(Paths.image('mira/pretender/front plant', 'impostor'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				add(bg);
+
+				var bg:FlxSprite = new FlxSprite(1000, 230).loadGraphic(Paths.image('mira/pretender/knocked over plant', 'impostor'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				add(bg);
+
+				var bg:FlxSprite = new FlxSprite(-800, 260).loadGraphic(Paths.image('mira/pretender/knocked over plant 2', 'impostor'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				add(bg);
+
+				var deadmungus:FlxSprite = new FlxSprite(950, 250).loadGraphic(Paths.image('mira/pretender/tomatodead', 'impostor'));
+				deadmungus.antialiasing = true;
+				deadmungus.scrollFactor.set(1, 1);
+				deadmungus.active = false;
+				add(deadmungus);
+
+				gfDeadPretender = new FlxSprite(0, 100);
+				gfDeadPretender.frames = Paths.getSparrowAtlas('mira/pretender/gf_dead_p', 'impostor');
+				gfDeadPretender.animation.addByPrefix('bop', 'GF Dancing Beat', 24, false);
+				gfDeadPretender.animation.play('bop');
+				gfDeadPretender.setGraphicSize(Std.int(gfDeadPretender.width * 1.1));
+				gfDeadPretender.antialiasing = true;
+				gfDeadPretender.active = true;
+				add(gfDeadPretender);
+
+				var ripbozo:FlxSprite = new FlxSprite(700, 450).loadGraphic(Paths.image('mira/pretender/ripbozo', 'impostor'));
+				ripbozo.antialiasing = true;
+				ripbozo.setGraphicSize(Std.int(ripbozo.width * 0.7));
+				add(ripbozo);
+
+				var rhmdead:FlxSprite = new FlxSprite(1350, 450).loadGraphic(Paths.image('mira/pretender/rhm dead', 'impostor'));
+				rhmdead.antialiasing = true;
+				rhmdead.scrollFactor.set(1, 1);
+				rhmdead.active = false;
+				add(rhmdead);
+
+				bluemira = new FlxSprite(-1150, 400);
+				bluemira.frames = Paths.getSparrowAtlas('mira/pretender/blued', 'impostor');
+				bluemira.animation.addByPrefix('bop', 'bob bop', 24, false);
+				bluemira.animation.play('bop');
+				bluemira.antialiasing = true;
+				bluemira.scrollFactor.set(1.2, 1);
+				bluemira.active = true;
+				
+				pot = new FlxSprite(-1550, 650).loadGraphic(Paths.image('mira/pretender/front pot', 'impostor'));
+				pot.antialiasing = true;
+				pot.setGraphicSize(Std.int(pot.width * 1));
+				pot.scrollFactor.set(1.2, 1);
+				pot.active = false;
+
+				vines = new FlxSprite(-1450, -550).loadGraphic(Paths.image('mira/pretender/green', 'impostor'));
+				vines.antialiasing = true;
+				vines.setGraphicSize(Std.int(vines.width * 1));
+				vines.scrollFactor.set(1.2, 1);
+				vines.active = false;
 
 			case 'cargo': // double kill
 				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/cargo', 'impostor'));
@@ -946,132 +1072,6 @@ class PlayState extends MusicBeatState
 				table.antialiasing = true;
 				table.scrollFactor.set(1.0, 1.0);
 				table.active = false;
-
-			case 'banana': // ra ra rasputin
-
-				GameOverSubstate.loopSoundName = 'Jorsawsee_Loop';
-				GameOverSubstate.endSoundName = 'Jorsawsee_End';
-			
-				var sky:FlxSprite = new FlxSprite(-221.85, -167.85).loadGraphic(Paths.image('banana/sky', 'impostor'));
-				sky.antialiasing = true;
-				sky.scrollFactor.set(0.5, 0.5);
-				sky.active = false;
-				add(sky);
-
-				var hills:FlxSprite = new FlxSprite(-358, 438.4).loadGraphic(Paths.image('banana/mountains', 'impostor'));
-				hills.antialiasing = true;
-				hills.scrollFactor.set(0.8, 0.8);
-				hills.active = false;
-				add(hills);
-
-				var ground:FlxSprite = new FlxSprite(-331.95, 608.9).loadGraphic(Paths.image('banana/ground', 'impostor'));
-				ground.antialiasing = true;
-				ground.scrollFactor.set(1.0, 1.0);
-				ground.active = false;
-				add(ground);
-
-				sneakySnitch = new FlxSprite(106.65, 458.45);
-				sneakySnitch.frames = Paths.getSparrowAtlas('banana/tone', 'impostor');
-				sneakySnitch.animation.addByPrefix('hide', 'sneaky', 24, true);
-				sneakySnitch.antialiasing = true;
-				sneakySnitch.scrollFactor.set(1, 1);
-				sneakySnitch.active = true;
-				add(sneakySnitch);
-
-				bananaCrowd = new FlxSprite(1473, 430.1);
-				bananaCrowd.frames = Paths.getSparrowAtlas('banana/bananabgboppers', 'impostor');
-				bananaCrowd.animation.addByIndices('leftbop', 'amongbabies instance 1', [0, 1, 2, 3, 4, 5, 6], "", 24, false);
-				bananaCrowd.animation.addByIndices('rightbop', 'amongbabies instance 1', [7, 8, 9, 10, 11, 12, 13], "", 24, false);
-				bananaCrowd.antialiasing = true;
-				bananaCrowd.scrollFactor.set(1, 1);
-				bananaCrowd.active = true;
-				add(bananaCrowd);
-
-				bananaChef = new FlxSprite(804.85, 238.55);
-				bananaChef.frames = Paths.getSparrowAtlas('banana/chef_banana', 'impostor');
-				bananaChef.animation.addByPrefix('event', 'chef instance 1', 24, false);
-				bananaChef.antialiasing = true;
-				bananaChef.scrollFactor.set(1, 1);
-				bananaChef.active = true;
-				add(bananaChef);
-
-				tomato = new FlxSprite(804.85, 538.55);
-				tomato.frames = Paths.getSparrowAtlas('banana/tomato', 'impostor');
-				tomato.animation.addByPrefix('smush', 'tom', 24, true);
-				tomato.antialiasing = true;
-				tomato.scrollFactor.set(1, 1);
-				tomato.active = true;
-
-				bananas = new FlxSprite(117.7, 928.4).loadGraphic(Paths.image('banana/bananas', 'impostor'));
-				bananas.antialiasing = true;
-				bananas.scrollFactor.set(1.1, 1.1);
-				bananas.active = false;
-
-				bunches = new FlxSprite(-284.55, -168).loadGraphic(Paths.image('banana/bananabunches', 'impostor'));
-				bunches.antialiasing = true;
-				bunches.scrollFactor.set(1.3, 1.3);
-				bunches.active = false;
-
-				leaves = new FlxSprite(-78.2, -293.9).loadGraphic(Paths.image('banana/leaves', 'impostor'));
-				leaves.antialiasing = true;
-				leaves.scrollFactor.set(1.5, 1.5);
-				leaves.active = false;
-
-			case 'youtuber': // cory post thanks ethan
-
-				GameOverSubstate.loopSoundName = 'Jorsawsee_Loop';
-				GameOverSubstate.endSoundName = 'Jorsawsee_End';
-
-				var bfbubblebg:FlxSprite = new FlxSprite(934.35, 26.9).loadGraphic(Paths.image('youtube/stage', 'impostor'));
-				bfbubblebg.updateHitbox();
-				bfbubblebg.antialiasing = true;
-				bfbubblebg.scrollFactor.set(1, 1);
-				bfbubblebg.active = false;
-				add(bfbubblebg);
-
-			case 'turbulence': // TURBULENCE!!!
-
-				GameOverSubstate.loopSoundName = 'Jorsawsee_Loop';
-				GameOverSubstate.endSoundName = 'Jorsawsee_End';
-
-				turbFrontCloud = new FlxTypedGroup<FlxSprite>();	
-
-				var turbsky:FlxSprite = new FlxSprite(-866.9, -400.05).loadGraphic(Paths.image('airship/turbulence/turbsky', 'impostor'));
-				turbsky.antialiasing = true;
-				turbsky.scrollFactor.set(0.5, 0.5);
-				turbsky.active = false;
-				add(turbsky);
-				
-				var backerclouds:FlxSprite = new FlxSprite(1296.55, 175.55).loadGraphic(Paths.image('airship/turbulence/backclouds', 'impostor'));
-				backerclouds.antialiasing = true;
-				backerclouds.scrollFactor.set(0.65, 0.65);
-				backerclouds.active = false;
-				add(backerclouds);
-
-				var hotairballoon:FlxSprite = new FlxSprite(134.7, 147.05).loadGraphic(Paths.image('airship/turbulence/hotairballoon', 'impostor'));
-				hotairballoon.antialiasing = true;
-				hotairballoon.scrollFactor.set(0.65, 0.65);
-				hotairballoon.active = false;
-				add(hotairballoon);
-
-				var midderclouds:FlxSprite = new FlxSprite(-313.55, 253.05).loadGraphic(Paths.image('airship/turbulence/midclouds', 'impostor'));
-				midderclouds.antialiasing = true;
-				midderclouds.scrollFactor.set(0.8, 0.8);
-				midderclouds.active = false;
-				add(midderclouds);
-
-				hookarm = new FlxSprite(-797.85, 888.4).loadGraphic(Paths.image('airship/turbulence/clawback', 'impostor'));
-				hookarm.antialiasing = true;
-				hookarm.scrollFactor.set(1, 1);
-				hookarm.active = false;
-
-				clawshands = new FlxSprite(1873, 690.1);
-				clawshands.frames = Paths.getSparrowAtlas('airship/turbulence/clawfront', 'impostor');
-				clawshands.animation.addByPrefix('squeeze', 'clawhands', 24, false);
-				clawshands.animation.play('squeeze');
-				clawshands.antialiasing = true;
-				clawshands.scrollFactor.set(1, 1);
-				clawshands.active = true;
 
 			case 'victory': // victory
 
@@ -2816,6 +2816,16 @@ class PlayState extends MusicBeatState
 				add(pot);
 				add(vines);
 				add(pretenderDark);
+			case 'pretender':
+				add(bluemira);
+				add(pot);
+				add(vines);
+
+				var pretenderLighting:FlxSprite = new FlxSprite(-1670, -700).loadGraphic(Paths.image('mira/pretender/lightingpretender', 'impostor'));
+				pretenderLighting.antialiasing = true;
+				//pretenderLighting.alpha = 0.33;
+				add(pretenderLighting);
+
 			case 'ejected':
 				bfStartpos = new FlxPoint(1008.6, 504);
 				gfStartpos = new FlxPoint(114.4, 78.45);
@@ -3948,6 +3958,9 @@ class PlayState extends MusicBeatState
 
 				case 'oversight':
 					startVideo('oversight');
+
+				case 'finale':
+					startVideo('finale');
 
 				case "armed":
 					boyfriend.alpha = 0.001;
@@ -5403,7 +5416,7 @@ class PlayState extends MusicBeatState
 	{
 		flashSprite.alpha = FlxMath.lerp(flashSprite.alpha, 0, 0.06);
 
-		if (curStage == 'plantroom')
+		if (curStage == 'plantroom' || curStage == 'pretender')
 		{
 			cloud1.x = FlxMath.lerp(cloud1.x, cloud1.x - 1, CoolUtil.boundTo(elapsed * 9, 0, 1));
 			cloud2.x = FlxMath.lerp(cloud2.x, cloud2.x - 3, CoolUtil.boundTo(elapsed * 9, 0, 1));
@@ -9193,6 +9206,15 @@ class PlayState extends MusicBeatState
 				if (curBeat % 1 == 0)
 				{
 					bluemira.animation.play('bop', true);
+				}
+			
+			case 'pretender':
+				if(curBeat % 2 == 0){	
+					bluemira.animation.play('bop');
+				}
+				if (curBeat % 1 == 0)
+				{
+					gfDeadPretender.animation.play('bop');
 				}
 
 			case 'turbulence':
