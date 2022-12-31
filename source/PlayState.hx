@@ -56,7 +56,11 @@ import openfl.display.StageQuality;
 import openfl.events.KeyboardEvent;
 import openfl.filters.ShaderFilter;
 import openfl.filters.ShaderFilter;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
 import openfl.utils.Assets as OpenFlAssets;
+import openfl.display.Sprite;
+import openfl.Assets;
 import openfl8.blends.*;
 import openfl8.effects.*;
 import openfl8.effects.BlendModeEffect.BlendModeShader;
@@ -244,6 +248,7 @@ class PlayState extends MusicBeatState
 
 	// airship shit
 	var henryTeleporter:FlxSprite;
+	var wires:FlxSprite;
 
 	var charlesEnter:Bool = false;
 
@@ -1641,7 +1646,7 @@ class PlayState extends MusicBeatState
 
 				
 
-				toogusblue = new FlxSprite(800, 625);
+				toogusblue = new FlxSprite(850, 665);
 				toogusblue.frames = Paths.getSparrowAtlas('attack/orbyy', 'impostor');
 				toogusblue.animation.addByPrefix('bop', 'orbyy', 24, false);
 				toogusblue.animation.play('bop');
@@ -1649,6 +1654,16 @@ class PlayState extends MusicBeatState
 				toogusblue.active = true;
 				toogusblue.antialiasing = true;
 				add(toogusblue);
+
+				var thebackground = new FlxSprite(950, 775);
+				thebackground.frames = Paths.getSparrowAtlas('attack/loggoattack', 'impostor');
+				thebackground.animation.addByPrefix('bop', 'loggfriend instance 1', 24, true);
+				thebackground.animation.play('bop');
+				thebackground.antialiasing = true;
+				thebackground.scrollFactor.set(1, 1);
+				thebackground.setGraphicSize(Std.int(thebackground.width * 1));
+				thebackground.active = true;
+				add(thebackground);
 
 				crowd = new FlxSprite(1950, 750);
 				crowd.frames = Paths.getSparrowAtlas('attack/cooper', 'impostor');
@@ -1949,13 +1964,13 @@ class PlayState extends MusicBeatState
 				plagueBGPURPLE.visible = false;
 
 
-				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/wires1', 'impostor'));
-				bg.updateHitbox();
-				bg.antialiasing = true;
-				bg.scrollFactor.set(1, 1);
-				bg.active = false;
-				bg.setGraphicSize(Std.int(bg.width * 2));
-				add(bg);
+				wires = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/wires1', 'impostor'));
+				wires.updateHitbox();
+				wires.antialiasing = true;
+				wires.scrollFactor.set(1, 1);
+				wires.active = false;
+				wires.setGraphicSize(Std.int(wires.width * 1));
+				add(wires);
 
 				
 
@@ -2765,11 +2780,12 @@ class PlayState extends MusicBeatState
 			case 'voting':
 				add(momGhost);
 				add(momGroup);
+			case 'attack':
+				add(momGhost);
+				add(momGroup);
 			case 'charles':
 				add(momGhost);
 				add(momGroup);
-			case 'banana':
-				add(tomato);
 		}
 
 		if (curStage == 'turbulence')
@@ -3155,6 +3171,12 @@ class PlayState extends MusicBeatState
 				saxguy.screenCenter();
 				
 				saxguy.visible = false;
+
+				defeatblack = new FlxSprite().makeGraphic(FlxG.width * 4, FlxG.height + 700, FlxColor.BLACK);
+				defeatblack.alpha = 1;
+				defeatblack.screenCenter(X);
+				defeatblack.screenCenter(Y);
+				add(defeatblack);
 				
 
 				
@@ -3175,6 +3197,14 @@ class PlayState extends MusicBeatState
 				lightoverlay.alpha = 1;
 				lightoverlay.blend = MULTIPLY;
 				add(lightoverlay);
+				
+				//var overlayImage:BitmapData = Assets.getBitmapData(Paths.image('airship/grayoverlay', 'impostor'));
+				//var overlayShader:OverlayShader = new OverlayShader();
+
+				//overlayShader.setBitmapOverlay(overlayImage);
+
+				//var overlayFilter:ShaderFilter = new ShaderFilter(overlayShader);
+				//FlxG.camera.setFilters([overlayFilter]);
 
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/grayoverlay', 'impostor'));
 				lightoverlay.antialiasing = true;
@@ -3944,6 +3974,8 @@ class PlayState extends MusicBeatState
 				case 'sussus-moogus':
 					startVideo('polus1');
 					piss = false;
+				case 'delusion':
+					startVideo('grey');
 				case 'sabotage':
 					startVideo('polus2');
 					piss = false;
@@ -7543,6 +7575,18 @@ class PlayState extends MusicBeatState
 					FlxTween.tween(gf, {alpha: 0.1}, 0.4);
 					FlxTween.tween(dad, {alpha: 0.25}, 0.4);
 					FlxTween.tween(boyfriend, {alpha: 0.25}, 0.4);
+				case 'IdentityFade':
+					var charType:Int = Std.parseInt(value1);
+					if (Math.isNaN(charType))
+						charType = 0;
+
+					switch (charType)
+					{
+						case 0:
+							FlxTween.tween(defeatblack, {alpha: 0}, 0.4);
+						case 1:
+							FlxTween.tween(defeatblack, {alpha: 1}, 0.4);
+					}
 				case 'Forehead2':
 					nickt.visible = true;
 					nicktmvp.visible = false;

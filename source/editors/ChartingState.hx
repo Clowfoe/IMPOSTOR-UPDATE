@@ -120,7 +120,9 @@ class ChartingState extends MusicBeatState
 		['Ejected Video', 'video at start ejected'],
 		['Ejected Start', 'start the actual song lol'],
 		['Forehead', 'start the actual song lol'],
-		['Forehead2', 'start the actual song lol']
+		['Forehead2', 'start the actual song lol'],
+		['IdentityFade', 'fade in or out black in identity crisis.']
+
 	];
 
 	var _file:FileReference;

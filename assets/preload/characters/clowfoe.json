@@ -2,154 +2,77 @@
 	"animations": [
 		{
 			"offsets": [
-				-5,
-				210
+				-30,
+				-90
 			],
 			"loop": false,
-			"fps": 28,
+			"fps": 24,
 			"anim": "idle",
 			"indices": [],
-			"name": "clowfoe idle"
+			"name": "idle"
 		},
 		{
 			"offsets": [
-				-5,
-				224
+				30,
+				-104
 			],
 			"loop": false,
-			"fps": 28,
+			"fps": 24,
 			"anim": "singLEFT",
 			"indices": [],
-			"name": "clowfoe left"
+			"name": "left"
 		},
 		{
 			"offsets": [
-				-5,
-				180
+				33,
+				-139
 			],
 			"loop": false,
-			"fps": 28,
+			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
-			"name": "clowfoe down"
+			"name": "down"
 		},
 		{
 			"offsets": [
-				-5,
-				229
+				-63,
+				-57
 			],
 			"loop": false,
-			"fps": 28,
+			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
-			"name": "clowfoe up"
+			"name": "up"
 		},
 		{
 			"offsets": [
-				-5,
-				227
+				-47,
+				-103
 			],
 			"loop": false,
-			"fps": 28,
+			"fps": 24,
 			"anim": "singRIGHT",
 			"indices": [],
-			"name": "clowfoe right"
-		},
-		{
-			"offsets": [
-				-5,
-				221
-			],
-			"loop": false,
-			"fps": 28,
-			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "clowfoe miss left"
-		},
-		{
-			"offsets": [
-				-5,
-				188
-			],
-			"loop": false,
-			"fps": 28,
-			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "clowfoe miss down"
-		},
-		{
-			"offsets": [
-				-5,
-				229
-			],
-			"loop": false,
-			"fps": 28,
-			"anim": "singUPmiss",
-			"indices": [],
-			"name": "clowfoe miss up"
-		},
-		{
-			"offsets": [
-				-5,
-				227
-			],
-			"loop": false,
-			"fps": 28,
-			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "clowfoe miss right"
-		},
-		{
-			"offsets": [
-				379,
-				191
-			],
-			"loop": false,
-			"fps": 28,
-			"anim": "firstDeath",
-			"indices": [],
-			"name": "clowfoe retry die"
-		},
-		{
-			"offsets": [
-				379,
-				158
-			],
-			"loop": true,
-			"fps": 28,
-			"anim": "deathLoop",
-			"indices": [],
-			"name": "clowfoe retry loop"
-		},
-		{
-			"offsets": [
-				379,
-				167
-			],
-			"loop": false,
-			"fps": 28,
-			"anim": "deathConfirm",
-			"indices": [],
-			"name": "clowfoe retry press"
+			"name": "right"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/clowfoefnf",
 	"position": [
-		0,
-		390
+		-75,
+		250
 	],
-	"healthicon": "bfclow",
+	"healthicon": "clowfoe",
 	"flip_x": true,
 	"healthbar_colors": [
-		207,
-		31,
-		108
+		213,
+		235,
+		255
 	],
 	"camera_position": [
-		70,
-		-150
+		-20,
+		190
 	],
-	"sing_duration": 4,
-	"scale": 1
+	"sing_duration": 6.1,
+	"scale": 0.7
 }

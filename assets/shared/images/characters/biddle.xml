@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="biddle.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="biddle down0000" x="0" y="0" width="532" height="602" frameX="-1" frameY="0" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle down0001" x="0" y="0" width="532" height="602" frameX="-1" frameY="0" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle down0002" x="537" y="0" width="540" height="593" frameX="0" frameY="-11" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle down0003" x="537" y="0" width="540" height="593" frameX="0" frameY="-11" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle down0004" x="1082" y="0" width="542" height="587" frameX="0" frameY="-17" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle down0005" x="1082" y="0" width="542" height="587" frameX="0" frameY="-17" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle down0006" x="1629" y="0" width="542" height="587" frameX="0" frameY="-17" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle down0007" x="1629" y="0" width="542" height="587" frameX="0" frameY="-17" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle down0008" x="2176" y="0" width="542" height="587" frameX="0" frameY="-17" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle down0009" x="2176" y="0" width="542" height="587" frameX="0" frameY="-17" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle down0010" x="2176" y="0" width="542" height="587" frameX="0" frameY="-17" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle down0011" x="2176" y="0" width="542" height="587" frameX="0" frameY="-17" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle down0012" x="2176" y="0" width="542" height="587" frameX="0" frameY="-17" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle down0013" x="2176" y="0" width="542" height="587" frameX="0" frameY="-17" frameWidth="542" frameHeight="604"/>
+	<SubTexture name="biddle idle0000" x="2723" y="0" width="485" height="753" frameX="-17" frameY="-14" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle idle0001" x="2723" y="0" width="485" height="753" frameX="-17" frameY="-14" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle idle0002" x="3213" y="0" width="496" height="747" frameX="-4" frameY="-21" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle idle0003" x="3213" y="0" width="496" height="747" frameX="-4" frameY="-21" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle idle0004" x="0" y="758" width="499" height="755" frameX="0" frameY="-13" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle idle0005" x="0" y="758" width="499" height="755" frameX="0" frameY="-13" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle idle0006" x="504" y="758" width="497" height="768" frameX="-3" frameY="0" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle idle0007" x="504" y="758" width="497" height="768" frameX="-3" frameY="0" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle idle0008" x="1006" y="758" width="495" height="768" frameX="-4" frameY="0" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle idle0009" x="1006" y="758" width="495" height="768" frameX="-4" frameY="0" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle idle0010" x="1006" y="758" width="495" height="768" frameX="-4" frameY="0" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle idle0011" x="1006" y="758" width="495" height="768" frameX="-4" frameY="0" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle idle0012" x="1006" y="758" width="495" height="768" frameX="-4" frameY="0" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle idle0013" x="1006" y="758" width="495" height="768" frameX="-4" frameY="0" frameWidth="502" frameHeight="768"/>
+	<SubTexture name="biddle left0000" x="1506" y="758" width="520" height="702"/>
+	<SubTexture name="biddle left0001" x="1506" y="758" width="520" height="702"/>
+	<SubTexture name="biddle left0002" x="2031" y="758" width="518" height="696" frameX="-1" frameY="-6" frameWidth="520" frameHeight="702"/>
+	<SubTexture name="biddle left0003" x="2031" y="758" width="518" height="696" frameX="-1" frameY="-6" frameWidth="520" frameHeight="702"/>
+	<SubTexture name="biddle left0004" x="2554" y="758" width="514" height="696" frameX="-1" frameY="-6" frameWidth="520" frameHeight="702"/>
+	<SubTexture name="biddle left0005" x="2554" y="758" width="514" height="696" frameX="-1" frameY="-6" frameWidth="520" frameHeight="702"/>
+	<SubTexture name="biddle left0006" x="3073" y="758" width="514" height="696" frameX="-1" frameY="-6" frameWidth="520" frameHeight="702"/>
+	<SubTexture name="biddle left0007" x="3073" y="758" width="514" height="696" frameX="-1" frameY="-6" frameWidth="520" frameHeight="702"/>
+	<SubTexture name="biddle left0008" x="0" y="1531" width="514" height="696" frameX="-1" frameY="-6" frameWidth="520" frameHeight="702"/>
+	<SubTexture name="biddle left0009" x="0" y="1531" width="514" height="696" frameX="-1" frameY="-6" frameWidth="520" frameHeight="702"/>
+	<SubTexture name="biddle left0010" x="0" y="1531" width="514" height="696" frameX="-1" frameY="-6" frameWidth="520" frameHeight="702"/>
+	<SubTexture name="biddle left0011" x="0" y="1531" width="514" height="696" frameX="-1" frameY="-6" frameWidth="520" frameHeight="702"/>
+	<SubTexture name="biddle left0012" x="0" y="1531" width="514" height="696" frameX="-1" frameY="-6" frameWidth="520" frameHeight="702"/>
+	<SubTexture name="biddle left0013" x="0" y="1531" width="514" height="696" frameX="-1" frameY="-6" frameWidth="520" frameHeight="702"/>
+	<SubTexture name="biddle right0000" x="519" y="1531" width="495" height="752" frameX="-6" frameY="0" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle right0001" x="519" y="1531" width="495" height="752" frameX="-6" frameY="0" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle right0002" x="1019" y="1531" width="509" height="745" frameX="0" frameY="-7" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle right0003" x="1019" y="1531" width="509" height="745" frameX="0" frameY="-7" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle right0004" x="1533" y="1531" width="510" height="746" frameX="0" frameY="-6" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle right0005" x="1533" y="1531" width="510" height="746" frameX="0" frameY="-6" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle right0006" x="2048" y="1531" width="510" height="746" frameX="0" frameY="-6" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle right0007" x="2048" y="1531" width="510" height="746" frameX="0" frameY="-6" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle right0008" x="2563" y="1531" width="510" height="746" frameX="0" frameY="-6" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle right0009" x="2563" y="1531" width="510" height="746" frameX="0" frameY="-6" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle right0010" x="2563" y="1531" width="510" height="746" frameX="0" frameY="-6" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle right0011" x="2563" y="1531" width="510" height="746" frameX="0" frameY="-6" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle right0012" x="2563" y="1531" width="510" height="746" frameX="0" frameY="-6" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle right0013" x="2563" y="1531" width="510" height="746" frameX="0" frameY="-6" frameWidth="510" frameHeight="752"/>
+	<SubTexture name="biddle up0000" x="3078" y="1531" width="504" height="719" frameX="0" frameY="-22" frameWidth="504" frameHeight="741"/>
+	<SubTexture name="biddle up0001" x="3078" y="1531" width="504" height="719" frameX="0" frameY="-22" frameWidth="504" frameHeight="741"/>
+	<SubTexture name="biddle up0002" x="3587" y="1531" width="496" height="733" frameX="-6" frameY="-7" frameWidth="504" frameHeight="741"/>
+	<SubTexture name="biddle up0003" x="3587" y="1531" width="496" height="733" frameX="-6" frameY="-7" frameWidth="504" frameHeight="741"/>
+	<SubTexture name="biddle up0004" x="0" y="2288" width="493" height="740" frameX="-10" frameY="0" frameWidth="504" frameHeight="741"/>
+	<SubTexture name="biddle up0005" x="0" y="2288" width="493" height="740" frameX="-10" frameY="0" frameWidth="504" frameHeight="741"/>
+	<SubTexture name="biddle up0006" x="498" y="2288" width="493" height="740" frameX="-10" frameY="0" frameWidth="504" frameHeight="741"/>
+	<SubTexture name="biddle up0007" x="498" y="2288" width="493" height="740" frameX="-10" frameY="0" frameWidth="504" frameHeight="741"/>
+	<SubTexture name="biddle up0008" x="996" y="2288" width="493" height="740" frameX="-10" frameY="0" frameWidth="504" frameHeight="741"/>
+	<SubTexture name="biddle up0009" x="996" y="2288" width="493" height="740" frameX="-10" frameY="0" frameWidth="504" frameHeight="741"/>
+	<SubTexture name="biddle up0010" x="996" y="2288" width="493" height="740" frameX="-10" frameY="0" frameWidth="504" frameHeight="741"/>
+	<SubTexture name="biddle up0011" x="996" y="2288" width="493" height="740" frameX="-10" frameY="0" frameWidth="504" frameHeight="741"/>
+	<SubTexture name="biddle up0012" x="996" y="2288" width="493" height="740" frameX="-10" frameY="0" frameWidth="504" frameHeight="741"/>
+	<SubTexture name="biddle up0013" x="996" y="2288" width="493" height="740" frameX="-10" frameY="0" frameWidth="504" frameHeight="741"/>
+</TextureAtlas>
