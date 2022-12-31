@@ -61,6 +61,8 @@ class TitleState extends MusicBeatState
 	var easterEggKeyCombination:Array<FlxKey> = [FlxKey.B, FlxKey.B]; //bb stands for bbpanzu cuz he wanted this lmao
 	var lastKeysPressed:Array<FlxKey> = [];
 
+	var canPressEnter:Bool = false;
+
 	override public function create():Void
 	{
 		#if (polymod && !html5)
@@ -327,7 +329,7 @@ class TitleState extends MusicBeatState
 
 		if (!transitioning && skippedIntro)
 		{
-			if(pressedEnter)
+			if(pressedEnter && canPressEnter)
 			{
 				if(titleText != null) titleText.animation.play('press');
 				titleText.offset.set(278, 2);
@@ -390,7 +392,7 @@ class TitleState extends MusicBeatState
 			}
 		}
 
-		if (pressedEnter && !skippedIntro)
+		if (pressedEnter && !skippedIntro && canPressEnter)
 		{
 			skipIntro();
 		}
@@ -554,6 +556,7 @@ class TitleState extends MusicBeatState
 
 			(new FlxVideo(fileName)).finishCallback = function()
 			{
+				canPressEnter = true;
 				startIntro();
 			}
 			return;

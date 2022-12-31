@@ -1080,6 +1080,49 @@ class PlayState extends MusicBeatState
 				table.scrollFactor.set(1.0, 1.0);
 				table.active = false;
 
+			case 'turbulence': // TURBULENCE!!!
+
+				GameOverSubstate.loopSoundName = 'Jorsawsee_Loop';
+				GameOverSubstate.endSoundName = 'Jorsawsee_End';
+
+				turbFrontCloud = new FlxTypedGroup<FlxSprite>();	
+
+				var turbsky:FlxSprite = new FlxSprite(-866.9, -400.05).loadGraphic(Paths.image('airship/turbulence/turbsky', 'impostor'));
+				turbsky.antialiasing = true;
+				turbsky.scrollFactor.set(0.5, 0.5);
+				turbsky.active = false;
+				add(turbsky);
+				
+				var backerclouds:FlxSprite = new FlxSprite(1296.55, 175.55).loadGraphic(Paths.image('airship/turbulence/backclouds', 'impostor'));
+				backerclouds.antialiasing = true;
+				backerclouds.scrollFactor.set(0.65, 0.65);
+				backerclouds.active = false;
+				add(backerclouds);
+
+				var hotairballoon:FlxSprite = new FlxSprite(134.7, 147.05).loadGraphic(Paths.image('airship/turbulence/hotairballoon', 'impostor'));
+				hotairballoon.antialiasing = true;
+				hotairballoon.scrollFactor.set(0.65, 0.65);
+				hotairballoon.active = false;
+				add(hotairballoon);
+
+				var midderclouds:FlxSprite = new FlxSprite(-313.55, 253.05).loadGraphic(Paths.image('airship/turbulence/midclouds', 'impostor'));
+				midderclouds.antialiasing = true;
+				midderclouds.scrollFactor.set(0.8, 0.8);
+				midderclouds.active = false;
+				add(midderclouds);
+
+				hookarm = new FlxSprite(-797.85, 888.4).loadGraphic(Paths.image('airship/turbulence/clawback', 'impostor'));
+				hookarm.antialiasing = true;
+				hookarm.scrollFactor.set(1, 1);
+				hookarm.active = false;
+
+				clawshands = new FlxSprite(1873, 690.1);
+				clawshands.frames = Paths.getSparrowAtlas('airship/turbulence/clawfront', 'impostor');
+				clawshands.animation.addByPrefix('squeeze', 'clawhands', 24, false);
+				clawshands.animation.play('squeeze');
+				clawshands.antialiasing = true;
+				clawshands.scrollFactor.set(1, 1);
+				clawshands.active = true;
 			case 'victory': // victory
 
 				GameOverSubstate.loopSoundName = 'Jorsawsee_Loop';
@@ -7024,7 +7067,7 @@ class PlayState extends MusicBeatState
 					}
 				
 				case 'Finale Drop':
-					health = 1;
+					health = 0.1;
 					finaleBGStuff.visible = true;
 					defeatFinaleStuff.visible = false;
 					lightoverlay.visible = false;

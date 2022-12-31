@@ -34,12 +34,12 @@ class AmongStoryMenuState extends MusicBeatState
 
 	var scoreText:FlxText;
 
-	private static var curDifficulty:Int = 2;
+	public static var curDifficulty:Int = 2;
 
 	var txtWeekTitle:FlxText;
 	var txtWeekNumber:FlxText;
 
-	private static var curWeek:Int = 0;
+	public static var curWeek:Int = 0;
 
 	var txtTracklist:FlxText;
 
@@ -709,7 +709,17 @@ class AmongStoryMenuState extends MusicBeatState
 
 			if (controls.ACCEPT && curWeek != 0)
 			{
-				selectWeek();
+				if(curWeek == 4){
+					camScreen.fade(FlxColor.BLACK, 1.2, false, function()
+					{
+						selectedWeek = true;
+						camScreen.visible = false;
+						camSpace.visible = false;
+						openSubState(new AmongDeathSubstate());
+					});
+				}
+				else
+					selectWeek();
 			}
 			if (controls.BACK){
 				closeDiff();
