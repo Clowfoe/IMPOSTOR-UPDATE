@@ -7036,7 +7036,6 @@ class PlayState extends MusicBeatState
 					finaleBarBlue.visible = true;
 					scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, 0xFFff1266, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 					botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, 0xFFff1266, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-					iconP1.changeIcon('bffinale');
 					camGame.flash(FlxColor.RED, 0.75);
 				case 'Reactor Beep':
 					var charType:Float = Std.parseFloat(value1);

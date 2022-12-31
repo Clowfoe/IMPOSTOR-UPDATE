@@ -11,7 +11,8 @@ class AmongCreditsState extends MusicBeatState
         //important people
         ['Clowfoe',		'clow',	    'im clowfoe.... i directed the mod and i coded a SHIT TON of it\nim really proud of this whole team ty all for playing and hope it was worth the wait',	'https://twitter.com/Clowfoe'],		
         ['Ethan\nTheDoodler',	'ethan',		'im a real doodler now, mama','https://twitter.com/creepercrunch'],
-
+        ['mayhew',			'mayhew',		'i made triple trouble and i am gay artist',		'https://twitter.com/SandPlanetNG'],
+      
         //coders
         ['aqua',			'aqua',			"local sexy babe and hot programmer\ni coded some of this mod and lost sleep working on it",				'https://twitter.com/gedehari'],   
     
@@ -27,7 +28,6 @@ class AmongCreditsState extends MusicBeatState
       // "hi!!! i did a few little things for the mod - although i wish i could've helped more, seeing the mod's development progress was incredible! everyone on the team is so talented, i'm grateful i got to see it reach completion"
         //artists
         ['loggo',			'lojo',			'halloween',				'https://twitter.com/gedehari'],   
-        ['mayhew',			'mayhew',		'i got in here because of stupid fan concept\ni loved working on this mod its so awesome vs impostor fnf mod vs impostor. add me on fall guys.',		'https://twitter.com/SandPlanetNG'],
         ['mayo',				'mayo',		"Hi I'm Mayokiddo! I'm an artist for the mod and I made a bunch of the playable mini impostor skins, and i also made a few sprites\nshout out to everyone currently in silly squad",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
         ['Mash\nPro\nTato',     'mashywashy',   'im so sorry for making among us kills 2 years ago',    'mash link'],
         ['Julien',     'julien',   'hi i made the parasite form isnt he so awesome',    'mash link'],
