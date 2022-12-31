@@ -3,19 +3,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				249,
-				-190
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "idle",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				49,
-				-208
+				139,
+				-217
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
@@ -25,8 +14,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				84,
-				-170
+				224,
+				-200
 			],
 			"anim": "singDOWN",
 			"fps": 24,
@@ -36,8 +25,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				120,
-				-219
+				248,
+				-238
 			],
 			"anim": "singLEFT",
 			"fps": 24,
@@ -47,8 +36,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				265,
-				-220
+				355,
+				-186
 			],
 			"anim": "singUP",
 			"fps": 24,
@@ -56,27 +45,51 @@
 			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				249,
 				-190
 			],
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "idle",
 			"indices": [
 				10,
 				11,
 				12,
-				13
+				13,
+				14,
+				15
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				249,
+				-190
 			],
+			"anim": "idle",
 			"fps": 24,
-			"anim": "idle-loop",
-			"loop": true,
-			"name": "idle"
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				240,
+				-190
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "hey",
+			"loop": false,
+			"name": "hey"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/maroon",
 	"position": [
-		100,
-		70
+		110,
+		80
 	],
 	"healthicon": "maroon",
 	"flip_x": false,

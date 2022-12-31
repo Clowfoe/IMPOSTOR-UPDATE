@@ -344,6 +344,11 @@ class PlayState extends MusicBeatState
 	var finaleDarkFG:FlxSprite;
 	var finaleBar:FlxSprite;
 
+
+	// nick
+	var nickt:FlxSprite;
+	var nicktmvp:FlxSprite;
+
 	// loggo
 	var peopleloggo:FlxSprite;
 	var toogusblue:FlxSprite;
@@ -1570,6 +1575,106 @@ class PlayState extends MusicBeatState
 				daveDIE.alpha = 0.00000001;
 				add(daveDIE);
 
+			case 'attack': // monotone attack
+				curStage = 'attack';
+
+				
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('attack/monotoneback', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				add(bg);
+
+				// people in shop bg
+
+				peopleloggo = new FlxSprite(850, 850);
+				peopleloggo.frames = Paths.getSparrowAtlas('attack/crowd', 'impostor');
+				peopleloggo.animation.addByPrefix('bop', 'tess n gus fring instance 1', 24, false);
+				peopleloggo.animation.play('bop');
+				peopleloggo.antialiasing = true;
+				peopleloggo.scrollFactor.set(1, 1);
+				peopleloggo.active = true;
+				add(peopleloggo);
+
+				
+
+				
+				
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('attack/fg', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				add(bg);
+
+				nickt = new FlxSprite(600, 700);
+				nickt.frames = Paths.getSparrowAtlas('attack/nick t', 'impostor');
+				nickt.animation.addByPrefix('bop', 'nick t idle', 24, false);
+				nickt.animation.play('bop');
+				nickt.scrollFactor.set(1, 1);
+				nickt.active = true;
+				nickt.antialiasing = true;
+				add(nickt);
+
+				nicktmvp = new FlxSprite(600, 700);
+				nicktmvp.frames = Paths.getSparrowAtlas('attack/nick t', 'impostor');
+				nicktmvp.animation.addByPrefix('bop', 'nick t animation', 24, false);
+				nicktmvp.animation.play('bop');
+				nicktmvp.scrollFactor.set(1, 1);
+				nicktmvp.active = true;
+				nicktmvp.antialiasing = true;
+				add(nicktmvp);
+
+				nickt.visible = true;
+				nicktmvp.visible = false;
+
+				// cooper
+				toogusorange = new FlxSprite(1250, 625);
+				toogusorange.frames = Paths.getSparrowAtlas('attack/offbi', 'impostor');
+				toogusorange.animation.addByPrefix('bop', 'offbi', 24, false);
+				toogusorange.animation.play('bop');
+				toogusorange.scrollFactor.set(1, 1);
+				toogusorange.active = true;
+				toogusorange.antialiasing = true;
+				add(toogusorange);
+
+				
+
+				toogusblue = new FlxSprite(800, 625);
+				toogusblue.frames = Paths.getSparrowAtlas('attack/orbyy', 'impostor');
+				toogusblue.animation.addByPrefix('bop', 'orbyy', 24, false);
+				toogusblue.animation.play('bop');
+				toogusblue.scrollFactor.set(1, 1);
+				toogusblue.active = true;
+				toogusblue.antialiasing = true;
+				add(toogusblue);
+
+				crowd = new FlxSprite(1950, 750);
+				crowd.frames = Paths.getSparrowAtlas('attack/cooper', 'impostor');
+				crowd.animation.addByPrefix('bop', 'bg seat 1 instance 1', 24, false);
+				crowd.animation.play('bop');
+				crowd.antialiasing = true;
+				crowd.scrollFactor.set(1, 1);
+				crowd.active = true;
+				add(crowd);
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('attack/backlights', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				bg.blend = ADD;
+				add(bg);
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('attack/lamp', 'impostor'));
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				add(bg);
+
+
 			case 'warehouse': //ziffy tourture
 				curStage = 'warehouse';
 				torfloor = new FlxSprite(-1376.3, 494.65).loadGraphic(Paths.image('tort_floor'));
@@ -1710,6 +1815,16 @@ class PlayState extends MusicBeatState
 				bg.setGraphicSize(Std.int(bg.width * 2));
 				add(bg);
 
+				defeatthing = new FlxSprite(0, 0);
+				defeatthing.frames = Paths.getSparrowAtlas('defeat');
+				defeatthing.animation.addByPrefix('bop', 'defeat', 24, false);
+				defeatthing.animation.play('bop');
+				defeatthing.setGraphicSize(Std.int(defeatthing.width * 3));
+				defeatthing.antialiasing = true;
+				defeatthing.scrollFactor.set(1, 1);
+				defeatthing.active = true;
+				plagueBGPURPLE.add(defeatthing);
+
 				
 
 				bg2 = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/week1flashback', 'impostor'));
@@ -1748,6 +1863,8 @@ class PlayState extends MusicBeatState
 				bgred.setGraphicSize(Std.int(bgred.width * 2));
 				plagueBGRED.add(bgred);
 
+				
+
 
 				bgpurple = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/backthingspurple', 'impostor'));
 				bgpurple.updateHitbox();
@@ -1755,7 +1872,7 @@ class PlayState extends MusicBeatState
 				bgpurple.scrollFactor.set(1, 1);
 				bgpurple.active = false;
 				bgpurple.setGraphicSize(Std.int(bgpurple.width * 2));
-				plagueBGPURPLE.add(bgpurple);
+			//	plagueBGPURPLE.add(bgpurple);
 
 
 				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/Floor', 'impostor'));
@@ -1790,7 +1907,7 @@ class PlayState extends MusicBeatState
 				bgpurple2.scrollFactor.set(1, 1);
 				bgpurple2.active = false;
 				bgpurple2.setGraphicSize(Std.int(bgpurple2.width * 2));
-				plagueBGPURPLE.add(bgpurple2);
+			//	plagueBGPURPLE.add(bgpurple2);
 
 
 				// lights
@@ -1820,7 +1937,7 @@ class PlayState extends MusicBeatState
 				bgpurple3.active = false;
 				bgpurple3.setGraphicSize(Std.int(bgpurple3.width * 2));
 				bgpurple3.blend = ADD;
-				plagueBGPURPLE.add(bgpurple3);
+			//	plagueBGPURPLE.add(bgpurple3);
 				
 				
 				add(plagueBGBLUE);
@@ -1839,6 +1956,8 @@ class PlayState extends MusicBeatState
 				bg.active = false;
 				bg.setGraphicSize(Std.int(bg.width * 2));
 				add(bg);
+
+				
 
 
 				bggreen = new FlxSprite(0, -1000).loadGraphic(Paths.image('skeld/evilejected', 'impostor'));
@@ -2968,6 +3087,21 @@ class PlayState extends MusicBeatState
 
 				add(dadGhost);
 				add(dadGroup);
+
+			case 'attack':
+				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('attack/frontlight', 'impostor'));
+				lightoverlay.antialiasing = true;
+				lightoverlay.scrollFactor.set(1, 1);
+				lightoverlay.active = false;
+				lightoverlay.blend = ADD;
+				add(lightoverlay);
+
+				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('attack/purple', 'impostor'));
+				lightoverlay.antialiasing = true;
+				lightoverlay.scrollFactor.set(1, 1);
+				lightoverlay.active = false;
+				add(lightoverlay);
+
 
 			case 'monotone':
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/overlay', 'impostor'));
@@ -7385,7 +7519,28 @@ class PlayState extends MusicBeatState
 						case 1:
 							defeatblack.alpha += 1;
 					}
+				case 'Forehead':
+					nickt.visible = false;
+					nicktmvp.visible = true;
+					nicktmvp.animation.play('bop');
 
+					FlxTween.tween(camHUD, {alpha: 0}, 0.4);
+					FlxTween.tween(toogusorange, {alpha: 0.1}, 0.4);
+					FlxTween.tween(toogusblue, {alpha: 0.1}, 0.4);
+					FlxTween.tween(gf, {alpha: 0.1}, 0.4);
+					FlxTween.tween(dad, {alpha: 0.25}, 0.4);
+					FlxTween.tween(boyfriend, {alpha: 0.25}, 0.4);
+				case 'Forehead2':
+					nickt.visible = true;
+					nicktmvp.visible = false;
+					nicktmvp.animation.play('bop');
+
+					FlxTween.tween(camHUD, {alpha: 1}, 0.4);
+					FlxTween.tween(toogusorange, {alpha: 1}, 0.4);
+					FlxTween.tween(toogusblue, {alpha: 1}, 0.4);
+					FlxTween.tween(gf, {alpha: 1}, 0.4);
+					FlxTween.tween(dad, {alpha: 1}, 0.4);
+					FlxTween.tween(boyfriend, {alpha: 1}, 0.4);
 				case 'flash':
 					var charType:Int = Std.parseInt(value1);
 					if (Math.isNaN(charType))
@@ -9002,6 +9157,19 @@ class PlayState extends MusicBeatState
 				{
 					crowd.animation.play('bop');
 				}
+			case 'attack':
+				if (curBeat % 2 == 0)
+				{
+					crowd.animation.play('bop');
+					peopleloggo.animation.play('bop');
+					nickt.animation.play('bop');
+					
+				}
+				if (curBeat % 1 == 0)
+				{
+					toogusorange.animation.play('bop');
+					toogusblue.animation.play('bop');
+				}
 			case 'chef':
 				if (curBeat % 2 == 0)
 				{
@@ -9110,6 +9278,11 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'defeat':
+				if (curBeat % 4 == 0)
+				{
+					defeatthing.animation.play('bop', true);
+				}
+			case 'monotone':
 				if (curBeat % 4 == 0)
 				{
 					defeatthing.animation.play('bop', true);

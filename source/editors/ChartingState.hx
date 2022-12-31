@@ -118,7 +118,9 @@ class ChartingState extends MusicBeatState
 		['Defeat Retro', 'defeat bodies apear'],
 		['Identity Crisis Events', 'Changes shifted background in identity crisis. 0 is default, 1 is red\n2 is black, 3 is green.'],
 		['Ejected Video', 'video at start ejected'],
-		['Ejected Start', 'start the actual song lol']
+		['Ejected Start', 'start the actual song lol'],
+		['Forehead', 'start the actual song lol'],
+		['Forehead2', 'start the actual song lol']
 	];
 
 	var _file:FileReference;
