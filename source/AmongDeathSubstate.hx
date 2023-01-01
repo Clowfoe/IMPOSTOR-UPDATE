@@ -78,7 +78,9 @@ class AmongDeathSubstate extends MusicBeatSubstate
 
 		if(accepted && hasEnteredMissSelection == true)
 		{
+			FlxG.sound.play(Paths.sound('amongkill', 'impostor'), 0.9);
 			hasEnteredMissSelection = false;
+			close();
 
 			var blackScreen:FlxSprite = new FlxSprite().makeGraphic(1920, 1080, FlxColor.BLACK);
 			add(blackScreen);
@@ -112,10 +114,13 @@ class AmongDeathSubstate extends MusicBeatSubstate
 			PlayState.campaignScore = 0;
 			PlayState.campaignMisses = 0;
 			
-			new FlxTimer().start(1, function(tmr:FlxTimer)
-			{
-				LoadingState.loadAndSwitchState(new PlayState(), true);
-				FreeplayState.destroyFreeplayVocals();
+			FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
+				ease: FlxEase.circOut,
+				onComplete: function(tween:FlxTween)
+				{
+					trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+					LoadingState.loadAndSwitchState(new PlayState());
+				}
 			});
 		}
 		if (rightP)

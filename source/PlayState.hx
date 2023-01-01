@@ -282,7 +282,6 @@ class PlayState extends MusicBeatState
 	var trainSound:FlxSound;
 	
 	var bg2:FlxSprite;
-	var bg5:FlxSprite;
 
 	var limoKillingState:Int = 0;
 	var limo:BGSprite;
@@ -345,6 +344,7 @@ class PlayState extends MusicBeatState
 	//finale
 	var finaleFlashbackStuff:FlxSprite;
 	var defeatFinaleStuff:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
+	var finaleLight:FlxSprite;
 	var finaleBGStuff:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
 	var finaleFGStuff:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
 	var finaleDarkFG:FlxSprite;
@@ -2404,13 +2404,13 @@ class PlayState extends MusicBeatState
 			case 'finalem':
 				curStage = 'finalem';
 
-				finaleFlashbackStuff = new FlxSprite(-250, -150);
+				finaleFlashbackStuff = new FlxSprite(-290, -160);
 				finaleFlashbackStuff.frames = Paths.getSparrowAtlas('finale/finaleFlashback');
 				finaleFlashbackStuff.animation.addByPrefix('moog', 'finaleFlashback moog', 24, false);
 				finaleFlashbackStuff.animation.addByPrefix('toog', 'finaleFlashback toog', 24, false);
 				finaleFlashbackStuff.animation.addByPrefix('doog', 'finaleFlashback doog', 24, false);
 				finaleFlashbackStuff.animation.play('moog');
-				finaleFlashbackStuff.setGraphicSize(Std.int(finaleFlashbackStuff.width * 1.5));
+				finaleFlashbackStuff.setGraphicSize(Std.int(finaleFlashbackStuff.width * 1.6));
 				finaleFlashbackStuff.antialiasing = true;
 				finaleFlashbackStuff.scrollFactor.set();
 				finaleFlashbackStuff.active = true;
@@ -2463,26 +2463,49 @@ class PlayState extends MusicBeatState
 				bg3.active = true;
 				bg3.scale.set(1.1, 1.1);
 
-				var bg4:FlxSprite = new FlxSprite(1190, -280).loadGraphic(Paths.image('lamp'));
+				var bg4:FlxSprite = new FlxSprite(1190, -380).loadGraphic(Paths.image('lamp'));
 				bg4.updateHitbox();
 				bg4.antialiasing = true;
 				bg4.scrollFactor.set(1, 1);
 				bg4.active = true;
 				bg4.scale.set(1.1, 1.1);
 
-				bg5 = new FlxSprite(-750, 160).loadGraphic(Paths.image('fore'));
+				var bg5:FlxSprite = new FlxSprite(-750, 160).loadGraphic(Paths.image('fore'));
 				bg5.updateHitbox();
 				bg5.antialiasing = true;
 				bg5.scrollFactor.set(1, 1);
 				bg5.active = true;
 				bg5.scale.set(1.1, 1.1);
+
+				finaleLight = new FlxSprite(-230, -200);
+				finaleLight.frames = Paths.getSparrowAtlas('finale/light');
+				finaleLight.animation.addByPrefix('bop', 'light', 24, false);
+				finaleLight.animation.play('bop');
+				finaleLight.setGraphicSize(Std.int(finaleLight.width * 1.1));
+				finaleLight.antialiasing = true;
+				finaleLight.scrollFactor.set(0.8, 0.8);
+				finaleLight.active = true;
+				finaleLight.blend = ADD;
+
+				var dark:FlxSprite = new FlxSprite(-950, -160).loadGraphic(Paths.image('finale/dark'));
+				dark.updateHitbox();
+				dark.antialiasing = true;
+				dark.scrollFactor.set(1, 1);
+				dark.active = true;
+				dark.scale.set(1.3, 1.3);
+				dark.blend = MULTIPLY;
 				
 				finaleBGStuff.add(bg0);
 				finaleBGStuff.add(bg1);
 				finaleBGStuff.add(bg2);
-				finaleBGStuff.add(bg3);
+				finaleFGStuff.add(bg3);
+				finaleFGStuff.add(bg4);
+				finaleFGStuff.add(bg5);
+				finaleFGStuff.add(dark);
+				finaleFGStuff.add(finaleLight);
 
 				finaleBGStuff.visible = false;
+				finaleFGStuff.visible = false;
 				defeatFinaleStuff.visible = true;
 
 				add(defeatFinaleStuff);
@@ -2860,7 +2883,7 @@ class PlayState extends MusicBeatState
 
 		if (curStage == 'finalem'){
 			add(dadGroup);
-			finaleBGStuff.add(bg5);
+			add(finaleFGStuff);
 			add(finaleFlashbackStuff);
 		}
 
@@ -6916,7 +6939,7 @@ class PlayState extends MusicBeatState
 					triggerEventNote('Camera Follow Pos', '750', '500');
 
 					defaultCamZoom = 0.55;
-					dad.setPosition(-11, 156);
+					dad.setPosition(-15, 163);
 					dad.playAnim('kill1');
 					dad.specialAnim = true;
 
@@ -7172,6 +7195,7 @@ class PlayState extends MusicBeatState
 				case 'Finale Drop':
 					health = 0.1;
 					finaleBGStuff.visible = true;
+					finaleFGStuff.visible = true;
 					defeatFinaleStuff.visible = false;
 					lightoverlay.visible = false;
 					healthBar.visible = false;
@@ -7182,7 +7206,12 @@ class PlayState extends MusicBeatState
 					finaleBarBlue.visible = true;
 					scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, 0xFFff1266, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 					botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, 0xFFff1266, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-					camGame.flash(FlxColor.RED, 0.75);
+					camGame.flash(0xFFff1266, 0.75);
+				case 'Finale End':
+					camOther.flash(0xFFff1266, 5);
+					camHUD.visible = false;
+					camGame.visible = false;
+
 				case 'Reactor Beep':
 					var charType:Float = Std.parseFloat(value1);
 					if (Math.isNaN(charType))
@@ -9516,6 +9545,10 @@ class PlayState extends MusicBeatState
 				{
 					clawshands.animation.play('squeeze', true);
 				}
+			case 'finalem':
+				if(curBeat % 4 == 0)
+					finaleLight.animation.play('bop');
+
 			case 'warehouse':
 				leftblades.animation.play('spin', true);
 				rightblades.animation.play('spin', true);

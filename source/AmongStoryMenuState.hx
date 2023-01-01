@@ -729,7 +729,7 @@ class AmongStoryMenuState extends MusicBeatState
 				selectedWeek = false;
 			}
 		}
-
+		
 		super.update(elapsed);
 
 		grpLocks.forEach(function(lock:FlxSprite)

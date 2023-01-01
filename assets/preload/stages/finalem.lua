@@ -39,6 +39,7 @@ function onUpdate()
     end
     if curBeat >= 64 and curBeat < 68 then --bf zoom in
         triggerEvent('Camera Follow Pos', 1400, 1050)
+        setProperty('defaultCamZoom',1.2)
     end
     if curBeat == 67 then
         setProperty('defaultCamZoom',2.4)
@@ -101,5 +102,7 @@ function onUpdate()
     else
         triggerEvent('Camera Follow Pos','','')
     end
-
+    if curBeat == 492 then
+        doTweenZoom('defeated', 'camGame', 2.4, 1.2, 'circIn')
+    end
 end

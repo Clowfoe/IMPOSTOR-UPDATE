@@ -23,9 +23,12 @@ function onCreate()
 	makeLuaSprite('splat', 'finale/splat', 370, 1200);
 	makeLuaSprite('fore', 'finale/fore', -750, 160);
   setLuaSpriteScrollFactor('fore', 1.1, 1.1);
+  
 	makeLuaSprite('dark', 'finale/dark', -720, -350);
 	setLuaSpriteScrollFactor('dark', 1.05, 1.05);
+
 	makeLuaSprite('lamp', 'finale/lamp', 1190, -280);
+
 	makeAnimatedLuaSprite('light', 'finale/light', -230, -100);
 	setLuaSpriteScrollFactor('light', 1.05, 1.05);
   addAnimationByPrefix('light','finale/light','light',24,true);
