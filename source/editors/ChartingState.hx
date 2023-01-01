@@ -108,6 +108,7 @@ class ChartingState extends MusicBeatState
 		['Who Buzz', ''],
 		['Dave AUGH', ''],
 		['Reactor Beep', 'Reactor whomp err'],
+		['bye gf', 'lol'],
 		['scream danger', 'danfer'],
 		['unscream danger', 'based and Black Pilled ha ha memes'],
 		['tuesdayblast', 'loud sound'],

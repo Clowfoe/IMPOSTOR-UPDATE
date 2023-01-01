@@ -564,7 +564,6 @@ class AmongFreeplayState extends MusicBeatState
 		weeks.push({
 			songs: [
 				["Chippin", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38)],
-				["Chipping", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38)],
 				["Torture", "ziffy", 'torture', FlxColor.fromRGB(188, 106, 223)]
 			],
 

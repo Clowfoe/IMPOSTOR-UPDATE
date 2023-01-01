@@ -1,11 +1,12 @@
 {
 	"song": {
-		"speed": 3.4,
+		"speed": 3.2,
 		"stage": "reactor2",
 		"player1": "bfr",
 		"player2": "impostorr",
 		"player3": "gfr",
 		"player4": null,
+		"allowPet": null,
 		"notes": [
 			{
 				"lengthInSteps": 16,
@@ -2314,6 +2315,49 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						168960,
+						-1,
+						"Reactor Beep",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						170880,
+						-1,
+						"Reactor Beep",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
 				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
@@ -3756,6 +3800,8 @@
 		"bpm": 250,
 		"arrowSkin": null,
 		"needsVoices": true,
+		"allowGFskin": true,
+		"allowBFskin": true,
 		"fabs": null,
 		"song": "Reactor"
 	}

@@ -118,8 +118,8 @@
 			],
 			"anim": "deathLoop",
 			"fps": 24,
-			"name": "BF Dead Loop",
-			"indices": []
+			"name": "BF dies",
+			"indices": [17, 18]
 		},
 		{
 			"loop": false,
@@ -129,8 +129,8 @@
 			],
 			"anim": "deathConfirm",
 			"fps": 24,
-			"name": "BF Dead confirm",
-			"indices": []
+			"name": "BF dies",
+			"indices": [17, 18]
 		},
 		{
 			"offsets": [

@@ -1085,6 +1085,7 @@ class PlayState extends MusicBeatState
 
 				GameOverSubstate.loopSoundName = 'Jorsawsee_Loop';
 				GameOverSubstate.endSoundName = 'Jorsawsee_End';
+				GameOverSubstate.characterName = 'bf_turb';
 
 				airSpeedlines = new FlxTypedGroup<FlxSprite>();
 
@@ -1114,7 +1115,7 @@ class PlayState extends MusicBeatState
 				midderclouds.active = false;
 				add(midderclouds);
 
-				hookarm = new FlxSprite(-797.85, 888.4).loadGraphic(Paths.image('airship/turbulence/clawback', 'impostor'));
+				hookarm = new FlxSprite(-597.85, 888.4).loadGraphic(Paths.image('airship/turbulence/clawback', 'impostor'));
 				hookarm.antialiasing = true;
 				hookarm.scrollFactor.set(1, 1);
 				hookarm.active = false;
@@ -1212,6 +1213,24 @@ class PlayState extends MusicBeatState
 				crate.active = false;
 				add(crate);
 
+			case 'esculent': // esculent
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/background', 'impostor'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				bg.setGraphicSize(Std.int(bg.width * 0.5));
+				add(bg);
+				
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/scary ass shadow', 'impostor'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				bg.setGraphicSize(Std.int(bg.width * 0.5));
+				add(bg);
+
+			
 			case 'who': // dead dead guy
 				var bg:FlxSprite = new FlxSprite(0, 100).loadGraphic(Paths.image('polus/deadguy', 'impostor'));
 				bg.antialiasing = true;
@@ -1330,6 +1349,17 @@ class PlayState extends MusicBeatState
 				element3.updateHitbox();
 				element3.scrollFactor.set(1, 1);
 				add(element3);
+
+				/*var yellowdead:FlxSprite = new FlxSprite(-240, 736).loadGraphic(Paths.image('airship/newAirship/YELLOW', 'impostor'));
+				yellowdead.antialiasing = true;
+				yellowdead.scrollFactor.set(1, 1);
+				yellowdead.active = false;
+				trace(SONG.song.toLowerCase());
+				if (SONG.song.toLowerCase() == 'oversight')
+				{
+					trace('lol');
+					add(yellowdead);
+				}*/
 
 				if (isStoryMode == false)
 				{
@@ -2475,7 +2505,7 @@ class PlayState extends MusicBeatState
 				bg3.active = true;
 				bg3.scale.set(1.1, 1.1);
 
-				var bg4:FlxSprite = new FlxSprite(1190, -380).loadGraphic(Paths.image('lamp'));
+				var bg4:FlxSprite = new FlxSprite(990, -380).loadGraphic(Paths.image('lamp'));
 				bg4.updateHitbox();
 				bg4.antialiasing = true;
 				bg4.scrollFactor.set(1, 1);
@@ -3317,16 +3347,6 @@ class PlayState extends MusicBeatState
 				lightoverlay.blend = MULTIPLY;
 				add(lightoverlay);
 
-			case 'airshipRoom':
-				var yellowdead:FlxSprite = new FlxSprite(-2440, 336).loadGraphic(Paths.image('airship/newAirship/YELLOW', 'impostor'));
-				yellowdead.antialiasing = true;
-				yellowdead.scrollFactor.set(1, 1);
-				yellowdead.active = false;
-				if (SONG.song.toLowerCase() == 'oversight')
-				{
-					add(yellowdead);
-				}
-
 			case 'polus2':
 				snow2 = new FlxSprite(1150, 600);
 				snow2.frames = Paths.getSparrowAtlas('polus/snowback', 'impostor');
@@ -3940,7 +3960,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
-		botplayTxt = new FlxText(400, healthBarBG.y - 55, FlxG.width - 800, "Be_Impostor.exe", 32);
+		botplayTxt = new FlxText(400, healthBarBG.y - 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
@@ -5888,7 +5908,7 @@ class PlayState extends MusicBeatState
 				}
 
 				if(showDlowDK){
-					cargoAirsip.alpha = FlxMath.lerp(cargoAirsip.alpha, 0.3, CoolUtil.boundTo(elapsed * 0.1, 0, 1));
+					cargoAirsip.alpha = FlxMath.lerp(cargoAirsip.alpha, 0.45, CoolUtil.boundTo(elapsed * 0.1, 0, 1));
 				}
 
 				if (Conductor.songPosition >= 0 && Conductor.songPosition < 1200 ){
@@ -7590,7 +7610,8 @@ class PlayState extends MusicBeatState
 
 				case 'unscream danger':
 					airshipskyflash.alpha = 0;
-
+				case 'bye gf':
+					FlxTween.tween(gf, {x: -2000}, 4, { ease: FlxEase.quartIn });
 				case 'Ellie Drop':
 					add(momGroup);
 					dad.playAnim('shock', false);
