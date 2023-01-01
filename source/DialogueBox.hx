@@ -93,6 +93,8 @@ class DialogueBox extends FlxSpriteGroup
 		box.animation.addByIndices('red', 'dialog frame instance 1', [2], "", 24);
 		box.animation.addByIndices('gc', 'dialog frame instance 1', [3], "", 24);
 		box.animation.addByIndices('gi', 'dialog frame instance 1', [3], "", 24);
+		box.animation.addByIndices('y', 'dialog frame instance 1', [4], "", 24);
+		box.animation.addByIndices('wi', 'dialog frame instance 1', [5], "", 24);
 
 		this.dialogueList = dialogueList;
 		
@@ -371,6 +373,16 @@ class DialogueBox extends FlxSpriteGroup
 					boxChar = 'Green';
 
 					portraitLeft.frames = Paths.getSparrowAtlas('dialogueV4/green', 'impostor');
+				case 'y':
+					curIcon = 'yellow';
+					boxChar = 'Yellow';
+
+					portraitLeft.frames = Paths.getSparrowAtlas('dialogueV4/yellow', 'impostor');
+				case 'wi':
+					curIcon = 'white';
+					boxChar = 'White';
+
+					portraitLeft.frames = Paths.getSparrowAtlas('dialogueV4/white', 'impostor');
 				case 'gi':
 					curIcon = 'impostor3';
 					boxChar = 'Green';

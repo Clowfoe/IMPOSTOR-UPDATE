@@ -359,6 +359,7 @@ class PlayState extends MusicBeatState
 	// loggo
 	var peopleloggo:FlxSprite;
 	var toogusblue:FlxSprite;
+	var toogusblue2:FlxSprite;
 	var airshipskyflash:FlxSprite;
 	var toogusorange:FlxSprite;
 	var tooguswhite:FlxSprite;
@@ -1208,6 +1209,44 @@ class PlayState extends MusicBeatState
 				crate.active = false;
 				add(crate);
 
+			case 'powstage': // powers!
+
+				GameOverSubstate.deathSoundName = 'picoDeath';
+				GameOverSubstate.loopSoundName = 'deathPicoMusicLoop';
+				GameOverSubstate.endSoundName = 'deathPicoMusicEnd';
+				GameOverSubstate.characterName = 'picolobby';
+
+				var bg:FlxSprite = new FlxSprite(-1119.5, -649).loadGraphic(Paths.image('polus/roomcodebg', 'impostor'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				add(bg);
+
+				var crate:FlxSprite = new FlxSprite(-74.65, 530.85).loadGraphic(Paths.image('polus/box', 'impostor'));
+				crate.antialiasing = true;
+				crate.scrollFactor.set(1, 1);
+				crate.active = false;
+				add(crate);
+
+			case 'esculent': // esculent
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/background', 'impostor'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				bg.setGraphicSize(Std.int(bg.width * 0.5));
+				add(bg);
+				
+
+				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/scary ass shadow', 'impostor'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				bg.setGraphicSize(Std.int(bg.width * 0.5));
+				add(bg);
+
+				
+
 			case 'who': // dead dead guy
 				var bg:FlxSprite = new FlxSprite(0, 100).loadGraphic(Paths.image('polus/deadguy', 'impostor'));
 				bg.antialiasing = true;
@@ -1698,6 +1737,16 @@ class PlayState extends MusicBeatState
 				toogusblue.active = true;
 				toogusblue.antialiasing = true;
 				add(toogusblue);
+
+				toogusblue2 = new FlxSprite(725, 665);
+				toogusblue2.frames = Paths.getSparrowAtlas('attack/orbyy', 'impostor');
+				toogusblue2.animation.addByPrefix('bop', 'shutup', 24, false);
+				toogusblue2.animation.play('bop');
+				toogusblue2.scrollFactor.set(1, 1);
+				toogusblue2.active = true;
+				toogusblue2.antialiasing = true;
+				add(toogusblue2);
+				toogusblue2.visible = false;
 
 				thebackground = new FlxSprite(950, 775);
 				thebackground.frames = Paths.getSparrowAtlas('attack/loggoattack', 'impostor');
@@ -4049,7 +4098,7 @@ class PlayState extends MusicBeatState
 				case 'sussus-toogus':
 					startVideo('toogus');
 					piss = false;
-				case 'sabotage' | 'meltdown'| 'lights-down'| 'reactor':
+				case 'lights-down'| 'reactor' | 'mando' | 'dlow' | 'oversight':
 					schoolIntro(doof);
 
 				case 'oversight':
@@ -7722,10 +7771,19 @@ class PlayState extends MusicBeatState
 
 					FlxTween.tween(camHUD, {alpha: 0}, 0.4);
 					FlxTween.tween(toogusorange, {alpha: 0.1}, 0.4);
+					FlxTween.tween(thebackground, {alpha: 0.1}, 0.4);
 					FlxTween.tween(toogusblue, {alpha: 0.1}, 0.4);
+					FlxTween.tween(mom, {alpha: 0.1}, 0.4);
 					FlxTween.tween(gf, {alpha: 0.1}, 0.4);
 					FlxTween.tween(dad, {alpha: 0.25}, 0.4);
 					FlxTween.tween(boyfriend, {alpha: 0.25}, 0.4);
+				case 'Orbyy':
+					toogusblue.visible = false;
+					toogusblue2.visible = true;
+					toogusblue2.animation.play('bop');
+				case 'Orbyy2':
+					toogusblue.visible = true;
+					toogusblue2.visible = false;
 				case 'IdentityFade':
 					var charType:Int = Std.parseInt(value1);
 					if (Math.isNaN(charType))
@@ -7746,7 +7804,9 @@ class PlayState extends MusicBeatState
 					FlxTween.tween(camHUD, {alpha: 1}, 0.4);
 					FlxTween.tween(toogusorange, {alpha: 1}, 0.4);
 					FlxTween.tween(toogusblue, {alpha: 1}, 0.4);
+					FlxTween.tween(thebackground, {alpha: 1}, 0.4);
 					FlxTween.tween(gf, {alpha: 1}, 0.4);
+					FlxTween.tween(mom, {alpha: 1}, 0.4);
 					FlxTween.tween(dad, {alpha: 1}, 0.4);
 					FlxTween.tween(boyfriend, {alpha: 1}, 0.4);
 				case 'flash':

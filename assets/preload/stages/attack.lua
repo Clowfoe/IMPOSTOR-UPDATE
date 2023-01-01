@@ -4,10 +4,10 @@ local r = 0;
 local shot = false;
 local agent = 1
 local health = 0;
-local xx =  1250;
-local yy =  1000;
-local xx2 = 1250;
-local yy2 = 1000;
+local xx =  1000;
+local yy =  1050;
+local xx2 = 1400;
+local yy2 = 1050;
 local ofs = 20;
 local followchars = true;
 local del = 0;
@@ -84,14 +84,95 @@ function onUpdate()
     else
         triggerEvent('Camera Follow Pos','','')
     end
-    if curBeat == 444 then
+    if curBeat == 64 then
         setProperty('defaultCamZoom',0.6)
 		followchars = true
-        xx = 1100
+        xx = 1225
         yy = 1000
-        xx2 = 2350
+        xx2 = 1225
         yy2 = 1000
     end
+    if curBeat == 80 then
+        setProperty('defaultCamZoom',0.7)
+		followchars = true
+        xx = 1225
+        yy = 1000
+        xx2 = 1225
+        yy2 = 1000
+    end
+    if curBeat == 95 then
+        setProperty('defaultCamZoom',0.9)
+		followchars = true
+        xx = 1000
+        yy = 900
+        xx2 = 1000
+        yy2 = 900
+    end
+    if curBeat == 99 then
+        setProperty('defaultCamZoom',0.75)
+		followchars = true
+        xx = 1000
+        yy = 1050
+        xx2 = 1400  
+        yy2 = 1050
+    end
+    if curBeat == 196 then
+        setProperty('defaultCamZoom',0.6)
+		followchars = true
+        xx = 1225
+        yy = 1000
+        xx2 = 1225
+        yy2 = 1000
+    end
+    if curBeat == 229 then
+        setProperty('defaultCamZoom',0.7)
+		followchars = true
+        xx = 1225
+        yy = 1000
+        xx2 = 1225
+        yy2 = 1000
+    end
+    if curBeat == 276 then
+        setProperty('defaultCamZoom',0.6)
+		followchars = true
+        xx = 1225
+        yy = 1000
+        xx2 = 1225
+        yy2 = 1000
+    end
+    if curBeat == 292 then
+        setProperty('defaultCamZoom',0.75)
+		followchars = true
+        xx = 1000
+        yy = 1050
+        xx2 = 1400  
+        yy2 = 1050
+    end
+    if curBeat == 324 then
+        setProperty('defaultCamZoom',0.7)
+		followchars = true
+        xx = 1225
+        yy = 1000
+        xx2 = 1225
+        yy2 = 1000
+    end
+    if curBeat == 355 then
+        setProperty('defaultCamZoom',0.9)
+		followchars = true
+        xx = 1000
+        yy = 900
+        xx2 = 1000
+        yy2 = 900
+    end
+    if curBeat == 360 then
+        setProperty('defaultCamZoom',0.6)
+		followchars = true
+        xx = 1225
+        yy = 1000
+        xx2 = 1225
+        yy2 = 1000
+    end
+    
     
 end
 

@@ -179,6 +179,7 @@ class AmongFreeplayState extends MusicBeatState
 		portrait.animation.addByIndices('nuzzus', 'Character', [39], null, 24, true);
 		portrait.animation.addByIndices('monotoner', 'Character', [40], null, 24, true);
 		portrait.animation.addByIndices('idk', 'Character', [41], null, 24, true);
+		portrait.animation.addByIndices('esculent', 'Character', [42], null, 24, true);
 		portrait.animation.play('red');
 		portrait.antialiasing = true;
 		portrait.setPosition(304.65, -100);
@@ -550,7 +551,7 @@ class AmongFreeplayState extends MusicBeatState
 				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK],
 				["Sussus Nuzzus", "nuzzles", 'nuzzus', FlxColor.BLACK],
 				["Idk", "idk", 'idk', FlxColor.fromRGB(255, 140, 177)],
-				["Esculent", "dead", 'esculent', FlxColor.BLACK],
+				["Esculent", "dead", 'esculent', FlxColor.fromRGB(139, 92, 79)],
 				["Drippypop", "drippy", 'pop', FlxColor.fromRGB(188, 106, 223)],
 				["Crewicide", "dave", 'dave', FlxColor.BLUE],
 				["Monotone Attack", "attack", 'monotoner', FlxColor.WHITE],
