@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-30,
 				-90
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "biddle idle",
-			"indices": []
+			"indices": [],
+			"name": "biddle idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				3,
-				-152
+				8,
+				-155
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "biddle left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "biddle left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				3,
+				-9,
 				-253
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "biddle down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "biddle down"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				13,
+				4,
 				-116
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "biddle up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "biddle up"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-36,
+				-38,
 				-106
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "biddle right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "biddle right"
 		}
 	],
 	"no_antialiasing": false,
