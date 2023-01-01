@@ -4282,14 +4282,6 @@ class PlayState extends MusicBeatState
 				case "torture":
 
 					instantStart();
-					
-					if(curStage == "warehouse"){
-						ziffyStart.visible = true;
-						ziffyStart.animation.play("idle", true);
-						ziffyStart.screenCenter(XY);
-						ziffyStart.y -= 120;
-					}
-					camHUD.alpha = 0;
 				
 				default:
 					startCountdown();
@@ -5112,6 +5104,14 @@ class PlayState extends MusicBeatState
 		#end
 		setOnLuas('songLength', songLength);
 		callOnLuas('onSongStart', []);
+
+		if(curStage == "warehouse"){
+			ziffyStart.visible = true;
+			ziffyStart.animation.play("idle", true);
+			ziffyStart.screenCenter(XY);
+			ziffyStart.y -= 120;
+		}
+		camHUD.alpha = 0;
 
 		new FlxTimer().start(0.3, function(tmr:FlxTimer)
 		{
@@ -6203,15 +6203,16 @@ class PlayState extends MusicBeatState
 		}
 		else{
 			iconP1.x = finaleBarRed.x + (finaleBarRed.width / 1.4) + 50;
-			iconP2.x = finaleBarRed.x - 140;
+			iconP2.x = finaleBarRed.x - 120;
 			iconP1.y = healthBar.y - (iconP1.height / 2) + 7;
 			if (healthBar.percent > 80)
 				iconP2.y = healthBar.y - (iconP2.height / 2) - 50;
 			else
 				iconP2.y = healthBar.y - (iconP2.height / 2) - 28;
 			if(ClientPrefs.downScroll){
-				iconP2.y += 50;
+				iconP2.y += 40;
 			}
+			iconP2.scale.set(0.8, 0.8);
 		}
 
 		if (healthBar.percent < 20)
