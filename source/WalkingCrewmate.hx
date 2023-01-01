@@ -49,15 +49,13 @@ class WalkingCrewmate extends FlxSprite {
             case 1:
                 thecolor = 'brown';
             case 2:
-                thecolor = 'clowfoe';
-            case 3:
                 thecolor = 'lime';
+            case 3:
+                thecolor = 'tan';
             case 4:
-                thecolor = 'orange';
-            case 5:
                 thecolor = 'white'; 
-            case 6:
-                thecolor = 'tan'; 
+            case 5:
+                thecolor = 'yellow'; 
         }
     }
 
