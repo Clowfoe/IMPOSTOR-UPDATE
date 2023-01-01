@@ -710,6 +710,7 @@ class AmongStoryMenuState extends MusicBeatState
 			if (controls.ACCEPT && curWeek != 0)
 			{
 				if(curWeek == 4){
+					FlxG.sound.music.fadeOut(1.2, 0);
 					camScreen.fade(FlxColor.BLACK, 1.2, false, function()
 					{
 						selectedWeek = true;

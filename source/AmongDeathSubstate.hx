@@ -78,6 +78,18 @@ class AmongDeathSubstate extends MusicBeatSubstate
 
 		if(accepted && hasEnteredMissSelection == true)
 		{
+			hasEnteredMissSelection = false;
+
+			var blackScreen:FlxSprite = new FlxSprite().makeGraphic(1920, 1080, FlxColor.BLACK);
+			add(blackScreen);
+
+			missTxt.alpha = 0;
+		 	missAmountArrow.alpha = 0;
+
+		 	dummySprites.forEach(function(spr:FlxSprite)
+			{
+				spr.alpha = 0;	
+			});
 			var songArray:Array<String> = [];
 			var leWeek:Array<Dynamic> = WeekData.weeksLoaded.get(WeekData.weeksList[AmongStoryMenuState.curWeek]).songs;
 			for (i in 0...leWeek.length)

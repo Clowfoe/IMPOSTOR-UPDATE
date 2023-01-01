@@ -10,10 +10,11 @@ class AmongCreditsState extends MusicBeatState
     private static var amongCreditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link
         //WE ARE ALL IMPORTANT PEOPLE
         ['Clowfoe',		'clow',	    'im clowfoe.... i directed the mod and i coded a SHIT TON of it\nim really proud of this whole team ty all for playing and hope it was worth the wait',	'https://twitter.com/Clowfoe'],		
-        ['fabs',		'fabs',	    'im cval',	'https://twitter.com/fabsthefabs'],		
         ['Ethan\nTheDoodler',	'ethan',		'im a real doodler now, mama','https://twitter.com/creepercrunch'],        
         ['mayhew',			'mayhew',		'i made triple trouble and i am gay artist',		'https://twitter.com/SandPlanetNG'],
         ['aqua',			'aqua',			"local sexy babe and hot programmer\ni coded some of this mod and lost sleep working on it",				'https://twitter.com/gedehari'],   
+        ['fabs',		'fabs',	    'im cval',	'https://twitter.com/fabsthefabs'],		
+        ['duskie',		'duskie',	    'From what little i did do for this mod, the team was nice and fun to work with. Hope you enjoyed the double note ghosts :)',	'https://twitter.com/fabsthefabs'],		
         ['punkett',				'punkett',			"im punkett",	'https://twitter.com/emihead'],
         ['emihead',				'emihead',			"im emihead i made tomonjus tuesday and the credits song also i am canonically the black impostor's lover so please draw us making out and tag me on twitter @ emihead",	'https://twitter.com/emihead'],
         ['ziffy',	'ziffy',		'I HELPED ON TORTURE AND\nI MADE THE FREEPLAY MENU','https://twitter.com/ziffymusic'],
@@ -106,9 +107,9 @@ class AmongCreditsState extends MusicBeatState
         add(mole);
 
         descText = new FlxText(0, 600, 1200, "", 0);
-		descText.setFormat(Paths.font("AmaticSC-Bold.ttf"), 40, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		descText.setFormat(Paths.font("AmaticSC-Bold.ttf"), 50, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		descText.scrollFactor.set();
-		descText.borderSize = 1;
+		descText.borderSize = 1.3;
         add(descText);
 
         nameText = new FlxText(565, 120, 800, "", 0);

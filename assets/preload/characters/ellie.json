@@ -1,70 +1,81 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-30,
 				-90
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Ellie Idle"
+			"fps": 24,
+			"name": "Ellie Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				214,
 				-105
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Ellie Left"
+			"fps": 24,
+			"name": "Ellie Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-80,
 				-151
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Ellie Down"
+			"fps": 24,
+			"name": "Ellie Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-91,
 				-39
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Ellie Up"
+			"fps": 24,
+			"name": "Ellie Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-39,
 				-30
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Ellie Right"
+			"fps": 24,
+			"name": "Ellie Right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-30,
 				973
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "enter",
+			"fps": 24,
+			"name": "Ellie Enter Animation",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-18,
+				-90
+			],
 			"indices": [],
-			"name": "Ellie Enter Animation"
+			"fps": 24,
+			"anim": "armed",
+			"loop": false,
+			"name": "Ellie React Arm"
 		}
 	],
 	"no_antialiasing": false,

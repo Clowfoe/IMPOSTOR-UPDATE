@@ -2493,6 +2493,8 @@ class PlayState extends MusicBeatState
 			//	add(stageCurtains);
 
 			case 'defeat':
+				GameOverSubstate.characterName = 'bf-defeat-dead';
+
 				curStage = 'defeat';
 
 				defeatthing = new FlxSprite(-400, -150);
@@ -6809,7 +6811,45 @@ class PlayState extends MusicBeatState
 				vocals.stop();
 				FlxG.sound.music.stop();
 
-				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
+				if(curSong.toLowerCase() != 'defeat'){
+					openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
+				}
+				else{
+					KillNotes();
+					vocals.pause();
+					FlxG.sound.music.pause();
+					vocals.volume = 0;
+					FlxG.sound.music.volume = 0;
+
+					FlxTween.tween(camHUD, {alpha: 0}, 0.7, {ease: FlxEase.quadInOut});
+
+					iconP1.visible = false;
+					iconP2.visible = false;
+
+					triggerEventNote('Change Character', '1', 'blackKill');
+					triggerEventNote('Camera Follow Pos', '750', '500');
+
+					defaultCamZoom = 0.55;
+					dad.setPosition(-11, 156);
+					dad.playAnim('kill1');
+					dad.specialAnim = true;
+
+					new FlxTimer().start(1.8, function(tmr:FlxTimer)
+					{
+						dad.playAnim('kill2');
+						dad.specialAnim = true;
+					});
+					new FlxTimer().start(2.6, function(tmr:FlxTimer)
+					{
+						dad.playAnim('kill3');
+						dad.specialAnim = true;
+					});
+					new FlxTimer().start(3.3, function(tmr:FlxTimer)
+					{
+						openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
+					});
+				}
+			
 				for (tween in modchartTweens)
 				{
 					tween.active = true;
@@ -8176,6 +8216,10 @@ class PlayState extends MusicBeatState
 					{
 						FlxTween.tween(camHUD, {alpha: 0}, 0.4);
 						FlxG.sound.play(Paths.sound('rhm_crash', 'impostor'));
+						dad.playAnim('armed');
+						dad.specialAnim = true;
+						mom.playAnim('armed');
+						mom.specialAnim = true;
 
 						new FlxTimer().start(2.1, function(tmr:FlxTimer)
 						{
@@ -8283,7 +8327,11 @@ class PlayState extends MusicBeatState
 				{
 					FlxTween.tween(camHUD, {alpha: 0}, 0.4);
 					FlxG.sound.play(Paths.sound('rhm_crash', 'impostor'));
-
+					dad.playAnim('armed');
+					dad.specialAnim = true;
+					mom.playAnim('armed');
+					mom.specialAnim = true;
+					
 					new FlxTimer().start(2.1, function(tmr:FlxTimer)
 					{
 						camGame.shake(0.005, 0.9);

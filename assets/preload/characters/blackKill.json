@@ -1,0 +1,67 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "black"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "kill1",
+			"loop": false,
+			"name": "black kill 1"
+		},
+		{
+			"offsets": [
+				39,
+				-68
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "kill2",
+			"loop": false,
+			"name": "black kill 2"
+		},
+		{
+			"offsets": [
+				167,
+				306
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "kill3",
+			"loop": false,
+			"name": "black kill 3"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/defeat_death",
+	"position": [
+		180,
+		80
+	],
+	"healthicon": "black",
+	"flip_x": false,
+	"healthbar_colors": [
+		58,
+		27,
+		79
+	],
+	"camera_position": [
+		-880,
+		-100
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
