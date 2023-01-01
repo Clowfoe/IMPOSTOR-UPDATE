@@ -68,7 +68,7 @@ class WalkingCrewmate extends FlxSprite {
         var newColor:Int = FlxG.random.int(0, 6);
         lookupColor(newColor);
         animation.addByPrefix('walk', thecolor, 24, true);
-        animation.addByIndices('idle', thecolor, [14, 15], "", 24, true);
+        animation.addByIndices('idle', thecolor, [7, 8], "", 24, true);
     }
 
     function setNewActionTime(){

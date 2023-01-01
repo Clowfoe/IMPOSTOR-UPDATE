@@ -88,13 +88,19 @@ class DialogueBox extends FlxSpriteGroup
 		// this fucking sucks
 		hasDialog = true;
 		box.frames = Paths.getSparrowAtlas('dialogueV4/dialogueBox', 'impostor');
-		box.animation.addByIndices('bf', 'dialog frame instance 1', [0], "", 24);
-		box.animation.addByIndices('gf', 'dialog frame instance 1', [1], "", 24);
-		box.animation.addByIndices('red', 'dialog frame instance 1', [2], "", 24);
-		box.animation.addByIndices('gc', 'dialog frame instance 1', [3], "", 24);
-		box.animation.addByIndices('gi', 'dialog frame instance 1', [3], "", 24);
-		box.animation.addByIndices('y', 'dialog frame instance 1', [4], "", 24);
-		box.animation.addByIndices('wi', 'dialog frame instance 1', [5], "", 24);
+		box.animation.addByIndices('bf', 'dialog frame', [0], "", 24);
+		box.animation.addByIndices('gf', 'dialog frame', [1], "", 24);
+		box.animation.addByIndices('red', 'dialog frame', [2], "", 24);
+		box.animation.addByIndices('gc', 'dialog frame', [3], "", 24);
+		box.animation.addByIndices('gi', 'dialog frame', [3], "", 24);
+		box.animation.addByIndices('y', 'dialog frame', [4], "", 24);
+		box.animation.addByIndices('wi', 'dialog frame', [5], "", 24);
+		box.animation.addByIndices('maroon', 'dialog frame', [7], "", 24);
+		box.animation.addByIndices('grey', 'dialog frame', [8], "", 24);
+		box.animation.addByIndices('pink', 'dialog frame', [9], "", 24);
+		box.animation.addByIndices('pi', 'dialog frame', [9], "", 24);
+		box.animation.addByIndices('war', 'dialog frame', [10], "", 24);
+		box.animation.addByIndices('jelq', 'dialog frame', [11], "", 24);
 
 		this.dialogueList = dialogueList;
 		
@@ -241,7 +247,7 @@ class DialogueBox extends FlxSpriteGroup
 					if (!isEnding)
 					{
 						isEnding = true;
-						FlxG.sound.music.fadeOut(1.5, 0);
+						FlxG.sound.music.stop();//fadeOut(1.5, 0);
 
 						var ThisTime:Float = 0.25;
 						// IDK WHAT THE FUCK IM DOING
@@ -388,6 +394,31 @@ class DialogueBox extends FlxSpriteGroup
 					boxChar = 'Green';
 
 					portraitLeft.frames = Paths.getSparrowAtlas('dialogueV4/green', 'impostor');
+					
+					//tt
+				case 'maroon':
+					curIcon = 'maroon';
+					boxChar = 'Maroon';
+
+					portraitLeft.frames = Paths.getSparrowAtlas('dialogueV4/maroon', 'impostor');
+
+				case 'pink':
+					curIcon = 'pink';
+					boxChar = 'Pink';
+
+					portraitLeft.frames = Paths.getSparrowAtlas('dialogueV4/pink', 'impostor');
+
+				case 'pi':
+					curIcon = 'pink';
+					boxChar = 'Pink';
+
+					portraitRight.frames = Paths.getSparrowAtlas('dialogueV4/pretendpink', 'impostor');
+
+				case 'grey':
+					curIcon = 'grey';
+					boxChar = 'Grey';
+
+					portraitLeft.frames = Paths.getSparrowAtlas('dialogueV4/grey', 'impostor');
 
 
 				case 'bf':

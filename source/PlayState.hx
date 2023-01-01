@@ -2841,7 +2841,7 @@ class PlayState extends MusicBeatState
 				GameOverSubstate.endSoundName = 'gameOverEnd-pixel';
 				GameOverSubstate.characterName = 'bf-pixel-dead';
 
-				var bgSky:BGSprite = new BGSprite('weeb/weebSky', 0, 0, 0.1, 0.1);
+				var bgSky:BGSprite = new BGSprite('weeb/stars', 0, 0, 0.1, 0.1);
 				add(bgSky);
 				bgSky.antialiasing = false;
 
@@ -3006,7 +3006,7 @@ class PlayState extends MusicBeatState
 				saxguy.updateHitbox();
 				saxguy.antialiasing = true;
 				saxguy.scrollFactor.set(1, 1);
-				saxguy.setGraphicSize(Std.int(saxguy.width * 0.6));
+				saxguy.setGraphicSize(Std.int(saxguy.width * 1));
 				saxguy.active = true;
 			case 'defeat':
 				lightoverlay = new FlxSprite(-550, -100).loadGraphic(Paths.image('iluminao omaga'));
