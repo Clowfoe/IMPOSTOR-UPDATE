@@ -3127,15 +3127,9 @@ class PlayState extends MusicBeatState
 					switch (i)
 					{
 						case 1:
-<<<<<<< Updated upstream
 							speedline.setPosition(3352.1, 135.95);
 						case 2:
 							speedline.setPosition(-5140.05, 135.95);
-=======
-							speedline.setPosition(3352.1, -635.95);
-						case 2:
-							speedline.setPosition(-5140.05, -635.95);
->>>>>>> Stashed changes
 					}
 					speedline.antialiasing = true;
 					speedline.alpha = 0.2;
@@ -5877,7 +5871,6 @@ class PlayState extends MusicBeatState
 				}
 				
 			case 'turbulence':
-<<<<<<< Updated upstream
 				camHUD.y = Math.sin((Conductor.songPosition / 1000) * (Conductor.bpm / 60) * 1.0) * 15;
 				camHUD.angle = Math.sin((Conductor.songPosition / 1200) * (Conductor.bpm / 60) * -1.0) * 1.2;
 
@@ -5906,25 +5899,20 @@ class PlayState extends MusicBeatState
 					backerclouds.x = -1352.1;
 				}
 
-=======
->>>>>>> Stashed changes
 				if (airSpeedlines.members.length > 0)
 				{
 					for (i in 0...airSpeedlines.members.length)
 					{
 						airSpeedlines.members[i].x = FlxMath.lerp(airSpeedlines.members[i].x, airSpeedlines.members[i].x + 350,
 							CoolUtil.boundTo(elapsed * 9, 0, 1));
-<<<<<<< Updated upstream
+
 						if (airSpeedlines.members[i].x > 5140.05)
-=======
-						if (airSpeedlines.members[i].x < 5140.05)
->>>>>>> Stashed changes
 						{
 							airSpeedlines.members[i].x = -3352.1;
 						}
 					}
 				}
-<<<<<<< Updated upstream
+
 				if (turbFrontCloud.members.length > 0)
 				{
 					for (i in 0...turbFrontCloud.members.length)
@@ -5946,8 +5934,7 @@ class PlayState extends MusicBeatState
 					dad.angle = FlxMath.lerp(dad.angle, dad.angle + 20,
 						CoolUtil.boundTo(elapsed * 9, 0, 1));
 				}
-=======
->>>>>>> Stashed changes
+
 			case 'monotone':
 				speedLines.y = FlxMath.lerp(speedLines.y, speedLines.y - 1350, CoolUtil.boundTo(elapsed * 9, 0, 1));
 		}
