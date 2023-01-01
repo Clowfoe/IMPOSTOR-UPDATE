@@ -103,6 +103,7 @@ class ChartingState extends MusicBeatState
 		['Play On Left', ''],
 		['Cam lock in Who', 'Value 1: "in" for in zoom\nValue 2: "dad" for dad'],
 		['Cam lock in Voting Time', 'Value 1: "in" for in zoom\nValue 2: "dad" for dad'],
+		['Turbulence Ending', 'WAAHHHHHH'],
 		['Who Buzz', ''],
 		['Dave AUGH', ''],
 		['Reactor Beep', 'Reactor whomp err'],

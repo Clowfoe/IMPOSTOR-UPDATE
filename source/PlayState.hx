@@ -359,7 +359,6 @@ class PlayState extends MusicBeatState
 	// loggo
 	var peopleloggo:FlxSprite;
 	var toogusblue:FlxSprite;
-	var toogusblue2:FlxSprite;
 	var airshipskyflash:FlxSprite;
 	var toogusorange:FlxSprite;
 	var tooguswhite:FlxSprite;
@@ -441,6 +440,7 @@ class PlayState extends MusicBeatState
 	var hookarm:FlxSprite;
 	var clawshands:FlxSprite;
 	var turbFrontCloud:FlxTypedGroup<FlxSprite>;
+	var turbEnding:Bool = false;
 
 	//victory
 	var VICTORY_TEXT:FlxSprite;
@@ -1085,6 +1085,8 @@ class PlayState extends MusicBeatState
 				GameOverSubstate.loopSoundName = 'Jorsawsee_Loop';
 				GameOverSubstate.endSoundName = 'Jorsawsee_End';
 
+				airSpeedlines = new FlxTypedGroup<FlxSprite>();
+
 				turbFrontCloud = new FlxTypedGroup<FlxSprite>();	
 
 				var turbsky:FlxSprite = new FlxSprite(-866.9, -400.05).loadGraphic(Paths.image('airship/turbulence/turbsky', 'impostor'));
@@ -1093,19 +1095,19 @@ class PlayState extends MusicBeatState
 				turbsky.active = false;
 				add(turbsky);
 				
-				var backerclouds:FlxSprite = new FlxSprite(1296.55, 175.55).loadGraphic(Paths.image('airship/turbulence/backclouds', 'impostor'));
+				backerclouds = new FlxSprite(1296.55, 175.55).loadGraphic(Paths.image('airship/turbulence/backclouds', 'impostor'));
 				backerclouds.antialiasing = true;
 				backerclouds.scrollFactor.set(0.65, 0.65);
 				backerclouds.active = false;
 				add(backerclouds);
 
-				var hotairballoon:FlxSprite = new FlxSprite(134.7, 147.05).loadGraphic(Paths.image('airship/turbulence/hotairballoon', 'impostor'));
+				hotairballoon = new FlxSprite(134.7, 147.05).loadGraphic(Paths.image('airship/turbulence/hotairballoon', 'impostor'));
 				hotairballoon.antialiasing = true;
 				hotairballoon.scrollFactor.set(0.65, 0.65);
 				hotairballoon.active = false;
 				add(hotairballoon);
 
-				var midderclouds:FlxSprite = new FlxSprite(-313.55, 253.05).loadGraphic(Paths.image('airship/turbulence/midclouds', 'impostor'));
+				midderclouds = new FlxSprite(-313.55, 253.05).loadGraphic(Paths.image('airship/turbulence/midclouds', 'impostor'));
 				midderclouds.antialiasing = true;
 				midderclouds.scrollFactor.set(0.8, 0.8);
 				midderclouds.active = false;
@@ -1208,44 +1210,6 @@ class PlayState extends MusicBeatState
 				crate.scrollFactor.set(1, 1);
 				crate.active = false;
 				add(crate);
-
-			case 'powstage': // powers!
-
-				GameOverSubstate.deathSoundName = 'picoDeath';
-				GameOverSubstate.loopSoundName = 'deathPicoMusicLoop';
-				GameOverSubstate.endSoundName = 'deathPicoMusicEnd';
-				GameOverSubstate.characterName = 'picolobby';
-
-				var bg:FlxSprite = new FlxSprite(-1119.5, -649).loadGraphic(Paths.image('polus/roomcodebg', 'impostor'));
-				bg.antialiasing = true;
-				bg.scrollFactor.set(1, 1);
-				bg.active = false;
-				add(bg);
-
-				var crate:FlxSprite = new FlxSprite(-74.65, 530.85).loadGraphic(Paths.image('polus/box', 'impostor'));
-				crate.antialiasing = true;
-				crate.scrollFactor.set(1, 1);
-				crate.active = false;
-				add(crate);
-
-			case 'esculent': // esculent
-
-				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/background', 'impostor'));
-				bg.antialiasing = true;
-				bg.scrollFactor.set(1, 1);
-				bg.active = false;
-				bg.setGraphicSize(Std.int(bg.width * 0.5));
-				add(bg);
-				
-
-				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/scary ass shadow', 'impostor'));
-				bg.antialiasing = true;
-				bg.scrollFactor.set(1, 1);
-				bg.active = false;
-				bg.setGraphicSize(Std.int(bg.width * 0.5));
-				add(bg);
-
-				
 
 			case 'who': // dead dead guy
 				var bg:FlxSprite = new FlxSprite(0, 100).loadGraphic(Paths.image('polus/deadguy', 'impostor'));
@@ -1738,16 +1702,6 @@ class PlayState extends MusicBeatState
 				toogusblue.antialiasing = true;
 				add(toogusblue);
 
-				toogusblue2 = new FlxSprite(725, 665);
-				toogusblue2.frames = Paths.getSparrowAtlas('attack/orbyy', 'impostor');
-				toogusblue2.animation.addByPrefix('bop', 'shutup', 24, false);
-				toogusblue2.animation.play('bop');
-				toogusblue2.scrollFactor.set(1, 1);
-				toogusblue2.active = true;
-				toogusblue2.antialiasing = true;
-				add(toogusblue2);
-				toogusblue2.visible = false;
-
 				thebackground = new FlxSprite(950, 775);
 				thebackground.frames = Paths.getSparrowAtlas('attack/loggoattack', 'impostor');
 				thebackground.animation.addByPrefix('bop', 'loggfriend', 24, false);
@@ -2085,7 +2039,7 @@ class PlayState extends MusicBeatState
 					armedGuy.antialiasing = true;
 					armedGuy.alpha = 0.001;
 				}
-				if(SONG.song.toLowerCase() == 'armed'){
+				if(SONG.song.toLowerCase() == 'armed' && isStoryMode){
 					trace('enry');
 
 					armedDark = new FlxSprite(-300).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
@@ -3156,7 +3110,7 @@ class PlayState extends MusicBeatState
 						frontercloud.updateHitbox();
 						frontercloud.scrollFactor.set(1, 1);
 						add(frontercloud);
-					//	turbFrontCloud.add(frontercloud);
+						turbFrontCloud.add(frontercloud);
 					}
 
 				var turblight:FlxSprite = new FlxSprite(-83.1, -876.7).loadGraphic(Paths.image('airship/turbulence/TURBLIGHTING', 'impostor'));
@@ -3166,6 +3120,25 @@ class PlayState extends MusicBeatState
 				turblight.alpha = 0.41;
 				turblight.blend = ADD;
 				add(turblight);
+				
+				for (i in 0...2)
+				{
+					var speedline:FlxSprite = new FlxSprite(912.75, -1035.95).loadGraphic(Paths.image('airship/speedlines', 'impostor'));
+					switch (i)
+					{
+						case 1:
+							speedline.setPosition(3352.1, 135.95);
+						case 2:
+							speedline.setPosition(-5140.05, 135.95);
+					}
+					speedline.antialiasing = true;
+					speedline.alpha = 0.2;
+					speedline.updateHitbox();
+					speedline.scrollFactor.set(1.3, 1.3);
+					add(speedline);
+					airSpeedlines.add(speedline);
+				}
+				add(airSpeedlines);
 
 			case 'victory':
 				var spotlights:FlxSprite = new FlxSprite(119.4, 0).loadGraphic(Paths.image('victory_spotlights'));
@@ -3378,9 +3351,9 @@ class PlayState extends MusicBeatState
 					switch (i)
 					{
 						case 1:
-							speedline.setPosition(3352.1, -1035.95);
+							speedline.setPosition(-3352.1, -1035.95);
 						case 2:
-							speedline.setPosition(-5140.05, -1035.95);
+							speedline.setPosition(5140.05, -1035.95);
 					}
 					speedline.antialiasing = true;
 					speedline.alpha = 0.2;
@@ -4098,7 +4071,7 @@ class PlayState extends MusicBeatState
 				case 'sussus-toogus':
 					startVideo('toogus');
 					piss = false;
-				case 'lights-down'| 'reactor' | 'mando' | 'dlow' | 'oversight':
+				case 'sabotage' | 'meltdown'| 'lights-down'| 'reactor':
 					schoolIntro(doof);
 
 				case 'oversight':
@@ -5897,7 +5870,68 @@ class PlayState extends MusicBeatState
 					FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, CoolUtil.boundTo(elapsed * 0.01, 0, 1));
 				}
 				
-			
+			case 'turbulence':
+				camHUD.y = Math.sin((Conductor.songPosition / 1000) * (Conductor.bpm / 60) * 1.0) * 15;
+				camHUD.angle = Math.sin((Conductor.songPosition / 1200) * (Conductor.bpm / 60) * -1.0) * 1.2;
+
+				boyfriend.y = (Math.sin((Conductor.songPosition / 1000) * (Conductor.bpm / 60) * 1.0) * 15) + 770;
+				hookarm.y = (Math.sin((Conductor.songPosition / 1000) * (Conductor.bpm / 60) * 1.0) * 15) + 850;
+				clawshands.y = (Math.sin((Conductor.songPosition / 1000) * (Conductor.bpm / 60) * 1.0) * 15) + 650;
+
+				midderclouds.x = FlxMath.lerp(midderclouds.x, midderclouds.x + 175,
+					CoolUtil.boundTo(elapsed * 9, 0, 1));
+				if (midderclouds.x > 5140.05)
+				{
+					midderclouds.x = -3352.1;
+				}
+
+				hotairballoon.x = FlxMath.lerp(hotairballoon.x, hotairballoon.x + 75,
+					CoolUtil.boundTo(elapsed * 9, 0, 1));
+				if (hotairballoon.x > 3140.05)
+				{
+					hotairballoon.x = -1352.1;
+				}
+
+				backerclouds.x = FlxMath.lerp(backerclouds.x, backerclouds.x + 55,
+					CoolUtil.boundTo(elapsed * 9, 0, 1));
+				if (backerclouds.x > 5140.05)
+				{
+					backerclouds.x = -1352.1;
+				}
+
+				if (airSpeedlines.members.length > 0)
+				{
+					for (i in 0...airSpeedlines.members.length)
+					{
+						airSpeedlines.members[i].x = FlxMath.lerp(airSpeedlines.members[i].x, airSpeedlines.members[i].x + 350,
+							CoolUtil.boundTo(elapsed * 9, 0, 1));
+						if (airSpeedlines.members[i].x > 5140.05)
+						{
+							airSpeedlines.members[i].x = -3352.1;
+						}
+					}
+				}
+				if (turbFrontCloud.members.length > 0)
+				{
+					for (i in 0...turbFrontCloud.members.length)
+					{
+						turbFrontCloud.members[i].x = FlxMath.lerp(turbFrontCloud.members[i].x, turbFrontCloud.members[i].x + 400,
+							CoolUtil.boundTo(elapsed * 9, 0, 1));
+						if (turbFrontCloud.members[i].x > 5140.05)
+						{
+							turbFrontCloud.members[i].x = -4352.1;
+						}
+					}
+				}
+
+				if(turbEnding){
+					dad.x = FlxMath.lerp(dad.x, dad.x + 900,
+						CoolUtil.boundTo(elapsed * 9, 0, 1));
+					dad.y = FlxMath.lerp(dad.y, dad.y + 50,
+						CoolUtil.boundTo(elapsed * 9, 0, 1));
+					dad.angle = FlxMath.lerp(dad.angle, dad.angle + 20,
+						CoolUtil.boundTo(elapsed * 9, 0, 1));
+				}
 			case 'monotone':
 				speedLines.y = FlxMath.lerp(speedLines.y, speedLines.y - 1350, CoolUtil.boundTo(elapsed * 9, 0, 1));
 		}
@@ -7494,6 +7528,9 @@ class PlayState extends MusicBeatState
 						camFollowPos.setPosition(960, 540);
 						FlxG.camera.focusOn(camFollowPos.getPosition());
 					}
+				
+				case 'Turbulence Ending':
+					turbEnding = true;
 
 				case 'Opponent Two':
 					opponent2sing = !opponent2sing;
@@ -7771,19 +7808,10 @@ class PlayState extends MusicBeatState
 
 					FlxTween.tween(camHUD, {alpha: 0}, 0.4);
 					FlxTween.tween(toogusorange, {alpha: 0.1}, 0.4);
-					FlxTween.tween(thebackground, {alpha: 0.1}, 0.4);
 					FlxTween.tween(toogusblue, {alpha: 0.1}, 0.4);
-					FlxTween.tween(mom, {alpha: 0.1}, 0.4);
 					FlxTween.tween(gf, {alpha: 0.1}, 0.4);
 					FlxTween.tween(dad, {alpha: 0.25}, 0.4);
 					FlxTween.tween(boyfriend, {alpha: 0.25}, 0.4);
-				case 'Orbyy':
-					toogusblue.visible = false;
-					toogusblue2.visible = true;
-					toogusblue2.animation.play('bop');
-				case 'Orbyy2':
-					toogusblue.visible = true;
-					toogusblue2.visible = false;
 				case 'IdentityFade':
 					var charType:Int = Std.parseInt(value1);
 					if (Math.isNaN(charType))
@@ -7804,9 +7832,7 @@ class PlayState extends MusicBeatState
 					FlxTween.tween(camHUD, {alpha: 1}, 0.4);
 					FlxTween.tween(toogusorange, {alpha: 1}, 0.4);
 					FlxTween.tween(toogusblue, {alpha: 1}, 0.4);
-					FlxTween.tween(thebackground, {alpha: 1}, 0.4);
 					FlxTween.tween(gf, {alpha: 1}, 0.4);
-					FlxTween.tween(mom, {alpha: 1}, 0.4);
 					FlxTween.tween(dad, {alpha: 1}, 0.4);
 					FlxTween.tween(boyfriend, {alpha: 1}, 0.4);
 				case 'flash':
