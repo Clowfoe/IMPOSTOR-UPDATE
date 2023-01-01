@@ -1,113 +1,65 @@
 {
 	"animations": [
 		{
-			"loop": false,
-			"offsets": [
-				48,
-				-283
-			],
-			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "right",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				151,
-				-255
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down",
-			"indices": []
-		},
-		{
-			"loop": false,
 			"offsets": [
 				70,
 				-280
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "jIDLE",
-			"indices": []
+			"indices": [],
+			"name": "idle"
 		},
 		{
 			"offsets": [
-				70,
-				-280
+				38,
+				-313
 			],
-			"indices": [
-				10,
-				11,
-				12,
-				13
-			],
+			"loop": false,
 			"fps": 24,
-			"anim": "idle-loop",
-			"loop": true,
-			"name": "jIDLE"
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
 		},
 		{
 			"offsets": [
 				14,
-				-148
+				-218
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "jUP"
+			"indices": [],
+			"name": "up"
 		},
 		{
 			"offsets": [
-				174,
-				-298
+				31,
+				-325
 			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
 			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				76,
+				-296
+			],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "jLEFT"
-		},
-		{
-			"offsets": [
-				14,
-				-148
-			],
-			"indices": [
-				4,
-				5,
-				6,
-				7
-			],
-			"fps": 24,
-			"anim": "singUP-loop",
-			"loop": true,
-			"name": "jUP"
-		},
-		{
-			"offsets": [
-				174,
-				-298
-			],
-			"indices": [
-				4,
-				5,
-				6,
-				7
-			],
-			"fps": 24,
-			"anim": "singLEFT-loop",
-			"loop": true,
-			"name": "jLEFT"
+			"indices": [],
+			"name": "left"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/jorsawdead",
 	"position": [
-		-30,
+		110,
 		-20
 	],
 	"healthicon": "jorsawsee",
@@ -122,5 +74,5 @@
 		300
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 0.9
 }
