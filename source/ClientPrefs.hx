@@ -5,6 +5,7 @@ import flixel.util.FlxSave;
 import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
 import Controls;
+import AmongFreeplayState.FreeplayWeek;
 
 class ClientPrefs {
 	//TO DO: Redo ClientPrefs in a way that isn't too stupid
@@ -30,6 +31,7 @@ class ClientPrefs {
 	public static var beans:Int = 0;
 	public static var boughtArray:Array<Bool> = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 	// should be enough if u add more stuff fuck you >:(
+	public static var forceUnlockedSongs:Array<FreeplayWeek>;
 		
 	public static var keyBinds:Map<String, Array<FlxKey>> = [
 		'note_left'		=> [A, LEFT],
@@ -81,6 +83,7 @@ class ClientPrefs {
 	public static function saveSettings() {
 		FlxG.save.data.charOverrides = charOverrides;
 		FlxG.save.data.boughtArray = boughtArray;
+		FlxG.save.data.forceUnlockedSongs = forceUnlockedSongs;
 		FlxG.save.data.beans = beans;
 
 		FlxG.save.data.downScroll = downScroll;
@@ -124,6 +127,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.boughtArray != null){
 			boughtArray = FlxG.save.data.boughtArray;
+		}
+		if(FlxG.save.data.forceUnlockedSongs != null){
+			forceUnlockedSongs = FlxG.save.data.forceUnlockedSongs;
 		}
 		if(FlxG.save.data.beans != null){
 			beans = FlxG.save.data.beans;

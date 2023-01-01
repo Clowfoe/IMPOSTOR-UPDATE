@@ -116,14 +116,14 @@ class ShopNode extends FlxSprite
         gotRequirements = true;
         if(requirement == PERCENT95){
             for(song in songs){
-                if(Highscore.getRating(song, 1) < 0.95 && Highscore.getRating(song, 2) < 0.95){
+                if(Highscore.getRating(song, 2) < 0.95){
                     gotRequirements = false;
                 }
             }
         }
         if(requirement == COMPLETED){
             for(song in songs){
-                if(Highscore.getScore(song, 1) == 0 && Highscore.getScore(song, 2) == 0 ){
+                if(Highscore.getScore(song, 2) == 0){
                     gotRequirements = false;
                 }
             }

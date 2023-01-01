@@ -73,6 +73,10 @@ class ChartingState extends MusicBeatState
 	[
 		['', "Nothing. Yep, that's right."],
 		['Alter Camera Bop', '1 : alter intensity\n2 : alter interval'],
+		['setChrom', '1 amount, 2 tween speed'],
+		['setGlitch', '1 amount, 2 tween speed'],
+		['chromToggle', '1 amount, 2 interval'],
+		['pink toggle', 'pretty colors'],
 		['Camera Twist', '1: intensity 1\n2: intensity 2'],
 		['Extra Cam Zoom', '1: the zoom??? self explanatory lol'],
 		['Hey!', "Plays the \"Hey!\" animation from Bopeebo,\nValue 1: BF = Only Boyfriend, GF = Only Girlfriend,\nSomething else = Both.\nValue 2: Custom animation duration,\nleave it blank for 0.6s"],

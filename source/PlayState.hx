@@ -16,6 +16,7 @@ import flixel.FlxG;
 import flixel.FlxGame;
 import flixel.FlxObject;
 import flixel.FlxSprite;
+import flixel.effects.particles.FlxParticle;
 import flixel.FlxState;
 import flixel.FlxSubState;
 import flixel.addons.display.FlxBackdrop;
@@ -66,6 +67,8 @@ import openfl8.effects.*;
 import openfl8.effects.BlendModeEffect.BlendModeShader;
 import openfl8.effects.WiggleEffect.WiggleEffectType;
 import ShopState.BeansPopup;
+import HeatwaveShader;
+import ChromaticAbberation;
 
 using StringTools;
 
@@ -88,6 +91,26 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	var wiggleEffect:WiggleEffect;
+
+	var heartsImage:FlxSprite;
+	var pinkVignette:FlxSprite;
+	var pinkVignette2:FlxSprite;
+	var vignetteTween:FlxTween;
+	var whiteTween:FlxTween;
+	var pinkCanPulse:Bool = false;
+	var heartColorShader:ColorShader = new ColorShader(0);
+	var heartEmitter:FlxEmitter;
+
+	var lavaOverlay:FlxSprite; 
+	var emberEmitter:FlxEmitter;
+	var heatwaveShader:HeatwaveShader;
+	var caShader:ChromaticAbberation;
+	var glitchShader:GlitchShader;
+	var isChrom:Bool;
+	var chromAmount:Float = 0;
+	var chromFreq:Int = 1;
+	var chromTween:FlxTween;
+	var glitchTween:FlxTween;
 
 	public static var ratingStuff:Array<Dynamic> = [
 		['You Suck!', 0.2], // From 0% to 19%
@@ -725,6 +748,30 @@ class PlayState extends MusicBeatState
 				bg.active = false;
 				add(bg);
 
+				pinkVignette = new FlxSprite(0, 0).loadGraphic(Paths.image('mira/vignette', 'impostor'));
+				pinkVignette.cameras = [camHUD];
+				pinkVignette.alpha = 0;
+				pinkVignette.antialiasing = true;
+				pinkVignette.blend = ADD;
+
+				pinkVignette2 = new FlxSprite(0, 0).loadGraphic(Paths.image('mira/vignette2', 'impostor'));
+				pinkVignette2.cameras = [camHUD];
+				pinkVignette2.antialiasing = true;
+				pinkVignette2.alpha = 0;
+				//pinkVignette2.blend = ADD;
+				add(pinkVignette2);
+				add(pinkVignette);
+
+				heartsImage = new FlxSprite(-25, 0);
+				heartsImage.cameras = [camOther];
+				heartsImage.frames = Paths.getSparrowAtlas('mira/hearts', 'impostor');
+				heartsImage.animation.addByPrefix('boil', 'Symbol 2', 24, true);
+				heartsImage.animation.play('boil');
+				heartsImage.antialiasing = true;
+				heartsImage.alpha = 0;
+				heartsImage.shader = heartColorShader.shader;
+				add(heartsImage);
+
 				var bg:FlxSprite = new FlxSprite(-1300, -100).loadGraphic(Paths.image('mira/cloud fathest', 'impostor'));
 				bg.antialiasing = true;
 				bg.scrollFactor.set(1, 1);
@@ -856,10 +903,6 @@ class PlayState extends MusicBeatState
 				bg.active = false;
 				add(bg);
 
-				
-				
-				
-
 				bluemira = new FlxSprite(-1300, 0);
 				bluemira.frames = Paths.getSparrowAtlas('mira/crew', 'impostor');
 				bluemira.animation.addByPrefix('bop', 'blue', 24, false);
@@ -889,6 +932,33 @@ class PlayState extends MusicBeatState
 				pretenderDark.antialiasing = true;
 				pretenderDark.scrollFactor.set(1, 1);
 				pretenderDark.active = true;
+
+				
+				heartEmitter = new FlxEmitter(-1200, 1000);
+
+				for (i in 0 ... 100)
+       		 	{
+					var p = new FlxParticle();
+					p.frames = Paths.getSparrowAtlas('mira/littleheart', 'impostor');
+					p.animation.addByPrefix('littleheart', 'littleheart', 24, true);
+					p.animation.play('littleheart');
+        			p.exists = false;
+					p.animation.curAnim.curFrame = FlxG.random.int(0, 2);
+					p.shader = heartColorShader.shader;
+        			heartEmitter.add(p);
+        		}
+				heartEmitter.launchMode = FlxEmitterMode.SQUARE;
+				heartEmitter.velocity.set(-50, -400, 50, -800, -100, 0, 100, -800);
+				heartEmitter.scale.set(3.4, 3.4, 3.4, 3.4, 0, 0, 0, 0);
+				heartEmitter.drag.set(0, 0, 0, 0, 5, 5, 10, 10);
+				heartEmitter.width = 4200.45;
+				heartEmitter.alpha.set(1, 1);
+				heartEmitter.lifespan.set(4, 4.5);
+				//heartEmitter.loadParticles(Paths.image('mira/littleheart', 'impostor'), 500, 16, true);
+						
+				heartEmitter.start(false, FlxG.random.float(0.3, 0.4), 100000);
+
+				heartEmitter.emitting = false;
 			
 			case 'pretender': // pink stage
 				var bg:FlxSprite = new FlxSprite(-1500, -800).loadGraphic(Paths.image('mira/pretender/bg sky', 'impostor'));
@@ -2213,6 +2283,16 @@ class PlayState extends MusicBeatState
 			case 'polus3':
 				curStage = 'polus3';
 
+				caShader = new ChromaticAbberation(0);
+				add(caShader);
+				caShader.amount = -0.2;
+				var filter2:ShaderFilter = new ShaderFilter(caShader.shader);
+
+				heatwaveShader = new HeatwaveShader();
+				add(heatwaveShader);
+				var filter:ShaderFilter = new ShaderFilter(heatwaveShader.shader);
+				camGame.setFilters([filter, filter2]);
+
 				//		var sky:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('polus/SkyPolusLol', 'impostor'));
 				//		sky.antialiasing = true;
 				//		sky.scrollFactor.set(0.5, 0.5);
@@ -2265,28 +2345,37 @@ class PlayState extends MusicBeatState
 				bubbles.active = true;
 				add(bubbles);
 
-				bpFire = new FlxEmitter(-2080.5, 1532.4);
-				bpFire.launchMode = FlxEmitterMode.SQUARE;
-				bpFire.velocity.set(-50, -400, 50, -800, -100, 0, 100, -800);
-				bpFire.scale.set(4, 4, 4, 4, 0, 0, 0, 0);
-				bpFire.drag.set(0, 0, 0, 0, 5, 5, 10, 10);
-				bpFire.width = 4787.45;
-				bpFire.alpha.set(1, 1);
-				bpFire.lifespan.set(4, 4.5);
-				bpFire.loadParticles(Paths.image('polus/ember1', 'impostor'), 500, 16, true);
-						
-				bpFire.start(false, FlxG.random.float(0.3, 0.4), 100000);
+				emberEmitter = new FlxEmitter(-1200, 1000);
 
-				bpFire2 = new FlxEmitter(-2080.5, 1532.4);
-				bpFire2.launchMode = FlxEmitterMode.SQUARE;
-				bpFire2.velocity.set(-50, -400, 50, -800, -100, 0, 100, -800);
-				bpFire2.scale.set(4, 4, 4, 4, 0, 0, 0, 0);
-				bpFire2.drag.set(0, 0, 0, 0, 5, 5, 10, 10);
-				bpFire2.width = 4787.45;
-				bpFire2.alpha.set(1, 1);
-				bpFire2.lifespan.set(4, 4.5);
-				bpFire2.loadParticles(Paths.image('polus/ember2', 'impostor'), 500, 16, true);
-				bpFire2.start(false, FlxG.random.float(0.3, 0.4), 100000);
+				for (i in 0 ... 150)
+       		 	{
+					var p = new FlxParticle();
+					p.frames = Paths.getSparrowAtlas('polus/ember', 'impostor');
+					p.animation.addByPrefix('ember', 'ember', 24, true);
+					p.animation.play('ember');
+        			p.exists = false;
+					p.animation.curAnim.curFrame = FlxG.random.int(0, 9);
+					p.blend = ADD;
+        			emberEmitter.add(p);
+        		}
+				emberEmitter.launchMode = FlxEmitterMode.SQUARE;
+				emberEmitter.velocity.set(-50, -400, 50, -800, -100, 0, 100, -800);
+				emberEmitter.scale.set(1, 1, 0.8, 0.8, 0, 0, 0, 0);
+				emberEmitter.drag.set(0, 0, 0, 0, 5, 5, 10, 10);
+				emberEmitter.width = 4200.45;
+				emberEmitter.alpha.set(1, 1);
+				emberEmitter.lifespan.set(4, 4.5);
+				//heartEmitter.loadParticles(Paths.image('mira/littleheart', 'impostor'), 500, 16, true);
+						
+				emberEmitter.start(false, FlxG.random.float(0.3, 0.4), 100000);
+
+				lavaOverlay = new FlxSprite(1000, -50).loadGraphic(Paths.image('polus/overlaythjing', 'impostor'));
+				lavaOverlay.updateHitbox();
+				lavaOverlay.scale.set(1.5, 1.5);
+				lavaOverlay.blend = ADD;
+				lavaOverlay.alpha = 0.7;
+				lavaOverlay.antialiasing = true;
+				lavaOverlay.scrollFactor.set(1, 1);
 
 			case 'toogus':
 				curStage = 'toogus';
@@ -2940,8 +3029,8 @@ class PlayState extends MusicBeatState
 
 		switch(curStage.toLowerCase()){
 			case 'polus3':
-				add(bpFire);
-				add(bpFire2);
+				add(emberEmitter);
+				add(lavaOverlay);
 			case 'chef':
 				add(chefBluelight);
 				add(chefBlacklight);
@@ -2950,6 +3039,7 @@ class PlayState extends MusicBeatState
 				add(pot);
 				add(vines);
 				add(pretenderDark);
+				add(heartEmitter);
 			case 'pretender':
 				add(bluemira);
 				add(pot);
@@ -3315,6 +3405,13 @@ class PlayState extends MusicBeatState
 				
 				
 			case 'grey':
+
+				caShader = new ChromaticAbberation(0);
+				add(caShader);
+				caShader.amount = -0.5;
+				var filter:ShaderFilter = new ShaderFilter(caShader.shader);
+				camGame.setFilters([filter]);
+
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/grayfg', 'impostor'));
 				lightoverlay.antialiasing = true;
 				lightoverlay.scrollFactor.set(1, 1);
@@ -7051,6 +7148,87 @@ class PlayState extends MusicBeatState
 		{
 			switch (eventName)
 			{
+				case 'setChrom':	
+					var theAmount:Float = Std.parseFloat(value1);
+					if (Math.isNaN(theAmount))
+						theAmount = 0;
+					var theSpeed:Float = Std.parseFloat(value2);
+					if (Math.isNaN(theSpeed))
+						theSpeed = 0;
+
+					if(chromTween != null) chromTween.cancel();
+					chromTween = FlxTween.tween(caShader, {amount: theAmount}, theSpeed, {ease: FlxEase.sineOut});
+				case 'setGlitch':
+					var theAmount:Float = Std.parseFloat(value1);
+					if (Math.isNaN(theAmount))
+						theAmount = 0;
+					var theSpeed:Float = Std.parseFloat(value2);
+					if (Math.isNaN(theSpeed))
+						theSpeed = 0;
+
+					if(glitchTween != null) glitchTween.cancel();
+					glitchTween = FlxTween.tween(glitchShader, {amount: theAmount}, theSpeed, {ease: FlxEase.sineOut});
+				case 'chromToggle':
+					var theAmount:Float = Std.parseFloat(value1);
+					if (Math.isNaN(theAmount))
+						theAmount = 0;
+					var theAmount2:Int = Std.parseInt(value2);
+					if (Math.isNaN(theAmount2))
+						theAmount2 = 0;
+					
+					if(theAmount != 0){
+						isChrom = true;
+						chromAmount = theAmount;
+						chromFreq = theAmount2;
+						return;
+					}else{
+						isChrom = false;
+						chromAmount = 0;
+						return;
+					}
+				case 'pink toggle':
+					if(pinkCanPulse == false){
+						pinkCanPulse = true;
+						
+						heartsImage.alpha = 1;
+						pinkVignette.alpha = 1;
+						pinkVignette2.alpha = 0.3;
+
+						var fadeTime:Float = Std.parseFloat(value1)*1.2;
+						if (Math.isNaN(fadeTime))
+							fadeTime = 0;
+
+						heartColorShader.amount = 1;
+						FlxTween.tween(heartColorShader, {amount: 0}, fadeTime, {ease: FlxEase.cubeInOut});
+						heartEmitter.emitting = true;
+						return;
+					}else{
+						var fadeTime:Float = Std.parseFloat(value1)*2;
+						if (Math.isNaN(fadeTime))
+							fadeTime = 0;
+
+						if(vignetteTween != null) vignetteTween.cancel();
+						if(whiteTween != null) whiteTween.cancel();
+
+						heartsImage.alpha = 1;
+						pinkVignette.alpha = 1;
+						pinkVignette2.alpha = 0.4;
+
+						heartColorShader.amount = 1;
+
+						FlxTween.tween(heartsImage, {alpha: 0}, fadeTime, {ease: FlxEase.cubeInOut});
+						FlxTween.tween(heartColorShader, {amount: 0}, fadeTime, {ease: FlxEase.cubeInOut});
+						FlxTween.tween(pinkVignette, {alpha: 0}, fadeTime, {ease: FlxEase.cubeInOut});
+						FlxTween.tween(pinkVignette2, {alpha: 0}, fadeTime, {ease: FlxEase.cubeInOut});
+						// heartsImage.visible = false;
+						// pinkVignette.visible = false;
+						// pinkVignette2.visible = false;
+						
+						
+						pinkCanPulse = false;
+						heartEmitter.emitting = false;
+						return;
+					}
 				case 'Charles Enter':
 					charlesEnter = true;
 
@@ -9533,6 +9711,11 @@ class PlayState extends MusicBeatState
 					crowd.animation.play('bop');
 				}
 			case 'grey':
+				if(curBeat % chromFreq == 0){
+					if(chromTween != null) chromTween.cancel();
+					caShader.amount = chromAmount;
+					chromTween = FlxTween.tween(caShader, {amount: 0}, 0.45, {ease: FlxEase.sineOut});
+				}
 				if (curBeat % 2 == 0)
 				{
 					crowd.animation.play('bop');
@@ -9565,6 +9748,16 @@ class PlayState extends MusicBeatState
 					tooguswhite.animation.play('bop', true);
 				}
 			case 'plantroom':
+				if (curBeat % 2 == 1 && pinkCanPulse)
+				{
+					pinkVignette.alpha = 1;
+					if(vignetteTween != null) vignetteTween.cancel();
+					vignetteTween = FlxTween.tween(pinkVignette, {alpha: 0.2}, 1.2, {ease: FlxEase.sineOut});
+
+					if(whiteTween != null) whiteTween.cancel();
+					heartColorShader.amount = 0.5;
+					whiteTween = FlxTween.tween(heartColorShader, {amount: 0}, 0.75, {ease: FlxEase.sineOut});
+				}
 				if (curBeat % 2 == 0)
 				{
 					cyanmira.animation.play('bop', true);

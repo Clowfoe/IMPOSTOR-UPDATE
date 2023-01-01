@@ -5,40 +5,45 @@ import flixel.util.FlxColor;
 import flixel.FlxBasic;
 import flixel.system.FlxAssets.FlxShader;
 
-class RimlightShader
+//Written by Rozebud, teehee!!
+
+class RimlightShader extends FlxBasic
 {
 	public var shader(default, null):RimlightShaderGLSL = new RimlightShaderGLSL();
 
-	public var distanceX(default, set):Float = 0.0009;
-	public var distanceY(default, set):Float = 0.0009;
+	public var angle(default, set):Float = 0;
+	public var distance(default, set):Float = 10;
 	public var rimlightColor(default, set):FlxColor = 0xFFFFFFFF;
 	public var refSprite:FlxSprite;
 
-	public function new(_distX:Float = 0.0009, _distY:Float = 0.0009, _rimlightColor:FlxColor = 0xFFFFFFFF, ?_refSprite:FlxSprite = null):Void{
-		distanceX = _distX;
-		distanceY = _distY;
+	public function new(_angle:Float = 0, _distance:Float = 10, _rimlightColor:FlxColor = 0xFFFFFFFF, _refSprite:FlxSprite):Void{
+		super();
+		angle = _angle;
+		distance = _distance;
 		rimlightColor = _rimlightColor;
 		refSprite = _refSprite;
+
+		shader.pixelSize.value = [1/refSprite.graphic.width, 1/refSprite.graphic.height];
 	}
 
-	public function update():Void{
-		if(refSprite != null){
-			shader.bounds.value = [refSprite.frame.uv.left, refSprite.frame.uv.top, refSprite.frame.uv.right, refSprite.frame.uv.bottom];
-		}
-		else{ 
-			shader.bounds.value = [0, 0, 1, 1]; 
-		}
+	override public function update(elapsed:Float):Void{
+		super.update(elapsed);
+		uvUpdate();
 	}
 
-	function set_distanceX(v:Float):Float{
-		distanceX = v;
-		shader.distance.value = [distanceX, distanceY];
+	public function uvUpdate(){
+		shader.bounds.value = [refSprite.frame.uv.left, refSprite.frame.uv.top, refSprite.frame.uv.right, refSprite.frame.uv.bottom];
+	}
+
+	function set_angle(v:Float):Float{
+		angle = v;
+		shader.angle.value = [angle];
 		return v;
 	}
 
-	function set_distanceY(v:Float):Float{
-		distanceY = v;
-		shader.distance.value = [distanceX, distanceY];
+	function set_distance(v:Float):Float{
+		distance = v;
+		shader.distance.value = [distance];
 		return v;
 	}
 
@@ -54,25 +59,28 @@ class RimlightShaderGLSL extends FlxShader
 	@:glFragmentSource('
 		#pragma header
 
-		uniform vec2 distance;
+		uniform float angle;
+		uniform float distance;
 		uniform vec4 rimlightColor;
+
+		uniform vec2 pixelSize;
 		uniform vec4 bounds;
 
 		void main(){
 			vec4 textureColor = flixel_texture2D(bitmap, openfl_TextureCoordv);
-			vec4 overlapColor;
+			float overlapAlpha;
 
-			vec2 overlapCoord = vec2(openfl_TextureCoordv.x - distance.x, openfl_TextureCoordv.y - distance.y);
+			vec2 distanceScaled = vec2(cos(radians(angle)) * pixelSize.x * distance, sin(radians(angle)) * pixelSize.y * distance);
+
+			vec2 overlapCoord = vec2(openfl_TextureCoordv.x + distanceScaled.x, openfl_TextureCoordv.y - distanceScaled.y);
 			if(overlapCoord.x < bounds.x || overlapCoord.x > bounds.z || overlapCoord.y < bounds.y || overlapCoord.y > bounds.w){
-				overlapColor = vec4(0);
+				overlapAlpha = 0;
 			}
 			else{
-				overlapColor = flixel_texture2D(bitmap, overlapCoord);
+				overlapAlpha = flixel_texture2D(bitmap, overlapCoord).a;
 			}
 
-			vec3 outColor = textureColor.rgb;
-	
-			outColor = mix(rimlightColor.rgb, textureColor, overlapColor.a * rimlightColor.a);
+			vec3 outColor = mix(rimlightColor.rgb, textureColor.rgb / textureColor.a, overlapAlpha * rimlightColor.a);
 	
 			gl_FragColor = vec4(outColor.rgb * textureColor.a, textureColor.a);
 		}')
