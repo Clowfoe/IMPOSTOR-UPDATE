@@ -1,70 +1,81 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-30,
 				10
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Henry Idle"
+			"fps": 24,
+			"name": "Henry Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				149,
 				-22
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Henry Left"
+			"fps": 24,
+			"name": "Henry Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				137,
 				-150
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Henry Down"
+			"fps": 24,
+			"name": "Henry Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				19,
 				2
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Henry Up"
+			"fps": 24,
+			"name": "Henry Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				14,
 				-64
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Henry Right"
+			"fps": 24,
+			"name": "Henry Right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-4,
 				10
 			],
+			"anim": "shock",
+			"fps": 24,
+			"name": "henry shock omg",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-14,
+				30
+			],
 			"indices": [],
 			"fps": 24,
-			"anim": "shock",
+			"anim": "armed",
 			"loop": false,
-			"name": "henry shock omg"
+			"name": "Henry React Arm"
 		}
 	],
 	"no_antialiasing": false,

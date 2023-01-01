@@ -498,8 +498,7 @@ class PlayState extends MusicBeatState
 
 	//drippypop arse
 	var redDropped:Bool;
-	var drippyRed:FlxSprite;
-
+	
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
@@ -1837,15 +1836,6 @@ class PlayState extends MusicBeatState
 				bg.scrollFactor.set(1, 1);
 				bg.active = false;
 				add(bg);
-
-				drippyRed = new  FlxSprite(390, 190);
-				drippyRed.frames = Paths.getSparrowAtlas('drip/REDdripper', 'impostor');
-				drippyRed.animation.addByPrefix('idle', 'dripbodyred copy', 24, false);
-				drippyRed.animation.addByPrefix('drop', 'RED DROP DOWN', 24, false);
-				drippyRed.animation.addByPrefix('die', 'RED DIE', 24, false);
-				drippyRed.antialiasing = true;
-				drippyRed.animation.play('idle');
-				add(drippyRed);
 
 			case 'tomtus': // emihead made peak
 				curStage = 'tomtus';
@@ -5859,15 +5849,6 @@ class PlayState extends MusicBeatState
 			
 			case 'monotone':
 				speedLines.y = FlxMath.lerp(speedLines.y, speedLines.y - 1350, CoolUtil.boundTo(elapsed * 9, 0, 1));
-			
-			case 'drippypop':
-				/*if(!SONG.notes[id].mustHitSection && !redDropped)
-				{
-					if(curStep % 4 == 0){
-						//wip drippy for later
-						trace("hello!");
-					}
-				}*/
 		}
 
 		if (!inCutscene)
