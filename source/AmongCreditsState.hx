@@ -4,6 +4,8 @@ import flixel.FlxSprite;
 import flixel.FlxG;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
+import flixel.math.FlxPoint;
+import flixel.FlxObject;
 
 class AmongCreditsState extends MusicBeatState
 {
@@ -12,18 +14,21 @@ class AmongCreditsState extends MusicBeatState
         ['Clowfoe',		'clow',	    'im clowfoe.... i directed the mod and i coded a SHIT TON of it\nim really proud of this whole team ty all for playing and hope it was worth the wait',	'https://twitter.com/Clowfoe'],		
         ['Ethan\nTheDoodler',	'ethan',		'im a real doodler now, mama','https://twitter.com/creepercrunch'],        
         ['mayhew',			'mayhew',		'i made triple trouble and i am gay artist',		'https://twitter.com/SandPlanetNG'],
-        ['aqua',			'aqua',			"local sexy babe and hot programmer\ni coded some of this mod and lost sleep working on it",				'https://twitter.com/gedehari'],   
+        
+        ['aqua',			'aqua',			"local sexy babe and hot programmer\ni coded a lot of this mod and lost sleep working on it\nfollow me for my insane ramblings @ useraqua_",				'https://twitter.com/gedehari'],   
         ['fabs',		'fabs',	    'im cval',	'https://twitter.com/fabsthefabs'],		
+        ['ziffy',	'ziffy',		'I HELPED ON TORTURE AND\nI MADE THE FREEPLAY MENU','https://twitter.com/ziffymusic'],
+        ['Rozebud',		'rozebud',	"Download Bunker Bumrush.\nPlay my new game Bunker Bumrush.",		'https://twitter.com/helpme_thebigt'],
         ['duskie',		'duskie',	    'From what little i did do for this mod, the team was nice and fun to work with. Hope you enjoyed the double note ghosts :)',	'https://twitter.com/fabsthefabs'],		
+        
         ['punkett',				'punkett',			"im punkett",	'https://twitter.com/emihead'],
         ['emihead',				'emihead',			"im emihead i made tomonjus tuesday and the credits song also i am canonically the black impostor's lover so please draw us making out and tag me on twitter @ emihead",	'https://twitter.com/emihead'],
-        ['ziffy',	'ziffy',		'I HELPED ON TORTURE AND\nI MADE THE FREEPLAY MENU','https://twitter.com/ziffymusic'],
         ['Saster',		'saster',	"Hey guys, it's me! I composed Sauces Moogus and Heartbeat. Though they are both songs I created more than a year ago, I still think they're not too bad. I hope you enjoyed those songs and see you in another mod!!",		'https://twitter.com/helpme_thebigt'],
         ['Rareblin',		'rareblin',	"im a funny musician idk check out my Youtube channel",		'https://twitter.com/helpme_thebigt'],
         ['keoni',				'keoni',			"keoni",	'https://twitter.com/emihead'],
         ['Keegan',		'keegan',	"Hey Gamers, I'm Keegan, I made Turbulence and all the midi sections of Room Code.\nI like ENA and I draw occasionally you should follow me @__Keegan_",		'https://twitter.com/polybiusproxy'],
         ['fluffyhairs',				'fluffyhair',			"subscribe to fluffyhairs",	'https://twitter.com/fluffyhairslol'],
-        ['Rozebud',		'rozebud',	"Download Bunker Bumrush.\nPlay my new game Bunker Bumrush.",		'https://twitter.com/helpme_thebigt'],
+ 
         ['loggo',			'lojo',			'halloween',				'https://twitter.com/gedehari'],   
         ['mayo',				'mayo',		"Hi I'm Mayokiddo! I'm an artist for the mod and I made a bunch of the playable mini impostor skins, and i also made a few sprites\nshout out to everyone currently in silly squad",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
         ['Mash\nPro\nTato',     'mashywashy',   'im so sorry for making among us kills 2 years ago',    'mash link'],
@@ -40,8 +45,8 @@ class AmongCreditsState extends MusicBeatState
         ['Gonk',				'gonk',		"Working on Impostor has been a ton of fun honestly, was really cool to be a part of something special like this. I'm also the reason crewicide is in, dumb joke song based off a dream I had and its probably my favourite thing I worked on in the mod, It Funny, makes Me Lol",	'https://www.twitter.com/StupidGoatMan'],
         ['gibz',				'gibz',		"shit idk , charted a few songs",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
         ['Thales',              'thales',    "I'm very happy to help draw a small part of this mod, it's a big achievement for me, I hope you all have a good time in the game!", 'thaleslink'],
-        ['monotonedoc',				'monotone',		"please help they trapped me in the code of the mod",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
-        ['amongusfan',				'cooper',		"i did nothing for this mod but let them use red mungus but i get a quote for having cancer",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
+        ['monotone\ndoc',				'monotone',		"please help they trapped me in the code of the mod",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
+        ['amongus\nfan',				'cooper',		"i did nothing for this mod but let them use red mungus but i get a quote for having cancer",	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw'],
     ];
 
     var nameText:FlxText;
@@ -61,12 +66,22 @@ class AmongCreditsState extends MusicBeatState
     var mole:FlxSprite; //hey pip :]
     var baritone:FlxSprite; //hey pip again :]
 
+    private var camFollowPos:FlxObject;
+
     override public function create()
     {
         super.create();
 
+        camFollowPos = new FlxObject(0, 0, 1, 1);
+
+        FlxG.camera.zoom = 0.8;
+        FlxG.camera.follow(camFollowPos, LOCKON);
+
+        camFollowPos.setPosition(660, 370);
+
         wallback = new FlxSprite().loadGraphic(Paths.image('credits/wallback', 'impostor'));
 		wallback.antialiasing = true;
+        wallback.scale.set(1.3, 1.3);
 		add(wallback);
 
         portrait = new FlxSprite(0, 100).loadGraphic(Paths.image('credits/portraits/clow', 'impostor'));
@@ -79,7 +94,7 @@ class AmongCreditsState extends MusicBeatState
 
         dumnote = new FlxSprite(0, 30).loadGraphic(Paths.image('credits/stickynote', 'impostor'));
 		dumnote.antialiasing = true;
-		dumnote.scale.set(1.2, 1.2);
+		dumnote.scale.set(1.25, 1.25);
 		add(dumnote);
 
         lamp = new FlxSprite(0, -50).loadGraphic(Paths.image('credits/lamp', 'impostor'));
@@ -118,8 +133,9 @@ class AmongCreditsState extends MusicBeatState
         nameText.updateHitbox();
         add(nameText);
 
-        baritone = new FlxSprite(602, 613).loadGraphic(Paths.image('credits/baritoneAd', 'impostor'));
+        baritone = new FlxSprite(630, 638).loadGraphic(Paths.image('credits/baritoneAd', 'impostor'));
 		baritone.antialiasing = false;
+        baritone.scale.set(1.2, 1.2);
         add(baritone);
         
         updateDescription();
@@ -181,6 +197,15 @@ class AmongCreditsState extends MusicBeatState
 
         descText.text = amongCreditsStuff[curDesc][2];
         descText.x = ((FlxG.width / 2) - (descText.width / 2));
+
+        switch(amongCreditsStuff[curDesc][0]){
+            case 'Ethan\nTheDoodler' | 'Lay\nLasagna' | 'monotone\ndoc' | 'amongus\nfan':
+                nameText.y = 100;
+            case 'Mash\nPro\nTato':
+                nameText.y = 80;
+            default:
+                nameText.y = 120;
+        }
 
         portrait.loadGraphic(Paths.image('credits/portraits/' + amongCreditsStuff[curDesc][1], 'impostor'));
         portrait.x = ((FlxG.width / 2) - (portrait.width / 2));
