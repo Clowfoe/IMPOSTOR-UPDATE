@@ -5772,7 +5772,7 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		flashSprite.alpha = FlxMath.lerp(flashSprite.alpha, 0, 0.06);
+		flashSprite.alpha = FlxMath.lerp(flashSprite.alpha, 0, CoolUtil.boundTo(elapsed * 9, 0, 1));
 
 		if (curStage == 'plantroom' || curStage == 'pretender')
 		{
