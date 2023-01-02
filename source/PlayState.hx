@@ -4178,7 +4178,7 @@ class PlayState extends MusicBeatState
 		ass2.cameras = [camHUD];
 		vt_light.cameras = [camHUD];
 		bars.cameras = [camHUD];
-		bars2.cameras = [camHUD];
+		bars2.cameras = [camOther];
 		//		ass3.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
