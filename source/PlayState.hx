@@ -3857,6 +3857,8 @@ class PlayState extends MusicBeatState
 		}
 		if(curStage.toLowerCase() == 'finalem')
 			add(bars);
+		if(curStage.toLowerCase() == 'monotone')
+			add(bars);
 
 		timeBarBG = new AttachedSprite('timeBar');
 		timeBarBG.x = timeTxt.x;
@@ -7359,6 +7361,7 @@ class PlayState extends MusicBeatState
 					camBopInterval = _interval;
 
 				case 'Lights out':
+					camGame.flash(FlxColor.WHITE, 0.35);
 					if (charShader == null)
 					{
 						charShader = new BWShader(0.01, 0.12, true);
@@ -7386,6 +7389,7 @@ class PlayState extends MusicBeatState
 					healthBar.createFilledBar(FlxColor.BLACK, FlxColor.WHITE);
 					healthBar.updateBar();
 				case 'Lights on':
+					camGame.flash(FlxColor.BLACK, 0.35);
 					if (boyfriend.curCharacter == 'whitebf')
 					{
 						triggerEventNote('Change Character', '0', 'bf');
