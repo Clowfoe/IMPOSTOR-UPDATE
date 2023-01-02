@@ -22,11 +22,17 @@ class TaskSong extends FlxSpriteGroup
     var size:Float = 0;
     var fontSize:Int = 24;
 
-    public function new(_x:Float, _y:Float, _song:String) {
+    public function new(_x:Float, _y:Float, _song:String, ?_numberThing:Int = -1) {
 
         super(_x, _y);
 
-        var pulledText:String = Assets.getText(Paths.txt(_song.toLowerCase().replace(' ', '-') + "/info"));
+
+        var addToPath = "";
+        if(_numberThing != -1){
+            addToPath = "" + _numberThing;
+        }
+
+        var pulledText:String = Assets.getText(Paths.txt(_song.toLowerCase().replace(' ', '-') + "/info" + addToPath));
         pulledText += '\n';
         var splitText:Array<String> = [];
 
