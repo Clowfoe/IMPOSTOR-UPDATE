@@ -2698,6 +2698,7 @@ class PlayState extends MusicBeatState
 
 			case 'defeat':
 				GameOverSubstate.characterName = 'bf-defeat-dead';
+				GameOverSubstate.deathSoundName = 'defeat_kill_sfx';
 
 				curStage = 'defeat';
 
@@ -6388,6 +6389,7 @@ class PlayState extends MusicBeatState
 		FlxG.watch.addQuick("beatShit", curBeat);
 		FlxG.watch.addQuick("stepShit", curStep);
 
+		// RESET = Quick Game Over Screen
 		// RESET = Quick Game Over Screenif (PlayState.SONG.stage.toLowerCase() == 'victory') 
 		//{
 		//AQUA idk what the fuck ur doin but i would like to compile -rzbd
@@ -7144,21 +7146,23 @@ class PlayState extends MusicBeatState
 				}
 				else{
 					KillNotes();
-					
 					vocals.volume = 0;
-
+					vocals.pause();
+					
 					canPause = false;
 					paused = true;
 
-					FlxG.sound.play(Paths.sound('edefeat', 'impostor'));
+					FlxG.sound.music.volume = 0;
+					
+					triggerEventNote('Change Character', '1', 'blackKill');
+					triggerEventNote('Camera Follow Pos', '550', '500');
+
+					FlxG.sound.play(Paths.sound('edefeat', 'impostor'), 1);
 
 					FlxTween.tween(camHUD, {alpha: 0}, 0.7, {ease: FlxEase.quadInOut});
 
 					iconP1.visible = false;
 					iconP2.visible = false;
-
-					triggerEventNote('Change Character', '1', 'blackKill');
-					triggerEventNote('Camera Follow Pos', '550', '500');
 
 					defaultCamZoom = 0.65;
 					dad.setPosition(-15, 163);
