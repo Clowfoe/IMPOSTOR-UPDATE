@@ -209,7 +209,7 @@ class AmongFreeplayState extends MusicBeatState
 		portrait.scrollFactor.set();
 		add(portrait);
 
-		infoText = new FlxText(1071.05, 91, 0, '291921 \n 2:32 \n', 48);
+		infoText = new FlxText(1071.05, 91, 0, '291921 \n Rating: 32 \n', 48);
 		infoText.antialiasing = true;
 		infoText.updateHitbox();
 		infoText.scrollFactor.set();
@@ -470,8 +470,8 @@ class AmongFreeplayState extends MusicBeatState
 			FlxG.sound.play(Paths.sound('hover', 'impostor'), 0.5);
 		}
 
-		intendedScore = Highscore.getScore(listOfButtons[curSelected].songName.toLowerCase(), 1);
-		intendedRating = Highscore.getRating(listOfButtons[curSelected].songName.toLowerCase(), 1);
+		intendedScore = Highscore.getScore(listOfButtons[curSelected].songName.toLowerCase(), 2);
+		intendedRating = Highscore.getRating(listOfButtons[curSelected].songName.toLowerCase(), 2);
 
 		var bullShit:Int = 0;
 
@@ -776,8 +776,8 @@ class AmongFreeplayState extends MusicBeatState
 
 		curSelected = 0;
 
-		intendedScore = Highscore.getScore(listOfButtons[curSelected].songName.toLowerCase(), 1);
-		intendedRating = Highscore.getRating(listOfButtons[curSelected].songName.toLowerCase(), 1);
+		intendedScore = Highscore.getScore(listOfButtons[curSelected].songName.toLowerCase(), 2);
+		intendedRating = Highscore.getRating(listOfButtons[curSelected].songName.toLowerCase(), 2);
 
 		changePortrait(true);
 	}

@@ -348,6 +348,8 @@ class PlayState extends MusicBeatState
 	var defeatblack:FlxSprite;
 	var bodiesfront:FlxSprite;
 
+	var defeatDark:Bool = false;
+
 	//plague energy
 	// sorry for it being messy! Whoopsie! - aqua ( i wrote this )
 	var bgblue:FlxSprite;
@@ -458,6 +460,7 @@ class PlayState extends MusicBeatState
 	var chairs:FlxSprite;
 	var vt_light:FlxSprite;
 	var bars:FlxSprite;
+	var bars2:FlxSprite;
 
 	//turbulence! :D
 	var turbsky:FlxSprite;
@@ -1447,17 +1450,19 @@ class PlayState extends MusicBeatState
 
 				trace('test lol, ' + SONG.song.toLowerCase());
 
-				if (!isStoryMode && SONG.song.toLowerCase() != 'oversight')
+				if (isStoryMode && SONG.song.toLowerCase() != 'oversight')
 				{
 					henryTeleporter = new FlxSprite(998, 620).loadGraphic(Paths.image('airship/newAirship/Teleporter', 'impostor'));
 					henryTeleporter.antialiasing = true;
 					henryTeleporter.scale.set(1, 1);
 					henryTeleporter.updateHitbox();
 					henryTeleporter.scrollFactor.set(1, 1);
+					henryTeleporter.visible = true;
 					add(henryTeleporter);
 
 					FlxMouseEventManager.add(henryTeleporter, function onMouseDown(teleporter:FlxSprite)
 					{
+						henryTeleporter.visible = false;
 						henryTeleport();
 					}, null, null, null);
 				}
@@ -2130,7 +2135,7 @@ class PlayState extends MusicBeatState
 				plagueBGPURPLE.visible = false;
 
 
-				wires = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/wires1', 'impostor'));
+				wires = new FlxSprite(0, -100).loadGraphic(Paths.image('skeld/wires1', 'impostor'));
 				wires.updateHitbox();
 				wires.antialiasing = true;
 				wires.scrollFactor.set(1, 1);
@@ -2145,6 +2150,14 @@ class PlayState extends MusicBeatState
 				bggreen.updateHitbox();
 				bggreen.antialiasing = true;
 				bggreen.scrollFactor.set(0.7, 0.7);
+				bggreen.active = false;
+				bggreen.setGraphicSize(Std.int(bg.width * 2));
+				plagueBGGREEN.add(bggreen);
+
+				bggreen = new FlxSprite(0, -1000).loadGraphic(Paths.image('skeld/brombom', 'impostor'));
+				bggreen.updateHitbox();
+				bggreen.antialiasing = true;
+				bggreen.scrollFactor.set(0.8, 0.8);
 				bggreen.active = false;
 				bggreen.setGraphicSize(Std.int(bg.width * 2));
 				plagueBGGREEN.add(bggreen);
@@ -3180,7 +3193,7 @@ class PlayState extends MusicBeatState
 				o2lighting.setGraphicSize(Std.int(o2lighting.width * 1.2));
 				add(o2lighting);
 
-				o2dark = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+				o2dark = new FlxSprite(-300).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 				o2dark.antialiasing = true;
 				o2dark.scrollFactor.set(1, 1);
 				o2dark.alpha = 0.001;
@@ -3816,30 +3829,22 @@ class PlayState extends MusicBeatState
 
 		Conductor.songPosition = -5000;
 
+		if(SONG.stage.toLowerCase() == 'defeat')
+			STRUM_X = -278;
+
 		strumLine = new FlxSprite(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, 50).makeGraphic(FlxG.width, 10);
 		if (ClientPrefs.downScroll)
 			strumLine.y = FlxG.height - 150;
 		strumLine.scrollFactor.set();
 
-		if(curStage.toLowerCase() == 'youtuber')
-		{
-			timeTxt = new FlxText(-300, 0, 400, "", 32);
-			timeTxt.setFormat(Paths.font("arial.ttf"), 14, 0xFFc9c6c3);
-			timeTxt.scrollFactor.set();
-			timeTxt.alpha = 0;
-			timeTxt.visible = !ClientPrefs.hideTime;
-		}
-		else
-		{
-			timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 585, 20, 400, "", 32);
-			timeTxt.setFormat(Paths.font("vcr.ttf"), 14, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-			timeTxt.scrollFactor.set();
-			timeTxt.alpha = 0;
-			timeTxt.borderSize = 1;
-			timeTxt.visible = !ClientPrefs.hideTime;
-			if (ClientPrefs.downScroll)
-				timeTxt.y = FlxG.height - 45;
-		}
+		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 585, 20, 400, "", 32);
+		timeTxt.setFormat(Paths.font("vcr.ttf"), 14, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt.scrollFactor.set();
+		timeTxt.alpha = 0;
+		timeTxt.borderSize = 1;
+		timeTxt.visible = !ClientPrefs.hideTime;
+		if (ClientPrefs.downScroll)
+			timeTxt.y = FlxG.height - 45;
 
 		vt_light = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/light_voting', 'impostor'));
 		vt_light.updateHitbox();
@@ -3853,6 +3858,10 @@ class PlayState extends MusicBeatState
 		bars.scrollFactor.set();
 		bars.screenCenter();
 
+		bars2 = new FlxSprite(0, 0).loadGraphic(Paths.image('bars'));
+		bars2.scrollFactor.set();
+		bars2.screenCenter();
+
 		if(curStage.toLowerCase() == 'voting')
 		{
 			add(vt_light);
@@ -3861,7 +3870,7 @@ class PlayState extends MusicBeatState
 		if(curStage.toLowerCase() == 'finalem')
 			add(bars);
 		if(curStage.toLowerCase() == 'monotone')
-			add(bars);
+			add(bars2);
 
 		timeBarBG = new AttachedSprite('timeBar');
 		timeBarBG.x = timeTxt.x;
@@ -3876,30 +3885,24 @@ class PlayState extends MusicBeatState
 		add(timeBarBG);
 		
 
-		if(curStage.toLowerCase() == 'youtuber')
+		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
+			'songPercent', 0, 1);
+		timeBar.scrollFactor.set();
+		timeBar.createFilledBar(0xFF2e412e, 0xFF44d844);
+		timeBar.numDivisions = 800; // How much lag this causes?? Should i tone it down to idk, 400 or 200?
+		timeBar.alpha = 0;
+		timeBar.visible = !ClientPrefs.hideTime;
+		add(timeBar);
+		add(timeTxt);
+		timeBarBG.sprTracker = timeBar;
+		timeTxt.x += 10;
+		timeTxt.y += 4;
+		
+		if(curStage.toLowerCase() == 'defeat')
 		{
-			timeBar = new FlxBar(13.75, 678.95, LEFT_TO_RIGHT, Std.int(1247.85), Std.int(3.35), this,
-				'songPercent', 0, 1);
-			timeBar.scrollFactor.set();
-			timeBar.createFilledBar(0xFFc9c6c3, 0xFFcc0000);
-			timeBar.numDivisions = 800; // How much lag this causes?? Should i tone it down to idk, 400 or 200?
-			timeBar.alpha = 0;
-			timeBar.visible = !ClientPrefs.hideTime;
-		}
-		else
-		{
-			timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
-				'songPercent', 0, 1);
-			timeBar.scrollFactor.set();
-			timeBar.createFilledBar(0xFF2e412e, 0xFF44d844);
-			timeBar.numDivisions = 800; // How much lag this causes?? Should i tone it down to idk, 400 or 200?
-			timeBar.alpha = 0;
-			timeBar.visible = !ClientPrefs.hideTime;
-			add(timeBar);
-			add(timeTxt);
-			timeBarBG.sprTracker = timeBar;
-			timeTxt.x += 10;
-			timeTxt.y += 4;
+			timeBar.visible = false;
+			timeBarBG.visible = false;
+			timeTxt.visible = false;
 		}
 
 		victoryDarkness = new FlxSprite(0, 0).makeGraphic(3000, 3000, 0xff000000);
@@ -4122,6 +4125,11 @@ class PlayState extends MusicBeatState
 			{
 				scoreTxt.setFormat(Paths.font("apple_kid.ttf"), 50, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			}
+		else if(SONG.stage.toLowerCase() == 'alpha')
+			{
+				scoreTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				scoreTxt.y = healthBarBG.y + 62;
+			}
 		else
 			{
 				scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -4160,6 +4168,7 @@ class PlayState extends MusicBeatState
 		ass2.cameras = [camHUD];
 		vt_light.cameras = [camHUD];
 		bars.cameras = [camHUD];
+		bars2.cameras = [camOther];
 		//		ass3.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
@@ -4297,6 +4306,9 @@ class PlayState extends MusicBeatState
 				case 'meltdown':
 					startVideo('polus3');
 					piss = false;
+				case 'turbulence':
+					startVideo('turb');
+
 				case 'sussus-toogus':
 					startVideo('toogus');
 					piss = false;
@@ -4837,7 +4849,7 @@ class PlayState extends MusicBeatState
 			{
 				setOnLuas('defaultOpponentStrumX' + i, opponentStrums.members[i].x);
 				setOnLuas('defaultOpponentStrumY' + i, opponentStrums.members[i].y);
-				if (ClientPrefs.middleScroll)
+				if (ClientPrefs.middleScroll || SONG.stage.toLowerCase() == 'defeat')
 					opponentStrums.members[i].visible = false;
 			}
 
@@ -5045,7 +5057,7 @@ class PlayState extends MusicBeatState
 		{
 			setOnLuas('defaultOpponentStrumX' + i, opponentStrums.members[i].x);
 			setOnLuas('defaultOpponentStrumY' + i, opponentStrums.members[i].y);
-			if (ClientPrefs.middleScroll)
+			if (ClientPrefs.middleScroll || SONG.stage.toLowerCase() == 'defeat')
 				opponentStrums.members[i].visible = false;
 		}
 
@@ -5457,12 +5469,11 @@ class PlayState extends MusicBeatState
 						charType = Std.parseInt(event[3]);
 						if (Math.isNaN(charType)) charType = 0;
 				}
-			case 'eventName':
-                addCharacterToList(1, 'whitegreen');
-                addCharacterToList(0, 'whitebf');
-
 				var newCharacter:String = event[4];
 				addCharacterToList(newCharacter, charType);
+			case 'Lights Out':
+				addCharacterToList('whitegreen', 0);
+				addCharacterToList('whitebf', 1);
 		}
 
 		if (!eventPushedMap.exists(event[2]))
@@ -6213,6 +6224,28 @@ class PlayState extends MusicBeatState
 				if (songMisses <= 0) // why would it ever be less than im stupid
 					scoreTxt.text += ratingString;
 		}
+		else if (PlayState.SONG.stage.toLowerCase() == 'alpha' || defeatDark)
+		{
+				scoreTxt.text = 'Score: $songScore | Combo Breaks: $songMisses | Accuracy: ';
+		
+				if (ratingString != '?'){
+					scoreTxt.text += ((Math.floor(ratingPercent * 10000) / 100)) + '% | ';
+
+					switch(ratingString){
+						case ' [SFC]':
+							scoreTxt.text += '(MFC) AAAA:';
+						case ' [GFC]':
+							scoreTxt.text += '(GFC) AAA:';
+						case ' [FC]':
+							scoreTxt.text += '(FC) AA:';
+						default:
+							scoreTxt.text += '(SDCB) A:';
+					}
+				}
+				else{
+					scoreTxt.text +='0% | N/A';
+				}
+		}
 		else
 			{
 				scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses;
@@ -6399,11 +6432,11 @@ class PlayState extends MusicBeatState
 		//{
 		//AQUA idk what the fuck ur doin but i would like to compile -rzbd
 		//*sorry clow, no slander intended
-		if (controls.RESET && !inCutscene && !endingSong && SONG.stage.toLowerCase() != 'victory')
-		{
-			health = 0;
-			trace("RESET = True");
-		}
+		// if (controls.RESET && !inCutscene && !endingSong && SONG.stage.toLowerCase() != 'victory')
+		// {
+		// 	health = 0;
+		// 	trace("RESET = True");
+		// }
 		doDeathCheck();
 
 		var roundedSpeed:Float = FlxMath.roundDecimal(SONG.speed, 2);
@@ -6443,7 +6476,7 @@ class PlayState extends MusicBeatState
 		{
 			notes.forEachAlive(function(daNote:Note)
 			{
-				if (!daNote.mustPress && ClientPrefs.middleScroll)
+				if (!daNote.mustPress && (ClientPrefs.middleScroll || SONG.stage.toLowerCase() == 'defeat'))
 				{
 					daNote.active = true;
 					daNote.visible = false;
@@ -7153,6 +7186,9 @@ class PlayState extends MusicBeatState
 					KillNotes();
 					vocals.volume = 0;
 					vocals.pause();
+
+					if(FlxG.random.bool(10))
+						GameOverSubstate.characterName = 'bf-defeat-dead-balls';
 					
 					canPause = false;
 					paused = true;
@@ -8199,8 +8235,18 @@ class PlayState extends MusicBeatState
 					{
 						case 0:
 							defeatblack.alpha = 0;
+							defeatDark = false;
+							scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+							scoreTxt.y = healthBarBG.y + 36;
+							iconP1.visible = true;
+							iconP2.visible = true;
 						case 1:
 							defeatblack.alpha += 1;
+							defeatDark = true;
+							scoreTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+							scoreTxt.y = healthBarBG.y + 62;
+							iconP1.visible = false;
+							iconP2.visible = false;
 					}
 				case 'Forehead':
 					nickt.visible = false;
@@ -8378,8 +8424,6 @@ class PlayState extends MusicBeatState
 								}
 								boyfriend.visible = true;
 								iconP1.changeIcon(boyfriend.healthIcon);
-								botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-								scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 							}
 
 						case 1:
@@ -9033,10 +9077,8 @@ class PlayState extends MusicBeatState
 		if (noteDiff > 135)
 		{
 			daRating = 'shit';
-			score = -50;
-			healthMultiplier = -1;
-			songMisses++;
-			combo = 0;
+			score = 50;
+			healthMultiplier = 0.1;
 		}
 
 		health += note.hitHealth * healthMultiplier;
