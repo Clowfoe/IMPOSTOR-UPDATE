@@ -799,35 +799,6 @@ class AmongStoryMenuState extends MusicBeatState
 				}
 			}
 		}
-		else if(selectedWeek && selectingDifficulty){
-			if (controls.UI_RIGHT_P)
-				changeDifficulty(1);
-
-			if (controls.UI_LEFT_P)
-				changeDifficulty(-1);
-
-			if (controls.ACCEPT && curWeek != 0)
-			{
-				if(curWeek == 4 && localFinaleState != NOT_PLAYED){
-					FlxG.sound.music.fadeOut(1.2, 0);
-					camScreen.fade(FlxColor.BLACK, 1.2, false, function()
-					{
-						selectedWeek = true;
-						camScreen.visible = false;
-						camSpace.visible = false;
-						openSubState(new AmongDeathSubstate());
-					});
-				}
-				else
-					selectWeek();
-			}
-			if (controls.BACK){
-				closeDiff();
-				FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
-				selectingDifficulty = false;
-				selectedWeek = false;
-			}
-		}
 		
 		super.update(elapsed);
 
@@ -872,11 +843,9 @@ class AmongStoryMenuState extends MusicBeatState
 			PlayState.isStoryMode = true;
 			selectedWeek = true;
 
-			var diffic = CoolUtil.difficultyStuff[curDifficulty][1];
-			if (diffic == null)
-				diffic = '';
+			var diffic = "-hard";
 
-			PlayState.storyDifficulty = curDifficulty;
+			PlayState.storyDifficulty = 2;
 
 			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
 			PlayState.storyWeek = curWeek;
@@ -1130,29 +1099,18 @@ class AmongStoryMenuState extends MusicBeatState
 
 	function openDiff()
 	{
-		panel.visible = true;
-		FlxTween.tween(blackPanel, {alpha: 0.4}, 0.25, {ease: FlxEase.circOut});
-		FlxTween.tween(panel.scale, {x: 1, y: 1}, 0.25, {ease: FlxEase.circOut});
-		sprDifficultyGroup.visible = true;
-		sprDifficultyGroup.forEach(function(spr:FlxSprite)
-		{
-			spr.scale.set(0, 0);
-			FlxTween.tween(spr.scale, {x: 1, y: 1}, 0.25, {ease: FlxEase.circOut});
-		});
-		curDifficulty = 1;
-		changeDifficulty(0);
-	}
-	function closeDiff()
-	{
-		panel.visible = true;
-		FlxTween.tween(blackPanel, {alpha: 0}, 0.25, {ease: FlxEase.circOut});
-		FlxTween.tween(panel.scale, {x: 0, y: 0}, 0.25, {ease: FlxEase.circOut});
-		sprDifficultyGroup.forEach(function(spr:FlxSprite)
-		{
-			FlxTween.tween(spr.scale, {x: 0, y: 0}, 0.25, {ease: FlxEase.circOut});
-		});
-		curDifficulty = 1;
-		changeDifficulty(0);
+		if(curWeek == 4 && localFinaleState != NOT_PLAYED){
+			FlxG.sound.music.fadeOut(1.2, 0);
+			camScreen.fade(FlxColor.BLACK, 1.2, false, function()
+			{
+				selectedWeek = true;
+				camScreen.visible = false;
+				camSpace.visible = false;
+				openSubState(new AmongDeathSubstate());
+			});
+		}
+		else
+			selectWeek();
 	}
 
 	function shipPlayAnim(animName:String, force:Bool = false, reversed:Bool = false, frame:Int = 0):Void
