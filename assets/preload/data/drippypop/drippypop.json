@@ -3671,7 +3671,8 @@
 					[
 						102947.368421053,
 						3,
-						0
+						0,
+						"GF Sing"
 					]
 				],
 				"typeOfSection": 0,
@@ -3846,14 +3847,15 @@
 						"GF Sing"
 					],
 					[
-						105157.894736842,
-						0,
-						0
-					],
-					[
 						105947.368421053,
 						3,
 						78.9473684210526,
+						"GF Sing"
+					],
+					[
+						105157.894736842,
+						0,
+						0,
 						"GF Sing"
 					]
 				],
@@ -7508,48 +7510,66 @@
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
 				"bpm": 190,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
 				"bpm": 190,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
 				"bpm": 190,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
 				"bpm": 190,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
 				"bpm": 190,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 190,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 190
 			},
 			{
 				"lengthInSteps": 16,
@@ -7563,8 +7583,10 @@
 		],
 		"gfVersion": "gf",
 		"player3": "drippico",
+		"allowBFskin": true,
 		"splashSkin": "noteSplashes",
 		"song": "Drippypop",
+		"allowGFskin": true,
 		"stage": "drippypop",
 		"validScore": true,
 		"arrowSkin": "",
