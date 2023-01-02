@@ -5476,12 +5476,11 @@ class PlayState extends MusicBeatState
 						charType = Std.parseInt(event[3]);
 						if (Math.isNaN(charType)) charType = 0;
 				}
+				var newCharacter:String = event[4];
+				addCharacterToList(newCharacter, charType);
 			case 'Lights Out':
 				addCharacterToList('whitegreen', 0);
 				addCharacterToList('whitebf', 1);
-
-			var newCharacter:String = event[4];
-			addCharacterToList(newCharacter, charType);
 		}
 
 		if (!eventPushedMap.exists(event[2]))
