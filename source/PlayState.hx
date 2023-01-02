@@ -6253,7 +6253,10 @@ class PlayState extends MusicBeatState
 			paused = true;
 			cancelFadeTween();
 			CustomFadeTransition.nextCamera = camOther;
+			
+			#if debug
 			MusicBeatState.switchState(new ChartingState());
+			#end
 
 			#if desktop
 			DiscordClient.changePresence("Chart Editor", null, null, true);
