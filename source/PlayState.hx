@@ -964,6 +964,7 @@ class PlayState extends MusicBeatState
 				heartEmitter.emitting = false;
 			
 			case 'pretender': // pink stage
+				GameOverSubstate.characterName = 'pretender';
 				var bg:FlxSprite = new FlxSprite(-1500, -800).loadGraphic(Paths.image('mira/pretender/bg sky', 'impostor'));
 				bg.antialiasing = true;
 				bg.scrollFactor.set(1, 1);
@@ -1086,7 +1087,8 @@ class PlayState extends MusicBeatState
 				vines.setGraphicSize(Std.int(vines.width * 1));
 				vines.scrollFactor.set(1.2, 1);
 				vines.active = false;
-
+			case 'kills':
+				GameOverSubstate.characterName = 'deathkills';
 			case 'cargo': // double kill
 				var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/cargo', 'impostor'));
 				bg.antialiasing = true;
@@ -5455,6 +5457,9 @@ class PlayState extends MusicBeatState
 						charType = Std.parseInt(event[3]);
 						if (Math.isNaN(charType)) charType = 0;
 				}
+			case 'eventName':
+                addCharacterToList(1, 'whitegreen');
+                addCharacterToList(0, 'whitebf');
 
 				var newCharacter:String = event[4];
 				addCharacterToList(newCharacter, charType);
