@@ -2130,7 +2130,7 @@ class PlayState extends MusicBeatState
 				plagueBGPURPLE.visible = false;
 
 
-				wires = new FlxSprite(0, 0).loadGraphic(Paths.image('skeld/wires1', 'impostor'));
+				wires = new FlxSprite(0, -100).loadGraphic(Paths.image('skeld/wires1', 'impostor'));
 				wires.updateHitbox();
 				wires.antialiasing = true;
 				wires.scrollFactor.set(1, 1);
@@ -2140,6 +2140,14 @@ class PlayState extends MusicBeatState
 
 				
 
+
+				bggreen = new FlxSprite(0, -1000).loadGraphic(Paths.image('skeld/evilejected', 'impostor'));
+				bggreen.updateHitbox();
+				bggreen.antialiasing = true;
+				bggreen.scrollFactor.set(0.7, 0.7);
+				bggreen.active = false;
+				bggreen.setGraphicSize(Std.int(bg.width * 2));
+				plagueBGGREEN.add(bggreen);
 
 				bggreen = new FlxSprite(0, -1000).loadGraphic(Paths.image('skeld/evilejected', 'impostor'));
 				bggreen.updateHitbox();
@@ -5457,12 +5465,12 @@ class PlayState extends MusicBeatState
 						charType = Std.parseInt(event[3]);
 						if (Math.isNaN(charType)) charType = 0;
 				}
-			case 'eventName':
+			case 'Lights Out':
                 addCharacterToList(1, 'whitegreen');
                 addCharacterToList(0, 'whitebf');
 
-				var newCharacter:String = event[4];
-				addCharacterToList(newCharacter, charType);
+			var newCharacter:String = event[4];
+			addCharacterToList(newCharacter, charType);
 		}
 
 		if (!eventPushedMap.exists(event[2]))
