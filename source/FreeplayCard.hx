@@ -42,7 +42,7 @@ class FreeplayCard extends FlxSprite {
 
     var shuffleTimer:FlxTimer;
 
-    public function new(x:Float, y:Float, song:String, namer:String, colord:FlxColor, portraits:String, ?requirement:RequireType, ?songs:Array<String>, price:Int = 0, ?forceUnlock = false)
+    public function new(x:Float, y:Float, song:String, namer:String, colord:FlxColor, portraits:String, ?requirement:RequireType, ?songs:Array<String>, _price:Int = 0, ?forceUnlock = false)
     {
         trueX = x;
         trueY = y;
@@ -51,6 +51,7 @@ class FreeplayCard extends FlxSprite {
         songName = song;
         portrait = portraits;
         requirementtype = requirement;
+        price = _price;
 
         visible = false;
 

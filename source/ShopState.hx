@@ -145,8 +145,6 @@ class ShopState extends MusicBeatState
         ['left', 'bfpolus', 'bfairship', 200, false, 'Airship BF', 'Unlocked by completing the seventh week.', COMPLETED, BF, ['delusion', 'blackout', 'neurotic']],
         ['right', 'bfmira', 'gfmira', 250, false, 'Mira GF', 'Unlocked by completing the sixth week.', GF, COMPLETED, ['heartbeat', 'pinkwave', 'pretender']],
         ['top', 'bfmira', 'bfsauce', 250, false, 'Chef BF', 'Unlocked by achieving an accuracy higher than 95% on Sauces Moogus.', BF, PERCENT95, ['sauces-moogus']],
-        ['left', 'root', 'bf', 0, true, 'BF', "The default Boyfriend skin. Just in case you're not feeling the new looks.", BF],
-        ['left', 'bf', 'gf', 0, true, 'GF', "The default Girlfriend skin. Just in case you're not feeling the new looks.", GF],
 
         ['top', 'bfpolus', 'gfpolus', 450, false, 'Polus GF', "Unlocked by completing the fifth week.", GF, COMPLETED, ['magmatic', 'ashes', 'boiling-point']],
         ['top', 'gfpolus', 'snowball', 300, false, 'Snowball', " ", PET],
@@ -162,9 +160,10 @@ class ShopState extends MusicBeatState
         ['left', 'crab', 'ufo', 300, false, 'UFO', " ", PET],
 
         
-        ['left', 'gf', 'stick-bf', 375, false, 'Stickmin BF', "Unlocked by completing Henry's week.", BF, COMPLETED, ['titular', 'reinforcements', 'greatest-plan', 'armed'], true, "Someone told me about some broken old device lying around the airship and i dont think anyones cleaned it up yet.\nMight wanna check that out sometime."],
+        ['left', 'root', 'stick-bf', 375, false, 'Stickmin BF', "Unlocked by completing Henry's week.", BF, COMPLETED, ['titular', 'reinforcements', 'greatest-plan', 'armed'], true, "Someone told me about some broken old device lying around the airship and i dont think anyones cleaned it up yet.\nMight wanna check that out sometime."],
+        ['left', 'stick-bf', 'henrygf', 375, false, 'Stickmin GF', "Unlocked by completing Henry's week.", GF, COMPLETED, ['titular', 'reinforcements', 'greatest-plan', 'armed'], true, "..."],
 
-        ['top', 'stick-bf', 'stickmin', 300, false, 'H. Stickmin', "pet", PET],
+        ['top', 'henrygf', 'stickmin', 300, false, 'H. Stickmin', "pet", PET],
         ['left', 'stickmin', 'elliepet', 300, false, 'E. Rose', "pet", PET]
     ];
 
