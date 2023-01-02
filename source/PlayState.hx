@@ -2437,13 +2437,13 @@ class PlayState extends MusicBeatState
 				if (SONG.song.toLowerCase() == 'sussus toogus')
 				{
 					walker = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					add(walker);
+					//add(walker);
 
 					var walker2:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					add(walker2);
+					//add(walker2);
 
 					var walker3:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					add(walker3);
+					//add(walker3);
 				}
 
 				if (SONG.song.toLowerCase() == 'lights-down')
