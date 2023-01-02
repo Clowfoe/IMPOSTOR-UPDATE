@@ -26,16 +26,16 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	var lePlayState:PlayState;
 
-	public static var characterName:String = 'bf';
+	public static var characterName:String = 'genericdeath';
 	public static var deathSoundName:String = 'fnf_loss_sfx';
-	public static var loopSoundName:String = 'new_Gameover';
-	public static var endSoundName:String = 'gameover-New_end';
+	public static var loopSoundName:String = 'gameover_v4_LOOP';
+	public static var endSoundName:String = 'gameover_v4_End';
 
 	public static function resetVariables() {
-		characterName = 'bf';
+		characterName = 'genericdeath';
 		deathSoundName = 'fnf_loss_sfx';
-		loopSoundName = 'new_Gameover';
-		endSoundName = 'gameover-New_end';
+		loopSoundName = 'gameover_v4_LOOP';
+		endSoundName = 'gameover_v4_End';
 	}
 
 	public function new(x:Float, y:Float, camX:Float, camY:Float, state:PlayState)

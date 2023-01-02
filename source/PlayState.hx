@@ -2458,7 +2458,7 @@ class PlayState extends MusicBeatState
 					toogusblue.active = true;
 					toogusblue.antialiasing = true;
 					toogusblue.flipX = true;
-					add(toogusblue);
+					//add(toogusblue);
 
 					toogusorange = new FlxSprite(-300, 250);
 					toogusorange.frames = Paths.getSparrowAtlas('mira/mirascaredmates', 'impostor');
@@ -2480,7 +2480,7 @@ class PlayState extends MusicBeatState
 					tooguswhite.active = true;
 					tooguswhite.antialiasing = true;
 					tooguswhite.flipX = true;
-					add(tooguswhite);
+					//add(tooguswhite);
 
 					bfvent = new FlxSprite(70, 200);
 					bfvent.frames = Paths.getSparrowAtlas('mira/bf_mira_vent', 'impostor');
@@ -2559,7 +2559,7 @@ class PlayState extends MusicBeatState
 				toogusblue.scrollFactor.set(1, 1);
 				toogusblue.active = true;
 				toogusblue.antialiasing = true;
-				//add(toogusblue);
+				add(toogusblue);
 
 				var bg3:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('reactor/frontpillars', 'impostor'));
 				bg3.updateHitbox();
@@ -2575,7 +2575,7 @@ class PlayState extends MusicBeatState
 				tooguswhite.scrollFactor.set(1, 1);
 				tooguswhite.active = true;
 				tooguswhite.antialiasing = true;
-				//add(tooguswhite);
+				add(tooguswhite);
 
 			//	add(stageCurtains);
 
