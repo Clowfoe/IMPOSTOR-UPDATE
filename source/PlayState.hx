@@ -4297,7 +4297,7 @@ class PlayState extends MusicBeatState
 					piss = false;
 				case 'danger':
 					startVideo('danger');
-					piss = false;
+					
 				case 'finale':
 					startVideo('finale');
 
