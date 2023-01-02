@@ -4332,14 +4332,6 @@ class PlayState extends MusicBeatState
 				case "torture":
 					
 					instantStart();
-					
-					if(curStage == "warehouse"){
-						ziffyStart.visible = true;
-						ziffyStart.animation.play("idle", true);
-						ziffyStart.screenCenter(XY);
-						ziffyStart.y -= 120;
-					}
-					camHUD.alpha = 1;
 
 				default:
 					startCountdown();
@@ -5183,8 +5175,8 @@ class PlayState extends MusicBeatState
 			ziffyStart.animation.play("idle", true);
 			ziffyStart.screenCenter(XY);
 			ziffyStart.y -= 120;
+			camHUD.alpha = 0;
 		}
-		camHUD.alpha = 1;
 
 		new FlxTimer().start(0.3, function(tmr:FlxTimer)
 		{
