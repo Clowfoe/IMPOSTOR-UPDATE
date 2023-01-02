@@ -4338,6 +4338,8 @@ class PlayState extends MusicBeatState
 				case "torture":
 					
 					instantStart();
+					camHUD.alpha = 0;
+					
 
 				default:
 					startCountdown();
@@ -4350,6 +4352,7 @@ class PlayState extends MusicBeatState
 				case "torture":
 
 					instantStart();
+					camHUD.alpha = 0;
 				
 				default:
 					startCountdown();
@@ -5040,7 +5043,9 @@ class PlayState extends MusicBeatState
 		startedCountdown = true;
 		canPause = true;
 
-		startSong();
+		new FlxTimer().start(0.3, function(t){
+			startSong();
+		});
 
 	}
 
@@ -5179,14 +5184,6 @@ class PlayState extends MusicBeatState
 		#end
 		setOnLuas('songLength', songLength);
 		callOnLuas('onSongStart', []);
-
-		if(curStage == "warehouse"){
-			ziffyStart.visible = true;
-			ziffyStart.animation.play("idle", true);
-			ziffyStart.screenCenter(XY);
-			ziffyStart.y -= 120;
-			camHUD.alpha = 0;
-		}
 
 		new FlxTimer().start(0.3, function(tmr:FlxTimer)
 		{
@@ -9938,6 +9935,13 @@ class PlayState extends MusicBeatState
 			case 'warehouse':
 				leftblades.animation.play('spin', true);
 				rightblades.animation.play('spin', true);
+
+				if(curBeat == 2){
+					ziffyStart.visible = true;
+					ziffyStart.animation.play("idle", true);
+					ziffyStart.screenCenter(XY);
+					ziffyStart.y -= 120;
+				}
 
 				if(curBeat == 24){
 					ziffyStart.visible = false;
