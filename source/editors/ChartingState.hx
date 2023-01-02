@@ -133,7 +133,9 @@ class ChartingState extends MusicBeatState
 		['Forehead2', 'start the actual song lol'],
 		['IdentityFade', 'fade in or out black in identity crisis.'],
 		['Orbyy', 'fade in or out black in identity crisis.'],
-		['Orbyy2', 'fade in or out black in identity crisis.']
+		['Orbyy2', 'fade in or out black in identity crisis.'],
+		['tomongusdie', 'kill them.']
+		
 
 	];
 

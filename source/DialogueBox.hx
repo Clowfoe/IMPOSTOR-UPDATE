@@ -415,7 +415,7 @@ class DialogueBox extends FlxSpriteGroup
 					portraitRight.frames = Paths.getSparrowAtlas('dialogueV4/pretendpink', 'impostor');
 
 				case 'grey':
-					curIcon = 'grey';
+					curIcon = 'gray';
 					boxChar = 'Grey';
 
 					portraitLeft.frames = Paths.getSparrowAtlas('dialogueV4/grey', 'impostor');

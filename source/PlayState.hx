@@ -3443,6 +3443,12 @@ class PlayState extends MusicBeatState
 				
 				saxguy.visible = false;
 
+				defeatblack = new FlxSprite().makeGraphic(FlxG.width * 4, FlxG.height + 700, FlxColor.BLACK);
+				defeatblack.alpha = 1;
+				defeatblack.screenCenter(X);
+				defeatblack.screenCenter(Y);
+			//	add(defeatblack);
+
 			
 				
 
@@ -3731,10 +3737,21 @@ class PlayState extends MusicBeatState
 		momGhost.scale.copyFrom(mom.scale);
 		momGhost.updateHitbox();
 		bfGhost.visible = false;
+		
+			
 		bfGhost.antialiasing = true;
 		bfGhost.scale.copyFrom(boyfriend.scale);
 		bfGhost.updateHitbox();
-
+		if(curStage.toLowerCase() == 'school')
+		{
+			bfGhost.antialiasing = false;
+			dadGhost.antialiasing = false;
+		}
+		else
+		{
+			bfGhost.antialiasing = true;
+			dadGhost.antialiasing = true;
+		}
 
 		if(SONG.player1 == 'bf-running')
 		{
@@ -4258,6 +4275,7 @@ class PlayState extends MusicBeatState
 					piss = false;
 				case 'delusion':
 					startVideo('grey');
+					piss = false;
 				case 'sabotage':
 					startVideo('polus2');
 					piss = false;
@@ -4267,13 +4285,19 @@ class PlayState extends MusicBeatState
 				case 'sussus-toogus':
 					startVideo('toogus');
 					piss = false;
-				case 'lights-down'| 'reactor' | 'mando' | 'dlow' | 'oversight' | 'ashes' | 'magmatic'| 'heartbeat'| 'pinkwave'| 'delusion':
+				case 'lights-down'| 'reactor' | 'mando' | 'dlow' | 'ashes' | 'magmatic'| 'heartbeat'| 'pinkwave'| 'delusion':
 					schoolIntro(doof);
+				
+				case 'boiling-point':
+					startVideo('boiling');
 				
 
 				case 'oversight':
 					startVideo('oversight');
-
+					piss = false;
+				case 'danger':
+					startVideo('danger');
+					piss = false;
 				case 'finale':
 					startVideo('finale');
 
@@ -7640,6 +7664,8 @@ class PlayState extends MusicBeatState
 
 				case 'tuesdayblast':
 					FlxG.sound.play(Paths.sound('soundTuesday'));
+				case 'tomongusdie':
+					FlxG.sound.play(Paths.sound('tomongus_Shot'));
 				case 'HUD Fade':
 					var charType:Int = Std.parseInt(value1);
 					if (Math.isNaN(charType))
