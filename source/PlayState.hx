@@ -2556,7 +2556,7 @@ class PlayState extends MusicBeatState
 				toogusblue.scrollFactor.set(1, 1);
 				toogusblue.active = true;
 				toogusblue.antialiasing = true;
-				add(toogusblue);
+				//add(toogusblue);
 
 				var bg3:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('reactor/frontpillars', 'impostor'));
 				bg3.updateHitbox();
@@ -2572,7 +2572,7 @@ class PlayState extends MusicBeatState
 				tooguswhite.scrollFactor.set(1, 1);
 				tooguswhite.active = true;
 				tooguswhite.antialiasing = true;
-				add(tooguswhite);
+				//add(tooguswhite);
 
 			//	add(stageCurtains);
 
@@ -4287,7 +4287,7 @@ class PlayState extends MusicBeatState
 				case 'sussus-toogus':
 					startVideo('toogus');
 					piss = false;
-				case 'lights-down'| 'reactor' | 'mando' | 'dlow' | 'ashes' | 'magmatic'| 'heartbeat'| 'pinkwave'| 'delusion':
+				case 'lights-down'| 'mando' | 'dlow' | 'ashes' | 'magmatic'| 'heartbeat'| 'pinkwave'| 'delusion':
 					schoolIntro(doof);
 				
 				case 'boiling-point':
@@ -5183,8 +5183,8 @@ class PlayState extends MusicBeatState
 			ziffyStart.animation.play("idle", true);
 			ziffyStart.screenCenter(XY);
 			ziffyStart.y -= 120;
-			camHUD.alpha = 0;
 		}
+		camHUD.alpha = 0;
 
 		new FlxTimer().start(0.3, function(tmr:FlxTimer)
 		{
