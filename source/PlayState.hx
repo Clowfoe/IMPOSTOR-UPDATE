@@ -6439,11 +6439,11 @@ class PlayState extends MusicBeatState
 		//{
 		//AQUA idk what the fuck ur doin but i would like to compile -rzbd
 		//*sorry clow, no slander intended
-		if (controls.RESET && !inCutscene && !endingSong && SONG.stage.toLowerCase() != 'victory')
-		{
-			health = 0;
-			trace("RESET = True");
-		}
+		// if (controls.RESET && !inCutscene && !endingSong && SONG.stage.toLowerCase() != 'victory')
+		// {
+		// 	health = 0;
+		// 	trace("RESET = True");
+		// }
 		doDeathCheck();
 
 		var roundedSpeed:Float = FlxMath.roundDecimal(SONG.speed, 2);
