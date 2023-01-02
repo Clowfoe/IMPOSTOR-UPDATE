@@ -6247,21 +6247,20 @@ class PlayState extends MusicBeatState
 			}
 		}
 
+		#if debug
 		if (FlxG.keys.justPressed.SEVEN && !endingSong && !inCutscene)
 		{
 			persistentUpdate = false;
 			paused = true;
 			cancelFadeTween();
 			CustomFadeTransition.nextCamera = camOther;
-			
-			#if debug
 			MusicBeatState.switchState(new ChartingState());
-			#end
 
 			#if desktop
 			DiscordClient.changePresence("Chart Editor", null, null, true);
 			#end
 		}
+		#end
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
