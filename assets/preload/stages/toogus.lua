@@ -84,6 +84,5 @@ function onUpdate()
     else
         triggerEvent('Camera Follow Pos','','')
     end
-    
 end
 

@@ -103,6 +103,8 @@ class ChartingState extends MusicBeatState
 		['Toogus Sax', "blow"],
 		['Lights out', "turn the lights off"],
 		['Lights on', "turn the lights on"],
+		['Lights on Ending', "turn the lights on ENDING"],
+		['Lights Down OFF', "turn the lights on ENDING"],
 		['Both Opponents', ""],
 		['Opponent Two', ""],
 		['Play On Left', ''],

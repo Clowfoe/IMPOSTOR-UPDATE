@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-15,
+				-10
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "death",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-15,
+				-15
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "loop death",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-15,
+				29
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "confirm death",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bfghostDEAD",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

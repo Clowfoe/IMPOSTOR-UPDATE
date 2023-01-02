@@ -270,6 +270,7 @@ class PlayState extends MusicBeatState
 	var gfStartpos:FlxPoint;
 
 	// airship shit
+	var whiteAwkward:FlxSprite;
 	var henryTeleporter:FlxSprite;
 	var wires:FlxSprite;
 
@@ -386,6 +387,8 @@ class PlayState extends MusicBeatState
 	var airshipskyflash:FlxSprite;
 	var toogusorange:FlxSprite;
 	var tooguswhite:FlxSprite;
+	var bfvent:FlxSprite;
+	var ldSpeaker:FlxSprite;
 	var speaker:FlxSprite;
 	var thebackground:FlxSprite;
 	var fireloggo:FlxSprite;
@@ -1302,6 +1305,7 @@ class PlayState extends MusicBeatState
 
 			
 			case 'who': // dead dead guy
+				GameOverSubstate.characterName = 'whitewhodie';
 				var bg:FlxSprite = new FlxSprite(0, 100).loadGraphic(Paths.image('polus/deadguy', 'impostor'));
 				bg.antialiasing = true;
 				bg.scrollFactor.set(1, 1);
@@ -1431,7 +1435,15 @@ class PlayState extends MusicBeatState
 					add(yellowdead);
 				}*/
 
-				if (isStoryMode == false)
+				whiteAwkward = new FlxSprite(298, 480);
+				whiteAwkward.frames = Paths.getSparrowAtlas('airship/newAirship/white_awkward', 'impostor');
+				whiteAwkward.animation.addByPrefix('sweat', 'fetal position', 24, true);
+				whiteAwkward.animation.addByPrefix('stare', 'white stare', 24, false);
+				whiteAwkward.animation.play('sweat');
+				whiteAwkward.antialiasing = true;
+				add(whiteAwkward);
+
+				if (isStoryMode == true)
 				{
 					henryTeleporter = new FlxSprite(998, 620).loadGraphic(Paths.image('airship/newAirship/Teleporter', 'impostor'));
 					henryTeleporter.antialiasing = true;
@@ -2179,6 +2191,9 @@ class PlayState extends MusicBeatState
 
 			case 'idk':
 				curStage = 'idk';
+
+				GameOverSubstate.characterName = 'bf-idk-dead';
+
 				var sky:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image('toby'));
 				sky.antialiasing = false;
 				sky.scrollFactor.set(1, 1);
@@ -2237,7 +2252,15 @@ class PlayState extends MusicBeatState
 				}
 				if (SONG.song.toLowerCase() == 'meltdown')
 				{
+					GameOverSubstate.characterName = 'bfg-dead';
+					var bfdead:FlxSprite = new FlxSprite(600, 525).loadGraphic(Paths.image('polus/bfdead', 'impostor'));
+					bfdead.setGraphicSize(Std.int(bfdead.width * 0.8));
+					bfdead.updateHitbox();
+					bfdead.antialiasing = true;
+					bfdead.scrollFactor.set(1, 1);
+					bfdead.active = false;
 					add(speaker);
+					add(bfdead);
 				}
 
 			case 'polus2':
@@ -2456,6 +2479,15 @@ class PlayState extends MusicBeatState
 					tooguswhite.antialiasing = true;
 					tooguswhite.flipX = true;
 					add(tooguswhite);
+
+					bfvent = new FlxSprite(70, 200);
+					bfvent.frames = Paths.getSparrowAtlas('mira/bf_mira_vent', 'impostor');
+					bfvent.animation.addByPrefix('vent', 'bf vent', 24, false);
+					bfvent.animation.play('vent');
+					bfvent.scrollFactor.set(1, 1);
+					bfvent.active = true;
+					bfvent.antialiasing = true;
+					add(bfvent);
 				}
 
 				var tbl:FlxSprite = new FlxSprite(-1600, 50).loadGraphic(Paths.image('table_bg'));
@@ -2464,6 +2496,18 @@ class PlayState extends MusicBeatState
 				tbl.scrollFactor.set(1, 1);
 				tbl.active = false;
 				add(tbl);
+
+				if (SONG.song.toLowerCase() == 'lights-down')
+				{
+					ldSpeaker = new FlxSprite(400, 420);
+					ldSpeaker.frames = Paths.getSparrowAtlas('mira/stereo_taken', 'impostor');
+					ldSpeaker.animation.addByPrefix('boom', 'stereo boom', 24, false);
+					ldSpeaker.scrollFactor.set(1, 1);
+					ldSpeaker.active = true;
+					ldSpeaker.antialiasing = true;
+					ldSpeaker.visible = false;
+					add(ldSpeaker);
+				}
 
 			//	lightsOutSprite.alpha = 0;
 			//	flashSprite.scrollFactor.set(0, 0);
@@ -4050,7 +4094,7 @@ class PlayState extends MusicBeatState
 			}
 		else
 			{
-				scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			}
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
@@ -4706,6 +4750,32 @@ class PlayState extends MusicBeatState
 
 	public function startCountdown():Void
 	{
+		switch(curStage.toLowerCase()){
+			case 'cargo':
+				camHUD.visible = false;
+			case 'finalem':
+				camHUD.alpha = 0.001;
+				healthBar.visible = false;
+				healthBarBG.visible = false;
+				iconP1.visible = false;
+				iconP2.visible = false;
+				timeBar.visible = false;
+				timeBarBG.visible = false;
+				timeTxt.visible = false;
+				botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			
+			case 'charles':
+				iconP1.changeIcon('bf');
+				iconP2.changeIcon('henry');
+				healthBar.createFilledBar(0xFFbdd7d8, 0xFF31b0d1);
+				healthBar.updateBar();
+				
+				botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			
+				triggerEventNote('Play Animation', 'intro', 'bf');
+		}
 		if (startedCountdown)
 		{
 			callOnLuas('onStartCountdown', []);
@@ -4814,29 +4884,6 @@ class PlayState extends MusicBeatState
 				switch (swagCounter)
 				{
 					case 0:
-						switch(curStage.toLowerCase()){
-							case 'cargo':
-								camHUD.visible = false;
-							case 'finalem':
-								camHUD.alpha = 0.001;
-								healthBar.visible = false;
-								healthBarBG.visible = false;
-								iconP1.visible = false;
-								iconP2.visible = false;
-								timeBar.visible = false;
-								timeBarBG.visible = false;
-								timeTxt.visible = false;
-								botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-							
-							case 'charles':
-								iconP1.changeIcon('bf');
-								iconP2.changeIcon('henry');
-								healthBar.createFilledBar(0xFFbdd7d8, 0xFF31b0d1);
-								healthBar.updateBar();
-		
-								triggerEventNote('Play Animation', 'intro', 'bf');
-						}
-
 						FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
 						if (task != null)
 						{
@@ -5674,6 +5721,7 @@ class PlayState extends MusicBeatState
 
 		new FlxTimer().start(2.9, function(tmr:FlxTimer)
 		{
+			whiteAwkward.animation.play('stare');
 			dad.animation.play('third', true);
 			dad.specialAnim = true;
 		});
@@ -6507,6 +6555,7 @@ class PlayState extends MusicBeatState
 									healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
 									iconP2.changeIcon('whiteblack');	
 									botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+									scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 	
 							}
 						}
@@ -6545,6 +6594,8 @@ class PlayState extends MusicBeatState
 										healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
 										iconP2.changeIcon('black');
 										botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+										scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			
 								}
 						}
 						else
@@ -6581,6 +6632,7 @@ class PlayState extends MusicBeatState
 										healthBar.createColoredEmptyBar(FlxColor.fromRGB(209,210,248));    
 										iconP2.changeIcon('white');
 										botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+										scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 	
 								}
 						}
@@ -7056,10 +7108,13 @@ class PlayState extends MusicBeatState
 				}
 				else{
 					KillNotes();
-					vocals.pause();
-					FlxG.sound.music.pause();
+					
 					vocals.volume = 0;
 					FlxG.sound.music.volume = 0;
+					vocals.pause();
+					FlxG.sound.music.pause();
+
+					FlxG.sound.play(Paths.sound('edefeat', 'impostor'));
 
 					FlxTween.tween(camHUD, {alpha: 0}, 0.7, {ease: FlxEase.quadInOut});
 
@@ -7067,9 +7122,9 @@ class PlayState extends MusicBeatState
 					iconP2.visible = false;
 
 					triggerEventNote('Change Character', '1', 'blackKill');
-					triggerEventNote('Camera Follow Pos', '750', '500');
+					triggerEventNote('Camera Follow Pos', '550', '500');
 
-					defaultCamZoom = 0.55;
+					defaultCamZoom = 0.65;
 					dad.setPosition(-15, 163);
 					dad.playAnim('kill1');
 					dad.specialAnim = true;
@@ -7078,6 +7133,9 @@ class PlayState extends MusicBeatState
 					{
 						dad.playAnim('kill2');
 						dad.specialAnim = true;
+
+						defaultCamZoom = 0.5;
+						triggerEventNote('Camera Follow Pos', '750', '450');
 					});
 					new FlxTimer().start(2.6, function(tmr:FlxTimer)
 					{
@@ -7313,7 +7371,40 @@ class PlayState extends MusicBeatState
 					iconP1.shader = null;
 					iconP2.shader = null;
 					loBlack.alpha = 0;
+
+				case 'Lights on Ending':
+					if (boyfriend.curCharacter == 'whitebf')
+					{
+						triggerEventNote('Change Character', '0', 'bf');
+					}
+					else
+					{
+						boyfriend.shader = null;
+					}
+					if (dad.curCharacter == 'whitegreen')
+					{
+						triggerEventNote('Change Character', '1', 'impostor3');
+					}
+					else
+					{
+						dad.shader = null;
+					}
+					iconP1.shader = null;
+					iconP2.shader = null;
+					loBlack.alpha = 0;
+
+					boyfriend.visible = false;
+					gf.visible = false;
+					camHUD.visible = false;
+
+					triggerEventNote('Play Animation', 'liveReaction', 'dad');
+					bfvent.animation.play('vent');
+					ldSpeaker.animation.play('boom');
+					ldSpeaker.visible = true;
 				
+				case 'Lights Down OFF':
+					camGame.visible = false;
+
 				case 'Meltdown Video':
 					canPause = false;
 					camGame.visible = false;
@@ -7707,6 +7798,16 @@ class PlayState extends MusicBeatState
 						o2WTF.alpha = 0;
 						camHUD.alpha = 0.001;
 						camGame.flash(FlxColor.RED, 0.75);
+
+						healthBar.visible = false;
+						healthBarBG.visible = false;
+						iconP1.visible = false;
+						iconP2.visible = false;
+
+						timeBar.visible = false;
+						timeBarBG.visible = false;
+						timeTxt.visible = false;
+						opponentStrums.visible = false;
 					}
 					if(value1 == 'appear'){
 						o2dark.alpha = 0;
@@ -7730,10 +7831,13 @@ class PlayState extends MusicBeatState
 							FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
 							healthBar.updateBar();
 							botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+							scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		
 						}
 						else
 						{
 							botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+							scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 							camFollowPos.setPosition(1470, 700);
 							FlxG.camera.focusOn(camFollowPos.getPosition());
 						}
@@ -7752,6 +7856,7 @@ class PlayState extends MusicBeatState
 							FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
 							healthBar.updateBar();
 							botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(gf.healthColorArray[0], gf.healthColorArray[1], gf.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+							scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(gf.healthColorArray[0], gf.healthColorArray[1], gf.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 						}
 						else
 						{
@@ -7759,6 +7864,7 @@ class PlayState extends MusicBeatState
 							FlxG.camera.focusOn(camFollowPos.getPosition());
 							iconP2.changeIcon(mom.healthIcon);
 							botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(mom.healthColorArray[0], mom.healthColorArray[1], mom.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+							scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(mom.healthColorArray[0], mom.healthColorArray[1], mom.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 							healthBar.createFilledBar(FlxColor.fromRGB(mom.healthColorArray[0], mom.healthColorArray[1], mom.healthColorArray[2]),
 							FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
 							healthBar.updateBar();
@@ -8223,6 +8329,7 @@ class PlayState extends MusicBeatState
 								boyfriend.visible = true;
 								iconP1.changeIcon(boyfriend.healthIcon);
 								botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+								scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 							}
 
 						case 1:
@@ -8255,6 +8362,7 @@ class PlayState extends MusicBeatState
 								dad.visible = true;
 								iconP2.changeIcon(dad.healthIcon);
 								botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+								scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 							}
 
 						case 2:

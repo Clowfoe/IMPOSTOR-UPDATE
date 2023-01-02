@@ -2,10 +2,11 @@
 	"song": {
 		"speed": 2.8,
 		"stage": "toogus",
-		"player1": "greenp",
+		"player1": "bf",
 		"player2": "impostor3",
 		"player3": "gf",
 		"player4": null,
+		"allowPet": null,
 		"notes": [
 			{
 				"lengthInSteps": 16,
@@ -1102,18 +1103,82 @@
 					[
 						141176.470588235,
 						-1,
-						"Lights on",
-						"",
-						""
-					],
-					[
-						141176.470588235,
-						-1,
-						"Lights on",
+						"Lights on Ending",
 						"",
 						""
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						144000,
+						-1,
+						"Lights Down OFF",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -19646,6 +19711,8 @@
 		"bpm": 170,
 		"arrowSkin": null,
 		"needsVoices": true,
+		"allowGFskin": null,
+		"allowBFskin": null,
 		"fabs": null,
 		"song": "Lights-Down"
 	}

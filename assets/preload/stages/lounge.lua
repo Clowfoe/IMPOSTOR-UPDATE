@@ -15,7 +15,7 @@ function onUpdate()
 	end
 
 	if curBeat >= 120 then
-		xx = 750
+		xx = 790
 		xx2 = 1500
 	end
 end
