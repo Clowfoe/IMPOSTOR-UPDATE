@@ -6383,7 +6383,8 @@ class PlayState extends MusicBeatState
 
 		// RESET = Quick Game Over Screenif (PlayState.SONG.stage.toLowerCase() == 'victory') 
 		//{
-		//clow idk what the fuck ur doin but i would like to compile -rzbd
+		//AQUA idk what the fuck ur doin but i would like to compile -rzbd
+		//*sorry clow, no slander intended
 		if (controls.RESET && !inCutscene && !endingSong && SONG.stage.toLowerCase() != 'victory')
 		{
 			health = 0;
