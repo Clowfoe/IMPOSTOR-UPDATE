@@ -1443,7 +1443,9 @@ class PlayState extends MusicBeatState
 				whiteAwkward.antialiasing = true;
 				add(whiteAwkward);
 
-				if (isStoryMode == true)
+				trace('test lol, ' + SONG.song.toLowerCase());
+
+				if (!isStoryMode && SONG.song.toLowerCase() != 'oversight')
 				{
 					henryTeleporter = new FlxSprite(998, 620).loadGraphic(Paths.image('airship/newAirship/Teleporter', 'impostor'));
 					henryTeleporter.antialiasing = true;
@@ -2435,13 +2437,13 @@ class PlayState extends MusicBeatState
 				if (SONG.song.toLowerCase() == 'sussus toogus')
 				{
 					walker = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					add(walker);
+					//add(walker);
 
 					var walker2:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					add(walker2);
+					//add(walker2);
 
 					var walker3:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					add(walker3);
+					//add(walker3);
 				}
 
 				if (SONG.song.toLowerCase() == 'lights-down')
@@ -2456,7 +2458,7 @@ class PlayState extends MusicBeatState
 					toogusblue.active = true;
 					toogusblue.antialiasing = true;
 					toogusblue.flipX = true;
-					add(toogusblue);
+					//add(toogusblue);
 
 					toogusorange = new FlxSprite(-300, 250);
 					toogusorange.frames = Paths.getSparrowAtlas('mira/mirascaredmates', 'impostor');
@@ -2478,7 +2480,7 @@ class PlayState extends MusicBeatState
 					tooguswhite.active = true;
 					tooguswhite.antialiasing = true;
 					tooguswhite.flipX = true;
-					add(tooguswhite);
+					//add(tooguswhite);
 
 					bfvent = new FlxSprite(70, 200);
 					bfvent.frames = Paths.getSparrowAtlas('mira/bf_mira_vent', 'impostor');
@@ -2487,6 +2489,7 @@ class PlayState extends MusicBeatState
 					bfvent.scrollFactor.set(1, 1);
 					bfvent.active = true;
 					bfvent.antialiasing = true;
+					bfvent.alpha = 0.001;
 					add(bfvent);
 				}
 
@@ -2556,7 +2559,7 @@ class PlayState extends MusicBeatState
 				toogusblue.scrollFactor.set(1, 1);
 				toogusblue.active = true;
 				toogusblue.antialiasing = true;
-				//add(toogusblue);
+				add(toogusblue);
 
 				var bg3:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('reactor/frontpillars', 'impostor'));
 				bg3.updateHitbox();
@@ -2572,7 +2575,7 @@ class PlayState extends MusicBeatState
 				tooguswhite.scrollFactor.set(1, 1);
 				tooguswhite.active = true;
 				tooguswhite.antialiasing = true;
-				//add(tooguswhite);
+				add(tooguswhite);
 
 			//	add(stageCurtains);
 
@@ -2695,6 +2698,7 @@ class PlayState extends MusicBeatState
 
 			case 'defeat':
 				GameOverSubstate.characterName = 'bf-defeat-dead';
+				GameOverSubstate.deathSoundName = 'defeat_kill_sfx';
 
 				curStage = 'defeat';
 
@@ -3854,6 +3858,8 @@ class PlayState extends MusicBeatState
 		}
 		if(curStage.toLowerCase() == 'finalem')
 			add(bars);
+		if(curStage.toLowerCase() == 'monotone')
+			add(bars);
 
 		timeBarBG = new AttachedSprite('timeBar');
 		timeBarBG.x = timeTxt.x;
@@ -4292,7 +4298,10 @@ class PlayState extends MusicBeatState
 				case 'sussus-toogus':
 					startVideo('toogus');
 					piss = false;
-				case 'lights-down'| 'mando' | 'dlow' | 'ashes' | 'magmatic'| 'heartbeat'| 'pinkwave'| 'delusion':
+				case 'mando':
+					startVideo('mando');
+					piss = false;
+				case 'lights-down'| 'dlow' | 'ashes' | 'magmatic'| 'heartbeat'| 'pinkwave'| 'delusion':
 					schoolIntro(doof);
 				
 				case 'boiling-point':
@@ -4312,6 +4321,7 @@ class PlayState extends MusicBeatState
 					mom.alpha = 0.001;
 					pet.alpha = 0.001;
 					camHUD.visible = false;
+					armedDark.alpha = 1;
 
 					dad.playAnim('intro', false);
 					dustcloud.animation.play('dust');
@@ -4335,6 +4345,8 @@ class PlayState extends MusicBeatState
 				case "torture":
 					
 					instantStart();
+					camHUD.alpha = 0;
+					
 
 				default:
 					startCountdown();
@@ -4347,6 +4359,7 @@ class PlayState extends MusicBeatState
 				case "torture":
 
 					instantStart();
+					camHUD.alpha = 0;
 				
 				default:
 					startCountdown();
@@ -4774,6 +4787,10 @@ class PlayState extends MusicBeatState
 		switch(curStage.toLowerCase()){
 			case 'cargo':
 				camHUD.visible = false;
+			case 'defeat':
+				botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			
 			case 'finalem':
 				camHUD.alpha = 0.001;
 				healthBar.visible = false;
@@ -5033,7 +5050,9 @@ class PlayState extends MusicBeatState
 		startedCountdown = true;
 		canPause = true;
 
-		startSong();
+		new FlxTimer().start(0.3, function(t){
+			startSong();
+		});
 
 	}
 
@@ -5172,14 +5191,6 @@ class PlayState extends MusicBeatState
 		#end
 		setOnLuas('songLength', songLength);
 		callOnLuas('onSongStart', []);
-
-		if(curStage == "warehouse"){
-			ziffyStart.visible = true;
-			ziffyStart.animation.play("idle", true);
-			ziffyStart.screenCenter(XY);
-			ziffyStart.y -= 120;
-			camHUD.alpha = 0;
-		}
 
 		new FlxTimer().start(0.3, function(tmr:FlxTimer)
 		{
@@ -5765,7 +5776,7 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		flashSprite.alpha = FlxMath.lerp(flashSprite.alpha, 0, 0.06);
+		flashSprite.alpha = FlxMath.lerp(flashSprite.alpha, 0, CoolUtil.boundTo(elapsed * 9, 0, 1));
 
 		if (curStage == 'plantroom' || curStage == 'pretender')
 		{
@@ -6239,6 +6250,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
+		#if debug
 		if (FlxG.keys.justPressed.SEVEN && !endingSong && !inCutscene)
 		{
 			persistentUpdate = false;
@@ -6251,6 +6263,7 @@ class PlayState extends MusicBeatState
 			DiscordClient.changePresence("Chart Editor", null, null, true);
 			#end
 		}
+		#end
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
@@ -6377,7 +6390,11 @@ class PlayState extends MusicBeatState
 		FlxG.watch.addQuick("stepShit", curStep);
 
 		// RESET = Quick Game Over Screen
-		if (controls.RESET && !inCutscene && !endingSong)
+		// RESET = Quick Game Over Screenif (PlayState.SONG.stage.toLowerCase() == 'victory') 
+		//{
+		//AQUA idk what the fuck ur doin but i would like to compile -rzbd
+		//*sorry clow, no slander intended
+		if (controls.RESET && !inCutscene && !endingSong && SONG.stage.toLowerCase() != 'victory')
 		{
 			health = 0;
 			trace("RESET = True");
@@ -7129,21 +7146,23 @@ class PlayState extends MusicBeatState
 				}
 				else{
 					KillNotes();
-					
 					vocals.volume = 0;
-					FlxG.sound.music.volume = 0;
 					vocals.pause();
-					FlxG.sound.music.pause();
+					
+					canPause = false;
+					paused = true;
 
-					FlxG.sound.play(Paths.sound('edefeat', 'impostor'));
+					FlxG.sound.music.volume = 0;
+					
+					triggerEventNote('Change Character', '1', 'blackKill');
+					triggerEventNote('Camera Follow Pos', '550', '500');
+
+					FlxG.sound.play(Paths.sound('edefeat', 'impostor'), 1);
 
 					FlxTween.tween(camHUD, {alpha: 0}, 0.7, {ease: FlxEase.quadInOut});
 
 					iconP1.visible = false;
 					iconP2.visible = false;
-
-					triggerEventNote('Change Character', '1', 'blackKill');
-					triggerEventNote('Camera Follow Pos', '550', '500');
 
 					defaultCamZoom = 0.65;
 					dad.setPosition(-15, 163);
@@ -7158,12 +7177,12 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 0.5;
 						triggerEventNote('Camera Follow Pos', '750', '450');
 					});
-					new FlxTimer().start(2.6, function(tmr:FlxTimer)
+					new FlxTimer().start(2.7, function(tmr:FlxTimer)
 					{
 						dad.playAnim('kill3');
 						dad.specialAnim = true;
 					});
-					new FlxTimer().start(3.3, function(tmr:FlxTimer)
+					new FlxTimer().start(3.4, function(tmr:FlxTimer)
 					{
 						openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
 					});
@@ -7346,6 +7365,7 @@ class PlayState extends MusicBeatState
 					camBopInterval = _interval;
 
 				case 'Lights out':
+					camGame.flash(FlxColor.WHITE, 0.35);
 					if (charShader == null)
 					{
 						charShader = new BWShader(0.01, 0.12, true);
@@ -7373,6 +7393,7 @@ class PlayState extends MusicBeatState
 					healthBar.createFilledBar(FlxColor.BLACK, FlxColor.WHITE);
 					healthBar.updateBar();
 				case 'Lights on':
+					camGame.flash(FlxColor.BLACK, 0.35);
 					if (boyfriend.curCharacter == 'whitebf')
 					{
 						triggerEventNote('Change Character', '0', 'bf');
@@ -7420,6 +7441,7 @@ class PlayState extends MusicBeatState
 
 					triggerEventNote('Play Animation', 'liveReaction', 'dad');
 					bfvent.animation.play('vent');
+					bfvent.alpha = 1;
 					ldSpeaker.animation.play('boom');
 					ldSpeaker.visible = true;
 				
@@ -9930,6 +9952,13 @@ class PlayState extends MusicBeatState
 			case 'warehouse':
 				leftblades.animation.play('spin', true);
 				rightblades.animation.play('spin', true);
+
+				if(curBeat == 2){
+					ziffyStart.visible = true;
+					ziffyStart.animation.play("idle", true);
+					ziffyStart.screenCenter(XY);
+					ziffyStart.y -= 120;
+				}
 
 				if(curBeat == 24){
 					ziffyStart.visible = false;

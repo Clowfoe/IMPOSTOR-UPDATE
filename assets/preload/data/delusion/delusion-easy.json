@@ -3,22 +3,7 @@
 		"player1": "bfairship",
 		"notes": [
 			{
-				"sectionNotes": [
-					[
-						0,
-						-1,
-						"Alter Camera Bop",
-						"1.1",
-						"8"
-					],
-					[
-						3.95569620253165,
-						-1,
-						"chromToggle",
-						"0.35",
-						"8"
-					]
-				],
+				"sectionNotes": [],
 				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
@@ -249,23 +234,9 @@
 						0
 					],
 					[
-						9113.92405063291,
-						-1,
-						"Alter Camera Bop",
-						"1",
-						"1"
-					],
-					[
-						9117.87974683544,
-						-1,
-						"chromToggle",
-						"0.45",
-						"1"
-					],
-					[
 						10443.0379746835,
 						2,
-						0
+						284.810126582278
 					],
 					[
 						10253.164556962,
@@ -431,20 +402,6 @@
 						0
 					],
 					[
-						13765.8227848101,
-						-1,
-						"Alter Camera Bop",
-						"0",
-						"999"
-					],
-					[
-						13670.8860759494,
-						-1,
-						"chromToggle",
-						"0",
-						"9999"
-					],
-					[
 						13860.7594936709,
 						1,
 						0
@@ -509,20 +466,6 @@
 						16518.9873417722,
 						0,
 						0
-					],
-					[
-						15189.8734177215,
-						-1,
-						"Alter Camera Bop",
-						"1.2",
-						"1"
-					],
-					[
-						15193.8291139241,
-						-1,
-						"chromToggle",
-						"0.65",
-						"1"
 					]
 				],
 				"lengthInSteps": 16,
@@ -1043,20 +986,13 @@
 						0
 					],
 					[
-						27341.7721518987,
-						-1,
-						"chromToggle",
-						"0.75",
-						"1"
+						27626.582278481,
+						7,
+						0
 					],
 					[
 						28386.0759493671,
 						6,
-						0
-					],
-					[
-						27626.582278481,
-						5,
 						0
 					]
 				],
@@ -1156,18 +1092,18 @@
 						0
 					],
 					[
+						29620.253164557,
+						4,
+						0
+					],
+					[
 						29145.5696202532,
-						5,
+						7,
 						0
 					],
 					[
 						29905.0632911393,
-						4,
-						0
-					],
-					[
-						29620.253164557,
-						4,
+						6,
 						0
 					]
 				],
@@ -1178,11 +1114,6 @@
 				"sectionNotes": [
 					[
 						30379.746835443,
-						5,
-						0
-					],
-					[
-						30664.5569620253,
 						5,
 						0
 					],
@@ -1208,11 +1139,6 @@
 					],
 					[
 						30379.7468354431,
-						5,
-						0
-					],
-					[
-						30664.5569620253,
 						5,
 						0
 					],
@@ -1315,6 +1241,11 @@
 						31803.7974683544,
 						1,
 						0
+					],
+					[
+						30664.5569620253,
+						7,
+						0
 					]
 				],
 				"lengthInSteps": 16,
@@ -1328,22 +1259,12 @@
 						0
 					],
 					[
-						32183.5443037975,
-						5,
-						0
-					],
-					[
 						32468.3544303798,
 						5,
 						0
 					],
 					[
 						32658.2278481013,
-						4,
-						0
-					],
-					[
-						32943.0379746836,
 						4,
 						0
 					],
@@ -1358,22 +1279,12 @@
 						0
 					],
 					[
-						32183.5443037975,
-						5,
-						0
-					],
-					[
 						32468.3544303798,
 						5,
 						0
 					],
 					[
 						32658.2278481013,
-						4,
-						0
-					],
-					[
-						32943.0379746836,
 						4,
 						0
 					],
@@ -1440,6 +1351,16 @@
 					[
 						33227.8481012658,
 						3,
+						0
+					],
+					[
+						32183.5443037975,
+						7,
+						0
+					],
+					[
+						32943.0379746836,
+						6,
 						0
 					]
 				],
@@ -1570,11 +1491,6 @@
 						0
 					],
 					[
-						35221.5189873418,
-						5,
-						0
-					],
-					[
 						35506.3291139241,
 						5,
 						0
@@ -1652,6 +1568,11 @@
 					[
 						35601.2658227848,
 						3,
+						0
+					],
+					[
+						35221.5189873418,
+						5,
 						0
 					]
 				],
@@ -1913,20 +1834,6 @@
 						0
 					],
 					[
-						39497.6265822785,
-						-1,
-						"chromToggle",
-						"0",
-						"4"
-					],
-					[
-						39493.670886076,
-						-1,
-						"Alter Camera Bop",
-						"1",
-						"4"
-					],
-					[
 						40443.0379746836,
 						0,
 						0
@@ -1980,7 +1887,7 @@
 					[
 						41012.6582278481,
 						0,
-						189.873417721519
+						284.810126582278
 					]
 				],
 				"lengthInSteps": 16,
@@ -2062,7 +1969,7 @@
 					[
 						44050.6329113924,
 						0,
-						189.873417721519
+						284.810126582278
 					],
 					[
 						44620.253164557,
@@ -2224,21 +2131,6 @@
 			{
 				"sectionNotes": [
 					[
-						50886.0759493671,
-						0,
-						0
-					],
-					[
-						51550.6329113924,
-						3,
-						0
-					],
-					[
-						51170.8860759494,
-						3,
-						0
-					],
-					[
 						51265.8227848102,
 						0,
 						0
@@ -2259,12 +2151,32 @@
 						0
 					],
 					[
-						51021.3607594937,
+						50791.1392405064,
+						0,
+						0
+					],
+					[
+						50886.0759493671,
+						1,
+						0
+					],
+					[
+						50981.0126582279,
 						2,
 						0
 					],
 					[
-						51408.2278481013,
+						51075.9493670886,
+						3,
+						0
+					],
+					[
+						51170.8860759494,
+						1,
+						0
+					],
+					[
+						51455.6962025317,
 						2,
 						0
 					]
@@ -2288,20 +2200,6 @@
 						52784.8101265823,
 						0,
 						379.746835443038
-					],
-					[
-						51645.5696202532,
-						-1,
-						"Alter Camera Bop",
-						"1.2",
-						"1"
-					],
-					[
-						51651.503164557,
-						-1,
-						"chromToggle",
-						"0.65",
-						"1"
 					]
 				],
 				"lengthInSteps": 16,
@@ -2490,17 +2388,17 @@
 					[
 						57721.5189873418,
 						1,
-						189.873417721519
+						474.683544303797
 					],
 					[
 						58291.1392405064,
 						2,
-						189.873417721519
+						474.683544303797
 					],
 					[
 						58860.7594936709,
 						0,
-						0
+						474.683544303797
 					]
 				],
 				"lengthInSteps": 16,
@@ -3056,20 +2954,6 @@
 						74050.6329113925,
 						3,
 						0
-					],
-					[
-						73006.3291139241,
-						-1,
-						"chromToggle",
-						"0",
-						"10"
-					],
-					[
-						73101.2658227849,
-						-1,
-						"Alter Camera Bop",
-						"1",
-						"9999"
 					]
 				],
 				"lengthInSteps": 16,
@@ -5440,12 +5324,102 @@
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
 				"bpm": 158,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 158,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 158
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 158
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 158
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 158
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 158
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 158
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 158
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 158,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 158
 			},
 			{
 				"lengthInSteps": 16,
@@ -5459,10 +5433,11 @@
 		],
 		"player2": "grey",
 		"player3": "gfdead",
+		"allowGFskin": true,
 		"song": "Delusion",
-		"stage": "grey",
 		"needsVoices": true,
 		"validScore": true,
+		"stage": "grey",
 		"bpm": 158,
 		"speed": 2.8
 	}

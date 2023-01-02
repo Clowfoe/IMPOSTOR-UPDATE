@@ -285,15 +285,15 @@ class AmongFreeplayState extends MusicBeatState
 			goBack();
 		}, null, null);
 
-		var textBG:FlxSprite = new FlxSprite(0, FlxG.height - 26).makeGraphic(FlxG.width, 26, 0xFF000000);
-		textBG.alpha = 0.6;
-		add(textBG);
+		// var textBG:FlxSprite = new FlxSprite(0, FlxG.height - 26).makeGraphic(FlxG.width, 26, 0xFF000000);
+		// textBG.alpha = 0.6;
+		// add(textBG);
 
-		var leText:String = "Press SPACE to listen to this Song / Press RESET to Reset your Score and Accuracy.";
-		var text:FlxText = new FlxText(textBG.x, textBG.y + 4, FlxG.width, leText, 18);
-		text.setFormat(Paths.font("vcr.ttf"), 18, FlxColor.WHITE, RIGHT);
-		text.scrollFactor.set();
-		add(text);
+		// var leText:String = "Press SPACE to listen to this Song / Press RESET to Reset your Score and Accuracy.";
+		// var text:FlxText = new FlxText(textBG.x, textBG.y + 4, FlxG.width, leText, 18);
+		// text.setFormat(Paths.font("vcr.ttf"), 18, FlxColor.WHITE, RIGHT);
+		// text.scrollFactor.set();
+		// add(text);
 
 		rimlight = new RimlightShader(315, 10, 0xFFFF6600, portrait);
 		add(rimlight);
