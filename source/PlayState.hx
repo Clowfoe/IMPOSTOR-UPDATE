@@ -4130,6 +4130,11 @@ class PlayState extends MusicBeatState
 			{
 				scoreTxt.setFormat(Paths.font("apple_kid.ttf"), 50, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			}
+		else if(SONG.stage.toLowerCase() == 'alpha')
+			{
+				scoreTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				scoreTxt.y = healthBarBG.y + 62;
+			}
 		else
 			{
 				scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -6220,6 +6225,28 @@ class PlayState extends MusicBeatState
 					scoreTxt.text += '' + ((Math.floor(ratingPercent * 10000) / 100)) + '%';
 				if (songMisses <= 0) // why would it ever be less than im stupid
 					scoreTxt.text += ratingString;
+		}
+		else if (PlayState.SONG.stage.toLowerCase() == 'alpha')
+		{
+				scoreTxt.text = 'Score: $songScore | Combo Breaks: $songMisses | Accuracy: ';
+		
+				if (ratingString != '?'){
+					scoreTxt.text += ((Math.floor(ratingPercent * 10000) / 100)) + '% | ';
+
+					switch(ratingString){
+						case ' [SFC]':
+							scoreTxt.text += '(MFC) AAAA:';
+						case ' [GFC]':
+							scoreTxt.text += '(GFC) AAA:';
+						case ' [FC]':
+							scoreTxt.text += '(FC) AA:';
+						default:
+							scoreTxt.text += '(SDCB) A:';
+					}
+				}
+				else{
+					scoreTxt.text +='0% | N/A';
+				}
 		}
 		else
 			{
