@@ -1,211 +1,211 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="green_stuffs.png">
-	<!-- Created with Adobe Animate version 18.0.1.115 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Gdown0000" x="3412" y="309" width="531" height="300" frameX="0" frameY="-7" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gdown0001" x="3412" y="309" width="531" height="300" frameX="0" frameY="-7" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gdown0002" x="0" y="0" width="511" height="301" frameX="-11" frameY="-2" frameWidth="531" frameHeight="306"/>
-	<SubTexture name="Gdown0003" x="0" y="0" width="511" height="301" frameX="-11" frameY="-2" frameWidth="531" frameHeight="306"/>
-	<SubTexture name="Gdown0004" x="516" y="0" width="513" height="304" frameX="-10" frameY="0" frameWidth="531" frameHeight="306"/>
-	<SubTexture name="Gdown0005" x="516" y="0" width="513" height="304" frameX="-10" frameY="0" frameWidth="531" frameHeight="306"/>
-	<SubTexture name="Gdown0006" x="1034" y="0" width="513" height="304" frameX="-10" frameY="0" frameWidth="531" frameHeight="306"/>
-	<SubTexture name="Gdown0007" x="1034" y="0" width="513" height="304" frameX="-10" frameY="0" frameWidth="531" frameHeight="306"/>
-	<SubTexture name="Gdown0008" x="1552" y="0" width="513" height="304" frameX="-10" frameY="0" frameWidth="531" frameHeight="306"/>
-	<SubTexture name="Gdown0009" x="1552" y="0" width="513" height="304" frameX="-10" frameY="0" frameWidth="531" frameHeight="306"/>
-	<SubTexture name="Gdown0010" x="1552" y="0" width="513" height="304" frameX="-10" frameY="0" frameWidth="531" frameHeight="306"/>
-	<SubTexture name="Gdown0011" x="1552" y="0" width="513" height="304" frameX="-10" frameY="0" frameWidth="531" frameHeight="306"/>
-	<SubTexture name="Gdown0012" x="1552" y="0" width="513" height="304" frameX="-10" frameY="0" frameWidth="531" frameHeight="306"/>
-	<SubTexture name="Gdown0013" x="1552" y="0" width="513" height="304" frameX="-10" frameY="0" frameWidth="531" frameHeight="306"/>
-	<SubTexture name="Gidle0000" x="2070" y="0" width="447" height="287" frameX="-7" frameY="-10" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gidle0001" x="2070" y="0" width="447" height="287" frameX="-7" frameY="-10" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gidle0002" x="2522" y="0" width="444" height="288" frameX="-5" frameY="-9" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gidle0003" x="2522" y="0" width="444" height="288" frameX="-5" frameY="-9" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gidle0004" x="2971" y="0" width="439" height="286" frameX="0" frameY="-4" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gidle0005" x="2971" y="0" width="439" height="286" frameX="0" frameY="-4" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gidle0006" x="3415" y="0" width="427" height="284" frameX="-12" frameY="-1" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gidle0007" x="3415" y="0" width="427" height="284" frameX="-12" frameY="-1" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gidle0008" x="0" y="309" width="420" height="282" frameX="-21" frameY="0" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gidle0009" x="0" y="309" width="420" height="282" frameX="-21" frameY="0" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gidle0010" x="425" y="309" width="418" height="282" frameX="-23" frameY="0" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gidle0011" x="425" y="309" width="418" height="282" frameX="-23" frameY="0" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gidle0012" x="425" y="309" width="418" height="282" frameX="-23" frameY="0" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gidle0013" x="425" y="309" width="418" height="282" frameX="-23" frameY="0" frameWidth="454" frameHeight="297"/>
-	<SubTexture name="Gleft0000" x="848" y="309" width="399" height="269" frameX="0" frameY="-2" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gleft0001" x="1252" y="309" width="369" height="260" frameX="0" frameY="-2" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gleft0002" x="1626" y="309" width="354" height="261" frameX="-16" frameY="-1" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gleft0003" x="1985" y="309" width="354" height="261" frameX="-16" frameY="-1" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gleft0004" x="2344" y="309" width="351" height="255" frameX="-20" frameY="0" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gleft0005" x="2344" y="309" width="351" height="255" frameX="-20" frameY="0" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gleft0006" x="2700" y="309" width="351" height="254" frameX="-21" frameY="-1" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gleft0007" x="2700" y="309" width="351" height="254" frameX="-21" frameY="-1" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gleft0008" x="3056" y="309" width="351" height="254" frameX="-21" frameY="-1" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gleft0009" x="3056" y="309" width="351" height="254" frameX="-21" frameY="-1" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gleft0010" x="3056" y="309" width="351" height="254" frameX="-21" frameY="-1" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gleft0011" x="3056" y="309" width="351" height="254" frameX="-21" frameY="-1" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gleft0012" x="3056" y="309" width="351" height="254" frameX="-21" frameY="-1" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gleft0013" x="3056" y="309" width="351" height="254" frameX="-21" frameY="-1" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gmiss down0000" x="3412" y="309" width="531" height="300" frameX="0" frameY="-58" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0001" x="0" y="614" width="426" height="343" frameX="-7" frameY="0" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0002" x="431" y="614" width="426" height="336" frameX="-7" frameY="-7" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0003" x="862" y="614" width="428" height="298" frameX="-6" frameY="-45" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0004" x="1295" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0005" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0006" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0007" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0008" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0009" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0010" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0011" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0012" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0013" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0014" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0015" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0016" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0017" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0018" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0019" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0020" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0021" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0022" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0023" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0024" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0025" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0026" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0027" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss down0028" x="1728" y="614" width="428" height="293" frameX="-6" frameY="-50" frameWidth="531" frameHeight="358"/>
-	<SubTexture name="Gmiss left0000" x="848" y="309" width="399" height="269" frameX="0" frameY="-75" frameWidth="399" frameHeight="271"/>
-	<SubTexture name="Gmiss left0001" x="2161" y="614" width="392" height="347" frameX="-4" frameY="0" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0002" x="2558" y="614" width="392" height="340" frameX="-4" frameY="-7" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0003" x="2955" y="614" width="391" height="302" frameX="-3" frameY="-45" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0004" x="3351" y="614" width="391" height="294" frameX="-3" frameY="-53" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0005" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0006" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0007" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0008" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0009" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0010" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0011" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0012" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0013" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0014" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0015" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0016" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0017" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0018" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0019" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0020" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0021" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0022" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0023" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0024" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0025" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0026" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0027" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0028" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0029" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0030" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0031" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0032" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss left0033" x="0" y="966" width="391" height="292" frameX="-3" frameY="-55" frameWidth="399" frameHeight="347"/>
-	<SubTexture name="Gmiss right0000" x="396" y="966" width="528" height="262" frameX="-13" frameY="-70" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0001" x="929" y="966" width="539" height="325" frameX="0" frameY="0" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0002" x="1473" y="966" width="539" height="318" frameX="0" frameY="-7" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0003" x="2017" y="966" width="542" height="280" frameX="-1" frameY="-45" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0004" x="2564" y="966" width="542" height="272" frameX="-1" frameY="-53" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0005" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0006" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0007" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0008" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0009" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0010" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0011" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0012" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0013" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0014" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0015" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0016" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0017" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0018" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0019" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0020" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0021" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0022" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0023" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0024" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0025" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0026" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0027" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0028" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0029" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0030" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0031" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0032" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0033" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0034" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0035" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0036" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0037" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0038" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0039" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0040" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0041" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0042" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0043" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0044" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss right0045" x="3111" y="966" width="542" height="270" frameX="-1" frameY="-55" frameWidth="543" frameHeight="332"/>
-	<SubTexture name="Gmiss up0000" x="3658" y="966" width="407" height="293" frameX="-18" frameY="-83" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0001" x="0" y="1296" width="429" height="369" frameX="0" frameY="0" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0002" x="434" y="1296" width="429" height="362" frameX="0" frameY="-7" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0003" x="868" y="1296" width="421" height="324" frameX="-4" frameY="-45" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0004" x="1294" y="1296" width="421" height="316" frameX="-4" frameY="-53" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0005" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0006" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0007" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0008" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0009" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0010" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0011" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0012" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0013" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0014" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0015" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0016" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0017" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0018" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0019" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0020" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0021" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0022" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gmiss up0023" x="1720" y="1296" width="421" height="314" frameX="-4" frameY="-55" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gright0000" x="2146" y="1296" width="528" height="262" frameX="-17" frameY="-4" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gright0001" x="2146" y="1296" width="528" height="262" frameX="-17" frameY="-4" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gright0002" x="2679" y="1296" width="529" height="259" frameX="-4" frameY="-1" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gright0003" x="2679" y="1296" width="529" height="259" frameX="-4" frameY="-1" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gright0004" x="3213" y="1296" width="519" height="259" frameX="-2" frameY="0" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gright0005" x="3213" y="1296" width="519" height="259" frameX="-2" frameY="0" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gright0006" x="0" y="1670" width="518" height="258" frameX="0" frameY="0" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gright0007" x="0" y="1670" width="518" height="258" frameX="0" frameY="0" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gright0008" x="523" y="1670" width="520" height="258" frameX="0" frameY="0" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gright0009" x="523" y="1670" width="520" height="258" frameX="0" frameY="0" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gright0010" x="523" y="1670" width="520" height="258" frameX="0" frameY="0" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gright0011" x="523" y="1670" width="520" height="258" frameX="0" frameY="0" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gright0012" x="523" y="1670" width="520" height="258" frameX="0" frameY="0" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gright0013" x="523" y="1670" width="520" height="258" frameX="0" frameY="0" frameWidth="545" frameHeight="266"/>
-	<SubTexture name="Gup0000" x="3658" y="966" width="407" height="293" frameX="-9" frameY="-109" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gup0001" x="3658" y="966" width="407" height="293" frameX="-9" frameY="-109" frameWidth="429" frameHeight="376"/>
-	<SubTexture name="Gup0002" x="1048" y="1670" width="410" height="292" frameX="-7" frameY="-113" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0003" x="1048" y="1670" width="410" height="292" frameX="-7" frameY="-113" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0004" x="1463" y="1670" width="401" height="288" frameX="-7" frameY="-114" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0005" x="1869" y="1670" width="396" height="272" frameX="-7" frameY="-114" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0006" x="2270" y="1670" width="389" height="318" frameX="-11" frameY="-66" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0007" x="2664" y="1670" width="440" height="382" frameX="-11" frameY="-2" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0008" x="3109" y="1670" width="454" height="386" frameX="-10" frameY="0" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0009" x="3568" y="1670" width="415" height="386" frameX="-12" frameY="-2" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0010" x="0" y="2061" width="482" height="379" frameX="-4" frameY="-9" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0011" x="487" y="2061" width="520" height="360" frameX="0" frameY="-18" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0012" x="1012" y="2061" width="535" height="327" frameX="0" frameY="-51" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0013" x="1552" y="2061" width="552" height="321" frameX="-5" frameY="-48" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0014" x="2109" y="2061" width="558" height="319" frameX="-5" frameY="-50" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0015" x="2672" y="2061" width="557" height="313" frameX="-6" frameY="-56" frameWidth="563" frameHeight="405"/>
-	<SubTexture name="Gup0016" x="3234" y="2061" width="474" height="242" frameX="-6" frameY="-127" frameWidth="563" frameHeight="405"/>
+  <!-- Created with Adobe Animate version 18.0.1.115 -->
+  <!-- http://www.adobe.com/products/animate.html -->
+  <SubTexture name="Gdown0000" x="1364.8" y="123.6" width="212.4" height="120" frameX="0" frameY="-2.8" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gdown0001" x="1364.8" y="123.6" width="212.4" height="120" frameX="0" frameY="-2.8" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gdown0002" x="0" y="0" width="204.4" height="120.4" frameX="-4.4" frameY="-0.8" frameWidth="212.4" frameHeight="122.4" />
+  <SubTexture name="Gdown0003" x="0" y="0" width="204.4" height="120.4" frameX="-4.4" frameY="-0.8" frameWidth="212.4" frameHeight="122.4" />
+  <SubTexture name="Gdown0004" x="206.4" y="0" width="205.2" height="121.6" frameX="-4" frameY="0" frameWidth="212.4" frameHeight="122.4" />
+  <SubTexture name="Gdown0005" x="206.4" y="0" width="205.2" height="121.6" frameX="-4" frameY="0" frameWidth="212.4" frameHeight="122.4" />
+  <SubTexture name="Gdown0006" x="413.6" y="0" width="205.2" height="121.6" frameX="-4" frameY="0" frameWidth="212.4" frameHeight="122.4" />
+  <SubTexture name="Gdown0007" x="413.6" y="0" width="205.2" height="121.6" frameX="-4" frameY="0" frameWidth="212.4" frameHeight="122.4" />
+  <SubTexture name="Gdown0008" x="620.8" y="0" width="205.2" height="121.6" frameX="-4" frameY="0" frameWidth="212.4" frameHeight="122.4" />
+  <SubTexture name="Gdown0009" x="620.8" y="0" width="205.2" height="121.6" frameX="-4" frameY="0" frameWidth="212.4" frameHeight="122.4" />
+  <SubTexture name="Gdown0010" x="620.8" y="0" width="205.2" height="121.6" frameX="-4" frameY="0" frameWidth="212.4" frameHeight="122.4" />
+  <SubTexture name="Gdown0011" x="620.8" y="0" width="205.2" height="121.6" frameX="-4" frameY="0" frameWidth="212.4" frameHeight="122.4" />
+  <SubTexture name="Gdown0012" x="620.8" y="0" width="205.2" height="121.6" frameX="-4" frameY="0" frameWidth="212.4" frameHeight="122.4" />
+  <SubTexture name="Gdown0013" x="620.8" y="0" width="205.2" height="121.6" frameX="-4" frameY="0" frameWidth="212.4" frameHeight="122.4" />
+  <SubTexture name="Gidle0000" x="828" y="0" width="178.8" height="114.8" frameX="-2.8" frameY="-4" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gidle0001" x="828" y="0" width="178.8" height="114.8" frameX="-2.8" frameY="-4" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gidle0002" x="1008.8" y="0" width="177.6" height="115.2" frameX="-2" frameY="-3.6" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gidle0003" x="1008.8" y="0" width="177.6" height="115.2" frameX="-2" frameY="-3.6" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gidle0004" x="1188.4" y="0" width="175.6" height="114.4" frameX="0" frameY="-1.6" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gidle0005" x="1188.4" y="0" width="175.6" height="114.4" frameX="0" frameY="-1.6" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gidle0006" x="1366" y="0" width="170.8" height="113.6" frameX="-4.8" frameY="-0.4" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gidle0007" x="1366" y="0" width="170.8" height="113.6" frameX="-4.8" frameY="-0.4" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gidle0008" x="0" y="123.6" width="168" height="112.8" frameX="-8.400001" frameY="0" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gidle0009" x="0" y="123.6" width="168" height="112.8" frameX="-8.400001" frameY="0" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gidle0010" x="170" y="123.6" width="167.2" height="112.8" frameX="-9.2" frameY="0" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gidle0011" x="170" y="123.6" width="167.2" height="112.8" frameX="-9.2" frameY="0" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gidle0012" x="170" y="123.6" width="167.2" height="112.8" frameX="-9.2" frameY="0" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gidle0013" x="170" y="123.6" width="167.2" height="112.8" frameX="-9.2" frameY="0" frameWidth="181.6" frameHeight="118.8" />
+  <SubTexture name="Gleft0000" x="339.2" y="123.6" width="159.6" height="107.6" frameX="0" frameY="-0.8" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gleft0001" x="500.8" y="123.6" width="147.6" height="104" frameX="0" frameY="-0.8" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gleft0002" x="650.4" y="123.6" width="141.6" height="104.4" frameX="-6.4" frameY="-0.4" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gleft0003" x="794" y="123.6" width="141.6" height="104.4" frameX="-6.4" frameY="-0.4" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gleft0004" x="937.6" y="123.6" width="140.4" height="102" frameX="-8" frameY="0" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gleft0005" x="937.6" y="123.6" width="140.4" height="102" frameX="-8" frameY="0" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gleft0006" x="1080" y="123.6" width="140.4" height="101.6" frameX="-8.400001" frameY="-0.4" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gleft0007" x="1080" y="123.6" width="140.4" height="101.6" frameX="-8.400001" frameY="-0.4" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gleft0008" x="1222.4" y="123.6" width="140.4" height="101.6" frameX="-8.400001" frameY="-0.4" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gleft0009" x="1222.4" y="123.6" width="140.4" height="101.6" frameX="-8.400001" frameY="-0.4" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gleft0010" x="1222.4" y="123.6" width="140.4" height="101.6" frameX="-8.400001" frameY="-0.4" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gleft0011" x="1222.4" y="123.6" width="140.4" height="101.6" frameX="-8.400001" frameY="-0.4" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gleft0012" x="1222.4" y="123.6" width="140.4" height="101.6" frameX="-8.400001" frameY="-0.4" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gleft0013" x="1222.4" y="123.6" width="140.4" height="101.6" frameX="-8.400001" frameY="-0.4" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gmiss down0000" x="1364.8" y="123.6" width="212.4" height="120" frameX="0" frameY="-23.2" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0001" x="0" y="245.6" width="170.4" height="137.2" frameX="-2.8" frameY="0" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0002" x="172.4" y="245.6" width="170.4" height="134.4" frameX="-2.8" frameY="-2.8" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0003" x="344.8" y="245.6" width="171.2" height="119.2" frameX="-2.4" frameY="-18" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0004" x="518" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0005" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0006" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0007" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0008" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0009" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0010" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0011" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0012" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0013" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0014" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0015" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0016" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0017" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0018" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0019" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0020" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0021" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0022" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0023" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0024" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0025" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0026" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0027" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss down0028" x="691.2" y="245.6" width="171.2" height="117.2" frameX="-2.4" frameY="-20" frameWidth="212.4" frameHeight="143.2" />
+  <SubTexture name="Gmiss left0000" x="339.2" y="123.6" width="159.6" height="107.6" frameX="0" frameY="-30" frameWidth="159.6" frameHeight="108.4" />
+  <SubTexture name="Gmiss left0001" x="864.4" y="245.6" width="156.8" height="138.8" frameX="-1.6" frameY="0" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0002" x="1023.2" y="245.6" width="156.8" height="136" frameX="-1.6" frameY="-2.8" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0003" x="1182" y="245.6" width="156.4" height="120.8" frameX="-1.2" frameY="-18" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0004" x="1340.4" y="245.6" width="156.4" height="117.6" frameX="-1.2" frameY="-21.2" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0005" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0006" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0007" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0008" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0009" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0010" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0011" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0012" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0013" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0014" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0015" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0016" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0017" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0018" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0019" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0020" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0021" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0022" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0023" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0024" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0025" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0026" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0027" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0028" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0029" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0030" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0031" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0032" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss left0033" x="0" y="386.4" width="156.4" height="116.8" frameX="-1.2" frameY="-22" frameWidth="159.6" frameHeight="138.8" />
+  <SubTexture name="Gmiss right0000" x="158.4" y="386.4" width="211.2" height="104.8" frameX="-5.2" frameY="-28" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0001" x="371.6" y="386.4" width="215.6" height="130" frameX="0" frameY="0" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0002" x="589.2" y="386.4" width="215.6" height="127.2" frameX="0" frameY="-2.8" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0003" x="806.8" y="386.4" width="216.8" height="112" frameX="-0.4" frameY="-18" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0004" x="1025.6" y="386.4" width="216.8" height="108.8" frameX="-0.4" frameY="-21.2" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0005" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0006" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0007" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0008" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0009" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0010" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0011" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0012" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0013" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0014" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0015" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0016" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0017" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0018" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0019" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0020" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0021" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0022" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0023" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0024" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0025" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0026" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0027" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0028" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0029" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0030" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0031" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0032" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0033" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0034" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0035" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0036" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0037" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0038" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0039" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0040" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0041" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0042" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0043" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0044" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss right0045" x="1244.4" y="386.4" width="216.8" height="108" frameX="-0.4" frameY="-22" frameWidth="217.2" frameHeight="132.8" />
+  <SubTexture name="Gmiss up0000" x="1463.2" y="386.4" width="162.8" height="117.2" frameX="-7.2" frameY="-33.2" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0001" x="0" y="518.4" width="171.6" height="147.6" frameX="0" frameY="0" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0002" x="173.6" y="518.4" width="171.6" height="144.8" frameX="0" frameY="-2.8" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0003" x="347.2" y="518.4" width="168.4" height="129.6" frameX="-1.6" frameY="-18" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0004" x="517.6" y="518.4" width="168.4" height="126.4" frameX="-1.6" frameY="-21.2" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0005" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0006" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0007" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0008" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0009" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0010" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0011" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0012" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0013" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0014" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0015" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0016" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0017" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0018" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0019" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0020" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0021" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0022" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gmiss up0023" x="688" y="518.4" width="168.4" height="125.6" frameX="-1.6" frameY="-22" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gright0000" x="858.4" y="518.4" width="211.2" height="104.8" frameX="-6.8" frameY="-1.6" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gright0001" x="858.4" y="518.4" width="211.2" height="104.8" frameX="-6.8" frameY="-1.6" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gright0002" x="1071.6" y="518.4" width="211.6" height="103.6" frameX="-1.6" frameY="-0.4" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gright0003" x="1071.6" y="518.4" width="211.6" height="103.6" frameX="-1.6" frameY="-0.4" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gright0004" x="1285.2" y="518.4" width="207.6" height="103.6" frameX="-0.8" frameY="0" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gright0005" x="1285.2" y="518.4" width="207.6" height="103.6" frameX="-0.8" frameY="0" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gright0006" x="0" y="668" width="207.2" height="103.2" frameX="0" frameY="0" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gright0007" x="0" y="668" width="207.2" height="103.2" frameX="0" frameY="0" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gright0008" x="209.2" y="668" width="208" height="103.2" frameX="0" frameY="0" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gright0009" x="209.2" y="668" width="208" height="103.2" frameX="0" frameY="0" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gright0010" x="209.2" y="668" width="208" height="103.2" frameX="0" frameY="0" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gright0011" x="209.2" y="668" width="208" height="103.2" frameX="0" frameY="0" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gright0012" x="209.2" y="668" width="208" height="103.2" frameX="0" frameY="0" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gright0013" x="209.2" y="668" width="208" height="103.2" frameX="0" frameY="0" frameWidth="218" frameHeight="106.4" />
+  <SubTexture name="Gup0000" x="1463.2" y="386.4" width="162.8" height="117.2" frameX="-3.6" frameY="-43.6" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gup0001" x="1463.2" y="386.4" width="162.8" height="117.2" frameX="-3.6" frameY="-43.6" frameWidth="171.6" frameHeight="150.4" />
+  <SubTexture name="Gup0002" x="419.2" y="668" width="164" height="116.8" frameX="-2.8" frameY="-45.2" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0003" x="419.2" y="668" width="164" height="116.8" frameX="-2.8" frameY="-45.2" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0004" x="585.2" y="668" width="160.4" height="115.2" frameX="-2.8" frameY="-45.6" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0005" x="747.6" y="668" width="158.4" height="108.8" frameX="-2.8" frameY="-45.6" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0006" x="908" y="668" width="155.6" height="127.2" frameX="-4.4" frameY="-26.4" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0007" x="1065.6" y="668" width="176" height="152.8" frameX="-4.4" frameY="-0.8" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0008" x="1243.6" y="668" width="181.6" height="154.4" frameX="-4" frameY="0" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0009" x="1427.2" y="668" width="166" height="154.4" frameX="-4.8" frameY="-0.8" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0010" x="0" y="824.4" width="192.8" height="151.6" frameX="-1.6" frameY="-3.6" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0011" x="194.8" y="824.4" width="208" height="144" frameX="0" frameY="-7.2" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0012" x="404.8" y="824.4" width="214" height="130.8" frameX="0" frameY="-20.4" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0013" x="620.8" y="824.4" width="220.8" height="128.4" frameX="-2" frameY="-19.2" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0014" x="843.6" y="824.4" width="223.2" height="127.6" frameX="-2" frameY="-20" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0015" x="1068.8" y="824.4" width="222.8" height="125.2" frameX="-2.4" frameY="-22.4" frameWidth="225.2" frameHeight="162" />
+  <SubTexture name="Gup0016" x="1293.6" y="824.4" width="189.6" height="96.8" frameX="-2.4" frameY="-50.8" frameWidth="225.2" frameHeight="162" />
 </TextureAtlas>

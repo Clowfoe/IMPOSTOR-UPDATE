@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="blacklegs.png">
-	<!-- Created with Adobe Animate version 21.0.6.41649 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="legs0000" x="0" y="0" width="318" height="263" frameX="-64" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0001" x="338" y="0" width="316" height="257" frameX="-63" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0002" x="674" y="0" width="317" height="240" frameX="-63" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0003" x="674" y="0" width="317" height="240" frameX="-63" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0004" x="1011" y="0" width="317" height="266" frameX="-63" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0005" x="1348" y="0" width="319" height="288" frameX="-62" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0006" x="1687" y="0" width="329" height="288" frameX="-62" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0007" x="0" y="308" width="399" height="284" frameX="-23" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0008" x="419" y="308" width="452" height="251" frameX="0" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0009" x="891" y="308" width="462" height="240" frameX="-1" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0010" x="891" y="308" width="462" height="240" frameX="-1" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0011" x="1373" y="308" width="467" height="238" frameX="-4" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0012" x="0" y="612" width="455" height="251" frameX="-15" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0013" x="475" y="612" width="377" height="271" frameX="-41" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0014" x="872" y="612" width="327" height="274" frameX="-60" frameY="0" frameWidth="471" frameHeight="288"/>
-	<SubTexture name="legs0015" x="1219" y="612" width="323" height="275" frameX="-60" frameY="0" frameWidth="471" frameHeight="288"/>
+  <!-- Created with Adobe Animate version 21.0.6.41649 -->
+  <!-- http://www.adobe.com/products/animate.html -->
+  <SubTexture name="legs0000" x="0" y="0" width="127.2" height="105.2" frameX="-25.6" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0001" x="135.2" y="0" width="126.4" height="102.8" frameX="-25.2" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0002" x="269.6" y="0" width="126.8" height="96" frameX="-25.2" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0003" x="269.6" y="0" width="126.8" height="96" frameX="-25.2" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0004" x="404.4" y="0" width="126.8" height="106.4" frameX="-25.2" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0005" x="539.2" y="0" width="127.6" height="115.2" frameX="-24.8" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0006" x="674.8" y="0" width="131.6" height="115.2" frameX="-24.8" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0007" x="0" y="123.2" width="159.6" height="113.6" frameX="-9.2" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0008" x="167.6" y="123.2" width="180.8" height="100.4" frameX="0" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0009" x="356.4" y="123.2" width="184.8" height="96" frameX="-0.4" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0010" x="356.4" y="123.2" width="184.8" height="96" frameX="-0.4" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0011" x="549.2" y="123.2" width="186.8" height="95.2" frameX="-1.6" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0012" x="0" y="244.8" width="182" height="100.4" frameX="-6" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0013" x="190" y="244.8" width="150.8" height="108.4" frameX="-16.4" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0014" x="348.8" y="244.8" width="130.8" height="109.6" frameX="-24" frameY="0" frameWidth="188.4" frameHeight="115.2" />
+  <SubTexture name="legs0015" x="487.6" y="244.8" width="129.2" height="110" frameX="-24" frameY="0" frameWidth="188.4" frameHeight="115.2" />
 </TextureAtlas>

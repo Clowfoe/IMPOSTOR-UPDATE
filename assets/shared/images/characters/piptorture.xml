@@ -1,196 +1,196 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="piptorture.png">
-	<!-- Created with Adobe Animate version 21.0.3.38773 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="pip down0000" x="0" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0001" x="0" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0002" x="1010" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0003" x="1010" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0004" x="1010" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0005" x="1010" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0006" x="1010" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0007" x="1010" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0008" x="1010" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0009" x="1010" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0010" x="1010" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0011" x="1010" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0012" x="1010" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0013" x="1010" y="0" width="1001" height="795"/>
-	<SubTexture name="pip down0014" x="1010" y="0" width="1001" height="795"/>
-	<SubTexture name="pip lef0000" x="2020" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0001" x="2020" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0002" x="3026" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0003" x="3026" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0004" x="4032" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0005" x="4032" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0006" x="5038" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0007" x="5038" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0008" x="5038" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0009" x="5038" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0010" x="5038" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0011" x="5038" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0012" x="5038" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0013" x="5038" y="0" width="997" height="813"/>
-	<SubTexture name="pip lef0014" x="5038" y="0" width="997" height="813"/>
-	<SubTexture name="pip righ0000" x="6044" y="0" width="1094" height="810"/>
-	<SubTexture name="pip righ0001" x="6044" y="0" width="1094" height="810"/>
-	<SubTexture name="pip righ0002" x="0" y="822" width="1094" height="810"/>
-	<SubTexture name="pip righ0003" x="0" y="822" width="1094" height="810"/>
-	<SubTexture name="pip righ0004" x="1103" y="822" width="1094" height="810"/>
-	<SubTexture name="pip righ0005" x="1103" y="822" width="1094" height="810"/>
-	<SubTexture name="pip righ0006" x="1103" y="822" width="1094" height="810"/>
-	<SubTexture name="pip righ0007" x="1103" y="822" width="1094" height="810"/>
-	<SubTexture name="pip righ0008" x="1103" y="822" width="1094" height="810"/>
-	<SubTexture name="pip righ0009" x="1103" y="822" width="1094" height="810"/>
-	<SubTexture name="pip righ0010" x="1103" y="822" width="1094" height="810"/>
-	<SubTexture name="pip righ0011" x="1103" y="822" width="1094" height="810"/>
-	<SubTexture name="pip righ0012" x="1103" y="822" width="1094" height="810"/>
-	<SubTexture name="pip righ0013" x="1103" y="822" width="1094" height="810"/>
-	<SubTexture name="pip righ0014" x="1103" y="822" width="1094" height="810"/>
-	<SubTexture name="pip up0000" x="2206" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0001" x="2206" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0002" x="3191" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0003" x="3191" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0004" x="4176" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0005" x="4176" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0006" x="4176" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0007" x="4176" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0008" x="4176" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0009" x="4176" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0010" x="4176" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0011" x="4176" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0012" x="4176" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0013" x="4176" y="822" width="976" height="838"/>
-	<SubTexture name="pip up0014" x="4176" y="822" width="976" height="838"/>
-	<SubTexture name="piple0000" x="5161" y="822" width="993" height="805"/>
-	<SubTexture name="piple0001" x="5161" y="822" width="993" height="805"/>
-	<SubTexture name="piple0002" x="6163" y="822" width="993" height="805"/>
-	<SubTexture name="piple0003" x="6163" y="822" width="993" height="805"/>
-	<SubTexture name="piple0004" x="7165" y="822" width="993" height="805"/>
-	<SubTexture name="piple0005" x="7165" y="822" width="993" height="805"/>
-	<SubTexture name="piple0006" x="0" y="1669" width="993" height="805"/>
-	<SubTexture name="piple0007" x="0" y="1669" width="993" height="805"/>
-	<SubTexture name="piple0008" x="1002" y="1669" width="993" height="805"/>
-	<SubTexture name="piple0009" x="1002" y="1669" width="993" height="805"/>
-	<SubTexture name="piple0010" x="1002" y="1669" width="993" height="805"/>
-	<SubTexture name="piple0011" x="1002" y="1669" width="993" height="805"/>
-	<SubTexture name="piple0012" x="1002" y="1669" width="993" height="805"/>
-	<SubTexture name="piple0013" x="1002" y="1669" width="993" height="805"/>
-	<SubTexture name="piple0014" x="1002" y="1669" width="993" height="805"/>
-	<SubTexture name="piprozebud0000" x="2004" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0001" x="2004" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0002" x="3041" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0003" x="3041" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0004" x="4078" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0005" x="4078" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0006" x="5115" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0007" x="5115" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0008" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0009" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0010" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0011" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0012" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0013" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0014" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0015" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0016" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0017" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0018" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0019" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0020" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0021" x="6152" y="1669" width="1028" height="862"/>
-	<SubTexture name="piprozebud0022" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0023" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0024" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0025" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0026" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0027" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0028" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0029" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0030" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0031" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0032" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0033" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0034" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0035" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0036" x="1037" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0037" x="1037" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0038" x="1037" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0039" x="1037" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0040" x="1037" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0041" x="1037" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0042" x="1037" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0043" x="2074" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0044" x="2074" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0045" x="2074" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0046" x="1037" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0047" x="1037" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0048" x="3111" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0049" x="3111" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0050" x="4148" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0051" x="4148" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0052" x="4148" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0053" x="4148" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0054" x="4148" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0055" x="4148" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0056" x="4148" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0057" x="4148" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0058" x="4148" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0059" x="4148" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0060" x="4148" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0061" x="4148" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0062" x="5185" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0063" x="5185" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0064" x="5185" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0065" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0066" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0067" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0068" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0069" x="5185" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0070" x="5185" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0071" x="5185" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0072" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0073" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0074" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0075" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0076" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0077" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0078" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0079" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0080" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0081" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0082" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0083" x="0" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0084" x="6222" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0085" x="6222" y="2540" width="1028" height="862"/>
-	<SubTexture name="piprozebud0086" x="0" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0087" x="0" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0088" x="1037" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0089" x="1037" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0090" x="2074" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0091" x="2074" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0092" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0093" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0094" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0095" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0096" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0097" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0098" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0099" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0100" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0101" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0102" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0103" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0104" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0105" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0106" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0107" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0108" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0109" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0110" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0111" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0112" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0113" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0114" x="3111" y="3411" width="1028" height="862"/>
-	<SubTexture name="piprozebud0115" x="3111" y="3411" width="1028" height="862"/>
+  <!-- Created with Adobe Animate version 21.0.3.38773 -->
+  <!-- http://www.adobe.com/products/animate.html -->
+  <SubTexture name="pip down0000" x="0" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0001" x="0" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0002" x="404" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0003" x="404" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0004" x="404" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0005" x="404" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0006" x="404" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0007" x="404" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0008" x="404" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0009" x="404" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0010" x="404" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0011" x="404" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0012" x="404" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0013" x="404" y="0" width="400.4" height="318" />
+  <SubTexture name="pip down0014" x="404" y="0" width="400.4" height="318" />
+  <SubTexture name="pip lef0000" x="808" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0001" x="808" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0002" x="1210.4" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0003" x="1210.4" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0004" x="1612.8" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0005" x="1612.8" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0006" x="2015.2" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0007" x="2015.2" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0008" x="2015.2" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0009" x="2015.2" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0010" x="2015.2" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0011" x="2015.2" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0012" x="2015.2" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0013" x="2015.2" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip lef0014" x="2015.2" y="0" width="398.8" height="325.2" />
+  <SubTexture name="pip righ0000" x="2417.6" y="0" width="437.6" height="324" />
+  <SubTexture name="pip righ0001" x="2417.6" y="0" width="437.6" height="324" />
+  <SubTexture name="pip righ0002" x="0" y="328.8" width="437.6" height="324" />
+  <SubTexture name="pip righ0003" x="0" y="328.8" width="437.6" height="324" />
+  <SubTexture name="pip righ0004" x="441.2" y="328.8" width="437.6" height="324" />
+  <SubTexture name="pip righ0005" x="441.2" y="328.8" width="437.6" height="324" />
+  <SubTexture name="pip righ0006" x="441.2" y="328.8" width="437.6" height="324" />
+  <SubTexture name="pip righ0007" x="441.2" y="328.8" width="437.6" height="324" />
+  <SubTexture name="pip righ0008" x="441.2" y="328.8" width="437.6" height="324" />
+  <SubTexture name="pip righ0009" x="441.2" y="328.8" width="437.6" height="324" />
+  <SubTexture name="pip righ0010" x="441.2" y="328.8" width="437.6" height="324" />
+  <SubTexture name="pip righ0011" x="441.2" y="328.8" width="437.6" height="324" />
+  <SubTexture name="pip righ0012" x="441.2" y="328.8" width="437.6" height="324" />
+  <SubTexture name="pip righ0013" x="441.2" y="328.8" width="437.6" height="324" />
+  <SubTexture name="pip righ0014" x="441.2" y="328.8" width="437.6" height="324" />
+  <SubTexture name="pip up0000" x="882.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0001" x="882.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0002" x="1276.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0003" x="1276.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0004" x="1670.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0005" x="1670.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0006" x="1670.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0007" x="1670.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0008" x="1670.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0009" x="1670.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0010" x="1670.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0011" x="1670.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0012" x="1670.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0013" x="1670.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="pip up0014" x="1670.4" y="328.8" width="390.4" height="335.2" />
+  <SubTexture name="piple0000" x="2064.4" y="328.8" width="397.2" height="322" />
+  <SubTexture name="piple0001" x="2064.4" y="328.8" width="397.2" height="322" />
+  <SubTexture name="piple0002" x="2465.2" y="328.8" width="397.2" height="322" />
+  <SubTexture name="piple0003" x="2465.2" y="328.8" width="397.2" height="322" />
+  <SubTexture name="piple0004" x="2866" y="328.8" width="397.2" height="322" />
+  <SubTexture name="piple0005" x="2866" y="328.8" width="397.2" height="322" />
+  <SubTexture name="piple0006" x="0" y="667.6" width="397.2" height="322" />
+  <SubTexture name="piple0007" x="0" y="667.6" width="397.2" height="322" />
+  <SubTexture name="piple0008" x="400.8" y="667.6" width="397.2" height="322" />
+  <SubTexture name="piple0009" x="400.8" y="667.6" width="397.2" height="322" />
+  <SubTexture name="piple0010" x="400.8" y="667.6" width="397.2" height="322" />
+  <SubTexture name="piple0011" x="400.8" y="667.6" width="397.2" height="322" />
+  <SubTexture name="piple0012" x="400.8" y="667.6" width="397.2" height="322" />
+  <SubTexture name="piple0013" x="400.8" y="667.6" width="397.2" height="322" />
+  <SubTexture name="piple0014" x="400.8" y="667.6" width="397.2" height="322" />
+  <SubTexture name="piprozebud0000" x="801.6" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0001" x="801.6" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0002" x="1216.4" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0003" x="1216.4" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0004" x="1631.2" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0005" x="1631.2" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0006" x="2046" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0007" x="2046" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0008" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0009" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0010" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0011" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0012" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0013" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0014" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0015" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0016" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0017" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0018" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0019" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0020" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0021" x="2460.8" y="667.6" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0022" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0023" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0024" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0025" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0026" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0027" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0028" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0029" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0030" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0031" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0032" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0033" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0034" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0035" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0036" x="414.8" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0037" x="414.8" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0038" x="414.8" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0039" x="414.8" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0040" x="414.8" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0041" x="414.8" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0042" x="414.8" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0043" x="829.6" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0044" x="829.6" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0045" x="829.6" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0046" x="414.8" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0047" x="414.8" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0048" x="1244.4" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0049" x="1244.4" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0050" x="1659.2" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0051" x="1659.2" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0052" x="1659.2" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0053" x="1659.2" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0054" x="1659.2" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0055" x="1659.2" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0056" x="1659.2" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0057" x="1659.2" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0058" x="1659.2" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0059" x="1659.2" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0060" x="1659.2" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0061" x="1659.2" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0062" x="2074" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0063" x="2074" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0064" x="2074" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0065" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0066" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0067" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0068" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0069" x="2074" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0070" x="2074" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0071" x="2074" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0072" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0073" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0074" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0075" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0076" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0077" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0078" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0079" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0080" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0081" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0082" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0083" x="0" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0084" x="2488.8" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0085" x="2488.8" y="1016" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0086" x="0" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0087" x="0" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0088" x="414.8" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0089" x="414.8" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0090" x="829.6" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0091" x="829.6" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0092" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0093" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0094" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0095" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0096" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0097" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0098" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0099" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0100" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0101" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0102" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0103" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0104" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0105" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0106" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0107" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0108" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0109" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0110" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0111" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0112" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0113" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0114" x="1244.4" y="1364.4" width="411.2" height="344.8" />
+  <SubTexture name="piprozebud0115" x="1244.4" y="1364.4" width="411.2" height="344.8" />
 </TextureAtlas>

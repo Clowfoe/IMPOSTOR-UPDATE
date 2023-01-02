@@ -1,39 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="bluehit.png">
-	<!-- Created with Adobe Animate version 21.0.6.41649 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="hit down0000" x="0" y="0" width="341" height="302" frameX="0" frameY="-13" frameWidth="341" frameHeight="316"/>
-	<SubTexture name="hit down0001" x="0" y="0" width="341" height="302" frameX="0" frameY="-13" frameWidth="341" frameHeight="316"/>
-	<SubTexture name="hit down0002" x="346" y="0" width="329" height="316" frameX="0" frameY="0" frameWidth="341" frameHeight="316"/>
-	<SubTexture name="hit idle0000" x="680" y="0" width="302" height="312" frameX="0" frameY="-32" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit idle0001" x="680" y="0" width="302" height="312" frameX="0" frameY="-32" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit idle0002" x="987" y="0" width="299" height="316" frameX="-4" frameY="-28" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit idle0003" x="987" y="0" width="299" height="316" frameX="-4" frameY="-28" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit idle0004" x="1291" y="0" width="287" height="326" frameX="-5" frameY="-18" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit idle0005" x="1291" y="0" width="287" height="326" frameX="-5" frameY="-18" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit idle0006" x="1583" y="0" width="275" height="341" frameX="-1" frameY="-2" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit idle0007" x="1583" y="0" width="275" height="341" frameX="-1" frameY="-2" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit idle0008" x="0" y="346" width="272" height="344" frameX="-1" frameY="0" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit idle0009" x="0" y="346" width="272" height="344" frameX="-1" frameY="0" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit idle0010" x="277" y="346" width="270" height="343" frameX="-1" frameY="0" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit idle0011" x="277" y="346" width="270" height="343" frameX="-1" frameY="0" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit idle0012" x="277" y="346" width="270" height="343" frameX="-1" frameY="0" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit idle0013" x="277" y="346" width="270" height="343" frameX="-1" frameY="0" frameWidth="303" frameHeight="344"/>
-	<SubTexture name="hit left0000" x="552" y="346" width="209" height="406" frameX="-60" frameY="-58" frameWidth="287" frameHeight="464"/>
-	<SubTexture name="hit left0001" x="766" y="346" width="240" height="432" frameX="-29" frameY="-32" frameWidth="287" frameHeight="464"/>
-	<SubTexture name="hit left0002" x="1011" y="346" width="275" height="463" frameX="-5" frameY="0" frameWidth="287" frameHeight="464"/>
-	<SubTexture name="hit left0003" x="1011" y="346" width="275" height="463" frameX="-5" frameY="0" frameWidth="287" frameHeight="464"/>
-	<SubTexture name="hit left0004" x="1291" y="346" width="278" height="462" frameX="0" frameY="-1" frameWidth="287" frameHeight="464"/>
-	<SubTexture name="hit left0005" x="1291" y="346" width="278" height="462" frameX="0" frameY="-1" frameWidth="287" frameHeight="464"/>
-	<SubTexture name="hit left0006" x="1574" y="346" width="287" height="438" frameX="0" frameY="-25" frameWidth="287" frameHeight="464"/>
-	<SubTexture name="hit left0007" x="1574" y="346" width="287" height="438" frameX="0" frameY="-25" frameWidth="287" frameHeight="464"/>
-	<SubTexture name="hit left0008" x="0" y="814" width="256" height="367" frameX="-22" frameY="-96" frameWidth="287" frameHeight="464"/>
-	<SubTexture name="hit right0000" x="261" y="814" width="248" height="352" frameX="-8" frameY="0" frameWidth="256" frameHeight="352"/>
-	<SubTexture name="hit right0001" x="261" y="814" width="248" height="352" frameX="-8" frameY="0" frameWidth="256" frameHeight="352"/>
-	<SubTexture name="hit right0002" x="514" y="814" width="246" height="352" frameX="0" frameY="0" frameWidth="256" frameHeight="352"/>
-	<SubTexture name="hit up0000" x="765" y="814" width="233" height="432" frameX="-1" frameY="0" frameWidth="268" frameHeight="432"/>
-	<SubTexture name="hit up0001" x="765" y="814" width="233" height="432" frameX="-1" frameY="0" frameWidth="268" frameHeight="432"/>
-	<SubTexture name="hit up0002" x="1003" y="814" width="263" height="382" frameX="-3" frameY="-47" frameWidth="268" frameHeight="432"/>
-	<SubTexture name="hit up0003" x="1003" y="814" width="263" height="382" frameX="-3" frameY="-47" frameWidth="268" frameHeight="432"/>
-	<SubTexture name="hit up0004" x="1271" y="814" width="268" height="371" frameX="0" frameY="-60" frameWidth="268" frameHeight="432"/>
+  <!-- Created with Adobe Animate version 21.0.6.41649 -->
+  <!-- http://www.adobe.com/products/animate.html -->
+  <SubTexture name="hit down0000" x="0" y="0" width="136.4" height="120.8" frameX="0" frameY="-5.2" frameWidth="136.4" frameHeight="126.4" />
+  <SubTexture name="hit down0001" x="0" y="0" width="136.4" height="120.8" frameX="0" frameY="-5.2" frameWidth="136.4" frameHeight="126.4" />
+  <SubTexture name="hit down0002" x="138.4" y="0" width="131.6" height="126.4" frameX="0" frameY="0" frameWidth="136.4" frameHeight="126.4" />
+  <SubTexture name="hit idle0000" x="272" y="0" width="120.8" height="124.8" frameX="0" frameY="-12.8" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit idle0001" x="272" y="0" width="120.8" height="124.8" frameX="0" frameY="-12.8" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit idle0002" x="394.8" y="0" width="119.6" height="126.4" frameX="-1.6" frameY="-11.2" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit idle0003" x="394.8" y="0" width="119.6" height="126.4" frameX="-1.6" frameY="-11.2" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit idle0004" x="516.4" y="0" width="114.8" height="130.4" frameX="-2" frameY="-7.2" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit idle0005" x="516.4" y="0" width="114.8" height="130.4" frameX="-2" frameY="-7.2" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit idle0006" x="633.2" y="0" width="110" height="136.4" frameX="-0.4" frameY="-0.8" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit idle0007" x="633.2" y="0" width="110" height="136.4" frameX="-0.4" frameY="-0.8" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit idle0008" x="0" y="138.4" width="108.8" height="137.6" frameX="-0.4" frameY="0" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit idle0009" x="0" y="138.4" width="108.8" height="137.6" frameX="-0.4" frameY="0" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit idle0010" x="110.8" y="138.4" width="108" height="137.2" frameX="-0.4" frameY="0" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit idle0011" x="110.8" y="138.4" width="108" height="137.2" frameX="-0.4" frameY="0" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit idle0012" x="110.8" y="138.4" width="108" height="137.2" frameX="-0.4" frameY="0" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit idle0013" x="110.8" y="138.4" width="108" height="137.2" frameX="-0.4" frameY="0" frameWidth="121.2" frameHeight="137.6" />
+  <SubTexture name="hit left0000" x="220.8" y="138.4" width="83.6" height="162.4" frameX="-24" frameY="-23.2" frameWidth="114.8" frameHeight="185.6" />
+  <SubTexture name="hit left0001" x="306.4" y="138.4" width="96" height="172.8" frameX="-11.6" frameY="-12.8" frameWidth="114.8" frameHeight="185.6" />
+  <SubTexture name="hit left0002" x="404.4" y="138.4" width="110" height="185.2" frameX="-2" frameY="0" frameWidth="114.8" frameHeight="185.6" />
+  <SubTexture name="hit left0003" x="404.4" y="138.4" width="110" height="185.2" frameX="-2" frameY="0" frameWidth="114.8" frameHeight="185.6" />
+  <SubTexture name="hit left0004" x="516.4" y="138.4" width="111.2" height="184.8" frameX="0" frameY="-0.4" frameWidth="114.8" frameHeight="185.6" />
+  <SubTexture name="hit left0005" x="516.4" y="138.4" width="111.2" height="184.8" frameX="0" frameY="-0.4" frameWidth="114.8" frameHeight="185.6" />
+  <SubTexture name="hit left0006" x="629.6" y="138.4" width="114.8" height="175.2" frameX="0" frameY="-10" frameWidth="114.8" frameHeight="185.6" />
+  <SubTexture name="hit left0007" x="629.6" y="138.4" width="114.8" height="175.2" frameX="0" frameY="-10" frameWidth="114.8" frameHeight="185.6" />
+  <SubTexture name="hit left0008" x="0" y="325.6" width="102.4" height="146.8" frameX="-8.8" frameY="-38.4" frameWidth="114.8" frameHeight="185.6" />
+  <SubTexture name="hit right0000" x="104.4" y="325.6" width="99.2" height="140.8" frameX="-3.2" frameY="0" frameWidth="102.4" frameHeight="140.8" />
+  <SubTexture name="hit right0001" x="104.4" y="325.6" width="99.2" height="140.8" frameX="-3.2" frameY="0" frameWidth="102.4" frameHeight="140.8" />
+  <SubTexture name="hit right0002" x="205.6" y="325.6" width="98.4" height="140.8" frameX="0" frameY="0" frameWidth="102.4" frameHeight="140.8" />
+  <SubTexture name="hit up0000" x="306" y="325.6" width="93.2" height="172.8" frameX="-0.4" frameY="0" frameWidth="107.2" frameHeight="172.8" />
+  <SubTexture name="hit up0001" x="306" y="325.6" width="93.2" height="172.8" frameX="-0.4" frameY="0" frameWidth="107.2" frameHeight="172.8" />
+  <SubTexture name="hit up0002" x="401.2" y="325.6" width="105.2" height="152.8" frameX="-1.2" frameY="-18.8" frameWidth="107.2" frameHeight="172.8" />
+  <SubTexture name="hit up0003" x="401.2" y="325.6" width="105.2" height="152.8" frameX="-1.2" frameY="-18.8" frameWidth="107.2" frameHeight="172.8" />
+  <SubTexture name="hit up0004" x="508.4" y="325.6" width="107.2" height="148.4" frameX="0" frameY="-24" frameWidth="107.2" frameHeight="172.8" />
 </TextureAtlas>

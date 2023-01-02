@@ -1,85 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="charles.png">
-	<!-- Created with Adobe Animate version 22.0.0.93 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="down0000" x="10" y="10" width="978" height="837"/>
-	<SubTexture name="down0001" x="10" y="10" width="978" height="837"/>
-	<SubTexture name="down0002" x="998" y="10" width="978" height="837"/>
-	<SubTexture name="idle0000" x="1986" y="10" width="978" height="836"/>
-	<SubTexture name="idle0001" x="1986" y="10" width="978" height="836"/>
-	<SubTexture name="idle0002" x="2974" y="10" width="978" height="836"/>
-	<SubTexture name="idle0003" x="2974" y="10" width="978" height="836"/>
-	<SubTexture name="idle0004" x="3962" y="10" width="978" height="836"/>
-	<SubTexture name="idle0005" x="3962" y="10" width="978" height="836"/>
-	<SubTexture name="idle0006" x="4950" y="10" width="978" height="836"/>
-	<SubTexture name="idle0007" x="4950" y="10" width="978" height="836"/>
-	<SubTexture name="idle0008" x="5938" y="10" width="978" height="836"/>
-	<SubTexture name="idle0009" x="5938" y="10" width="978" height="836"/>
-	<SubTexture name="idle0010" x="5938" y="10" width="978" height="836"/>
-	<SubTexture name="idle0011" x="5938" y="10" width="978" height="836"/>
-	<SubTexture name="idle0012" x="5938" y="10" width="978" height="836"/>
-	<SubTexture name="idle0013" x="5938" y="10" width="978" height="836"/>
-	<SubTexture name="left0000" x="6926" y="10" width="978" height="837"/>
-	<SubTexture name="left0001" x="6926" y="10" width="978" height="837"/>
-	<SubTexture name="left0002" x="10" y="857" width="978" height="837"/>
-	<SubTexture name="oh0000" x="5938" y="10" width="978" height="836"/>
-	<SubTexture name="oh0001" x="5938" y="10" width="978" height="836"/>
-	<SubTexture name="oh0002" x="998" y="857" width="978" height="836"/>
-	<SubTexture name="oh0003" x="998" y="857" width="978" height="836"/>
-	<SubTexture name="oh0004" x="1986" y="857" width="978" height="836"/>
-	<SubTexture name="oh0005" x="2974" y="857" width="978" height="836"/>
-	<SubTexture name="oh0006" x="2974" y="857" width="978" height="836"/>
-	<SubTexture name="oh0007" x="3962" y="857" width="978" height="836"/>
-	<SubTexture name="oh0008" x="4950" y="857" width="978" height="836"/>
-	<SubTexture name="oh0009" x="4950" y="857" width="978" height="836"/>
-	<SubTexture name="oh0010" x="5938" y="857" width="978" height="836"/>
-	<SubTexture name="oh0011" x="6926" y="857" width="978" height="836"/>
-	<SubTexture name="oh0012" x="6926" y="857" width="978" height="836"/>
-	<SubTexture name="oh0013" x="10" y="1704" width="978" height="836"/>
-	<SubTexture name="oh0014" x="10" y="1704" width="978" height="836"/>
-	<SubTexture name="oh0015" x="10" y="1704" width="978" height="836"/>
-	<SubTexture name="oh0016" x="10" y="1704" width="978" height="836"/>
-	<SubTexture name="oh0017" x="10" y="1704" width="978" height="836"/>
-	<SubTexture name="oh0018" x="10" y="1704" width="978" height="836"/>
-	<SubTexture name="oh0019" x="10" y="1704" width="978" height="836"/>
-	<SubTexture name="oh0020" x="10" y="1704" width="978" height="836"/>
-	<SubTexture name="oh0021" x="10" y="1704" width="978" height="836"/>
-	<SubTexture name="oh0022" x="10" y="1704" width="978" height="836"/>
-	<SubTexture name="oh0023" x="10" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0000" x="998" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0001" x="998" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0002" x="1986" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0003" x="2974" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0004" x="3962" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0005" x="3962" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0006" x="4950" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0007" x="2974" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0008" x="2974" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0009" x="5938" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0010" x="6926" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0011" x="10" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0012" x="10" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0013" x="10" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0014" x="998" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0015" x="998" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0016" x="1986" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0017" x="1986" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0018" x="5938" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0019" x="2974" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0020" x="2974" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0021" x="2974" y="1704" width="978" height="836"/>
-	<SubTexture name="perfect0022" x="3962" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0023" x="3962" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0024" x="4950" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0025" x="4950" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0026" x="1986" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0027" x="1986" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0028" x="1986" y="2550" width="978" height="836"/>
-	<SubTexture name="perfect0029" x="1986" y="2550" width="978" height="836"/>
-	<SubTexture name="right0000" x="5938" y="2550" width="978" height="837"/>
-	<SubTexture name="right0001" x="5938" y="2550" width="978" height="837"/>
-	<SubTexture name="right0002" x="6926" y="2550" width="978" height="837"/>
-	<SubTexture name="up0000" x="10" y="3397" width="978" height="837"/>
-	<SubTexture name="up0001" x="10" y="3397" width="978" height="837"/>
-	<SubTexture name="up0002" x="998" y="3397" width="978" height="837"/>
+  <!-- Created with Adobe Animate version 22.0.0.93 -->
+  <!-- http://www.adobe.com/products/animate.html -->
+  <SubTexture name="down0000" x="4" y="4" width="391.2" height="334.8" />
+  <SubTexture name="down0001" x="4" y="4" width="391.2" height="334.8" />
+  <SubTexture name="down0002" x="399.2" y="4" width="391.2" height="334.8" />
+  <SubTexture name="idle0000" x="794.4" y="4" width="391.2" height="334.4" />
+  <SubTexture name="idle0001" x="794.4" y="4" width="391.2" height="334.4" />
+  <SubTexture name="idle0002" x="1189.6" y="4" width="391.2" height="334.4" />
+  <SubTexture name="idle0003" x="1189.6" y="4" width="391.2" height="334.4" />
+  <SubTexture name="idle0004" x="1584.8" y="4" width="391.2" height="334.4" />
+  <SubTexture name="idle0005" x="1584.8" y="4" width="391.2" height="334.4" />
+  <SubTexture name="idle0006" x="1980" y="4" width="391.2" height="334.4" />
+  <SubTexture name="idle0007" x="1980" y="4" width="391.2" height="334.4" />
+  <SubTexture name="idle0008" x="2375.2" y="4" width="391.2" height="334.4" />
+  <SubTexture name="idle0009" x="2375.2" y="4" width="391.2" height="334.4" />
+  <SubTexture name="idle0010" x="2375.2" y="4" width="391.2" height="334.4" />
+  <SubTexture name="idle0011" x="2375.2" y="4" width="391.2" height="334.4" />
+  <SubTexture name="idle0012" x="2375.2" y="4" width="391.2" height="334.4" />
+  <SubTexture name="idle0013" x="2375.2" y="4" width="391.2" height="334.4" />
+  <SubTexture name="left0000" x="2770.4" y="4" width="391.2" height="334.8" />
+  <SubTexture name="left0001" x="2770.4" y="4" width="391.2" height="334.8" />
+  <SubTexture name="left0002" x="4" y="342.8" width="391.2" height="334.8" />
+  <SubTexture name="oh0000" x="2375.2" y="4" width="391.2" height="334.4" />
+  <SubTexture name="oh0001" x="2375.2" y="4" width="391.2" height="334.4" />
+  <SubTexture name="oh0002" x="399.2" y="342.8" width="391.2" height="334.4" />
+  <SubTexture name="oh0003" x="399.2" y="342.8" width="391.2" height="334.4" />
+  <SubTexture name="oh0004" x="794.4" y="342.8" width="391.2" height="334.4" />
+  <SubTexture name="oh0005" x="1189.6" y="342.8" width="391.2" height="334.4" />
+  <SubTexture name="oh0006" x="1189.6" y="342.8" width="391.2" height="334.4" />
+  <SubTexture name="oh0007" x="1584.8" y="342.8" width="391.2" height="334.4" />
+  <SubTexture name="oh0008" x="1980" y="342.8" width="391.2" height="334.4" />
+  <SubTexture name="oh0009" x="1980" y="342.8" width="391.2" height="334.4" />
+  <SubTexture name="oh0010" x="2375.2" y="342.8" width="391.2" height="334.4" />
+  <SubTexture name="oh0011" x="2770.4" y="342.8" width="391.2" height="334.4" />
+  <SubTexture name="oh0012" x="2770.4" y="342.8" width="391.2" height="334.4" />
+  <SubTexture name="oh0013" x="4" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="oh0014" x="4" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="oh0015" x="4" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="oh0016" x="4" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="oh0017" x="4" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="oh0018" x="4" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="oh0019" x="4" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="oh0020" x="4" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="oh0021" x="4" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="oh0022" x="4" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="oh0023" x="4" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0000" x="399.2" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0001" x="399.2" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0002" x="794.4" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0003" x="1189.6" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0004" x="1584.8" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0005" x="1584.8" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0006" x="1980" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0007" x="1189.6" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0008" x="1189.6" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0009" x="2375.2" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0010" x="2770.4" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0011" x="4" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0012" x="4" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0013" x="4" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0014" x="399.2" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0015" x="399.2" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0016" x="794.4" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0017" x="794.4" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0018" x="2375.2" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0019" x="1189.6" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0020" x="1189.6" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0021" x="1189.6" y="681.6" width="391.2" height="334.4" />
+  <SubTexture name="perfect0022" x="1584.8" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0023" x="1584.8" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0024" x="1980" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0025" x="1980" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0026" x="794.4" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0027" x="794.4" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0028" x="794.4" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="perfect0029" x="794.4" y="1020" width="391.2" height="334.4" />
+  <SubTexture name="right0000" x="2375.2" y="1020" width="391.2" height="334.8" />
+  <SubTexture name="right0001" x="2375.2" y="1020" width="391.2" height="334.8" />
+  <SubTexture name="right0002" x="2770.4" y="1020" width="391.2" height="334.8" />
+  <SubTexture name="up0000" x="4" y="1358.8" width="391.2" height="334.8" />
+  <SubTexture name="up0001" x="4" y="1358.8" width="391.2" height="334.8" />
+  <SubTexture name="up0002" x="399.2" y="1358.8" width="391.2" height="334.8" />
 </TextureAtlas>

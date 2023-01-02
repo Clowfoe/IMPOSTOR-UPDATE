@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="bfshock.png">
-	<!-- Created with Adobe Animate version 21.0.3.38773 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="BF idle dance instance 10000" x="0" y="0" width="409" height="416"/>
-	<SubTexture name="BF idle dance instance 10001" x="418" y="0" width="409" height="416"/>
-	<SubTexture name="BF idle dance instance 10002" x="836" y="0" width="409" height="416"/>
-	<SubTexture name="BF idle dance instance 10003" x="1254" y="0" width="409" height="416"/>
-	<SubTexture name="BF idle dance instance 10004" x="0" y="425" width="409" height="416"/>
-	<SubTexture name="BF idle dance instance 10005" x="418" y="425" width="409" height="416"/>
+  <!-- Created with Adobe Animate version 21.0.3.38773 -->
+  <!-- http://www.adobe.com/products/animate.html -->
+  <SubTexture name="BF idle dance instance 10000" x="0" y="0" width="163.6" height="166.4" />
+  <SubTexture name="BF idle dance instance 10001" x="167.2" y="0" width="163.6" height="166.4" />
+  <SubTexture name="BF idle dance instance 10002" x="334.4" y="0" width="163.6" height="166.4" />
+  <SubTexture name="BF idle dance instance 10003" x="501.6" y="0" width="163.6" height="166.4" />
+  <SubTexture name="BF idle dance instance 10004" x="0" y="170" width="163.6" height="166.4" />
+  <SubTexture name="BF idle dance instance 10005" x="167.2" y="170" width="163.6" height="166.4" />
 </TextureAtlas>

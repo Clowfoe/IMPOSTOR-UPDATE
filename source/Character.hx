@@ -134,10 +134,18 @@ class Character extends FlxSprite
 					platformPos = json.platform_pos;
 				}
 
+				
+
+				json.scale /= 0.4; // scale factor that I did for the characters
+
+
 				if(json.scale != 1) {
 					jsonScale = json.scale;
-					setGraphicSize(Std.int(width * jsonScale));
+					trace("factor: " + jsonScale);
+					trace("old size: " + width + "x" + height);
+					setGraphicSize(Std.int(width * jsonScale), Std.int(height * jsonScale));
 					updateHitbox();
+					trace("new size: " + width + "x" + height);
 				}
 
 				positionArray = json.position;

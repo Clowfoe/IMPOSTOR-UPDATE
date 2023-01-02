@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="blue.png">
-	<!-- Created with Adobe Animate version 22.0.0.93 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="blue down0000" x="10" y="10" width="377" height="321"/>
-	<SubTexture name="blue down0001" x="10" y="10" width="377" height="321"/>
-	<SubTexture name="blue down0002" x="397" y="10" width="377" height="321"/>
-	<SubTexture name="blue idle0000" x="784" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0001" x="784" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0002" x="1097" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0003" x="1097" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0004" x="1410" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0005" x="1410" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0006" x="1723" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0007" x="1723" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0008" x="10" y="364" width="303" height="344"/>
-	<SubTexture name="blue idle0009" x="10" y="364" width="303" height="344"/>
-	<SubTexture name="blue idle0010" x="323" y="364" width="303" height="344"/>
-	<SubTexture name="blue idle0011" x="323" y="364" width="303" height="344"/>
-	<SubTexture name="blue idle0012" x="323" y="364" width="303" height="344"/>
-	<SubTexture name="blue idle0013" x="323" y="364" width="303" height="344"/>
-	<SubTexture name="blue left0000" x="636" y="364" width="373" height="342"/>
-	<SubTexture name="blue left0001" x="636" y="364" width="373" height="342"/>
-	<SubTexture name="blue left0002" x="1019" y="364" width="373" height="342"/>
-	<SubTexture name="blue right0000" x="1402" y="364" width="458" height="342"/>
-	<SubTexture name="blue right0001" x="1402" y="364" width="458" height="342"/>
-	<SubTexture name="blue right0002" x="10" y="718" width="458" height="342"/>
-	<SubTexture name="blue up0000" x="478" y="718" width="340" height="375"/>
-	<SubTexture name="blue up0001" x="478" y="718" width="340" height="375"/>
-	<SubTexture name="blue up0002" x="828" y="718" width="340" height="375"/>
+  <!-- Created with Adobe Animate version 22.0.0.93 -->
+  <!-- http://www.adobe.com/products/animate.html -->
+  <SubTexture name="blue down0000" x="4" y="4" width="150.8" height="128.4" />
+  <SubTexture name="blue down0001" x="4" y="4" width="150.8" height="128.4" />
+  <SubTexture name="blue down0002" x="158.8" y="4" width="150.8" height="128.4" />
+  <SubTexture name="blue idle0000" x="313.6" y="4" width="121.2" height="137.6" />
+  <SubTexture name="blue idle0001" x="313.6" y="4" width="121.2" height="137.6" />
+  <SubTexture name="blue idle0002" x="438.8" y="4" width="121.2" height="137.6" />
+  <SubTexture name="blue idle0003" x="438.8" y="4" width="121.2" height="137.6" />
+  <SubTexture name="blue idle0004" x="564" y="4" width="121.2" height="137.6" />
+  <SubTexture name="blue idle0005" x="564" y="4" width="121.2" height="137.6" />
+  <SubTexture name="blue idle0006" x="689.2" y="4" width="121.2" height="137.6" />
+  <SubTexture name="blue idle0007" x="689.2" y="4" width="121.2" height="137.6" />
+  <SubTexture name="blue idle0008" x="4" y="145.6" width="121.2" height="137.6" />
+  <SubTexture name="blue idle0009" x="4" y="145.6" width="121.2" height="137.6" />
+  <SubTexture name="blue idle0010" x="129.2" y="145.6" width="121.2" height="137.6" />
+  <SubTexture name="blue idle0011" x="129.2" y="145.6" width="121.2" height="137.6" />
+  <SubTexture name="blue idle0012" x="129.2" y="145.6" width="121.2" height="137.6" />
+  <SubTexture name="blue idle0013" x="129.2" y="145.6" width="121.2" height="137.6" />
+  <SubTexture name="blue left0000" x="254.4" y="145.6" width="149.2" height="136.8" />
+  <SubTexture name="blue left0001" x="254.4" y="145.6" width="149.2" height="136.8" />
+  <SubTexture name="blue left0002" x="407.6" y="145.6" width="149.2" height="136.8" />
+  <SubTexture name="blue right0000" x="560.8" y="145.6" width="183.2" height="136.8" />
+  <SubTexture name="blue right0001" x="560.8" y="145.6" width="183.2" height="136.8" />
+  <SubTexture name="blue right0002" x="4" y="287.2" width="183.2" height="136.8" />
+  <SubTexture name="blue up0000" x="191.2" y="287.2" width="136" height="150" />
+  <SubTexture name="blue up0001" x="191.2" y="287.2" width="136" height="150" />
+  <SubTexture name="blue up0002" x="331.2" y="287.2" width="136" height="150" />
 </TextureAtlas>
