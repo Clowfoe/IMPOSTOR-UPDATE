@@ -4273,6 +4273,8 @@ class PlayState extends MusicBeatState
 				case 'sussus-moogus':
 					startVideo('polus1');
 					piss = false;
+				case 'voting-time':
+					startVideo('voting');
 				case 'delusion':
 					startVideo('grey');
 					piss = false;
