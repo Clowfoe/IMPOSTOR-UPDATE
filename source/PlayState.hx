@@ -5477,8 +5477,8 @@ class PlayState extends MusicBeatState
 						if (Math.isNaN(charType)) charType = 0;
 				}
 			case 'Lights Out':
-                addCharacterToList(1, 'whitegreen');
-                addCharacterToList(0, 'whitebf');
+				addCharacterToList('whitegreen', 0);
+				addCharacterToList('whitebf', 1);
 
 			var newCharacter:String = event[4];
 			addCharacterToList(newCharacter, charType);
