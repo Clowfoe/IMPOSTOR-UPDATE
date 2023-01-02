@@ -7193,8 +7193,10 @@ class PlayState extends MusicBeatState
 					vocals.volume = 0;
 					vocals.pause();
 
-					if(FlxG.random.bool(10))
+					if(FlxG.random.bool(10)){
 						GameOverSubstate.characterName = 'bf-defeat-dead-balls';
+						GameOverSubstate.deathSoundName = 'defeat_kill_ballz_sfx';
+					}
 					
 					canPause = false;
 					paused = true;
