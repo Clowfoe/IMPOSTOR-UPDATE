@@ -2437,13 +2437,13 @@ class PlayState extends MusicBeatState
 				if (SONG.song.toLowerCase() == 'sussus toogus')
 				{
 					walker = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					add(walker);
+					//add(walker);
 
 					var walker2:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					add(walker2);
+					//add(walker2);
 
 					var walker3:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					add(walker3);
+					//add(walker3);
 				}
 
 				if (SONG.song.toLowerCase() == 'lights-down')
@@ -4315,6 +4315,7 @@ class PlayState extends MusicBeatState
 					mom.alpha = 0.001;
 					pet.alpha = 0.001;
 					camHUD.visible = false;
+					armedDark.alpha = 1;
 
 					dad.playAnim('intro', false);
 					dustcloud.animation.play('dust');
@@ -6380,8 +6381,9 @@ class PlayState extends MusicBeatState
 		FlxG.watch.addQuick("beatShit", curBeat);
 		FlxG.watch.addQuick("stepShit", curStep);
 
-		// RESET = Quick Game Over Screen
-		if (controls.RESET && !inCutscene && !endingSong)
+		// RESET = Quick Game Over Screenif (PlayState.SONG.stage.toLowerCase() == 'victory')
+		{
+		if (controls.RESET && !inCutscene && !endingSong && SONG.stage.toLowerCase() != 'victory')
 		{
 			health = 0;
 			trace("RESET = True");
