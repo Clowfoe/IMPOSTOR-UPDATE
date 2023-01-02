@@ -1443,7 +1443,9 @@ class PlayState extends MusicBeatState
 				whiteAwkward.antialiasing = true;
 				add(whiteAwkward);
 
-				if (isStoryMode == true)
+				trace('test lol, ' + SONG.song.toLowerCase());
+
+				if (!isStoryMode && SONG.song.toLowerCase() != 'oversight')
 				{
 					henryTeleporter = new FlxSprite(998, 620).loadGraphic(Paths.image('airship/newAirship/Teleporter', 'impostor'));
 					henryTeleporter.antialiasing = true;
@@ -2487,6 +2489,7 @@ class PlayState extends MusicBeatState
 					bfvent.scrollFactor.set(1, 1);
 					bfvent.active = true;
 					bfvent.antialiasing = true;
+					bfvent.alpha = 0.001;
 					add(bfvent);
 				}
 
@@ -4774,6 +4777,10 @@ class PlayState extends MusicBeatState
 		switch(curStage.toLowerCase()){
 			case 'cargo':
 				camHUD.visible = false;
+			case 'defeat':
+				botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			
 			case 'finalem':
 				camHUD.alpha = 0.001;
 				healthBar.visible = false;
@@ -7131,9 +7138,9 @@ class PlayState extends MusicBeatState
 					KillNotes();
 					
 					vocals.volume = 0;
-					FlxG.sound.music.volume = 0;
-					vocals.pause();
-					FlxG.sound.music.pause();
+
+					canPause = false;
+					paused = true;
 
 					FlxG.sound.play(Paths.sound('edefeat', 'impostor'));
 
@@ -7158,12 +7165,12 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 0.5;
 						triggerEventNote('Camera Follow Pos', '750', '450');
 					});
-					new FlxTimer().start(2.6, function(tmr:FlxTimer)
+					new FlxTimer().start(2.7, function(tmr:FlxTimer)
 					{
 						dad.playAnim('kill3');
 						dad.specialAnim = true;
 					});
-					new FlxTimer().start(3.3, function(tmr:FlxTimer)
+					new FlxTimer().start(3.4, function(tmr:FlxTimer)
 					{
 						openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
 					});
@@ -7420,6 +7427,7 @@ class PlayState extends MusicBeatState
 
 					triggerEventNote('Play Animation', 'liveReaction', 'dad');
 					bfvent.animation.play('vent');
+					bfvent.alpha = 1;
 					ldSpeaker.animation.play('boom');
 					ldSpeaker.visible = true;
 				

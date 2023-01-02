@@ -449,7 +449,7 @@ class AmongStoryMenuState extends MusicBeatState
 				weekLines.add(weekLine2);
 				weekLines.add(weekLine3);
 
-				if(!unlockedWeek[i]){
+				if(!unlockedWeek[8]){
 					weekLine.alpha = 0.5;
 					weekLine2.alpha = 0.5;
 					weekLine3.alpha = 0.5;
@@ -499,7 +499,7 @@ class AmongStoryMenuState extends MusicBeatState
 				weekLines.add(weekLine2);
 				weekLines.add(weekLine3);
 
-				if(!unlockedWeek[i]){
+				if(!unlockedWeek[10]){
 					weekLine.alpha = 0.5;
 					weekLine2.alpha = 0.5;
 					weekLine3.alpha = 0.5;
@@ -663,14 +663,14 @@ class AmongStoryMenuState extends MusicBeatState
 							shipPlayAnim("right");
 						}
 
-						if ((controls.UI_UP_P || FlxG.mouse.wheel > 0) && unlockedWeek[11])
+						if ((controls.UI_UP_P || FlxG.mouse.wheel > 0) && unlockedWeek[10])
 						{
 							changeWeek(9);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("up");
 						}
 
-						if ((controls.UI_DOWN_P || FlxG.mouse.wheel < 0) && unlockedWeek[10])
+						if ((controls.UI_DOWN_P || FlxG.mouse.wheel < 0) && unlockedWeek[9])
 						{
 							changeWeek(8);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -692,7 +692,7 @@ class AmongStoryMenuState extends MusicBeatState
 							shipPlayAnim("right");
 						}
 
-						if ((controls.UI_DOWN_P || FlxG.mouse.wheel < 0) && unlockedWeek[9])
+						if ((controls.UI_DOWN_P || FlxG.mouse.wheel < 0) && unlockedWeek[8])
 						{
 							changeWeek(6);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
