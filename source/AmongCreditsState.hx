@@ -51,6 +51,7 @@ class AmongCreditsState extends MusicBeatState
         ['Gonk',				'gonk',		"Working on Impostor has been a ton of fun honestly, was really cool to be a part of something special like this. I'm also the reason crewicide is in, dumb joke song based off a dream I had and its probably my favourite thing I worked on in the mod, It Funny, makes Me Lol",	'https://www.youtube.com/watch?v=rZP7kWOMPzI'],
         ['gibz',				'gibz',		"shit idk , charted a few songs",	'https://twitter.com/9766Gibz'],
         ['thales',				'thalesrealthistime',		"I guess I'm the closest to a Jorsawsee director in the mod? Created / Voiced Warchief and charted a lot, making sure everything was playable. Working with everyone was a pleasure, but never tell me to chart two 4+ minute songs again.",	'https://twitter.com/MoonlessShift'],
+        ['kal',				'kal',		"i love snas\n-art by @Butholeeo",	'https://twitter.com/Kal_050'],
         
         ['monotone\ndoc',				'monotone',		"please help they trapped me in the code of the mod",	'https://twitter.com/MonotoneDoc'],
         ['amongus\nfan',				'cooper',		"i did nothing for this mod but let them use red mungus but i get a quote for having cancer",	'https://twitter.com/amongusfan24'],
