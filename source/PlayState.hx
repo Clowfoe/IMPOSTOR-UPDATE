@@ -5181,8 +5181,8 @@ class PlayState extends MusicBeatState
 			ziffyStart.animation.play("idle", true);
 			ziffyStart.screenCenter(XY);
 			ziffyStart.y -= 120;
+			camHUD.alpha = 0;
 		}
-		camHUD.alpha = 0;
 
 		new FlxTimer().start(0.3, function(tmr:FlxTimer)
 		{
