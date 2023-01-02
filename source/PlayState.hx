@@ -8761,93 +8761,23 @@ class PlayState extends MusicBeatState
 			else
 			{
 				trace('WENT BACK TO FREEPLAY??');
-				var pretenderNext = (Paths.formatToSongPath(SONG.song) == "pinkwave");
-				var armedNext = (Paths.formatToSongPath(SONG.song) == "reinforcements");
-				if (pretenderNext)
+			
+				cancelFadeTween();
+				CustomFadeTransition.nextCamera = camOther;
+				if (FlxTransitionableState.skipNextTransIn)
 				{
-					camZooming = true;
-					greymira.alpha = 0;
-					cyanmira.alpha = 0;
-					greytender.alpha = 1;
-					noootomatomongus.alpha = 1;
-					longfuckery.alpha = 1;
-					noootomatomongus.animation.play('anim');
-					longfuckery.animation.play('anim');
-					greytender.animation.play('anim');
-					ventNotSus.animation.play('anim');
-					pretenderDark.animation.play('anim');
-					FlxG.sound.play(Paths.sound('pretender_kill', 'impostor'));
-					defaultCamZoom = 0.75;
-
-					FlxTween.tween(camHUD, {alpha: 0}, 0.4);
-					FlxTween.tween(gf, {alpha: 0.1}, 0.4);
-					FlxTween.tween(dad, {alpha: 0.25}, 0.4);
-					FlxTween.tween(boyfriend, {alpha: 0.25}, 0.4);
-
-					new FlxTimer().start(9, function(tmr:FlxTimer)
-					{
-						cancelFadeTween();
-						CustomFadeTransition.nextCamera = camOther;
-						if (FlxTransitionableState.skipNextTransIn)
-						{
-							CustomFadeTransition.nextCamera = null;
-						}
-						MusicBeatState.switchState(new AmongFreeplayState());
-						FlxG.sound.playMusic(Paths.music('freakyMenu'));
-						usedPractice = false;
-						changedDifficulty = false;
-						cpuControlled = false;
-					});
+					CustomFadeTransition.nextCamera = null;
 				}
-				if (armedNext)
+				var beansValue:Int = Std.int(songScore / 600);
+				add(new BeansPopup(beansValue, camOther));
+				new FlxTimer().start(4, function(tmr:FlxTimer)
 				{
-					FlxTween.tween(camHUD, {alpha: 0}, 0.4);
-					FlxG.sound.play(Paths.sound('rhm_crash', 'impostor'));
-					dad.playAnim('armed');
-					dad.specialAnim = true;
-					mom.playAnim('armed');
-					mom.specialAnim = true;
-					
-					new FlxTimer().start(2.1, function(tmr:FlxTimer)
-					{
-						camGame.shake(0.005, 0.9);
-					});
-
-					new FlxTimer().start(2.8, function(tmr:FlxTimer)
-					{
-						armedGuy.alpha = 1;
-						armedGuy.animation.play('crash');
-					});
-					new FlxTimer().start(3, function(tmr:FlxTimer)
-					{
-						camGame.alpha = 0;
-						camOther.flash(FlxColor.WHITE, 3);
-					});
-					new FlxTimer().start(6, function(tmr:FlxTimer)
-					{
-						cancelFadeTween();
-						MusicBeatState.switchState(new AmongFreeplayState());
-						FlxG.sound.playMusic(Paths.music('freakyMenu'));
-					});
-				}
-				else{
-					cancelFadeTween();
-					CustomFadeTransition.nextCamera = camOther;
-					if (FlxTransitionableState.skipNextTransIn)
-					{
-						CustomFadeTransition.nextCamera = null;
-					}
-					var beansValue:Int = Std.int(songScore / 600);
-					add(new BeansPopup(beansValue, camOther));
-					new FlxTimer().start(4, function(tmr:FlxTimer)
-					{
-						MusicBeatState.switchState(new AmongFreeplayState());
-						FlxG.sound.playMusic(Paths.music('freakyMenu'));
-						usedPractice = false;
-						changedDifficulty = false;
-						cpuControlled = false;
-					});
-				}
+					MusicBeatState.switchState(new AmongFreeplayState());
+					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					usedPractice = false;
+					changedDifficulty = false;
+					cpuControlled = false;
+				});
 			}
 			transitioning = true;
 		}
