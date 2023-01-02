@@ -4339,7 +4339,7 @@ class PlayState extends MusicBeatState
 						ziffyStart.screenCenter(XY);
 						ziffyStart.y -= 120;
 					}
-					camHUD.alpha = 0;
+					camHUD.alpha = 1;
 
 				default:
 					startCountdown();
@@ -5184,7 +5184,7 @@ class PlayState extends MusicBeatState
 			ziffyStart.screenCenter(XY);
 			ziffyStart.y -= 120;
 		}
-		camHUD.alpha = 0;
+		camHUD.alpha = 1;
 
 		new FlxTimer().start(0.3, function(tmr:FlxTimer)
 		{
