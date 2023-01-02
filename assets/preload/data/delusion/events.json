@@ -1,6 +1,6 @@
 {
 	"song": {
-		"speed": 2.9,
+		"speed": 2.8,
 		"stage": "grey",
 		"player1": "bfairship",
 		"player2": "grey",
@@ -36,7 +36,15 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						2848.10126582278,
+						-1,
+						"HUD Fade",
+						"0",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -558,15 +566,6 @@
 						"9999"
 					]
 				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
