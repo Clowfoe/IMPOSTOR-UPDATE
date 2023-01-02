@@ -6381,8 +6381,9 @@ class PlayState extends MusicBeatState
 		FlxG.watch.addQuick("beatShit", curBeat);
 		FlxG.watch.addQuick("stepShit", curStep);
 
-		// RESET = Quick Game Over Screenif (PlayState.SONG.stage.toLowerCase() == 'victory')
-		{
+		// RESET = Quick Game Over Screenif (PlayState.SONG.stage.toLowerCase() == 'victory') 
+		//{
+		//clow idk what the fuck ur doin but i would like to compile -rzbd
 		if (controls.RESET && !inCutscene && !endingSong && SONG.stage.toLowerCase() != 'victory')
 		{
 			health = 0;
