@@ -458,6 +458,7 @@ class PlayState extends MusicBeatState
 	var chairs:FlxSprite;
 	var vt_light:FlxSprite;
 	var bars:FlxSprite;
+	var bars2:FlxSprite;
 
 	//turbulence! :D
 	var turbsky:FlxSprite;
@@ -2149,10 +2150,10 @@ class PlayState extends MusicBeatState
 				bggreen.setGraphicSize(Std.int(bg.width * 2));
 				plagueBGGREEN.add(bggreen);
 
-				bggreen = new FlxSprite(0, -1000).loadGraphic(Paths.image('skeld/evilejected', 'impostor'));
+				bggreen = new FlxSprite(0, -1000).loadGraphic(Paths.image('skeld/brombom', 'impostor'));
 				bggreen.updateHitbox();
 				bggreen.antialiasing = true;
-				bggreen.scrollFactor.set(0.7, 0.7);
+				bggreen.scrollFactor.set(0.8, 0.8);
 				bggreen.active = false;
 				bggreen.setGraphicSize(Std.int(bg.width * 2));
 				plagueBGGREEN.add(bggreen);
@@ -3861,6 +3862,10 @@ class PlayState extends MusicBeatState
 		bars.scrollFactor.set();
 		bars.screenCenter();
 
+		bars2 = new FlxSprite(0, 0).loadGraphic(Paths.image('bars'));
+		bars2.scrollFactor.set();
+		bars2.screenCenter();
+
 		if(curStage.toLowerCase() == 'voting')
 		{
 			add(vt_light);
@@ -3869,7 +3874,7 @@ class PlayState extends MusicBeatState
 		if(curStage.toLowerCase() == 'finalem')
 			add(bars);
 		if(curStage.toLowerCase() == 'monotone')
-			add(bars);
+			add(bars2);
 
 		timeBarBG = new AttachedSprite('timeBar');
 		timeBarBG.x = timeTxt.x;
@@ -4173,6 +4178,7 @@ class PlayState extends MusicBeatState
 		ass2.cameras = [camHUD];
 		vt_light.cameras = [camHUD];
 		bars.cameras = [camHUD];
+		bars2.cameras = [camHUD];
 		//		ass3.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
