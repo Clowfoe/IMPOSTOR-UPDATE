@@ -3684,6 +3684,42 @@
 			},
 			{
 				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 150,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 150
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 150
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 150
+			},
+			{
+				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
@@ -3696,16 +3732,19 @@
 		"player3": "oldgf",
 		"isHey": false,
 		"cutsceneType": "none",
-		"song": "Alpha-Moogus",
 		"isSpooky": false,
+		"allowGFskin": true,
+		"song": "Alpha-Moogus",
 		"validScore": true,
+		"allowPet": true,
 		"speed": 2.5,
 		"isMoody": false,
 		"sectionLengths": [],
-		"uiType": "normal",
-		"stage": "alpha",
-		"sections": 0,
+		"allowBFskin": true,
 		"needsVoices": true,
+		"sections": 0,
+		"stage": "alpha",
+		"uiType": "normal",
 		"gf": "gf",
 		"bpm": 150
 	}

@@ -7,6 +7,12 @@ import flixel.graphics.FlxGraphic;
 import Controls;
 import AmongFreeplayState.FreeplayWeek;
 
+enum FinaleState{
+	NOT_UNLOCKED;
+	NOT_PLAYED;
+	COMPLETED;
+}
+
 class ClientPrefs {
 	//TO DO: Redo ClientPrefs in a way that isn't too stupid
 	public static var downScroll:Bool = false;
@@ -32,6 +38,7 @@ class ClientPrefs {
 	public static var boughtArray:Array<Bool> = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 	// should be enough if u add more stuff fuck you >:(
 	public static var forceUnlockedSongs:Array<FreeplayWeek>;
+	public static var finaleState:FinaleState = NOT_UNLOCKED;
 		
 	public static var keyBinds:Map<String, Array<FlxKey>> = [
 		'note_left'		=> [A, LEFT],
@@ -85,6 +92,7 @@ class ClientPrefs {
 		FlxG.save.data.boughtArray = boughtArray;
 		FlxG.save.data.forceUnlockedSongs = forceUnlockedSongs;
 		FlxG.save.data.beans = beans;
+		FlxG.save.data.finaleState = finaleState;
 
 		FlxG.save.data.downScroll = downScroll;
 		FlxG.save.data.middleScroll = middleScroll;
@@ -133,6 +141,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.beans != null){
 			beans = FlxG.save.data.beans;
+		}
+		if(FlxG.save.data.finaleState != null){
+			finaleState = FlxG.save.data.finaleState;
 		}
 
 		if(FlxG.save.data.downScroll != null) {

@@ -96,6 +96,10 @@ class ShopState extends MusicBeatState
 
     var localBeans:Int;
 
+    var petReset:FlxSprite;
+    var gfReset:FlxSprite;
+    var bfReset:FlxSprite;
+
     /*
         DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS 
         DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS DONT ADD ANY NEW CHARACTERS TO THIS 
@@ -145,17 +149,17 @@ class ShopState extends MusicBeatState
         ['left', 'bf', 'gf', 0, true, 'GF', "The default Girlfriend skin. Just in case you're not feeling the new looks.", GF],
 
         ['top', 'bfpolus', 'gfpolus', 450, false, 'Polus GF', "Unlocked by completing the fifth week.", GF, COMPLETED, ['magmatic', 'ashes', 'boiling-point']],
-        ['top', 'gfpolus', 'snowball', 300, false, 'Snowball', "pet", PET],
-        ['right', 'bfsauce', 'ham', 300, false, 'Hammy', "pet", PET],
+        ['top', 'gfpolus', 'snowball', 300, false, 'Snowball', " ", PET],
+        ['right', 'bfsauce', 'ham', 300, false, 'Hammy', " ", PET],
 
-        ['bottom', 'bfg', 'dog', 300, false, 'Doggy', "pet", PET],
-        ['bottom', 'ghostgf', 'frankendog', 300, false, 'Frankendog', "pet", PET],
+        ['bottom', 'bfg', 'dog', 300, false, 'Doggy', " ", PET],
+        ['bottom', 'ghostgf', 'frankendog', 300, false, 'Frankendog', " ", PET],
 
-        ['left', 'redp', 'minicrewmate', 300, false, 'Crewmate', "pet", PET],
-        ['left', 'minicrewmate', 'tomong', 300, false, 'Tomongus', "pet", PET],
+        ['left', 'redp', 'minicrewmate', 300, false, 'Crewmate', " ", PET],
+        ['left', 'minicrewmate', 'tomong', 300, false, 'Tomongus', " ", PET],
 
-        ['top', 'bfairship', 'crab', 300, false, 'Bedcrab', "pet", PET],
-        ['left', 'crab', 'ufo', 300, false, 'UFO', "pet", PET],
+        ['top', 'bfairship', 'crab', 300, false, 'Bedcrab', " ", PET],
+        ['left', 'crab', 'ufo', 300, false, 'UFO', " ", PET],
 
         
         ['left', 'gf', 'stick-bf', 375, false, 'Stickmin BF', "Unlocked by completing Henry's week.", BF, COMPLETED, ['titular', 'reinforcements', 'greatest-plan', 'armed'], true, "Someone told me about some broken old device lying around the airship and i dont think anyones cleaned it up yet.\nMight wanna check that out sometime."],
@@ -341,6 +345,18 @@ class ShopState extends MusicBeatState
 
     }
 
+    function resetChar(id:Int){
+        equipbutton.animation.play('equipped');
+        switch(id){
+            case 0:
+                ClientPrefs.charOverrides[0] = 'bf';
+            case 1:
+                ClientPrefs.charOverrides[1] = 'gf';
+            case 2:
+                ClientPrefs.charOverrides[2] = 'none';
+        }
+    }
+
     function arrangeNodes(){
         //test for now; just a linear path from one to another;
         nodes.forEach(function(node:ShopNode) {
@@ -492,11 +508,33 @@ class ShopState extends MusicBeatState
     function equipNode(node:ShopNode){
         switch(node.skinType){
             case BF:
+                if(node.name == ClientPrefs.charOverrides[0]){
+                    ClientPrefs.charOverrides[0] = 'bf';
+                    updateButton(node);
+                    ClientPrefs.saveSettings();
+                    updateNodeVisibility();
+                    return;
+                }
                 ClientPrefs.charOverrides[0] = node.name;
             case GF:
+                if(node.name == ClientPrefs.charOverrides[1]){
+                    ClientPrefs.charOverrides[1] = 'gf';
+                    updateButton(node);
+                    ClientPrefs.saveSettings();
+                    updateNodeVisibility();
+                    return;
+                }
                 ClientPrefs.charOverrides[1] = node.name;
             case PET:
+                if(node.name == ClientPrefs.charOverrides[2]){
+                    ClientPrefs.charOverrides[2] = '';
+                    updateButton(node);
+                    ClientPrefs.saveSettings();
+                    updateNodeVisibility();
+                    return;
+                }
                 ClientPrefs.charOverrides[2] = node.name;
+
         }
         // equipThing.animation.play('check');
         updateButton(node);

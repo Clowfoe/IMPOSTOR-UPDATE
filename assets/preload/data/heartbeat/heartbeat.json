@@ -4782,9 +4782,18 @@
 				"bpm": 87,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 87,
+				"changeBPM": false,
+				"mustHitSection": true
 			}
 		],
-		"player3": "gf",
+		"player3": "gfmira",
 		"song": "Heartbeat",
 		"stage": "plantroom",
 		"needsVoices": true,

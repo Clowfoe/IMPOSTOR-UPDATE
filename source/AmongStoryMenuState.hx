@@ -21,6 +21,10 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.net.curl.CURLCode;
 import flixel.input.mouse.FlxMouseEventManager;
+import ClientPrefs;
+import ChromaticAbberation;
+import openfl.filters.ShaderFilter;
+import flixel.math.FlxPoint;
 
 using StringTools;
 
@@ -69,11 +73,49 @@ class AmongStoryMenuState extends MusicBeatState
 	public var camSpace:FlxCamera;
 	public var camScreen:FlxCamera;
 
-	var unlockedWeek:Array<Bool> = [true, true, true, true, true, true, true, true, false, true, true, true]; //weeks in order of files in preload/weeks
+	//                             red[0], green[1], yellowWeek[2] black[3] maroon[4] grey[5] pink[6] jorsawsee?[7] henry[8] tomong[9] loggo[10] alpha[11]
+	//var unlockedWeek:Array<Bool> = [true, false, false, false, true, false, false, true, false, false, false, false]; //weeks in order of files in preload/weeks
+	
+	var unlockedWeek:Array<Bool> = [true, true, true, true, true, true, true, true, true, true, true, true];
+
+	var localFinaleState:FinaleState;
+	var finaleAura:FlxSprite;
+
+	var caShader:ChromaticAbberation;
+
+	function doTheThing(){
+
+		if(Highscore.getScore('meltdown', 2) != 0){
+			unlockedWeek[1] = true;
+		}
+		if(Highscore.getScore('ejected', 2) != 0){
+			unlockedWeek[10] = true;
+			unlockedWeek[9] = true;
+			unlockedWeek[2] = true;
+		}
+		if(Highscore.getScore('double-kill', 2) != 0){
+			unlockedWeek[3] = true;
+			//
+		}
+		if(Highscore.getScore('titular', 2) != 0){
+			unlockedWeek[8] = true;
+		}
+		if(Highscore.getScore('boiling-point', 2) != 0){
+			unlockedWeek[5] = true;
+		}
+		if(Highscore.getScore('neurotic', 2) != 0){
+			unlockedWeek[6] = true;
+		}
+
+	}
 
 	override function create()
 	{
 		super.create();
+
+		localFinaleState = ClientPrefs.finaleState;
+
+		doTheThing();
 
 		WeekData.reloadWeekFiles(true);
 
@@ -90,6 +132,14 @@ class AmongStoryMenuState extends MusicBeatState
 
 		camSpace.zoom = 0.7;
 
+		if(localFinaleState == NOT_PLAYED){
+			caShader = new ChromaticAbberation(0);
+			add(caShader);
+			caShader.amount = 0;
+			var filter2:ShaderFilter = new ShaderFilter(caShader.shader);
+			camSpace.setFilters([filter2]);
+		}
+
 		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
 		starsBG.setPosition(111.3, 67.95);
         starsBG.antialiasing = true;
@@ -103,6 +153,12 @@ class AmongStoryMenuState extends MusicBeatState
         starsFG.antialiasing = true;
         starsFG.scrollFactor.set();
         add(starsFG);
+
+		finaleAura = new FlxSprite(710, -500).loadGraphic(Paths.image('storymenu/finaleAura', 'impostor'));
+        finaleAura.updateHitbox();
+		finaleAura.antialiasing = true;
+		finaleAura.scale.set(2.5,2.5);
+        if(localFinaleState == NOT_PLAYED) add(finaleAura);
 
 		shipAnimOffsets = new Map<String, Array<Dynamic>>();
 
@@ -515,6 +571,7 @@ class AmongStoryMenuState extends MusicBeatState
 		FlxG.camera.follow(ship, LOCKON, 1);
 
 		changeWeek();
+	
 	}
 
 	override function closeSubState()
@@ -539,6 +596,14 @@ class AmongStoryMenuState extends MusicBeatState
 		starsFG.x = FlxMath.lerp(starsFG.x, starsFG.x - 1, CoolUtil.boundTo(elapsed * 9, 0, 1));
 
 		var accepted = controls.ACCEPT;
+
+		if(localFinaleState == NOT_PLAYED){
+			caShader.amount = -2 / (FlxMath.distanceToPoint(ship, FlxPoint.get(1505, 0))/100);
+			camSpace.shake(0.5/FlxMath.distanceToPoint(ship, FlxPoint.get(1505, 0))/2, 0.05);
+			camScreen.shake(0.3/FlxMath.distanceToPoint(ship, FlxPoint.get(1505, 0))/2, 0.05);
+
+			//trace(caShader.amount);
+		}
 
 		if (!movedBack && !selectedWeek)
 		{
@@ -743,7 +808,7 @@ class AmongStoryMenuState extends MusicBeatState
 
 			if (controls.ACCEPT && curWeek != 0)
 			{
-				if(curWeek == 4){
+				if(curWeek == 4 && localFinaleState != NOT_PLAYED){
 					FlxG.sound.music.fadeOut(1.2, 0);
 					camScreen.fade(FlxColor.BLACK, 1.2, false, function()
 					{
@@ -795,7 +860,15 @@ class AmongStoryMenuState extends MusicBeatState
 			}
 
 			// Nevermind that's stupid lmao
-			PlayState.storyPlaylist = songArray;
+			if(curWeek == 4 && localFinaleState == NOT_PLAYED) {
+				PlayState.storyPlaylist = ['finale'];
+			}else if(curWeek == 4 && localFinaleState == NOT_UNLOCKED) {
+				PlayState.storyPlaylist = ['defeat'];
+			}else if(curWeek == 4 && localFinaleState == COMPLETED){
+				PlayState.storyPlaylist = ['defeat'];
+			}else{
+				PlayState.storyPlaylist = songArray;
+			}
 			PlayState.isStoryMode = true;
 			selectedWeek = true;
 
@@ -909,6 +982,19 @@ class AmongStoryMenuState extends MusicBeatState
 		else
 			txtWeekNumber.x = FlxG.width / 2.4;
 		txtWeekTitle.borderSize = 2.2;
+
+		if(curWeek == 4) {
+			txtTracklist.visible = false;
+			if(localFinaleState == NOT_PLAYED){
+				txtWeekTitle.color = 0xFFFF0000;
+				txtWeekTitle.text = 'FINALE'; 
+			}else{
+				txtWeekTitle.text = 'DEFEAT';
+				txtWeekTitle.color = 0xFFFFFFFF;
+			}
+		}
+		
+		
 
 		#if !switch
 		intendedScore = Highscore.getWeekScore(WeekData.weeksList[curWeek], 2);

@@ -75,6 +75,8 @@ class AmongFreeplayState extends MusicBeatState
 	var prevWeek:Int;
 	var prevPort:Dynamic;
 
+	var lockMovement:Bool = false;
+
 	var portraitArray:Int;
 
 	var upScroll:Bool;
@@ -317,7 +319,7 @@ class AmongFreeplayState extends MusicBeatState
 		changeWeek(0);
 		changeSelection(0);
 		changePortrait();
-
+		
 		CustomFadeTransition.nextCamera = camOther;
 		
 	}
@@ -362,6 +364,7 @@ class AmongFreeplayState extends MusicBeatState
 
 			infoText.text = "Score: " + lerpScore + '\n' + "Rating: " + Math.floor(lerpRating * 100) + '\n';
 
+			if(!lockMovement){
 			if (upScroll)
 				changeSelection(-1);
 			if (downScroll)
@@ -406,9 +409,11 @@ class AmongFreeplayState extends MusicBeatState
 								if(localWeeks[i].songs[g][7] == false && localWeeks[i].songs[g][0] == listOfButtons[curSelected].songName){
 									localWeeks[i].songs[g][7] = true;
 									listOfButtons[curSelected].unlockAnim();
+									lockMovement = true;
 									new FlxTimer().start(1.45, function(tmr:FlxTimer)
 									{
 										changePortrait(true);
+										lockMovement = false;
 									});
 									localBeans -= listOfButtons[curSelected].price;
 									beanText.text = Std.string(localBeans);
@@ -438,6 +443,7 @@ class AmongFreeplayState extends MusicBeatState
 
 					ClientPrefs.saveSettings();
 				}
+			}
 			}
 		}
 		infoText.x = FlxG.width - infoText.width - 6;
@@ -549,7 +555,7 @@ class AmongFreeplayState extends MusicBeatState
 		});
 
 		weeks.push({
-			songs: [["Identity Crisis", "monotone", 'monotone', FlxColor.BLACK, SPECIAL, ['meltdown', 'ejected', 'double-kill', 'defeat', 'boiling-point', 'neurotic', 'pretender'], 0, false]],
+			songs: [["Identity Crisis", "monotone", 'monotone', FlxColor.BLACK, SPECIAL, ['meltdown', 'ejected', 'double-kill', 'defeat', 'boiling-point', 'neurotic', 'pretender'], 0, true]],
 			section: 0
 		});
 
@@ -686,9 +692,6 @@ class AmongFreeplayState extends MusicBeatState
 
 	function changeWeek(change:Int)
 	{
-		if(buttonTween != null) buttonTween.cancel();
-		if(textTween != null) textTween.cancel();
-		if(lockTween != null) lockTween.cancel();
 
 		prevWeek = curWeek;
 
@@ -709,6 +712,13 @@ class AmongFreeplayState extends MusicBeatState
 
 		for (i in 0...listOfButtons.length)
 		{
+			FlxTween.cancelTweensOf(listOfButtons[i]);
+			FlxTween.cancelTweensOf(listOfButtons[i].spriteOne);
+			FlxTween.cancelTweensOf(listOfButtons[i].icon);
+			FlxTween.cancelTweensOf(listOfButtons[i].lock);
+			FlxTween.cancelTweensOf(listOfButtons[i].songText);
+			FlxTween.cancelTweensOf(listOfButtons[i].bean);
+			FlxTween.cancelTweensOf(listOfButtons[i].priceText);
 			listOfButtons[i].destroy();
 			listOfButtons[i].spriteOne.destroy();
 			listOfButtons[i].icon.destroy();

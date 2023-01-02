@@ -3005,21 +3005,23 @@ class PlayState extends MusicBeatState
 				add(momGroup);
 		}
 
+
 		add(gfGroup);
 		add(bfGhost);
 		add(dadGhost);
+		
+		loBlack = new FlxSprite().makeGraphic(FlxG.width * 4, FlxG.height + 700, FlxColor.BLACK);
+		loBlack.alpha = 0;
+		loBlack.screenCenter(X);
+		loBlack.screenCenter(Y);
+		add(loBlack);
+
 		add(dadGroup);
 		if (curStage.toLowerCase() == 'warehouse'  || curStage.toLowerCase() == 'youtuber' || curStage.toLowerCase() == 'defeat' || curStage.toLowerCase() == 'finalem') //kinda primitive but fuck it we ball
 		{
 			remove(dadGhost);
 			remove(dadGroup);
 		}
-
-		loBlack = new FlxSprite().makeGraphic(FlxG.width * 4, FlxG.height + 700, FlxColor.BLACK);
-		loBlack.alpha = 0;
-		loBlack.screenCenter(X);
-		loBlack.screenCenter(Y);
-		add(loBlack);
 
 		// Shitty layering but whatev it works LOL
 		if (curStage == 'limo')
@@ -3777,9 +3779,12 @@ class PlayState extends MusicBeatState
 		pet = new Pet(0, 0, ClientPrefs.charOverrides[2]);
 		pet.x += pet.positionArray[0];
 		pet.y += pet.positionArray[1];
-		pet.alpha = 0.001;
-		if (curStage.toLowerCase() != 'alpha' && curStage.toLowerCase() != 'defeat'  && curStage.toLowerCase() != 'who' && !SONG.allowPet)
+		pet.alpha = 0;
+		if (curStage.toLowerCase() != 'alpha' || curStage.toLowerCase() != 'defeat'  ||  curStage.toLowerCase() != 'who' || !SONG.allowPet || ClientPrefs.charOverrides[2] != '')
 		{
+			pet.alpha = 0;
+			//boyfriendGroup.add(pet);
+		}else{
 			pet.alpha = 1;
 			boyfriendGroup.add(pet);
 		}
@@ -4300,8 +4305,6 @@ class PlayState extends MusicBeatState
 				case 'danger':
 					startVideo('danger');
 					
-				case 'finale':
-					startVideo('finale');
 
 				case "armed":
 					boyfriend.alpha = 0.001;
@@ -8608,6 +8611,10 @@ class PlayState extends MusicBeatState
 				{
 					var beansValue:Int = Std.int(campaignScore / 600);
 					add(new BeansPopup(beansValue, camOther));
+					if(Paths.formatToSongPath(SONG.song) == "finale" && ClientPrefs.finaleState != COMPLETED){
+						ClientPrefs.finaleState = COMPLETED;
+        				ClientPrefs.saveSettings();
+					}
 					new FlxTimer().start(4, function(tmr:FlxTimer)
 					{
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
@@ -8755,23 +8762,97 @@ class PlayState extends MusicBeatState
 			else
 			{
 				trace('WENT BACK TO FREEPLAY??');
-			
-				cancelFadeTween();
-				CustomFadeTransition.nextCamera = camOther;
-				if (FlxTransitionableState.skipNextTransIn)
-				{
-					CustomFadeTransition.nextCamera = null;
+				if(Paths.formatToSongPath(SONG.song) == "identity-crisis" && ClientPrefs.finaleState == NOT_UNLOCKED){
+					cancelFadeTween();
+					MusicBeatState.switchState(new BlackRematchState());
 				}
-				var beansValue:Int = Std.int(songScore / 600);
-				add(new BeansPopup(beansValue, camOther));
-				new FlxTimer().start(4, function(tmr:FlxTimer)
+				var pretenderNext = (Paths.formatToSongPath(SONG.song) == "pinkwave");
+				var armedNext = (Paths.formatToSongPath(SONG.song) == "reinforcements");
+				if (pretenderNext)
 				{
-					MusicBeatState.switchState(new AmongFreeplayState());
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
-					usedPractice = false;
-					changedDifficulty = false;
-					cpuControlled = false;
-				});
+					camZooming = true;
+					greymira.alpha = 0;
+					cyanmira.alpha = 0;
+					greytender.alpha = 1;
+					noootomatomongus.alpha = 1;
+					longfuckery.alpha = 1;
+					noootomatomongus.animation.play('anim');
+					longfuckery.animation.play('anim');
+					greytender.animation.play('anim');
+					ventNotSus.animation.play('anim');
+					pretenderDark.animation.play('anim');
+					FlxG.sound.play(Paths.sound('pretender_kill', 'impostor'));
+					defaultCamZoom = 0.75;
+
+					FlxTween.tween(camHUD, {alpha: 0}, 0.4);
+					FlxTween.tween(gf, {alpha: 0.1}, 0.4);
+					FlxTween.tween(dad, {alpha: 0.25}, 0.4);
+					FlxTween.tween(boyfriend, {alpha: 0.25}, 0.4);
+
+					new FlxTimer().start(9, function(tmr:FlxTimer)
+					{
+						cancelFadeTween();
+						CustomFadeTransition.nextCamera = camOther;
+						if (FlxTransitionableState.skipNextTransIn)
+						{
+							CustomFadeTransition.nextCamera = null;
+						}
+						MusicBeatState.switchState(new AmongFreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+						usedPractice = false;
+						changedDifficulty = false;
+						cpuControlled = false;
+					});
+				}
+				if (armedNext)
+				{
+					FlxTween.tween(camHUD, {alpha: 0}, 0.4);
+					FlxG.sound.play(Paths.sound('rhm_crash', 'impostor'));
+					dad.playAnim('armed');
+					dad.specialAnim = true;
+					mom.playAnim('armed');
+					mom.specialAnim = true;
+					
+					new FlxTimer().start(2.1, function(tmr:FlxTimer)
+					{
+						camGame.shake(0.005, 0.9);
+					});
+
+					new FlxTimer().start(2.8, function(tmr:FlxTimer)
+					{
+						armedGuy.alpha = 1;
+						armedGuy.animation.play('crash');
+					});
+					new FlxTimer().start(3, function(tmr:FlxTimer)
+					{
+						camGame.alpha = 0;
+						camOther.flash(FlxColor.WHITE, 3);
+					});
+					new FlxTimer().start(6, function(tmr:FlxTimer)
+					{
+						cancelFadeTween();
+						MusicBeatState.switchState(new AmongFreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					});
+				}
+				else{
+					cancelFadeTween();
+					CustomFadeTransition.nextCamera = camOther;
+					if (FlxTransitionableState.skipNextTransIn)
+					{
+						CustomFadeTransition.nextCamera = null;
+					}
+					var beansValue:Int = Std.int(songScore / 600);
+					add(new BeansPopup(beansValue, camOther));
+					new FlxTimer().start(4, function(tmr:FlxTimer)
+					{
+						MusicBeatState.switchState(new AmongFreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+						usedPractice = false;
+						changedDifficulty = false;
+						cpuControlled = false;
+					});
+				}
 			}
 			transitioning = true;
 		}

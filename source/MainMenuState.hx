@@ -21,6 +21,7 @@ import flixel.util.FlxTimer;
 import lime.app.Application;
 import Achievements;
 import editors.MasterEditorMenu;
+import ClientPrefs;
 
 using StringTools;
 
@@ -28,6 +29,8 @@ class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '4.0'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
+
+	var localFinaleState:FinaleState;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
@@ -45,9 +48,14 @@ class MainMenuState extends MusicBeatState
 	var redImpostor:FlxSprite;
 	var greenImpostor:FlxSprite;
 	var vignette:FlxSprite;
+	var glowyThing:FlxSprite;
 	override function create()
 	{
 		super.create();
+
+		//localFinaleState = ClientPrefs.finaleState;
+
+		localFinaleState = ClientPrefs.finaleState;
 
 		#if desktop
 		// Updating Discord Rich Presence
@@ -58,6 +66,7 @@ class MainMenuState extends MusicBeatState
 		{
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 		}
+		if(localFinaleState == NOT_PLAYED) FlxG.sound.playMusic(Paths.music('finaleMenu'));
 
 		persistentUpdate = persistentDraw = true;
 
@@ -107,12 +116,26 @@ class MainMenuState extends MusicBeatState
 		greenImpostor.scrollFactor.set();
 		add(greenImpostor);
 
+		if(localFinaleState == NOT_PLAYED){
+			greenImpostor.visible = false;
+			redImpostor.visible = false;
+		}
+
 		vignette = new FlxSprite(0, 0).loadGraphic(Paths.image('menuBooba/vignette', 'impostor'));
 		vignette.antialiasing = true;
 		vignette.updateHitbox();
 		vignette.active = false;
 		vignette.scrollFactor.set();
 		add(vignette);		
+
+		glowyThing = new FlxSprite(361, 438).loadGraphic(Paths.image('menuBooba/buttonglow', 'impostor'));
+		glowyThing.antialiasing = true;
+		glowyThing.scale.set(0.51, 0.51);
+		glowyThing.updateHitbox();
+		glowyThing.active = false;
+		glowyThing.scrollFactor.set();
+		if(localFinaleState != NOT_PLAYED) glowyThing.visible = false;
+		add(glowyThing);		
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
@@ -209,12 +232,17 @@ class MainMenuState extends MusicBeatState
 	var canClick:Bool = true;
 	var usingMouse:Bool = false;
 
+	var timerThing:Float = 0;
+
 	override function update(elapsed:Float)
 	{
 		if (FlxG.sound.music.volume < 0.8)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
+
+		timerThing += elapsed;
+		glowyThing.alpha = Math.sin(timerThing) + 0.4;
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{

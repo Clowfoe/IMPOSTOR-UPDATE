@@ -7050,12 +7050,14 @@
 				"mustHitSection": true
 			}
 		],
+		"allowBFskin": true,
 		"player3": "ghostgf",
+		"allowGFskin": true,
 		"song": "Meltdown",
 		"stage": "polus",
 		"needsVoices": true,
 		"validScore": true,
-		"speed": 2.4,
+		"speed": 3,
 		"bpm": 120
 	}
 }
