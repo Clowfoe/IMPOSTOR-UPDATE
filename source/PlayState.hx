@@ -4295,7 +4295,10 @@ class PlayState extends MusicBeatState
 				case 'sussus-toogus':
 					startVideo('toogus');
 					piss = false;
-				case 'lights-down'| 'mando' | 'dlow' | 'ashes' | 'magmatic'| 'heartbeat'| 'pinkwave'| 'delusion':
+				case 'mando':
+					startVideo('mando');
+					piss = false;
+				case 'lights-down'| 'dlow' | 'ashes' | 'magmatic'| 'heartbeat'| 'pinkwave'| 'delusion':
 					schoolIntro(doof);
 				
 				case 'boiling-point':
