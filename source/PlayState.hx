@@ -9962,6 +9962,49 @@ class PlayState extends MusicBeatState
 					camZooming = true;
 					FlxTween.tween(instance, {health: 0.05, bladeDistance: 150}, 4*Conductor.crochet/1000, {ease: FlxEase.quartOut});
 				}
+
+				if(curBeat == 32){
+					task = new TaskSong(0, 200, SONG.song.toLowerCase().replace(' ', '-'), 1);
+					task.cameras = [camOther];
+					add(task);
+					task.start();
+				}
+				else if(curBeat == 128){
+					task = new TaskSong(0, 200, SONG.song.toLowerCase().replace(' ', '-'), 2);
+					task.cameras = [camOther];
+					add(task);
+					task.start();
+				}
+				else if(curBeat == 160){
+					task = new TaskSong(0, 200, SONG.song.toLowerCase().replace(' ', '-'), 3);
+					task.cameras = [camOther];
+					add(task);
+					task.start();
+				}
+				else if(curBeat == 224){
+					task = new TaskSong(0, 200, SONG.song.toLowerCase().replace(' ', '-'), 4);
+					task.cameras = [camOther];
+					add(task);
+					task.start();
+				}
+				else if(curBeat == 256){
+					task = new TaskSong(0, 200, SONG.song.toLowerCase().replace(' ', '-'), 5);
+					task.cameras = [camOther];
+					add(task);
+					task.start();
+				}
+				else if(curBeat == 272){
+					task = new TaskSong(0, 200, SONG.song.toLowerCase().replace(' ', '-'), 6);
+					task.cameras = [camOther];
+					add(task);
+					task.start();
+				}
+				else if(curBeat == 336){
+					task = new TaskSong(0, 200, SONG.song.toLowerCase().replace(' ', '-'), 7);
+					task.cameras = [camOther];
+					add(task);
+					task.start();
+				}
 	
 			case 'victory':
 				if (curBeat % 2 == 0)
