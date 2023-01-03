@@ -680,20 +680,20 @@ class ShopState extends MusicBeatState
             ClientPrefs.saveSettings();
         }
 
-        if(FlxG.keys.justPressed.B){
-            add(new BeansPopup(50, camUpper));
-            localBeans += 50;
-            beanText.text = Std.string(localBeans);
-            FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-            trace('Giving beans');
-        }
-        if(FlxG.keys.justPressed.N){
-            add(new BeansPopup(-10, camUpper));
-            localBeans -= 10;
-            beanText.text = Std.string(localBeans);
-            FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-            trace('Giving beans');
-        }
+        // if(FlxG.keys.justPressed.B){
+        //     add(new BeansPopup(50, camUpper));
+        //     localBeans += 50;
+        //     beanText.text = Std.string(localBeans);
+        //     FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+        //     trace('Giving beans');
+        // }
+        // if(FlxG.keys.justPressed.N){
+        //     add(new BeansPopup(-10, camUpper));
+        //     localBeans -= 10;
+        //     beanText.text = Std.string(localBeans);
+        //     FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+        //     trace('Giving beans');
+        // }
 
         if (controls.BACK)
         {
