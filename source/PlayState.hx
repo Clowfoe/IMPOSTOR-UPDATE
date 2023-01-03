@@ -3836,6 +3836,8 @@ class PlayState extends MusicBeatState
 
 		if(SONG.stage.toLowerCase() == 'defeat')
 			STRUM_X = -278;
+		else
+			STRUM_X = 42;
 
 		strumLine = new FlxSprite(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, 50).makeGraphic(FlxG.width, 10);
 		if (ClientPrefs.downScroll)
