@@ -92,6 +92,8 @@ class Character extends FlxSprite
 		this.isPlayer = isPlayer;
 		antialiasing = ClientPrefs.globalAntialiasing;
 		
+		if (curCharacter == "GF_assets")
+			antialiasing = true;
 
 
 		var library:String = null;

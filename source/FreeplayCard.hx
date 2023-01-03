@@ -182,6 +182,8 @@ class FreeplayCard extends FlxSprite {
             }
         }
 
+        //locked = false;
+
         if(locked){
             lock.visible = true;
             //bean.visible = true;

@@ -68,6 +68,7 @@ class FlxVideo extends FlxBasic {
 	}
 
 	#if desktop
+
 	function checkFile(fileName:String):String
 	{
 		var pDir = "";

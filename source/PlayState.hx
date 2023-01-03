@@ -3701,7 +3701,8 @@ class PlayState extends MusicBeatState
 
 		if (SONG.player2 == 'black-run')
 		{
-			dadlegs.x = dad.x;
+			dadlegs.x = dad.x - 175;
+			dad.x += 10;
 			dadlegs.y = dad.y;
 		}
 		
@@ -4604,6 +4605,11 @@ class PlayState extends MusicBeatState
 					startCharacterPos(newDad, true);
 					newDad.alpha = 0.00001;
 					newDad.alreadyLoaded = false;
+					if (newCharacter == "blackalt")
+					{
+						newDad.x += 50;
+						newDad.y += 35;
+					}
 				}
 
 			case 2:
@@ -4674,8 +4680,11 @@ class PlayState extends MusicBeatState
 			bg.cameras = [camHUD];
 			add(bg);
 
-			(new FlxVideo(fileName)).finishCallback = function()
+			var vid:FlxVideo = new FlxVideo(fileName);
+
+			vid.finishCallback = function()
 			{
+				
 				remove(bg);
 				if (endingSong)
 				{
@@ -5841,7 +5850,7 @@ class PlayState extends MusicBeatState
 
 		if (dad.curCharacter == 'black-run')
 		{
-			dad.y = dadAnchorPoint[1] + legPosY[dadlegs.animation.curAnim.curFrame];
+			dad.y = (dadAnchorPoint[1] + legPosY[dadlegs.animation.curAnim.curFrame]) + 90;
 		}
 
 		if (curSong == 'Boiling Point')
