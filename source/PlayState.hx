@@ -1448,8 +1448,6 @@ class PlayState extends MusicBeatState
 				whiteAwkward.antialiasing = true;
 				add(whiteAwkward);
 
-				trace('test lol, ' + SONG.song.toLowerCase());
-
 				if (isStoryMode && SONG.song.toLowerCase() != 'oversight')
 				{
 					henryTeleporter = new FlxSprite(998, 620).loadGraphic(Paths.image('airship/newAirship/Teleporter', 'impostor'));
@@ -5249,11 +5247,8 @@ class PlayState extends MusicBeatState
 		// NEW SHIT
 		noteData = songData.notes;
 
-		trace(curSong.toLowerCase());
-
 		var otherChartData:String = 'voting-time';
 		if(curSong.toLowerCase() == 'monotone attack'){
-			trace('attack!!!!!!!!!!!!!!!!!!!!');
 			otherChartData = 'monotone-attack';
 		}
 		rmtjData = Song.loadFromJson(otherChartData + '-other', otherChartData).notes;
@@ -6983,13 +6978,11 @@ class PlayState extends MusicBeatState
 							}
 							if (daNote.mustPress)
 							{
-								trace('remgnosus');
 								mom.holdTimer = 0;						
 								mom.playAnim(animToPlay, true);
 							}
 							else
 							{
-								trace("worked 5776");
 								gf.holdTimer = 0;
 								gf.playAnim(animToPlay, true);
 										// dad.angle = 0;
@@ -9064,7 +9057,7 @@ class PlayState extends MusicBeatState
 			ghost.visible = true;
 
 			switch(curStage.toLowerCase()){
-				case 'who' | 'voting' | 'nuzzus':
+				case 'who' | 'voting' | 'nuzzus' | 'idk':
 					//erm
 				case 'cargo' | 'finalem':
 					FlxG.camera.zoom += 0.015;
@@ -9249,6 +9242,9 @@ class PlayState extends MusicBeatState
 		comboSpr.visible = !ClientPrefs.hideHud;
 
 		comboSpr.velocity.x += FlxG.random.int(1, 10);
+		if(curStage == 'idk') {
+			rating.visible = false;
+		}
 		add(rating);
 
 		if (!PlayState.isPixelStage)
@@ -9306,6 +9302,10 @@ class PlayState extends MusicBeatState
 			numScore.velocity.y -= FlxG.random.int(140, 160);
 			numScore.velocity.x = FlxG.random.float(-5, 5);
 			numScore.visible = !ClientPrefs.hideHud;
+
+			if(curStage == 'idk') {
+				numScore.visible = false;
+            }
 
 			if (combo >= 10 || combo == 0)
 				add(numScore);
@@ -9709,7 +9709,6 @@ class PlayState extends MusicBeatState
 				}
 				if (note.mustPress)
 				{
-					trace('remgnosus');
 					mom.holdTimer = 0;						
 					mom.playAnim(animToPlay, true);
 				}
