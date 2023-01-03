@@ -9,6 +9,7 @@ import StageData;
 import WalkingCrewmate;
 import WiggleEffect.WiggleEffectType;
 import editors.CharacterEditorState;
+import PlayVideoState;
 import editors.ChartingState;
 import flixel.FlxBasic;
 import flixel.FlxCamera;
@@ -8746,6 +8747,22 @@ class PlayState extends MusicBeatState
 						ClientPrefs.finaleState = COMPLETED;
         				ClientPrefs.saveSettings();
 					}
+					if(Paths.formatToSongPath(SONG.song) == "finale"){
+						cancelFadeTween();
+						FlxG.switchState(new CreditsVideo());
+					}
+	
+					if(Paths.formatToSongPath(SONG.song) == "meltdown"){
+						cancelFadeTween();
+						PlayVideoState.videoID = 'meltdown_afterscene';
+						MusicBeatState.switchState(new PlayVideoState());
+					}
+
+					if(Paths.formatToSongPath(SONG.song) == "armed"){
+						cancelFadeTween();
+						PlayVideoState.videoID = 'henryend';
+						MusicBeatState.switchState(new PlayVideoState());
+					}
 					new FlxTimer().start(4, function(tmr:FlxTimer)
 					{
 						FlxG.sound.playMusic(Paths.music('freakyMenu'));
@@ -8897,6 +8914,7 @@ class PlayState extends MusicBeatState
 					cancelFadeTween();
 					MusicBeatState.switchState(new BlackRematchState());
 				}
+
 				var pretenderNext = (Paths.formatToSongPath(SONG.song) == "pinkwave");
 				var armedNext = (Paths.formatToSongPath(SONG.song) == "reinforcements");
 				if (pretenderNext)
