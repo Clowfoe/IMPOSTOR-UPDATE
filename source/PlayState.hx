@@ -3877,7 +3877,7 @@ class PlayState extends MusicBeatState
 		if(curStage.toLowerCase() == 'finalem')
 			add(bars);
 		if(curStage.toLowerCase() == 'monotone')
-			add(bars2);
+			add(bars);
 
 		timeBarBG = new AttachedSprite('timeBar');
 		timeBarBG.x = timeTxt.x;
