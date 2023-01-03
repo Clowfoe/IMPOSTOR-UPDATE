@@ -35,10 +35,8 @@ class PlayVideoState extends MusicBeatState
     }
 
    function goToMenu(){
-		if(videoID != 'credits3'){
-			FlxG.sound.playMusic(Paths.music('freakyMenu'));
-		}
         LoadingState.loadAndSwitchState(new AmongStoryMenuState(), true);
+		FlxG.sound.playMusic(Paths.music('freakyMenu'));
    }
 
 	override function update(elapsed:Float)
