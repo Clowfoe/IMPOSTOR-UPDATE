@@ -3705,6 +3705,12 @@ class PlayState extends MusicBeatState
 			dad.x += 10;
 			dadlegs.y = dad.y;
 		}
+
+		if (SONG.player2 == "black")
+		{
+			dad.x += 500;
+			dad.y += 240;
+		}
 		
 		if (curStage.toLowerCase() == 'charles')
 		{
@@ -4612,6 +4618,7 @@ class PlayState extends MusicBeatState
 							newDad.y += 35;
 						case "blackold":
 							newDad.x += 400;
+					
 					}
 				}
 
