@@ -137,8 +137,8 @@ class Character extends FlxSprite
 				}
 
 				
-
-				json.scale /= 0.4; // scale factor that I did for the characters
+				if (curCharacter != "fella" || curCharacter != "bfChristmas" )
+					json.scale /= 0.4; // scale factor that I did for the characters
 
 
 				if(json.scale != 1) {
