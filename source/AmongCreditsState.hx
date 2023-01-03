@@ -17,8 +17,9 @@ class AmongCreditsState extends MusicBeatState
         ['mayhew',			'mayhew',		'i made triple trouble and i am gay artist',		'@kibolomay'],
         
         ['aqua',			'aqua',			"local sexy babe and hot programmer\ni coded a lot of this mod and lost sleep working on it\nfollow me for my insane ramblings @ useraqua_",				'https://twitter.com/useraqua_'],   
-        ['fabs',		'fabs',	    'im cval',	'https://twitter.com/fabsthefabs'],		
+        ['fabs',		'fabs',	    'did a thing',	'https://twitter.com/fabsthefabs'],		
         ['ziffy',	'ziffy',		'I HELPED ON TORTURE AND\nI MADE THE FREEPLAY MENU','https://twitter.com/ziffymusic'],
+        ['salterino',		'salterino',	    'hi i did 1 thing for mod hi',	'https://twitter.com/Salterin0'],		
         ['Rozebud',		'rozebud',	"Download Bunker Bumrush.\nPlay my new game Bunker Bumrush.",		'https://twitter.com/helpme_thebigt'],
         ['duskie',		'duskie',	    'From what little i did do for this mod, the team was nice and fun to work with. Hope you enjoyed the double note ghosts :)',	'https://twitter.com/DuskieWhy'],		
         

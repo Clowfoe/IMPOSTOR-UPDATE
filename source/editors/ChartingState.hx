@@ -99,6 +99,7 @@ class ChartingState extends MusicBeatState
 		['Finale End', "fire ass song this shit fucks\n-aqua"],
 		['flash', "weirdly programmed flash event (dont change) \n 0 and 1 are normal flashes but 2 and 3 are \n for fades in identity crisis specifically"],
 		['Ellie Drop', "ellie dro p down"],
+		['Armed End', 'armed ending'],
 		['Meltdown Video', "'Dead Body Reported'"],
 		['Toogus Sax', "blow"],
 		['Lights out', "turn the lights off"],

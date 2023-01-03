@@ -135,7 +135,7 @@ class ShopState extends MusicBeatState
     var nodeData:Array<Dynamic> = [
         ['bottom', 'root', 'redp', 125, false, 'Red', 'Unlocked by completing the first week.', BF, COMPLETED, ['sussus-moogus', 'sabotage', 'meltdown']],
         ['right', 'redp', 'greenp', 250, false, 'Green', 'Unlocked by completing the second week.', BF, COMPLETED, ['sussus-toogus', 'lights-down', 'ejected']],
-        ['right', 'greenp', 'blackp', 450, false, 'Black', "Unlocked by completing the black week", BF, COMPLETED, ['defeat', 'ominous', 'finale'], true, "It's a secret!"],
+        ['right', 'greenp', 'blackp', 450, false, 'Black', "Unlocked by completing the black week", BF, COMPLETED, ['defeat', 'finale'], true, "It's a secret!"],
         ['top', 'blackp', 'amongbf', 400, false, 'Crewmate', "Unlocked by completing all of the main story's songs.", BF, COMPLETED, ['sussus-moogus', 'sabotage', 'meltdown', 'sussus-toogus', 'lights-down', 'ejected', 'mando', 'dlow', 'oversight', 'danger', 'double-kill']],
         ['bottom', 'redp', 'bfg', 200, false, 'Ghost BF', "Unlocked by achieving an accuracy higher than 95% on all of the first week's songs.", BF, PERCENT95, ['sussus-moogus', 'sabotage', 'meltdown']],
         ['right', 'bfg', 'ghostgf', 450, false, 'Ghost GF', "Unlocked by achieving an accuracy higher than 95% on all of the first week's songs.", GF, PERCENT95, ['sussus-moogus', 'sabotage', 'meltdown']],
@@ -163,8 +163,8 @@ class ShopState extends MusicBeatState
         ['left', 'root', 'stick-bf', 375, false, 'Stickmin BF', "Unlocked by completing Henry's week.", BF, COMPLETED, ['titular', 'reinforcements', 'greatest-plan', 'armed'], true, "Someone told me about some broken old device lying around the airship and i dont think anyones cleaned it up yet.\nMight wanna check that out sometime."],
         ['left', 'stick-bf', 'henrygf', 375, false, 'Stickmin GF', "Unlocked by completing Henry's week.", GF, COMPLETED, ['titular', 'reinforcements', 'greatest-plan', 'armed'], true, "..."],
 
-        ['top', 'henrygf', 'stickmin', 300, false, 'H. Stickmin', "pet", PET],
-        ['left', 'stickmin', 'elliepet', 300, false, 'E. Rose', "pet", PET]
+        ['top', 'henrygf', 'stickmin', 300, false, 'H. Stickmin', " ", PET],
+        ['left', 'stickmin', 'elliepet', 300, false, 'E. Rose', " ", PET]
     ];
 
     var root:ShopNode;
@@ -172,6 +172,8 @@ class ShopState extends MusicBeatState
     override function create()
 	{
 		super.create();
+
+		Paths.clearUnusedMemory();
 
         for(i in 0... nodeData.length){
             nodeData[i][4] = ClientPrefs.boughtArray[i];
@@ -678,20 +680,20 @@ class ShopState extends MusicBeatState
             ClientPrefs.saveSettings();
         }
 
-        if(FlxG.keys.justPressed.B){
-            add(new BeansPopup(50, camUpper));
-            localBeans += 50;
-            beanText.text = Std.string(localBeans);
-            FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-            trace('Giving beans');
-        }
-        if(FlxG.keys.justPressed.N){
-            add(new BeansPopup(-10, camUpper));
-            localBeans -= 10;
-            beanText.text = Std.string(localBeans);
-            FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-            trace('Giving beans');
-        }
+        // if(FlxG.keys.justPressed.B){
+        //     add(new BeansPopup(50, camUpper));
+        //     localBeans += 50;
+        //     beanText.text = Std.string(localBeans);
+        //     FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+        //     trace('Giving beans');
+        // }
+        // if(FlxG.keys.justPressed.N){
+        //     add(new BeansPopup(-10, camUpper));
+        //     localBeans -= 10;
+        //     beanText.text = Std.string(localBeans);
+        //     FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+        //     trace('Giving beans');
+        // }
 
         if (controls.BACK)
         {
