@@ -137,7 +137,7 @@ class Character extends FlxSprite
 				}
 
 				
-				if (curCharacter != "fella" || curCharacter != "bfChristmas" )
+				if (curCharacter != "fella" && curCharacter != "bf-christmas" && curCharacter != "jollyFella" )
 					json.scale /= 0.4; // scale factor that I did for the characters
 
 

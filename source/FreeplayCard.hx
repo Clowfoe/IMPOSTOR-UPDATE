@@ -182,7 +182,7 @@ class FreeplayCard extends FlxSprite {
             }
         }
 
-        //locked = false;
+        locked = false;
 
         if(locked){
             lock.visible = true;
