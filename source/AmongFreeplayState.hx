@@ -110,6 +110,9 @@ class AmongFreeplayState extends MusicBeatState
 	override function create()
 	{
 		super.create();
+
+		Paths.clearUnusedMemory();
+
 		FlxG.mouse.visible = true;	
 
 		localBeans = ClientPrefs.beans;
@@ -607,7 +610,7 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["ROOMCODE", "powers", 'powers', FlxColor.fromRGB(80, 173, 235), BEANS, [], 0, false]
+				["ROOMCODE", "powers", 'powers', FlxColor.fromRGB(80, 173, 235), SPECIAL, ['victory'], 0, false]
 			],
 
 			section: 2
@@ -625,7 +628,7 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Tomongus Tuesday", "tuesday", 'tomo', FlxColor.fromRGB(255, 90, 134), BEANS, ['chewmate'], 0, false],
+				["Tomongus Tuesday", "tuesday", 'tomo', FlxColor.fromRGB(255, 90, 134), SPECIAL, ['chewmate'], 0, false],
 			],
 
 			section: 3

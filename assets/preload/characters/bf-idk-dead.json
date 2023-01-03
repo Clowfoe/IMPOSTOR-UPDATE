@@ -5,10 +5,10 @@
 				0,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 15,
 			"anim": "firstDeath",
-			"loop": false,
+			"indices": [],
 			"name": "first death"
 		},
 		{
@@ -16,10 +16,13 @@
 				0,
 				0
 			],
-			"indices": [16, 17],
+			"loop": false,
 			"fps": 15,
 			"anim": "deathLoop",
-			"loop": false,
+			"indices": [
+				17,
+				18
+			],
 			"name": "first death"
 		},
 		{
@@ -27,10 +30,13 @@
 				0,
 				0
 			],
-			"indices": [16, 17],
+			"loop": false,
 			"fps": 15,
 			"anim": "deathConfirm",
-			"loop": false,
+			"indices": [
+				17,
+				18
+			],
 			"name": "first death"
 		}
 	],
@@ -38,7 +44,7 @@
 	"image": "characters/idk_bf_dead",
 	"position": [
 		40,
-		100
+		470
 	],
 	"healthicon": "idk",
 	"flip_x": true,
