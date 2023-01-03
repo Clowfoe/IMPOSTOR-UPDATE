@@ -4605,10 +4605,13 @@ class PlayState extends MusicBeatState
 					startCharacterPos(newDad, true);
 					newDad.alpha = 0.00001;
 					newDad.alreadyLoaded = false;
-					if (newCharacter == "blackalt")
+					switch(newCharacter)
 					{
-						newDad.x += 50;
-						newDad.y += 35;
+						case "blackalt":
+							newDad.x += 50;
+							newDad.y += 35;
+						case "blackold":
+							newDad.x += 400;
 					}
 				}
 
