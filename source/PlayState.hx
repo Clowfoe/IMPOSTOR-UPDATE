@@ -4618,6 +4618,9 @@ class PlayState extends MusicBeatState
 							newDad.y += 35;
 						case "blackold":
 							newDad.x += 400;
+						case "monotone":
+							newDad.x += 100;
+							newDad.y += 175;
 					
 					}
 				}
