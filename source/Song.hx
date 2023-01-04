@@ -5,7 +5,7 @@ import haxe.Json;
 import haxe.format.JsonParser;
 import lime.utils.Assets;
 
-#if sys
+#if MODS_ALLOWED
 import sys.io.File;
 import sys.FileSystem;
 #end
@@ -19,20 +19,15 @@ typedef SwagSong =
 	var bpm:Float;
 	var needsVoices:Bool;
 	var speed:Float;
-
 	var player1:String;
 	var player2:String;
 	var player3:String;
 	var player4:String;
 	var fabs:String;
 	var stage:String;
-
 	var allowBFskin:Bool;
 	var allowGFskin:Bool;
 	var allowPet:Bool;
-
-	//var blockSkins:Array<Bool>;
-
 	var arrowSkin:String;
 	var splashSkin:String;
 	var validScore:Bool;
@@ -59,8 +54,6 @@ class Song
 	public var player3:String = 'gf';
 	public var fabs:String = 'fabs';
 
-	//public var blockSkins:Array<Bool> = [false, false, false];
-
 	public function new(song, notes, bpm)
 	{
 		this.song = song;
@@ -82,7 +75,7 @@ class Song
 		#end
 
 		if(rawJson == null) {
-			#if sys
+			#if MODS_ALLOWED
 			rawJson = File.getContent(Paths.json(formattedFolder + '/' + formattedSong)).trim();
 			#else
 			rawJson = Assets.getText(Paths.json(formattedFolder + '/' + formattedSong)).trim();
@@ -94,22 +87,6 @@ class Song
 			rawJson = rawJson.substr(0, rawJson.length - 1);
 			// LOL GOING THROUGH THE BULLSHIT TO CLEAN IDK WHATS STRANGE
 		}
-
-		// FIX THE CASTING ON WINDOWS/NATIVE
-		// Windows???
-		// trace(songData);
-
-		// trace('LOADED FROM JSON: ' + songData.notes);
-		/* 
-			for (i in 0...songData.notes.length)
-			{
-				trace('LOADED FROM JSON: ' + songData.notes[i].sectionNotes);
-				// songData.notes[i].sectionNotes = songData.notes[i].sectionNotes
-			}
-
-				daNotes = songData.notes;
-				daSong = songData.song;
-				daBpm = songData.bpm; */
 
 		var songJson:SwagSong = parseJSONshit(rawJson);
 		if(jsonInput != 'events') StageData.loadDirectory(songJson);
