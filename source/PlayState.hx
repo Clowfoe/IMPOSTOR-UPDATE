@@ -3708,7 +3708,7 @@ class PlayState extends MusicBeatState
 			dadlegs.y = dad.y;
 		}
 		
-		if (curStage.toLowerCase() == 'charles')
+		if (curStage.toLowerCase() == 'charles' && !isStoryMode)
 		{
 			SONG.player4 = ClientPrefs.charOverrides[0];
 		}
