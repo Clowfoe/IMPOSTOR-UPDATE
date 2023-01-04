@@ -3,100 +3,68 @@
 		{
 			"loop": false,
 			"offsets": [
-				-9,
-				-191
+				-3,
+				-153
+			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "jelqer dance left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-23,
+				-153
+			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "jelqer dance right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-85,
+				-213
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "JDown",
+			"name": "jelqer down",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-114,
-				-121
+				-122,
+				-116
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "JUp",
+			"name": "jelqer up",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-89,
+				-67,
 				-188
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "JRight",
+			"name": "jelqer right",
 			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				9,
+				30,
 				-150
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "JLeft"
-		},
-		{
-			"offsets": [
-				-3,
-				-153
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "danceLeft",
-			"indices": [
-				0,
-				1,
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13,
-				14
-			],
-			"name": "JIdle"
-		},
-		{
-			"offsets": [
-				-3,
-				-153
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "danceRight",
-			"indices": [
-				15,
-				16,
-				17,
-				18,
-				19,
-				20,
-				21,
-				22,
-				23,
-				24,
-				25,
-				26,
-				27,
-				28,
-				29
-			],
-			"name": "JIdle"
+			"name": "jelqer left",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
