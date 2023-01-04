@@ -656,7 +656,10 @@ class ShopState extends MusicBeatState
 
         if (FlxG.mouse.wheel != 0)
         {
-            FlxG.camera.zoom += ((FlxG.mouse.wheel / 10) * FlxG.camera.zoom);
+            var nextZoom = FlxG.camera.zoom + ((FlxG.mouse.wheel / 10) * FlxG.camera.zoom);
+            
+            if (nextZoom > 0.05 && nextZoom < 1.75)
+                FlxG.camera.zoom = nextZoom;
         }
         }else{
             if(canUnfocus && FlxG.mouse.screenX < FlxG.width * 0.6){

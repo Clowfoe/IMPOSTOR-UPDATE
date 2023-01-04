@@ -263,7 +263,14 @@ class MainMenuState extends MusicBeatState
 					
 				if(FlxG.mouse.pressed && canClick)
 				{
-					selectSomething();
+					switch (optionShit[curSelected]) {
+						case 'Gallery':
+							FlxG.openURL('https://vsimpostor.com/');
+						case 'Innersloth':
+							FlxG.openURL('https://www.innersloth.com/');
+						default: 
+							selectSomething();
+					}
 				}
 			}
 
@@ -349,15 +356,9 @@ class MainMenuState extends MusicBeatState
 			case 'Options':
 				FlxG.switchState(new OptionsState());
 				trace("Options Menu Selected");
-			case 'Gallery':
-				FlxG.openURL('https://vsimpostor.com/');
-				FlxG.switchState(new MainMenuState());
 			case 'Credits':
 				FlxG.switchState(new AmongCreditsState());
 				trace("Gallery Menu Selected");
-			case 'Innersloth':
-				FlxG.openURL('https://www.innersloth.com/');
-				FlxG.switchState(new MainMenuState());
 		}		
 	}
 
