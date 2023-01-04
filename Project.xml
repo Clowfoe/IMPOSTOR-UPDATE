@@ -75,8 +75,6 @@
 	<assets path="assets/impostor"      library="impostor"      exclude="*.ogg" if="web"/>
 	<assets path="assets/impostor"      library="impostor"      exclude="*.mp3" unless="web"/>
 	
-
-	<assets path='art/readme.txt' rename='do NOT readme.txt' />
 	<!-- <template path='mods' /> -->
 	
 	<!-- assets path="CHANGELOG.md" rename='changelog.txt'/> -->
