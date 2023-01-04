@@ -3,15 +3,7 @@
 		"player1": "bf",
 		"notes": [
 			{
-				"sectionNotes": [
-					[
-						0,
-						-1,
-						"HUD Fade",
-						"1",
-						""
-					]
-				],
+				"sectionNotes": [],
 				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
@@ -46,22 +38,7 @@
 				"mustHitSection": true
 			},
 			{
-				"sectionNotes": [
-					[
-						15652.1739130435,
-						-1,
-						"Victory Darkness",
-						"on",
-						""
-					],
-					[
-						15782.6086956522,
-						-1,
-						"Show Victory Guy",
-						"jelqMid",
-						"show"
-					]
-				],
+				"sectionNotes": [],
 				"lengthInSteps": 16,
 				"mustHitSection": true
 			},
@@ -126,20 +103,6 @@
 						17445.652173913,
 						3,
 						0
-					],
-					[
-						16695.652173913,
-						-1,
-						"Victory Darkness",
-						"off",
-						""
-					],
-					[
-						16711.9565217391,
-						-1,
-						"HUD Fade",
-						"",
-						""
 					]
 				],
 				"lengthInSteps": 16,
@@ -1570,34 +1533,6 @@
 						60228.2608695652,
 						0,
 						195.652173913043
-					],
-					[
-						58434.7826086956,
-						-1,
-						"Victory Darkness",
-						"on",
-						""
-					],
-					[
-						58565.2173913043,
-						-1,
-						"Change Character",
-						"1",
-						"jelqer"
-					],
-					[
-						58695.652173913,
-						-1,
-						"Show Victory Guy",
-						"jelqMiddle",
-						""
-					],
-					[
-						58826.0869565217,
-						-1,
-						"Show Victory Guy",
-						"warMid",
-						"show"
 					]
 				],
 				"lengthInSteps": 16,
@@ -1664,13 +1599,6 @@
 						62315.2173913043,
 						3,
 						0
-					],
-					[
-						60521.7391304348,
-						-1,
-						"Victory Darkness",
-						"off",
-						""
 					]
 				],
 				"lengthInSteps": 16,
@@ -2996,34 +2924,6 @@
 						93619.5652173913,
 						6,
 						0
-					],
-					[
-						93391.3043478261,
-						-1,
-						"Victory Darkness",
-						"on",
-						""
-					],
-					[
-						93456.5217391305,
-						-1,
-						"Change Character",
-						"1",
-						"jorsawsee"
-					],
-					[
-						93521.7391304348,
-						-1,
-						"Show Victory Guy",
-						"war",
-						"show"
-					],
-					[
-						93586.9565217392,
-						-1,
-						"Show Victory Guy",
-						"jelqRight",
-						"show"
 					]
 				],
 				"lengthInSteps": 16,
@@ -3093,34 +2993,6 @@
 						95445.6521739131,
 						0,
 						195.652173913043
-					],
-					[
-						94434.7826086957,
-						-1,
-						"Victory Darkness",
-						"",
-						""
-					],
-					[
-						93913.0434782609,
-						-1,
-						"Victory Darkness",
-						"onhud",
-						""
-					],
-					[
-						93978.2608695653,
-						-1,
-						"Change Character",
-						"1",
-						"jorsawsee"
-					],
-					[
-						94173.9130434783,
-						-1,
-						"Show Victory Guy",
-						"jelqRight",
-						"show"
 					]
 				],
 				"lengthInSteps": 16,
@@ -3952,48 +3824,6 @@
 						127304.347826087,
 						4,
 						195.652173913043
-					],
-					[
-						127304.347826087,
-						-1,
-						"Victory Darkness",
-						"on",
-						""
-					],
-					[
-						127434.782608696,
-						-1,
-						"Change Character",
-						"1",
-						"warchief"
-					],
-					[
-						127565.217391304,
-						-1,
-						"Show Victory Guy",
-						"war",
-						""
-					],
-					[
-						127695.652173913,
-						-1,
-						"Show Victory Guy",
-						"jor",
-						"show"
-					],
-					[
-						127826.086956522,
-						-1,
-						"Show Victory Guy",
-						"jelqRight",
-						""
-					],
-					[
-						127956.521739131,
-						-1,
-						"Show Victory Guy",
-						"jelqLeft",
-						"show"
 					]
 				],
 				"lengthInSteps": 16,
@@ -4060,13 +3890,6 @@
 						130826.086956522,
 						1,
 						0
-					],
-					[
-						129391.304347826,
-						-1,
-						"Victory Darkness",
-						"",
-						""
 					]
 				],
 				"lengthInSteps": 16,
@@ -4360,48 +4183,6 @@
 						135652.173913044,
 						7,
 						326.086956521739
-					],
-					[
-						137217.391304348,
-						-1,
-						"Victory Darkness",
-						"on",
-						""
-					],
-					[
-						137543.47826087,
-						-1,
-						"Change Character",
-						"1",
-						"jelqer"
-					],
-					[
-						137478.260869565,
-						-1,
-						"Show Victory Guy",
-						"jor",
-						"show"
-					],
-					[
-						137413.043478261,
-						-1,
-						"Show Victory Guy",
-						"war",
-						"show"
-					],
-					[
-						137347.826086957,
-						-1,
-						"Show Victory Guy",
-						"jelqLeft",
-						""
-					],
-					[
-						137282.608695652,
-						-1,
-						"Show Victory Guy",
-						"show",
-						""
 					]
 				],
 				"lengthInSteps": 16,
@@ -4545,13 +4326,6 @@
 						139532.608695652,
 						2,
 						195.652173913043
-					],
-					[
-						137739.130434783,
-						-1,
-						"Victory Darkness",
-						"",
-						""
 					]
 				],
 				"altAnim": false,
@@ -4907,41 +4681,6 @@
 						145532.608695652,
 						4,
 						195.652173913043
-					],
-					[
-						145630.434782609,
-						-1,
-						"Show Victory Guy",
-						"jor",
-						""
-					],
-					[
-						145695.652173913,
-						-1,
-						"Show Victory Guy",
-						"jelqRight",
-						"show"
-					],
-					[
-						145760.869565218,
-						-1,
-						"Show Victory Guy",
-						"war",
-						"show"
-					],
-					[
-						145565.217391304,
-						-1,
-						"Victory Darkness",
-						"on",
-						""
-					],
-					[
-						145826.086956522,
-						-1,
-						"Change Character",
-						"1",
-						"jorsawsee"
 					]
 				],
 				"altAnim": false,
@@ -5047,13 +4786,6 @@
 						147880.434782609,
 						2,
 						0
-					],
-					[
-						146086.956521739,
-						-1,
-						"Victory Darkness",
-						"",
-						""
 					]
 				],
 				"altAnim": false,
@@ -9097,6 +8829,33 @@
 				"sectionNotes": [],
 				"typeOfSection": 0,
 				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 115
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 115,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 115
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"altAnim": false,
 				"mustHitSection": true,
 				"changeBPM": false,

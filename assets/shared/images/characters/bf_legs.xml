@@ -1,25 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="bf_legs.png">
-	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- Created with Adobe Animate version 21.0.3.38773 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="run legs0000" x="0" y="0" width="195" height="206" frameX="-100" frameY="-60" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0001" x="0" y="0" width="195" height="206" frameX="-100" frameY="-60" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0002" x="215" y="0" width="205" height="199" frameX="-91" frameY="-60" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0003" x="215" y="0" width="205" height="199" frameX="-91" frameY="-60" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0004" x="440" y="0" width="368" height="196" frameX="-17" frameY="-10" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0005" x="440" y="0" width="368" height="196" frameX="-17" frameY="-10" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0006" x="0" y="226" width="381" height="216" frameX="0" frameY="0" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0007" x="0" y="226" width="381" height="216" frameX="0" frameY="0" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0008" x="401" y="226" width="356" height="209" frameX="-2" frameY="-25" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0009" x="401" y="226" width="356" height="209" frameX="-2" frameY="-25" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0010" x="777" y="226" width="201" height="187" frameX="-101" frameY="-58" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0011" x="777" y="226" width="201" height="187" frameX="-101" frameY="-58" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0012" x="0" y="462" width="246" height="190" frameX="-88" frameY="-57" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0013" x="0" y="462" width="246" height="190" frameX="-88" frameY="-57" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0014" x="266" y="462" width="391" height="189" frameX="-33" frameY="-24" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0015" x="266" y="462" width="391" height="189" frameX="-33" frameY="-24" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0016" x="0" y="672" width="388" height="215" frameX="-19" frameY="-10" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0017" x="0" y="672" width="388" height="215" frameX="-19" frameY="-10" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0018" x="408" y="672" width="370" height="215" frameX="-13" frameY="-22" frameWidth="424" frameHeight="266"/>
-	<SubTexture name="run legs0019" x="408" y="672" width="370" height="215" frameX="-13" frameY="-22" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="miss run legs0000" x="0" y="0" width="186" height="203" frameX="-96" frameY="-66" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0001" x="0" y="0" width="186" height="203" frameX="-96" frameY="-66" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0002" x="206" y="0" width="219" height="196" frameX="-75" frameY="-67" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0003" x="206" y="0" width="219" height="196" frameX="-75" frameY="-67" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0004" x="445" y="0" width="360" height="215" frameX="-17" frameY="-9" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0005" x="445" y="0" width="360" height="215" frameX="-17" frameY="-9" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0006" x="825" y="0" width="369" height="234" frameX="-2" frameY="0" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0007" x="825" y="0" width="369" height="234" frameX="-2" frameY="0" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0008" x="1214" y="0" width="349" height="226" frameX="0" frameY="-26" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0009" x="1214" y="0" width="349" height="226" frameX="0" frameY="-26" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0010" x="1583" y="0" width="215" height="189" frameX="-85" frameY="-63" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0011" x="1583" y="0" width="215" height="189" frameX="-85" frameY="-63" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0012" x="0" y="254" width="260" height="189" frameX="-72" frameY="-63" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0013" x="0" y="254" width="260" height="189" frameX="-72" frameY="-63" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0014" x="280" y="254" width="380" height="207" frameX="-34" frameY="-24" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0015" x="280" y="254" width="380" height="207" frameX="-34" frameY="-24" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0016" x="680" y="254" width="378" height="233" frameX="-20" frameY="-11" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0017" x="680" y="254" width="378" height="233" frameX="-20" frameY="-11" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0018" x="1078" y="254" width="360" height="233" frameX="-15" frameY="-22" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="miss run legs0019" x="1078" y="254" width="360" height="233" frameX="-15" frameY="-22" frameWidth="414" frameHeight="269"/>
+	<SubTexture name="run legs0000" x="1458" y="254" width="195" height="206" frameX="-100" frameY="-60" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0001" x="1458" y="254" width="195" height="206" frameX="-100" frameY="-60" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0002" x="1673" y="254" width="205" height="199" frameX="-91" frameY="-60" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0003" x="1673" y="254" width="205" height="199" frameX="-91" frameY="-60" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0004" x="0" y="507" width="368" height="196" frameX="-17" frameY="-10" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0005" x="0" y="507" width="368" height="196" frameX="-17" frameY="-10" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0006" x="388" y="507" width="381" height="216" frameX="0" frameY="0" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0007" x="388" y="507" width="381" height="216" frameX="0" frameY="0" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0008" x="789" y="507" width="356" height="209" frameX="-2" frameY="-25" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0009" x="789" y="507" width="356" height="209" frameX="-2" frameY="-25" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0010" x="1165" y="507" width="201" height="187" frameX="-101" frameY="-58" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0011" x="1165" y="507" width="201" height="187" frameX="-101" frameY="-58" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0012" x="1386" y="507" width="246" height="190" frameX="-88" frameY="-57" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0013" x="1386" y="507" width="246" height="190" frameX="-88" frameY="-57" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0014" x="1652" y="507" width="391" height="189" frameX="-33" frameY="-24" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0015" x="1652" y="507" width="391" height="189" frameX="-33" frameY="-24" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0016" x="0" y="743" width="388" height="215" frameX="-19" frameY="-10" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0017" x="0" y="743" width="388" height="215" frameX="-19" frameY="-10" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0018" x="408" y="743" width="370" height="215" frameX="-13" frameY="-22" frameWidth="424" frameHeight="266"/>
+	<SubTexture name="run legs0019" x="408" y="743" width="370" height="215" frameX="-13" frameY="-22" frameWidth="424" frameHeight="266"/>
 </TextureAtlas>

@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				0
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "death",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-39,
+				-230
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "loop death",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-39,
+				-142
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "confirm death",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bfrun_death",
+	"position": [
+		-10,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

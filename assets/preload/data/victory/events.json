@@ -1,11 +1,12 @@
 {
 	"song": {
-		"speed": 2.4,
+		"speed": 2.5,
 		"stage": "victory",
-		"player1": "bf",
+		"player1": "blackp",
 		"player2": "warchief",
 		"player3": "gf",
 		"player4": null,
+		"allowPet": null,
 		"notes": [
 			{
 				"lengthInSteps": 16,
@@ -115,7 +116,7 @@
 						""
 					],
 					[
-						16826.0869565217,
+						16711.9565217391,
 						-1,
 						"HUD Fade",
 						"",
@@ -495,7 +496,7 @@
 						-1,
 						"Change Character",
 						"1",
-						"jorsawghost"
+						"jorsawsee"
 					],
 					[
 						93521.7391304348,
@@ -3516,51 +3517,6 @@
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
 			}
 		],
 		"splashSkin": null,
@@ -3568,6 +3524,8 @@
 		"bpm": 115,
 		"arrowSkin": null,
 		"needsVoices": true,
+		"allowGFskin": null,
+		"allowBFskin": null,
 		"fabs": null,
 		"song": "victory"
 	}

@@ -191,6 +191,7 @@ class PlayState extends MusicBeatState
 	public var gf:Character;
 	public var boyfriend:Boyfriend;
 	public var bfLegs:Boyfriend;
+	public var bfLegsmiss:Boyfriend;
 	public var dadlegs:Character;
 
 	var bfAnchorPoint:Array<Float> = [0, 0];
@@ -2864,7 +2865,9 @@ class PlayState extends MusicBeatState
 				bg.shader = wiggleEffect.shader;
 
 			case 'airship':
-				airshipPlatform = new FlxTypedGroup<FlxSprite>();
+				GameOverSubstate.characterName = 'bf-running-death';
+			
+			    airshipPlatform = new FlxTypedGroup<FlxSprite>();
 				airFarClouds = new FlxTypedGroup<FlxSprite>();
 				airMidClouds = new FlxTypedGroup<FlxSprite>();
 				airCloseClouds = new FlxTypedGroup<FlxSprite>();
@@ -3736,6 +3739,8 @@ class PlayState extends MusicBeatState
 		{
 			bfLegs = new Boyfriend(0, 0, 'bf-legs');
 			boyfriendGroup.add(bfLegs);
+			bfLegsmiss = new Boyfriend(0, 0, 'bf-legsmiss');
+			boyfriendGroup.add(bfLegsmiss);
 		}
 
 		if (curStage.toLowerCase() == 'charles')
@@ -3783,6 +3788,8 @@ class PlayState extends MusicBeatState
 		{
 			bfLegs.x = boyfriend.x;
 			bfLegs.y = boyfriend.y;
+			bfLegsmiss.x = boyfriend.x;
+			bfLegsmiss.y = boyfriend.y;
 		}
 
 		bfAnchorPoint[0] = boyfriend.x;
@@ -3803,12 +3810,9 @@ class PlayState extends MusicBeatState
 		pet = new Pet(0, 0, ClientPrefs.charOverrides[2]);
 		pet.x += pet.positionArray[0];
 		pet.y += pet.positionArray[1];
-		pet.alpha = 0;
-		if (curStage.toLowerCase() != 'alpha' || curStage.toLowerCase() != 'defeat'  ||  curStage.toLowerCase() != 'who' || !SONG.allowPet || ClientPrefs.charOverrides[2] != '')
+		pet.alpha = 0.001;
+		if (curStage.toLowerCase() != 'alpha' && curStage.toLowerCase() != 'defeat'  && curStage.toLowerCase() != 'who' && !SONG.allowPet)
 		{
-			pet.alpha = 0;
-			//boyfriendGroup.add(pet);
-		}else{
 			pet.alpha = 1;
 			boyfriendGroup.add(pet);
 		}
@@ -5843,6 +5847,29 @@ class PlayState extends MusicBeatState
 				bfLegs.alpha = 1;
 		}
 
+		if (boyfriend.curCharacter == 'bf-running')
+			{
+				if (boyfriend.animation.curAnim.name.endsWith("miss"))
+				{
+					bfLegsmiss.alpha = 1;
+					boyfriend.y = bfAnchorPoint[1] + legPosY[bfLegsmiss.animation.curAnim.curFrame];
+				}
+				else
+					bfLegsmiss.alpha = 0;
+			}
+
+			if (boyfriend.curCharacter == 'bf-running')
+				{
+					if (boyfriend.animation.curAnim.name.endsWith("miss"))
+					{
+						bfLegs.alpha = 0;
+						boyfriend.y = bfAnchorPoint[1] + legPosY[bfLegs.animation.curAnim.curFrame];
+					}
+					else
+						bfLegs.alpha = 1;
+				}
+		
+
 		if (dad.curCharacter == 'black-run')
 		{
 			dad.y = dadAnchorPoint[1] + legPosY[dadlegs.animation.curAnim.curFrame];
@@ -7470,6 +7497,7 @@ class PlayState extends MusicBeatState
 
 				case 'Lights out':
 					camGame.flash(FlxColor.WHITE, 0.35);
+					pet.alpha = 0;
 					if (charShader == null)
 					{
 						charShader = new BWShader(0.01, 0.12, true);
@@ -7498,6 +7526,7 @@ class PlayState extends MusicBeatState
 					healthBar.updateBar();
 				case 'Lights on':
 					camGame.flash(FlxColor.BLACK, 0.35);
+					pet.alpha = 1;
 					if (boyfriend.curCharacter == 'whitebf')
 					{
 						triggerEventNote('Change Character', '0', 'bf');
@@ -9940,6 +9969,12 @@ class PlayState extends MusicBeatState
 				boyfriend.dance();
 			}
 		}
+
+		if (curBeat % 1 == 0)
+			{
+				if (boyfriend.curCharacter == 'bf-running')
+					bfLegsmiss.dance();
+			}
 
 		if (curBeat % 1 == 0)
 		{
