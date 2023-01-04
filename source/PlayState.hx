@@ -7504,6 +7504,7 @@ class PlayState extends MusicBeatState
 
 				case 'Lights out':
 					camGame.flash(FlxColor.WHITE, 0.35);
+					pet.alpha = 0;
 					if (boyfriend.curCharacter == 'bf')
 					{
 						triggerEventNote('Change Character', '0', 'whitebf');
