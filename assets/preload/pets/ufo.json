@@ -1,7 +1,7 @@
 {
 	"animations": [
 		{
-			"loop": false,
+			"loop": true,
 			"offsets": [
 				-5,
 				104
@@ -25,7 +25,7 @@
 	],
 	"no_antialiasing": false,
 	"flip_x": false,
-	"image": "pets/crab",
+	"image": "pets/ufo",
 	"healthbar_colors": [
 		46,
 		110,
