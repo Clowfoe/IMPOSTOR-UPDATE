@@ -292,7 +292,6 @@ class MainMenuState extends MusicBeatState
 
 	function selectSomething()
 	{
-			selectedSomethin = true;
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			greenImpostor.animation.play('select');
 			redImpostor.animation.play('select');
@@ -326,7 +325,15 @@ class MainMenuState extends MusicBeatState
 					FlxG.camera.fade(FlxColor.BLACK, 0.7, false);
 					new FlxTimer().start(1, function(tmr:FlxTimer)
 						{
-							goToState();
+							switch (optionShit[curSelected]) {
+								case "Gallery":
+									FlxG.openURL('https://vsimpostor.com/');
+								case 'Innersloth':
+									FlxG.openURL('https://www.innersloth.com/');
+								default: 
+									selectedSomethin = true;
+									goToState();
+							}
 						});
 				}
 			});
@@ -349,15 +356,8 @@ class MainMenuState extends MusicBeatState
 			case 'Options':
 				FlxG.switchState(new OptionsState());
 				trace("Options Menu Selected");
-			case 'Gallery':
-				FlxG.openURL('https://vsimpostor.com/');
-				FlxG.switchState(new MainMenuState());
 			case 'Credits':
 				FlxG.switchState(new AmongCreditsState());
-				trace("Gallery Menu Selected");
-			case 'Innersloth':
-				FlxG.openURL('https://www.innersloth.com/');
-				FlxG.switchState(new MainMenuState());
 		}		
 	}
 
