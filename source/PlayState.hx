@@ -76,7 +76,7 @@ using StringTools;
 #if desktop
 import Discord.DiscordClient;
 #end
-#if sys
+#if MODS_ALLOWED
 import sys.FileSystem;
 #end
 
@@ -3613,6 +3613,10 @@ class PlayState extends MusicBeatState
 			}
 		}
 
+		if (doPush)
+			luaArray.push(new FunkinLua(luaFile));
+		#end
+
 		if (curStage == 'philly')
 		{
 			phillyCityLightsEvent = new FlxTypedGroup<BGSprite>();
@@ -3625,9 +3629,6 @@ class PlayState extends MusicBeatState
 				phillyCityLightsEvent.add(light);
 			}
 		}
-
-		if (doPush)
-			luaArray.push(new FunkinLua(luaFile));
 
 		if (!modchartSprites.exists('blammedLightsBlack'))
 		{ // Creates blammed light black fade in case you didn't make your own
@@ -3655,7 +3656,6 @@ class PlayState extends MusicBeatState
 			insert(members.indexOf(blammedLightsBlack) + 1, phillyCityLightsEvent);
 		blammedLightsBlack = modchartSprites.get('blammedLightsBlack');
 		blammedLightsBlack.alpha = 0.0;
-		#end
 
 		if (ClientPrefs.charOverrides[1] != '' && ClientPrefs.charOverrides[1] != 'gf' && !isStoryMode && !SONG.allowGFskin)
 		{
@@ -3929,7 +3929,7 @@ class PlayState extends MusicBeatState
 
 		var splash:NoteSplash = new NoteSplash(100, 100, 0);
 		grpNoteSplashes.add(splash);
-		splash.alpha = 0.0;
+		splash.alpha = 0.001;
 
 		opponentStrums = new FlxTypedGroup<StrumNote>();
 		playerStrums = new FlxTypedGroup<StrumNote>();
@@ -3937,7 +3937,7 @@ class PlayState extends MusicBeatState
 		// startCountdown();
 
 		generateSong(SONG.song);
-		#if LUA_ALLOWED
+		#if (MODS_ALLOWED && LUA_ALLOWED)
 		for (notetype in noteTypeMap.keys())
 		{
 			var luaToLoad:String = Paths.modFolders('custom_notetypes/' + notetype + '.lua');
@@ -5266,7 +5266,7 @@ class PlayState extends MusicBeatState
 
 		var songName:String = Paths.formatToSongPath(SONG.song);
 		var file:String = Paths.json(songName + '/events');
-		#if sys
+		#if MODS_ALLOWED
 		if (FileSystem.exists(Paths.modsJson(songName + '/events')) || FileSystem.exists(file))
 		{
 		#else

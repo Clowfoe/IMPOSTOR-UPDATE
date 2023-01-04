@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
@@ -18,19 +18,16 @@
 	<!-- ____________________________ Window Settings ___________________________ -->
 
 	<!--These window settings apply to all targets-->
-	<window width="1280" height="720" fps="" background="#000000" hardware="true" vsync="false" />
+	<window width="1280" height="720" fps="60" background="#000000" hardware="true" vsync="false" allow-shaders="true" require-shaders="true" allow-high-dpi="true" />
 
 	<!--HTML5-specific-->
 	<window if="html5" resizable="true" />
 
 	<!--Desktop-specific-->
-	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" vsync="false"/>
+	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true"/>
 
 	<!--Mobile-specific-->
-	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0" resizable="false"/>
-
-	<!--Switch-specific-->
-	<window if="switch" orientation="landscape" fullscreen="true" width="0" height="0" resizable="true" />
+	<window if="mobile || switch" orientation="landscape" fullscreen="true" resizable="false" />
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
@@ -38,100 +35,61 @@
 	<set name="BUILD_DIR" value="export/release" unless="debug" />
 	<set name="BUILD_DIR" value="export/32bit" if="32" />
 
-	<classpath name="source" />
+	<source name="source" />
 
+	<assets path="mobile" rename="assets/mobile" if="mobile" />
+    <!-- in order to not have the mobile assets in another builds -saw -->
 	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
 	<assets path="assets/preload" rename="assets" exclude="*.mp3"  unless="web"/>
 	
 	<!-- PSYCH ENGINE CUSTOMIZATION -->
-	<define name="MODS_ALLOWED" if="desktop" />
-	<define name="LUA_ALLOWED" if="windows" />
-	<define name="VIDEOS_ALLOWED" if="web || windows" unless="32"/>
+	<define name="MODS_ALLOWED" if="cpp" />
+	<define name="LUA_ALLOWED" if="cpp" />
+	<define name="VIDEOS_ALLOWED" if="desktop || android" unless="32" />
 
 	<!-- <define name="PRELOAD_ALL" /> -->
 	<define name="PRELOAD_ALL" unless="web" />
-	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/>
+	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL" />
 	
-	<library name="videos"        preload="true" />
+	<library name="videos" preload="true" />
+	
 	<section if="PRELOAD_ALL">
-		<library name="songs"         preload="true" />
-		<library name="shared"        preload="true" />
-		<library name="impostor"   	  preload="true" />
+		<library name="songs" preload="true" />
+		<library name="shared" preload="true" />
+		<library name="impostor" preload="true" />
 	</section>
 	
 	<section if="NO_PRELOAD_ALL">
-		<library name="songs"         preload="false" />
-		<library name="shared"        preload="false" />
-		<library name="impostor"      preload="false" />
+		<library name="songs" preload="false" />
+		<library name="shared" preload="false" />
+		<library name="impostor" preload="false" />
 	</section>
 	
-	<assets path="plugins/"             rename=''               if="VIDEOS_ALLOWED windows" />
-	<assets path="dlls/"                rename=''               if="VIDEOS_ALLOWED windows" />
-	<assets path="assets/videos"        library="videos"        if="VIDEOS_ALLOWED"/>
-	<assets path="assets/songs"         library="songs"         exclude="*.ogg" if="web"/>
-	<assets path="assets/songs"         library="songs"         exclude="*.mp3" unless="web"/>
-	<assets path="assets/shared"        library="shared"        exclude="*.ogg" if="web"/>
-	<assets path="assets/shared"        library="shared"        exclude="*.mp3" unless="web"/>
-	<assets path="assets/impostor"      library="impostor"      exclude="*.ogg" if="web"/>
-	<assets path="assets/impostor"      library="impostor"      exclude="*.mp3" unless="web"/>
-	
+	<assets path="assets/videos" library="videos" if="VIDEOS_ALLOWED" />
+	<assets path="assets/songs" library="songs" exclude="*.ogg" if="web" />
+	<assets path="assets/songs" library="songs" exclude="*.mp3" unless="web" />
+	<assets path="assets/shared" library="shared" exclude="*.ogg" if="web" />
+	<assets path="assets/shared" library="shared" exclude="*.mp3" unless="web" />
+	<assets path="assets/impostor" library="impostor" exclude="*.ogg" if="web" />
+	<assets path="assets/impostor" library="impostor" exclude="*.mp3" unless="web" />
+	<assets path="art/readme.txt" rename="do NOT readme.txt" />
+	<assets path="assets/fonts" embed="true" />
 
-	<assets path='art/readme.txt' rename='do NOT readme.txt' />
-	<!-- <template path='mods' /> -->
-	
-	<!-- assets path="CHANGELOG.md" rename='changelog.txt'/> -->
-
-	<!-- NOTE FOR FUTURE SELF SINCE FONTS ARE ALWAYS FUCKY 
-		TO FIX ONE OF THEM, I CONVERTED IT TO OTF. DUNNO IF YOU NEED TO
-		THEN UHHH I USED THE NAME OF THE FONT WITH SETFORMAT() ON THE TEXT!!!
-		NOT USING A DIRECT THING TO THE ASSET!!!
-	-->
-	<assets path="assets/fonts" embed='true'/>
 	<!-- _______________________________ Libraries ______________________________ -->
 
 	<haxelib name="flixel" />
-	<haxedev set='webgl' />
-
 	<!--In case you want to use the addons package-->
 	<haxelib name="flixel-addons" />
-	<haxelib name="hscript" />
 
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
-	<haxelib name="linc_luajit" if="LUA_ALLOWED"/>
-	<haxelib name="faxe" if='switch'/>
-	<!--<haxelib name="polymod"/> -->
-	<haxelib name="discord_rpc" if="desktop"/>
-	<!-- <haxelib name="hxcpp-debug-server" if="desktop"/> -->
-
-	<!-- <haxelib name="markdown" /> -->
-	<!-- <haxelib name="HtmlParser" /> -->
-
-	<!--In case you want to use nape with flixel-->
-	<!--<haxelib name="nape-haxe4" />-->
+	<haxelib name="linc_luajit" if="LUA_ALLOWED" />
+	<haxelib name="hxCodec" if="VIDEOS_ALLOWED" />
+	<haxelib name="discord_rpc" if="desktop" />
+	<haxelib name="hxcpp-debug-server" if="desktop" />
+	<haxelib name="extension-androidtools" if="android" />
 
 	<!-- ______________________________ Haxedefines _____________________________ -->
-
-	<!--Enable the Flixel core recording system-->
-	<!--<haxedef name="FLX_RECORD" />-->
-
-	<!--Disable the right and middle mouse buttons-->
-	<!-- <haxedef name="FLX_NO_MOUSE_ADVANCED" /> -->
-
-	<!--Disable the native cursor API on Flash-->
-	<!--<haxedef name="FLX_NO_NATIVE_CURSOR" />-->
-
-	<!--Optimise inputs, be careful you will get null errors if you don't use conditionals in your game-->
-	<!-- <haxedef name="FLX_NO_MOUSE" if="mobile" /> -->
-	<!-- <haxedef name="FLX_NO_KEYBOARD" if="mobile" /> -->
-	<!-- <haxedef name="FLX_NO_TOUCH" if="desktop" /> -->
-	<!--<haxedef name="FLX_NO_GAMEPAD" />-->
-
-	<!--Disable the Flixel core sound tray-->
-	<!--<haxedef name="FLX_NO_SOUND_TRAY" />-->
-
-	<!--Disable the Flixel sound management code-->
-	<!--<haxedef name="FLX_NO_SOUND_SYSTEM" />-->
 
 	<!--Disable the Flixel core focus lost screen-->
 	<haxedef name="FLX_NO_FOCUS_LOST_SCREEN" />
@@ -142,6 +100,36 @@
 	<!--Enable this for Nape release builds for a serious peformance improvement-->
 	<haxedef name="NAPE_RELEASE_BUILD" unless="debug" />
 
+	<!--Allow working memory greater than 1 Gig-->
+	<haxedef name="HXCPP_GC_BIG_BLOCKS" />
+
+	<!--Always enable Null Object Reference check-->
+	<haxedef name="HXCPP_CHECK_POINTER" />
+	<haxedef name="HXCPP_STACK_LINE" />
+	<haxedef name="HXCPP_STACK_TRACE"/>
+
+	<section if="android">
+		<!--Permissions-->
+		<config:android permission="android.permission.ACCESS_NETWORK_STATE" />
+		<config:android permission="android.permission.ACCESS_WIFI_STATE" />
+		<config:android permission="android.permission.INTERNET" />
+		<config:android permission="android.permission.WRITE_EXTERNAL_STORAGE" />
+		<config:android permission="android.permission.READ_EXTERNAL_STORAGE" />
+		<config:android permission="android.permission.VIBRATE" />
+
+		<!--Gradle-->
+		<config:android gradle-version="7.6" gradle-plugin="7.3.1" />
+
+		<!--Audio Recording Fix-->
+		<config:android target-sdk-version="29" if="${lime <= 8.0.0}" />
+	</section>
+
+	<section if="ios">
+		<!--Dependency--> 
+		<dependency name="Metal.framework" />
+		<dependency name="WebKit.framework" />
+	</section>
+
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
@@ -150,4 +138,5 @@
 	<icon path="art/icon32.png" size='32'/>
 	<icon path="art/icon64.png" size='64'/>
 	<icon path="art/iconOG.png" />
+
 </project>

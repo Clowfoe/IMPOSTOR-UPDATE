@@ -5,7 +5,7 @@ import openfl.utils.Assets;
 import lime.utils.Assets as LimeAssets;
 import lime.utils.AssetLibrary;
 import lime.utils.AssetManifest;
-#if sys
+#if MODS_ALLOWED
 import sys.io.File;
 import sys.FileSystem;
 #else
@@ -38,16 +38,14 @@ class CoolUtil
 	public static function coolTextFile(path:String):Array<String>
 	{
 		var daList:Array<String> = [];
-		#if sys
+		#if MODS_ALLOWED
 		if(FileSystem.exists(path)) daList = File.getContent(path).trim().split('\n');
 		#else
 		if(Assets.exists(path)) daList = Assets.getText(path).trim().split('\n');
 		#end
 
 		for (i in 0...daList.length)
-		{
 			daList[i] = daList[i].trim();
-		}
 
 		return daList;
 	}
@@ -56,13 +54,12 @@ class CoolUtil
 	{
 		var dumbArray:Array<Int> = [];
 		for (i in min...max)
-		{
 			dumbArray.push(i);
-		}
+
 		return dumbArray;
 	}
 
-	//uhhhh does this even work at all? i'm starting to doubt
+	// uhhhh does this even work at all? i'm starting to doubt
 	public static function precacheSound(sound:String, ?library:String = null):Void {
 		if(!Assets.cache.hasSound(Paths.sound(sound, library))) {
 			FlxG.sound.cache(Paths.sound(sound, library));
