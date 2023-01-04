@@ -1,5 +1,6 @@
 package;
 
+import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxGame;
 import flixel.FlxState;
@@ -76,16 +77,17 @@ class Main extends Sprite
 
 		// Paths.getModFolders();
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
+
+		FlxG.signals.gameResized.add(onResizeGame);
 		
 		#if !mobile
 		fpsCounter = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsCounter);
 
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
-		addChild(fpsCounter);
-//		if(fpsCounter != null) {
-	//		fpsCounter.visible = ClientPrefs.showFPS;
-	//	}
+		if(fpsCounter != null) { 
+			fpsCounter.visible = ClientPrefs.showFPS;
+		}
 		#end
 
 		
@@ -95,6 +97,34 @@ class Main extends Sprite
 		FlxG.mouse.visible = false;
 		#end
 	}
+
+	function onResizeGame(w:Int, h:Int) {
+		if (FlxG.cameras == null)
+			return;
+
+		for (cam in FlxG.cameras.list) {
+			@:privateAccess
+			if (cam != null && (cam._filters != null || cam._filters != []))
+				fixShaderSize(cam);
+		}	
+	}
+
+	function fixShaderSize(camera:FlxCamera) // Shout out to Ne_Eo for bringing this to my attention
+		{
+			@:privateAccess {
+				var sprite:Sprite = camera.flashSprite;
+	
+				if (sprite != null)
+				{
+					sprite.__cacheBitmap = null;
+					sprite.__cacheBitmapData = null;
+					sprite.__cacheBitmapData2 = null;
+					sprite.__cacheBitmapData3 = null;
+					sprite.__cacheBitmapColorTransform = null;
+				}
+			}
+		}
+
 	public function toggleFPS(fpsEnabled:Bool):Void {
 		fpsCounter.visible = fpsEnabled;
 	}

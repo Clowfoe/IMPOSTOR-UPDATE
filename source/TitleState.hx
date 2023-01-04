@@ -554,10 +554,13 @@ class TitleState extends MusicBeatState
 			bg.scrollFactor.set();
 			add(bg);
 
+			FlxG.autoPause = false;
 			(new FlxVideo(fileName)).finishCallback = function()
 			{
 				canPressEnter = true;
 				startIntro();
+				
+				FlxG.autoPause = true;
 			}
 			return;
 		}

@@ -5479,9 +5479,14 @@ class PlayState extends MusicBeatState
 				}
 				var newCharacter:String = event[4];
 				addCharacterToList(newCharacter, charType);
-			case 'Lights Out':
+			case 'Lights out':
 				addCharacterToList('whitegreen', 0);
 				addCharacterToList('whitebf', 1);
+
+				if (charShader == null)
+					{
+						charShader = new BWShader(0.01, 0.12, true);
+					}
 		}
 
 		if (!eventPushedMap.exists(event[2]))
@@ -5699,6 +5704,8 @@ class PlayState extends MusicBeatState
 
 	function henryTeleport()
 	{
+		canPause = false;
+		
 		vocals.volume = 0;
 		vocals.pause();
 		KillNotes();
@@ -7497,11 +7504,6 @@ class PlayState extends MusicBeatState
 
 				case 'Lights out':
 					camGame.flash(FlxColor.WHITE, 0.35);
-					pet.alpha = 0;
-					if (charShader == null)
-					{
-						charShader = new BWShader(0.01, 0.12, true);
-					}
 					if (boyfriend.curCharacter == 'bf')
 					{
 						triggerEventNote('Change Character', '0', 'whitebf');
@@ -9510,7 +9512,7 @@ class PlayState extends MusicBeatState
 				{
 				missCombo += 1;
 				health -= 0.08 * missCombo; // SUPER MARIO
-				if (combo > 5 && gf.animOffsets.exists('sad')) 
+				if (combo > 5 && gf.animation.exists('sad')) 
 					gf.playAnim('sad');
 
 				combo = 0;

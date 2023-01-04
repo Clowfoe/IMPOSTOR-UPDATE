@@ -882,8 +882,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				switch(options[curSelected]) {
 					case 'FPS Counter':
 						ClientPrefs.showFPS = !ClientPrefs.showFPS;
-						if(Main.fpsVar != null)
-							Main.fpsVar.visible = ClientPrefs.showFPS;
+						if(Main.fpsCounter != null)
+							Main.fpsCounter.visible = ClientPrefs.showFPS;
 
 					case 'Low Quality':
 						ClientPrefs.lowQuality = !ClientPrefs.lowQuality;
