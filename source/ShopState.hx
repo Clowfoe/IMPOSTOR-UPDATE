@@ -142,7 +142,7 @@ class ShopState extends MusicBeatState
         ['top', 'root', 'bfpolus', 175, false, 'Polus BF', 'Unlocked by completing the fifth week.', BF, COMPLETED, ['magmatic', 'ashes', 'boiling-point']],
         ['right', 'root', 'dripbf', 225, false, 'Drippypop BF', 'Unlocked by achieving an accuracy higher than 95% on Drippypop.', BF, PERCENT95, ['drippypop']],
         ['right', 'bfpolus', 'bfmira', 225, false, 'Mira BF', 'Unlocked by completing the sixth week.', BF, COMPLETED, ['heartbeat', 'pinkwave', 'pretender']],
-        ['left', 'bfpolus', 'bfairship', 200, false, 'Airship BF', 'Unlocked by completing the seventh week.', COMPLETED, BF, ['delusion', 'blackout', 'neurotic']],
+        ['left', 'bfpolus', 'bfairship', 200, false, 'Airship BF', 'Unlocked by completing the seventh week.', BF, COMPLETED, ['delusion', 'blackout', 'neurotic']],
         ['right', 'bfmira', 'gfmira', 250, false, 'Mira GF', 'Unlocked by completing the sixth week.', GF, COMPLETED, ['heartbeat', 'pinkwave', 'pretender']],
         ['top', 'bfmira', 'bfsauce', 250, false, 'Chef BF', 'Unlocked by achieving an accuracy higher than 95% on Sauces Moogus.', BF, PERCENT95, ['sauces-moogus']],
 
