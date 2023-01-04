@@ -228,6 +228,7 @@ class Note extends FlxSprite
 			parentNote.childrenNotes.push(this);
 		} else if (!isSustainNote)
 			parentNote = null;
+		moves = false;
 
 	}
 
