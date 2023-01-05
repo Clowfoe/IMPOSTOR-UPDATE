@@ -14,7 +14,7 @@ class FlxVideo extends FlxBasic
 		#if VIDEOS_ALLOWED
 		var video:VideoHandler = new VideoHandler();
 		video.finishCallback = finishCallback;
-		video.playVideo(path, false, false);
+		video.playVideo(SUtil.getStorageDirectory() + path, false, false);
 		#else
 		if (finishCallback != null)
 			finishCallback();
