@@ -885,7 +885,7 @@ class ChartingState extends MusicBeatState
 			key++;
 		}
 
-		#if LUA_ALLOWED
+		#if (MODS_ALLOWED && LUA_ALLOWED)
 		var directories:Array<String> = [
 			Paths.mods('custom_notetypes/'),
 			Paths.mods(Paths.currentModDirectory + '/custom_notetypes/')
@@ -948,7 +948,7 @@ class ChartingState extends MusicBeatState
 		var tab_group_event = new FlxUI(null, UI_box);
 		tab_group_event.name = 'Events';
 
-		#if LUA_ALLOWED
+		#if (MODS_ALLOWED && LUA_ALLOWED)
 		var eventPushedMap:Map<String, Bool> = new Map<String, Bool>();
 		var directories:Array<String> = [
 			Paths.mods('custom_events/'),
