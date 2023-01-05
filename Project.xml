@@ -69,7 +69,6 @@
 	<assets path="assets/shared" library="shared" exclude="*.mp3" unless="web" />
 	<assets path="assets/impostor" library="impostor" exclude="*.ogg" if="web" />
 	<assets path="assets/impostor" library="impostor" exclude="*.mp3" unless="web" />
-	<assets path="art/readme.txt" rename="do NOT readme.txt" />
 	<assets path="assets/fonts" embed="true" />
 
 	<!-- _______________________________ Libraries ______________________________ -->
