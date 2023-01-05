@@ -1,8 +1,8 @@
 package;
 
-import openfl.display.BitmapData;
 import flixel.FlxBasic;
 import flixel.system.FlxAssets.FlxShader;
+import openfl.utils.Assets;
 
 class HeatwaveShader extends FlxBasic
 {
@@ -13,7 +13,7 @@ class HeatwaveShader extends FlxBasic
 	public function new():Void
 	{
 		super();
-		shader.distortTexture.input = BitmapData.fromFile(Paths.getPreloadPath('impostor/images/polus/heatwave.png'));
+		shader.distortTexture.input = Assets.getBitmapData(Paths.getPreloadPath('impostor/images/polus/heatwave.png'));
 	}
 
 	override public function update(elapsed:Float):Void
