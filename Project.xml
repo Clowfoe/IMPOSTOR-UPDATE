@@ -37,13 +37,12 @@
 
 	<source name="source" />
 
-	<assets path="mobile" rename="assets/mobile" if="mobile" />
-    <!-- in order to not have the mobile assets in another builds -saw -->
+	<assets path="mobile" rename="assets/mobile" if="mobile" /> <!-- in order to not have the mobile assets in another builds -saw -->
+
 	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
 	<assets path="assets/preload" rename="assets" exclude="*.mp3"  unless="web"/>
 	
 	<!-- PSYCH ENGINE CUSTOMIZATION -->
-	<define name="MODS_ALLOWED" if="cpp" />
 	<define name="LUA_ALLOWED" if="cpp" />
 	<define name="VIDEOS_ALLOWED" if="desktop || android" unless="32" />
 
