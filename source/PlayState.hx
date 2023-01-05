@@ -3577,6 +3577,10 @@ class PlayState extends MusicBeatState
 
 		if (doPush)
 			luaArray.push(new FunkinLua(luaFile));
+		#elseif LUA_ALLOWED
+		var luaFile:String = Paths.getPreloadPath('stages/' + curStage + '.lua');
+		if (OpenFlAssets.exists(luaFile))
+			luaArray.push(new FunkinLua(luaFile));
 		#end
 
 		if (curStage == 'philly')
@@ -3901,24 +3905,34 @@ class PlayState extends MusicBeatState
 		// startCountdown();
 
 		generateSong(SONG.song);
-		#if (MODS_ALLOWED && LUA_ALLOWED)
+
+		#if LUA_ALLOWED
 		for (notetype in noteTypeMap.keys())
 		{
+			#if MODS_ALLOWED
 			var luaToLoad:String = Paths.modFolders('custom_notetypes/' + notetype + '.lua');
 			if (FileSystem.exists(luaToLoad))
-			{
 				luaArray.push(new FunkinLua(luaToLoad));
-			}
+			#else
+			var luaToLoad:String = Paths.getPreloadPath('custom_notetypes/' + notetype + '.lua');
+			if (OpenFlAssets.exists(luaToLoad))
+				luaArray.push(new FunkinLua(luaToLoad));
+			#end
 		}
 		for (event in eventPushedMap.keys())
 		{
+			#if MODS_ALLOWED
 			var luaToLoad:String = Paths.modFolders('custom_events/' + event + '.lua');
 			if (FileSystem.exists(luaToLoad))
-			{
 				luaArray.push(new FunkinLua(luaToLoad));
-			}
+			#else
+			var luaToLoad:String = Paths.getPreloadPath('custom_notetypes/' + notetype + '.lua');
+			if (OpenFlAssets.exists(luaToLoad))
+				luaArray.push(new FunkinLua(luaToLoad));
+			#end
 		}
 		#end
+
 		noteTypeMap.clear();
 		noteTypeMap = null;
 		eventPushedMap.clear();
@@ -3956,7 +3970,7 @@ class PlayState extends MusicBeatState
 		FlxG.fixedTimestep = false;
 		moveCameraSection(0);
 
-		if (Assets.exists(Paths.txt(SONG.song.toLowerCase().replace(' ', '-') + "/info")))
+		if (OpenFlAssets.exists(Paths.txt(SONG.song.toLowerCase().replace(' ', '-') + "/info")))
 		{
 			trace('it exists');
 			task = new TaskSong(0, 200, SONG.song.toLowerCase().replace(' ', '-'));
@@ -4197,6 +4211,10 @@ class PlayState extends MusicBeatState
 		}
 
 		if (doPush)
+			luaArray.push(new FunkinLua(luaFile));
+		#elseif LUA_ALLOWED
+		var luaFile:String = Paths.getPreloadPath('data/' + Paths.formatToSongPath(SONG.song) + '/script.lua');
+		if (OpenFlAssets.exists(luaFile))
 			luaArray.push(new FunkinLua(luaFile));
 		#end
 
@@ -4609,7 +4627,7 @@ class PlayState extends MusicBeatState
 	#if VIDEOS_ALLOWED
 	var foundFile:Bool = false;
 	var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
-	#if sys
+	#if MODS_ALLOWED
 	if (FileSystem.exists(fileName))
 	{
 		foundFile = true;
@@ -4619,7 +4637,7 @@ class PlayState extends MusicBeatState
 	if (!foundFile)
 	{
 		fileName = Paths.video(name);
-		#if sys
+		#if MODS_ALLOWED
 		if (FileSystem.exists(fileName))
 		{
 		#else
