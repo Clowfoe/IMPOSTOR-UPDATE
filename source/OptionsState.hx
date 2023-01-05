@@ -879,8 +879,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Hide HUD',
 		'Hide Song Length',
 		'Flashing Lights',
-		'Camera Zooms'
-		#if !mobile, 'FPS Counter' #end
+		'Camera Zooms',
+		'FPS Counter'
 	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
