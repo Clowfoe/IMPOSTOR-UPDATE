@@ -49,9 +49,9 @@ class Paths
 				@:privateAccess
 				if (obj != null)
 				{
-					Assets.cache.removeBitmapData(key);
-					Assets.cache.clearBitmapData(key);
-					Assets.cache.clear(key);
+					OpenFlAssets.cache.removeBitmapData(key);
+					OpenFlAssets.cache.clearBitmapData(key);
+					OpenFlAssets.cache.clear(key);
 					FlxG.bitmap._cache.remove(key);
 					obj.destroy();
 					currentTrackedAssets.remove(key);
@@ -66,9 +66,9 @@ class Paths
 				var obj = currentTrackedAssets["sounds"].get(key);
 				if (obj != null)
 				{
-					Assets.cache.removeSound(key);
-					Assets.cache.clearSounds(key);
-					Assets.cache.clear(key);
+					OpenFlAssets.cache.removeSound(key);
+					OpenFlAssets.cache.clearSounds(key);
+					OpenFlAssets.cache.clear(key);
 					currentTrackedSounds.remove(key);
 				}
 			}
@@ -86,9 +86,9 @@ class Paths
 			var obj = FlxG.bitmap._cache.get(key);
 			if (obj != null && !currentTrackedAssets["graphics"].exists(key))
 			{
-				Assets.cache.removeBitmapData(key);
-				Assets.cache.clearBitmapData(key);
-				Assets.cache.clear(key);
+				OpenFlAssets.cache.removeBitmapData(key);
+				OpenFlAssets.cache.clearBitmapData(key);
+				OpenFlAssets.cache.clear(key);
 				FlxG.bitmap._cache.remove(key);
 				obj.destroy();
 				localTrackedAssets["graphics"].remove(key);
@@ -96,14 +96,14 @@ class Paths
 		}
 
 		@:privateAccess
-		for (key in Assets.cache.getSoundKeys())
+		for (key in OpenFlAssets.cache.getSoundKeys())
 		{
-			var obj = Assets.cache.getSound(key);
+			var obj = OpenFlAssets.cache.getSound(key);
 			if (obj != null && !currentTrackedAssets["sounds"].exists(key))
 			{
-				Assets.cache.removeSound(key);
-				Assets.cache.clearSounds(key);
-				Assets.cache.clear(key);
+				OpenFlAssets.cache.removeSound(key);
+				OpenFlAssets.cache.clearSounds(key);
+				OpenFlAssets.cache.clear(key);
 				localTrackedAssets["sounds"].remove(key);
 			}
 		}
@@ -122,14 +122,16 @@ class Paths
 		if (library != null)
 			return getLibraryPath(file, library);
 
-		var levelPath:String = '';
-		levelPath = getLibraryPathForce(file, currentLevel);
-		if (OpenFlAssets.exists(levelPath, type))
-			return levelPath;
+		if (currentLevel != null)
+		{
+			var levelPath = getLibraryPathForce(file, currentLevel);
+			if (OpenFlAssets.exists(levelPath, type))
+				return levelPath;
 
-		levelPath = getLibraryPathForce(file, "shared");
-		if (FileSystem.exists(levelPath))
-			return levelPath;
+			levelPath = getLibraryPathForce(file, "shared");
+			if (OpenFlAssets.exists(levelPath, type))
+				return levelPath;
+		}
 
 		return getPreloadPath(file);
 	}
