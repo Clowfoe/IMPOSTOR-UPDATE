@@ -11,6 +11,7 @@ import haxe.io.Path;
 import lime.system.System as LimeSystem;
 import openfl.Lib;
 import openfl.events.UncaughtErrorEvent;
+import openfl.system.System as OpenFLSystem;
 import openfl.utils.Assets;
 #if MODS_ALLOWED
 import sys.FileSystem;
@@ -85,54 +86,11 @@ class SUtil
 		if (Permissions.getGrantedPermissions().contains(Permissions.WRITE_EXTERNAL_STORAGE)
 			&& Permissions.getGrantedPermissions().contains(Permissions.READ_EXTERNAL_STORAGE))
 		{
-			if (!FileSystem.exists(SUtil.getStorageDirectory() + 'assets') && !FileSystem.exists(SUtil.getStorageDirectory() + 'mods'))
-			{
-				Lib.application.window.alert("Whoops, seems like you didn't extract the files from the .APK!\nPlease copy the files from the .APK to\n"
-					+ SUtil.getStorageDirectory(),
-					'Error!');
-				LimeSystem.exit(1);
-			}
-			else if ((FileSystem.exists(SUtil.getStorageDirectory() + 'assets')
-				&& !FileSystem.isDirectory(SUtil.getStorageDirectory() + 'assets'))
-				&& (FileSystem.exists(SUtil.getStorageDirectory() + 'mods')
-					&& !FileSystem.isDirectory(SUtil.getStorageDirectory() + 'mods')))
-			{
-				Lib.application.window.alert("Why did you create two files called assets and mods instead of copying the folders from the .APK?, expect a crash.",
-					'Error!');
-				LimeSystem.exit(1);
-			}
-			else
-			{
-				if (!FileSystem.exists(SUtil.getStorageDirectory() + 'assets'))
-				{
-					Lib.application.window.alert("Whoops, seems like you didn't extract the assets/assets folder from the .APK!\nPlease copy the assets/assets folder from the .APK to\n"
-						+ SUtil.getStorageDirectory(),
-						'Error!');
-					LimeSystem.exit(1);
-				}
-				else if (FileSystem.exists(SUtil.getStorageDirectory() + 'assets')
-					&& !FileSystem.isDirectory(SUtil.getStorageDirectory() + 'assets'))
-				{
-					Lib.application.window.alert("Why did you create a file called assets instead of copying the assets directory from the .APK?, expect a crash.",
-						'Error!');
-					LimeSystem.exit(1);
-				}
+			for (file in Assets.list())
+				if (file.endsWith('.mp4'))
+					SUtil.copyContent(file, SUtil.getStorageDirectory() + file);
 
-				if (!FileSystem.exists(SUtil.getStorageDirectory() + 'mods'))
-				{
-					Lib.application.window.alert("Whoops, seems like you didn't extract the assets/mods folder from the .APK!\nPlease copy the assets/mods folder from the .APK to\n"
-						+ SUtil.getStorageDirectory(),
-						'Error!');
-					LimeSystem.exit(1);
-				}
-				else if (FileSystem.exists(SUtil.getStorageDirectory() + 'mods')
-					&& !FileSystem.isDirectory(SUtil.getStorageDirectory() + 'mods'))
-				{
-					Lib.application.window.alert("Why did you create a file called mods instead of copying the mods directory from the .APK?, expect a crash.",
-						'Error!');
-					LimeSystem.exit(1);
-				}
-			}
+			OpenFLSystem.gc(); // clean da memory.
 		}
 		#end
 	}
@@ -178,7 +136,7 @@ class SUtil
 
 		final msg:String = stack.join('\n');
 
-		#if MODS_ALLOWED
+		#if sys
 		try
 		{
 			if (!FileSystem.exists(SUtil.getStorageDirectory() + 'logs'))
@@ -287,7 +245,7 @@ class SUtil
 
 	private static function println(msg:String):Void
 	{
-		#if MODS_ALLOWED
+		#if sys
 		Sys.println(msg);
 		#else
 		Log.trace(msg, null); // Pass null to exclude the position.
