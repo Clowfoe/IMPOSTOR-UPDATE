@@ -19,9 +19,11 @@ import flixel.FlxBasic;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import openfl.display.BlendMode;
-#if sys
+#if MODS_ALLOWED
 import sys.FileSystem;
 import sys.io.File;
+#else
+import openfl.utils.Assets;
 #end
 import Type.ValueType;
 import Controls;
@@ -31,8 +33,8 @@ using StringTools;
 
 class FunkinLua
 {
-	public static var Function_Stop = 1;
-	public static var Function_Continue = 0;
+	public static var Function_Stop = #if windows 1 #else 'Function_Stop' #end;
+	public static var Function_Continue = #if windows 0 #else 'Function_Continue' #end;
 
 	#if LUA_ALLOWED
 	public var lua:State = null;
@@ -54,7 +56,7 @@ class FunkinLua
 		// trace('Lua version: ' + Lua.version());
 		// trace("LuaJIT version: " + Lua.versionJIT());
 
-		var result:Dynamic = LuaL.dofile(lua, script);
+		var result:Dynamic = LuaL.dostring(lua, #if MODS_ALLOWED File.getContent(script) #else Assets.getText(script) #end;
 		var resultStr:String = Lua.tostring(lua, result);
 		if (resultStr != null && result != 0)
 		{
@@ -1083,6 +1085,7 @@ class FunkinLua
 			var path:String = Paths.modsJson(Paths.formatToSongPath(PlayState.SONG.song) + '/' + dialogueFile);
 			luaTrace('Trying to load dialogue: ' + path);
 
+			#if MODS_ALLOWED
 			if (FileSystem.exists(path))
 			{
 				var shit:DialogueFile = DialogueBoxPsych.parseDialogue(path);
@@ -1108,10 +1111,20 @@ class FunkinLua
 					lePlayState.startCountdown();
 				}
 			}
+			#else
+			if (lePlayState.endingSong)
+			{
+				lePlayState.endSong();
+			}
+			else
+			{
+				lePlayState.startCountdown();
+			}
+			#end
 		});
 		Lua_helper.add_callback(lua, "startVideo", function(videoFile:String)
 		{
-			#if VIDEOS_ALLOWED
+			#if (VIDEOS_ALLOWED && MODS_ALLOWED)
 			if (FileSystem.exists(Paths.modsVideo(videoFile)))
 			{
 				lePlayState.startVideo(videoFile);
@@ -1119,6 +1132,14 @@ class FunkinLua
 			else
 			{
 				luaTrace('Video file not found: ' + videoFile);
+				if (lePlayState.endingSong)
+				{
+					lePlayState.endSong();
+				}
+				else
+				{
+					lePlayState.startCountdown();
+				}
 			}
 			#else
 			if (lePlayState.endingSong)
