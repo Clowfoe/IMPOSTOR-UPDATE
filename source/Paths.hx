@@ -19,6 +19,15 @@ import sys.FileSystem;
 #end
 import flixel.graphics.FlxGraphic;
 import openfl.display.BitmapData;
+#if cpp
+import cpp.NativeGc;
+#elseif hl
+import hl.Gc;
+#elseif java
+import java.vm.Gc;
+#elseif neko
+import neko.vm.Gc;
+#end
 
 import flash.media.Sound;
 
@@ -64,14 +73,19 @@ class Paths
 	public static var currentTrackedTextures:Map<String, Texture> = [];
 
 	/// haya I love you for the base cache dump I took to the max
-	public static function clearUnusedMemory() {
-		// clear non local assets in the tracked assets list
+	public static function clearUnusedMemory()
+	{
+		if (!ClientPrefs.imagesPersist){
+			// clear non local assets in the tracked assets list
 		var counter:Int = 0;
 		for (key in currentTrackedAssets.keys())
 		{
+			// if it is not currently contained within the used local assets
 			if (!localTrackedAssets.contains(key) && !dumpExclusions.contains(key))
 			{
+				// get rid of it
 				var obj = currentTrackedAssets.get(key);
+				@:privateAccess
 				if (obj != null)
 				{
 					var isTexture:Bool = currentTrackedTextures.exists(key);
@@ -82,52 +96,104 @@ class Paths
 						texture = null;
 						currentTrackedTextures.remove(key);
 					}
-					@:privateAccess
-					if (openfl.Assets.cache.hasBitmapData(key))
-					{
-						openfl.Assets.cache.removeBitmapData(key);
-						FlxG.bitmap._cache.remove(key);
-					}
-					trace('removed $key, ' + (isTexture ? 'is a texture' : 'is not a texture'));
+					OpenFlAssets.cache.removeBitmapData(key);
+					OpenFlAssets.cache.clearBitmapData(key);
+					OpenFlAssets.cache.clear(key);
+					FlxG.bitmap._cache.remove(key);
 					obj.destroy();
 					currentTrackedAssets.remove(key);
 					counter++;
 				}
 			}
 		}
-		trace('removed $counter assets');
 		// run the garbage collector for good measure lmfao
-		System.gc();
+			trace("Huh");
+			System.gc();
+
+			#if cpp
+			NativeGc.compact();
+			NativeGc.run(true);
+			#elseif hl
+			Gc.major();
+			#elseif (java || neko)
+			Gc.run(true);
+			#end
+		}
+		var cache:haxe.ds.Map<String, FlxGraphic> = cast Reflect.field(FlxG.bitmap, "_cache");
+		for (key => graphic in cache)
+		{
+			if (key.indexOf("text") == 0 && graphic.useCount <= 0)
+			{
+				FlxG.bitmap.remove(graphic);
+			}
+		}
 	}
 
 	// define the locally tracked assets
 	public static var localTrackedAssets:Array<String> = [];
-	public static function clearStoredMemory(?cleanUnused:Bool = false) {
-			// clear anything not in the tracked assets list
-			@:privateAccess
-			for (key in FlxG.bitmap._cache.keys())
+	public static function clearStoredMemory(?cleanUnused:Bool = false)
+	{
+		if (!ClientPrefs.imagesPersist){
+
+		// clear anything not in the tracked assets list
+		var counterAssets:Int = 0;
+
+		@:privateAccess
+		for (key in FlxG.bitmap._cache.keys())
+		{
+			var obj = FlxG.bitmap._cache.get(key);
+			if (obj != null && !currentTrackedAssets.exists(key))
 			{
-				var obj = FlxG.bitmap._cache.get(key);
-				if (obj != null && !currentTrackedAssets.exists(key))
-				{
-					openfl.Assets.cache.removeBitmapData(key);
-					FlxG.bitmap._cache.remove(key);
-					obj.destroy();
-				}
+				OpenFlAssets.cache.removeBitmapData(key);
+				OpenFlAssets.cache.clearBitmapData(key);
+				OpenFlAssets.cache.clear(key);
+				FlxG.bitmap._cache.remove(key);
+				obj.destroy();
+				counterAssets++;
 			}
-	
-			// clear all sounds that are cached
-			for (key in currentTrackedSounds.keys())
-			{
-				if (!localTrackedAssets.contains(key) && !dumpExclusions.contains(key) && key != null)
-				{
-					Assets.cache.clear(key);
-					currentTrackedSounds.remove(key);
-				}
-			}	
-			// flags everything to be cleared out next unused memory clear
-			localTrackedAssets = [];
 		}
+		
+		// clear all sounds that are cached
+		var counterSound:Int = 0;
+		for (key in currentTrackedSounds.keys())
+		{
+			if (!localTrackedAssets.contains(key) && !dumpExclusions.contains(key) && key != null)
+			{
+				// trace('test: ' + dumpExclusions, key);
+				OpenFlAssets.cache.removeSound(key);
+				OpenFlAssets.cache.clearSounds(key);
+				currentTrackedSounds.remove(key);
+				counterSound++;
+			}
+		}
+
+		// Clear everything everything that's left
+		var counterLeft:Int = 0;
+		for (key in OpenFlAssets.cache.getKeys())
+		{
+			if (!localTrackedAssets.contains(key) && !dumpExclusions.contains(key) && key != null)
+			{
+				OpenFlAssets.cache.clear(key);
+				counterLeft++;
+			}
+		}
+
+		// flags everything to be cleared out next unused memory clear
+		localTrackedAssets = [];
+		openfl.Assets.cache.clear("songs");
+		}
+
+		var cache:haxe.ds.Map<String, FlxGraphic> = cast Reflect.field(FlxG.bitmap, "_cache");
+		for (key => graphic in cache)
+		{
+			if (key.indexOf("text") == 0 && graphic.useCount <= 0)
+			{
+				FlxG.bitmap.remove(graphic);
+			}
+		}
+		// idk if this does anything.
+		// THANK YOU MALICIOUS BUNNY!!
+	}
 
 	static public var currentModDirectory:String = '';
 	static public var currentLevel:String;

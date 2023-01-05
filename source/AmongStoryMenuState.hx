@@ -113,6 +113,7 @@ class AmongStoryMenuState extends MusicBeatState
 	{
 		super.create();
 
+		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 
 		localFinaleState = ClientPrefs.finaleState;
@@ -573,6 +574,7 @@ class AmongStoryMenuState extends MusicBeatState
 		FlxG.camera.follow(ship, LOCKON, 1);
 
 		changeWeek();
+		Paths.clearUnusedMemory();
 	
 	}
 
