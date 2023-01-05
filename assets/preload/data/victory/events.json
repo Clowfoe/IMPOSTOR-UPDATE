@@ -2,7 +2,7 @@
 	"song": {
 		"speed": 2.5,
 		"stage": "victory",
-		"player1": "blackp",
+		"player1": "amongbf",
 		"player2": "warchief",
 		"player3": "gf",
 		"player4": null,
@@ -492,13 +492,6 @@
 						""
 					],
 					[
-						93456.5217391305,
-						-1,
-						"Change Character",
-						"1",
-						"jorsawsee"
-					],
-					[
 						93521.7391304348,
 						-1,
 						"Show Victory Guy",
@@ -511,6 +504,13 @@
 						"Show Victory Guy",
 						"jelqRight",
 						"show"
+					],
+					[
+						93456.5217391305,
+						-1,
+						"Change Character",
+						"1",
+						"jorsawghost"
 					]
 				],
 				"bpm": 0,
@@ -535,13 +535,6 @@
 						"Victory Darkness",
 						"onhud",
 						""
-					],
-					[
-						93978.2608695653,
-						-1,
-						"Change Character",
-						"1",
-						"jorsawghost"
 					],
 					[
 						94173.9130434783,
@@ -922,6 +915,33 @@
 						""
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
