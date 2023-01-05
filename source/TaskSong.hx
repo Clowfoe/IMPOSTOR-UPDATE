@@ -60,7 +60,7 @@ class TaskSong extends FlxSpriteGroup
 
         size = text2.fieldWidth;
         
-        var bg = new FlxSprite(fontSize/-2, fontSize/-2).makeGraphic(Math.floor(size + fontSize), Std.int(text.height + text2.height), FlxColor.WHITE);
+        var bg = new FlxSprite(fontSize/-2, fontSize/-2).makeGraphic(Math.floor(size + fontSize), Std.int(text.height + text2.height + 15), FlxColor.WHITE);
         bg.height = text.height + text2.height;
         bg.alpha = 0.47;
 

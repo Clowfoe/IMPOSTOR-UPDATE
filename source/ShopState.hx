@@ -142,29 +142,29 @@ class ShopState extends MusicBeatState
         ['top', 'root', 'bfpolus', 175, false, 'Polus BF', 'Unlocked by completing the fifth week.', BF, COMPLETED, ['magmatic', 'ashes', 'boiling-point']],
         ['right', 'root', 'dripbf', 225, false, 'Drippypop BF', 'Unlocked by achieving an accuracy higher than 95% on Drippypop.', BF, PERCENT95, ['drippypop']],
         ['right', 'bfpolus', 'bfmira', 225, false, 'Mira BF', 'Unlocked by completing the sixth week.', BF, COMPLETED, ['heartbeat', 'pinkwave', 'pretender']],
-        ['left', 'bfpolus', 'bfairship', 200, false, 'Airship BF', 'Unlocked by completing the seventh week.', BF, COMPLETED, ['delusion', 'blackout', 'neurotic']],
-        ['right', 'bfmira', 'gfmira', 250, false, 'Mira GF', 'Unlocked by completing the sixth week.', GF, COMPLETED, ['heartbeat', 'pinkwave', 'pretender']],
+        ['left', 'bfpolus', 'bfairship', 200, false, 'Airship BF', 'Unlocked by completing the sixth week.', BF, COMPLETED, ['delusion', 'blackout', 'neurotic']],
+        ['right', 'bfmira', 'gfmira', 250, false, 'Mira GF', 'Unlocked by completing the seventh week.', GF, COMPLETED, ['heartbeat', 'pinkwave', 'pretender']],
         ['top', 'bfmira', 'bfsauce', 250, false, 'Chef BF', 'Unlocked by achieving an accuracy higher than 95% on Sauces Moogus.', BF, PERCENT95, ['sauces-moogus']],
 
         ['top', 'bfpolus', 'gfpolus', 450, false, 'Polus GF', "Unlocked by completing the fifth week.", GF, COMPLETED, ['magmatic', 'ashes', 'boiling-point']],
-        ['top', 'gfpolus', 'snowball', 300, false, 'Snowball', " ", PET],
-        ['right', 'bfsauce', 'ham', 300, false, 'Hammy', " ", PET],
+        ['top', 'gfpolus', 'snowball', 300, false, 'Snowball', "i dont even know man", PET],
+        ['right', 'bfsauce', 'ham', 300, false, 'Hammy', "its like a ham but with legs", PET],
 
-        ['bottom', 'bfg', 'dog', 300, false, 'Doggy', " ", PET],
-        ['bottom', 'ghostgf', 'frankendog', 300, false, 'Frankendog', " ", PET],
+        ['bottom', 'bfg', 'dog', 300, false, 'Doggy', "man(?)'s best friend!", PET],
+        ['bottom', 'ghostgf', 'frankendog', 300, false, 'Frankendog', "spooky ass dog", PET],
 
-        ['left', 'redp', 'minicrewmate', 300, false, 'Crewmate', " ", PET],
-        ['left', 'minicrewmate', 'tomong', 300, false, 'Tomongus', " ", PET],
+        ['left', 'redp', 'minicrewmate', 300, false, 'Crewmate', "your very own child", PET],
+        ['left', 'minicrewmate', 'tomong', 300, false, 'Tomongus', "he's not among us, he's a hamster!", PET],
 
-        ['top', 'bfairship', 'crab', 300, false, 'Bedcrab', " ", PET],
-        ['left', 'crab', 'ufo', 300, false, 'UFO', " ", PET],
+        ['top', 'bfairship', 'crab', 300, false, 'Bedcrab', "the thing from half life", PET],
+        ['left', 'crab', 'ufo', 300, false, 'UFO', "aliens ahh", PET],
 
         
         ['left', 'root', 'stick-bf', 375, false, 'Stickmin BF', "Unlocked by completing Henry's week.", BF, COMPLETED, ['titular', 'reinforcements', 'greatest-plan', 'armed'], true, "Someone told me about some broken old device lying around the airship and i dont think anyones cleaned it up yet.\nMight wanna check that out sometime."],
         ['left', 'stick-bf', 'henrygf', 375, false, 'Stickmin GF', "Unlocked by completing Henry's week.", GF, COMPLETED, ['titular', 'reinforcements', 'greatest-plan', 'armed'], true, "..."],
 
-        ['top', 'henrygf', 'stickmin', 300, false, 'H. Stickmin', " ", PET],
-        ['left', 'stickmin', 'elliepet', 300, false, 'E. Rose', " ", PET]
+        ['top', 'henrygf', 'stickmin', 300, false, 'H. Stickmin', "a tiny henry?", PET],
+        ['left', 'stickmin', 'elliepet', 300, false, 'E. Rose', "and an ellie too!", PET]
     ];
 
     var root:ShopNode;

@@ -60,8 +60,8 @@ class Pet extends FlxSprite
 
 	public var healthColorArray:Array<Int> = [255, 0, 0];
 
-	public static var DEFAULT_PET:String = 'crab'; //In case a character is missing, it will use BF on its place
-	public function new(x:Float, y:Float, ?pet:String = 'crab')
+	public static var DEFAULT_PET:String = 'nothing'; //In case a character is missing, it will use BF on its place
+	public function new(x:Float, y:Float, ?pet:String = 'nothing')
 	{
 		super(x, y);
 

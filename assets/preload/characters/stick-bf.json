@@ -1,169 +1,117 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				-26,
-				9
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "BF NOTE LEFT MISS"
-		},
-		{
 			"offsets": [
-				-15,
-				-19
+				-24,
+				7
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "BF NOTE DOWN MISS"
-		},
-		{
-			"offsets": [
-				-46,
-				27
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUPmiss",
-			"indices": [],
-			"name": "BF NOTE UP MISS"
-		},
-		{
-			"offsets": [
-				-44,
-				22
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "BF NOTE RIGHT MISS"
-		},
-		{
-			"offsets": [
-				-3,
-				5
-			],
-			"loop": false,
-			"fps": 24,
 			"anim": "hey",
-			"indices": [],
-			"name": "BF HEY"
-		},
-		{
-			"offsets": [
-				14,
-				18
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "hurt",
-			"indices": [],
-			"name": "BF hit"
+			"name": "stick hey",
+			"indices": []
 		},
 		{
 			"offsets": [
-				-4,
+				-5,
 				0
 			],
-			"loop": true,
-			"fps": 24,
-			"anim": "scared",
-			"indices": [],
-			"name": "BF idle shaking"
-		},
-		{
-			"offsets": [
-				-10,
-				-16
-			],
 			"loop": false,
 			"fps": 24,
-			"anim": "dodge",
+			"anim": "idle",
 			"indices": [],
-			"name": "boyfriend dodge"
+			"name": "stick idle"
 		},
 		{
-			"offsets": [
-				294,
-				267
-			],
 			"loop": false,
+			"offsets": [
+				37,
+				8
+			],
+			"anim": "singLEFT",
 			"fps": 24,
-			"anim": "attack",
-			"indices": [],
-			"name": "boyfriend attack"
+			"name": "stick note left",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-40,
-				-40
-			],
 			"loop": false,
+			"offsets": [
+				36,
+				78
+			],
+			"anim": "singLEFTmiss",
 			"fps": 24,
-			"anim": "pre-attack",
-			"indices": [],
-			"name": "bf pre attack"
+			"name": "note left miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				-21
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "stick note down",
+			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
 				-5,
+				56
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "note down miss",
+			"indices": [
+				0,
 				0
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "stick idle",
-			"indices": []
+			]
 		},
 		{
-			"loop": false,
 			"offsets": [
-				9,
-				-12
+				-34,
+				110
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "stick left",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "note up miss"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-14,
-				-23
+				-34,
+				16
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "stick down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-33,
-				32
-			],
 			"anim": "singUP",
-			"fps": 24,
-			"name": "stick up",
-			"indices": []
+			"indices": [],
+			"name": "stick note up"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-28,
-				10
+				66,
+				4
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "stick right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "stick note right"
+		},
+		{
+			"offsets": [
+				-29,
+				88
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "note right miss"
 		}
 	],
 	"no_antialiasing": false,
@@ -172,7 +120,7 @@
 		70,
 		320
 	],
-	"healthicon": "bf",
+	"healthicon": "stickbf",
 	"flip_x": true,
 	"healthbar_colors": [
 		49,
@@ -180,8 +128,8 @@
 		209
 	],
 	"camera_position": [
-		0,
-		0
+		160,
+		-40
 	],
 	"sing_duration": 4,
 	"scale": 1
