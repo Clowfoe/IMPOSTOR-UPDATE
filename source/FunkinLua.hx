@@ -1,3 +1,5 @@
+package;
+
 #if LUA_ALLOWED
 import llua.Lua;
 import llua.LuaL;
@@ -1082,10 +1084,10 @@ class FunkinLua
 		});
 		Lua_helper.add_callback(lua, "startDialogue", function(dialogueFile:String, music:String = null)
 		{
+			#if MODS_ALLOWED
 			var path:String = Paths.modsJson(Paths.formatToSongPath(PlayState.SONG.song) + '/' + dialogueFile);
 			luaTrace('Trying to load dialogue: ' + path);
 
-			#if MODS_ALLOWED
 			if (FileSystem.exists(path))
 			{
 				var shit:DialogueFile = DialogueBoxPsych.parseDialogue(path);
