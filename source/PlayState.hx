@@ -91,6 +91,13 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
+	// stores the last judgement object
+	public static var lastRating:FlxSprite;
+	// stores the last combo sprite object
+	public static var lastCombo:FlxSprite;
+	// stores the last combo score objects in an array
+	public static var lastScore:Array<FlxSprite> = [];
+
 	var wiggleEffect:WiggleEffect;
 
 	var heartsImage:FlxSprite;
@@ -621,6 +628,8 @@ class PlayState extends MusicBeatState
 	override public function create()
 	{
 		super.create();
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
 
 		FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Inst'); // fuck
 		FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Voices');
@@ -6249,55 +6258,6 @@ class PlayState extends MusicBeatState
 		missLimitManager();
 
 		if (cpuControlled)
-			scoreTxt.text = 'Score: ? | Combo Breaks: ? | Accuracy: ?';
-		else if (PlayState.SONG.stage.toLowerCase() == 'victory')
-		{
-				scoreTxt.text = 'Score: Who cares? You already won!' + ' | Combo Breaks: ' + songMisses;
-				if (missLimited)
-					scoreTxt.text += ' / $missLimitCount';
-				scoreTxt.text += ' | Accuracy: ';
-				//
-				if (ratingString != '?')
-					scoreTxt.text += '' + ((Math.floor(ratingPercent * 10000) / 100)) + '%';
-				if (songMisses <= 0) // why would it ever be less than im stupid
-					scoreTxt.text += ratingString;
-		}
-		else if (PlayState.SONG.stage.toLowerCase() == 'alpha' || defeatDark)
-		{
-				scoreTxt.text = 'Score: $songScore | Combo Breaks: $songMisses | Accuracy: ';
-		
-				if (ratingString != '?'){
-					scoreTxt.text += ((Math.floor(ratingPercent * 10000) / 100)) + '% | ';
-
-					switch(ratingString){
-						case ' [SFC]':
-							scoreTxt.text += '(MFC) AAAA:';
-						case ' [GFC]':
-							scoreTxt.text += '(GFC) AAA:';
-						case ' [FC]':
-							scoreTxt.text += '(FC) AA:';
-						default:
-							scoreTxt.text += '(SDCB) A:';
-					}
-				}
-				else{
-					scoreTxt.text +='0% | N/A';
-				}
-		}
-		else
-			{
-				scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses;
-				if (missLimited)
-					scoreTxt.text += ' / $missLimitCount';
-				scoreTxt.text += ' | Accuracy: ';
-				//
-				if (ratingString != '?')
-					scoreTxt.text += '' + ((Math.floor(ratingPercent * 10000) / 100)) + '%';
-				if (songMisses <= 0) // why would it ever be less than im stupid
-					scoreTxt.text += ratingString;
-			}
-
-		if (cpuControlled)
 		{
 			botplaySine += 180 * elapsed;
 			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
@@ -9208,7 +9168,7 @@ class PlayState extends MusicBeatState
 		{
 			songScore += score;
 			songHits++;
-			RecalculateRating();
+			RecalculateRating(false);
 			if (scoreTxtTween != null)
 			{
 				scoreTxtTween.cancel();
@@ -9226,13 +9186,11 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		/* if (combo > 60)
-			daRating = 'sick';
-		else if (combo > 12)
-			daRating = 'good'
-		else if (combo > 4)
-			daRating = 'bad';
-	 */
+		if (!ClientPrefs.comboStacking)
+		{
+			if (lastRating != null) lastRating.kill();
+			lastRating = rating;
+		}
 
 		var pixelShitPart1:String = "";
 		var pixelShitPart2:String = '';
@@ -9325,6 +9283,20 @@ class PlayState extends MusicBeatState
 		seperatedScore.push(Math.floor(combo / 10) % 10);
 		seperatedScore.push(combo % 10);
 
+		if (!ClientPrefs.comboStacking)
+		{
+			if (lastCombo != null) lastCombo.kill();
+			lastCombo = comboSpr;
+		}
+		if (lastScore != null)
+		{
+			while (lastScore.length > 0)
+			{
+				lastScore[0].kill();
+				lastScore.remove(lastScore[0]);
+			}
+		}
+
 		var daLoop:Int = 0;
 		for (i in seperatedScore)
 		{
@@ -9354,6 +9326,8 @@ class PlayState extends MusicBeatState
 			numScore.velocity.y -= FlxG.random.int(140, 160);
 			numScore.velocity.x = FlxG.random.float(-5, 5);
 			numScore.visible = !ClientPrefs.hideHud;
+			if (!ClientPrefs.comboStacking)
+				lastScore.push(numScore);
 
 			if(curStage == 'idk') {
 				numScore.visible = false;
@@ -9427,7 +9401,7 @@ class PlayState extends MusicBeatState
 		trace(daNote.missHealth);
 		songMisses++;
 		vocals.volume = 0;
-		RecalculateRating();
+		RecalculateRating(true);
 
 		var animToPlay:String = '';
 		switch (Math.abs(daNote.noteData) % 4)
@@ -9525,7 +9499,7 @@ class PlayState extends MusicBeatState
 				}
 			
 
-			RecalculateRating();
+			RecalculateRating(true);
 
 			FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
 			// FlxG.sound.play(Paths.sound('missnote1'), 1, false);
@@ -10313,7 +10287,7 @@ class PlayState extends MusicBeatState
 	public var ratingString:String;
 	public var ratingPercent:Float;
 
-	public function RecalculateRating()
+	public function RecalculateRating(badHit:Bool = false)
 	{
 		setOnLuas('score', songScore);
 		setOnLuas('misses', songMisses);
@@ -10335,6 +10309,60 @@ class PlayState extends MusicBeatState
 			setOnLuas('rating', ratingPercent);
 			setOnLuas('ratingName', ratingString);
 		}
+		updateScore(badHit); // score will only update after rating is calculated, if it's a badHit, it shouldn't bounce -Ghost
+	}
+
+	public function updateScore(miss:Bool = false)
+	{
+		if (cpuControlled)
+			scoreTxt.text = 'Score: ? | Combo Breaks: ? | Accuracy: ?';
+		else if (PlayState.SONG.stage.toLowerCase() == 'victory')
+		{
+				scoreTxt.text = 'Score: Who cares? You already won!' + ' | Combo Breaks: ' + songMisses;
+				if (missLimited)
+					scoreTxt.text += ' / $missLimitCount';
+				scoreTxt.text += ' | Accuracy: ';
+				//
+				if (ratingString != '?')
+					scoreTxt.text += '' + ((Math.floor(ratingPercent * 10000) / 100)) + '%';
+				if (songMisses <= 0) // why would it ever be less than im stupid
+					scoreTxt.text += ratingString;
+		}
+		else if (PlayState.SONG.stage.toLowerCase() == 'alpha' || defeatDark)
+		{
+				scoreTxt.text = 'Score: $songScore | Combo Breaks: $songMisses | Accuracy: ';
+		
+				if (ratingString != '?'){
+					scoreTxt.text += ((Math.floor(ratingPercent * 10000) / 100)) + '% | ';
+
+					switch(ratingString){
+						case ' [SFC]':
+							scoreTxt.text += '(MFC) AAAA:';
+						case ' [GFC]':
+							scoreTxt.text += '(GFC) AAA:';
+						case ' [FC]':
+							scoreTxt.text += '(FC) AA:';
+						default:
+							scoreTxt.text += '(SDCB) A:';
+					}
+				}
+				else{
+					scoreTxt.text +='0% | N/A';
+				}
+		}
+		else
+			{
+				scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses;
+				if (missLimited)
+					scoreTxt.text += ' / $missLimitCount';
+				scoreTxt.text += ' | Accuracy: ';
+				//
+				if (ratingString != '?')
+					scoreTxt.text += '' + ((Math.floor(ratingPercent * 10000) / 100)) + '%';
+				if (songMisses <= 0) // why would it ever be less than im stupid
+					scoreTxt.text += ratingString;
+			}
+		callOnLuas('onUpdateScore', [miss]);
 	}
 
 	#if ACHIEVEMENTS_ALLOWED

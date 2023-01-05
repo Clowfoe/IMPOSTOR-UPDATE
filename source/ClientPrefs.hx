@@ -32,6 +32,7 @@ class ClientPrefs {
 	public static var imagesPersist:Bool = false;
 	public static var ghostTapping:Bool = true;
 	public static var hideTime:Bool = false;
+	public static var comboStacking = true;
 
 	public static var charOverrides:Array<String> = ['', '', ''];
 	public static var beans:Int = 0;
@@ -111,6 +112,7 @@ class ClientPrefs {
 		FlxG.save.data.imagesPersist = imagesPersist;
 		FlxG.save.data.ghostTapping = ghostTapping;
 		FlxG.save.data.hideTime = hideTime;
+		FlxG.save.data.comboStacking = comboStacking;
 
 		var achieves:Array<String> = [];
 		for (i in 0...Achievements.achievementsUnlocked.length) {
@@ -207,7 +209,11 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.hideTime != null) {
 			hideTime = FlxG.save.data.hideTime;
+
 		}
+
+		if (FlxG.save.data.comboStacking != null)
+			comboStacking = FlxG.save.data.comboStacking;
 
 		var save:FlxSave = new FlxSave();
 		save.bind('controls_v2', 'ninjamuffin99');

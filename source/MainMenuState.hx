@@ -53,6 +53,9 @@ class MainMenuState extends MusicBeatState
 	{
 		super.create();
 
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
+
 		//localFinaleState = ClientPrefs.finaleState;
 
 		localFinaleState = ClientPrefs.finaleState;
@@ -217,6 +220,7 @@ class MainMenuState extends MusicBeatState
 			ClientPrefs.saveSettings();
 		}
 		#end
+		Paths.clearUnusedMemory();
 	}
 
 	#if ACHIEVEMENTS_ALLOWED

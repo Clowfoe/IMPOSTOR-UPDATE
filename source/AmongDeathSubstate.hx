@@ -23,6 +23,8 @@ class AmongDeathSubstate extends MusicBeatSubstate
 	public function new()
 	{
 		super();
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
 
 		camUpper = new FlxCamera();
 		camOther = new FlxCamera();
@@ -64,6 +66,7 @@ class AmongDeathSubstate extends MusicBeatSubstate
 
 		changeMissAmount(0);
 		openMissLimit();
+		Paths.clearUnusedMemory();
 	}
 
 	public var canControl:Bool = false;

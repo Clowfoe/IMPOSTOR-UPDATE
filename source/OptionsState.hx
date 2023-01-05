@@ -735,6 +735,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'GRAPHICS',
 		'Low Quality',
 		'Persistent Cached Data',
+		'Combo Stacking',
 		#if !html5
 		'Framerate', //Apparently 120FPS isn't correctly supported on Browser? Probably it has some V-Sync shit enabled by default, idk
 		#end
@@ -915,6 +916,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 					case 'Hide HUD':
 						ClientPrefs.hideHud = !ClientPrefs.hideHud;
 
+					case 'Combo Stacking':
+						ClientPrefs.comboStacking = !ClientPrefs.comboStacking;
+
 					case 'Persistent Cached Data':
 						ClientPrefs.imagesPersist = !ClientPrefs.imagesPersist;
 						FlxGraphic.defaultPersist = ClientPrefs.imagesPersist;
@@ -988,6 +992,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "Changes how late a note is spawned.\nUseful for preventing audio lag from wireless earphones.";
 			case 'FPS Counter':
 				daText = "If unchecked, hides FPS Counter.";
+			case 'Combo Stacking':
+				daText = "If unchecked, Ratings and Combo won't stack, saving on System Memory and making them easier to read";
 			case 'Low Quality':
 				daText = "If checked, disables some background details,\ndecreases loading times and improves performance.";
 			case 'Persistent Cached Data':
@@ -1082,6 +1088,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.camZooms;
 					case 'Hide HUD':
 						daValue = ClientPrefs.hideHud;
+					case 'Combo Stacking':
+						daValue = ClientPrefs.comboStacking;	
 					case 'Persistent Cached Data':
 						daValue = ClientPrefs.imagesPersist;
 					case 'Hide Song Length':

@@ -48,6 +48,8 @@ class FreeplayState extends MusicBeatState
 	override function create()
 	{
 		super.create();
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
 		WeekData.reloadWeekFiles(false);
 		#if desktop
 		// Updating Discord Rich Presence
@@ -165,6 +167,7 @@ class FreeplayState extends MusicBeatState
 		text.setFormat(Paths.font("vcr.ttf"), 18, FlxColor.WHITE, RIGHT);
 		text.scrollFactor.set();
 		add(text);
+		Paths.clearUnusedMemory();
 	}
 
 	override function closeSubState() {
