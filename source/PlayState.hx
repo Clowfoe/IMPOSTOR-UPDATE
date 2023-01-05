@@ -2457,14 +2457,14 @@ class PlayState extends MusicBeatState
 
 				if (SONG.song.toLowerCase() == 'sussus toogus')
 				{
-					walker = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					//add(walker);
+					walker = new WalkingCrewmate(FlxG.random.int(0, 1), [-700, 1850], 50, 0.8);
+					add(walker);
 
-					var walker2:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					//add(walker2);
+					var walker2:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(2, 3), [-700, 1850], 50, 0.8);
+					add(walker2);
 
-					var walker3:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					//add(walker3);
+					var walker3:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(4, 5), [-700, 1850], 50, 0.8);
+					add(walker3);
 				}
 
 				if (SONG.song.toLowerCase() == 'lights-down')
@@ -3694,6 +3694,13 @@ class PlayState extends MusicBeatState
 		else
 		{
 			gf.scrollFactor.set(1, 1);
+		}
+
+		switch(gf.curCharacter){
+			case 'gfpolus':
+				if (curStage != 'polus2' || curStage != 'polus3'){
+					gf.y -= 50;
+				}
 		}
 
 		gfGroup.add(gf);
@@ -6353,6 +6360,11 @@ class PlayState extends MusicBeatState
 			DiscordClient.changePresence("Chart Editor", null, null, true);
 			#end
 		}
+
+		if (FlxG.keys.justPressed.SIX && !endingSong && !inCutscene)
+			{
+				cpuControlled = !cpuControlled; //sorry i just dont wanna play the song each time i change a small thing
+			}
 		#end
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
