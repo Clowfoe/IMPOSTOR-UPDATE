@@ -74,10 +74,10 @@
 				-34,
 				110
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUPmiss",
-			"loop": false,
+			"indices": [],
 			"name": "note up miss"
 		},
 		{
@@ -85,10 +85,10 @@
 				-34,
 				16
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "stick note up"
 		},
 		{
@@ -96,10 +96,10 @@
 				66,
 				4
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "stick note right"
 		},
 		{
@@ -107,10 +107,10 @@
 				-29,
 				88
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"loop": false,
+			"indices": [],
 			"name": "note right miss"
 		}
 	],
@@ -128,8 +128,8 @@
 		209
 	],
 	"camera_position": [
-		0,
-		0
+		160,
+		-40
 	],
 	"sing_duration": 4,
 	"scale": 1
