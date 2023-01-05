@@ -158,6 +158,8 @@ class MainMenuState extends MusicBeatState
 			testButton.screenCenter(X);
 			testButton.scrollFactor.set();
 			// brian was here
+
+			//hi
 			switch(i) {
 				case 0:
 					testButton.setPosition(400, 475);

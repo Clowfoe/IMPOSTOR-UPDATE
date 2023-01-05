@@ -124,8 +124,14 @@ class TitleState extends MusicBeatState
 			#end
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{	
-				startVideo('v4_startup');
-				
+				if (initialized)
+				{
+					startIntro();
+				}
+				else
+				{
+					startVideo('v4_startup');
+				}
 			});
 		}
 		#end
@@ -190,7 +196,7 @@ class TitleState extends MusicBeatState
 		starBG.scrollFactor.set();
 		add(starBG);
 
-		logoBl = new FlxSprite(-150, 0);
+		logoBl = new FlxSprite(-150, -35);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
@@ -219,7 +225,7 @@ class TitleState extends MusicBeatState
 		add(logoBl);
 		//logoBl.shader = swagShader.shader;
 
-		titleText = new FlxSprite(300, FlxG.height * 0.903);
+		titleText = new FlxSprite(300, FlxG.height * 0.855);
 		titleText.frames = Paths.getSparrowAtlas('menuBooba/startText', 'impostor');
 		titleText.animation.addByPrefix('idle', "EnterIdle", 24, false);
 		titleText.animation.addByPrefix('press', "EnterStart", 24, false);		
@@ -326,6 +332,12 @@ class TitleState extends MusicBeatState
 		}
 
 		// EASTER EGG
+
+		if (starFG != null && starBG != null)
+		{
+			starFG.x -= 0.06;
+			starBG.x -= 0.02;
+		}
 
 		if (!transitioning && skippedIntro)
 		{
