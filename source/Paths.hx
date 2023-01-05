@@ -28,7 +28,7 @@ class Paths
 	inline public static var SOUND_EXT = #if web "mp3" #else "ogg" #end;
 	inline public static var VIDEO_EXT = "mp4";
 
-	private static var currentTrackedAssets:Map<String, Map<String, Any>> = [
+	private static var currentTrackedAssets:Map<String, Map<String, Dynamic>> = [
 		"graphics" => [],
 		"sounds" => []
 	];
@@ -54,7 +54,7 @@ class Paths
 					OpenFlAssets.cache.clear(key);
 					FlxG.bitmap._cache.remove(key);
 					obj.destroy();
-					currentTrackedAssets.remove(key);
+					currentTrackedAssets["graphics"].remove(key);
 				}
 			}
 		}
@@ -69,7 +69,7 @@ class Paths
 					OpenFlAssets.cache.removeSound(key);
 					OpenFlAssets.cache.clearSounds(key);
 					OpenFlAssets.cache.clear(key);
-					currentTrackedSounds.remove(key);
+					currentTrackedAssets["sounds"].remove(key);
 				}
 			}
 		}
@@ -350,7 +350,7 @@ class Paths
 		{
 			if (!currentTrackedAssets["graphics"].exists(path))
 			{
-				var graphic:FlxGraphic = FlxGraphic.fromBitmapData(Assets.getBitmapData(path), false, path);
+				var graphic:FlxGraphic = FlxGraphic.fromBitmapData(OpenFlAssets.getBitmapData(path), false, path);
 				graphic.persist = true;
 				currentTrackedAssets["graphics"].set(path, graphic);
 			}
