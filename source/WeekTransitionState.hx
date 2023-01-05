@@ -22,23 +22,23 @@ using StringTools;
 
 class WeekTransitionState extends MusicBeatState
 {
-    /*
-        this state is probably rlly dumb but its used as a bridge between playstate and loading
-        a different week,,, , its kinda shitty but it works??
-    */
-
-    public static var _difficulty:Int = 1;
-    public static var _week:Int = 0;
+	/*
+		this state is probably rlly dumb but its used as a bridge between playstate and loading
+		a different week,,, , its kinda shitty but it works??
+	 */
+	public static var _difficulty:Int = 1;
+	public static var _week:Int = 0;
 
 	override function create()
 	{
 		super.create();
-        WeekData.reloadWeekFiles(true);
+		WeekData.reloadWeekFiles(true);
 
-        // We can't use Dynamic Array .copy() because that crashes HTML5, here's a workaround.
+		// We can't use Dynamic Array .copy() because that crashes HTML5, here's a workaround.
 		var songArray:Array<String> = [];
 		var leWeek:Array<Dynamic> = WeekData.weeksLoaded.get(WeekData.weeksList[_week]).songs;
-		for (i in 0...leWeek.length) {
+		for (i in 0...leWeek.length)
+		{
 			songArray.push(leWeek[i][0]);
 		}
 
@@ -47,7 +47,8 @@ class WeekTransitionState extends MusicBeatState
 		PlayState.isStoryMode = true;
 
 		var diffic = CoolUtil.difficultyStuff[_difficulty][1];
-		if(diffic == null) diffic = '';
+		if (diffic == null)
+			diffic = '';
 
 		PlayState.storyDifficulty = _difficulty;
 
@@ -58,13 +59,11 @@ class WeekTransitionState extends MusicBeatState
 
 		LoadingState.loadAndSwitchState(new PlayState(), true);
 
-        trace('yes');
-    }
+		trace('yes');
+	}
 
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
 	}
-
-
 }

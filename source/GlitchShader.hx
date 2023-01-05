@@ -9,25 +9,28 @@ import flixel.system.FlxAssets.FlxShader;
 
 class GlitchShader extends FlxBasic
 {
-    public var shader(default, null):GlitchGLSL = new GlitchGLSL();
+	public var shader(default, null):GlitchGLSL = new GlitchGLSL();
 
-    var iTime:Float = 0;
+	var iTime:Float = 0;
 
-    public var amount(default, set):Float = 0;
+	public var amount(default, set):Float = 0;
 
-    public function new(_amount:Float):Void{
-        super();
-        shader.iResolution.value = [FlxG.stage.stageWidth, FlxG.stage.stageHeight];
-        amount = _amount;
-    }
+	public function new(_amount:Float):Void
+	{
+		super();
+		shader.iResolution.value = [FlxG.stage.stageWidth, FlxG.stage.stageHeight];
+		amount = _amount;
+	}
 
-    override public function update(elapsed:Float):Void{
-        super.update(elapsed);
-        iTime += elapsed;
-        shader.iTime.value = [iTime];
-    }
-    
-    function set_amount(v:Float):Float{
+	override public function update(elapsed:Float):Void
+	{
+		super.update(elapsed);
+		iTime += elapsed;
+		shader.iTime.value = [iTime];
+	}
+
+	function set_amount(v:Float):Float
+	{
 		amount = v;
 		shader.glitchAmount.value = [amount];
 		return v;
@@ -36,7 +39,7 @@ class GlitchShader extends FlxBasic
 
 class GlitchGLSL extends FlxShader
 {
-    @:glFragmentSource('
+	@:glFragmentSource('
         #pragma header
 
         uniform vec2 iResolution; 
@@ -76,9 +79,8 @@ void main()
                     (a + b + c) / 3.0,
                     (0.5 - (dot(color, postColor) - 1.5)) * amount);
 }')
-
-    public function new()
-    {
-        super();
-    }
+	public function new()
+	{
+		super();
+	}
 }

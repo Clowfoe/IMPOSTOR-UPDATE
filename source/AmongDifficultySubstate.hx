@@ -21,6 +21,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 	var blackBG:FlxSprite;
 	var missAmountArrow:FlxSprite;
 	var missTxt:FlxText;
+
 	public var dummySprites:FlxTypedGroup<FlxSprite>;
 	public var maximumMissLimit:Int = 5;
 
@@ -46,7 +47,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 
 		curDifficulty = 2;
 		changeDiff(0);
-		
+
 		blackBG = new FlxSprite().makeGraphic(1400, 1400, 0xFF000000);
 		blackBG.screenCenter(XY);
 		blackBG.alpha = 0;
@@ -60,7 +61,8 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 			dummypostor.alpha = 0;
 			dummypostor.ID = i;
 			dummySprites.add(dummypostor);
-			switch(i){
+			switch (i)
+			{
 				case 2 | 3:
 					dummypostor.y += 40;
 				case 4 | 5:
@@ -76,10 +78,10 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 		missTxt = new FlxText(0, 150, FlxG.width, "", 20);
 		missTxt.setFormat(Paths.font("vcr.ttf"), 100, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		missTxt.antialiasing = false;
-        missTxt.scrollFactor.set();
+		missTxt.scrollFactor.set();
 		missTxt.alpha = 0;
 		missTxt.borderSize = 3;
-        add(missTxt);
+		add(missTxt);
 
 		changeMissAmount(0);
 
@@ -93,7 +95,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 			PlayState.storyWeek = curWeek;
 
 			var diffic:String = '-hard';
-				
+
 			var poop:String = Highscore.formatSong(songLowercase, 1);
 			PlayState.SONG = Song.loadFromJson(poop + diffic, songLowercase);
 
@@ -123,8 +125,10 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 			var accepted = controls.ACCEPT;
 			//
 
-			if(accepted){
-				if(!songsWithMissLimits.contains(selectedSong.toLowerCase()) || hasEnteredMissSelection){
+			if (accepted)
+			{
+				if (!songsWithMissLimits.contains(selectedSong.toLowerCase()) || hasEnteredMissSelection)
+				{
 					var songLowercase:String = Paths.formatToSongPath(selectedSong.toLowerCase());
 					trace(selectedSong);
 
@@ -133,7 +137,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 					PlayState.storyWeek = curWeek;
 
 					var diffic:String = '-hard';
-						
+
 					var poop:String = Highscore.formatSong(songLowercase, 1);
 					PlayState.SONG = Song.loadFromJson(poop + diffic, songLowercase);
 
@@ -176,7 +180,8 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 
 		dummySprites.forEach(function(spr:FlxSprite)
 		{
-			if((5 - spr.ID) == PlayState.missLimitCount){
+			if ((5 - spr.ID) == PlayState.missLimitCount)
+			{
 				missAmountArrow.x = spr.x;
 				missTxt.text = '${PlayState.missLimitCount}/5 COMBO BREAKS';
 				missTxt.x = ((FlxG.width / 2) - (missTxt.width / 2));

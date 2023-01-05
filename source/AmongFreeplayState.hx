@@ -31,11 +31,12 @@ using StringTools;
 import Discord.DiscordClient;
 #end
 
-enum RequireType{
+enum RequireType
+{
 	FROM_STORY_MODE;
 	BEANS;
 	SPECIAL;
-}// g
+} // g
 
 typedef FreeplayWeek =
 {
@@ -83,7 +84,7 @@ class AmongFreeplayState extends MusicBeatState
 	var downScroll:Bool;
 
 	var topBean:FlxSprite;
-    var beanText:FlxText;
+	var beanText:FlxText;
 
 	var infoText:FlxText;
 
@@ -95,13 +96,14 @@ class AmongFreeplayState extends MusicBeatState
 	var rimlight:RimlightShader;
 	var buttonTween:FlxTween;
 	var lockTween:FlxTween;
-    var textTween:FlxTween;
+	var textTween:FlxTween;
 
 	var localBeans:Int;
 
 	// someones dying for this
 	// and its me!
 	public static var weeks:Array<FreeplayWeek> = [];
+
 	var hasSavedData:Bool = false;
 	var localWeeks:Array<FreeplayWeek>;
 
@@ -113,7 +115,7 @@ class AmongFreeplayState extends MusicBeatState
 
 		Paths.clearUnusedMemory();
 
-		FlxG.mouse.visible = true;	
+		FlxG.mouse.visible = true;
 
 		localBeans = ClientPrefs.beans;
 
@@ -222,11 +224,14 @@ class AmongFreeplayState extends MusicBeatState
 		listOfButtons = [];
 		weeks = addWeeks();
 
-		if(ClientPrefs.forceUnlockedSongs != null){
+		if (ClientPrefs.forceUnlockedSongs != null)
+		{
 			localWeeks = ClientPrefs.forceUnlockedSongs;
 			hasSavedData = true;
 			trace(localWeeks);
-		}else{
+		}
+		else
+		{
 			localWeeks = weeks;
 		}
 
@@ -238,10 +243,14 @@ class AmongFreeplayState extends MusicBeatState
 			{
 				if (weeks[prevI].section == curWeek)
 				{
-					if(hasSavedData){
+					if (hasSavedData)
+					{
 						listOfButtons.push(new FreeplayCard(0, 0, weeks[prevI].songs[i][0], weeks[prevI].songs[i][1], weeks[prevI].songs[i][3],
-							weeks[prevI].songs[i][2], weeks[prevI].songs[i][4], weeks[prevI].songs[i][5], weeks[prevI].songs[i][6], localWeeks[prevI].songs[i][7]));
-					}else{
+							weeks[prevI].songs[i][2], weeks[prevI].songs[i][4], weeks[prevI].songs[i][5], weeks[prevI].songs[i][6],
+							localWeeks[prevI].songs[i][7]));
+					}
+					else
+					{
 						listOfButtons.push(new FreeplayCard(0, 0, weeks[prevI].songs[i][0], weeks[prevI].songs[i][1], weeks[prevI].songs[i][3],
 							weeks[prevI].songs[i][2], weeks[prevI].songs[i][4], weeks[prevI].songs[i][5], weeks[prevI].songs[i][6], weeks[prevI].songs[i][7]));
 					}
@@ -303,28 +312,27 @@ class AmongFreeplayState extends MusicBeatState
 		portrait.shader = rimlight.shader;
 
 		topBean = new FlxSprite(30, 100).loadGraphic(Paths.image('shop/bean', 'impostor'));
-        topBean.antialiasing = true;
-        topBean.cameras = [camUpper];
-        topBean.updateHitbox();
-		add(topBean);	
+		topBean.antialiasing = true;
+		topBean.cameras = [camUpper];
+		topBean.updateHitbox();
+		add(topBean);
 
-        beanText = new FlxText(110, 105, 200, '---', 35);
+		beanText = new FlxText(110, 105, 200, '---', 35);
 		beanText.setFormat(Paths.font("ariblk.ttf"), 35, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-        beanText.updateHitbox();
+		beanText.updateHitbox();
 		beanText.borderSize = 3;
-        beanText.scrollFactor.set();
-        beanText.antialiasing = true;
-        beanText.cameras = [camUpper];
-        add(beanText);
+		beanText.scrollFactor.set();
+		beanText.antialiasing = true;
+		beanText.cameras = [camUpper];
+		add(beanText);
 
-        beanText.text = Std.string(localBeans);
+		beanText.text = Std.string(localBeans);
 
 		changeWeek(0);
 		changeSelection(0);
 		changePortrait();
-		
+
 		CustomFadeTransition.nextCamera = camOther;
-		
 	}
 
 	public var inSubstate:Bool = false;
@@ -340,7 +348,6 @@ class AmongFreeplayState extends MusicBeatState
 		inSubstate = false;
 		super.closeSubState();
 	}
-
 
 	override function update(elapsed:Float)
 	{
@@ -367,86 +374,97 @@ class AmongFreeplayState extends MusicBeatState
 
 			infoText.text = "Score: " + lerpScore + '\n' + "Rating: " + Math.floor(lerpRating * 100) + '\n';
 
-			if(!lockMovement){
-			if (upScroll)
-				changeSelection(-1);
-			if (downScroll)
-				changeSelection(1);
-			if (upP)
-				changeSelection(-1);
-			if (downP)
-				changeSelection(1);
-			//
-			if (rightP)
+			if (!lockMovement)
 			{
-				changeWeek(1);
-				FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
-			}
-			if (leftP)
-			{
-				changeWeek(-1);
-				FlxG.sound.play(Paths.sound('panelDisappear', 'impostor'), 0.5);
-			}
-			//
-			if (controls.BACK)
-			{
-				ClientPrefs.beans = localBeans;
-				ClientPrefs.forceUnlockedSongs = localWeeks;
-
-				ClientPrefs.saveSettings();
-
-				FlxG.sound.play(Paths.sound('cancelMenu'));
-				MusicBeatState.switchState(new MainMenuState());
-			}
-			//
-			if (accepted)
-			{
-				var pulseColor:FlxColor;
-
-				if(listOfButtons[curSelected].locked){
-					if(listOfButtons[curSelected].requirementtype == BEANS && localBeans >= listOfButtons[curSelected].price){
-						for (i in 0...weeks.length)
-						{
-							for (g in 0...weeks[i].songs.length)
-							{
-								if(localWeeks[i].songs[g][7] == false && localWeeks[i].songs[g][0] == listOfButtons[curSelected].songName){
-									localWeeks[i].songs[g][7] = true;
-									listOfButtons[curSelected].unlockAnim();
-									lockMovement = true;
-									new FlxTimer().start(1.45, function(tmr:FlxTimer)
-									{
-										changePortrait(true);
-										lockMovement = false;
-									});
-									localBeans -= listOfButtons[curSelected].price;
-									beanText.text = Std.string(localBeans);
-									trace(localWeeks[i].songs[g], localWeeks[i].songs[g][7], listOfButtons[curSelected].songName, localWeeks[i].songs[g][0]);
-									return;
-								} 
-							}
-						}
-						return;
-					}
-					FlxG.sound.play(Paths.sound('locked', 'impostor'), 0.7);
-					camUpper.shake(0.01, 0.35);
-					FlxG.camera.shake(0.005, 0.35);
-					pulseColor = 0xFFFF4444;
-
-					if(buttonTween != null) buttonTween.cancel();
-            		buttonTween = FlxTween.color(listOfButtons[curSelected].spriteOne, 0.6, pulseColor, 0xFF4A4A4A, { ease: FlxEase.sineOut });
-					if(lockTween != null) lockTween.cancel();
-            		lockTween = FlxTween.color(listOfButtons[curSelected].lock, 0.6, pulseColor, 0xFFFFFFFF, { ease: FlxEase.sineOut });
-					if(textTween != null) textTween.cancel();
-            		textTween = FlxTween.color(listOfButtons[curSelected].songText, 0.5, pulseColor, 0xFFFFFFFF, { ease: FlxEase.sineOut });
-				}else{
-					openSubState(new AmongDifficultySubstate(curWeek, listOfButtons[curSelected].songName));
+				if (upScroll)
+					changeSelection(-1);
+				if (downScroll)
+					changeSelection(1);
+				if (upP)
+					changeSelection(-1);
+				if (downP)
+					changeSelection(1);
+				//
+				if (rightP)
+				{
+					changeWeek(1);
 					FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
+				}
+				if (leftP)
+				{
+					changeWeek(-1);
+					FlxG.sound.play(Paths.sound('panelDisappear', 'impostor'), 0.5);
+				}
+				//
+				if (controls.BACK)
+				{
 					ClientPrefs.beans = localBeans;
 					ClientPrefs.forceUnlockedSongs = localWeeks;
 
 					ClientPrefs.saveSettings();
+
+					FlxG.sound.play(Paths.sound('cancelMenu'));
+					MusicBeatState.switchState(new MainMenuState());
 				}
-			}
+				//
+				if (accepted)
+				{
+					var pulseColor:FlxColor;
+
+					if (listOfButtons[curSelected].locked)
+					{
+						if (listOfButtons[curSelected].requirementtype == BEANS && localBeans >= listOfButtons[curSelected].price)
+						{
+							for (i in 0...weeks.length)
+							{
+								for (g in 0...weeks[i].songs.length)
+								{
+									if (localWeeks[i].songs[g][7] == false
+										&& localWeeks[i].songs[g][0] == listOfButtons[curSelected].songName)
+									{
+										localWeeks[i].songs[g][7] = true;
+										listOfButtons[curSelected].unlockAnim();
+										lockMovement = true;
+										new FlxTimer().start(1.45, function(tmr:FlxTimer)
+										{
+											changePortrait(true);
+											lockMovement = false;
+										});
+										localBeans -= listOfButtons[curSelected].price;
+										beanText.text = Std.string(localBeans);
+										trace(localWeeks[i].songs[g], localWeeks[i].songs[g][7], listOfButtons[curSelected].songName,
+											localWeeks[i].songs[g][0]);
+										return;
+									}
+								}
+							}
+							return;
+						}
+						FlxG.sound.play(Paths.sound('locked', 'impostor'), 0.7);
+						camUpper.shake(0.01, 0.35);
+						FlxG.camera.shake(0.005, 0.35);
+						pulseColor = 0xFFFF4444;
+
+						if (buttonTween != null)
+							buttonTween.cancel();
+						buttonTween = FlxTween.color(listOfButtons[curSelected].spriteOne, 0.6, pulseColor, 0xFF4A4A4A, {ease: FlxEase.sineOut});
+						if (lockTween != null)
+							lockTween.cancel();
+						lockTween = FlxTween.color(listOfButtons[curSelected].lock, 0.6, pulseColor, 0xFFFFFFFF, {ease: FlxEase.sineOut});
+						if (textTween != null)
+							textTween.cancel();
+						textTween = FlxTween.color(listOfButtons[curSelected].songText, 0.5, pulseColor, 0xFFFFFFFF, {ease: FlxEase.sineOut});
+					}
+					else
+					{
+						openSubState(new AmongDifficultySubstate(curWeek, listOfButtons[curSelected].songName));
+						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
+						ClientPrefs.beans = localBeans;
+						ClientPrefs.forceUnlockedSongs = localWeeks;
+
+						ClientPrefs.saveSettings();
+					}
+				}
 			}
 		}
 		infoText.x = FlxG.width - infoText.width - 6;
@@ -517,9 +535,36 @@ class AmongFreeplayState extends MusicBeatState
 		// jesus christ man this cant get near the coherent code
 		weeks.push({
 			songs: [
-				["Sussus Moogus", "impostor", 'red', FlxColor.RED, FROM_STORY_MODE, ['sussus-moogus'], 0, false],
-				["Sabotage", "impostor", 'red', FlxColor.RED, FROM_STORY_MODE, ['sabotage'], 0, false],
-				["Meltdown", "impostor2", 'red', FlxColor.RED, FROM_STORY_MODE, ['meltdown'], 0, false]
+				[
+					"Sussus Moogus",
+					"impostor",
+					'red',
+					FlxColor.RED,
+					FROM_STORY_MODE,
+					['sussus-moogus'],
+					0,
+					false
+				],
+				[
+					"Sabotage",
+					"impostor",
+					'red',
+					FlxColor.RED,
+					FROM_STORY_MODE,
+					['sabotage'],
+					0,
+					false
+				],
+				[
+					"Meltdown",
+					"impostor2",
+					'red',
+					FlxColor.RED,
+					FROM_STORY_MODE,
+					['meltdown'],
+					0,
+					false
+				]
 			],
 
 			section: 0
@@ -527,10 +572,46 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Sussus Toogus", "crewmate", 'green', FlxColor.fromRGB(0, 255, 0), FROM_STORY_MODE, ['sussus-toogus'], 0, false],
-				["Lights Down", "impostor3", 'green', FlxColor.fromRGB(0, 255, 0), FROM_STORY_MODE, ['lights-down'], 0, false],
-				["Reactor", "impostor3", 'green', FlxColor.fromRGB(0, 255, 0), FROM_STORY_MODE, ['reactor'], 0, false],
-				["Ejected", "parasite", 'para', FlxColor.fromRGB(0, 255, 0), FROM_STORY_MODE, ['ejected'], 0, false]
+				[
+					"Sussus Toogus",
+					"crewmate",
+					'green',
+					FlxColor.fromRGB(0, 255, 0),
+					FROM_STORY_MODE,
+					['sussus-toogus'],
+					0,
+					false
+				],
+				[
+					"Lights Down",
+					"impostor3",
+					'green',
+					FlxColor.fromRGB(0, 255, 0),
+					FROM_STORY_MODE,
+					['lights-down'],
+					0,
+					false
+				],
+				[
+					"Reactor",
+					"impostor3",
+					'green',
+					FlxColor.fromRGB(0, 255, 0),
+					FROM_STORY_MODE,
+					['reactor'],
+					0,
+					false
+				],
+				[
+					"Ejected",
+					"parasite",
+					'para',
+					FlxColor.fromRGB(0, 255, 0),
+					FROM_STORY_MODE,
+					['ejected'],
+					0,
+					false
+				]
 			],
 
 			section: 0
@@ -538,11 +619,56 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Mando", "yellow", 'yellow', FlxColor.fromRGB(255, 218, 67), FROM_STORY_MODE, ['mando'], 0, false],
-				["Dlow", "yellow", 'yellow', FlxColor.fromRGB(255, 218, 67), FROM_STORY_MODE, ['dlow'], 0, false],
-				["Oversight", "white", 'white', FlxColor.WHITE, FROM_STORY_MODE, ['oversight'], 0, false],
-				["Danger", "black", 'black', FlxColor.fromRGB(179, 0, 255), FROM_STORY_MODE, ['danger'], 0, false],
-				["Double Kill", "whiteblack", 'black', FlxColor.fromRGB(179, 0, 255), FROM_STORY_MODE, ['double-kill'], 0, false]
+				[
+					"Mando",
+					"yellow",
+					'yellow',
+					FlxColor.fromRGB(255, 218, 67),
+					FROM_STORY_MODE,
+					['mando'],
+					0,
+					false
+				],
+				[
+					"Dlow",
+					"yellow",
+					'yellow',
+					FlxColor.fromRGB(255, 218, 67),
+					FROM_STORY_MODE,
+					['dlow'],
+					0,
+					false
+				],
+				[
+					"Oversight",
+					"white",
+					'white',
+					FlxColor.WHITE,
+					FROM_STORY_MODE,
+					['oversight'],
+					0,
+					false
+				],
+				[
+					"Danger",
+					"black",
+					'black',
+					FlxColor.fromRGB(179, 0, 255),
+					FROM_STORY_MODE,
+					['danger'],
+					0,
+					false
+				],
+				[
+					"Double Kill",
+					"whiteblack",
+					'black',
+					FlxColor.fromRGB(179, 0, 255),
+					FROM_STORY_MODE,
+					['double-kill'],
+					0,
+					false
+				]
 			],
 
 			section: 0
@@ -550,23 +676,87 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Defeat", "black", 'black', FlxColor.fromRGB(179, 0, 255), FROM_STORY_MODE, ['defeat'], 0, false],
-				["Finale", "black", 'finale', FlxColor.fromRGB(179, 0, 255), SPECIAL, ['finale'], 0, false]
+				[
+					"Defeat",
+					"black",
+					'black',
+					FlxColor.fromRGB(179, 0, 255),
+					FROM_STORY_MODE,
+					['defeat'],
+					0,
+					false
+				],
+				[
+					"Finale",
+					"black",
+					'finale',
+					FlxColor.fromRGB(179, 0, 255),
+					SPECIAL,
+					['finale'],
+					0,
+					false
+				]
 			],
 
 			section: 0
 		});
 
 		weeks.push({
-			songs: [["Identity Crisis", "monotone", 'monotone', FlxColor.BLACK, SPECIAL, ['meltdown', 'ejected', 'double-kill', 'defeat', 'boiling-point', 'neurotic', 'pretender'], 0, false]],
+			songs: [
+				[
+					"Identity Crisis",
+					"monotone",
+					'monotone',
+					FlxColor.BLACK,
+					SPECIAL,
+					[
+						'meltdown',
+						'ejected',
+						'double-kill',
+						'defeat',
+						'boiling-point',
+						'neurotic',
+						'pretender'
+					],
+					0,
+					false
+				]
+			],
 			section: 0
 		});
 
 		weeks.push({
 			songs: [
-				["Ashes", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0), FROM_STORY_MODE, ['ashes'], 0, false],
-				["Magmatic", "maroon", 'maroon', FlxColor.fromRGB(181, 0, 0), FROM_STORY_MODE, ['magmatic'], 0, false],
-				["Boiling Point", "boilingpoint", 'bpmar', FlxColor.fromRGB(181, 0, 0), FROM_STORY_MODE, ['boiling-point'], 0, false]
+				[
+					"Ashes",
+					"maroon",
+					'maroon',
+					FlxColor.fromRGB(181, 0, 0),
+					FROM_STORY_MODE,
+					['ashes'],
+					0,
+					false
+				],
+				[
+					"Magmatic",
+					"maroon",
+					'maroon',
+					FlxColor.fromRGB(181, 0, 0),
+					FROM_STORY_MODE,
+					['magmatic'],
+					0,
+					false
+				],
+				[
+					"Boiling Point",
+					"boilingpoint",
+					'bpmar',
+					FlxColor.fromRGB(181, 0, 0),
+					FROM_STORY_MODE,
+					['boiling-point'],
+					0,
+					false
+				]
 			],
 
 			section: 1
@@ -574,9 +764,36 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Delusion", "gray", 'grey', FlxColor.fromRGB(139, 157, 168), FROM_STORY_MODE, ['delusion'], 0, false],
-				["Blackout", "gray", 'grey', FlxColor.fromRGB(139, 157, 168), FROM_STORY_MODE, ['blackout'], 0, false],
-				["Neurotic", "gray", 'grey', FlxColor.fromRGB(139, 157, 168), FROM_STORY_MODE, ['neurotic'], 0, false]
+				[
+					"Delusion",
+					"gray",
+					'grey',
+					FlxColor.fromRGB(139, 157, 168),
+					FROM_STORY_MODE,
+					['delusion'],
+					0,
+					false
+				],
+				[
+					"Blackout",
+					"gray",
+					'grey',
+					FlxColor.fromRGB(139, 157, 168),
+					FROM_STORY_MODE,
+					['blackout'],
+					0,
+					false
+				],
+				[
+					"Neurotic",
+					"gray",
+					'grey',
+					FlxColor.fromRGB(139, 157, 168),
+					FROM_STORY_MODE,
+					['neurotic'],
+					0,
+					false
+				]
 			],
 
 			section: 1
@@ -584,25 +801,98 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Heartbeat", "pink", 'pink', FlxColor.fromRGB(255, 0, 222), FROM_STORY_MODE, ['heartbeat'], 0, false],
-				["Pinkwave", "pink", 'pink', FlxColor.fromRGB(255, 0, 222), FROM_STORY_MODE, ['pinkwave'], 0, false],
-				["Pretender", "pretender", 'pink', FlxColor.fromRGB(255, 0, 222), FROM_STORY_MODE, ['pretender'], 0, false]
+				[
+					"Heartbeat",
+					"pink",
+					'pink',
+					FlxColor.fromRGB(255, 0, 222),
+					FROM_STORY_MODE,
+					['heartbeat'],
+					0,
+					false
+				],
+				[
+					"Pinkwave",
+					"pink",
+					'pink',
+					FlxColor.fromRGB(255, 0, 222),
+					FROM_STORY_MODE,
+					['pinkwave'],
+					0,
+					false
+				],
+				[
+					"Pretender",
+					"pretender",
+					'pink',
+					FlxColor.fromRGB(255, 0, 222),
+					FROM_STORY_MODE,
+					['pretender'],
+					0,
+					false
+				]
 			],
 
 			section: 1
 		});
 
 		weeks.push({
-			songs: [["Sauces Moogus", "chef", 'chef', FlxColor.fromRGB(242, 114, 28), SPECIAL, ['ashes', 'delusion', 'heartbeat'], 0, false]],
+			songs: [
+				[
+					"Sauces Moogus",
+					"chef",
+					'chef',
+					FlxColor.fromRGB(242, 114, 28),
+					SPECIAL,
+					['ashes', 'delusion', 'heartbeat'],
+					0,
+					false
+				]
+			],
 			section: 1
 		});
 
 		weeks.push({
 			songs: [
-				["O2", "jorsawsee", 'jorsawsee', FlxColor.fromRGB(38, 127, 230), FROM_STORY_MODE, ['o2'], 0],
-				["Voting Time", "votingtime", 'warchief', FlxColor.fromRGB(153, 67, 196), FROM_STORY_MODE, ['voting-time'], 0, false],
-				["Turbulence", "redmungus", 'redmunp', FlxColor.RED, FROM_STORY_MODE, ['turbulence'], 0, false],
-				["Victory", "warchief", 'warchief', FlxColor.fromRGB(153, 67, 196), FROM_STORY_MODE, ['victory'], 0, false]
+				[
+					"O2",
+					"jorsawsee",
+					'jorsawsee',
+					FlxColor.fromRGB(38, 127, 230),
+					FROM_STORY_MODE,
+					['o2'],
+					0
+				],
+				[
+					"Voting Time",
+					"votingtime",
+					'warchief',
+					FlxColor.fromRGB(153, 67, 196),
+					FROM_STORY_MODE,
+					['voting-time'],
+					0,
+					false
+				],
+				[
+					"Turbulence",
+					"redmungus",
+					'redmunp',
+					FlxColor.RED,
+					FROM_STORY_MODE,
+					['turbulence'],
+					0,
+					false
+				],
+				[
+					"Victory",
+					"warchief",
+					'warchief',
+					FlxColor.fromRGB(153, 67, 196),
+					FROM_STORY_MODE,
+					['victory'],
+					0,
+					false
+				]
 			],
 
 			section: 2
@@ -610,7 +900,16 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["ROOMCODE", "powers", 'powers', FlxColor.fromRGB(80, 173, 235), SPECIAL, ['victory'], 0, false]
+				[
+					"ROOMCODE",
+					"powers",
+					'powers',
+					FlxColor.fromRGB(80, 173, 235),
+					SPECIAL,
+					['victory'],
+					0,
+					false
+				]
 			],
 
 			section: 2
@@ -618,9 +917,36 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Sussy Bussy", "tomongus", 'tomo', FlxColor.fromRGB(255, 90, 134), FROM_STORY_MODE, ['sussy-bussy'], 0, false],
-				["Rivals", "tomongus", 'tomo', FlxColor.fromRGB(255, 90, 134), FROM_STORY_MODE, ['rivals'], 0, false],
-				["Chewmate", "hamster", 'ham', FlxColor.fromRGB(255, 90, 134), FROM_STORY_MODE, ['chewmate'], 0, false]
+				[
+					"Sussy Bussy",
+					"tomongus",
+					'tomo',
+					FlxColor.fromRGB(255, 90, 134),
+					FROM_STORY_MODE,
+					['sussy-bussy'],
+					0,
+					false
+				],
+				[
+					"Rivals",
+					"tomongus",
+					'tomo',
+					FlxColor.fromRGB(255, 90, 134),
+					FROM_STORY_MODE,
+					['rivals'],
+					0,
+					false
+				],
+				[
+					"Chewmate",
+					"hamster",
+					'ham',
+					FlxColor.fromRGB(255, 90, 134),
+					FROM_STORY_MODE,
+					['chewmate'],
+					0,
+					false
+				]
 			],
 
 			section: 3
@@ -628,7 +954,16 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Tomongus Tuesday", "tuesday", 'tomo', FlxColor.fromRGB(255, 90, 134), SPECIAL, ['chewmate'], 0, false],
+				[
+					"Tomongus Tuesday",
+					"tuesday",
+					'tomo',
+					FlxColor.fromRGB(255, 90, 134),
+					SPECIAL,
+					['chewmate'],
+					0,
+					false
+				],
 			],
 
 			section: 3
@@ -636,8 +971,26 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Christmas", "fella", 'loggo', FlxColor.fromRGB(0, 255, 0), FROM_STORY_MODE, ['christmas'], 0, false],
-				["Spookpostor", "boo", 'loggo', FlxColor.fromRGB(0, 255, 0), FROM_STORY_MODE, ['spookpostor'], 0, false]
+				[
+					"Christmas",
+					"fella",
+					'loggo',
+					FlxColor.fromRGB(0, 255, 0),
+					FROM_STORY_MODE,
+					['christmas'],
+					0,
+					false
+				],
+				[
+					"Spookpostor",
+					"boo",
+					'loggo',
+					FlxColor.fromRGB(0, 255, 0),
+					FROM_STORY_MODE,
+					['spookpostor'],
+					0,
+					false
+				]
 			],
 
 			section: 4
@@ -645,9 +998,36 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Titular", "henry", 'tit', FlxColor.ORANGE, FROM_STORY_MODE, ['titular'], 0, false],
-				["Greatest Plan", "charles", 'charles', FlxColor.RED, FROM_STORY_MODE, ['greatest-plan'], 0, false],
-				["Reinforcements", "ellie", 'ellie', FlxColor.ORANGE, FROM_STORY_MODE, ['reinforcements'], 0, false],
+				[
+					"Titular",
+					"henry",
+					'tit',
+					FlxColor.ORANGE,
+					FROM_STORY_MODE,
+					['titular'],
+					0,
+					false
+				],
+				[
+					"Greatest Plan",
+					"charles",
+					'charles',
+					FlxColor.RED,
+					FROM_STORY_MODE,
+					['greatest-plan'],
+					0,
+					false
+				],
+				[
+					"Reinforcements",
+					"ellie",
+					'ellie',
+					FlxColor.ORANGE,
+					FROM_STORY_MODE,
+					['reinforcements'],
+					0,
+					false
+				],
 				["Armed", "rhm", 'rhm', FlxColor.ORANGE, FROM_STORY_MODE, ['armed'], 0, false]
 			],
 
@@ -671,7 +1051,16 @@ class AmongFreeplayState extends MusicBeatState
 				["Sussus Nuzzus", "nuzzles", 'nuzzus', FlxColor.BLACK, BEANS, [], 400, false],
 				["Idk", "idk", 'idk', FlxColor.fromRGB(255, 140, 177), BEANS, [], 350, false],
 				["Esculent", "dead", 'esculent', FlxColor.BLACK, BEANS, [], 350, false],
-				["Drippypop", "drippy", 'pop', FlxColor.fromRGB(188, 106, 223), BEANS, [], 425, false],
+				[
+					"Drippypop",
+					"drippy",
+					'pop',
+					FlxColor.fromRGB(188, 106, 223),
+					BEANS,
+					[],
+					425,
+					false
+				],
 				["Crewicide", "dave", 'dave', FlxColor.BLUE, BEANS, [], 450, false],
 				["Monotone Attack", "attack", 'monotoner', FlxColor.WHITE, BEANS, [], 400, false],
 				["Top 10", "top", 'top', FlxColor.RED, BEANS, [], 200, false]
@@ -684,7 +1073,16 @@ class AmongFreeplayState extends MusicBeatState
 			songs: [
 				["Chippin", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38), BEANS, [], 300, false],
 				["Chipping", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38), BEANS, [], 300, false],
-				["Torture", "ziffy", 'torture', FlxColor.fromRGB(188, 106, 223), SPECIAL, ['chippin', 'chipping'], 0, false]
+				[
+					"Torture",
+					"ziffy",
+					'torture',
+					FlxColor.fromRGB(188, 106, 223),
+					SPECIAL,
+					['chippin', 'chipping'],
+					0,
+					false
+				]
 			],
 
 			section: 8
@@ -695,7 +1093,6 @@ class AmongFreeplayState extends MusicBeatState
 
 	function changeWeek(change:Int)
 	{
-
 		prevWeek = curWeek;
 
 		curWeek += change;
@@ -741,10 +1138,14 @@ class AmongFreeplayState extends MusicBeatState
 			{
 				if (weeks[prevI].section == curWeek)
 				{
-					if(hasSavedData){
+					if (hasSavedData)
+					{
 						listOfButtons.push(new FreeplayCard(0, 0, weeks[prevI].songs[i][0], weeks[prevI].songs[i][1], weeks[prevI].songs[i][3],
-							weeks[prevI].songs[i][2], weeks[prevI].songs[i][4], weeks[prevI].songs[i][5], weeks[prevI].songs[i][6], localWeeks[prevI].songs[i][7]));
-					}else{
+							weeks[prevI].songs[i][2], weeks[prevI].songs[i][4], weeks[prevI].songs[i][5], weeks[prevI].songs[i][6],
+							localWeeks[prevI].songs[i][7]));
+					}
+					else
+					{
 						listOfButtons.push(new FreeplayCard(0, 0, weeks[prevI].songs[i][0], weeks[prevI].songs[i][1], weeks[prevI].songs[i][3],
 							weeks[prevI].songs[i][2], weeks[prevI].songs[i][4], weeks[prevI].songs[i][5], weeks[prevI].songs[i][6], weeks[prevI].songs[i][7]));
 					}
@@ -794,16 +1195,19 @@ class AmongFreeplayState extends MusicBeatState
 				portrait.animation.play(listOfButtons[curSelected].portrait);
 		}
 
-		if(listOfButtons[curSelected].locked){
+		if (listOfButtons[curSelected].locked)
+		{
 			portrait.shader = rimlight.shader;
 			portrait.color = FlxColor.BLACK;
-		}else{
+		}
+		else
+		{
 			portrait.shader = null;
 			portrait.color = FlxColor.WHITE;
-		} 
+		}
 
 		trace(portrait.animation.name);
-		
+
 		if (!reset)
 		{
 			if (prevSel != curSelected)
@@ -827,7 +1231,6 @@ class AmongFreeplayState extends MusicBeatState
 					colorTween = FlxTween.color(porGlow, 0.2, porGlow.color, listOfButtons[curSelected].coloring);
 					portraitTween = FlxTween.tween(portrait, {x: 304.65}, 0.3, {ease: FlxEase.expoOut});
 					portraitAlphaTween = FlxTween.tween(portrait, {alpha: 1}, 0.3, {ease: FlxEase.expoOut});
-					
 				}
 			}
 		}
@@ -850,7 +1253,6 @@ class AmongFreeplayState extends MusicBeatState
 			colorTween = FlxTween.color(porGlow, 0.2, porGlow.color, listOfButtons[curSelected].coloring);
 			portraitTween = FlxTween.tween(portrait, {x: 304.65}, 0.3, {ease: FlxEase.expoOut});
 			portraitAlphaTween = FlxTween.tween(portrait, {alpha: 1}, 0.3, {ease: FlxEase.expoOut});
-
 		}
 		rimlight.rimlightColor = listOfButtons[curSelected].coloring;
 	}

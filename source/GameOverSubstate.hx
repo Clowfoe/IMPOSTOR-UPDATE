@@ -10,7 +10,6 @@ import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import openfl.utils.Assets as OpenFlAssets;
-
 #if sys
 import sys.FileSystem;
 #end
@@ -31,7 +30,8 @@ class GameOverSubstate extends MusicBeatSubstate
 	public static var loopSoundName:String = 'gameover_v4_LOOP';
 	public static var endSoundName:String = 'gameover_v4_End';
 
-	public static function resetVariables() {
+	public static function resetVariables()
+	{
 		characterName = 'genericdeath';
 		deathSoundName = 'fnf_loss_sfx';
 		loopSoundName = 'gameover_v4_LOOP';
@@ -46,7 +46,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		Conductor.songPosition = 0;
 
-		if(characterName == 'henryphone')
+		if (characterName == 'henryphone')
 		{
 			FlxG.camera.zoom = 0.9;
 		}
@@ -54,7 +54,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		bf = new Boyfriend(x, y, characterName);
 		add(bf);
 
-		if(characterName == 'henryphone')
+		if (characterName == 'henryphone')
 		{
 			FlxG.camera.zoom = 0.9;
 			camFollow = new FlxPoint(bf.getGraphicMidpoint().x - 30, bf.getGraphicMidpoint().y - 60);
@@ -84,7 +84,8 @@ class GameOverSubstate extends MusicBeatSubstate
 		super.update(elapsed);
 
 		lePlayState.callOnLuas('onUpdate', [elapsed]);
-		if(updateCamera) {
+		if (updateCamera)
+		{
 			var lerpVal:Float = CoolUtil.boundTo(elapsed * 0.6, 0, 1);
 			camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 		}
@@ -94,7 +95,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			endBullshit();
 		}
 
-		if(bf.animation.curAnim.curFrame >= 12)
+		if (bf.animation.curAnim.curFrame >= 12)
 		{
 			if (controls.BACK)
 			{
@@ -114,7 +115,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		if (bf.animation.curAnim.name == 'firstDeath')
 		{
-			if(bf.animation.curAnim.curFrame == 12)
+			if (bf.animation.curAnim.curFrame == 12)
 			{
 				FlxG.camera.follow(camFollowPos, LOCKON, 1);
 				updateCamera = true;
@@ -138,7 +139,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	{
 		super.beatHit();
 
-		//FlxG.log.add('beat');
+		// FlxG.log.add('beat');
 	}
 
 	var isEnding:Bool = false;

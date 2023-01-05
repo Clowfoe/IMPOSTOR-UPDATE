@@ -11,22 +11,23 @@ class ColorShader extends FlxBasic // simplist fucking shader ever but idk a pro
 
 	public var amount(default, set):Float = 0;
 
-
-	public function new(_amount:Float):Void{
+	public function new(_amount:Float):Void
+	{
 		amount = _amount;
-        super();
+		super();
 	}
 
-    override public function update(elapsed:Float):Void{
+	override public function update(elapsed:Float):Void
+	{
 		super.update(elapsed);
 	}
 
-	function set_amount(v:Float):Float{
+	function set_amount(v:Float):Float
+	{
 		amount = v;
 		shader.amount.value = [amount];
 		return v;
 	}
-
 }
 
 class ColorShaderGLSL extends FlxShader
@@ -43,7 +44,6 @@ class ColorShaderGLSL extends FlxShader
 	
 			gl_FragColor = vec4(textureColor.rgb * textureColor.a, textureColor.a);
 		}')
-
 	public function new()
 	{
 		super();

@@ -6,7 +6,6 @@ import Song.SwagSong;
  * ...
  * @author
  */
-
 typedef BPMChangeEvent =
 {
 	var stepTime:Int;
@@ -42,87 +41,85 @@ class Conductor
 	public static var bpmChangeMap:Array<BPMChangeEvent> = [];
 
 	public static function getBPMFromStep(step:Float)
-		{
-			var lastChange:BPMChangeEvent = {
-				stepTime: 0,
-				songTime: 0,
-				bpm: bpm
-			}
-			for (i in 0...Conductor.bpmChangeMap.length)
-			{
-				if (Conductor.bpmChangeMap[i].stepTime <= step)
-					lastChange = Conductor.bpmChangeMap[i];
-			}
-	
-			return lastChange;
+	{
+		var lastChange:BPMChangeEvent = {
+			stepTime: 0,
+			songTime: 0,
+			bpm: bpm
 		}
-		
-		public static function getBPMFromSeconds(time:Float)
+		for (i in 0...Conductor.bpmChangeMap.length)
 		{
-			var lastChange:BPMChangeEvent = {
-				stepTime: 0,
-				songTime: 0,
-				bpm: bpm
-			}
-			for (i in 0...Conductor.bpmChangeMap.length)
-			{
-				if (time >= Conductor.bpmChangeMap[i].songTime)
-					lastChange = Conductor.bpmChangeMap[i];
-			}
-	
-			return lastChange;
+			if (Conductor.bpmChangeMap[i].stepTime <= step)
+				lastChange = Conductor.bpmChangeMap[i];
 		}
-	
-		
-		public static function stepToSeconds(step:Float)
+
+		return lastChange;
+	}
+
+	public static function getBPMFromSeconds(time:Float)
+	{
+		var lastChange:BPMChangeEvent = {
+			stepTime: 0,
+			songTime: 0,
+			bpm: bpm
+		}
+		for (i in 0...Conductor.bpmChangeMap.length)
 		{
-			var lastChange = getBPMFromStep(step);
-			return step * (((60 / lastChange.bpm) * 1000) / 4); // TODO: make less shit and take BPM into account PROPERLY
+			if (time >= Conductor.bpmChangeMap[i].songTime)
+				lastChange = Conductor.bpmChangeMap[i];
 		}
-	
-		public static function beatToSeconds(beat:Float)
-		{
-			var step = beat * 4;
-			var lastChange = getBPMFromStep(step);
-			return lastChange.songTime
-				+
-				((step - lastChange.stepTime) / (lastChange.bpm / 60) / 4) * 1000; // step * (lastChange.stepCrochet*4); // TODO: make less shit and take BPM into account PROPERLY
-		}
-	
-		public static function getStep(time:Float)
-		{
-			var lastChange = getBPMFromSeconds(time);
-			return lastChange.stepTime + (time - lastChange.songTime) / (((60 / lastChange.bpm) * 1000) / 4);
-		}
-	
-		public static function getStepRounded(time:Float)
-		{
-			var lastChange = getBPMFromSeconds(time);
-			return lastChange.stepTime + Math.floor(time - lastChange.songTime) / (((60 / lastChange.bpm) * 1000) / 4);
-		}
-	
-		public static function getBeat(time:Float)
-		{
-			return getStep(time) / 4;
-		}
-	
-		// public static function judgeNote(note:Note, diff:Float=0) //STOLEN FROM KADE ENGINE (bbpanzu) - I had to rewrite it later anyway after i added the custom hit windows lmao (Shadow Mario)
-		// {
-		// 	//tryna do MS based judgment due to popular demand
-		// 	var timingWindows:Array<Int> = [ClientPrefs.sickWindow, ClientPrefs.goodWindow, ClientPrefs.badWindow];
-		// 	var windowNames:Array<String> = ['sick', 'good', 'bad'];
-	
-		// 	// var diff = Math.abs(note.strumTime - Conductor.songPosition) / (PlayState.songMultiplier >= 1 ? PlayState.songMultiplier : 1);
-		// 	for(i in 0...timingWindows.length) // based on 4 timing windows, will break with anything else
-		// 	{
-		// 		if (diff <= timingWindows[Math.round(Math.min(i, timingWindows.length - 1))])
-		// 		{
-		// 			return windowNames[i];
-		// 		}
-		// 	}
-		// 	return 'shit';
-		// }
-		
+
+		return lastChange;
+	}
+
+	public static function stepToSeconds(step:Float)
+	{
+		var lastChange = getBPMFromStep(step);
+		return step * (((60 / lastChange.bpm) * 1000) / 4); // TODO: make less shit and take BPM into account PROPERLY
+	}
+
+	public static function beatToSeconds(beat:Float)
+	{
+		var step = beat * 4;
+		var lastChange = getBPMFromStep(step);
+		return lastChange.songTime
+			+
+			((step - lastChange.stepTime) / (lastChange.bpm / 60) / 4) * 1000; // step * (lastChange.stepCrochet*4); // TODO: make less shit and take BPM into account PROPERLY
+	}
+
+	public static function getStep(time:Float)
+	{
+		var lastChange = getBPMFromSeconds(time);
+		return lastChange.stepTime + (time - lastChange.songTime) / (((60 / lastChange.bpm) * 1000) / 4);
+	}
+
+	public static function getStepRounded(time:Float)
+	{
+		var lastChange = getBPMFromSeconds(time);
+		return lastChange.stepTime + Math.floor(time - lastChange.songTime) / (((60 / lastChange.bpm) * 1000) / 4);
+	}
+
+	public static function getBeat(time:Float)
+	{
+		return getStep(time) / 4;
+	}
+
+	// public static function judgeNote(note:Note, diff:Float=0) //STOLEN FROM KADE ENGINE (bbpanzu) - I had to rewrite it later anyway after i added the custom hit windows lmao (Shadow Mario)
+	// {
+	// 	//tryna do MS based judgment due to popular demand
+	// 	var timingWindows:Array<Int> = [ClientPrefs.sickWindow, ClientPrefs.goodWindow, ClientPrefs.badWindow];
+	// 	var windowNames:Array<String> = ['sick', 'good', 'bad'];
+	// 	// var diff = Math.abs(note.strumTime - Conductor.songPosition) / (PlayState.songMultiplier >= 1 ? PlayState.songMultiplier : 1);
+	// 	for(i in 0...timingWindows.length) // based on 4 timing windows, will break with anything else
+	// 	{
+	// 		if (diff <= timingWindows[Math.round(Math.min(i, timingWindows.length - 1))])
+	// 		{
+	// 			return windowNames[i];
+	// 		}
+	// 	}
+	// 	return 'shit';
+	// }
+
 	public static function mapBPMChanges(song:SwagSong)
 	{
 		bpmChangeMap = [];
@@ -132,7 +129,7 @@ class Conductor
 		var totalPos:Float = 0;
 		for (i in 0...song.notes.length)
 		{
-			if(song.notes[i].changeBPM && song.notes[i].bpm != curBPM)
+			if (song.notes[i].changeBPM && song.notes[i].bpm != curBPM)
 			{
 				curBPM = song.notes[i].bpm;
 				var event:BPMChangeEvent = {

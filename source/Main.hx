@@ -19,9 +19,9 @@ class Main extends Sprite
 	var framerate:Int = 60; // How many frames per second the game should run at.
 	var skipSplash:Bool = true; // Whether to skip the flixel splash screen that appears in release mode.
 	var startFullscreen:Bool = false; // Whether to start the game in fullscreen on desktop targets
+
 	public static var fpsCounter:FPS;
 	public static var fpsVar:FPS;
-	
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
 
@@ -53,7 +53,6 @@ class Main extends Sprite
 
 		setupGame();
 	}
-	
 
 	private function setupGame():Void
 	{
@@ -72,25 +71,24 @@ class Main extends Sprite
 		#if !debug
 		initialState = TitleState;
 		#end
-		
+
 		ClientPrefs.startControls();
 
 		// Paths.getModFolders();
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
 
 		FlxG.signals.gameResized.add(onResizeGame);
-		
+
 		#if !mobile
 		fpsCounter = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsCounter);
 
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
-		if(fpsCounter != null) { 
+		if (fpsCounter != null)
+		{
 			fpsCounter.visible = ClientPrefs.showFPS;
 		}
 		#end
-
-		
 
 		#if html5
 		FlxG.autoPause = false;
@@ -98,34 +96,37 @@ class Main extends Sprite
 		#end
 	}
 
-	function onResizeGame(w:Int, h:Int) {
+	function onResizeGame(w:Int, h:Int)
+	{
 		if (FlxG.cameras == null)
 			return;
 
-		for (cam in FlxG.cameras.list) {
+		for (cam in FlxG.cameras.list)
+		{
 			@:privateAccess
 			if (cam != null && (cam._filters != null || cam._filters != []))
 				fixShaderSize(cam);
-		}	
+		}
 	}
 
 	function fixShaderSize(camera:FlxCamera) // Shout out to Ne_Eo for bringing this to my attention
-		{
-			@:privateAccess {
-				var sprite:Sprite = camera.flashSprite;
-	
-				if (sprite != null)
-				{
-					sprite.__cacheBitmap = null;
-					sprite.__cacheBitmapData = null;
-					sprite.__cacheBitmapData2 = null;
-					sprite.__cacheBitmapData3 = null;
-					sprite.__cacheBitmapColorTransform = null;
-				}
+	{
+		@:privateAccess {
+			var sprite:Sprite = camera.flashSprite;
+
+			if (sprite != null)
+			{
+				sprite.__cacheBitmap = null;
+				sprite.__cacheBitmapData = null;
+				sprite.__cacheBitmapData2 = null;
+				sprite.__cacheBitmapData3 = null;
+				sprite.__cacheBitmapColorTransform = null;
 			}
 		}
+	}
 
-	public function toggleFPS(fpsEnabled:Bool):Void {
+	public function toggleFPS(fpsEnabled:Bool):Void
+	{
 		fpsCounter.visible = fpsEnabled;
 	}
 

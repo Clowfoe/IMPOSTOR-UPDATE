@@ -5,7 +5,7 @@ import flixel.util.FlxColor;
 import flixel.FlxBasic;
 import flixel.system.FlxAssets.FlxShader;
 
-//Written by Rozebud, teehee!!
+// Written by Rozebud, teehee!!
 
 class RimlightShader extends FlxBasic
 {
@@ -16,40 +16,56 @@ class RimlightShader extends FlxBasic
 	public var rimlightColor(default, set):FlxColor = 0xFFFFFFFF;
 	public var refSprite:FlxSprite;
 
-	public function new(_angle:Float = 0, _distance:Float = 10, _rimlightColor:FlxColor = 0xFFFFFFFF, _refSprite:FlxSprite):Void{
+	public function new(_angle:Float = 0, _distance:Float = 10, _rimlightColor:FlxColor = 0xFFFFFFFF, _refSprite:FlxSprite):Void
+	{
 		super();
 		angle = _angle;
 		distance = _distance;
 		rimlightColor = _rimlightColor;
 		refSprite = _refSprite;
 
-		shader.pixelSize.value = [1/refSprite.graphic.width, 1/refSprite.graphic.height];
+		shader.pixelSize.value = [1 / refSprite.graphic.width, 1 / refSprite.graphic.height];
 	}
 
-	override public function update(elapsed:Float):Void{
+	override public function update(elapsed:Float):Void
+	{
 		super.update(elapsed);
 		uvUpdate();
 	}
 
-	public function uvUpdate(){
-		shader.bounds.value = [refSprite.frame.uv.left, refSprite.frame.uv.top, refSprite.frame.uv.right, refSprite.frame.uv.bottom];
+	public function uvUpdate()
+	{
+		shader.bounds.value = [
+			refSprite.frame.uv.left,
+			refSprite.frame.uv.top,
+			refSprite.frame.uv.right,
+			refSprite.frame.uv.bottom
+		];
 	}
 
-	function set_angle(v:Float):Float{
+	function set_angle(v:Float):Float
+	{
 		angle = v;
 		shader.angle.value = [angle];
 		return v;
 	}
 
-	function set_distance(v:Float):Float{
+	function set_distance(v:Float):Float
+	{
 		distance = v;
 		shader.distance.value = [distance];
 		return v;
 	}
 
-	function set_rimlightColor(v:FlxColor):FlxColor{
+	function set_rimlightColor(v:FlxColor):FlxColor
+	{
 		rimlightColor = v;
-		shader.rimlightColor.value = [rimlightColor.redFloat, rimlightColor.greenFloat, rimlightColor.blueFloat, rimlightColor.alphaFloat];
+		shader.rimlightColor.value = [
+			rimlightColor.redFloat,
+			rimlightColor.greenFloat,
+			rimlightColor.blueFloat,
+			rimlightColor.alphaFloat
+		];
 		return v;
 	}
 }
@@ -84,7 +100,6 @@ class RimlightShaderGLSL extends FlxShader
 	
 			gl_FragColor = vec4(outColor.rgb * textureColor.a, textureColor.a);
 		}')
-
 	public function new()
 	{
 		super();

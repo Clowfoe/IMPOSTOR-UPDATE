@@ -14,6 +14,7 @@ class AmongDeathSubstate extends MusicBeatSubstate
 
 	var missAmountArrow:FlxSprite;
 	var missTxt:FlxText;
+
 	public var dummySprites:FlxTypedGroup<FlxSprite>;
 	public var maximumMissLimit:Int = 5;
 
@@ -41,7 +42,8 @@ class AmongDeathSubstate extends MusicBeatSubstate
 			dummypostor.alpha = 0;
 			dummypostor.ID = i;
 			dummySprites.add(dummypostor);
-			switch(i){
+			switch (i)
+			{
 				case 2 | 3:
 					dummypostor.y += 40;
 				case 4 | 5:
@@ -57,10 +59,10 @@ class AmongDeathSubstate extends MusicBeatSubstate
 		missTxt = new FlxText(0, 150, FlxG.width, "", 20);
 		missTxt.setFormat(Paths.font("vcr.ttf"), 100, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		missTxt.antialiasing = false;
-        missTxt.scrollFactor.set();
+		missTxt.scrollFactor.set();
 		missTxt.alpha = 0;
 		missTxt.borderSize = 3;
-        add(missTxt);
+		add(missTxt);
 
 		changeMissAmount(0);
 		openMissLimit();
@@ -71,12 +73,12 @@ class AmongDeathSubstate extends MusicBeatSubstate
 	public var isClosing:Bool = false;
 
 	override public function update(elapsed:Float)
-	{	
+	{
 		var rightP = controls.UI_RIGHT_P;
 		var leftP = controls.UI_LEFT_P;
 		var accepted = controls.ACCEPT;
 
-		if(accepted && hasEnteredMissSelection == true)
+		if (accepted && hasEnteredMissSelection == true)
 		{
 			FlxG.sound.play(Paths.sound('amongkill', 'impostor'), 0.9);
 			hasEnteredMissSelection = false;
@@ -86,11 +88,11 @@ class AmongDeathSubstate extends MusicBeatSubstate
 			add(blackScreen);
 
 			missTxt.alpha = 0;
-		 	missAmountArrow.alpha = 0;
+			missAmountArrow.alpha = 0;
 
-		 	dummySprites.forEach(function(spr:FlxSprite)
+			dummySprites.forEach(function(spr:FlxSprite)
 			{
-				spr.alpha = 0;	
+				spr.alpha = 0;
 			});
 			var songArray:Array<String> = [];
 			var leWeek:Array<Dynamic> = WeekData.weeksLoaded.get(WeekData.weeksList[AmongStoryMenuState.curWeek]).songs;
@@ -113,7 +115,7 @@ class AmongDeathSubstate extends MusicBeatSubstate
 			PlayState.storyWeek = AmongStoryMenuState.curWeek;
 			PlayState.campaignScore = 0;
 			PlayState.campaignMisses = 0;
-			
+
 			FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
 				ease: FlxEase.circOut,
 				onComplete: function(tween:FlxTween)
@@ -127,7 +129,7 @@ class AmongDeathSubstate extends MusicBeatSubstate
 		{
 			if (hasEnteredMissSelection)
 				changeMissAmount(-1);
-			
+
 			FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 		}
 
@@ -135,7 +137,7 @@ class AmongDeathSubstate extends MusicBeatSubstate
 		{
 			if (hasEnteredMissSelection)
 				changeMissAmount(1);
-	
+
 			FlxG.sound.play(Paths.sound('panelDisappear', 'impostor'), 0.5);
 		}
 	}
@@ -150,7 +152,8 @@ class AmongDeathSubstate extends MusicBeatSubstate
 
 		dummySprites.forEach(function(spr:FlxSprite)
 		{
-			if((5 - spr.ID) == PlayState.missLimitCount){
+			if ((5 - spr.ID) == PlayState.missLimitCount)
+			{
 				missAmountArrow.x = spr.x;
 				missTxt.text = '${PlayState.missLimitCount}/5 COMBO BREAKS';
 				missTxt.x = ((FlxG.width / 2) - (missTxt.width / 2));

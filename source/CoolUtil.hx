@@ -17,21 +17,20 @@ using StringTools;
 class CoolUtil
 {
 	// [Difficulty name, Chart file suffix]
-	public static var difficultyStuff:Array<Dynamic> = [
-		['Easy', '-easy'],
-		['Normal', ''],
-		['Hard', '-hard']
-	];
+	public static var difficultyStuff:Array<Dynamic> = [['Easy', '-easy'], ['Normal', ''], ['Hard', '-hard']];
 
 	public static function difficultyString():String
 	{
 		return difficultyStuff[PlayState.storyDifficulty][0].toUpperCase();
 	}
 
-	public static function boundTo(value:Float, min:Float, max:Float):Float {
+	public static function boundTo(value:Float, min:Float, max:Float):Float
+	{
 		var newValue:Float = value;
-		if(newValue < min) newValue = min;
-		else if(newValue > max) newValue = max;
+		if (newValue < min)
+			newValue = min;
+		else if (newValue > max)
+			newValue = max;
 		return newValue;
 	}
 
@@ -39,9 +38,11 @@ class CoolUtil
 	{
 		var daList:Array<String> = [];
 		#if MODS_ALLOWED
-		if(FileSystem.exists(path)) daList = File.getContent(path).trim().split('\n');
+		if (FileSystem.exists(path))
+			daList = File.getContent(path).trim().split('\n');
 		#else
-		if(Assets.exists(path)) daList = Assets.getText(path).trim().split('\n');
+		if (Assets.exists(path))
+			daList = Assets.getText(path).trim().split('\n');
 		#end
 
 		for (i in 0...daList.length)
@@ -60,13 +61,16 @@ class CoolUtil
 	}
 
 	// uhhhh does this even work at all? i'm starting to doubt
-	public static function precacheSound(sound:String, ?library:String = null):Void {
-		if(!Assets.cache.hasSound(Paths.sound(sound, library))) {
+	public static function precacheSound(sound:String, ?library:String = null):Void
+	{
+		if (!Assets.cache.hasSound(Paths.sound(sound, library)))
+		{
 			FlxG.sound.cache(Paths.sound(sound, library));
 		}
 	}
 
-	public static function browserLoad(site:String) {
+	public static function browserLoad(site:String)
+	{
 		#if linux
 		Sys.command('/usr/bin/xdg-open', [site, "&"]);
 		#else

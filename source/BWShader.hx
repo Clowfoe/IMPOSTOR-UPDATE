@@ -4,7 +4,7 @@ import flixel.util.FlxColor;
 import flixel.FlxObject;
 import flixel.system.FlxAssets.FlxShader;
 
-//hi fabs
+// hi fabs
 // thanks rozebud
 
 class BWShader extends FlxObject
@@ -15,35 +15,39 @@ class BWShader extends FlxObject
 	public var upperBound(default, set):Float;
 	public var invert(default, set):Bool;
 
-	public function new(_lowerBound:Float = 0.01, _upperBound:Float = 0.15, _invert:Bool = false):Void{
+	public function new(_lowerBound:Float = 0.01, _upperBound:Float = 0.15, _invert:Bool = false):Void
+	{
 		super();
 		lowerBound = _lowerBound;
 		upperBound = _upperBound;
 		invert = _invert;
 	}
 
-	override public function update(elapsed:Float):Void{
+	override public function update(elapsed:Float):Void
+	{
 		super.update(elapsed);
 	}
 
-	function set_invert(v:Bool):Bool{
+	function set_invert(v:Bool):Bool
+	{
 		invert = v;
 		shader.invert.value = [invert];
 		return v;
 	}
 
-	function set_lowerBound(v:Float):Float{
+	function set_lowerBound(v:Float):Float
+	{
 		lowerBound = v;
 		shader.lowerBound.value = [lowerBound];
 		return v;
 	}
 
-	function set_upperBound(v:Float):Float{
+	function set_upperBound(v:Float):Float
+	{
 		upperBound = v;
 		shader.upperBound.value = [upperBound];
 		return v;
 	}
-
 }
 
 class BWShaderGLSL extends FlxShader
@@ -76,7 +80,6 @@ class BWShaderGLSL extends FlxShader
 
 			gl_FragColor = vec4(outColor, outColor, outColor, textureColor.a);
 		}')
-
 	public function new()
 	{
 		super();

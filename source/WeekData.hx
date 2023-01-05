@@ -26,11 +26,13 @@ typedef WeekFile =
 	var hideFreeplay:Bool;
 }
 
-class WeekData {
+class WeekData
+{
 	public static var weeksLoaded:Map<String, WeekData> = new Map<String, WeekData>();
 	public static var weeksList:Array<String> = [];
+
 	public var folder:String = '';
-	
+
 	// JSON variables
 	public var songs:Array<Dynamic>;
 	public var weekCharacters:Array<String>;
@@ -43,9 +45,14 @@ class WeekData {
 	public var hideStoryMode:Bool;
 	public var hideFreeplay:Bool;
 
-	public static function createWeekFile():WeekFile {
+	public static function createWeekFile():WeekFile
+	{
 		var weekFile:WeekFile = {
-			songs: [["Bopeebo", "dad", [146, 113, 253]], ["Fresh", "dad", [146, 113, 253]], ["Dad Battle", "dad", [146, 113, 253]]],
+			songs: [
+				["Bopeebo", "dad", [146, 113, 253]],
+				["Fresh", "dad", [146, 113, 253]],
+				["Dad Battle", "dad", [146, 113, 253]]
+			],
 			weekCharacters: ['dad', 'bf', 'gf'],
 			weekBackground: 'stage',
 			weekBefore: 'tutorial',
@@ -60,7 +67,8 @@ class WeekData {
 	}
 
 	// HELP: Is there any way to convert a WeekFile to WeekData without having to put all variables there manually? I'm kind of a noob in haxe lmao
-	public function new(weekFile:WeekFile) {
+	public function new(weekFile:WeekFile)
+	{
 		songs = weekFile.songs;
 		weekCharacters = weekFile.weekCharacters;
 		weekBackground = weekFile.weekBackground;
@@ -80,37 +88,48 @@ class WeekData {
 		#if MODS_ALLOWED
 		var directories:Array<String> = [Paths.mods(), Paths.getPreloadPath()];
 		var originalLength:Int = directories.length;
-		if(FileSystem.exists(Paths.mods())) {
-			for (folder in FileSystem.readDirectory(Paths.mods())) {
+		if (FileSystem.exists(Paths.mods()))
+		{
+			for (folder in FileSystem.readDirectory(Paths.mods()))
+			{
 				var path = haxe.io.Path.join([Paths.mods(), folder]);
-				if (sys.FileSystem.isDirectory(path) && !Paths.ignoreModFolders.contains(folder)) {
+				if (sys.FileSystem.isDirectory(path) && !Paths.ignoreModFolders.contains(folder))
+				{
 					directories.push(path + '/');
-					//trace('pushed Directory: ' + folder);
+					// trace('pushed Directory: ' + folder);
 				}
 			}
 		}
-		
 		#else
 		var directories:Array<String> = [Paths.getPreloadPath()];
 		var originalLength:Int = directories.length;
 		#end
 
 		var sexList:Array<String> = CoolUtil.coolTextFile(Paths.getPreloadPath('weeks/weekList.txt'));
-		for (i in 0...sexList.length) {
-			for (j in 0...directories.length) {
+		for (i in 0...sexList.length)
+		{
+			for (j in 0...directories.length)
+			{
 				var fileToCheck:String = directories[j] + 'weeks/' + sexList[i] + '.json';
-				if(!weeksLoaded.exists(sexList[i])) {
+				if (!weeksLoaded.exists(sexList[i]))
+				{
 					var week:WeekFile = getWeekFile(fileToCheck);
-					if(week != null) {
+					if (week != null)
+					{
 						var weekFile:WeekData = new WeekData(week);
 
 						#if MODS_ALLOWED
-						if(j >= originalLength) {
-							weekFile.folder = directories[j].substring(Paths.mods().length, directories[j].length-1);
+						if (j >= originalLength)
+						{
+							weekFile.folder = directories[j].substring(Paths.mods().length, directories[j].length - 1);
 						}
 						#end
 
-						if(weekFile != null && (isStoryMode == null || (isStoryMode && !weekFile.hideStoryMode) || (!isStoryMode && !weekFile.hideFreeplay))) {
+						if (weekFile != null
+							&& (isStoryMode == null
+								|| (isStoryMode && !weekFile.hideStoryMode)
+								|| (!isStoryMode && !weekFile.hideFreeplay)))
+						{
 							weeksLoaded.set(sexList[i], weekFile);
 							weeksList.push(sexList[i]);
 						}
@@ -120,22 +139,30 @@ class WeekData {
 		}
 
 		#if MODS_ALLOWED
-		for (i in 0...directories.length) {
+		for (i in 0...directories.length)
+		{
 			var directory:String = directories[i] + 'weeks/';
-			if(FileSystem.exists(directory)) {
-				for (file in FileSystem.readDirectory(directory)) {
+			if (FileSystem.exists(directory))
+			{
+				for (file in FileSystem.readDirectory(directory))
+				{
 					var path = haxe.io.Path.join([directory, file]);
-					if (!sys.FileSystem.isDirectory(path) && file.endsWith('.json')) {
+					if (!sys.FileSystem.isDirectory(path) && file.endsWith('.json'))
+					{
 						var weekToCheck:String = file.substr(0, file.length - 5);
-						if(!weeksLoaded.exists(weekToCheck)) {
+						if (!weeksLoaded.exists(weekToCheck))
+						{
 							var week:WeekFile = getWeekFile(path);
-							if(week != null) {
+							if (week != null)
+							{
 								var weekFile:WeekData = new WeekData(week);
-								if(i >= originalLength) {
-									weekFile.folder = directories[i].substring(Paths.mods().length, directories[i].length-1);
+								if (i >= originalLength)
+								{
+									weekFile.folder = directories[i].substring(Paths.mods().length, directories[i].length - 1);
 								}
 
-								if((isStoryMode && !weekFile.hideStoryMode) || (!isStoryMode && !weekFile.hideFreeplay)) {
+								if ((isStoryMode && !weekFile.hideStoryMode) || (!isStoryMode && !weekFile.hideFreeplay))
+								{
 									weeksLoaded.set(weekToCheck, weekFile);
 									weeksList.push(weekToCheck);
 								}
@@ -148,39 +175,46 @@ class WeekData {
 		#end
 	}
 
-	private static function getWeekFile(path:String):WeekFile {
+	private static function getWeekFile(path:String):WeekFile
+	{
 		var rawJson:String = null;
 		#if MODS_ALLOWED
-		if(FileSystem.exists(path)) {
+		if (FileSystem.exists(path))
+		{
 			rawJson = File.getContent(path);
 		}
 		#else
-		if(OpenFlAssets.exists(path)) {
+		if (OpenFlAssets.exists(path))
+		{
 			rawJson = Assets.getText(path);
 		}
 		#end
 
-		if(rawJson != null && rawJson.length > 0) {
+		if (rawJson != null && rawJson.length > 0)
+		{
 			return cast Json.parse(rawJson);
 		}
 		return null;
 	}
 
 	//   FUNCTIONS YOU WILL PROBABLY NEVER NEED TO USE
-
-	//To use on PlayState.hx or Highscore stuff
-	public static function getWeekFileName():String {
+	// To use on PlayState.hx or Highscore stuff
+	public static function getWeekFileName():String
+	{
 		return weeksList[PlayState.storyWeek];
 	}
 
-	//Used on LoadingState, nothing really too relevant
-	public static function getCurrentWeek():WeekData {
+	// Used on LoadingState, nothing really too relevant
+	public static function getCurrentWeek():WeekData
+	{
 		return weeksLoaded.get(weeksList[PlayState.storyWeek]);
 	}
 
-	public static function setDirectoryFromWeek(?data:WeekData = null) {
+	public static function setDirectoryFromWeek(?data:WeekData = null)
+	{
 		Paths.currentModDirectory = '';
-		if(data != null && data.folder != null && data.folder.length > 0) {
+		if (data != null && data.folder != null && data.folder.length > 0)
+		{
 			Paths.currentModDirectory = data.folder;
 		}
 	}
