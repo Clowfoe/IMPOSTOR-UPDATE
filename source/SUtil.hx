@@ -13,7 +13,7 @@ import openfl.Lib;
 import openfl.events.UncaughtErrorEvent;
 import openfl.system.System as OpenFLSystem;
 import openfl.utils.Assets;
-#if MODS_ALLOWED
+#if sys
 import sys.FileSystem;
 import sys.io.File;
 #else
