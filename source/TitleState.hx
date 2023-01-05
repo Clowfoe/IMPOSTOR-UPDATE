@@ -29,7 +29,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
 import openfl.Assets;
-#if sys
+#if MODS_ALLOWED
 import sys.FileSystem;
 #end
 
@@ -542,7 +542,7 @@ class TitleState extends MusicBeatState
 	#if VIDEOS_ALLOWED
 	var foundFile:Bool = false;
 	var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
-	#if sys
+	#if MODS_ALLOWED
 	if (FileSystem.exists(fileName))
 	{
 		foundFile = true;
@@ -552,7 +552,7 @@ class TitleState extends MusicBeatState
 	if (!foundFile)
 	{
 		fileName = Paths.video(name);
-		#if sys
+		#if MODS_ALLOWED
 		if (FileSystem.exists(fileName))
 		{
 		#else

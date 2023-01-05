@@ -10,7 +10,7 @@ import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import openfl.utils.Assets as OpenFlAssets;
-#if sys
+#if MODS_ALLOWED
 import sys.FileSystem;
 #end
 

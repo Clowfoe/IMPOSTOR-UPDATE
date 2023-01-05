@@ -1,6 +1,6 @@
 package;
 
-#if sys
+#if MODS_ALLOWED
 import sys.io.File;
 #end
 import lime.utils.Assets;

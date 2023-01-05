@@ -12,7 +12,7 @@ import lime.system.System as LimeSystem;
 import openfl.Lib;
 import openfl.events.UncaughtErrorEvent;
 import openfl.utils.Assets;
-#if sys
+#if MODS_ALLOWED
 import sys.FileSystem;
 import sys.io.File;
 #else
@@ -178,7 +178,7 @@ class SUtil
 
 		final msg:String = stack.join('\n');
 
-		#if sys
+		#if MODS_ALLOWED
 		try
 		{
 			if (!FileSystem.exists(SUtil.getStorageDirectory() + 'logs'))
@@ -238,7 +238,7 @@ class SUtil
 		}
 	}
 
-	#if sys
+	#if MODS_ALLOWED
 	public static function saveContent(fileName:String = 'file', fileExtension:String = '.json',
 			fileData:String = 'you forgot to add something in your code lol'):Void
 	{
@@ -287,7 +287,7 @@ class SUtil
 
 	private static function println(msg:String):Void
 	{
-		#if sys
+		#if MODS_ALLOWED
 		Sys.println(msg);
 		#else
 		Log.trace(msg, null); // Pass null to exclude the position.
