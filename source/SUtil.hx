@@ -196,7 +196,7 @@ class SUtil
 		}
 	}
 
-	#if MODS_ALLOWED
+	#if sys
 	public static function saveContent(fileName:String = 'file', fileExtension:String = '.json',
 			fileData:String = 'you forgot to add something in your code lol'):Void
 	{
