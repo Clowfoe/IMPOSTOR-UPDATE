@@ -1,7 +1,6 @@
 package;
 
 import openfl.display3D.textures.Texture;
-import flixel.math.FlxPoint;
 import flixel.graphics.frames.FlxFrame.FlxFrameAngle;
 import openfl.geom.Rectangle;
 import flixel.math.FlxRect;
