@@ -129,8 +129,6 @@ class AmongStoryMenuState extends MusicBeatState
 	{
 		super.create();
 
-		ClientPrefs.finaleState = NOT_PLAYED;
-
 		Paths.clearUnusedMemory();
 
 		localFinaleState = ClientPrefs.finaleState;
@@ -606,6 +604,11 @@ class AmongStoryMenuState extends MusicBeatState
 		FlxG.camera.follow(ship, LOCKON, 1);
 
 		changeWeek();
+
+		#if mobile
+		addVirtualPad(LEFT_FULL, A_B);
+		addVirtualPadCamera();
+		#end
 	}
 
 	override function closeSubState()

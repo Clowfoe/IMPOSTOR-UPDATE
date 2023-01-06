@@ -110,6 +110,11 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 		}
 		else
 			openMissLimit();
+
+		#if mobile
+		addVirtualPad(LEFT_RIGHT, A);
+		addVirtualPadCamera();
+		#end
 	}
 
 	public var canControl:Bool = false;
