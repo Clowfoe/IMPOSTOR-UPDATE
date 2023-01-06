@@ -85,7 +85,15 @@ class AmongStoryMenuState extends MusicBeatState
 	function doTheThing()
 	{
 		#if debug
-		unlockedWeek[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] = true;
+		unlockedWeek[1] = true;
+		unlockedWeek[2] = true;
+		unlockedWeek[3] = true;
+		unlockedWeek[5] = true;
+		unlockedWeek[6] = true;
+		unlockedWeek[8] = true;
+		unlockedWeek[9] = true;
+		unlockedWeek[10] = true;
+		unlockedWeek[11] = true;
 		#end
 
 		if (Highscore.getScore('meltdown', 2) != 0)
