@@ -30,7 +30,6 @@ class ClientPrefs
 	public static var hitboxInput:Bool = #if mobile true #else false #end;
 	public static var camZooms:Bool = true;
 	public static var hideHud:Bool = false;
-	public static var controllerMode:Bool = #if android true #else false #end;
 	public static var noteOffset:Int = 0;
 	public static var arrowHSV:Array<Array<Int>> = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 	public static var imagesPersist:Bool = false;
@@ -110,7 +109,6 @@ class ClientPrefs
 		FlxG.save.data.cursing = cursing;
 		FlxG.save.data.violence = violence;
 		FlxG.save.data.camZooms = camZooms;
-		FlxG.save.data.controllerMode = controllerMode;
 		FlxG.save.data.hitboxInput = hitboxInput;
 		FlxG.save.data.noteOffset = noteOffset;
 		FlxG.save.data.hideHud = hideHud;
@@ -188,10 +186,6 @@ class ClientPrefs
 		if (FlxG.save.data.noteSplashes != null)
 		{
 			noteSplashes = FlxG.save.data.noteSplashes;
-		}
-		if(FlxG.save.data.controllerMode != null) 
-		{
-			controllerMode = FlxG.save.data.controllerMode;
 		}
 		if(FlxG.save.data.hitboxInput != null) 
 		{

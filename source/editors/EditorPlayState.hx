@@ -546,19 +546,6 @@ class EditorPlayState extends MusicBeatState
 		var controlReleaseArray:Array<Bool> = [leftR, downR, upR, rightR];
 		var controlHoldArray:Array<Bool> = [left, down, up, right];
 
-		if(ClientPrefs.controllerMode)
-			{
-				var parsedArray:Array<Bool> = parseKeys('_P');
-				if(parsedArray.contains(true))
-				{
-					for (i in 0...parsedArray.length)
-					{
-						if(parsedArray[i] && strumsBlocked[i] != true)
-							onKeyPress(new KeyboardEvent(KeyboardEvent.KEY_DOWN, true, true, -1, keysArray[i][0]));
-					}
-				}
-			}
-			
 		// FlxG.watch.addQuick('asdfa', upP);
 		if (generatedMusic)
 		{
