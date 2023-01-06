@@ -42,7 +42,7 @@ class ColorShaderGLSL extends FlxShader
 
             textureColor.rgb = textureColor.rgb + vec3(amount);
 	
-			gl_FragColor = vec4(textureColor.rgb * textureColor.a, textureColor.a);
+			gl_FragColor = vec4(textureColor.rgb * vec3(textureColor.a), textureColor.a);
 		}')
 	public function new()
 	{
