@@ -18,8 +18,8 @@
         </target>
 
 	<target id="haxe" tool="linker" if="android">
-		<lib name="${CPP_DIR}/ndll/Android/libvlc-v7.so" if="HXCPP_ARMV7" />
-		<lib name="${CPP_DIR}/ndll/Android/libvlc-64.so" if="HXCPP_ARM64" />
+		<lib name="${CPP_DIR}/lib/Android/libvlc-v7.so" if="HXCPP_ARMV7" />
+		<lib name="${CPP_DIR}/lib/Android/libvlc-64.so" if="HXCPP_ARM64" />
 	</target>
 
 	<target id="haxe" tool="linker" if="mac">
