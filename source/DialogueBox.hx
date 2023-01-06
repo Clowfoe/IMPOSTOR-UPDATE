@@ -226,7 +226,7 @@ class DialogueBox extends FlxSpriteGroup
 		}
 
 		#if android
-                var justTouched:Bool = false;
+        var justTouched:Bool = false;
 
 		for (touch in FlxG.touches.list)
 		{
