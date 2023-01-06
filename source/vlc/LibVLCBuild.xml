@@ -22,10 +22,6 @@
 		<lib name='${CPP_DIR}/lib/Android/libvlc-64.so' if='android' />
 
 	</target>
-	<target id="haxe" tool="linker" if="linux">
-                <lib name='${CPP_DIR}/lib/linux/libvlccore.so.7' />
-		<lib name='${CPP_DIR}/lib/linux/libvlccore.so.9' />
-	</target>
 
 	<target id="haxe" tool="linker" if="mac">
             <flag value="-framework"/>
