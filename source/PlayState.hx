@@ -5802,7 +5802,7 @@ class PlayState extends MusicBeatState
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 	public var ratingIndexArray:Array<String> = ["sick", "good", "bad", "shit"];
-	public var returnArray:Array<String> = [" [SFC]", " [GFC]", " [FC]", ""];
+	public var returnArray:Array<String> = [" [SFC]", " [GFC]", " [FC]", " [FC]"]; // if you get a shit you're STILL fcing, y'know. Unless you plan on making the combo break on a shit, too!
 	public var smallestRating:String;
 
 	override public function update(elapsed:Float)
@@ -6269,6 +6269,7 @@ class PlayState extends MusicBeatState
 				if (ratingString != '?'){
 					scoreTxt.text += ((Math.floor(ratingPercent * 10000) / 100)) + '% | ';
 
+					// tbh this should be rewritten to be more accurate to KE tbh
 					switch(ratingString){
 						case ' [SFC]':
 							scoreTxt.text += '(MFC) AAAA:';
@@ -6277,7 +6278,12 @@ class PlayState extends MusicBeatState
 						case ' [FC]':
 							scoreTxt.text += '(FC) AA:';
 						default:
-							scoreTxt.text += '(SDCB) A:';
+							if(songMisses<10){
+								scoreTxt.text += '(SDCB) A:';
+							}else{
+								scoreTxt.text += '(Clear) A:';
+							}
+							
 					}
 				}
 				else{
