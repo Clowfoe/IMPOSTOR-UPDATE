@@ -625,8 +625,8 @@ class PlayState extends MusicBeatState
 	{
 		super.create();
 
-		FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Inst'); // fuck
-		FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Voices');
+		FlxG.sound.cache('songs:assets/songs/${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Inst.ogg'); // fuck
+		FlxG.sound.cache('songs:assets/songs/${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Voices.ogg'); // fuck
 		instance = this;
 		resetSpriteCache = false;
 
