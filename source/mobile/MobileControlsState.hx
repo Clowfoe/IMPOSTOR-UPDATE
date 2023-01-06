@@ -15,7 +15,7 @@ import mobile.flixel.FlxHitbox;
 import mobile.flixel.FlxVirtualPad;
 import openfl.utils.Assets;
 
-class MobileControlsSubState extends FlxSubState
+class MobileControlsState extends FlxSubState
 {
 	final controlsItems:Array<String> = ['Pad-Right', 'Pad-Left', 'Pad-Custom', 'Pad-Duo', 'Hitbox', 'Keyboard'];
 

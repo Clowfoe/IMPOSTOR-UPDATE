@@ -16,6 +16,7 @@ import flixel.FlxState;
 import flixel.FlxBasic;
 #if mobile
 import mobile.flixel.FlxHitbox;
+import mobile.MobileControls;
 import mobile.flixel.FlxVirtualPad;
 import flixel.FlxCamera;
 import flixel.input.actions.FlxActionInput;
@@ -35,6 +36,7 @@ class MusicBeatState extends FlxUIState
 		return PlayerSettings.player1.controls;
 
 	#if mobile
+	var mobileControls:MobileControls;
 	var hitbox:FlxHitbox;
 	var virtualPad:FlxVirtualPad;
 	var trackedInputsHitbox:Array<FlxActionInput> = [];
@@ -98,6 +100,43 @@ class MusicBeatState extends FlxUIState
 			hitbox.cameras = [camControls];
 		}
 	}
+
+	public function addMobileControls(DefaultDrawTarget:Bool = true)
+		{
+			mobileControls = new MobileControls();
+	
+			switch (MobileControls.getMode())
+			{
+				case 'Pad-Right' | 'Pad-Left' | 'Pad-Custom':
+					controls.setVirtualPadNOTES(mobileControls.virtualPad, RIGHT_FULL, NONE);
+				case 'Pad-Duo':
+					controls.setVirtualPadNOTES(mobileControls.virtualPad, BOTH_FULL, NONE);
+				case 'Hitbox':
+					controls.setHitBox(mobileControls.hitbox);
+				case 'Keyboard': // do nothing
+			}
+	
+			trackedinputsNOTES = controls.trackedinputsNOTES;
+			controls.trackedinputsNOTES = [];
+	
+			var camControls:FlxCamera = new FlxCamera();
+			FlxG.cameras.add(camControls, DefaultDrawTarget);
+			camControls.bgColor.alpha = 0;
+	
+			mobileControls.cameras = [camControls];
+			mobileControls.visible = false;
+			add(mobileControls);
+		}
+	
+		public function removeMobileControls()
+		{
+			if (trackedinputsNOTES != [])
+				controls.removeAControlsInput(trackedinputsNOTES);
+	
+			if (mobileControls != null)
+				remove(mobileControls);
+		}
+	
 
 	public function removeHitbox():Void
 	{
