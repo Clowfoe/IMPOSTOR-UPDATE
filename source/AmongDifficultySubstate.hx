@@ -176,6 +176,8 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 		}
 		else
 			canControl = true;
+
+		super.update(elapsed);
 	}
 
 	function changeMissAmount(change:Int)
