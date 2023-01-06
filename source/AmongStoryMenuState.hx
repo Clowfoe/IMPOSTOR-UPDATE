@@ -93,7 +93,7 @@ class AmongStoryMenuState extends MusicBeatState
 		unlockedWeek[8] = true;
 		unlockedWeek[9] = true;
 		unlockedWeek[10] = true;
-		unlockedWeek[11] = true;
+		//unlockedWeek[11] = true;
 		#end
 
 		if (Highscore.getScore('meltdown', 2) != 0)
