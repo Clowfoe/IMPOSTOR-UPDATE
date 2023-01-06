@@ -9482,8 +9482,7 @@ class PlayState extends MusicBeatState
 				{
 					goodNoteHit(daNote);
 				}
-			})
-
+			});
 			if (boyfriend.holdTimer > Conductor.stepCrochet * (4 / 1000)
 				&& boyfriend.animation.curAnim.name.startsWith('sing')
 				&& !boyfriend.animation.curAnim.name.endsWith('miss'))
