@@ -359,7 +359,7 @@ class Paths
 			return currentTrackedAssets["graphics"].get(path);
 		}
 
-		trace('oh no $path is returning null NOOOO');
+		FlxG.log.error('oh no $path is returning null NOOOO');
 		return null;
 	}
 
@@ -387,7 +387,7 @@ class Paths
 			return currentTrackedAssets["sounds"].get(file);
 		}
 
-		trace('oh no $file is returning null NOOOO');
+		FlxG.log.error('oh no $file is returning null NOOOO');
 		return null;
 	}
 
