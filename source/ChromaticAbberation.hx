@@ -53,9 +53,9 @@ class CAGLSL extends FlxShader
 
     vec3 ChromaticAbberation(sampler2D tex, in vec2 uv) 
     {
-	    float rChannel = texture(tex, PincushionDistortion(uv, 0.3 * amount)).r;
-        float gChannel = texture(tex, PincushionDistortion(uv, 0.15 * amount)).g;
-        float bChannel = texture(tex, PincushionDistortion(uv, 0.075 * amount)).b;
+	    float rChannel = texture2D(tex, PincushionDistortion(uv, 0.3 * amount)).r;
+        float gChannel = texture2D(tex, PincushionDistortion(uv, 0.15 * amount)).g;
+        float bChannel = texture2D(tex, PincushionDistortion(uv, 0.075 * amount)).b;
         vec3 retColor = vec3(rChannel, gChannel, bChannel);
         return retColor;
     }
