@@ -57,7 +57,7 @@ class Main extends Sprite
 		for (cam in FlxG.cameras.list)
 		{
 			@:privateAccess
-			if (cam != null && (cam._filters != null || cam._filters.length > 0))
+			if (cam != null && (cam._filters != null && cam._filters.length > 0))
 			{
 				var sprite:Sprite = cam.flashSprite; // Shout out to Ne_Eo for bringing this to my attention
 				if (sprite != null)
