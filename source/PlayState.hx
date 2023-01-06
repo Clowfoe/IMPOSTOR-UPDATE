@@ -626,10 +626,8 @@ class PlayState extends MusicBeatState
 	{
 		super.create();
 
-		Paths.destroyLoadedImages(resetSpriteCache);
-
-		FlxG.sound.cache('songs:assets/songs/${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Inst.ogg');
-		FlxG.sound.cache('songs:assets/songs/${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Voices.ogg');
+		FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Inst'); // fuck
+		FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Voices');
 		instance = this;
 		resetSpriteCache = false;
 
@@ -2459,14 +2457,14 @@ class PlayState extends MusicBeatState
 
 				if (SONG.song.toLowerCase() == 'sussus toogus')
 				{
-					walker = new WalkingCrewmate(FlxG.random.int(0, 1), [-700, 1850], 50, 0.8);
-					add(walker);
+					walker = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
+					//add(walker);
 
-					var walker2:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(2, 3), [-700, 1850], 50, 0.8);
-					add(walker2);
+					var walker2:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
+					//add(walker2);
 
-					var walker3:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(4, 5), [-700, 1850], 50, 0.8);
-					add(walker3);
+					var walker3:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
+					//add(walker3);
 				}
 
 				if (SONG.song.toLowerCase() == 'lights-down')
@@ -3173,8 +3171,6 @@ class PlayState extends MusicBeatState
 				saxguy.scrollFactor.set(1, 1);
 				saxguy.setGraphicSize(Std.int(saxguy.width * 1));
 				saxguy.active = true;
-				saxguy.alpha = 0.00000000001;
-				add(saxguy);
 			case 'defeat':
 				lightoverlay = new FlxSprite(-550, -100).loadGraphic(Paths.image('iluminao omaga'));
 				lightoverlay.antialiasing = true;
@@ -3248,7 +3244,7 @@ class PlayState extends MusicBeatState
 				mainoverlay.active = false;
 				add(mainoverlay);
 			case 'cargo':
-				lightoverlayDK = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/scvavd', 'impostor'));
+				lightoverlayDK = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/scavd', 'impostor'));
 				lightoverlayDK.antialiasing = true;
 				lightoverlayDK.scrollFactor.set(1, 1);
 				lightoverlayDK.active = false;
@@ -3698,13 +3694,6 @@ class PlayState extends MusicBeatState
 		else
 		{
 			gf.scrollFactor.set(1, 1);
-		}
-
-		switch(gf.curCharacter){
-			case 'gfpolus':
-				if (curStage != 'polus2' || curStage != 'polus3'){
-					gf.y -= 50;
-				}
 		}
 
 		gfGroup.add(gf);
@@ -4426,6 +4415,8 @@ class PlayState extends MusicBeatState
 
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
+
+		Paths.clearUnusedMemory();
 
 		// tests = new CCShader(-10,50,0,0,0x00FFFFFF,-0.0039,-0.0039,0xFFFFFFFF,boyfriend);
 		// boyfriend.shader = tests.shader;
@@ -6362,11 +6353,6 @@ class PlayState extends MusicBeatState
 			DiscordClient.changePresence("Chart Editor", null, null, true);
 			#end
 		}
-
-		if (FlxG.keys.justPressed.SIX && !endingSong && !inCutscene)
-			{
-				cpuControlled = !cpuControlled; //sorry i just dont wanna play the song each time i change a small thing
-			}
 		#end
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
@@ -7669,7 +7655,7 @@ class PlayState extends MusicBeatState
 							mom.alpha = 0;
 							boyfriend.alpha = 0;
 							camHUD.visible = false;
-							defeatDKoverlay.alpha = 0.0001;
+							defeatDKoverlay.alpha = 0;
 					}
 				
 				case 'Greatest Plan Icons':
@@ -8165,7 +8151,9 @@ class PlayState extends MusicBeatState
 
 				case 'Toogus Sax':
 					saxguy.setPosition(-550, 275);
-					saxguy.alpha = 1;
+					
+					add(saxguy);
+
 				case 'Identity Crisis line':
 					
 					
@@ -8438,7 +8426,7 @@ class PlayState extends MusicBeatState
 					}
 
 					if(curStage.toLowerCase() == 'cargo'){
-						cargoDarkFG.alpha = 0.00001;
+						cargoDarkFG.alpha = 0;
 						camHUD.visible = true;
 					}
 
@@ -9582,12 +9570,7 @@ class PlayState extends MusicBeatState
 			else
 				{
 				missCombo += 1;
-				switch(dad.curCharacter){
-					case 'oldpostor':
-						health -= 0.08 * missCombo; // keep old drain for alpha
-					default:
-						health -= 0.035 * missCombo; //SUPER MARIO NEVER DIES
-				}
+				health -= 0.08 * missCombo; // SUPER MARIO
 				if (combo > 5 && gf.animation.exists('sad')) 
 					gf.playAnim('sad');
 
@@ -10066,9 +10049,10 @@ class PlayState extends MusicBeatState
 				dadlegs.dance();
 		}
 
+		pet.dance();
+
 		if (curBeat % 2 == 0)
 		{
-			pet.dance();
 			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing") && boyfriend.curCharacter != 'bf-running')
 			{
 				boyfriend.dance();

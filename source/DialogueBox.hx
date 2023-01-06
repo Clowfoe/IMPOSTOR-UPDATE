@@ -455,28 +455,36 @@ class DialogueBox extends FlxSpriteGroup
 			}	
 		}
 
-	public function loadOffsetFile(man:FlxSprite, character:String, library:String = 'impostor'){//137
-		var offset:Array<String> = CoolUtil.coolTextFile(Paths.txt(character, library));
-
-		trace("\nCharacter: " + character + "\n Library: " + library + "\n curCharacter: " + curCharacter);
-		trace("\nOffsets Path: " + Paths.txt(character, library));
-
-		for (i in 0...offset.length)
+	public function loadOffsetFile(man:FlxSprite, character:String, library:String = 'impostor')
 		{
-			var data:Array<String> = offset[i].split(','); //[prefix name (0), animation name (1), looped animation (2), x (3), y (4)]
-			trace(data);
+			var offset:Array<String> = CoolUtil.coolTextFile(Paths.txt(character, library));
+			trace(character + " and " + library + ", also " + curCharacter + " too");
+			trace("my nuts quake " + Paths.txt(character, library));
+			
+			//if (OpenFlAssets.exists(balls2)) {
+				trace('IM LOADED AND IM REAL');
+				for (i in 0...offset.length)
+				{
+					var data:Array<String> = offset[i].split(',');
+					trace(data);
+					//addAnim(speaker, data[0].trim(), data[1], data[2], Std.parseInt(data[3]), Std.parseInt(data[4]));
 
-			var imStupidAsFuck:Bool = false;
-			if(data[2] == 'true') {
-				imStupidAsFuck = true;
-			}
-
-			man.animation.addByIndices(data[0], data[1], [1, 2, 3, 4, 5, 6, 0], "", 24, imStupidAsFuck);
-			offCharAdd(data[0], Std.parseInt(data[3]), Std.parseInt(data[4]));
-			man.animation.addByIndices(data[0] + "T", data[1], [1, 2, 3, 4, 5, 6, 0], "", 24, true);		
-			offCharAdd(data[0] + "T", Std.parseInt(data[3]), Std.parseInt(data[4]));
+					var imStupidAsFuck:Bool = false;
+						if(data[2] == 'true') {
+							imStupidAsFuck = true;
+						}
+						man.animation.addByIndices(data[0], data[1], [1, 2, 3, 4, 5, 6, 0], "", 24, imStupidAsFuck);
+						offCharAdd(data[0], Std.parseInt(data[3]), Std.parseInt(data[4]));
+						man.animation.addByIndices(data[0] + "T", data[1], [1, 2, 3, 4, 5, 6, 0], "", 24, true);		
+						offCharAdd(data[0] + "T", Std.parseInt(data[3]), Std.parseInt(data[4]));
+						
+					//animPlay(speaker, data[0]);
+					//offCharAdd(data[0], , Std.parseInt(data[4]));
+					//offCharAdd(data[0] + "T", Std.parseInt(data[3]), );
+				}
+				
+			//}
 		}
-	}
 
 		
 	function cleanDialog():Void

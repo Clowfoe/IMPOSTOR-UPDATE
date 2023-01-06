@@ -17,6 +17,7 @@ using flixel.util.FlxSpriteUtil;
 
 class TaskSong extends FlxSpriteGroup
 {
+
     var meta:Array<Array<String>> = [];
     var size:Float = 0;
     var fontSize:Int = 24;
@@ -70,16 +71,19 @@ class TaskSong extends FlxSpriteGroup
         add(text2);
 
         x -= size;
-        alpha = 0.00000001; 
+        visible = false;
+        
     }
 
+
+
     public function start(){
-        alpha = 1;
+
+        visible = true;
 
         FlxTween.tween(this, {x: x + size + (fontSize/2)}, 1, {ease: FlxEase.quintInOut, onComplete: function(twn:FlxTween){
-            FlxTween.tween(this, {x: x - size - 50}, 1, {ease: FlxEase.quintInOut, startDelay: 2, onComplete: function(twn:FlxTween){ 
-                this.destroy(); 
-            }});
+            FlxTween.tween(this, {x: x - size - 50}, 1, {ease: FlxEase.quintInOut, startDelay: 2, onComplete: function(twn:FlxTween){ this.destroy(); }});
         }});
+
     }
 }

@@ -111,7 +111,7 @@ class AmongFreeplayState extends MusicBeatState
 	{
 		super.create();
 
-		Paths.destroyLoadedImages();
+		Paths.clearUnusedMemory();
 
 		FlxG.mouse.visible = true;	
 

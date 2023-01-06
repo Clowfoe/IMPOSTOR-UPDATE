@@ -3538,7 +3538,7 @@
 					[
 						89600,
 						0,
-						0
+						400
 					],
 					[
 						89600,
@@ -3551,20 +3551,6 @@
 						"Toogus Sax",
 						"",
 						""
-					],
-					[
-						89608.3333333333,
-						-1,
-						"Play Animation",
-						"notice",
-						"Dad"
-					],
-					[
-						90450,
-						-1,
-						"Play Animation",
-						"wave",
-						"Dad"
 					]
 				],
 				"altAnim": false,
@@ -3622,17 +3608,9 @@
 			{
 				"typeOfSection": 0,
 				"lengthInSteps": 16,
-				"sectionNotes": [
-					[
-						101600,
-						-1,
-						"Play Animation",
-						"handbye",
-						"Dad"
-					]
-				],
+				"sectionNotes": [],
 				"altAnim": false,
-				"mustHitSection": false,
+				"mustHitSection": true,
 				"bpm": 150
 			},
 			{
@@ -7965,66 +7943,12 @@
 			},
 			{
 				"lengthInSteps": 16,
+				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
-				"altAnim": false,
 				"bpm": 150,
 				"changeBPM": false,
 				"mustHitSection": true
-			},
-			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"altAnim": false,
-				"bpm": 150,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"altAnim": false,
-				"bpm": 150,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 150
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 150
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 150
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 150
 			},
 			{
 				"lengthInSteps": 16,
@@ -8056,10 +7980,10 @@
 		"isMoody": false,
 		"sectionLengths": [],
 		"sliderVelocities": null,
-		"needsVoices": true,
 		"sections": 0,
-		"uiType": "normal",
+		"needsVoices": true,
 		"stage": "toogus",
+		"uiType": "normal",
 		"bpm": 150,
 		"gf": "gf"
 	}

@@ -83,12 +83,13 @@ class WeekData {
 		if(FileSystem.exists(Paths.mods())) {
 			for (folder in FileSystem.readDirectory(Paths.mods())) {
 				var path = haxe.io.Path.join([Paths.mods(), folder]);
-				if (sys.FileSystem.isDirectory(path) && !Paths.ignoreModFolders.exists(folder)) {
+				if (sys.FileSystem.isDirectory(path) && !Paths.ignoreModFolders.contains(folder)) {
 					directories.push(path + '/');
 					//trace('pushed Directory: ' + folder);
 				}
 			}
 		}
+		
 		#else
 		var directories:Array<String> = [Paths.getPreloadPath()];
 		var originalLength:Int = directories.length;
