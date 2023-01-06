@@ -90,7 +90,7 @@ class RimlightShaderGLSL extends FlxShader
 
 			vec2 overlapCoord = vec2(openfl_TextureCoordv.x + distanceScaled.x, openfl_TextureCoordv.y - distanceScaled.y);
 			if(overlapCoord.x < bounds.x || overlapCoord.x > bounds.z || overlapCoord.y < bounds.y || overlapCoord.y > bounds.w){
-				overlapAlpha = 0;
+				overlapAlpha = 0.;
 			}
 			else{
 				overlapAlpha = flixel_texture2D(bitmap, overlapCoord).a;
