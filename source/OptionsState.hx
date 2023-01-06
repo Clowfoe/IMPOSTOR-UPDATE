@@ -1002,7 +1002,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 		reloadValues();
 
 		#if mobile
-		addVirtualPad(FULL, A_B);
+		addVirtualPad(BOTH_FULL, A_B);
 		#end
 	}
 
