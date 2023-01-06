@@ -8984,41 +8984,6 @@ class PlayState extends MusicBeatState
 
 					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
 					FlxG.sound.music.stop();
-
-
-					/*if (winterHorrorlandNext)
-					{
-						new FlxTimer().start(1.5, function(tmr:FlxTimer)
-						{
-							cancelFadeTween();
-							// resetSpriteCache = true;
-							LoadingState.loadAndSwitchState(new PlayState());
-						});
-					}
-					else if(pretenderNext)
-					{
-						new FlxTimer().start(9, function(tmr:FlxTimer)
-						{
-							cancelFadeTween();
-							// resetSpriteCache = true;
-							LoadingState.loadAndSwitchState(new PlayState());
-						});
-					}
-					else if(armedNext)
-					{
-						new FlxTimer().start(6, function(tmr:FlxTimer)
-						{
-							cancelFadeTween();
-							// resetSpriteCache = true;
-							LoadingState.loadAndSwitchState(new PlayState());
-						});
-					}
-					else
-					{
-						cancelFadeTween();
-						// resetSpriteCache = true;
-						LoadingState.loadAndSwitchState(new PlayState());
-					}*/
 					if(delayedStateChange){
 						new FlxTimer().start(changeDelay, function(tmr:FlxTimer)
 						{
