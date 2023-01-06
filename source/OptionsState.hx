@@ -241,7 +241,7 @@ class NotesSubstate extends MusicBeatSubstate
 					updateValue(1);
 					FlxG.sound.play(Paths.sound('scrollMenu'));
 				}
-				else if (controls.RESET #if android || virtualPad.buttonC.justPressed #end)
+				else if (controls.RESET #if mobile || virtualPad.buttonC.justPressed #end)
 				{
 					resetValue(curSelected, typeSelected);
 					FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -300,7 +300,7 @@ class NotesSubstate extends MusicBeatSubstate
 				changeType(1);
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
-			if (controls.RESET #if android || virtualPad.buttonC.justPressed #end)
+			if (controls.RESET #if mobile || virtualPad.buttonC.justPressed #end)
 			{
 				for (i in 0...3)
 				{
