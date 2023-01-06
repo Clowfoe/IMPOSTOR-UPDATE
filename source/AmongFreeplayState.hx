@@ -1036,7 +1036,7 @@ class AmongFreeplayState extends MusicBeatState
 					0,
 					true
 				],
-				["Armed", "rhm", 'rhm', FlxColor.ORANGE, FROM_STORY_MODE, ['armed'], 0, false]
+				["Armed", "rhm", 'rhm', FlxColor.ORANGE, FROM_STORY_MODE, ['armed'], 0, true]
 			],
 
 			section: 5
@@ -1044,8 +1044,8 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Alpha Moogus", "oldpostor", 'oldpostor', FlxColor.RED, BEANS, [], 250, false],
-				["Actin Sus", "oldpostor", 'oldpostor', FlxColor.RED, BEANS, [], 250, false]
+				["Alpha Moogus", "oldpostor", 'oldpostor', FlxColor.RED, BEANS, [], 250, true],
+				["Actin Sus", "oldpostor", 'oldpostor', FlxColor.RED, BEANS, [], 250, true]
 			],
 
 			section: 6
@@ -1053,12 +1053,12 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Ow", "kills", 'kills', FlxColor.fromRGB(84, 167, 202), BEANS, [], 400, false],
-				["Who", "whoguys", 'who', FlxColor.fromRGB(22, 65, 240), BEANS, [], 500, false],
-				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK, BEANS, [], 400, false],
-				["Sussus Nuzzus", "nuzzles", 'nuzzus', FlxColor.BLACK, BEANS, [], 400, false],
-				["Idk", "idk", 'idk', FlxColor.fromRGB(255, 140, 177), BEANS, [], 350, false],
-				["Esculent", "dead", 'esculent', FlxColor.BLACK, BEANS, [], 350, false],
+				["Ow", "kills", 'kills', FlxColor.fromRGB(84, 167, 202), BEANS, [], 400, true],
+				["Who", "whoguys", 'who', FlxColor.fromRGB(22, 65, 240), BEANS, [], 500, true],
+				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK, BEANS, [], 400, true],
+				["Sussus Nuzzus", "nuzzles", 'nuzzus', FlxColor.BLACK, BEANS, [], 400, true],
+				["Idk", "idk", 'idk', FlxColor.fromRGB(255, 140, 177), BEANS, [], 350, true],
+				["Esculent", "dead", 'esculent', FlxColor.BLACK, BEANS, [], 350, true],
 				[
 					"Drippypop",
 					"drippy",
@@ -1067,11 +1067,11 @@ class AmongFreeplayState extends MusicBeatState
 					BEANS,
 					[],
 					425,
-					false
+					true
 				],
-				["Crewicide", "dave", 'dave', FlxColor.BLUE, BEANS, [], 450, false],
-				["Monotone Attack", "attack", 'monotoner', FlxColor.WHITE, BEANS, [], 400, false],
-				["Top 10", "top", 'top', FlxColor.RED, BEANS, [], 200, false]
+				["Crewicide", "dave", 'dave', FlxColor.BLUE, BEANS, [], 450, true],
+				["Monotone Attack", "attack", 'monotoner', FlxColor.WHITE, BEANS, [], 400, true],
+				["Top 10", "top", 'top', FlxColor.RED, BEANS, [], 200, true]
 			],
 
 			section: 7
@@ -1079,8 +1079,8 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Chippin", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38), BEANS, [], 300, false],
-				["Chipping", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38), BEANS, [], 300, false],
+				["Chippin", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38), BEANS, [], 300, true],
+				["Chipping", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38), BEANS, [], 300, true],
 				[
 					"Torture",
 					"ziffy",
@@ -1089,7 +1089,7 @@ class AmongFreeplayState extends MusicBeatState
 					SPECIAL,
 					['chippin', 'chipping'],
 					0,
-					false
+					true
 				]
 			],
 
