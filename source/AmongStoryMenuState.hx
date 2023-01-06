@@ -129,6 +129,8 @@ class AmongStoryMenuState extends MusicBeatState
 	{
 		super.create();
 
+		ClientPrefs.finaleState = NOT_PLAYED;
+
 		Paths.clearUnusedMemory();
 
 		localFinaleState = ClientPrefs.finaleState;
