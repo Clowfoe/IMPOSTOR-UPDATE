@@ -57,7 +57,7 @@ class MobileControlsState extends FlxSubState
 			FlxG.resetState();
 		});
 		exitButton.setGraphicSize(Std.int(exitButton.width) * 3);
-		exitButton.label.setFormat(Assets.getFont('AmaticSC-Bold.otf').fontName, 21, FlxColor.WHITE, CENTER, true);
+		exitButton.label.setFormat(Assets.getFont('AmaticSC-Bold.ttf').fontName, 21, FlxColor.WHITE, CENTER, true);
 		exitButton.color = FlxColor.YELLOW;
 		add(exitButton);
 
@@ -70,7 +70,7 @@ class MobileControlsState extends FlxSubState
 			}
 		});
 		resetButton.setGraphicSize(Std.int(resetButton.width) * 3);
-		resetButton.label.setFormat(Assets.getFont('AmaticSC-Bold.otf').fontName, 21, FlxColor.WHITE, CENTER, true);
+		resetButton.label.setFormat(Assets.getFont('AmaticSC-Bold.ttf').fontName, 21, FlxColor.WHITE, CENTER, true);
 		resetButton.color = FlxColor.RED;
 		resetButton.visible = false;
 		add(resetButton);
@@ -84,7 +84,7 @@ class MobileControlsState extends FlxSubState
 		add(hitbox);
 
 		funitext = new FlxText(0, 50, 0, 'No Android Controls!', 42);
-		funitext.setFormat(Assets.getFont('AmaticSC-Bold.otf').fontName, 42, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE,
+		funitext.setFormat(Assets.getFont('AmaticSC-Bold.ttf').fontName, 42, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE,
 			FlxColor.BLACK, true);
 		funitext.borderSize = 3;
 		funitext.borderQuality = 1;
@@ -93,7 +93,7 @@ class MobileControlsState extends FlxSubState
 		add(funitext);
 
 		grpControlsItems = new FlxText(0, 100, 0, '', 42);
-		grpControlsItems.setFormat(Assets.getFont('AmaticSC-Bold.otf').fontName, 42, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE,
+		grpControlsItems.setFormat(Assets.getFont('AmaticSC-Bold.ttf').fontName, 42, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE,
 			FlxColor.BLACK, true);
 		grpControlsItems.borderSize = 3;
 		grpControlsItems.borderQuality = 1;
@@ -113,28 +113,28 @@ class MobileControlsState extends FlxSubState
 		add(rightArrow);
 
 		rightPozition = new FlxText(10, FlxG.height - 24, 0, '', 21);
-		rightPozition.setFormat(Assets.getFont('AmaticSC-Bold.otf').fontName, 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE,
+		rightPozition.setFormat(Assets.getFont('AmaticSC-Bold.ttf').fontName, 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE,
 			FlxColor.BLACK, true);
 		rightPozition.borderSize = 3;
 		rightPozition.borderQuality = 1;
 		add(rightPozition);
 
 		leftPozition = new FlxText(10, FlxG.height - 44, 0, '', 21);
-		leftPozition.setFormat(Assets.getFont('AmaticSC-Bold.otf').fontName, 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE,
+		leftPozition.setFormat(Assets.getFont('AmaticSC-Bold.ttf').fontName, 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE,
 			FlxColor.BLACK, true);
 		leftPozition.borderSize = 3;
 		leftPozition.borderQuality = 1;
 		add(leftPozition);
 
 		downPozition = new FlxText(10, FlxG.height - 64, 0, '', 21);
-		downPozition.setFormat(Assets.getFont('AmaticSC-Bold.otf').fontName, 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE,
+		downPozition.setFormat(Assets.getFont('AmaticSC-Bold.ttf').fontName, 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE,
 			FlxColor.BLACK, true);
 		downPozition.borderSize = 3;
 		downPozition.borderQuality = 1;
 		add(downPozition);
 
 		upPozition = new FlxText(10, FlxG.height - 84, 0, '', 21);
-		upPozition.setFormat(Assets.getFont('AmaticSC-Bold.otf').fontName, 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE,
+		upPozition.setFormat(Assets.getFont('AmaticSC-Bold.ttf').fontName, 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE,
 			FlxColor.BLACK, true);
 		upPozition.borderSize = 3;
 		upPozition.borderQuality = 1;
