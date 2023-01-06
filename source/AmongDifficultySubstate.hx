@@ -149,7 +149,10 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 					FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
 						ease: FlxEase.circOut,
 						onComplete: function(tween:FlxTween)
-						{
+						{	
+							#if mobile
+							removeVirtualPad();
+							#end
 							trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
 							LoadingState.loadAndSwitchState(new PlayState());
 						}

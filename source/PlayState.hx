@@ -4165,7 +4165,7 @@ class PlayState extends MusicBeatState
 		sussusPenisLOL.cameras = [camHUD];
 
 		#if mobile
-		addMobileControls();
+		addHitbox();
 		#end
 
 		if (curStage == 'victory')
@@ -4834,7 +4834,7 @@ class PlayState extends MusicBeatState
 		if (ret != FunkinLua.Function_Stop)
 		{
 			#if mobile
-			mobileControls.visible = true;
+			hitbox.visible = true;
 			#end
 
 			generateStaticArrows(0);
@@ -6296,7 +6296,7 @@ class PlayState extends MusicBeatState
 		}
 		botplayTxt.visible = cpuControlled;
 
-		if (FlxG.keys.justPressed.ENTER && startedCountdown && canPause)
+		if (FlxG.keys.justPressed.ENTER || FlxG.android.justReleased.BACK && startedCountdown && canPause)
 		{
 			var ret:Dynamic = callOnLuas('onPause', []);
 			if (ret != FunkinLua.Function_Stop)
@@ -8763,7 +8763,7 @@ class PlayState extends MusicBeatState
 		}
 
 		#if mobile
-		removeMobileControls();
+		removeHitbox();
 		#end
 			
 		timeBarBG.visible = false;
