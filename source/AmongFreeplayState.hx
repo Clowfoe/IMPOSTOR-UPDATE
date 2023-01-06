@@ -332,6 +332,11 @@ class AmongFreeplayState extends MusicBeatState
 		changeSelection(0);
 		changePortrait();
 
+		#if mobile
+		addVirtualPad(LEFT_FULL, A_B);
+		addVirtualPadCamera();
+		#end
+
 		CustomFadeTransition.nextCamera = camOther;
 	}
 
