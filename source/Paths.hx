@@ -66,6 +66,8 @@ class Paths
 	/// haya I love you for the base cache dump I took to the max
 	public static function clearUnusedMemory() {
 		// clear non local assets in the tracked assets list
+		trace("clearing unused memory rn!!");
+		FlxG.log.add("clearing unused memory");
 		var counter:Int = 0;
 		for (key in currentTrackedAssets.keys())
 		{
@@ -353,8 +355,10 @@ class Paths
 				var newGraphic:FlxGraphic = FlxGraphic.fromBitmapData(newBitmap, false, modKey);
 				newGraphic.persist = true;
 				currentTrackedAssets.set(modKey, newGraphic);
+				trace('created new $modKey');
 			}
 			localTrackedAssets.push(modKey);
+			trace('locally tracking $modKey');
 			return currentTrackedAssets.get(modKey);
 		}
 		#end
@@ -385,6 +389,7 @@ class Paths
 				currentTrackedAssets.set(path, newGraphic);
 			}
 			localTrackedAssets.push(path);
+			trace('locally tracking $path');
 			return currentTrackedAssets.get(path);
 		}
 		trace('oh no $path is returning null NOOOO');

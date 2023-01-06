@@ -1252,34 +1252,58 @@ class FunkinLua {
 		}
 		#end
 	}
-	
-	public function call(event:String, args:Array<Dynamic>):Dynamic {
+
+	function getErrorMessage()
+	{
 		#if LUA_ALLOWED
-		if(lua == null) {
-			return Function_Continue;
-		}
+		var v:String = Lua.tostring(lua, -1);
+		Lua.pop(lua, 1);
+		return v;
+		#end
+	}
+	
+	public function call(func:String, args:Array<Dynamic>):Dynamic
+	{
+		#if LUA_ALLOWED
+		try
+		{
+			if (lua == null)
+				return Function_Continue;
 
-		Lua.getglobal(lua, event);
+			Lua.getglobal(lua, func);
 
-		for (arg in args) {
-			Convert.toLua(lua, arg);
-		}
+			#if (linc_luajit >= "0.0.6")
+			if (Lua.isfunction(lua, -1) == true)
+			#else
+			if (Lua.isfunction(lua, -1) == 1)
+			#end
+			{
+				for (arg in args)
+					Convert.toLua(lua, arg);
+				var result:Dynamic = Lua.pcall(lua, args.length, 1, 0);
+				if (result != 0)
+				{
+					var err = getErrorMessage();
+					luaTrace("ERROR (" + func + "): " + err, false, false);
+					// LuaL.error(state,err);
 
-		var result:Null<Int> = Lua.pcall(lua, args.length, 1, 0);
-		if(result != null && resultIsAllowed(lua, result)) {
-			/*var resultStr:String = Lua.tostring(lua, result);
-			var error:String = Lua.tostring(lua, -1);
-			Lua.pop(lua, 1);*/
-			if(Lua.type(lua, -1) == Lua.LUA_TSTRING) {
-				var error:String = Lua.tostring(lua, -1);
-				Lua.pop(lua, 1);
-				if(error == 'attempt to call a nil value') { //Makes it ignore warnings and not break stuff if you didn't put the functions on your lua file
+					Lua.pop(lua, 1);
 					return Function_Continue;
 				}
+				else
+				{
+					var conv:Dynamic = Convert.fromLua(lua, -1);
+					Lua.pop(lua, 1);
+					if (conv == null)
+						conv = Function_Continue;
+					return conv;
+				}
 			}
-
-			var conv:Dynamic = Convert.fromLua(lua, result);
-			return conv;
+			Lua.pop(lua, 1);
+		}
+		catch (e:Dynamic)
+		{
+			trace(e);
 		}
 		#end
 		return Function_Continue;

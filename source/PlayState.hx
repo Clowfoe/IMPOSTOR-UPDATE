@@ -82,6 +82,10 @@ import sys.FileSystem;
 
 class PlayState extends MusicBeatState
 {
+	var usingBFSkin:Bool = false;
+	var usingGFSkin:Bool = false;
+	var usingPet:Bool = false;
+
 	var noteRows:Array<Array<Array<Note>>> = [[],[]];
 	var votingnoteRows:Array<Array<Array<Note>>> = [[],[]];
 	private var singAnimations:Array<String> = ['singLEFT', 'singDOWN', 'singUP', 'singRIGHT'];
@@ -3660,6 +3664,7 @@ class PlayState extends MusicBeatState
 		if (ClientPrefs.charOverrides[1] != '' && ClientPrefs.charOverrides[1] != 'gf' && !isStoryMode && !SONG.allowGFskin)
 		{
 			SONG.player3 = ClientPrefs.charOverrides[1];
+			usingGFSkin = true;
 		}
 
 		var gfVersion:String = SONG.player3;
@@ -3749,8 +3754,10 @@ class PlayState extends MusicBeatState
 		}
 		else if (ClientPrefs.charOverrides[0] != '' && ClientPrefs.charOverrides[0] != 'bf' && !isStoryMode && !SONG.allowBFskin)
 		{
+			usingBFSkin = true;
 			SONG.player1 = ClientPrefs.charOverrides[0];
 		}
+
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
@@ -7624,7 +7631,9 @@ class PlayState extends MusicBeatState
 							cargoReadyKill = true;
 						case 'readykill':
 							camGame.flash(FlxColor.BLACK, 2.75);
-							triggerEventNote('Change Character', '0', 'bf-defeat-normal');
+							if(!usingBFSkin)triggerEventNote('Change Character', '0', 'bf-defeat-normal'); // so if you have a skin it wont goto this character
+							// mainly cus it irks me that it randomly goes to BF at the end lol, alternatively could turn off bf skin on double kill
+
 							defeatDKoverlay.alpha = 1;
 							lightoverlayDK.alpha = 0;
 							mainoverlayDK.alpha = 0;
@@ -8840,7 +8849,7 @@ class PlayState extends MusicBeatState
 					trace('LOADING NEXT SONG');
 					trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
 
-					var winterHorrorlandNext = (Paths.formatToSongPath(SONG.song) == "eggnog");
+					/*var winterHorrorlandNext = (Paths.formatToSongPath(SONG.song) == "eggnog");
 					if (winterHorrorlandNext)
 					{
 						var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
@@ -8901,7 +8910,71 @@ class PlayState extends MusicBeatState
 							camGame.alpha = 0;
 							camOther.flash(FlxColor.WHITE, 3);
 						});
+					}*/
+
+					var delayedStateChange:Bool = false;
+					var changeDelay:Float= 1.5;
+					switch(Paths.formatToSongPath(SONG.song)){
+						case 'eggnog': // next is winter horrorland
+							delayedStateChange = true;
+							changeDelay = 1.5;
+							var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
+								-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+							blackShit.scrollFactor.set();
+							add(blackShit);
+							camHUD.visible = false;
+
+							FlxG.sound.play(Paths.sound('Lights_Shut_off'));
+						case 'pinkwave': // next is pretender
+							delayedStateChange = true;
+							changeDelay = 9;
+
+							camZooming = true;
+							greymira.alpha = 0;
+							cyanmira.alpha = 0;
+							greytender.alpha = 1;
+							noootomatomongus.alpha = 1;
+							longfuckery.alpha = 1;
+							noootomatomongus.animation.play('anim');
+							longfuckery.animation.play('anim');
+							greytender.animation.play('anim');
+							ventNotSus.animation.play('anim');
+							pretenderDark.animation.play('anim');
+							FlxG.sound.play(Paths.sound('pretender_kill', 'impostor'));
+							defaultCamZoom = 0.75;
+
+							FlxTween.tween(camHUD, {alpha: 0}, 0.4);
+							FlxTween.tween(gf, {alpha: 0.1}, 0.4);
+							FlxTween.tween(dad, {alpha: 0.25}, 0.4);
+							FlxTween.tween(boyfriend, {alpha: 0.25}, 0.4);
+						case 'reinforcements': // next is armed
+							delayedStateChange = true;
+							changeDelay = 6;
+
+							FlxTween.tween(camHUD, {alpha: 0}, 0.4);
+							FlxG.sound.play(Paths.sound('rhm_crash', 'impostor'));
+							dad.playAnim('armed');
+							dad.specialAnim = true;
+							mom.playAnim('armed');
+							mom.specialAnim = true;
+
+							new FlxTimer().start(2.1, function(tmr:FlxTimer)
+							{
+								camGame.shake(0.005, 0.9);
+							});
+
+							new FlxTimer().start(2.8, function(tmr:FlxTimer)
+							{
+								armedGuy.alpha = 1;
+								armedGuy.animation.play('crash');
+							});
+							new FlxTimer().start(3, function(tmr:FlxTimer)
+							{
+								camGame.alpha = 0;
+								camOther.flash(FlxColor.WHITE, 3);
+							});
 					}
+
 
 					FlxTransitionableState.skipNextTransIn = true;
 					FlxTransitionableState.skipNextTransOut = true;
@@ -8912,7 +8985,8 @@ class PlayState extends MusicBeatState
 					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
 					FlxG.sound.music.stop();
 
-					if (winterHorrorlandNext)
+
+					/*if (winterHorrorlandNext)
 					{
 						new FlxTimer().start(1.5, function(tmr:FlxTimer)
 						{
@@ -8941,6 +9015,18 @@ class PlayState extends MusicBeatState
 					}
 					else
 					{
+						cancelFadeTween();
+						// resetSpriteCache = true;
+						LoadingState.loadAndSwitchState(new PlayState());
+					}*/
+					if(delayedStateChange){
+						new FlxTimer().start(changeDelay, function(tmr:FlxTimer)
+						{
+							cancelFadeTween();
+							// resetSpriteCache = true;
+							LoadingState.loadAndSwitchState(new PlayState());
+						});
+					}else{
 						cancelFadeTween();
 						// resetSpriteCache = true;
 						LoadingState.loadAndSwitchState(new PlayState());
