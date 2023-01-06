@@ -2,9 +2,9 @@
 	"song": {
 		"speed": 2.9,
 		"stage": "voting",
-		"player1": "bfpolus",
+		"player1": "bf",
 		"player2": "warchief",
-		"player3": "jelqer",
+		"player3": "mungus",
 		"player4": "madgus",
 		"allowPet": true,
 		"notes": [
@@ -1127,6 +1127,13 @@
 						"flash",
 						"",
 						""
+					],
+					[
+						130739.27238806,
+						-1,
+						"Change Character",
+						"3",
+						"madgus"
 					]
 				],
 				"bpm": 0,
@@ -1432,6 +1439,15 @@
 						"-0.004"
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
