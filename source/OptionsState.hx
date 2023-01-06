@@ -900,7 +900,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Framerate', // Apparently 120FPS isn't correctly supported on Browser? Probably it has some V-Sync shit enabled by default, idk
 		#end
 		'GAMEPLAY',
-		'Virtual Controls Input',
+		#if mobile
+		'Hitbox Input',
+		#end
 		'Downscroll',
 		'Middlescroll',
 		'Ghost Tapping',
@@ -1090,8 +1092,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 					case 'Violence':
 						ClientPrefs.violence = !ClientPrefs.violence;
 
-					case 'Virtual Controls Input':
-						ClientPrefs.vcontrolsInput = !ClientPrefs.vcontrolsInput;
+					case 'Hitbox Input':
+						ClientPrefs.hitboxInput = !ClientPrefs.hitboxInput;
 
 					case 'Swearing':
 						ClientPrefs.cursing = !ClientPrefs.cursing;

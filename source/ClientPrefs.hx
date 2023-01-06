@@ -27,7 +27,7 @@ class ClientPrefs
 	public static var framerate:Int = 60;
 	public static var cursing:Bool = true;
 	public static var violence:Bool = true;
-	public static var vcontrolsInput:Bool = true;
+	public static var hitboxInput:Bool = #if mobile true #else false #end;
 	public static var camZooms:Bool = true;
 	public static var hideHud:Bool = false;
 	public static var controllerMode:Bool = #if android true #else false #end;
@@ -111,7 +111,7 @@ class ClientPrefs
 		FlxG.save.data.violence = violence;
 		FlxG.save.data.camZooms = camZooms;
 		FlxG.save.data.controllerMode = controllerMode;
-		FlxG.save.data.vcontrolsInput = vcontrolsInput;
+		FlxG.save.data.hitboxInput = hitboxInput;
 		FlxG.save.data.noteOffset = noteOffset;
 		FlxG.save.data.hideHud = hideHud;
 		FlxG.save.data.arrowHSV = arrowHSV;
@@ -193,9 +193,9 @@ class ClientPrefs
 		{
 			controllerMode = FlxG.save.data.controllerMode;
 		}
-		if(FlxG.save.data.vcontrolsInput != null) 
+		if(FlxG.save.data.hitboxInput != null) 
 		{
-			vcontrolsInput = FlxG.save.data.vcontrolsInput;
+			hitboxInput = FlxG.save.data.hitboxInput;
 		}
 		if (FlxG.save.data.lowQuality != null)
 		{
