@@ -376,7 +376,7 @@ class Paths
 		}
 		#end
 
-		var file:String = getPath('$path/$key.$SOUND_EXT', SOUND, library);
+		var file:String = getPath(path == 'songs' ? '$key.$SOUND_EXT' : '$path/$key.$SOUND_EXT', SOUND, path == 'songs' ? path : library);
 		if (OpenFlAssets.exists(file))
 		{
 			if (!currentTrackedAssets["sounds"].exists(file))
