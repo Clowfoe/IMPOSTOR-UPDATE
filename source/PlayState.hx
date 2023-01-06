@@ -4164,6 +4164,10 @@ class PlayState extends MusicBeatState
 		doof.cameras = [camHUD];
 		sussusPenisLOL.cameras = [camHUD];
 
+		#if mobile
+		addMobileControls();
+		#end
+
 		if (curStage == 'victory')
 		{
 			healthBar.alpha = 0;
@@ -4829,6 +4833,10 @@ class PlayState extends MusicBeatState
 		var ret:Dynamic = callOnLuas('onStartCountdown', []);
 		if (ret != FunkinLua.Function_Stop)
 		{
+			#if mobile
+			mobileControls.visible = true;
+			#end
+
 			generateStaticArrows(0);
 			generateStaticArrows(1);
 			for (i in 0...playerStrums.length)
@@ -8754,7 +8762,10 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-
+		#if mobile
+		removeMobileControls();
+		#end
+			
 		timeBarBG.visible = false;
 		timeBar.visible = false;
 		timeTxt.visible = false;
