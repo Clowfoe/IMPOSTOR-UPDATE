@@ -4383,7 +4383,7 @@ class PlayState extends MusicBeatState
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_right'))
 		];
 
-	    if(!ClientPrefs.controllerMode)
+		if (!ClientPrefs.hitboxInput)
 		{
 			FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
 			FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
@@ -4426,11 +4426,11 @@ class PlayState extends MusicBeatState
 		}
 		luaArray = [];
 
-		if(!ClientPrefs.controllerMode)
-			{
-				FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
-				FlxG.stage.removeEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
-			}
+		if (!ClientPrefs.hitboxInput)
+		{
+			FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
+			FlxG.stage.removeEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
+		}
 
 		super.destroy();
 	}
@@ -4442,7 +4442,7 @@ class PlayState extends MusicBeatState
 
 		if ((key >= 0)
 			&& !cpuControlled
-			&& (FlxG.keys.checkStatus(eventKey, JUST_PRESSED)  || ClientPrefs.controllerMode)
+			&& (FlxG.keys.checkStatus(eventKey, JUST_PRESSED) || ClientPrefs.hitboxInput)
 			&& (FlxG.keys.enabled && !paused && (FlxG.state.active || FlxG.state.persistentUpdate)))
 		{
 			if (generatedMusic)
@@ -5786,6 +5786,32 @@ class PlayState extends MusicBeatState
 		});
 	}
 
+	// maybe theres a better place to put this, idk -saw
+	function hitboxInput():Void
+	{
+		var justPressArray:Array<Bool> = [controls.NOTE_LEFT_P, controls.NOTE_DOWN_P, controls.NOTE_UP_P, controls.NOTE_RIGHT_P];
+
+		if (justPressArray.contains(true))
+		{
+			for (i in 0...justPressArray.length)
+			{
+				if (justPressArray[i])
+					onKeyPress(new KeyboardEvent(KeyboardEvent.KEY_DOWN, true, true, -1, keysArray[i][0]));
+			}
+		}
+
+		var justReleaseArray:Array<Bool> = [controls.NOTE_LEFT_R, controls.NOTE_DOWN_R, controls.NOTE_UP_R, controls.NOTE_RIGHT_R];
+
+		if (justReleaseArray.contains(true))
+		{
+			for (i in 0...justReleaseArray.length)
+			{
+				if (justReleaseArray[i])
+					onKeyRelease(new KeyboardEvent(KeyboardEvent.KEY_UP, true, true, -1, keysArray[i][0]));
+			}
+		}
+	}
+
 	private var paused:Bool = false;
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
@@ -7113,6 +7139,9 @@ class PlayState extends MusicBeatState
 					}
 				});
 			}
+
+			if (ClientPrefs.hitboxInput)
+				hitboxInput();
 
 			var up = controls.NOTE_UP;
 			var right = controls.NOTE_RIGHT;
