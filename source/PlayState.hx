@@ -82,10 +82,6 @@ import sys.FileSystem;
 
 class PlayState extends MusicBeatState
 {
-	var usingBFSkin:Bool = false;
-	var usingGFSkin:Bool = false;
-	var usingPet:Bool = false;
-
 	var noteRows:Array<Array<Array<Note>>> = [[],[]];
 	var votingnoteRows:Array<Array<Array<Note>>> = [[],[]];
 	private var singAnimations:Array<String> = ['singLEFT', 'singDOWN', 'singUP', 'singRIGHT'];
@@ -1452,7 +1448,6 @@ class PlayState extends MusicBeatState
 				whiteAwkward.animation.addByPrefix('stare', 'white stare', 24, false);
 				whiteAwkward.animation.play('sweat');
 				whiteAwkward.antialiasing = true;
-				whiteAwkward.visible = (dad.curCharacter != 'white');
 				add(whiteAwkward);
 
 				if (isStoryMode && SONG.song.toLowerCase() != 'oversight')
@@ -3665,7 +3660,6 @@ class PlayState extends MusicBeatState
 		if (ClientPrefs.charOverrides[1] != '' && ClientPrefs.charOverrides[1] != 'gf' && !isStoryMode && !SONG.allowGFskin)
 		{
 			SONG.player3 = ClientPrefs.charOverrides[1];
-			usingGFSkin = true;
 		}
 
 		var gfVersion:String = SONG.player3;
@@ -3762,10 +3756,8 @@ class PlayState extends MusicBeatState
 		}
 		else if (ClientPrefs.charOverrides[0] != '' && ClientPrefs.charOverrides[0] != 'bf' && !isStoryMode && !SONG.allowBFskin)
 		{
-			usingBFSkin = true;
 			SONG.player1 = ClientPrefs.charOverrides[0];
 		}
-
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
@@ -5817,7 +5809,7 @@ class PlayState extends MusicBeatState
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 	public var ratingIndexArray:Array<String> = ["sick", "good", "bad", "shit"];
-	public var returnArray:Array<String> = [" [SFC]", " [GFC]", " [FC]", " [FC]"]; // if you get a shit you're STILL fcing, y'know. Unless you plan on making the combo break on a shit, too!
+	public var returnArray:Array<String> = [" [SFC]", " [GFC]", " [FC]", ""];
 	public var smallestRating:String;
 
 	override public function update(elapsed:Float)
@@ -6284,7 +6276,6 @@ class PlayState extends MusicBeatState
 				if (ratingString != '?'){
 					scoreTxt.text += ((Math.floor(ratingPercent * 10000) / 100)) + '% | ';
 
-					// tbh this should be rewritten to be more accurate to KE tbh
 					switch(ratingString){
 						case ' [SFC]':
 							scoreTxt.text += '(MFC) AAAA:';
@@ -6293,12 +6284,7 @@ class PlayState extends MusicBeatState
 						case ' [FC]':
 							scoreTxt.text += '(FC) AA:';
 						default:
-							if(songMisses<10){
-								scoreTxt.text += '(SDCB) A:';
-							}else{
-								scoreTxt.text += '(Clear) A:';
-							}
-							
+							scoreTxt.text += '(SDCB) A:';
 					}
 				}
 				else{
@@ -7605,7 +7591,7 @@ class PlayState extends MusicBeatState
 					bfvent.animation.play('vent');
 					bfvent.alpha = 1;
 					ldSpeaker.animation.play('boom');
-					ldSpeaker.visible = gf.curCharacter!='ghostgf';
+					ldSpeaker.visible = true;
 				
 				case 'Lights Down OFF':
 					camGame.visible = false;
@@ -7644,9 +7630,7 @@ class PlayState extends MusicBeatState
 							cargoReadyKill = true;
 						case 'readykill':
 							camGame.flash(FlxColor.BLACK, 2.75);
-							if(!usingBFSkin)triggerEventNote('Change Character', '0', 'bf-defeat-normal'); // so if you have a skin it wont goto this character
-							// mainly cus it irks me that it randomly goes to BF at the end lol, alternatively could turn off bf skin on double kill
-
+							triggerEventNote('Change Character', '0', 'bf-defeat-normal');
 							defeatDKoverlay.alpha = 1;
 							lightoverlayDK.alpha = 0;
 							mainoverlayDK.alpha = 0;
@@ -8862,7 +8846,7 @@ class PlayState extends MusicBeatState
 					trace('LOADING NEXT SONG');
 					trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
 
-					/*var winterHorrorlandNext = (Paths.formatToSongPath(SONG.song) == "eggnog");
+					var winterHorrorlandNext = (Paths.formatToSongPath(SONG.song) == "eggnog");
 					if (winterHorrorlandNext)
 					{
 						var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
@@ -8923,71 +8907,7 @@ class PlayState extends MusicBeatState
 							camGame.alpha = 0;
 							camOther.flash(FlxColor.WHITE, 3);
 						});
-					}*/
-
-					var delayedStateChange:Bool = false;
-					var changeDelay:Float= 1.5;
-					switch(Paths.formatToSongPath(SONG.song)){
-						case 'eggnog': // next is winter horrorland
-							delayedStateChange = true;
-							changeDelay = 1.5;
-							var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
-								-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
-							blackShit.scrollFactor.set();
-							add(blackShit);
-							camHUD.visible = false;
-
-							FlxG.sound.play(Paths.sound('Lights_Shut_off'));
-						case 'pinkwave': // next is pretender
-							delayedStateChange = true;
-							changeDelay = 9;
-
-							camZooming = true;
-							greymira.alpha = 0;
-							cyanmira.alpha = 0;
-							greytender.alpha = 1;
-							noootomatomongus.alpha = 1;
-							longfuckery.alpha = 1;
-							noootomatomongus.animation.play('anim');
-							longfuckery.animation.play('anim');
-							greytender.animation.play('anim');
-							ventNotSus.animation.play('anim');
-							pretenderDark.animation.play('anim');
-							FlxG.sound.play(Paths.sound('pretender_kill', 'impostor'));
-							defaultCamZoom = 0.75;
-
-							FlxTween.tween(camHUD, {alpha: 0}, 0.4);
-							FlxTween.tween(gf, {alpha: 0.1}, 0.4);
-							FlxTween.tween(dad, {alpha: 0.25}, 0.4);
-							FlxTween.tween(boyfriend, {alpha: 0.25}, 0.4);
-						case 'reinforcements': // next is armed
-							delayedStateChange = true;
-							changeDelay = 6;
-
-							FlxTween.tween(camHUD, {alpha: 0}, 0.4);
-							FlxG.sound.play(Paths.sound('rhm_crash', 'impostor'));
-							dad.playAnim('armed');
-							dad.specialAnim = true;
-							mom.playAnim('armed');
-							mom.specialAnim = true;
-
-							new FlxTimer().start(2.1, function(tmr:FlxTimer)
-							{
-								camGame.shake(0.005, 0.9);
-							});
-
-							new FlxTimer().start(2.8, function(tmr:FlxTimer)
-							{
-								armedGuy.alpha = 1;
-								armedGuy.animation.play('crash');
-							});
-							new FlxTimer().start(3, function(tmr:FlxTimer)
-							{
-								camGame.alpha = 0;
-								camOther.flash(FlxColor.WHITE, 3);
-							});
 					}
-
 
 					FlxTransitionableState.skipNextTransIn = true;
 					FlxTransitionableState.skipNextTransOut = true;
@@ -8997,14 +8917,36 @@ class PlayState extends MusicBeatState
 
 					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
 					FlxG.sound.music.stop();
-					if(delayedStateChange){
-						new FlxTimer().start(changeDelay, function(tmr:FlxTimer)
+
+					if (winterHorrorlandNext)
+					{
+						new FlxTimer().start(1.5, function(tmr:FlxTimer)
 						{
 							cancelFadeTween();
 							// resetSpriteCache = true;
 							LoadingState.loadAndSwitchState(new PlayState());
 						});
-					}else{
+					}
+					else if(pretenderNext)
+					{
+						new FlxTimer().start(9, function(tmr:FlxTimer)
+						{
+							cancelFadeTween();
+							// resetSpriteCache = true;
+							LoadingState.loadAndSwitchState(new PlayState());
+						});
+					}
+					else if(armedNext)
+					{
+						new FlxTimer().start(6, function(tmr:FlxTimer)
+						{
+							cancelFadeTween();
+							// resetSpriteCache = true;
+							LoadingState.loadAndSwitchState(new PlayState());
+						});
+					}
+					else
+					{
 						cancelFadeTween();
 						// resetSpriteCache = true;
 						LoadingState.loadAndSwitchState(new PlayState());
