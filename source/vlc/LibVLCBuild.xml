@@ -23,7 +23,6 @@
 
 	</target>
 	<target id="haxe" tool="linker" if="linux">
-		<lib name="${CPP_DIR}/lib/linux/libvlc.so.5" if="linux" />
 		<lib name="${CPP_DIR}/lib/linux/libvlccore.so.9" if="linux" />
 	</target>
 
