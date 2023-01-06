@@ -294,6 +294,10 @@ class AmongCreditsState extends MusicBeatState
 		add(baritone);
 
 		updateDescription();
+
+		#if mobile
+		addVirtualPad(LEFT_RIGHT, A_B);
+		#end
 	}
 
 	override public function update(elapsed:Float):Void
