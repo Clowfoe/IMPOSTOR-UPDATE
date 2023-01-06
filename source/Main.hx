@@ -1,5 +1,7 @@
 package;
 
+import openfl.system.System;
+import openfl.utils.AssetCache;
 import cpp.vm.Gc;
 import flixel.graphics.FlxGraphic;
 import flixel.FlxCamera;
@@ -89,15 +91,24 @@ class Main extends Sprite
 		FlxG.signals.preStateSwitch.add(function () {
 			Paths.clearStoredMemory(true);
 			FlxG.bitmap.dumpCache();
+
+			var cache = cast(Assets.cache, AssetCache);
+			for (key=>font in cache.font)
+				cache.removeFont(key);
+			for (key=>sound in cache.sound)
+				cache.removeSound(key);
+
 			gc();
 		});
 		FlxG.signals.postStateSwitch.add(function () {
 			Paths.clearUnusedMemory();
 			gc();
+
+			trace(System.totalMemory);
 		});
 		
 		#if !mobile
-		fpsCounter = new FPS(10, 3, 0xFFFFFF);
+		fpsCounter = new FPS(10, 5, 0xFFFFFF);
 		addChild(fpsCounter);
 
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
