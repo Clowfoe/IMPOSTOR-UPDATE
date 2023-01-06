@@ -68,14 +68,14 @@ class BWShaderGLSL extends FlxShader
 			float outColor = 0;
 
 			if(gray > upperBound){
-				outColor = 1;
+				outColor = 1.;
 			}
-			else if(!(gray < lowerBound) && (upperBound - lowerBound) != 0){
+			else if(!(gray < lowerBound) && (upperBound - lowerBound) != 0.){
 				outColor = (gray - lowerBound) / (upperBound - lowerBound);
 			}
 
 			if(invert){
-				outColor = (1 - outColor) * textureColor.a;
+				outColor = (1. - outColor) * textureColor.a;
 			}
 
 			gl_FragColor = vec4(outColor, outColor, outColor, textureColor.a);
