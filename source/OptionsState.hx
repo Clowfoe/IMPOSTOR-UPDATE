@@ -43,6 +43,7 @@ class OptionsState extends MusicBeatState
 	override function create()
 	{
 		super.create();
+
 		#if desktop
 		DiscordClient.changePresence("Options Menu", null);
 		#end
@@ -71,7 +72,12 @@ class OptionsState extends MusicBeatState
 			optionText.y += (100 * (i - (options.length / 2))) + 50;
 			grpOptions.add(optionText);
 		}
+
 		changeSelection();
+
+		#if mobile
+		addVirtualPad(UP_DOWN, A_B);
+		#end
 	}
 
 	override function closeSubState()
@@ -106,6 +112,10 @@ class OptionsState extends MusicBeatState
 			{
 				item.alpha = 0;
 			}
+
+			#if mobile
+			removeVirtualPad();
+			#end
 
 			switch (options[curSelected])
 			{
@@ -364,7 +374,12 @@ class NotesSubstate extends MusicBeatSubstate
 				{
 					spr.alpha = 0;
 				});
+				#if mobile
+				flixel.addons.transition.FlxTransitionableState.skipNextTransOut = true;
+				FlxG.resetState();
+				#else
 				close();
+				#end
 			}
 			changingNote = false;
 			FlxG.sound.play(Paths.sound('cancelMenu'));
@@ -554,7 +569,12 @@ class ControlsSubState extends MusicBeatSubstate
 					curSelected = i;
 			}
 		}
+
 		changeSelection();
+
+		#if mobile
+		addVirtualPad(UP_DOWN, A_B);
+		#end
 	}
 
 	var leaving:Bool = false;
@@ -580,7 +600,12 @@ class ControlsSubState extends MusicBeatSubstate
 			if (controls.BACK)
 			{
 				ClientPrefs.reloadControls();
+				#if mobile
+				flixel.addons.transition.FlxTransitionableState.skipNextTransOut = true;
+				FlxG.resetState();
+				#else
 				close();
+				#end
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 			}
 
@@ -972,8 +997,13 @@ class PreferencesSubstate extends MusicBeatSubstate
 				break;
 			}
 		}
+
 		changeSelection();
 		reloadValues();
+
+		#if mobile
+		addVirtualPad(FULL, A_B);
+		#end
 	}
 
 	var nextAccept:Int = 5;
@@ -1013,7 +1043,12 @@ class PreferencesSubstate extends MusicBeatSubstate
 				showCharacter.alpha = 0;
 			}
 			descText.alpha = 0;
+			#if mobile
+			flixel.addons.transition.FlxTransitionableState.skipNextTransOut = true;
+			FlxG.resetState();
+			#else
 			close();
+			#end
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 		}
 
