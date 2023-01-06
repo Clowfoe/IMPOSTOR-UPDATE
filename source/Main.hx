@@ -1,5 +1,7 @@
 package;
 
+import cpp.vm.Gc;
+import flixel.graphics.FlxGraphic;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxGame;
@@ -15,7 +17,7 @@ class Main extends Sprite
 	var gameWidth:Int = 1280; // Width of the game in pixels (might be less / more in actual pixels depending on your zoom).
 	var gameHeight:Int = 720; // Height of the game in pixels (might be less / more in actual pixels depending on your zoom).
 	var initialState:Class<FlxState> = TitleState; // The FlxState the game starts with.
-	var zoom:Float = -1; // If -1, zoom is automatically calculated to fit the window dimensions.
+	var zoom:Float = 1; // If -1, zoom is automatically calculated to fit the window dimensions.
 	var framerate:Int = 60; // How many frames per second the game should run at.
 	var skipSplash:Bool = true; // Whether to skip the flixel splash screen that appears in release mode.
 	var startFullscreen:Bool = false; // Whether to start the game in fullscreen on desktop targets
@@ -75,10 +77,24 @@ class Main extends Sprite
 		
 		ClientPrefs.startControls();
 
+		#if cpp 
+		Gc.enable(true);
+		#end
+
 		// Paths.getModFolders();
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
+		FlxGraphic.defaultPersist = false;
 
 		FlxG.signals.gameResized.add(onResizeGame);
+		FlxG.signals.preStateSwitch.add(function () {
+			Paths.clearStoredMemory(true);
+			FlxG.bitmap.dumpCache();
+			gc();
+		});
+		FlxG.signals.postStateSwitch.add(function () {
+			Paths.clearUnusedMemory();
+			gc();
+		});
 		
 		#if !mobile
 		fpsCounter = new FPS(10, 3, 0xFFFFFF);
@@ -142,5 +158,13 @@ class Main extends Sprite
 	public function getFPS():Float
 	{
 		return fpsCounter.currentFPS;
+	}
+
+	public static function gc() {
+		#if cpp
+		Gc.run(true);
+		#else
+		openfl.system.System.gc();
+		#end
 	}
 }
