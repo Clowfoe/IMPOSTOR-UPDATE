@@ -17,12 +17,6 @@
 		<lib name='${CPP_DIR}/lib/Mac/libvlccore.7.dylib' />
         </target>
 
-	<target id="haxe" tool="linker" if="android">
-		<lib name='${CPP_DIR}/lib/Android/libvlc-v7.so' if='android' />
-		<lib name='${CPP_DIR}/lib/Android/libvlc-64.so' if='android' />
-
-	</target>
-
 	<target id="haxe" tool="linker" if="mac">
             <flag value="-framework"/>
             <flag value="OpenGL"/>
