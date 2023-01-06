@@ -225,19 +225,15 @@ class DialogueBox extends FlxSpriteGroup
 			FlxG.sound.music.fadeIn(1, 0, 0.8);
 		}
 
-		#if android
-        var justTouched:Bool = false;
+		#if mobile
+		var justTouched:Bool = false;
 
 		for (touch in FlxG.touches.list)
-		{
 			if (touch.justPressed)
-			{
 				justTouched = true;
-			}
-		}
 		#end
 
-		if (PlayerSettings.player1.controls.ACCEPT #if android || justTouched #end)
+		if (PlayerSettings.player1.controls.ACCEPT #if mobile || justTouched #end)
 		{
 			if (dialogueEnded)
 			{
