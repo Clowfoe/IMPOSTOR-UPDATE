@@ -5787,32 +5787,6 @@ class PlayState extends MusicBeatState
 		});
 	}
 
-	// maybe theres a better place to put this, idk -saw
-	function hitboxInput():Void
-	{
-		var justPressArray:Array<Bool> = [controls.NOTE_LEFT_P, controls.NOTE_DOWN_P, controls.NOTE_UP_P, controls.NOTE_RIGHT_P];
-
-		if (justPressArray.contains(true))
-		{
-			for (i in 0...justPressArray.length)
-			{
-				if (justPressArray[i])
-					onKeyPress(new KeyboardEvent(KeyboardEvent.KEY_DOWN, true, true, -1, keysArray[i][0]));
-			}
-		}
-
-		var justReleaseArray:Array<Bool> = [controls.NOTE_LEFT_R, controls.NOTE_DOWN_R, controls.NOTE_UP_R, controls.NOTE_RIGHT_R];
-
-		if (justReleaseArray.contains(true))
-		{
-			for (i in 0...justReleaseArray.length)
-			{
-				if (justReleaseArray[i])
-					onKeyRelease(new KeyboardEvent(KeyboardEvent.KEY_UP, true, true, -1, keysArray[i][0]));
-			}
-		}
-	}
-
 	private var paused:Bool = false;
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
@@ -7140,38 +7114,22 @@ class PlayState extends MusicBeatState
 					}
 				});
 			}
-
-			if (ClientPrefs.hitboxInput)
-				hitboxInput();
-
-			var up = controls.NOTE_UP;
-			var right = controls.NOTE_RIGHT;
-			var down = controls.NOTE_DOWN;
-			var left = controls.NOTE_LEFT;
-			var holdControls:Array<Bool> = [left, down, up, right];
-
-			if (holdControls.contains(true) && generatedMusic)
-			{
-				notes.forEachAlive(function(daNote:Note)
-				{
-					if ((daNote.parentNote != null && daNote.parentNote.wasGoodHit)
-						&& daNote.isSustainNote
-						&& daNote.canBeHit
-						&& daNote.mustPress
-						&& holdControls[daNote.noteData]
-						&& !daNote.tooLate)
-						goodNoteHit(daNote);
-				});
-			}
-
-			if ((boyfriend != null && boyfriend.animation != null)
-				&& (boyfriend.holdTimer > Conductor.stepCrochet * (4 / 1000) && (!holdControls.contains(true) || cpuControlled)))
-			{
-				if (boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
-					boyfriend.dance();
-			}
 		}
 		checkEventNote();
+
+		if (!inCutscene)
+		{
+			if (!cpuControlled)
+			{
+				keyShit();
+			}
+			else if (boyfriend.holdTimer > Conductor.stepCrochet * (4 / 1000)
+				&& boyfriend.animation.curAnim.name.startsWith('sing')
+				&& !boyfriend.animation.curAnim.name.endsWith('miss'))
+			{
+				boyfriend.dance();
+			}
+		}
 
 		// tests.update();
 
@@ -9482,6 +9440,75 @@ class PlayState extends MusicBeatState
 			},
 			startDelay: Conductor.crochet * 0.001
 		});
+	}
+
+	// Hold notes
+	private function keyShit():Void
+	{
+		// HOLDING
+		var up = controls.NOTE_UP;
+		var right = controls.NOTE_RIGHT;
+		var down = controls.NOTE_DOWN;
+		var left = controls.NOTE_LEFT;
+		var controlHoldArray:Array<Bool> = [left, down, up, right];
+
+		// TO DO: Find a better way to handle controller inputs, this should work for now
+		if (ClientPrefs.hitboxInput)
+		{
+			var controlArray:Array<Bool> = [
+				controls.NOTE_LEFT_P,
+				controls.NOTE_DOWN_P,
+				controls.NOTE_UP_P,
+				controls.NOTE_RIGHT_P
+			];
+
+			if (controlArray.contains(true))
+			{
+				for (i in 0...controlArray.length)
+				{
+					if (controlArray[i])
+						onKeyPress(new KeyboardEvent(KeyboardEvent.KEY_DOWN, true, true, -1, keysArray[i][0]));
+				}
+			}
+		}
+
+		if (!boyfriend.stunned && generatedMusic)
+		{
+			// rewritten inputs???
+			notes.forEachAlive(function(daNote:Note)
+			{
+				// hold note functions
+				if (daNote.isSustainNote && controlHoldArray[daNote.noteData] && daNote.canBeHit && daNote.mustPress && !daNote.tooLate && !daNote.wasGoodHit)
+				{
+					goodNoteHit(daNote);
+				}
+			})
+
+			if (boyfriend.holdTimer > Conductor.stepCrochet * (4 / 1000)
+				&& boyfriend.animation.curAnim.name.startsWith('sing')
+				&& !boyfriend.animation.curAnim.name.endsWith('miss'))
+				boyfriend.dance();
+		}
+
+		// TO DO: Find a better way to handle controller inputs, this should work for now
+		if (ClientPrefs.hitboxInput)
+		{
+			var controlArray:Array<Bool> = [
+				controls.NOTE_LEFT_R,
+				controls.NOTE_DOWN_R,
+				controls.NOTE_UP_R,
+				controls.NOTE_RIGHT_R
+			];
+
+			if (controlArray.contains(true))
+			{
+				for (i in 0...controlArray.length)
+				{
+					if (controlArray[i])
+						onKeyRelease(new KeyboardEvent(KeyboardEvent.KEY_UP, true, true, -1, keysArray[i][0]));
+				}
+			}
+		}
 	}
 
 	function ghostMiss(statement:Bool = false, direction:Int = 0, ?ghostMiss:Bool = false)
