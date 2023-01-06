@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="VS Impostor: V4" file="VS Impostor" packageName="com.clowfoe.imposter" package="com.clowfoe.imposter" main="Main" version="0.2.7" company="Impostorm" />
+	<app title="VS Impostor: V4" file="VS Impostor" packageName="com.clowfoe.imposter" package="com.clowfoe.imposter" main="Main" version="0.2.7" company="Inpostorm" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
@@ -35,20 +35,17 @@
 	<set name="BUILD_DIR" value="export/32bit" if="32" />
 
 	<source name="source" />
-
-	<assets path="assets/mobile" if="mobile" /> <!-- in order to not have the mobile assets in another builds -saw -->
-
-	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
-	<assets path="assets/preload" rename="assets" exclude="*.mp3"  unless="web"/>
 	
 	<!-- PSYCH ENGINE CUSTOMIZATION -->
 	<define name="LUA_ALLOWED" if="cpp" />
 	<define name="VIDEOS_ALLOWED" if="desktop || android" unless="32" />
 
+	<assets path="assets/mobile" if="mobile" />
+	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
+	<assets path="assets/preload" rename="assets" exclude="*.mp3" unless="web"/>
+
 	<define name="PRELOAD_ALL" unless="web" />
 	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL" />
-
-	<library name="videos" preload="true" />
 
 	<section if="PRELOAD_ALL">
 		<library name="songs" preload="true" />
@@ -62,7 +59,6 @@
 		<library name="impostor" preload="false" />
 	</section>
 
-	<assets path="assets/videos" library="videos" if="VIDEOS_ALLOWED" />
 	<assets path="assets/songs" library="songs" exclude="*.ogg" if="web" />
 	<assets path="assets/songs" library="songs" exclude="*.mp3" unless="web" />
 	<assets path="assets/shared" library="shared" exclude="*.ogg" if="web" />
