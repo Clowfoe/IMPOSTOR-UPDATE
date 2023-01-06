@@ -93,7 +93,7 @@ class MainMenuState extends MusicBeatState
 		add(starBG);
 
 		redImpostor = new FlxSprite(350, -160);
-		redImpostor.frames = Paths.getSparrowAtlas('menuBooba/redmenu', 'impostor');
+		redImpostor.frames = Paths.getSparrowAtlas('menuBooba/redMenu', 'impostor');
 		redImpostor.animation.addByPrefix('idle', 'red idle', 24, true);
 		redImpostor.animation.addByPrefix('select', 'red select', 24, false);
 		redImpostor.animation.play('idle');

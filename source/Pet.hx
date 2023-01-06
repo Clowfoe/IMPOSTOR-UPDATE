@@ -208,7 +208,21 @@ class Pet extends FlxSprite
 					playAnim('danceLeft' + idleSuffix);
 			}
 			else if(animation.getByName('idle' + idleSuffix) != null) {
-					playAnim('idle' + idleSuffix);
+				if (animation.curAnim != null)
+				{
+					if (animation.curAnim.looped && (animation.curAnim.name == animation.getByName('idle' + idleSuffix).name))
+						{
+							playAnim('idle' + idleSuffix);
+						}
+					else
+					{
+						playAnim('idle' + idleSuffix, true);
+					}
+				}
+				else
+				{
+					playAnim('idle' + idleSuffix, true);
+				}
 			}
 		}
 	}

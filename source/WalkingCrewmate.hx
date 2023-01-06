@@ -12,14 +12,12 @@ class WalkingCrewmate extends FlxSprite {
 
     public var thecolor:String;
     public var xRange:Array<Float> = [0, 0];
-    public var yHeight:Float = 0;
+    var savedHeight:Float;
     
     var idle:Bool = false;
     var nextActionTime:Float;
     var time:Float;
-
     var right:Bool;
-
     var hibernating:Bool = false;
 
     public function new(theColor:Int, range:Array<Float>, height:Float, thescale:Float)
@@ -27,14 +25,14 @@ class WalkingCrewmate extends FlxSprite {
         super(FlxG.random.float(range[1] - range[0]), height);   
 
         xRange = range;
-        yHeight = height; 
+        savedHeight = height;
         scale.set(thescale, thescale);
 
         lookupColor(theColor);
 
         frames = Paths.getSparrowAtlas('mira/walkers', 'impostor');	
 	    animation.addByPrefix('walk', thecolor, 24, true);
-        animation.addByIndices('idle', thecolor, [14, 15], "", 24, true);
+        animation.addByIndices('idle', thecolor, [8], "", 24, true);
 	    animation.play('walk');
 	    antialiasing = true;
 	    scrollFactor.set(1, 1);
@@ -46,16 +44,22 @@ class WalkingCrewmate extends FlxSprite {
         switch(h){
             case 0:
                 thecolor = 'blue';
+                y = savedHeight + 70;
             case 1:
                 thecolor = 'brown';
+                y = savedHeight;
             case 2:
                 thecolor = 'lime';
+                y = savedHeight + 70;
             case 3:
                 thecolor = 'tan';
+                y = savedHeight;
             case 4:
                 thecolor = 'white'; 
+                y = savedHeight;
             case 5:
                 thecolor = 'yellow'; 
+                y = savedHeight;
         }
     }
 
@@ -65,14 +69,24 @@ class WalkingCrewmate extends FlxSprite {
         animation.stop();
         animation.remove('walk');
         animation.remove('idle');
-        var newColor:Int = FlxG.random.int(0, 6);
+
+        var newColor:Int = 0;
+        switch(thecolor) //prevent duplicate guys appearing on the screen at the same time
+        {
+            case 'blue' | 'brown':
+                newColor = FlxG.random.int(0, 1);
+            case 'lime' | 'tan':
+                newColor = FlxG.random.int(2, 3);
+            case 'white' | 'yellow':
+                newColor = FlxG.random.int(4, 5);
+        }
         lookupColor(newColor);
         animation.addByPrefix('walk', thecolor, 24, true);
-        animation.addByIndices('idle', thecolor, [7, 8], "", 24, true);
+        animation.addByIndices('idle', thecolor, [8], "", 24, true);
     }
 
     function setNewActionTime(){
-        nextActionTime = time + FlxG.random.float(2, 7);
+        nextActionTime = time + FlxG.random.float(0.5, 1);
     }
 
     function triggerNextAction(){

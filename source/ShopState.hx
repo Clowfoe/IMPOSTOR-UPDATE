@@ -173,7 +173,7 @@ class ShopState extends MusicBeatState
 	{
 		super.create();
 
-		Paths.clearUnusedMemory();
+		Paths.destroyLoadedImages();
 
         for(i in 0... nodeData.length){
             nodeData[i][4] = ClientPrefs.boughtArray[i];

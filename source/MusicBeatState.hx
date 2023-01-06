@@ -1,6 +1,5 @@
 package;
 
-import editors.ChartingState;
 import Conductor.BPMChangeEvent;
 import flixel.FlxG;
 import flixel.addons.ui.FlxUIState;
@@ -30,11 +29,6 @@ class MusicBeatState extends FlxUIState
 	override function create() {
 		var skip:Bool = FlxTransitionableState.skipNextTransOut;
 		super.create();
-
-		Paths.clearStoredMemory();
-		if ((!Std.isOfType(this, PlayState)) 
-		&& (!Std.isOfType(this, ChartingState)))
-			Paths.clearUnusedMemory();
 
 		// Custom made Trans out
 		if(!skip) {

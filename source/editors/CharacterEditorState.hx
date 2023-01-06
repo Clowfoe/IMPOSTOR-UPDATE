@@ -167,7 +167,7 @@ class CharacterEditorState extends MusicBeatState
 		];
 
 		UI_box = new FlxUITabMenu(null, tabs, true);
-		UI_box.cameras = [camMenu];
+		UI_box.cameras = [camHUD];
 
 		UI_box.resize(250, 120);
 		UI_box.x = FlxG.width - 275;
