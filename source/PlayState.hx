@@ -380,6 +380,9 @@ class PlayState extends MusicBeatState
 	var finaleBarBlue:FlxSprite;
 
 
+	//jermasorry
+	var scaryJerma:FlxSprite;
+
 	// nick
 	var nickt:FlxSprite;
 	var nicktmvp:FlxSprite;
@@ -3264,6 +3267,15 @@ class PlayState extends MusicBeatState
 				add(defeatDKoverlay);
 
 				add(cargoDarkFG);
+
+			case 'jerma': // fuck you neato
+				scaryJerma = new FlxSprite(300, 150);
+				scaryJerma.frames = Paths.getSparrowAtlas('jermaSCARY');
+				scaryJerma.animation.addByPrefix('w', 'sussyjerma', 24, false);
+				scaryJerma.setGraphicSize(Std.int(scaryJerma.width * 1.6));
+				scaryJerma.scrollFactor.set();
+				scaryJerma.alpha = 0.001;
+				add(scaryJerma);
 
 			case 'warehouse':
 				add(torglasses);
@@ -7812,6 +7824,15 @@ class PlayState extends MusicBeatState
 							bg_war.alpha = 0;
 							bg_jor.alpha = 0;
 						}
+
+				case 'Jerma Scream':
+					scaryJerma.animation.play('w');
+					scaryJerma.alpha = 1;
+
+				case 'Jerma Screamed':
+					scaryJerma.alpha = 0;
+					FlxG.camera.zoom += 0.9;
+					camHUD.zoom += 0.9;
 
 				case 'Dave AUGH':
 					var targetsArray:Array<FlxCamera> = [camGame, camHUD];
