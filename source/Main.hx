@@ -36,7 +36,9 @@ class Main extends Sprite
 
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
 
+		#if desktop
 		FlxG.signals.gameResized.add(onResizeGame);
+		#end
 
 		fpsCounter = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsCounter);
@@ -49,6 +51,7 @@ class Main extends Sprite
 		#end
 	}
 
+	#if desktop
 	function onResizeGame(w:Int, h:Int):Void
 	{
 		if (FlxG.cameras == null)
@@ -71,4 +74,5 @@ class Main extends Sprite
 			}
 		}
 	}
+	#end
 }
