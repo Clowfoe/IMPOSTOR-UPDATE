@@ -4379,8 +4379,11 @@ class PlayState extends MusicBeatState
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_right'))
 		];
 
-		FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
-		FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
+	    if(!ClientPrefs.controllerMode)
+		{
+			FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
+			FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
+		}
 
 		Paths.clearUnusedMemory();
 
@@ -4419,8 +4422,11 @@ class PlayState extends MusicBeatState
 		}
 		luaArray = [];
 
-		FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
-		FlxG.stage.removeEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
+		if(!ClientPrefs.controllerMode)
+			{
+				FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
+				FlxG.stage.removeEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
+			}
 
 		super.destroy();
 	}
@@ -4432,7 +4438,7 @@ class PlayState extends MusicBeatState
 
 		if ((key >= 0)
 			&& !cpuControlled
-			&& (FlxG.keys.checkStatus(eventKey, JUST_PRESSED))
+			&& (FlxG.keys.checkStatus(eventKey, JUST_PRESSED)  || ClientPrefs.controllerMode)
 			&& (FlxG.keys.enabled && !paused && (FlxG.state.active || FlxG.state.persistentUpdate)))
 		{
 			if (generatedMusic)
@@ -8747,6 +8753,7 @@ class PlayState extends MusicBeatState
 				return;
 			}
 		}
+
 
 		timeBarBG.visible = false;
 		timeBar.visible = false;
