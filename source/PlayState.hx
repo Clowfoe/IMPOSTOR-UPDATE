@@ -4166,6 +4166,7 @@ class PlayState extends MusicBeatState
 
 		#if mobile
 		addHitbox();
+		addHitboxCamera();
 		#end
 
 		if (curStage == 'victory')

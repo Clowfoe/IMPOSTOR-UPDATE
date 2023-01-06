@@ -854,6 +854,10 @@ class AmongStoryMenuState extends MusicBeatState
 	{
 		if (!weekIsLocked(curWeek))
 		{
+			#if mobile
+			removeVirtualPad();
+			#end
+			
 			if (stopspamming == false)
 			{
 				FlxG.sound.play(Paths.sound('confirmMenu'));
@@ -898,9 +902,6 @@ class AmongStoryMenuState extends MusicBeatState
 			PlayState.campaignMisses = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-				#if mobile
-				removeVirtualPad();
-				#end
 				LoadingState.loadAndSwitchState(new PlayState(), true);
 				FreeplayState.destroyFreeplayVocals();
 			});

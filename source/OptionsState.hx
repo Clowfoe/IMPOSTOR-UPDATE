@@ -1222,6 +1222,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "If unchecked, your mom won't be angry at you.";
 			case 'Violence':
 				daText = "If unchecked, you won't get disgusted as frequently.";
+			case 'Hitbox Input':
+				daText = "If unchecked, you can only play with keyboard";
 			case 'Note Splashes':
 				daText = "If unchecked, hitting \"Sick!\" notes won't show particles.";
 			case 'Flashing Lights':
@@ -1308,6 +1310,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.cursing;
 					case 'Violence':
 						daValue = ClientPrefs.violence;
+					case 'Hitbox Input':
+						daValue = ClientPrefs.hitboxInput;
 					case 'Camera Zooms':
 						daValue = ClientPrefs.camZooms;
 					case 'Hide HUD':
