@@ -1452,6 +1452,7 @@ class PlayState extends MusicBeatState
 				whiteAwkward.animation.addByPrefix('stare', 'white stare', 24, false);
 				whiteAwkward.animation.play('sweat');
 				whiteAwkward.antialiasing = true;
+				whiteAwkward.visible = (dad.curCharacter != 'white');
 				add(whiteAwkward);
 
 				if (isStoryMode && SONG.song.toLowerCase() != 'oversight')
@@ -7592,7 +7593,7 @@ class PlayState extends MusicBeatState
 					bfvent.animation.play('vent');
 					bfvent.alpha = 1;
 					ldSpeaker.animation.play('boom');
-					ldSpeaker.visible = true;
+					ldSpeaker.visible = gf.curCharacter!='ghostgf';
 				
 				case 'Lights Down OFF':
 					camGame.visible = false;
