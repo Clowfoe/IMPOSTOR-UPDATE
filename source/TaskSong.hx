@@ -3,6 +3,7 @@ package;
 #if MODS_ALLOWED
 import sys.io.File;
 #end
+
 import lime.utils.Assets;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -16,64 +17,57 @@ using flixel.util.FlxSpriteUtil;
 
 class TaskSong extends FlxSpriteGroup
 {
-	var meta:Array<Array<String>> = [];
-	var size:Float = 0;
-	var fontSize:Int = 24;
+    var meta:Array<Array<String>> = [];
+    var size:Float = 0;
+    var fontSize:Int = 24;
 
-	public function new(_x:Float, _y:Float, _song:String, ?_numberThing:Int = -1)
-	{
-		super(_x, _y);
+    public function new(_x:Float, _y:Float, _song:String, ?_numberThing:Int = -1) {
 
-		var addToPath = "";
-		if (_numberThing != -1)
-		{
-			addToPath = "" + _numberThing;
-		}
+        super(_x, _y);
 
-		var pulledText:String = Assets.getText(Paths.txt(_song.toLowerCase().replace(' ', '-') + "/info" + addToPath));
-		pulledText += '\n';
-		var splitText:Array<String> = [];
 
-		splitText = pulledText.split('\n');
+        var addToPath = "";
+        if(_numberThing != -1){
+            addToPath = "" + _numberThing;
+        }
 
-		// theres literally no reason to have more than 2 lines
-		// cry
-		splitText.resize(2);
+        var pulledText:String = Assets.getText(Paths.txt(_song.toLowerCase().replace(' ', '-') + "/info" + addToPath));
+        pulledText += '\n';
+        var splitText:Array<String> = [];
 
-		trace(splitText.length);
+        
+        splitText = pulledText.split('\n');
+        
+        //theres literally no reason to have more than 2 lines
+        //cry
+        splitText.resize(2);
 
-		var text = new FlxText(0, 0, 0, "", fontSize);
-		text.setFormat(Paths.font("arial.ttf"), fontSize, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        trace(splitText.length);
 
-		var text2 = new FlxText(0, 30, 0, "", fontSize);
-		text2.setFormat(Paths.font("arial.ttf"), fontSize, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        var text = new FlxText(0, 0, 0, "", fontSize);
+        text.setFormat(Paths.font("arial.ttf"), fontSize, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
-		text.text = splitText[0];
-		text2.text = splitText[1];
+        var text2 = new FlxText(0, 30, 0, "", fontSize);
+        text2.setFormat(Paths.font("arial.ttf"), fontSize, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
-		text.updateHitbox();
-		text2.updateHitbox();
 
-		size = text2.fieldWidth;
+        text.text = splitText[0];
+        text2.text = splitText[1];
 
-		var bg = new FlxSprite(fontSize / -2,
-			fontSize / -2).makeGraphic(Math.floor(size + fontSize), Std.int(text.height + text2.height + 15), FlxColor.WHITE);
-		bg.height = text.height + text2.height;
-		bg.alpha = 0.47;
+        text.updateHitbox();
+        text2.updateHitbox();
 
-		text.text += "\n";
+        size = text2.fieldWidth;
+        
+        var bg = new FlxSprite(fontSize/-2, fontSize/-2).makeGraphic(Math.floor(size + fontSize), Std.int(text.height + text2.height + 15), FlxColor.WHITE);
+        bg.height = text.height + text2.height;
+        bg.alpha = 0.47;
 
-		add(bg);
-		add(text);
-		add(text2);
+        text.text += "\n";
 
-		x -= size;
-		visible = false;
-	}
-
-	public function start()
-	{
-		visible = true;
+        add(bg);
+        add(text);
+        add(text2);
 
         x -= size;
         alpha = 0.00000001; 

@@ -58,46 +58,50 @@ class AmongCreditsState extends MusicBeatState
         ['amongus\nfan',				'cooper',		"i did nothing for this mod but let them use red mungus but i get a quote for having cancer",	'https://twitter.com/amongusfan24'],
     ];
 
-	var wallback:FlxSprite;
-	var frame:FlxSprite;
-	var dumnote:FlxSprite;
-	var lamp:FlxSprite;
-	var lamplight:FlxSprite;
-	var tree1:FlxSprite;
-	var tree2:FlxSprite;
+    var nameText:FlxText;
+    var descText:FlxText;
+    var curDesc:Int = 0;
 
-	var portrait:FlxSprite;
+    var wallback:FlxSprite;
+    var frame:FlxSprite;
+    var dumnote:FlxSprite;
+    var lamp:FlxSprite;
+    var lamplight:FlxSprite;
+    var tree1:FlxSprite;
+    var tree2:FlxSprite;
 
-	var mole:FlxSprite; // hey pip :]
-	var baritone:FlxSprite; // hey pip again :]
+    var portrait:FlxSprite;
 
-	private var camFollowPos:FlxObject;
+    var mole:FlxSprite; //hey pip :]
+    var baritone:FlxSprite; //hey pip again :]
 
-	override public function create()
-	{
-		super.create();
+    private var camFollowPos:FlxObject;
 
-		camFollowPos = new FlxObject(0, 0, 1, 1);
+    override public function create()
+    {
+        super.create();
 
-		FlxG.camera.zoom = 0.8;
-		FlxG.camera.follow(camFollowPos, LOCKON);
+        camFollowPos = new FlxObject(0, 0, 1, 1);
 
-		camFollowPos.setPosition(660, 370);
+        FlxG.camera.zoom = 0.8;
+        FlxG.camera.follow(camFollowPos, LOCKON);
 
-		wallback = new FlxSprite().loadGraphic(Paths.image('credits/wallback', 'impostor'));
+        camFollowPos.setPosition(660, 370);
+
+        wallback = new FlxSprite().loadGraphic(Paths.image('credits/wallback', 'impostor'));
 		wallback.antialiasing = true;
-		wallback.scale.set(1.3, 1.3);
+        wallback.scale.set(1.3, 1.3);
 		add(wallback);
 
-		portrait = new FlxSprite(0, 100).loadGraphic(Paths.image('credits/portraits/clow', 'impostor'));
+        portrait = new FlxSprite(0, 100).loadGraphic(Paths.image('credits/portraits/clow', 'impostor'));
 		portrait.antialiasing = true;
 		add(portrait);
 
-		frame = new FlxSprite(0, 50).loadGraphic(Paths.image('credits/frame', 'impostor'));
+        frame = new FlxSprite(0, 50).loadGraphic(Paths.image('credits/frame', 'impostor'));
 		frame.antialiasing = true;
 		add(frame);
 
-		dumnote = new FlxSprite(0, 30).loadGraphic(Paths.image('credits/stickynote', 'impostor'));
+        dumnote = new FlxSprite(0, 30).loadGraphic(Paths.image('credits/stickynote', 'impostor'));
 		dumnote.antialiasing = true;
 		dumnote.scale.set(1.25, 1.25);
 		add(dumnote);
@@ -105,9 +109,9 @@ class AmongCreditsState extends MusicBeatState
         
         lamplight = new FlxSprite(0, 100).loadGraphic(Paths.image('credits/lamplight', 'impostor'));
 		lamplight.antialiasing = true;
-		lamplight.x = (FlxG.width / 2) - (lamplight.width / 2);
-		lamplight.blend = ADD;
-		lamplight.alpha = 0.2;
+        lamplight.x = (FlxG.width / 2)  - (lamplight.width / 2);
+        lamplight.blend = ADD;
+        lamplight.alpha = 0.2;
 		add(lamplight);
 
         lamp = new FlxSprite(0, -50).loadGraphic(Paths.image('credits/lamp', 'impostor'));
@@ -119,61 +123,49 @@ class AmongCreditsState extends MusicBeatState
 		tree1.antialiasing = true;
 		add(tree1);
 
-		tree2 = new FlxSprite(1050, 0).loadGraphic(Paths.image('credits/tree2', 'impostor'));
+        tree2 = new FlxSprite(1050, 0).loadGraphic(Paths.image('credits/tree2', 'impostor'));
 		tree2.antialiasing = true;
 		add(tree2);
 
         mole = new FlxSprite(621, 620).loadGraphic(Paths.image('credits/mole', 'impostor'));
 		mole.antialiasing = false;
-		add(mole);
+        add(mole);
 
-		descText = new FlxText(0, 600, 1200, "", 0);
+        descText = new FlxText(0, 600, 1200, "", 0);
 		descText.setFormat(Paths.font("AmaticSC-Bold.ttf"), 50, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		descText.scrollFactor.set();
 		descText.borderSize = 1.3;
-		add(descText);
+        add(descText);
 
-		nameText = new FlxText(565, 120, 800, "", 0);
+        nameText = new FlxText(565, 120, 800, "", 0);
 		nameText.setFormat(Paths.font("Dum-Regular.ttf"), 45, FlxColor.BLACK, CENTER);
 		nameText.angle = -12;
-		nameText.updateHitbox();
-		add(nameText);
+        nameText.updateHitbox();
+        add(nameText);
 
-		baritone = new FlxSprite(630, 638).loadGraphic(Paths.image('credits/baritoneAd', 'impostor'));
+        baritone = new FlxSprite(630, 638).loadGraphic(Paths.image('credits/baritoneAd', 'impostor'));
 		baritone.antialiasing = false;
-		baritone.scale.set(1.2, 1.2);
-		add(baritone);
-
-		updateDescription();
-
+        baritone.scale.set(1.2, 1.2);
+        add(baritone);
+        
+        updateDescription();
+		
 		#if mobile
 		addVirtualPad(LEFT_RIGHT, A_B);
 		addVirtualPadCamera();
 		#end
-	}
+    }
 
-	override public function update(elapsed:Float):Void
-	{
-		super.update(elapsed);
+    override public function update(elapsed:Float):Void
+    {
+        super.update(elapsed);
 
-		if (amongCreditsStuff[curDesc][1] == 'pip')
-		{
-			mole.visible = true;
-		}
-		else
-		{
-			mole.visible = false;
-		}
+        if (amongCreditsStuff[curDesc][1] == 'pip'){ mole.visible = true; }
+        else{ mole.visible = false; }
 
-		if (amongCreditsStuff[curDesc][1] == 'rozebud')
-		{
-			baritone.visible = true;
-		}
-		else
-		{
-			baritone.visible = false;
-		}
-
+        if (amongCreditsStuff[curDesc][1] == 'rozebud'){ baritone.visible = true; }
+        else{ baritone.visible = false; }
+     
 		var leftP = controls.UI_LEFT_P;
 		var rightP = controls.UI_RIGHT_P;
 
@@ -186,55 +178,53 @@ class AmongCreditsState extends MusicBeatState
 			updateDescription(1);
 		}
 
-		if (controls.BACK)
-		{
+    	if (controls.BACK)			
+        {
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			MusicBeatState.switchState(new MainMenuState());
 		}
-		if (controls.ACCEPT)
-		{
-			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+        if(controls.ACCEPT) {
+            FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 			CoolUtil.browserLoad(amongCreditsStuff[curDesc][3]);
 		}
-	}
+    }
 
-	function updateDescription(?change:Int)
-	{
-		curDesc += change;
+    function updateDescription(?change:Int)
+    {
+        curDesc += change;
+        
+        if(curDesc >= amongCreditsStuff.length - 1)
+        {
+            curDesc = amongCreditsStuff.length - 1;
+            tree2.visible = true;
+        }
+        else
+            tree2.visible = false;
+        if(curDesc <= 0)
+        {
+            curDesc = 0;
+            tree1.visible = true;
+        }
+        else
+            tree1.visible = false;
 
-		if (curDesc >= amongCreditsStuff.length - 1)
-		{
-			curDesc = amongCreditsStuff.length - 1;
-			tree2.visible = true;
-		}
-		else
-			tree2.visible = false;
-		if (curDesc <= 0)
-		{
-			curDesc = 0;
-			tree1.visible = true;
-		}
-		else
-			tree1.visible = false;
+        nameText.text = amongCreditsStuff[curDesc][0];
 
-		nameText.text = amongCreditsStuff[curDesc][0];
+        descText.text = amongCreditsStuff[curDesc][2];
+        descText.x = ((FlxG.width / 2) - (descText.width / 2));
 
-		descText.text = amongCreditsStuff[curDesc][2];
-		descText.x = ((FlxG.width / 2) - (descText.width / 2));
+        switch(amongCreditsStuff[curDesc][0]){
+            case 'Ethan\nTheDoodler' | 'Lay\nLasagna' | 'monotone\ndoc' | 'amongus\nfan':
+                nameText.y = 100;
+            case 'Mash\nPro\nTato':
+                nameText.y = 80;
+            default:
+                nameText.y = 120;
+        }
 
-		switch (amongCreditsStuff[curDesc][0])
-		{
-			case 'Ethan\nTheDoodler' | 'Lay\nLasagna' | 'monotone\ndoc' | 'amongus\nfan':
-				nameText.y = 100;
-			case 'Mash\nPro\nTato':
-				nameText.y = 80;
-			default:
-				nameText.y = 120;
-		}
-
-		portrait.loadGraphic(Paths.image('credits/portraits/' + amongCreditsStuff[curDesc][1], 'impostor'));
-		portrait.x = ((FlxG.width / 2) - (portrait.width / 2));
-		frame.x = portrait.x - 55;
-		dumnote.x = frame.x + 560;
-	}
+        portrait.loadGraphic(Paths.image('credits/portraits/' + amongCreditsStuff[curDesc][1], 'impostor'));
+        portrait.x = ((FlxG.width / 2) - (portrait.width / 2));
+        frame.x = portrait.x - 55;
+        dumnote.x = frame.x + 560;
+    }
 }
