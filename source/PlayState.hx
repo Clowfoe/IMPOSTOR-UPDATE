@@ -3122,8 +3122,6 @@ class PlayState extends MusicBeatState
 				pretenderLighting.antialiasing = true;
 				//pretenderLighting.alpha = 0.33;
 				add(pretenderLighting);
-			case 'airship':
-				whiteAwkward.visible = (dad.curCharacter != 'white');
 
 			case 'ejected':
 				bfStartpos = new FlxPoint(1008.6, 504);
@@ -3766,6 +3764,10 @@ class PlayState extends MusicBeatState
 			boyfriendGroup.add(bfLegsmiss);
 		}
 
+		switch(curStage){
+			case 'airshipRoom':
+				whiteAwkward.visible = (dad.curCharacter != 'white');
+		}
 		if (curStage.toLowerCase() == 'charles')
 		{
 			SONG.player1 = 'henryphone';
