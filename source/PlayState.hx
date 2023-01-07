@@ -82,6 +82,9 @@ import sys.FileSystem;
 
 class PlayState extends MusicBeatState
 {
+	var useBFSkin:Bool = false;
+	var useGFSkin:Bool = false;
+
 	var noteRows:Array<Array<Array<Note>>> = [[],[]];
 	var votingnoteRows:Array<Array<Array<Note>>> = [[],[]];
 	private var singAnimations:Array<String> = ['singLEFT', 'singDOWN', 'singUP', 'singRIGHT'];
@@ -3674,6 +3677,7 @@ class PlayState extends MusicBeatState
 		if (ClientPrefs.charOverrides[1] != '' && ClientPrefs.charOverrides[1] != 'gf' && !isStoryMode && !SONG.allowGFskin)
 		{
 			SONG.player3 = ClientPrefs.charOverrides[1];
+			useGFSkin = true;
 		}
 
 		var gfVersion:String = SONG.player3;
@@ -3775,6 +3779,7 @@ class PlayState extends MusicBeatState
 		else if (ClientPrefs.charOverrides[0] != '' && ClientPrefs.charOverrides[0] != 'bf' && !isStoryMode && !SONG.allowBFskin)
 		{
 			SONG.player1 = ClientPrefs.charOverrides[0];
+			useBFSkin = true;
 		}
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
@@ -7648,7 +7653,7 @@ class PlayState extends MusicBeatState
 							cargoReadyKill = true;
 						case 'readykill':
 							camGame.flash(FlxColor.BLACK, 2.75);
-							triggerEventNote('Change Character', '0', 'bf-defeat-normal');
+							if(!useBFSkin)triggerEventNote('Change Character', '0', 'bf-defeat-normal');
 							defeatDKoverlay.alpha = 1;
 							lightoverlayDK.alpha = 0;
 							mainoverlayDK.alpha = 0;
