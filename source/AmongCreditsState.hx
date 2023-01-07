@@ -202,6 +202,12 @@ class AmongCreditsState extends MusicBeatState
 			"i did nothing for this mod but let them use red mungus but i get a quote for having cancer",
 			'https://twitter.com/amongusfan24'
 		],
+		[
+			'Mobile\ncrew',
+			'sussies',
+			"We made android port\nArt by Cryptofuss",
+			'https://twitter.com/helpme_thebigt'
+		],
 	];
 
 	var nameText:FlxText;
