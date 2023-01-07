@@ -70,7 +70,7 @@ class Overlay extends TextField
 		else
 			textColor = 0xFFFFFFFF;
 
-		var currentMemory:Float = System.totalMemory;
+		var currentMemory:UInt = System.totalMemory;
 		if (currentMemory > currentMemoryPeak)
 			currentMemoryPeak = currentMemory;
 
@@ -78,7 +78,7 @@ class Overlay extends TextField
 		{
 			var stats:Array<String> = [];
 			stats.push('FPS: ${currentFrames}');
-			stats.push('Memory: ${getMemoryInterval(currentMemory)} / ${getMemoryInterval(currentMemoryPeak)}');
+			stats.push('Memory: ${getMemoryInterval(currentMemory.toFloat())} / ${getMemoryInterval(currentMemoryPeak.toFloat())}');
 			stats.push('GL Renderer: ${getGLInfo(RENDERER)}');
 			stats.push('GL Shading Version: ${getGLInfo(SHADING_LANGUAGE_VERSION)}');
 			#if android
@@ -105,6 +105,10 @@ class Overlay extends TextField
 		}
 
 		size = Math.round(size * 100) / 100;
+
+		if (data <= 2)
+			size = Math.round(size);
+
 		return '$size ${intervalArray[data]}';
 	}
 
