@@ -28,16 +28,9 @@ class Paths
 	inline public static var SOUND_EXT = #if web "mp3" #else "ogg" #end;
 	inline public static var VIDEO_EXT = "mp4";
 
-	private static var currentTrackedAssets:Map<String, Map<String, Dynamic>> = [
-		"textures" => [],
-		"graphics" => [],
-		"sounds" => []
-	];
+	private static var currentTrackedAssets:Map<String, Map<String, Dynamic>> = ["textures" => [], "graphics" => [], "sounds" => []];
 
-	private static var localTrackedAssets:Map<String, Array<String>> = [
-		"graphics" => [],
-		"sounds" => []
-	];
+	private static var localTrackedAssets:Map<String, Array<String>> = ["graphics" => [], "sounds" => []];
 
 	// haya I love you for the base cache dump I took to the max
 	public static function clearUnusedMemory():Void

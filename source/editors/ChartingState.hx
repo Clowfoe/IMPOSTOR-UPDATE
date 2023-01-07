@@ -63,8 +63,7 @@ class ChartingState extends MusicBeatState
 			'Toogus Sax',
 			'Both Opponents Sing' /*'fabs',
 				'orb',
-				'rare' */
-		];
+				'rare' */];
 
 	private var noteTypeIntMap:Map<Int, String> = new Map<Int, String>();
 	private var noteTypeMap:Map<String, Null<Int>> = new Map<String, Null<Int>>();
@@ -128,7 +127,10 @@ class ChartingState extends MusicBeatState
 		['Finale End', "fire ass song this shit fucks\n-aqua"],
 		['Jerma Scream', "ladies and gentlemen\nneato newgrounds"],
 		['Jerma Screamed', "ladies and gentlemen\nneato newgrounds"],
-		['flash', "weirdly programmed flash event (dont change) \n 0 and 1 are normal flashes but 2 and 3 are \n for fades in identity crisis specifically"],
+		[
+			'flash',
+			"weirdly programmed flash event (dont change) \n 0 and 1 are normal flashes but 2 and 3 are \n for fades in identity crisis specifically"
+		],
 		['Ellie Drop', "ellie dro p down"],
 		['Armed End', 'armed ending'],
 		['Meltdown Video', "'Dead Body Reported'"],

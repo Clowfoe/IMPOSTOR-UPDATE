@@ -379,8 +379,7 @@ class PlayState extends MusicBeatState
 	var finaleBarRed:FlxSprite;
 	var finaleBarBlue:FlxSprite;
 
-
-	//jermasorry
+	// jermasorry
 	var scaryJerma:FlxSprite;
 
 	// nick
@@ -479,7 +478,7 @@ class PlayState extends MusicBeatState
 
 	var turbSpeed:Float = 1.0;
 
-	//victory
+	// victory
 	var VICTORY_TEXT:FlxSprite;
 	var bg_vic:FlxSprite;
 	var bg_jelq:FlxSprite;
@@ -3671,9 +3670,11 @@ class PlayState extends MusicBeatState
 			gf.scrollFactor.set(1, 1);
 		}
 
-		switch(gf.curCharacter){
+		switch (gf.curCharacter)
+		{
 			case 'gfpolus':
-				if (curStage != 'polus2' || curStage != 'polus3'){
+				if (curStage != 'polus2' || curStage != 'polus3')
+				{
 					gf.y -= 50;
 				}
 		}
@@ -6182,22 +6183,19 @@ class PlayState extends MusicBeatState
 				hookarm.y = (Math.sin((Conductor.songPosition / 1000) * (Conductor.bpm / 60) * 1.0) * 15) + 850;
 				clawshands.y = (Math.sin((Conductor.songPosition / 1000) * (Conductor.bpm / 60) * 1.0) * 15) + 650;
 
-				midderclouds.x = FlxMath.lerp(midderclouds.x, midderclouds.x + 175 * turbSpeed,
-					CoolUtil.boundTo(elapsed * 9, 0, 1));
+				midderclouds.x = FlxMath.lerp(midderclouds.x, midderclouds.x + 175 * turbSpeed, CoolUtil.boundTo(elapsed * 9, 0, 1));
 				if (midderclouds.x > 5140.05)
 				{
 					midderclouds.x = -3352.1;
 				}
 
-				hotairballoon.x = FlxMath.lerp(hotairballoon.x, hotairballoon.x + 75 * turbSpeed,
-					CoolUtil.boundTo(elapsed * 9, 0, 1));
+				hotairballoon.x = FlxMath.lerp(hotairballoon.x, hotairballoon.x + 75 * turbSpeed, CoolUtil.boundTo(elapsed * 9, 0, 1));
 				if (hotairballoon.x > 3140.05)
 				{
 					hotairballoon.x = -1352.1;
 				}
 
-				backerclouds.x = FlxMath.lerp(backerclouds.x, backerclouds.x + 55 * turbSpeed,
-					CoolUtil.boundTo(elapsed * 9, 0, 1));
+				backerclouds.x = FlxMath.lerp(backerclouds.x, backerclouds.x + 55 * turbSpeed, CoolUtil.boundTo(elapsed * 9, 0, 1));
 				if (backerclouds.x > 5140.05)
 				{
 					backerclouds.x = -1352.1;
@@ -6230,13 +6228,11 @@ class PlayState extends MusicBeatState
 					}
 				}
 
-				if(turbEnding){
-					dad.x = FlxMath.lerp(dad.x, dad.x + 650,
-						CoolUtil.boundTo(elapsed * 9, 0, 1));
-					dad.y = FlxMath.lerp(dad.y, dad.y + 200,
-						CoolUtil.boundTo(elapsed * 9, 0, 1));
-					dad.angle = FlxMath.lerp(dad.angle, dad.angle + 120,
-						CoolUtil.boundTo(elapsed * 9, 0, 1));
+				if (turbEnding)
+				{
+					dad.x = FlxMath.lerp(dad.x, dad.x + 650, CoolUtil.boundTo(elapsed * 9, 0, 1));
+					dad.y = FlxMath.lerp(dad.y, dad.y + 200, CoolUtil.boundTo(elapsed * 9, 0, 1));
+					dad.angle = FlxMath.lerp(dad.angle, dad.angle + 120, CoolUtil.boundTo(elapsed * 9, 0, 1));
 				}
 
 			case 'monotone':
@@ -6361,9 +6357,9 @@ class PlayState extends MusicBeatState
 		}
 
 		if (FlxG.keys.justPressed.SIX && !endingSong && !inCutscene)
-			{
-				cpuControlled = !cpuControlled; //sorry i just dont wanna play the song each time i change a small thing
-			}
+		{
+			cpuControlled = !cpuControlled; // sorry i just dont wanna play the song each time i change a small thing
+		}
 		#end
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
@@ -7070,30 +7066,30 @@ class PlayState extends MusicBeatState
 								gf.playAnim(animToPlay, true);
 								// dad.angle = 0;
 								/*if (!daNote.isSustainNote) //&& votingnoteRows[daNote.mustPress?0:1][daNote.row].length > 1)
-												{
-													trace("worked 5780");
-													// potentially have jump anims?
-													var chord = votingnoteRows[daNote.mustPress?0:1][daNote.row];
-													var animNote = chord[0];
-													var realAnim = singAnimations[Std.int(Math.abs(animNote.noteData))];
-													if (gf.mostRecentRow != daNote.row)
-													{
-														gf.playAnim(realAnim, true);
-													}
+								{
+									trace("worked 5780");
+									// potentially have jump anims?
+									var chord = votingnoteRows[daNote.mustPress?0:1][daNote.row];
+									var animNote = chord[0];
+									var realAnim = singAnimations[Std.int(Math.abs(animNote.noteData))];
+									if (gf.mostRecentRow != daNote.row)
+									{
+										gf.playAnim(realAnim, true);
+									}
 
-													// if (daNote != animNote)
-													// dad.playGhostAnim(chord.indexOf(daNote)-1, animToPlay, true);
+									// if (daNote != animNote)
+									// dad.playGhostAnim(chord.indexOf(daNote)-1, animToPlay, true);
 
-													gf.mostRecentRow = daNote.row;
-													// dad.angle += 15; lmaooooo
-													if (!daNote.noAnimation)
-													{
-														doGhostAnim('gf', animToPlay);
-													}
-												}
-												else{
-													gf.playAnim(animToPlay, true);
-													// dad.angle = 0;
+									gf.mostRecentRow = daNote.row;
+									// dad.angle += 15; lmaooooo
+									if (!daNote.noAnimation)
+									{
+										doGhostAnim('gf', animToPlay);
+									}
+								}
+								else{
+									gf.playAnim(animToPlay, true);
+									// dad.angle = 0;
 							}*/
 							}
 						}
@@ -8016,7 +8012,8 @@ class PlayState extends MusicBeatState
 					});
 
 				case 'WTF O2':
-					if (value1 == 'what'){
+					if (value1 == 'what')
+					{
 						healthBar.visible = false;
 						healthBarBG.visible = false;
 						iconP1.visible = false;
@@ -8129,7 +8126,7 @@ class PlayState extends MusicBeatState
 					}
 
 				case 'Turbulence Ending':
-					turbEnding = true;	
+					turbEnding = true;
 
 				case 'Turbulence Speed':
 					turbSpeed = Std.parseFloat(value1);
@@ -8795,7 +8792,7 @@ class PlayState extends MusicBeatState
 		#if mobile
 		removeHitbox();
 		#end
-			
+
 		timeBarBG.visible = false;
 		timeBar.visible = false;
 		timeTxt.visible = false;

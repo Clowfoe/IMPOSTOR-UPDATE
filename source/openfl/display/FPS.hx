@@ -99,4 +99,3 @@ class FPS extends TextField
 		return size + " " + dataTexts[data];
 	}
 }
-

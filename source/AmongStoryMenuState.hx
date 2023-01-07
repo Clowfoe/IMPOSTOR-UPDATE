@@ -93,7 +93,7 @@ class AmongStoryMenuState extends MusicBeatState
 		unlockedWeek[8] = true;
 		unlockedWeek[9] = true;
 		unlockedWeek[10] = true;
-		//unlockedWeek[11] = true;
+		// unlockedWeek[11] = true;
 		#end
 
 		if (Highscore.getScore('meltdown', 2) != 0)
@@ -656,14 +656,12 @@ class AmongStoryMenuState extends MusicBeatState
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("right");
 						}
-
 						else if (controls.UI_DOWN_P || FlxG.mouse.wheel < 0)
 						{
 							changeWeek(5);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("down");
 						}
-
 						else if (controls.UI_UP_P || FlxG.mouse.wheel > 0)
 						{
 							changeWeek(8);
@@ -678,7 +676,6 @@ class AmongStoryMenuState extends MusicBeatState
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("left");
 						}
-
 						else if (controls.UI_RIGHT_P && unlockedWeek[1])
 						{
 							changeWeek(1);
@@ -693,21 +690,18 @@ class AmongStoryMenuState extends MusicBeatState
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("left");
 						}
-
 						else if (controls.UI_RIGHT_P && unlockedWeek[2])
 						{
 							changeWeek(1);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("right");
 						}
-
 						else if ((controls.UI_UP_P || FlxG.mouse.wheel > 0) && unlockedWeek[10])
 						{
 							changeWeek(9);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("up");
 						}
-
 						else if ((controls.UI_DOWN_P || FlxG.mouse.wheel < 0) && unlockedWeek[9])
 						{
 							changeWeek(8);
@@ -722,14 +716,12 @@ class AmongStoryMenuState extends MusicBeatState
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("left");
 						}
-
 						else if (controls.UI_RIGHT_P && unlockedWeek[3])
 						{
 							changeWeek(1);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("right");
 						}
-
 						else if ((controls.UI_DOWN_P || FlxG.mouse.wheel < 0) && unlockedWeek[8])
 						{
 							changeWeek(6);
@@ -752,7 +744,6 @@ class AmongStoryMenuState extends MusicBeatState
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("left");
 						}
-
 						else if (controls.UI_UP_P || FlxG.mouse.wheel > 0)
 						{
 							changeWeek(-5);
@@ -767,7 +758,6 @@ class AmongStoryMenuState extends MusicBeatState
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("left");
 						}
-
 						else if (controls.UI_RIGHT_P && unlockedWeek[5])
 						{
 							changeWeek(-1);
@@ -825,7 +815,7 @@ class AmongStoryMenuState extends MusicBeatState
 
 					#if mobile
 					removeVirtualPad();
-					#end		
+					#end
 				}
 				else if (controls.RESET && curWeek != 0)
 				{

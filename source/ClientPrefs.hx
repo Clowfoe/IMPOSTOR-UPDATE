@@ -187,7 +187,7 @@ class ClientPrefs
 		{
 			noteSplashes = FlxG.save.data.noteSplashes;
 		}
-		if(FlxG.save.data.hitboxInput != null) 
+		if (FlxG.save.data.hitboxInput != null)
 		{
 			hitboxInput = FlxG.save.data.hitboxInput;
 		}
@@ -235,7 +235,8 @@ class ClientPrefs
 		{
 			arrowHSV = FlxG.save.data.arrowHSV;
 		}
-		if(FlxG.save.data.ghostTapping != null) {
+		if (FlxG.save.data.ghostTapping != null)
+		{
 			ghostTapping = FlxG.save.data.ghostTapping;
 		}
 		if (FlxG.save.data.hideTime != null)
