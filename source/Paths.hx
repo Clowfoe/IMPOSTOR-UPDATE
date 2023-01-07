@@ -343,7 +343,7 @@ class Paths
 				var graphic:FlxGraphic;
 				var bitmapData:BitmapData = BitmapData.fromFile(path);
 
-				if (useGL)
+				if (ClientPrefs.useGL)
 				{
 					var texture:Texture = FlxG.stage.context3D.createTexture(bitmapData.width, bitmapData.height, BGRA, true);
 					texture.uploadFromBitmapData(bitmapData);
