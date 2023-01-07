@@ -54,7 +54,7 @@ class AmongCreditsState extends MusicBeatState
         ['thales',				'thalesrealthistime',		"I guess I'm the closest to a Jorsawsee director in the mod? Created / Voiced Warchief and charted a lot, making sure everything was playable. Working with everyone was a pleasure, but never tell me to chart two 4+ minute songs again.",	'https://twitter.com/MoonlessShift'],
         ['kal',				'kal',		"i love snas\n-art by @Butholeeo",	'https://twitter.com/Kal_050'],
         
-        ['monotone\ndoc',				'monotone',		"please help they trapped me in the code of the mod",	'https://twitter.com/MonotoneDoc'],
+        ['monotone\ndoc',				'monotone',		"hi i'm the guy who voiced the shapeshifter, very grateful to have had the opportunity and i hope y'all thought it was cool :)",	'https://twitter.com/MonotoneDoc'],
         ['amongus\nfan',				'cooper',		"i did nothing for this mod but let them use red mungus but i get a quote for having cancer",	'https://twitter.com/amongusfan24'],
     ];
 

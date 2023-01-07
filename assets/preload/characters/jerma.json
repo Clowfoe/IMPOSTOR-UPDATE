@@ -8,51 +8,51 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "idle",
+			"name": "IdleJerma",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				363,
-				-179
+				333,
+				-159
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "left",
+			"name": "LeftJerma",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				39,
-				190
+				59,
+				210
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "up",
+			"name": "UpJerma",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				131,
-				-101
+				101,
+				-84
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "down",
+			"name": "DownJerma",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				39,
-				1
+				29,
+				16
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "right",
+			"name": "RightJerma",
 			"indices": []
 		}
 	],
