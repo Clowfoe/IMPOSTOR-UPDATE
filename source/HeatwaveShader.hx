@@ -13,7 +13,7 @@ class HeatwaveShader extends FlxBasic
 	public function new():Void
 	{
 		super();
-		shader.distortTexture.input = Assets.getBitmapData(Paths.getPreloadPath('impostor/images/polus/heatwave.png'));
+		shader.distortTexture.input = Assets.getBitmapData(Paths.file('images/polus/heatwave.png', IMAGE, 'impostor'));
 	}
 
 	override public function update(elapsed:Float):Void
