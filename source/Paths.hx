@@ -74,7 +74,7 @@ class Paths
 		}
 
 		// run the garbage collector for good measure lmfao
-		System.gc();
+		Main.gc();
 	}
 
 	public static function clearStoredMemory():Void
@@ -94,7 +94,6 @@ class Paths
 			}
 		}
 
-		@:privateAccess
 		for (key in OpenFlAssets.cache.getSoundKeys())
 		{
 			var obj = OpenFlAssets.cache.getSound(key);
@@ -104,6 +103,17 @@ class Paths
 				OpenFlAssets.cache.clearSounds(key);
 				OpenFlAssets.cache.clear(key);
 				localTrackedAssets["sounds"].remove(key);
+			}
+		}
+
+		for (key in OpenFlAssets.cache.getFontKeys())
+		{
+			var obj = OpenFlAssets.cache.getFont(key);
+			if (obj != null)
+			{
+				OpenFlAssets.cache.removeFont(key);
+				OpenFlAssets.cache.clearFonts(key);
+				OpenFlAssets.cache.clear(key);
 			}
 		}
 	}
