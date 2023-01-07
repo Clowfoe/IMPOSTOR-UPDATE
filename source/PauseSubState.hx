@@ -32,6 +32,11 @@ class PauseSubState extends MusicBeatSubstate
 	public function new(x:Float, y:Float)
 	{
 		super();
+
+		#if debug
+		menuItemsOG.push('Botplay');
+		#end
+
 		menuItems = menuItemsOG;
 
 		for (i in 0...CoolUtil.difficultyStuff.length) {

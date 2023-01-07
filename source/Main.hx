@@ -1,5 +1,9 @@
 package;
 
+import openfl.system.System;
+import openfl.utils.AssetCache;
+import cpp.vm.Gc;
+import flixel.graphics.FlxGraphic;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxGame;
@@ -75,13 +79,36 @@ class Main extends Sprite
 		
 		ClientPrefs.startControls();
 
+		#if cpp 
+		Gc.enable(true);
+		#end
+
 		// Paths.getModFolders();
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
+		FlxGraphic.defaultPersist = false;
 
 		FlxG.signals.gameResized.add(onResizeGame);
+		FlxG.signals.preStateSwitch.add(function () {
+			Paths.clearStoredMemory(true);
+			FlxG.bitmap.dumpCache();
+
+			var cache = cast(Assets.cache, AssetCache);
+			for (key=>font in cache.font)
+				cache.removeFont(key);
+			for (key=>sound in cache.sound)
+				cache.removeSound(key);
+
+			gc();
+		});
+		FlxG.signals.postStateSwitch.add(function () {
+			Paths.clearUnusedMemory();
+			gc();
+
+			trace(System.totalMemory);
+		});
 		
 		#if !mobile
-		fpsCounter = new FPS(10, 3, 0xFFFFFF);
+		fpsCounter = new FPS(10, 5, 0xFFFFFF);
 		addChild(fpsCounter);
 
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
@@ -142,5 +169,13 @@ class Main extends Sprite
 	public function getFPS():Float
 	{
 		return fpsCounter.currentFPS;
+	}
+
+	public static function gc() {
+		#if cpp
+		Gc.run(true);
+		#else
+		openfl.system.System.gc();
+		#end
 	}
 }

@@ -52,7 +52,6 @@ class StoryMenuState extends MusicBeatState
 	override function create()
 	{
 		super.create();
-		
 		WeekData.reloadWeekFiles(true);
 		if (curWeek >= WeekData.weeksList.length)
 			curWeek = 0;

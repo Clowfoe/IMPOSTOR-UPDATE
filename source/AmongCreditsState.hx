@@ -19,7 +19,6 @@ class AmongCreditsState extends MusicBeatState
         ['aqua',			'aqua',			"local sexy babe and hot programmer\ni coded a lot of this mod and lost sleep working on it\nfollow me for my insane ramblings @ useraqua_",				'https://twitter.com/useraqua_'],   
         ['fabs',		'fabs',	    'did a thing',	'https://twitter.com/fabsthefabs'],		
         ['ziffy',	'ziffy',		'I HELPED ON TORTURE AND\nI MADE THE FREEPLAY MENU','https://twitter.com/ziffymusic'],
-        ['salterino',		'salterino',	    'hi i did 1 thing for mod hi',	'https://twitter.com/Salterin0'],		
         ['Rozebud',		'rozebud',	"Download Bunker Bumrush.\nPlay my new game Bunker Bumrush.",		'https://twitter.com/helpme_thebigt'],
         ['duskie',		'duskie',	    'From what little i did do for this mod, the team was nice and fun to work with. Hope you enjoyed the double note ghosts :)',	'https://twitter.com/DuskieWhy'],		
         
@@ -45,6 +44,7 @@ class AmongCreditsState extends MusicBeatState
         ['Lay\nLasagna',				'lay',		"#1 giggleboy and omfg fan\nhello mommy!!!!!!! :)))) i'm a big boy now!!!!",	'https://twitter.com/LayLasagna7'],
         ['coti',			'coti',			'hi !! im coti-- i didnt really do much except for a drawing or visual tweaking here and there, but im happy i got to work on the mod anyway !! remember to always be silly',	'https://twitter.com/espeoncutie'],   
         ['elikapika',			'pika',			'bunny emoji',	'https://twitter.com/elikapika'],   
+        ['salterino',		'salterino',	    'hi i did 1 thing for mod hi',	'https://twitter.com/Salterin0'],		
         ['Farfoxx',			'hi',			"hi!!! i did a few little things for the mod - although i wish i could've helped more, seeing the mod's development progress was incredible! everyone on the team is so talented, i'm grateful i got to see it reach completion",	'https://twitter.com/iron222_2'],   
         ['Steve',              'thales',    "I'm very happy to help draw a small part of this mod, it's a big achievement for me, I hope you all have a good time in the game!", 'https://twitter.com/Steve06421194'],
         ['MSG',              'msg',    "gaming", 'https://twitter.com/MSGTheEpic'],
@@ -54,7 +54,7 @@ class AmongCreditsState extends MusicBeatState
         ['thales',				'thalesrealthistime',		"I guess I'm the closest to a Jorsawsee director in the mod? Created / Voiced Warchief and charted a lot, making sure everything was playable. Working with everyone was a pleasure, but never tell me to chart two 4+ minute songs again.",	'https://twitter.com/MoonlessShift'],
         ['kal',				'kal',		"i love snas\n-art by @Butholeeo",	'https://twitter.com/Kal_050'],
         
-        ['monotone\ndoc',				'monotone',		"please help they trapped me in the code of the mod",	'https://twitter.com/MonotoneDoc'],
+        ['monotone\ndoc',				'monotone',		"hi i'm the guy who voiced the shapeshifter, very grateful to have had the opportunity and i hope y'all thought it was cool :)",	'https://twitter.com/MonotoneDoc'],
         ['amongus\nfan',				'cooper',		"i did nothing for this mod but let them use red mungus but i get a quote for having cancer",	'https://twitter.com/amongusfan24'],
     ];
 
@@ -106,17 +106,18 @@ class AmongCreditsState extends MusicBeatState
 		dumnote.scale.set(1.25, 1.25);
 		add(dumnote);
 
-        lamp = new FlxSprite(0, -50).loadGraphic(Paths.image('credits/lamp', 'impostor'));
-		lamp.antialiasing = true;
-        lamp.x = (FlxG.width / 2)  - (lamp.width / 2);
-		add(lamp);
-
-        lamplight = new FlxSprite(0, 50).loadGraphic(Paths.image('credits/lamplight', 'impostor'));
+        
+        lamplight = new FlxSprite(0, 100).loadGraphic(Paths.image('credits/lamplight', 'impostor'));
 		lamplight.antialiasing = true;
         lamplight.x = (FlxG.width / 2)  - (lamplight.width / 2);
         lamplight.blend = ADD;
         lamplight.alpha = 0.2;
 		add(lamplight);
+
+        lamp = new FlxSprite(0, -50).loadGraphic(Paths.image('credits/lamp', 'impostor'));
+		lamp.antialiasing = true;
+        lamp.x = (FlxG.width / 2)  - (lamp.width / 2);
+		add(lamp);
 
         tree1 = new FlxSprite(-400, 0).loadGraphic(Paths.image('credits/tree', 'impostor'));
 		tree1.antialiasing = true;
@@ -126,7 +127,7 @@ class AmongCreditsState extends MusicBeatState
 		tree2.antialiasing = true;
 		add(tree2);
 
-        mole = new FlxSprite(601, 620).loadGraphic(Paths.image('credits/mole', 'impostor'));
+        mole = new FlxSprite(621, 620).loadGraphic(Paths.image('credits/mole', 'impostor'));
 		mole.antialiasing = false;
         add(mole);
 
