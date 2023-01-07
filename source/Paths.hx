@@ -207,31 +207,31 @@ class Paths
 		return 'assets/videos/$key.$VIDEO_EXT';
 	}
 
-	static public function sound(key:String, ?library:String):Sound
+	static public function sound(key:String, ?library:String):Any
 	{
 		var sound:Sound = returnSound('sounds', key, library);
 		return sound;
 	}
 
-	inline static public function soundRandom(key:String, min:Int, max:Int, ?library:String):Sound
+	inline static public function soundRandom(key:String, min:Int, max:Int, ?library:String):Any
 	{
 		return sound(key + FlxG.random.int(min, max), library);
 	}
 
-	inline static public function music(key:String, ?library:String):Sound
+	inline static public function music(key:String, ?library:String):Any
 	{
 		var file:Sound = returnSound('music', key, library);
 		return file;
 	}
 
-	inline static public function voices(song:String):Sound
+	inline static public function voices(song:String):Any
 	{
 		var songKey:String = '${song.toLowerCase().replace(' ', '-')}/Voices';
 		var voices = returnSound('songs', songKey);
 		return voices;
 	}
 
-	inline static public function inst(song:String):Sound
+	inline static public function inst(song:String):Any
 	{
 		var songKey:String = '${song.toLowerCase().replace(' ', '-')}/Inst';
 		var inst = returnSound('songs', songKey);
@@ -332,7 +332,7 @@ class Paths
 		return path.toLowerCase().replace(' ', '-');
 	}
 
-	public static function returnGraphic(key:String, ?library:String, ?addToGPU:Bool = false)
+	public static function returnGraphic(key:String, ?library:String, ?useGL:Bool = false)
 	{
 		#if MODS_ALLOWED
 		var path:String = modsImages(key);
@@ -343,7 +343,7 @@ class Paths
 				var graphic:FlxGraphic;
 				var bitmapData:BitmapData = BitmapData.fromFile(path);
 
-				if (addToGPU)
+				if (useGL)
 				{
 					var texture:Texture = FlxG.stage.context3D.createTexture(bitmapData.width, bitmapData.height, BGRA, true);
 					texture.uploadFromBitmapData(bitmapData);
@@ -376,7 +376,7 @@ class Paths
 				var graphic:FlxGraphic;
 				var bitmapData:BitmapData = OpenFlAssets.getBitmapData(path);
 
-				if (addToGPU)
+				if (useGL)
 				{
 					var texture:Texture = FlxG.stage.context3D.createTexture(bitmapData.width, bitmapData.height, BGRA, true);
 					texture.uploadFromBitmapData(bitmapData);
