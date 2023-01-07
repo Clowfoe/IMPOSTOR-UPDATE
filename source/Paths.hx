@@ -241,7 +241,7 @@ class Paths
 	inline static public function image(key:String, ?library:String):FlxGraphic
 	{
 		// streamlined the assets process more
-		var returnAsset:FlxGraphic = returnGraphic(key, library);
+		var returnAsset:FlxGraphic = returnGraphic(key, library, useGL);
 		return returnAsset;
 	}
 
@@ -334,6 +334,9 @@ class Paths
 
 	public static function returnGraphic(key:String, ?library:String, ?useGL:Bool = false)
 	{
+		if (ClientPrefs.useGL)
+            useGL = true;
+		
 		#if MODS_ALLOWED
 		var path:String = modsImages(key);
 		if (FileSystem.exists(path))
@@ -343,7 +346,7 @@ class Paths
 				var graphic:FlxGraphic;
 				var bitmapData:BitmapData = BitmapData.fromFile(path);
 
-				if (ClientPrefs.useGL)
+				if (useGL)
 				{
 					var texture:Texture = FlxG.stage.context3D.createTexture(bitmapData.width, bitmapData.height, BGRA, true);
 					texture.uploadFromBitmapData(bitmapData);
@@ -376,7 +379,7 @@ class Paths
 				var graphic:FlxGraphic;
 				var bitmapData:BitmapData = OpenFlAssets.getBitmapData(path);
 
-				if (ClientPrefs.useGL)
+				if (useGL)
 				{
 					var texture:Texture = FlxG.stage.context3D.createTexture(bitmapData.width, bitmapData.height, BGRA, true);
 					texture.uploadFromBitmapData(bitmapData);
