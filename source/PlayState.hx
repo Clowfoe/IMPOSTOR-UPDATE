@@ -3135,7 +3135,7 @@ class PlayState extends MusicBeatState
 				add(speedLines);
 				canPause = false;
 				camGame.alpha = 0.00001;
-				camGame.alpha = 0.00001;
+				camHUD.alpha = 0.00001;
 				
 
 			case 'polus':
