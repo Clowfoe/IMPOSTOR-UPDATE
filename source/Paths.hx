@@ -238,7 +238,7 @@ class Paths
 		return inst;
 	}
 
-	inline static public function image(key:String, ?library:String):FlxGraphic
+	inline static public function image(key:String, ?library:String, ?useGL:Bool):FlxGraphic
 	{
 		// streamlined the assets process more
 		var returnAsset:FlxGraphic = returnGraphic(key, library, useGL);
@@ -336,7 +336,9 @@ class Paths
 	{
 		if (ClientPrefs.useGL)
             useGL = true;
-		
+		else
+			useGL = false;
+
 		#if MODS_ALLOWED
 		var path:String = modsImages(key);
 		if (FileSystem.exists(path))
