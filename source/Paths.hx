@@ -86,9 +86,9 @@ class Paths
 
 	public static function clearStoredMemory():Void
 	{
+		@:privateAccess
 		for (key in FlxG.bitmap._cache.keys())
 		{
-			@:privateAccess
 			if (localTrackedAssets["graphics"].contains(key) && !currentTrackedAssets["graphics"].exists(key))
 			{
 				var graphic:Null<FlxGraphic> = FlxG.bitmap._cache.get(key);
