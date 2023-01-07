@@ -7631,6 +7631,7 @@ class PlayState extends MusicBeatState
 				case 'Ejected Video':
 					startVideo('ejected');
 				case 'Ejected Start':
+					inCutscene = false; // lmao
 					camGame.flash(FlxColor.WHITE, 0.35);
 					canPause = true;
 					camGame.visible = true;
