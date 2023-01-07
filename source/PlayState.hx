@@ -1452,7 +1452,6 @@ class PlayState extends MusicBeatState
 				whiteAwkward.animation.addByPrefix('stare', 'white stare', 24, false);
 				whiteAwkward.animation.play('sweat');
 				whiteAwkward.antialiasing = true;
-				whiteAwkward.visible = (dad.curCharacter != 'white');
 				add(whiteAwkward);
 
 				if (isStoryMode && SONG.song.toLowerCase() != 'oversight')
@@ -3122,6 +3121,8 @@ class PlayState extends MusicBeatState
 				pretenderLighting.antialiasing = true;
 				//pretenderLighting.alpha = 0.33;
 				add(pretenderLighting);
+			case 'airship':
+				whiteAwkward.visible = (dad.curCharacter != 'white');
 
 			case 'ejected':
 				bfStartpos = new FlxPoint(1008.6, 504);
