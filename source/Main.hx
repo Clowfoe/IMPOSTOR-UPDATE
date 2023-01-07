@@ -1,8 +1,10 @@
 package;
 
-import openfl.system.System;
-import openfl.utils.AssetCache;
+#if cpp
 import cpp.vm.Gc;
+#else
+import openfl.system.System;
+#end
 import flixel.graphics.FlxGraphic;
 import flixel.FlxCamera;
 import flixel.FlxG;
@@ -42,41 +44,11 @@ class Main extends Sprite
 		Gc.enable(true);
 		#end
 
-		// Paths.getModFolders();
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
 		FlxGraphic.defaultPersist = false;
 
 		#if desktop
 		FlxG.signals.gameResized.add(onResizeGame);
-		FlxG.signals.preStateSwitch.add(function()
-		{
-			Paths.clearStoredMemory(true);
-			FlxG.bitmap.dumpCache();
-
-			var cache = cast(Assets.cache, AssetCache);
-			for (key => font in cache.font)
-				cache.removeFont(key);
-			for (key => sound in cache.sound)
-				cache.removeSound(key);
-
-			gc();
-		});
-		FlxG.signals.postStateSwitch.add(function()
-		{
-			Paths.clearUnusedMemory();
-			gc();
-
-			trace(System.totalMemory);
-		});
-
-		fpsCounter = new FPS(10, 5, 0xFFFFFF);
-		addChild(fpsCounter);
-
-		fpsVar = new FPS(10, 3, 0xFFFFFF);
-		if (fpsCounter != null)
-		{
-			fpsCounter.visible = ClientPrefs.showFPS;
-		}
 		#end
 
 		fpsCounter = new FPS(10, 3, 0xFFFFFF);
@@ -115,7 +87,7 @@ class Main extends Sprite
 	}
 	#end
 
-	public static function gc()
+	public static function gc():Void
 	{
 		#if cpp
 		Gc.run(true);
