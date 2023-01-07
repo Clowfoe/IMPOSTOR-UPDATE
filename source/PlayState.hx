@@ -3134,8 +3134,8 @@ class PlayState extends MusicBeatState
 				add(cloudScroll);
 				add(speedLines);
 				canPause = false;
-				camGame.visible = false;
-				camHUD.visible = false;
+				camGame.alpha = 0.00001;
+				camGame.alpha = 0.00001;
 				
 
 			case 'polus':
@@ -7620,8 +7620,8 @@ class PlayState extends MusicBeatState
 				case 'Ejected Start':
 					camGame.flash(FlxColor.WHITE, 0.35);
 					canPause = true;
-					camGame.visible = true;
-					camHUD.visible = true;
+					camGame.alpha = 1;
+					camHUD.alpha = 1;
 				case 'Double Kill Events':
 					switch(value1.toLowerCase()){
 						case 'darken':
