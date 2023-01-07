@@ -26,7 +26,7 @@ class Main extends Sprite
 	var skipSplash:Bool = true; // Whether to skip the flixel splash screen that appears in release mode.
 	var startFullscreen:Bool = false; // Whether to start the game in fullscreen on desktop targets
 
-	public static var fpsCounter:FPS;
+	public static var fpsCounter:Overlay;
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
 
@@ -36,13 +36,13 @@ class Main extends Sprite
 
 		SUtil.uncaughtErrorHandler();
 
-		ClientPrefs.startControls();
-
-		SUtil.checkPermissions();
-
 		#if cpp
 		Gc.enable(true);
 		#end
+
+		ClientPrefs.startControls();
+
+		SUtil.checkPermissions();
 
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
 		FlxGraphic.defaultPersist = false;
@@ -51,7 +51,7 @@ class Main extends Sprite
 		FlxG.signals.gameResized.add(onResizeGame);
 		#end
 
-		fpsCounter = new FPS(10, 3, 0xFFFFFF);
+		fpsCounter = new Overlay(10, 3, gameWidth, gameHeight);
 		addChild(fpsCounter);
 		if (fpsCounter != null)
 			fpsCounter.visible = ClientPrefs.showFPS;
