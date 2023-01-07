@@ -238,10 +238,10 @@ class Paths
 		return inst;
 	}
 
-	inline static public function image(key:String, ?library:String, ?useGL:Bool):FlxGraphic
+	inline static public function image(key:String, ?library:String, ?useGL:Bool = true):FlxGraphic
 	{
 		// streamlined the assets process more
-		var returnAsset:FlxGraphic = returnGraphic(key, library, useGL);
+		var returnAsset:FlxGraphic = returnGraphic(key, library, useGL ? ClientPrefs.useGL : false);
 		return returnAsset;
 	}
 
@@ -298,7 +298,7 @@ class Paths
 	inline static public function getSparrowAtlas(key:String, ?library:String):FlxAtlasFrames
 	{
 		#if MODS_ALLOWED
-		var imageLoaded:FlxGraphic = returnGraphic(key, library);
+		var imageLoaded:FlxGraphic = returnGraphic(key, library, false);
 
 		var xmlExists:Bool = false;
 		if (FileSystem.exists(modsXml(key)))
@@ -314,7 +314,7 @@ class Paths
 	inline static public function getPackerAtlas(key:String, ?library:String)
 	{
 		#if MODS_ALLOWED
-		var imageLoaded:FlxGraphic = returnGraphic(key, library);
+		var imageLoaded:FlxGraphic = returnGraphic(key, library, false);
 
 		var txtExists:Bool = false;
 		if (FileSystem.exists(modsTxt(key)))
@@ -334,11 +334,6 @@ class Paths
 
 	public static function returnGraphic(key:String, ?library:String, ?useGL:Bool = false)
 	{
-		if (ClientPrefs.useGL)
-            useGL = true;
-		else
-			useGL = false;
-
 		#if MODS_ALLOWED
 		var path:String = modsImages(key);
 		if (FileSystem.exists(path))
