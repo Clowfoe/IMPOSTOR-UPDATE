@@ -895,6 +895,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 	static var options:Array<String> = [
 		'GRAPHICS',
 		'Low Quality',
+		'GL Render',
 		#if !html5
 		'Framerate', // Apparently 120FPS isn't correctly supported on Browser? Probably it has some V-Sync shit enabled by default, idk
 		#end
@@ -1082,6 +1083,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 					case 'Low Quality':
 						ClientPrefs.lowQuality = !ClientPrefs.lowQuality;
 
+					case 'GL Render':
+						ClientPrefs.useGL = !ClientPrefs.useGL;
+
 					case 'Note Splashes':
 						ClientPrefs.noteSplashes = !ClientPrefs.noteSplashes;
 
@@ -1203,6 +1207,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "If unchecked, hides FPS Counter.";
 			case 'Low Quality':
 				daText = "If checked, disables some background details,\ndecreases loading times and improves performance.";
+			case 'GL Render':
+				daText = "If unchecked, assets renders with RAM.";
 			case 'Anti-Aliasing':
 				daText = "If unchecked, disables anti-aliasing, increases performance\nat the cost of the graphics not looking as smooth.";
 			case 'Downscroll':
@@ -1287,6 +1293,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.showFPS;
 					case 'Low Quality':
 						daValue = ClientPrefs.lowQuality;
+					case 'GL Render':
+						daValue = ClientPrefs.useGL;
 					case 'Anti-Aliasing':
 						daValue = ClientPrefs.globalAntialiasing;
 					case 'Note Splashes':
