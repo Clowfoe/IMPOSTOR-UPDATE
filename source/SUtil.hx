@@ -11,7 +11,6 @@ import haxe.io.Path;
 import lime.system.System as LimeSystem;
 import openfl.Lib;
 import openfl.events.UncaughtErrorEvent;
-import openfl.system.System as OpenFLSystem;
 import openfl.utils.Assets;
 #if sys
 import sys.FileSystem;
@@ -89,7 +88,7 @@ class SUtil
 			for (file in Assets.list().filter(folder -> folder.contains('assets/videos')))
 				SUtil.copyContent(file, SUtil.getStorageDirectory() + file);
 
-			OpenFLSystem.gc(); // clean da memory.
+			Main.gc(); // clean da memory.
 		}
 		#end
 	}
