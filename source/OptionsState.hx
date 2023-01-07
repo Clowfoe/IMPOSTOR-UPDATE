@@ -1208,7 +1208,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 			case 'Low Quality':
 				daText = "If checked, disables some background details,\ndecreases loading times and improves performance.";
 			case 'GL Render':
-				daText = "If unchecked, assets renders with RAM.";
+				daText = "If checked some images will be rendered with gl.";
 			case 'Anti-Aliasing':
 				daText = "If unchecked, disables anti-aliasing, increases performance\nat the cost of the graphics not looking as smooth.";
 			case 'Downscroll':
