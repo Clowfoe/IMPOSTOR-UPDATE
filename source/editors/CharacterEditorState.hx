@@ -195,7 +195,7 @@ class CharacterEditorState extends MusicBeatState
 		addAnimationsUI();
 		UI_characterbox.selected_tab_id = 'Character';
 
-		FlxG.mouse.visible = true;
+		FlxG.mouse.visible = false;
 		reloadCharacterOptions();
 	}
 

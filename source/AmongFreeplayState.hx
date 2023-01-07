@@ -115,7 +115,7 @@ class AmongFreeplayState extends MusicBeatState
 
 		Paths.clearUnusedMemory();
 
-		FlxG.mouse.visible = true;
+		FlxG.mouse.visible = false;
 
 		localBeans = ClientPrefs.beans;
 

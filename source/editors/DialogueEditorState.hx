@@ -80,7 +80,7 @@ class DialogueEditorState extends MusicBeatState
 		add(box);
 
 		addEditorBox();
-		FlxG.mouse.visible = true;
+		FlxG.mouse.visible = false;
 
 		var addLineText:FlxText = new FlxText(10, 10, FlxG.width - 20,
 			'Press O to remove the current dialogue line, Press P to add another line after the current one.', 8);
