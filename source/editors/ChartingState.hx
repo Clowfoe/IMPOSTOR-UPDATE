@@ -126,10 +126,9 @@ class ChartingState extends MusicBeatState
 		['Finale Flashback Change', "eTHAN THINGY CODE IN GAME!!"],
 		['Finale Drop', "fire ass song this shit fucks\n-aqua"],
 		['Finale End', "fire ass song this shit fucks\n-aqua"],
-		[
-			'flash',
-			"weirdly programmed flash event (dont change) \n 0 and 1 are normal flashes but 2 and 3 are \n for fades in identity crisis specifically"
-		],
+		['Jerma Scream', "ladies and gentlemen\nneato newgrounds"],
+		['Jerma Screamed', "ladies and gentlemen\nneato newgrounds"],
+		['flash', "weirdly programmed flash event (dont change) \n 0 and 1 are normal flashes but 2 and 3 are \n for fades in identity crisis specifically"],
 		['Ellie Drop', "ellie dro p down"],
 		['Armed End', 'armed ending'],
 		['Meltdown Video', "'Dead Body Reported'"],
@@ -144,6 +143,7 @@ class ChartingState extends MusicBeatState
 		['Cam lock in Who', 'Value 1: "in" for in zoom\nValue 2: "dad" for dad'],
 		['Cam lock in Voting Time', 'Value 1: "in" for in zoom\nValue 2: "dad" for dad'],
 		['Turbulence Ending', 'WAAHHHHHH'],
+		['Turbulence Speed', 'WAAHHHHHH'],
 		['Who Buzz', ''],
 		['Dave AUGH', ''],
 		['Reactor Beep', 'Reactor whomp err'],

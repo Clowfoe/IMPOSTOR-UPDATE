@@ -657,14 +657,14 @@ class AmongStoryMenuState extends MusicBeatState
 							shipPlayAnim("right");
 						}
 
-						if (controls.UI_DOWN_P || FlxG.mouse.wheel < 0)
+						else if (controls.UI_DOWN_P || FlxG.mouse.wheel < 0)
 						{
 							changeWeek(5);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("down");
 						}
 
-						if (controls.UI_UP_P || FlxG.mouse.wheel > 0)
+						else if (controls.UI_UP_P || FlxG.mouse.wheel > 0)
 						{
 							changeWeek(8);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -679,7 +679,7 @@ class AmongStoryMenuState extends MusicBeatState
 							shipPlayAnim("left");
 						}
 
-						if (controls.UI_RIGHT_P && unlockedWeek[1])
+						else if (controls.UI_RIGHT_P && unlockedWeek[1])
 						{
 							changeWeek(1);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -694,21 +694,21 @@ class AmongStoryMenuState extends MusicBeatState
 							shipPlayAnim("left");
 						}
 
-						if (controls.UI_RIGHT_P && unlockedWeek[2])
+						else if (controls.UI_RIGHT_P && unlockedWeek[2])
 						{
 							changeWeek(1);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("right");
 						}
 
-						if ((controls.UI_UP_P || FlxG.mouse.wheel > 0) && unlockedWeek[10])
+						else if ((controls.UI_UP_P || FlxG.mouse.wheel > 0) && unlockedWeek[10])
 						{
 							changeWeek(9);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("up");
 						}
 
-						if ((controls.UI_DOWN_P || FlxG.mouse.wheel < 0) && unlockedWeek[9])
+						else if ((controls.UI_DOWN_P || FlxG.mouse.wheel < 0) && unlockedWeek[9])
 						{
 							changeWeek(8);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -723,14 +723,14 @@ class AmongStoryMenuState extends MusicBeatState
 							shipPlayAnim("left");
 						}
 
-						if (controls.UI_RIGHT_P && unlockedWeek[3])
+						else if (controls.UI_RIGHT_P && unlockedWeek[3])
 						{
 							changeWeek(1);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
 							shipPlayAnim("right");
 						}
 
-						if ((controls.UI_DOWN_P || FlxG.mouse.wheel < 0) && unlockedWeek[8])
+						else if ((controls.UI_DOWN_P || FlxG.mouse.wheel < 0) && unlockedWeek[8])
 						{
 							changeWeek(6);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -753,7 +753,7 @@ class AmongStoryMenuState extends MusicBeatState
 							shipPlayAnim("left");
 						}
 
-						if (controls.UI_UP_P || FlxG.mouse.wheel > 0)
+						else if (controls.UI_UP_P || FlxG.mouse.wheel > 0)
 						{
 							changeWeek(-5);
 							FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -768,7 +768,7 @@ class AmongStoryMenuState extends MusicBeatState
 							shipPlayAnim("left");
 						}
 
-						if (controls.UI_RIGHT_P && unlockedWeek[5])
+						else if (controls.UI_RIGHT_P && unlockedWeek[5])
 						{
 							changeWeek(-1);
 							FlxG.sound.play(Paths.sound('scrollMenu'));

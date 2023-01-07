@@ -379,6 +379,10 @@ class PlayState extends MusicBeatState
 	var finaleBarRed:FlxSprite;
 	var finaleBarBlue:FlxSprite;
 
+
+	//jermasorry
+	var scaryJerma:FlxSprite;
+
 	// nick
 	var nickt:FlxSprite;
 	var nicktmvp:FlxSprite;
@@ -473,7 +477,9 @@ class PlayState extends MusicBeatState
 	var turbFrontCloud:FlxTypedGroup<FlxSprite>;
 	var turbEnding:Bool = false;
 
-	// victory
+	var turbSpeed:Float = 1.0;
+
+	//victory
 	var VICTORY_TEXT:FlxSprite;
 	var bg_vic:FlxSprite;
 	var bg_jelq:FlxSprite;
@@ -2420,14 +2426,14 @@ class PlayState extends MusicBeatState
 
 				if (SONG.song.toLowerCase() == 'sussus toogus')
 				{
-					walker = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					// add(walker);
+					walker = new WalkingCrewmate(FlxG.random.int(0, 1), [-700, 1850], 50, 0.8);
+					add(walker);
 
-					var walker2:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					// add(walker2);
+					var walker2:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(2, 3), [-700, 1850], 50, 0.8);
+					add(walker2);
 
-					var walker3:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(0, 6), [-700, 1850], 70, 0.8);
-					// add(walker3);
+					var walker3:WalkingCrewmate = new WalkingCrewmate(FlxG.random.int(4, 5), [-700, 1850], 50, 0.8);
+					add(walker3);
 				}
 
 				if (SONG.song.toLowerCase() == 'lights-down')
@@ -3234,6 +3240,15 @@ class PlayState extends MusicBeatState
 
 				add(cargoDarkFG);
 
+			case 'jerma': // fuck you neato
+				scaryJerma = new FlxSprite(300, 150);
+				scaryJerma.frames = Paths.getSparrowAtlas('jermaSCARY');
+				scaryJerma.animation.addByPrefix('w', 'sussyjerma', 24, false);
+				scaryJerma.setGraphicSize(Std.int(scaryJerma.width * 1.6));
+				scaryJerma.scrollFactor.set();
+				scaryJerma.alpha = 0.001;
+				add(scaryJerma);
+
 			case 'warehouse':
 				add(torglasses);
 				add(windowlights);
@@ -3654,6 +3669,13 @@ class PlayState extends MusicBeatState
 		else
 		{
 			gf.scrollFactor.set(1, 1);
+		}
+
+		switch(gf.curCharacter){
+			case 'gfpolus':
+				if (curStage != 'polus2' || curStage != 'polus3'){
+					gf.y -= 50;
+				}
 		}
 
 		gfGroup.add(gf);
@@ -6160,19 +6182,22 @@ class PlayState extends MusicBeatState
 				hookarm.y = (Math.sin((Conductor.songPosition / 1000) * (Conductor.bpm / 60) * 1.0) * 15) + 850;
 				clawshands.y = (Math.sin((Conductor.songPosition / 1000) * (Conductor.bpm / 60) * 1.0) * 15) + 650;
 
-				midderclouds.x = FlxMath.lerp(midderclouds.x, midderclouds.x + 175, CoolUtil.boundTo(elapsed * 9, 0, 1));
+				midderclouds.x = FlxMath.lerp(midderclouds.x, midderclouds.x + 175 * turbSpeed,
+					CoolUtil.boundTo(elapsed * 9, 0, 1));
 				if (midderclouds.x > 5140.05)
 				{
 					midderclouds.x = -3352.1;
 				}
 
-				hotairballoon.x = FlxMath.lerp(hotairballoon.x, hotairballoon.x + 75, CoolUtil.boundTo(elapsed * 9, 0, 1));
+				hotairballoon.x = FlxMath.lerp(hotairballoon.x, hotairballoon.x + 75 * turbSpeed,
+					CoolUtil.boundTo(elapsed * 9, 0, 1));
 				if (hotairballoon.x > 3140.05)
 				{
 					hotairballoon.x = -1352.1;
 				}
 
-				backerclouds.x = FlxMath.lerp(backerclouds.x, backerclouds.x + 55, CoolUtil.boundTo(elapsed * 9, 0, 1));
+				backerclouds.x = FlxMath.lerp(backerclouds.x, backerclouds.x + 55 * turbSpeed,
+					CoolUtil.boundTo(elapsed * 9, 0, 1));
 				if (backerclouds.x > 5140.05)
 				{
 					backerclouds.x = -1352.1;
@@ -6182,7 +6207,7 @@ class PlayState extends MusicBeatState
 				{
 					for (i in 0...airSpeedlines.members.length)
 					{
-						airSpeedlines.members[i].x = FlxMath.lerp(airSpeedlines.members[i].x, airSpeedlines.members[i].x + 350,
+						airSpeedlines.members[i].x = FlxMath.lerp(airSpeedlines.members[i].x, airSpeedlines.members[i].x + 350 * turbSpeed,
 							CoolUtil.boundTo(elapsed * 9, 0, 1));
 
 						if (airSpeedlines.members[i].x > 5140.05)
@@ -6196,7 +6221,7 @@ class PlayState extends MusicBeatState
 				{
 					for (i in 0...turbFrontCloud.members.length)
 					{
-						turbFrontCloud.members[i].x = FlxMath.lerp(turbFrontCloud.members[i].x, turbFrontCloud.members[i].x + 400,
+						turbFrontCloud.members[i].x = FlxMath.lerp(turbFrontCloud.members[i].x, turbFrontCloud.members[i].x + 400 * turbSpeed,
 							CoolUtil.boundTo(elapsed * 9, 0, 1));
 						if (turbFrontCloud.members[i].x > 5140.05)
 						{
@@ -6205,11 +6230,13 @@ class PlayState extends MusicBeatState
 					}
 				}
 
-				if (turbEnding)
-				{
-					dad.x = FlxMath.lerp(dad.x, dad.x + 900, CoolUtil.boundTo(elapsed * 9, 0, 1));
-					dad.y = FlxMath.lerp(dad.y, dad.y + 50, CoolUtil.boundTo(elapsed * 9, 0, 1));
-					dad.angle = FlxMath.lerp(dad.angle, dad.angle + 20, CoolUtil.boundTo(elapsed * 9, 0, 1));
+				if(turbEnding){
+					dad.x = FlxMath.lerp(dad.x, dad.x + 650,
+						CoolUtil.boundTo(elapsed * 9, 0, 1));
+					dad.y = FlxMath.lerp(dad.y, dad.y + 200,
+						CoolUtil.boundTo(elapsed * 9, 0, 1));
+					dad.angle = FlxMath.lerp(dad.angle, dad.angle + 120,
+						CoolUtil.boundTo(elapsed * 9, 0, 1));
 				}
 
 			case 'monotone':
@@ -6332,6 +6359,11 @@ class PlayState extends MusicBeatState
 			DiscordClient.changePresence("Chart Editor", null, null, true);
 			#end
 		}
+
+		if (FlxG.keys.justPressed.SIX && !endingSong && !inCutscene)
+			{
+				cpuControlled = !cpuControlled; //sorry i just dont wanna play the song each time i change a small thing
+			}
 		#end
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
@@ -7812,6 +7844,15 @@ class PlayState extends MusicBeatState
 						bg_jor.alpha = 0;
 					}
 
+				case 'Jerma Scream':
+					scaryJerma.animation.play('w');
+					scaryJerma.alpha = 1;
+
+				case 'Jerma Screamed':
+					scaryJerma.alpha = 0;
+					FlxG.camera.zoom += 0.9;
+					camHUD.zoom += 0.9;
+
 				case 'Dave AUGH':
 					var targetsArray:Array<FlxCamera> = [camGame, camHUD];
 					for (i in 0...targetsArray.length)
@@ -7975,9 +8016,17 @@ class PlayState extends MusicBeatState
 					});
 
 				case 'WTF O2':
-					if (value1 == 'what')
-					{
-						FlxG.camera.fade(FlxColor.BLACK, 1, true);
+					if (value1 == 'what'){
+						healthBar.visible = false;
+						healthBarBG.visible = false;
+						iconP1.visible = false;
+						iconP2.visible = false;
+
+						timeBar.visible = false;
+						timeBarBG.visible = false;
+						timeTxt.visible = false;
+						opponentStrums.visible = false;
+						FlxG.camera.fade(FlxColor.BLACK, 0.01, true);
 						o2dark.alpha = 1;
 						o2WTF.alpha = 1;
 						o2WTF.animation.play('w');
@@ -7992,16 +8041,6 @@ class PlayState extends MusicBeatState
 						o2WTF.alpha = 0;
 						camHUD.alpha = 0.001;
 						camGame.flash(FlxColor.RED, 0.75);
-
-						healthBar.visible = false;
-						healthBarBG.visible = false;
-						iconP1.visible = false;
-						iconP2.visible = false;
-
-						timeBar.visible = false;
-						timeBarBG.visible = false;
-						timeTxt.visible = false;
-						opponentStrums.visible = false;
 					}
 					if (value1 == 'appear')
 					{
@@ -8090,7 +8129,10 @@ class PlayState extends MusicBeatState
 					}
 
 				case 'Turbulence Ending':
-					turbEnding = true;
+					turbEnding = true;	
+
+				case 'Turbulence Speed':
+					turbSpeed = Std.parseFloat(value1);
 
 				case 'Opponent Two':
 					opponent2sing = !opponent2sing;

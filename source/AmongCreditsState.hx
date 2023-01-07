@@ -9,204 +9,54 @@ import flixel.FlxObject;
 
 class AmongCreditsState extends MusicBeatState
 {
-	private static var amongCreditsStuff:Array<Dynamic> = [
-		// Name - Icon name - Description - Link
-		// WE ARE ALL IMPORTANT PEOPLE
-		[
-			'Clowfoe',
-			'clow',
-			'im clowfoe.... i directed the mod and i coded a SHIT TON of it\nim really proud of this whole team ty all for playing and hope it was worth the wait',
-			'https://twitter.com/Clowfoe'
-		],
-		[
-			'Ethan\nTheDoodler',
-			'ethan',
-			'im a real doodler now, mama',
-			'https://twitter.com/D00dlerEthan'
-		],
-		[
-			'_emi',
-			'emi',
-			'artist!! so glad to be a part of this mod.. ty for playing <3',
-			'https://twitter.com/superinky_'
-		],
-		['mayhew', 'mayhew', 'i made triple trouble and i am gay artist', '@kibolomay'],
-		[
-			'aqua',
-			'aqua',
-			"local sexy babe and hot programmer\ni coded a lot of this mod and lost sleep working on it\nfollow me for my insane ramblings @ useraqua_",
-			'https://twitter.com/useraqua_'
-		],
-		['fabs', 'fabs', 'did a thing', 'https://twitter.com/fabsthefabs'],
-		[
-			'ziffy',
-			'ziffy',
-			'I HELPED ON TORTURE AND\nI MADE THE FREEPLAY MENU',
-			'https://twitter.com/ziffymusic'
-		],
-		[
-			'salterino',
-			'salterino',
-			'hi i did 1 thing for mod hi',
-			'https://twitter.com/Salterin0'
-		],
-		[
-			'Rozebud',
-			'rozebud',
-			"Download Bunker Bumrush.\nPlay my new game Bunker Bumrush.",
-			'https://twitter.com/helpme_thebigt'
-		],
-		[
-			'duskie',
-			'duskie',
-			'From what little i did do for this mod, the team was nice and fun to work with. Hope you enjoyed the double note ghosts :)',
-			'https://twitter.com/DuskieWhy'
-		],
-		['punkett', 'punkett', "im punkett", 'https://twitter.com/_punkett'],
-		[
-			'emihead',
-			'emihead',
-			"im emihead i made tomonjus tuesday and the credits song also i am canonically the black impostor's lover so please draw us making out and tag me on twitter @ emihead",
-			'https://twitter.com/emihead'
-		],
-		[
-			'Saster',
-			'saster',
-			"Hey guys, it's me! I composed Sauces Moogus and Heartbeat. Though they are both songs I created more than a year ago, I still think they're not too bad. I hope you enjoyed those songs and see you in another mod!!",
-			'https://twitter.com/sub0ru'
-		],
-		[
-			'Rareblin',
-			'rareblin',
-			"im a funny musician idk check out my Youtube channel",
-			'https://www.youtube.com/channel/UCnTN-0q7Wv1zqvBXQ_g4gZA'
-		],
-		['keoni', 'keoni', "keoni", 'https://twitter.com/AmongUsVore'],
-		[
-			'Keegan',
-			'keegan',
-			"Hey Gamers, I'm Keegan, I made Turbulence and all the midi sections of Room Code.\nI like ENA and I draw occasionally you should follow me @__Keegan_",
-			'https://twitter.com/__Keegan_'
-		],
-		[
-			'fluffyhairs',
-			'fluffyhair',
-			"subscribe to fluffyhairs",
-			'https://twitter.com/fluffyhairslol'
-		],
-		[
-			'Nii-san',
-			'niisan',
-			'Musician. Had lots of fun working on this mod, thanks to everyone for playing V4! (sub to my youtube, @niisanmusic, i uploaded the songs there)',
-			'https://twitter.com/NiisanHP'
-		],
-		[
-			'JADS',
-			'jads',
-			'"if u tired, just sleep." - Gandhi',
-			'https://twitter.com/Aw3somejds'
-		],
-		['loggo', 'lojo', 'halloween', 'https://twitter.com/loggoman512'],
-		[
-			'mayo',
-			'mayo',
-			"Hi I'm Mayokiddo! I'm an artist for the mod and I made a bunch of the playable mini impostor skins, and i also made a few sprites\nshout out to everyone currently in silly squad",
-			'https://twitter.com/Mayokiddo_'
-		],
-		[
-			'Mash\nPro\nTato',
-			'mashywashy',
-			'im so sorry for making among us kills 2 years ago',
-			'https://twitter.com/MashProTato'
-		],
-		[
-			'Julien',
-			'julien',
-			'hi i made the parasite form isnt he so awesome',
-			'https://twitter.com/itjulienn'
-		],
-		[
-			'neato',
-			'neato',
-			'if she yo girl why my leitmotif in her theme',
-			'https://neatong.newgrounds.com/'
-		],
-		[
-			'orbyy',
-			'orb',
-			"Im really happy i got to work on this, i was brought on v3 to do pixel art for tomongus and i'm grateful for being given the opportunity. I hope yall love the new pixel art for tomongus week and i apologize for v3's defeat chart.",
-			'https://twitter.com/OrbyyNew'
-		],
-		[
-			'squidboy',
-			'squid',
-			'hi im squid you may or may not know me for moderating the impostorm discord server\nive also been working for impostor ever since its beginning so thats cool i guess\nlove u zial <3<3<3',
-			'https://twitter.com/SquidBoy84'
-		],
-		['pip', 'pip', '"            "', 'https://twitter.com/DojimaDog'],
-		[
-			'crocidy',
-			'croc',
-			"can you follow me i made fourth wall",
-			'https://twitter.com/croc2RTX'
-		],
-		[
-			'Lay\nLasagna',
-			'lay',
-			"#1 giggleboy and omfg fan\nhello mommy!!!!!!! :)))) i'm a big boy now!!!!",
-			'https://twitter.com/LayLasagna7'
-		],
-		[
-			'coti',
-			'coti',
-			'hi !! im coti-- i didnt really do much except for a drawing or visual tweaking here and there, but im happy i got to work on the mod anyway !! remember to always be silly',
-			'https://twitter.com/espeoncutie'
-		],
-		['elikapika', 'pika', 'bunny emoji', 'https://twitter.com/elikapika'],
-		[
-			'Farfoxx',
-			'hi',
-			"hi!!! i did a few little things for the mod - although i wish i could've helped more, seeing the mod's development progress was incredible! everyone on the team is so talented, i'm grateful i got to see it reach completion",
-			'https://twitter.com/iron222_2'
-		],
-		[
-			'Steve',
-			'thales',
-			"I'm very happy to help draw a small part of this mod, it's a big achievement for me, I hope you all have a good time in the game!",
-			'https://twitter.com/Steve06421194'
-		],
-		['MSG', 'msg', "gaming", 'https://twitter.com/MSGTheEpic'],
-		[
-			'Gonk',
-			'gonk',
-			"Working on Impostor has been a ton of fun honestly, was really cool to be a part of something special like this. I'm also the reason crewicide is in, dumb joke song based off a dream I had and its probably my favourite thing I worked on in the mod, It Funny, makes Me Lol",
-			'https://www.youtube.com/watch?v=rZP7kWOMPzI'
-		],
-		['gibz', 'gibz', "shit idk , charted a few songs", 'https://twitter.com/9766Gibz'],
-		[
-			'thales',
-			'thalesrealthistime',
-			"I guess I'm the closest to a Jorsawsee director in the mod? Created / Voiced Warchief and charted a lot, making sure everything was playable. Working with everyone was a pleasure, but never tell me to chart two 4+ minute songs again.",
-			'https://twitter.com/MoonlessShift'
-		],
-		['kal', 'kal', "i love snas\n-art by @Butholeeo", 'https://twitter.com/Kal_050'],
-		[
-			'monotone\ndoc',
-			'monotone',
-			"please help they trapped me in the code of the mod",
-			'https://twitter.com/MonotoneDoc'
-		],
-		[
-			'amongus\nfan',
-			'cooper',
-			"i did nothing for this mod but let them use red mungus but i get a quote for having cancer",
-			'https://twitter.com/amongusfan24'
-		],
-	];
+    private static var amongCreditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link
+        //WE ARE ALL IMPORTANT PEOPLE
+        ['Clowfoe',		'clow',	    'im clowfoe.... i directed the mod and i coded a SHIT TON of it\nim really proud of this whole team ty all for playing and hope it was worth the wait',	'https://twitter.com/Clowfoe'],		
+        ['Ethan\nTheDoodler',	'ethan',		'im a real doodler now, mama','https://twitter.com/D00dlerEthan'],        
+        ['_emi',			'emi',			'artist!! so glad to be a part of this mod.. ty for playing <3',				'https://twitter.com/superinky_'],   
+        ['mayhew',			'mayhew',		'i made triple trouble and i am gay artist',		'@kibolomay'],
+        
+        ['aqua',			'aqua',			"local sexy babe and hot programmer\ni coded a lot of this mod and lost sleep working on it\nfollow me for my insane ramblings @ useraqua_",				'https://twitter.com/useraqua_'],   
+        ['fabs',		'fabs',	    'did a thing',	'https://twitter.com/fabsthefabs'],		
+        ['ziffy',	'ziffy',		'I HELPED ON TORTURE AND\nI MADE THE FREEPLAY MENU','https://twitter.com/ziffymusic'],
+        ['Rozebud',		'rozebud',	"Download Bunker Bumrush.\nPlay my new game Bunker Bumrush.",		'https://twitter.com/helpme_thebigt'],
+        ['duskie',		'duskie',	    'From what little i did do for this mod, the team was nice and fun to work with. Hope you enjoyed the double note ghosts :)',	'https://twitter.com/DuskieWhy'],		
+        
+        ['punkett',				'punkett',			"im punkett",	'https://twitter.com/_punkett'],
+        ['emihead',				'emihead',			"im emihead i made tomonjus tuesday and the credits song also i am canonically the black impostor's lover so please draw us making out and tag me on twitter @ emihead",	'https://twitter.com/emihead'],
+        ['Saster',		'saster',	"Hey guys, it's me! I composed Sauces Moogus and Heartbeat. Though they are both songs I created more than a year ago, I still think they're not too bad. I hope you enjoyed those songs and see you in another mod!!",		'https://twitter.com/sub0ru'],
+        ['Rareblin',		'rareblin',	"im a funny musician idk check out my Youtube channel",		'https://www.youtube.com/channel/UCnTN-0q7Wv1zqvBXQ_g4gZA'],
+        ['keoni',				'keoni',			"keoni",	'https://twitter.com/AmongUsVore'],
+        ['Keegan',		'keegan',	"Hey Gamers, I'm Keegan, I made Turbulence and all the midi sections of Room Code.\nI like ENA and I draw occasionally you should follow me @__Keegan_",		'https://twitter.com/__Keegan_'],
+        ['fluffyhairs',				'fluffyhair',			"subscribe to fluffyhairs",	'https://twitter.com/fluffyhairslol'],
+        ['Nii-san', 'niisan', 'Musician. Had lots of fun working on this mod, thanks to everyone for playing V4! (sub to my youtube, @niisanmusic, i uploaded the songs there)', 'https://twitter.com/NiisanHP'],
+        ['JADS', 'jads', '"if u tired, just sleep." - Gandhi', 'https://twitter.com/Aw3somejds'],
+        
+        ['loggo',			'lojo',			'halloween',				'https://twitter.com/loggoman512'],   
+        ['mayo',				'mayo',		"Hi I'm Mayokiddo! I'm an artist for the mod and I made a bunch of the playable mini impostor skins, and i also made a few sprites\nshout out to everyone currently in silly squad",	'https://twitter.com/Mayokiddo_'],
+        ['Mash\nPro\nTato',     'mashywashy',   'im so sorry for making among us kills 2 years ago',    'https://twitter.com/MashProTato'],
+        ['Julien',     'julien',   'hi i made the parasite form isnt he so awesome',    'https://twitter.com/itjulienn'],
+        ['neato',				'neato',		'if she yo girl why my leitmotif in her theme',	'https://neatong.newgrounds.com/'],
+        ['orbyy',			'orb',			"Im really happy i got to work on this, i was brought on v3 to do pixel art for tomongus and i'm grateful for being given the opportunity. I hope yall love the new pixel art for tomongus week and i apologize for v3's defeat chart.",    'https://twitter.com/OrbyyNew'],   
+        ['squidboy',	'squid',	'hi im squid you may or may not know me for moderating the impostorm discord server\nive also been working for impostor ever since its beginning so thats cool i guess\nlove u zial <3<3<3',		'https://twitter.com/SquidBoy84'],
+        ['pip',			'pip',			'"            "',				'https://twitter.com/DojimaDog'],   
+        ['crocidy',				'croc',		"can you follow me i made fourth wall",	'https://twitter.com/croc2RTX'],
+        ['Lay\nLasagna',				'lay',		"#1 giggleboy and omfg fan\nhello mommy!!!!!!! :)))) i'm a big boy now!!!!",	'https://twitter.com/LayLasagna7'],
+        ['coti',			'coti',			'hi !! im coti-- i didnt really do much except for a drawing or visual tweaking here and there, but im happy i got to work on the mod anyway !! remember to always be silly',	'https://twitter.com/espeoncutie'],   
+        ['elikapika',			'pika',			'bunny emoji',	'https://twitter.com/elikapika'],   
+        ['salterino',		'salterino',	    'hi i did 1 thing for mod hi',	'https://twitter.com/Salterin0'],		
+        ['Farfoxx',			'hi',			"hi!!! i did a few little things for the mod - although i wish i could've helped more, seeing the mod's development progress was incredible! everyone on the team is so talented, i'm grateful i got to see it reach completion",	'https://twitter.com/iron222_2'],   
+        ['Steve',              'thales',    "I'm very happy to help draw a small part of this mod, it's a big achievement for me, I hope you all have a good time in the game!", 'https://twitter.com/Steve06421194'],
+        ['MSG',              'msg',    "gaming", 'https://twitter.com/MSGTheEpic'],
 
-	var nameText:FlxText;
-	var descText:FlxText;
-	var curDesc:Int = 0;
+        ['Gonk',				'gonk',		"Working on Impostor has been a ton of fun honestly, was really cool to be a part of something special like this. I'm also the reason crewicide is in, dumb joke song based off a dream I had and its probably my favourite thing I worked on in the mod, It Funny, makes Me Lol",	'https://www.youtube.com/watch?v=rZP7kWOMPzI'],
+        ['gibz',				'gibz',		"shit idk , charted a few songs",	'https://twitter.com/9766Gibz'],
+        ['thales',				'thalesrealthistime',		"I guess I'm the closest to a Jorsawsee director in the mod? Created / Voiced Warchief and charted a lot, making sure everything was playable. Working with everyone was a pleasure, but never tell me to chart two 4+ minute songs again.",	'https://twitter.com/MoonlessShift'],
+        ['kal',				'kal',		"i love snas\n-art by @Butholeeo",	'https://twitter.com/Kal_050'],
+        
+        ['monotone\ndoc',				'monotone',		"hi i'm the guy who voiced the shapeshifter, very grateful to have had the opportunity and i hope y'all thought it was cool :)",	'https://twitter.com/MonotoneDoc'],
+        ['amongus\nfan',				'cooper',		"i did nothing for this mod but let them use red mungus but i get a quote for having cancer",	'https://twitter.com/amongusfan24'],
+    ];
 
 	var wallback:FlxSprite;
 	var frame:FlxSprite;
@@ -252,19 +102,20 @@ class AmongCreditsState extends MusicBeatState
 		dumnote.scale.set(1.25, 1.25);
 		add(dumnote);
 
-		lamp = new FlxSprite(0, -50).loadGraphic(Paths.image('credits/lamp', 'impostor'));
-		lamp.antialiasing = true;
-		lamp.x = (FlxG.width / 2) - (lamp.width / 2);
-		add(lamp);
-
-		lamplight = new FlxSprite(0, 50).loadGraphic(Paths.image('credits/lamplight', 'impostor'));
+        
+        lamplight = new FlxSprite(0, 100).loadGraphic(Paths.image('credits/lamplight', 'impostor'));
 		lamplight.antialiasing = true;
 		lamplight.x = (FlxG.width / 2) - (lamplight.width / 2);
 		lamplight.blend = ADD;
 		lamplight.alpha = 0.2;
 		add(lamplight);
 
-		tree1 = new FlxSprite(-400, 0).loadGraphic(Paths.image('credits/tree', 'impostor'));
+        lamp = new FlxSprite(0, -50).loadGraphic(Paths.image('credits/lamp', 'impostor'));
+		lamp.antialiasing = true;
+        lamp.x = (FlxG.width / 2)  - (lamp.width / 2);
+		add(lamp);
+
+        tree1 = new FlxSprite(-400, 0).loadGraphic(Paths.image('credits/tree', 'impostor'));
 		tree1.antialiasing = true;
 		add(tree1);
 
@@ -272,7 +123,7 @@ class AmongCreditsState extends MusicBeatState
 		tree2.antialiasing = true;
 		add(tree2);
 
-		mole = new FlxSprite(601, 620).loadGraphic(Paths.image('credits/mole', 'impostor'));
+        mole = new FlxSprite(621, 620).loadGraphic(Paths.image('credits/mole', 'impostor'));
 		mole.antialiasing = false;
 		add(mole);
 
