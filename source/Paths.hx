@@ -29,6 +29,7 @@ class Paths
 	inline public static var VIDEO_EXT = "mp4";
 
 	private static var currentTrackedAssets:Map<String, Map<String, Dynamic>> = [
+		"textures" => [],
 		"graphics" => [],
 		"sounds" => []
 	];
@@ -43,19 +44,24 @@ class Paths
 	{
 		for (key in currentTrackedAssets["graphics"].keys())
 		{
-			if (!localTrackedAssets["graphics"].contains(key) && key != null)
+			@:privateAccess
+			if (!localTrackedAssets["graphics"].contains(key) && currentTrackedAssets["graphics"].exists(key))
 			{
-				var obj = currentTrackedAssets["graphics"].get(key);
-				@:privateAccess
-				if (obj != null)
+				if (!localTrackedAssets["textures"].contains(key) && currentTrackedAssets["textures"].exists(key))
 				{
-					OpenFlAssets.cache.removeBitmapData(key);
-					OpenFlAssets.cache.clearBitmapData(key);
-					OpenFlAssets.cache.clear(key);
-					FlxG.bitmap._cache.remove(key);
-					obj.destroy();
-					currentTrackedAssets["graphics"].remove(key);
+					var texture:Null<Texture> = currentTrackedAssets["textures"].get(key);
+					texture.dispose();
+					texture = null;
+					currentTrackedAssets["textures"].remove(key);
 				}
+
+				var graphic:Null<FlxGraphic> = currentTrackedAssets["graphics"].get(key);
+				OpenFlAssets.cache.removeBitmapData(key);
+				OpenFlAssets.cache.clearBitmapData(key);
+				OpenFlAssets.cache.clear(key);
+				FlxG.bitmap._cache.remove(key);
+				graphic.destroy();
+				currentTrackedAssets["graphics"].remove(key);
 			}
 		}
 
@@ -80,17 +86,17 @@ class Paths
 
 	public static function clearStoredMemory():Void
 	{
-		@:privateAccess
 		for (key in FlxG.bitmap._cache.keys())
 		{
-			var obj = FlxG.bitmap._cache.get(key);
-			if (obj != null && !currentTrackedAssets["graphics"].exists(key))
+			@:privateAccess
+			if (localTrackedAssets["graphics"].contains(key) && !currentTrackedAssets["graphics"].exists(key))
 			{
+				var graphic:Null<FlxGraphic> = FlxG.bitmap._cache.get(key);
 				OpenFlAssets.cache.removeBitmapData(key);
 				OpenFlAssets.cache.clearBitmapData(key);
 				OpenFlAssets.cache.clear(key);
 				FlxG.bitmap._cache.remove(key);
-				obj.destroy();
+				graphic.destroy();
 				localTrackedAssets["graphics"].remove(key);
 			}
 		}
@@ -201,38 +207,38 @@ class Paths
 		return 'assets/videos/$key.$VIDEO_EXT';
 	}
 
-	static public function sound(key:String, ?library:String):Dynamic
+	static public function sound(key:String, ?library:String):Sound
 	{
 		var sound:Sound = returnSound('sounds', key, library);
 		return sound;
 	}
 
-	inline static public function soundRandom(key:String, min:Int, max:Int, ?library:String)
+	inline static public function soundRandom(key:String, min:Int, max:Int, ?library:String):Sound
 	{
 		return sound(key + FlxG.random.int(min, max), library);
 	}
 
-	inline static public function music(key:String, ?library:String):Dynamic
+	inline static public function music(key:String, ?library:String):Sound
 	{
 		var file:Sound = returnSound('music', key, library);
 		return file;
 	}
 
-	inline static public function voices(song:String):Any
+	inline static public function voices(song:String):Sound
 	{
 		var songKey:String = '${song.toLowerCase().replace(' ', '-')}/Voices';
 		var voices = returnSound('songs', songKey);
 		return voices;
 	}
 
-	inline static public function inst(song:String):Any
+	inline static public function inst(song:String):Sound
 	{
 		var songKey:String = '${song.toLowerCase().replace(' ', '-')}/Inst';
 		var inst = returnSound('songs', songKey);
 		return inst;
 	}
 
-	inline static public function image(key:String, ?library:String):Dynamic
+	inline static public function image(key:String, ?library:String):FlxGraphic
 	{
 		// streamlined the assets process more
 		var returnAsset:FlxGraphic = returnGraphic(key, library);
@@ -326,7 +332,7 @@ class Paths
 		return path.toLowerCase().replace(' ', '-');
 	}
 
-	public static function returnGraphic(key:String, ?library:String, ?textureCompression:Bool = false)
+	public static function returnGraphic(key:String, ?library:String, ?addToGPU:Bool = false)
 	{
 		#if MODS_ALLOWED
 		var path:String = modsImages(key);
@@ -334,13 +340,31 @@ class Paths
 		{
 			if (!currentTrackedAssets["graphics"].exists(path))
 			{
-				var newGraphic:FlxGraphic = FlxGraphic.fromBitmapData(BitmapData.fromFile(path), false, path);
-				newGraphic.persist = true;
-				currentTrackedAssets["graphics"].set(path, newGraphic);
-			}
+				var graphic:FlxGraphic;
+				var bitmapData:BitmapData = BitmapData.fromFile(path);
 
-			localTrackedAssets["graphics"].push(path);
-			return currentTrackedAssets["graphics"].get(path);
+				if (addToGPU)
+				{
+					var texture:Texture = FlxG.stage.context3D.createTexture(bitmapData.width, bitmapData.height, BGRA, true);
+					texture.uploadFromBitmapData(bitmapData);
+
+					if (!currentTrackedAssets["textures"].exists(path))
+						currentTrackedAssets["textures"].set(path, texture);
+
+					localTrackedAssets["textures"].push(path);
+
+					bitmapData.disposeImage();
+					bitmapData.dispose();
+					bitmapData = null;
+
+					graphic = FlxGraphic.fromBitmapData(BitmapData.fromTexture(texture), false, path);
+				}
+				else
+					graphic = FlxGraphic.fromBitmapData(bitmapData, false, path);
+
+				graphic.persist = true;
+				currentTrackedAssets["graphics"].set(path, graphic);
+			}
 		}
 		#end
 
@@ -349,7 +373,24 @@ class Paths
 		{
 			if (!currentTrackedAssets["graphics"].exists(path))
 			{
-				var graphic:FlxGraphic = FlxGraphic.fromBitmapData(OpenFlAssets.getBitmapData(path), false, path);
+				var graphic:FlxGraphic;
+				var bitmapData:BitmapData = OpenFlAssets.getBitmapData(path);
+
+				if (addToGPU)
+				{
+					var texture:Texture = FlxG.stage.context3D.createTexture(bitmapData.width, bitmapData.height, BGRA, true);
+					texture.uploadFromBitmapData(bitmapData);
+					currentTrackedAssets["textures"].set(path, texture);
+
+					bitmapData.disposeImage();
+					bitmapData.dispose();
+					bitmapData = null;
+
+					graphic = FlxGraphic.fromBitmapData(BitmapData.fromTexture(texture), false, path);
+				}
+				else
+					graphic = FlxGraphic.fromBitmapData(bitmapData, false, path);
+
 				graphic.persist = true;
 				currentTrackedAssets["graphics"].set(path, graphic);
 			}
@@ -452,10 +493,9 @@ class Paths
 		{
 			var fileToCheck:String = mods(currentModDirectory + '/' + key);
 			if (FileSystem.exists(fileToCheck))
-			{
 				return fileToCheck;
-			}
 		}
+
 		return 'mods/' + key;
 	}
 
