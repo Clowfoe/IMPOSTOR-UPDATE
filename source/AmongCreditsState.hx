@@ -205,8 +205,8 @@ class AmongCreditsState extends MusicBeatState
 		[
 			'Mobile\ncrew',
 			'sussies',
-			"We made android port\nArt by Cryptofuss",
-			'https://twitter.com/helpme_thebigt'
+			"We made the android port, Art by Cryptofuss",
+			'https://www.youtube.com/@m.a.jigsaw7297'
 		],
 	];
 
