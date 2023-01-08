@@ -74,7 +74,6 @@ class AmongDeathSubstate extends MusicBeatSubstate
 
 	override public function update(elapsed:Float)
 	{
-		
 		for (touch in FlxG.touches.list) {
 			dummySprites.forEach(function(spr:FlxSprite) {
 				if (hasEnteredMissSelection) {
@@ -124,8 +123,8 @@ class AmongDeathSubstate extends MusicBeatSubstate
 						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 					}
 				}
-			}
-		});
+			});
+		}
 	}
 
 	function changeMissAmount(change:Int)
