@@ -812,6 +812,10 @@ class AmongStoryMenuState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 					selectingDifficulty = true;
 					selectedWeek = true;
+
+					#if mobile
+					removeVirtualPad();
+					#end
 				}
 				else if (controls.RESET && curWeek != 0)
 				{
