@@ -7188,44 +7188,9 @@ class PlayState extends MusicBeatState
 				KillNotes();
 				FlxG.sound.music.onComplete();
 			}
-			if (FlxG.keys.justPressed.TWO)
-			{ // Go 10 seconds into the future :O
-				FlxG.sound.music.pause();
-				vocals.pause();
-				Conductor.songPosition += 10000;
-				notes.forEachAlive(function(daNote:Note)
-				{
-					if (daNote.strumTime + 800 < Conductor.songPosition)
-					{
-						daNote.active = false;
-						daNote.visible = false;
-
-						daNote.kill();
-						notes.remove(daNote, true);
-						daNote.destroy();
-					}
-				});
-				for (i in 0...unspawnNotes.length)
-				{
-					var daNote:Note = unspawnNotes[0];
-					if (daNote.strumTime + 800 >= Conductor.songPosition)
-					{
-						break;
-					}
-
-					daNote.active = false;
-					daNote.visible = false;
-
-					daNote.kill();
-					unspawnNotes.splice(unspawnNotes.indexOf(daNote), 1);
-					daNote.destroy();
-				}
-
-				FlxG.sound.music.time = Conductor.songPosition;
-				FlxG.sound.music.play();
-
-				vocals.time = Conductor.songPosition;
-				vocals.play();
+			if(FlxG.keys.justPressed.TWO) { //Go 10 seconds into the future :O
+				setSongTime(Conductor.songPosition + 10000);
+				clearNotesBefore(Conductor.songPosition);
 			}
 			if (FlxG.keys.justPressed.THREE)
 			{ 
@@ -7243,6 +7208,60 @@ class PlayState extends MusicBeatState
 	}
 
 	var isDead:Bool = false;
+
+	public function clearNotesBefore(time:Float)
+		{
+			var i:Int = unspawnNotes.length - 1;
+			while (i >= 0) {
+				var daNote:Note = unspawnNotes[i];
+				if(daNote.strumTime - 350 < time)
+				{
+					daNote.active = false;
+					daNote.visible = false;
+					daNote.ignoreNote = true;
+	
+					daNote.kill();
+					unspawnNotes.remove(daNote);
+					daNote.destroy();
+				}
+				--i;
+			}
+	
+			i = notes.length - 1;
+			while (i >= 0) {
+				var daNote:Note = notes.members[i];
+				if(daNote.strumTime - 350 < time)
+				{
+					daNote.active = false;
+					daNote.visible = false;
+					daNote.ignoreNote = true;
+	
+					daNote.kill();
+					notes.remove(daNote, true);
+					daNote.destroy();
+				}
+				--i;
+			}
+		}
+
+	public function setSongTime(time:Float)
+		{
+			if(time < 0) time = 0;
+	
+			FlxG.sound.music.pause();
+			vocals.pause();
+	
+			FlxG.sound.music.time = time;
+			FlxG.sound.music.play();
+	
+			if (Conductor.songPosition <= vocals.length)
+			{
+				vocals.time = time;
+			}
+			vocals.play();
+			Conductor.songPosition = time;
+			songTime = time;
+		}
 
 	function doDeathCheck()
 	{
