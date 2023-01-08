@@ -123,7 +123,12 @@ class AmongDeathSubstate extends MusicBeatSubstate
 						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 					}
 				}
+<<<<<<< Updated upstream
 			});
+=======
+			}
+		);
+>>>>>>> Stashed changes
 		}
 	}
 
