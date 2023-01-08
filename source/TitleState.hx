@@ -126,6 +126,7 @@ class TitleState extends MusicBeatState
 			{	
 				if (initialized)
 				{
+					canPressEnter = true;
 					startIntro();
 				}
 				else

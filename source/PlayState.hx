@@ -623,6 +623,9 @@ class PlayState extends MusicBeatState
 
 	var pet:Pet;
 
+	//identity crisis
+	var doorTransition:FlxSprite;
+
 	override public function create()
 	{
 		super.create();
@@ -4230,6 +4233,17 @@ class PlayState extends MusicBeatState
 			add(timeBar);
 			add(timeTxt);
 			}
+		
+		if (SONG.song.toLowerCase() == 'identity crisis'){
+			doorTransition = new FlxSprite();
+			doorTransition.frames = Paths.getSparrowAtlas('skeld/doors','impostor');
+			doorTransition.animation.addByPrefix('open','Door Openin Animation Shrunk instance 1',24,false);
+			doorTransition.screenCenter();
+			doorTransition.scale.set(2.5,2.5);
+			doorTransition.updateHitbox();
+			add(doorTransition);
+			doorTransition.cameras = [camOther];
+		}
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
@@ -5237,6 +5251,11 @@ class PlayState extends MusicBeatState
 		#end
 		setOnLuas('songLength', songLength);
 		callOnLuas('onSongStart', []);
+
+		
+		if (SONG.song.toLowerCase() == 'identity crisis'){
+			doorTransition.animation.play('open',true,false,300);
+		}
 
 		new FlxTimer().start(0.3, function(tmr:FlxTimer)
 		{
