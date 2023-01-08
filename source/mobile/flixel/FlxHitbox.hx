@@ -77,7 +77,7 @@ class FlxHitbox extends FlxSpriteGroup
 			if (tween != null)
 				tween.cancel();
 
-			tween = FlxTween.tween(hint, {alpha: 0.3}, 0.003, {
+			tween = FlxTween.tween(hint, {alpha: 0.2}, 0.002, {
 				ease: FlxEase.circInOut,
 				onComplete: function(twn:FlxTween)
 				{
@@ -90,7 +90,7 @@ class FlxHitbox extends FlxSpriteGroup
 			if (tween != null)
 				tween.cancel();
 
-			tween = FlxTween.tween(hint, {alpha: 0.00001}, 0.03, {
+			tween = FlxTween.tween(hint, {alpha: 0.00001}, 0.02, {
 				ease: FlxEase.circInOut,
 				onComplete: function(twn:FlxTween)
 				{
