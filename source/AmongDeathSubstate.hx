@@ -66,11 +66,6 @@ class AmongDeathSubstate extends MusicBeatSubstate
 
 		changeMissAmount(0);
 		openMissLimit();
-
-		#if mobile
-		addVirtualPad(LEFT_RIGHT, A);
-		addVirtualPadCamera();
-		#end
 	}
 
 	public var canControl:Bool = false;
@@ -79,77 +74,63 @@ class AmongDeathSubstate extends MusicBeatSubstate
 
 	override public function update(elapsed:Float)
 	{
-		var rightP = controls.UI_RIGHT_P;
-		var leftP = controls.UI_LEFT_P;
-		var accepted = controls.ACCEPT;
+		
+		for (touch in FlxG.touches.list) {
+			dummySprites.forEach(function(spr:FlxSprite) {
+				if (hasEnteredMissSelection) {
+					if (touch.overlaps(spr) && PlayState.missLimitCount == spr.ID) {
+						FlxG.sound.play(Paths.sound('amongkill', 'impostor'), 0.9);
+						hasEnteredMissSelection = false;
+						close();
 
-		if (accepted && hasEnteredMissSelection == true)
-		{
-			FlxG.sound.play(Paths.sound('amongkill', 'impostor'), 0.9);
-			hasEnteredMissSelection = false;
-			close();
+						var blackScreen:FlxSprite = new FlxSprite().makeGraphic(1920, 1080, FlxColor.BLACK);
+						add(blackScreen);
 
-			var blackScreen:FlxSprite = new FlxSprite().makeGraphic(1920, 1080, FlxColor.BLACK);
-			add(blackScreen);
+						missTxt.alpha = 0;
+						missAmountArrow.alpha = 0;
 
-			missTxt.alpha = 0;
-			missAmountArrow.alpha = 0;
+						dummySprites.forEach(function(spr:FlxSprite)
+						{
+							spr.alpha = 0;
+						});
+						var songArray:Array<String> = [];
+						var leWeek:Array<Dynamic> = WeekData.weeksLoaded.get(WeekData.weeksList[AmongStoryMenuState.curWeek]).songs;
+						for (i in 0...leWeek.length) songArray.push(leWeek[i][0]);
 
-			dummySprites.forEach(function(spr:FlxSprite)
-			{
-				spr.alpha = 0;
-			});
-			var songArray:Array<String> = [];
-			var leWeek:Array<Dynamic> = WeekData.weeksLoaded.get(WeekData.weeksList[AmongStoryMenuState.curWeek]).songs;
-			for (i in 0...leWeek.length)
-			{
-				songArray.push(leWeek[i][0]);
-			}
+						// Nevermind that's stupid lmao
+						PlayState.storyPlaylist = songArray;
+						PlayState.isStoryMode = true;
 
-			// Nevermind that's stupid lmao
-			PlayState.storyPlaylist = songArray;
-			PlayState.isStoryMode = true;
+						var diffic = CoolUtil.difficultyStuff[AmongStoryMenuState.curDifficulty][1];
+						if (diffic == null) diffic = '';
 
-			var diffic = CoolUtil.difficultyStuff[AmongStoryMenuState.curDifficulty][1];
-			if (diffic == null)
-				diffic = '';
+						PlayState.storyDifficulty = AmongStoryMenuState.curDifficulty;
 
-			PlayState.storyDifficulty = AmongStoryMenuState.curDifficulty;
+						PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
+						PlayState.storyWeek = AmongStoryMenuState.curWeek;
+						PlayState.campaignScore = 0;
+						PlayState.campaignMisses = 0;
 
-			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
-			PlayState.storyWeek = AmongStoryMenuState.curWeek;
-			PlayState.campaignScore = 0;
-			PlayState.campaignMisses = 0;
-
-			FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
-				ease: FlxEase.circOut,
-				onComplete: function(tween:FlxTween)
-				{
-					trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
-					LoadingState.loadAndSwitchState(new PlayState());
+						FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
+							ease: FlxEase.circOut,
+							onComplete: function(tween:FlxTween)
+							{
+								trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+								LoadingState.loadAndSwitchState(new PlayState());
+							}
+						});
+					} else if (touch.overlaps(spr)) {
+						changeMissAmount(spr.ID);
+						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
+					}
 				}
-			});
-		}
-		if (rightP)
-		{
-			if (hasEnteredMissSelection)
-				changeMissAmount(-1);
-
-			FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
-		}
-
-		if (leftP)
-		{
-			if (hasEnteredMissSelection)
-				changeMissAmount(1);
-
-			FlxG.sound.play(Paths.sound('panelDisappear', 'impostor'), 0.5);
+			}
 		}
 	}
 
 	function changeMissAmount(change:Int)
 	{
-		PlayState.missLimitCount += change;
+		PlayState.missLimitCount = change;
 		if (PlayState.missLimitCount > maximumMissLimit)
 			PlayState.missLimitCount = 0;
 		if (PlayState.missLimitCount < 0)
