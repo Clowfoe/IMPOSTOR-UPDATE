@@ -1,4 +1,4 @@
-Onpackage;
+package;
 
 import flixel.FlxBasic;
 import flixel.FlxG;
