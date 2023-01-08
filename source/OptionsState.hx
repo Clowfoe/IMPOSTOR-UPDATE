@@ -912,7 +912,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Hide Song Length',
 		'Flashing Lights',
 		'Camera Zooms',
-		'FPS Counter'
+		'Overlay Display'
 	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -1075,7 +1075,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 			{
 				switch (options[curSelected])
 				{
-					case 'FPS Counter':
+					case 'Overlay Display':
 						ClientPrefs.showFPS = !ClientPrefs.showFPS;
 						if (Main.fpsCounter != null)
 							Main.fpsCounter.visible = ClientPrefs.showFPS;
@@ -1203,8 +1203,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "Pretty self explanatory, isn't it?\nDefault value is 60.";
 			case 'Note Delay':
 				daText = "Changes how late a note is spawned.\nUseful for preventing audio lag from wireless earphones.";
-			case 'FPS Counter':
-				daText = "If unchecked, hides FPS Counter.";
+			case 'Overlay Display':
+				daText = "If unchecked, hides Overlay Display.";
 			case 'Low Quality':
 				daText = "If checked, disables some background details,\ndecreases loading times and improves performance.";
 			case 'GL Render':
@@ -1289,7 +1289,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 				var daValue:Bool = false;
 				switch (options[checkboxNumber[i]])
 				{
-					case 'FPS Counter':
+					case 'Overlay Display':
 						daValue = ClientPrefs.showFPS;
 					case 'Low Quality':
 						daValue = ClientPrefs.lowQuality;
