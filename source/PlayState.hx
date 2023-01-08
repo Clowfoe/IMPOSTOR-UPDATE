@@ -4238,7 +4238,7 @@ class PlayState extends MusicBeatState
 			doorTransition = new FlxSprite();
 			doorTransition.frames = Paths.getSparrowAtlas('skeld/doors','impostor');
 			doorTransition.animation.addByPrefix('open','Door Openin Animation Shrunk instance 1',24,false);
-			doorTransition.scale.set(2,2);
+			doorTransition.scale.set(2.5,2.5);
 			doorTransition.updateHitbox();
 			doorTransition.screenCenter();
 			add(doorTransition);
