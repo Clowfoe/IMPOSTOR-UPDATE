@@ -110,11 +110,6 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 		}
 		else
 			openMissLimit();
-
-		#if mobile
-		addVirtualPad(LEFT_RIGHT, A);
-		addVirtualPadCamera();
-		#end
 	}
 
 	public var canControl:Bool = false;
@@ -150,9 +145,6 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 						ease: FlxEase.circOut,
 						onComplete: function(tween:FlxTween)
 						{
-							#if mobile
-							removeVirtualPad();
-							#end
 							trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
 							LoadingState.loadAndSwitchState(new PlayState());
 						}

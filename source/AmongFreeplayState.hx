@@ -465,6 +465,14 @@ class AmongFreeplayState extends MusicBeatState
 						#if mobile
 						removeVirtualPad();
 						#end
+
+						#if mobile
+						if (AmongDifficultySubstate.canControl)
+						{
+							addVirtualPad(LEFT_RIGHT, A);
+						}
+                        #end
+
 						openSubState(new AmongDifficultySubstate(curWeek, listOfButtons[curSelected].songName));
 						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 						ClientPrefs.beans = localBeans;
