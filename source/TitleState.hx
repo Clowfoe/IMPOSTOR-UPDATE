@@ -124,7 +124,7 @@ class TitleState extends MusicBeatState
 			#end
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{	
-				if (initialized)
+				if (initialized && ClientPrefs.finaleState != NOT_PLAYED)
 				{
 					canPressEnter = true;
 					startIntro();
