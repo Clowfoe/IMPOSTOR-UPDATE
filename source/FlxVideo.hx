@@ -1,4 +1,4 @@
-package;
+Onpackage;
 
 import flixel.FlxBasic;
 import flixel.FlxG;
@@ -13,6 +13,7 @@ class FlxVideo extends FlxBasic
 
 		#if VIDEOS_ALLOWED
 		var video:VideoHandler = new VideoHandler();
+		video.canSkip = false;
 		video.finishCallback = function()
 		{
 			if (finishCallback != null)
