@@ -125,7 +125,7 @@ class AmongDeathSubstate extends MusicBeatSubstate
 					}
 				}
 			}
-		}
+		});
 	}
 
 	function changeMissAmount(change:Int)

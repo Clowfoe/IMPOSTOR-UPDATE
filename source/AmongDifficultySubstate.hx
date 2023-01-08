@@ -121,35 +121,36 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 		if (canControl && !isClosing)
 		{
 			for (touch in FlxG.touches.list) {
-			dummySprites.forEach(function(spr:FlxSprite) {
-				if (touch.overlaps(spr) && PlayState.missLimitCount == spr.ID) {
-					if (!songsWithMissLimits.contains(selectedSong.toLowerCase()) || hasEnteredMissSelection)
-					{
-						var songLowercase:String = Paths.formatToSongPath(selectedSong.toLowerCase());
-						trace(selectedSong);
+				dummySprites.forEach(function(spr:FlxSprite) {
+					if (touch.overlaps(spr) && PlayState.missLimitCount == spr.ID) {
+						if (!songsWithMissLimits.contains(selectedSong.toLowerCase()) || hasEnteredMissSelection)
+						{
+							var songLowercase:String = Paths.formatToSongPath(selectedSong.toLowerCase());
+							trace(selectedSong);
 
-						PlayState.isStoryMode = false;
-						PlayState.storyDifficulty = 2;
-						PlayState.storyWeek = curWeek;
+							PlayState.isStoryMode = false;
+							PlayState.storyDifficulty = 2;
+							PlayState.storyWeek = curWeek;
 
-						var diffic:String = '-hard';
+							var diffic:String = '-hard';
 
-						var poop:String = Highscore.formatSong(songLowercase, 1);
-						PlayState.SONG = Song.loadFromJson(poop + diffic, songLowercase);
+							var poop:String = Highscore.formatSong(songLowercase, 1);
+							PlayState.SONG = Song.loadFromJson(poop + diffic, songLowercase);
 
-						FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
-							ease: FlxEase.circOut,
-							onComplete: function(tween:FlxTween)
-							{
-								trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
-								LoadingState.loadAndSwitchState(new PlayState());
-							}
-						});
+							FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
+								ease: FlxEase.circOut,
+								onComplete: function(tween:FlxTween)
+								{
+									trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+									LoadingState.loadAndSwitchState(new PlayState());
+								}
+							});
+						}
+					} else if (touch.overlaps(spr)) {
+						changeMissAmount(5 - spr.ID);
+						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 					}
-				} else if (touch.overlaps(spr)) {
-					changeMissAmount(5 - spr.ID);
-					FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
-				}
+				});
 			}
 		}
 		else
