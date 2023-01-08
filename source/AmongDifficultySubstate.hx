@@ -120,50 +120,36 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 	{
 		if (canControl && !isClosing)
 		{
-			var rightP = controls.UI_RIGHT_P;
-			var leftP = controls.UI_LEFT_P;
-			var accepted = controls.ACCEPT;
-			//
+			for (touch in FlxG.touches.list) {
+			dummySprites.forEach(function(spr:FlxSprite) {
+				if (touch.overlaps(spr) && PlayState.missLimitCount == spr.ID) {
+					if (!songsWithMissLimits.contains(selectedSong.toLowerCase()) || hasEnteredMissSelection)
+					{
+						var songLowercase:String = Paths.formatToSongPath(selectedSong.toLowerCase());
+						trace(selectedSong);
 
-			if (accepted)
-			{
-				if (!songsWithMissLimits.contains(selectedSong.toLowerCase()) || hasEnteredMissSelection)
-				{
-					var songLowercase:String = Paths.formatToSongPath(selectedSong.toLowerCase());
-					trace(selectedSong);
+						PlayState.isStoryMode = false;
+						PlayState.storyDifficulty = 2;
+						PlayState.storyWeek = curWeek;
 
-					PlayState.isStoryMode = false;
-					PlayState.storyDifficulty = 2;
-					PlayState.storyWeek = curWeek;
+						var diffic:String = '-hard';
 
-					var diffic:String = '-hard';
+						var poop:String = Highscore.formatSong(songLowercase, 1);
+						PlayState.SONG = Song.loadFromJson(poop + diffic, songLowercase);
 
-					var poop:String = Highscore.formatSong(songLowercase, 1);
-					PlayState.SONG = Song.loadFromJson(poop + diffic, songLowercase);
-
-					FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
-						ease: FlxEase.circOut,
-						onComplete: function(tween:FlxTween)
-						{
-							trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
-							LoadingState.loadAndSwitchState(new PlayState());
-						}
-					});
+						FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
+							ease: FlxEase.circOut,
+							onComplete: function(tween:FlxTween)
+							{
+								trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+								LoadingState.loadAndSwitchState(new PlayState());
+							}
+						});
+					}
+				} else if (touch.overlaps(spr)) {
+					changeMissAmount(5 - spr.ID);
+					FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 				}
-			}
-
-			if (rightP)
-			{
-				if (hasEnteredMissSelection)
-					changeMissAmount(-1);
-				FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
-			}
-			//
-			if (leftP)
-			{
-				if (hasEnteredMissSelection)
-					changeMissAmount(1);
-				FlxG.sound.play(Paths.sound('panelDisappear', 'impostor'), 0.5);
 			}
 		}
 		else
@@ -172,7 +158,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 
 	function changeMissAmount(change:Int)
 	{
-		PlayState.missLimitCount += change;
+		PlayState.missLimitCount = change;
 		if (PlayState.missLimitCount > maximumMissLimit)
 			PlayState.missLimitCount = 0;
 		if (PlayState.missLimitCount < 0)
