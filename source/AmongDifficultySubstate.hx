@@ -147,7 +147,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 							});
 						}
 					} else if (touch.overlaps(spr)) {
-						changeMissAmount(spr.ID);
+						changeMissAmount(spr.ID + 1);
 						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 					}
 				});
