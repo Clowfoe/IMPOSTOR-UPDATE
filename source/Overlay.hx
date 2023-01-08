@@ -18,7 +18,7 @@ enum GLInfo
 class Overlay extends TextField
 {
 	@:noCompletion private var currentTime:Float;
-	@:noCompletion private var currentMemoryPeak:Float;
+	@:noCompletion private var currentMemoryPeak:UInt;
 	@:noCompletion private var times:Array<Float>;
 
 	public function new(x:Float = 10, y:Float = 10, size_x:Int = 1, size_y:Int = 1, size:Int = 15)
@@ -70,7 +70,7 @@ class Overlay extends TextField
 		else
 			textColor = 0xFFFFFFFF;
 
-		var currentMemory:Float = System.totalMemory;
+		var currentMemory:UInt = System.totalMemory;
 		if (currentMemory > currentMemoryPeak)
 			currentMemoryPeak = currentMemory;
 
@@ -78,7 +78,7 @@ class Overlay extends TextField
 		{
 			var stats:Array<String> = [];
 			stats.push('FPS: ${currentFrames}');
-			stats.push('Memory: ${getMemoryInterval(currentMemory)} / ${getMemoryInterval(currentMemoryPeak)}');
+			stats.push('Memory: ${getMemorySize(currentMemory)} / ${getMemorySize(currentMemoryPeak)}');
 			stats.push('GL Renderer: ${getGLInfo(RENDERER)}');
 			stats.push('GL Shading Version: ${getGLInfo(SHADING_LANGUAGE_VERSION)}');
 			#if android
@@ -93,23 +93,27 @@ class Overlay extends TextField
 		}
 	}
 
-	private function getMemoryInterval(size:Float):String
+	public static function getMemorySize(memory:UInt):String
 	{
-		var data:Int = 0;
+		var size:Float = memory;
+		var label:Int = 0;
+		var labels:Array<String> = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
 
-		final intervalArray:Array<String> = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-		while (size >= 1000 && data < intervalArray.length - 1)
+		while(size >= 1000 && (label < labels.length - 1))
 		{
-			data++;
-			size = size / 1000;
+			label++;
+			rSize /= 1000;
 		}
 
-		size = Math.round(size * 100) / 100;
+		return '${Std.int(size) + "." + addZeros(Std.string(Std.int((size % 1) * 100)), 2)}${labels[label]}';
+	}
 
-		if (data <= 2)
-			size = Math.round(size);
+	public static inline function addZeros(str:String, num:Int)
+	{
+		while(str.length < num)
+			str = '0${str}';
 
-		return '$size ${intervalArray[data]}';
+		return str;
 	}
 
 	private function getGLInfo(info:GLInfo):String
