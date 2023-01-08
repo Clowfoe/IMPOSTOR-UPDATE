@@ -813,7 +813,7 @@ class AmongStoryMenuState extends MusicBeatState
 					selectingDifficulty = true;
 					selectedWeek = true;
 				}
-				else if (controls.ACCEPT && curWeek != 0)
+				else if (controls.ACCEPT && curWeek == 3)
 				{
 					openDiff();
 					FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
