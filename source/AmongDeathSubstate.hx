@@ -41,7 +41,7 @@ class AmongDeathSubstate extends MusicBeatSubstate
 			var dummypostor:FlxSprite = new FlxSprite((i * 150) + 200, 450).loadGraphic(Paths.image('freeplay/dummypostor${i + 1}', 'impostor'));
 			dummypostor.alpha = 0;
 			dummypostor.ID = i;
-			dummypostor.updateHitbox();
+			//dummypostor.updateHitbox();
 			dummySprites.add(dummypostor);
 			switch (i)
 			{

@@ -60,7 +60,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 			var dummypostor:FlxSprite = new FlxSprite((i * 150) + 200, 450).loadGraphic(Paths.image('freeplay/dummypostor${i + 1}', 'impostor'));
 			dummypostor.alpha = 0;
 			dummypostor.ID = i;
-			dummypostor.updateHitbox();
+			//dummypostor.updateHitbox();
 			dummySprites.add(dummypostor);
 			switch (i)
 			{
@@ -150,6 +150,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 						}
 					} else if (touch.overlaps(spr)) {
 						changeMissAmount(5 - spr.ID);
+						trace(5 - spr.ID);
 						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 					}
 				});
