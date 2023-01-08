@@ -467,10 +467,8 @@ class AmongFreeplayState extends MusicBeatState
 						#end
 
 						#if mobile
-						if (AmongDifficultySubstate.canControl)
-						{
-							addVirtualPad(LEFT_RIGHT, A);
-						}
+						if (listOfButtons[curSelected].songName.toLowerCase() == 'defeat')
+						addVirtualPad(LEFT_RIGHT, A);
                         #end
 
 						openSubState(new AmongDifficultySubstate(curWeek, listOfButtons[curSelected].songName));

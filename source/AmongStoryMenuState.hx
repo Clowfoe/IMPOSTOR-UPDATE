@@ -825,10 +825,7 @@ class AmongStoryMenuState extends MusicBeatState
 					#end
 	
 					#if mobile
-					if (AmongDifficultySubstate.canControl)
-					{
-						addVirtualPad(LEFT_RIGHT, A);
-					}
+					addVirtualPad(LEFT_RIGHT, A);
 					#end
 				}
 				else if (controls.RESET && curWeek != 0)
