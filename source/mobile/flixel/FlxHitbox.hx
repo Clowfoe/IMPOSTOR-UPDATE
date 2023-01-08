@@ -2,8 +2,6 @@ package mobile.flixel;
 
 import flixel.FlxG;
 import flixel.group.FlxSpriteGroup;
-import flixel.tweens.FlxTween;
-import flixel.tweens.FlxEase;
 import openfl.display.BitmapData;
 import openfl.display.Shape;
 import mobile.flixel.FlxButton;
@@ -70,33 +68,15 @@ class FlxHitbox extends FlxSpriteGroup
 		hint.immovable = true;
 		hint.scrollFactor.set();
 		hint.alpha = 0.00001;
-
-		var tween:FlxTween = null;
 		hint.onDown.callback = hint.onOver.callback = function()
 		{
-			if (tween != null)
-				tween.cancel();
-
-			tween = FlxTween.tween(hint, {alpha: 0.2}, 0.002, {
-				ease: FlxEase.circInOut,
-				onComplete: function(twn:FlxTween)
-				{
-					tween = null;
-				}
-			});
+			if (hint.alpha != 0.2)
+				hint.alpha = 0.2;
 		}
 		hint.onUp.callback = hint.onOut.callback = function()
 		{
-			if (tween != null)
-				tween.cancel();
-
-			tween = FlxTween.tween(hint, {alpha: 0.00001}, 0.02, {
-				ease: FlxEase.circInOut,
-				onComplete: function(twn:FlxTween)
-				{
-					tween = null;
-				}
-			});
+			if (hint.alpha != 0.00001)
+				hint.alpha = 0.00001;
 		}
 		#if FLX_DEBUG
 		hint.ignoreDrawDebug = true;
