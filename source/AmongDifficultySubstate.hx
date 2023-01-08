@@ -149,7 +149,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 							});
 						}
 					} else if (touch.overlaps(spr)) {
-						changeMissAmount(6 - spr.ID);
+						changeMissAmount(5 - spr.ID);
 						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 					}
 				});
@@ -169,7 +169,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 
 		dummySprites.forEach(function(spr:FlxSprite)
 		{
-			if ((6 - spr.ID) == PlayState.missLimitCount)
+			if ((5 - spr.ID) == PlayState.missLimitCount)
 			{
 				missAmountArrow.x = spr.x;
 				missTxt.text = '${PlayState.missLimitCount}/5 COMBO BREAKS';
