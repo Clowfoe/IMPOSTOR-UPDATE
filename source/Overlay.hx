@@ -102,7 +102,7 @@ class Overlay extends TextField
 		while(size >= 1000 && (label < labels.length - 1))
 		{
 			label++;
-			rSize /= 1000;
+			size /= 1000;
 		}
 
 		return '${Std.int(size) + "." + addZeros(Std.string(Std.int((size % 1) * 100)), 2)}${labels[label]}';
