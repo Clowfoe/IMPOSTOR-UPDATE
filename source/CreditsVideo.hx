@@ -14,6 +14,7 @@ class CreditsVideo extends FlxState
 
 		#if VIDEOS_ALLOWED
 		var video:VideoHandler = new VideoHandler();
+		video.canSkip = false;
 		video.finishCallback = next;
 		video.playVideo(SUtil.getStorageDirectory() + Paths.video('credits'), false, false);
 		#else
