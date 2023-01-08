@@ -552,7 +552,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['sussus-moogus'],
 					0,
-					true
+					false
 				],
 				[
 					"Sabotage",
@@ -562,7 +562,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['sabotage'],
 					0,
-					true
+					false
 				],
 				[
 					"Meltdown",
@@ -572,7 +572,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['meltdown'],
 					0,
-					true
+					false
 				]
 			],
 
@@ -589,7 +589,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['sussus-toogus'],
 					0,
-					true
+					false
 				],
 				[
 					"Lights Down",
@@ -599,7 +599,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['lights-down'],
 					0,
-					true
+					false
 				],
 				[
 					"Reactor",
@@ -609,7 +609,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['reactor'],
 					0,
-					true
+					false
 				],
 				[
 					"Ejected",
@@ -619,7 +619,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['ejected'],
 					0,
-					true
+					false
 				]
 			],
 
@@ -636,7 +636,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['mando'],
 					0,
-					true
+					false
 				],
 				[
 					"Dlow",
@@ -646,7 +646,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['dlow'],
 					0,
-					true
+					false
 				],
 				[
 					"Oversight",
@@ -656,7 +656,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['oversight'],
 					0,
-					true
+					false
 				],
 				[
 					"Danger",
@@ -666,7 +666,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['danger'],
 					0,
-					true
+					false
 				],
 				[
 					"Double Kill",
@@ -676,7 +676,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['double-kill'],
 					0,
-					true
+					false
 				]
 			],
 
@@ -693,7 +693,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['defeat'],
 					0,
-					true
+					false
 				],
 				[
 					"Finale",
@@ -703,7 +703,7 @@ class AmongFreeplayState extends MusicBeatState
 					SPECIAL,
 					['finale'],
 					0,
-					true
+					false
 				]
 			],
 
@@ -728,7 +728,7 @@ class AmongFreeplayState extends MusicBeatState
 						'pretender'
 					],
 					0,
-					true
+					false
 				]
 			],
 			section: 0
@@ -744,7 +744,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['ashes'],
 					0,
-					true
+					false
 				],
 				[
 					"Magmatic",
@@ -754,7 +754,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['magmatic'],
 					0,
-					true
+					false
 				],
 				[
 					"Boiling Point",
@@ -764,7 +764,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['boiling-point'],
 					0,
-					true
+					false
 				]
 			],
 
@@ -781,7 +781,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['delusion'],
 					0,
-					true
+					false
 				],
 				[
 					"Blackout",
@@ -791,7 +791,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['blackout'],
 					0,
-					true
+					false
 				],
 				[
 					"Neurotic",
@@ -801,7 +801,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['neurotic'],
 					0,
-					true
+					false
 				]
 			],
 
@@ -818,7 +818,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['heartbeat'],
 					0,
-					true
+					false
 				],
 				[
 					"Pinkwave",
@@ -828,7 +828,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['pinkwave'],
 					0,
-					true
+					false
 				],
 				[
 					"Pretender",
@@ -838,7 +838,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['pretender'],
 					0,
-					true
+					false
 				]
 			],
 
@@ -855,7 +855,7 @@ class AmongFreeplayState extends MusicBeatState
 					SPECIAL,
 					['ashes', 'delusion', 'heartbeat'],
 					0,
-					true
+					false
 				]
 			],
 			section: 1
@@ -880,7 +880,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['voting-time'],
 					0,
-					true
+					false
 				],
 				[
 					"Turbulence",
@@ -890,7 +890,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['turbulence'],
 					0,
-					true
+					false
 				],
 				[
 					"Victory",
@@ -900,7 +900,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['victory'],
 					0,
-					true
+					false
 				]
 			],
 
@@ -917,7 +917,7 @@ class AmongFreeplayState extends MusicBeatState
 					SPECIAL,
 					['victory'],
 					0,
-					true
+					false
 				]
 			],
 
@@ -934,7 +934,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['sussy-bussy'],
 					0,
-					true
+					false
 				],
 				[
 					"Rivals",
@@ -944,7 +944,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['rivals'],
 					0,
-					true
+					false
 				],
 				[
 					"Chewmate",
@@ -954,7 +954,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['chewmate'],
 					0,
-					true
+					false
 				]
 			],
 
@@ -971,7 +971,7 @@ class AmongFreeplayState extends MusicBeatState
 					SPECIAL,
 					['chewmate'],
 					0,
-					true
+					false
 				],
 			],
 
@@ -988,7 +988,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['christmas'],
 					0,
-					true
+					false
 				],
 				[
 					"Spookpostor",
@@ -998,7 +998,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['spookpostor'],
 					0,
-					true
+					false
 				]
 			],
 
@@ -1015,7 +1015,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['titular'],
 					0,
-					true
+					false
 				],
 				[
 					"Greatest Plan",
@@ -1025,7 +1025,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['greatest-plan'],
 					0,
-					true
+					false
 				],
 				[
 					"Reinforcements",
@@ -1035,9 +1035,9 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['reinforcements'],
 					0,
-					true
+					false
 				],
-				["Armed", "rhm", 'rhm', FlxColor.ORANGE, FROM_STORY_MODE, ['armed'], 0, true]
+				["Armed", "rhm", 'rhm', FlxColor.ORANGE, FROM_STORY_MODE, ['armed'], 0, false]
 			],
 
 			section: 5
@@ -1045,8 +1045,8 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Alpha Moogus", "oldpostor", 'oldpostor', FlxColor.RED, BEANS, [], 250, true],
-				["Actin Sus", "oldpostor", 'oldpostor', FlxColor.RED, BEANS, [], 250, true]
+				["Alpha Moogus", "oldpostor", 'oldpostor', FlxColor.RED, BEANS, [], 250, false],
+				["Actin Sus", "oldpostor", 'oldpostor', FlxColor.RED, BEANS, [], 250, false]
 			],
 
 			section: 6
@@ -1054,12 +1054,12 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Ow", "kills", 'kills', FlxColor.fromRGB(84, 167, 202), BEANS, [], 400, true],
-				["Who", "whoguys", 'who', FlxColor.fromRGB(22, 65, 240), BEANS, [], 500, true],
-				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK, BEANS, [], 400, true],
-				["Sussus Nuzzus", "nuzzles", 'nuzzus', FlxColor.BLACK, BEANS, [], 400, true],
-				["Idk", "idk", 'idk', FlxColor.fromRGB(255, 140, 177), BEANS, [], 350, true],
-				["Esculent", "dead", 'esculent', FlxColor.BLACK, BEANS, [], 350, true],
+				["Ow", "kills", 'kills', FlxColor.fromRGB(84, 167, 202), BEANS, [], 400, false],
+				["Who", "whoguys", 'who', FlxColor.fromRGB(22, 65, 240), BEANS, [], 500, false],
+				["Insane Streamer", "jerma", 'jerma', FlxColor.BLACK, BEANS, [], 400, false],
+				["Sussus Nuzzus", "nuzzles", 'nuzzus', FlxColor.BLACK, BEANS, [], 400, false],
+				["Idk", "idk", 'idk', FlxColor.fromRGB(255, 140, 177), BEANS, [], 350, false],
+				["Esculent", "dead", 'esculent', FlxColor.BLACK, BEANS, [], 350, false],
 				[
 					"Drippypop",
 					"drippy",
@@ -1068,11 +1068,11 @@ class AmongFreeplayState extends MusicBeatState
 					BEANS,
 					[],
 					425,
-					true
+					false
 				],
-				["Crewicide", "dave", 'dave', FlxColor.BLUE, BEANS, [], 450, true],
-				["Monotone Attack", "attack", 'monotoner', FlxColor.WHITE, BEANS, [], 400, true],
-				["Top 10", "top", 'top', FlxColor.RED, BEANS, [], 200, true]
+				["Crewicide", "dave", 'dave', FlxColor.BLUE, BEANS, [], 450, false],
+				["Monotone Attack", "attack", 'monotoner', FlxColor.WHITE, BEANS, [], 400, false],
+				["Top 10", "top", 'top', FlxColor.RED, BEANS, [], 200, false]
 			],
 
 			section: 7
@@ -1080,8 +1080,8 @@ class AmongFreeplayState extends MusicBeatState
 
 		weeks.push({
 			songs: [
-				["Chippin", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38), BEANS, [], 300, true],
-				["Chipping", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38), BEANS, [], 300, true],
+				["Chippin", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38), BEANS, [], 300, false],
+				["Chipping", "cvp", 'chips', FlxColor.fromRGB(255, 60, 38), BEANS, [], 300, false],
 				[
 					"Torture",
 					"ziffy",
@@ -1090,7 +1090,7 @@ class AmongFreeplayState extends MusicBeatState
 					SPECIAL,
 					['chippin', 'chipping'],
 					0,
-					true
+					false
 				]
 			],
 
