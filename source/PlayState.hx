@@ -2996,7 +2996,7 @@ class PlayState extends MusicBeatState
 				airshipskyflash.scrollFactor.set(1, 1);
 				airshipskyflash.active = true;
 				add(airshipskyflash);
-				airshipskyflash.alpha = 0;
+				airshipskyflash.alpha = 0.00001;
 
 			case 'school': // Week 6 - Senpai, Roses
 				GameOverSubstate.deathSoundName = 'fnf_loss_sfx-pixel';
