@@ -121,7 +121,7 @@ class AmongDeathSubstate extends MusicBeatSubstate
 							}
 						});
 					} else if (touch.overlaps(spr)) {
-						changeMissAmount(6 - spr.ID);
+						changeMissAmount(4 - spr.ID);
 						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 					}
 				}
