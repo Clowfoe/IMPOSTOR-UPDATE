@@ -69,6 +69,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 					dummypostor.y += 65;
 			}
 		}
+		dummySprites.updateHitbox();
 		add(dummySprites);
 
 		missAmountArrow = new FlxSprite(0, 400).loadGraphic(Paths.image('freeplay/missAmountArrow', 'impostor'));

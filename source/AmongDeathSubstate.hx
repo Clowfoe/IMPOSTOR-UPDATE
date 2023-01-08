@@ -50,6 +50,7 @@ class AmongDeathSubstate extends MusicBeatSubstate
 					dummypostor.y += 65;
 			}
 		}
+		dummySprites.updateHitbox();
 		add(dummySprites);
 
 		missAmountArrow = new FlxSprite(0, 400).loadGraphic(Paths.image('freeplay/missAmountArrow', 'impostor'));
@@ -123,8 +124,7 @@ class AmongDeathSubstate extends MusicBeatSubstate
 						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 					}
 				}
-			}
-		);
+			});
 		}
 	}
 
