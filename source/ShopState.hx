@@ -403,7 +403,7 @@ class ShopState extends MusicBeatState
 		localBeans = ClientPrefs.beans;
 
 		persistentUpdate = true;
-		FlxG.mouse.visible = false;
+		FlxG.mouse.visible = #if mobile false #else true #end;
 
 		focusTarget = new FlxPoint(0, 0);
 

@@ -320,7 +320,7 @@ class ChartingState extends MusicBeatState
 		if (curSection >= _song.notes.length)
 			curSection = _song.notes.length - 1;
 
-		FlxG.mouse.visible = false;
+		FlxG.mouse.visible = #if mobile false #else true #end;
 		FlxG.save.bind('funkin', 'ninjamuffin99');
 
 		tempBpm = _song.bpm;
@@ -1438,7 +1438,7 @@ class ChartingState extends MusicBeatState
 			if (FlxG.keys.justPressed.ENTER || FlxG.keys.justPressed.ESCAPE)
 			{
 				autosaveSong();
-				FlxG.mouse.visible = false;
+				FlxG.mouse.visible = #if mobile false #else true #end;
 				PlayState.SONG = _song;
 				FlxG.sound.music.stop();
 				if (vocals != null)
