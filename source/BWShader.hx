@@ -65,7 +65,7 @@ class BWShaderGLSL extends FlxShader
 
 			float gray = 0.21 * textureColor.r + 0.71 * textureColor.g + 0.07 * textureColor.b;
 
-			float outColor = 0;
+			float outColor = 0.;
 
 			if(gray > upperBound){
 				outColor = 1.;
