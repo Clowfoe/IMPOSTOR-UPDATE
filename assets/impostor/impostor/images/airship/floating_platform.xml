@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="floating_platform.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="floating0000" x="0" y="0" width="550" height="184" frameX="-86" frameY="0" frameWidth="636" frameHeight="195"/>
+	<SubTexture name="floating0001" x="555" y="0" width="550" height="194" frameX="-86" frameY="0" frameWidth="636" frameHeight="195"/>
+	<SubTexture name="floating0002" x="1110" y="0" width="550" height="195" frameX="-86" frameY="0" frameWidth="636" frameHeight="195"/>
+	<SubTexture name="floating0003" x="0" y="200" width="550" height="193" frameX="-86" frameY="0" frameWidth="636" frameHeight="195"/>
+	<SubTexture name="floating0004" x="555" y="200" width="606" height="190" frameX="-30" frameY="0" frameWidth="636" frameHeight="195"/>
+	<SubTexture name="floating0005" x="1166" y="200" width="636" height="173" frameX="0" frameY="0" frameWidth="636" frameHeight="195"/>
+	<SubTexture name="floating copy0000" x="0" y="0" width="550" height="184" frameX="0" frameY="0" frameWidth="636" frameHeight="195"/>
+	<SubTexture name="floating copy0001" x="0" y="398" width="550" height="207" frameX="0" frameY="0" frameWidth="550" frameHeight="221"/>
+	<SubTexture name="floating copy0002" x="555" y="398" width="550" height="215" frameX="0" frameY="0" frameWidth="550" frameHeight="221"/>
+	<SubTexture name="floating copy0003" x="1110" y="398" width="550" height="219" frameX="0" frameY="0" frameWidth="550" frameHeight="221"/>
+	<SubTexture name="floating copy0004" x="0" y="622" width="550" height="220" frameX="0" frameY="0" frameWidth="550" frameHeight="221"/>
+	<SubTexture name="floating copy0005" x="555" y="622" width="550" height="221"/>
+</TextureAtlas>

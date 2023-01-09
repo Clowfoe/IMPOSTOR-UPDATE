@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="difficultyPanel.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="DifficultyScreenIdle0000" x="3" y="3" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenIdle0001" x="3" y="3" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenIdle0002" x="3" y="3" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenIdle0003" x="3" y="3" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenIdle0004" x="3" y="3" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenLeft0000" x="727" y="3" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenLeft0001" x="1451" y="3" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenLeft0002" x="2175" y="3" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenLeft0003" x="2899" y="3" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenLeft0004" x="3" y="333" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenLeft0005" x="727" y="333" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenRight0000" x="1451" y="333" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenRight0001" x="2175" y="333" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenRight0002" x="2899" y="333" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenRight0003" x="3" y="663" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenRight0004" x="727" y="663" width="721" height="327"/>
+	<SubTexture name="DifficultyScreenRight0005" x="1451" y="663" width="721" height="327"/>
+</TextureAtlas>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="maroon.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="MI happy0000" x="0" y="0" width="184" height="205" frameX="-11" frameY="-7" frameWidth="195" frameHeight="213"/>
+	<SubTexture name="MI happy0001" x="189" y="0" width="186" height="207" frameX="-9" frameY="-6" frameWidth="195" frameHeight="213"/>
+	<SubTexture name="MI happy0002" x="380" y="0" width="187" height="206" frameX="-6" frameY="-1" frameWidth="195" frameHeight="213"/>
+	<SubTexture name="MI happy0003" x="572" y="0" width="190" height="206" frameX="-2" frameY="-1" frameWidth="195" frameHeight="213"/>
+	<SubTexture name="MI happy0004" x="572" y="0" width="190" height="206" frameX="-2" frameY="-1" frameWidth="195" frameHeight="213"/>
+	<SubTexture name="MI happy0005" x="767" y="0" width="191" height="207" frameX="-1" frameY="0" frameWidth="195" frameHeight="213"/>
+	<SubTexture name="MI happy0006" x="963" y="0" width="194" height="206" frameX="0" frameY="-3" frameWidth="195" frameHeight="213"/>
+	<SubTexture name="MI neutral0000" x="1162" y="0" width="179" height="205" frameX="-17" frameY="-4" frameWidth="196" frameHeight="210"/>
+	<SubTexture name="MI neutral0001" x="1346" y="0" width="176" height="207" frameX="-20" frameY="-3" frameWidth="196" frameHeight="210"/>
+	<SubTexture name="MI neutral0002" x="1527" y="0" width="185" height="207" frameX="-11" frameY="0" frameWidth="196" frameHeight="210"/>
+	<SubTexture name="MI neutral0003" x="1717" y="0" width="194" height="207" frameX="-2" frameY="0" frameWidth="196" frameHeight="210"/>
+	<SubTexture name="MI neutral0004" x="0" y="212" width="196" height="207" frameX="0" frameY="0" frameWidth="196" frameHeight="210"/>
+	<SubTexture name="MI neutral0005" x="201" y="212" width="196" height="206" frameX="0" frameY="0" frameWidth="196" frameHeight="210"/>
+	<SubTexture name="MI neutral0006" x="402" y="212" width="185" height="206" frameX="-11" frameY="-1" frameWidth="196" frameHeight="210"/>
+	<SubTexture name="MI sad0000" x="592" y="212" width="186" height="205" frameX="-10" frameY="-3" frameWidth="196" frameHeight="209"/>
+	<SubTexture name="MI sad0001" x="783" y="212" width="188" height="207" frameX="-8" frameY="-2" frameWidth="196" frameHeight="209"/>
+	<SubTexture name="MI sad0002" x="976" y="212" width="184" height="205" frameX="-9" frameY="-1" frameWidth="196" frameHeight="209"/>
+	<SubTexture name="MI sad0003" x="1165" y="212" width="187" height="206" frameX="-5" frameY="0" frameWidth="196" frameHeight="209"/>
+	<SubTexture name="MI sad0004" x="1165" y="212" width="187" height="206" frameX="-5" frameY="0" frameWidth="196" frameHeight="209"/>
+	<SubTexture name="MI sad0005" x="1357" y="212" width="187" height="207" frameX="-4" frameY="0" frameWidth="196" frameHeight="209"/>
+	<SubTexture name="MI sad0006" x="1549" y="212" width="193" height="206" frameX="0" frameY="-2" frameWidth="196" frameHeight="209"/>
+	<SubTexture name="MI threatening0000" x="1747" y="212" width="184" height="205" frameX="-11" frameY="-7" frameWidth="195" frameHeight="213"/>
+	<SubTexture name="MI threatening0001" x="0" y="424" width="186" height="207" frameX="-9" frameY="-6" frameWidth="195" frameHeight="213"/>
+	<SubTexture name="MI threatening0002" x="191" y="424" width="187" height="206" frameX="-6" frameY="-1" frameWidth="195" frameHeight="213"/>
+	<SubTexture name="MI threatening0003" x="383" y="424" width="190" height="206" frameX="-2" frameY="-1" frameWidth="195" frameHeight="213"/>
+	<SubTexture name="MI threatening0004" x="383" y="424" width="190" height="206" frameX="-2" frameY="-1" frameWidth="195" frameHeight="213"/>
+	<SubTexture name="MI threatening0005" x="578" y="424" width="191" height="207" frameX="-1" frameY="0" frameWidth="195" frameHeight="213"/>
+	<SubTexture name="MI threatening0006" x="774" y="424" width="194" height="206" frameX="0" frameY="-3" frameWidth="195" frameHeight="213"/>
+</TextureAtlas>

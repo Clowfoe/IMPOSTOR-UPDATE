@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Big_Buttons_UI.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Credits Button0000" x="30" y="30" width="440" height="112"/>
+	<SubTexture name="Credits Select0000" x="500" y="30" width="442" height="114"/>
+	<SubTexture name="Freeplay Button0000" x="30" y="174" width="442" height="182"/>
+	<SubTexture name="Freeplay Select0000" x="502" y="174" width="442" height="182"/>
+	<SubTexture name="Gallery Button0000" x="30" y="386" width="440" height="112"/>
+	<SubTexture name="Gallery Select0000" x="500" y="386" width="440" height="112"/>
+	<SubTexture name="Story Mode Button0000" x="30" y="528" width="442" height="182"/>
+	<SubTexture name="Story Mode Select0000" x="502" y="528" width="442" height="182"/>
+</TextureAtlas>

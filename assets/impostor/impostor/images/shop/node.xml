@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="node.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="back0000" x="0" y="0" width="178" height="178"/>
+	<SubTexture name="emptysquare0000" x="183" y="0" width="178" height="178"/>
+	<SubTexture name="equippedcheck0000" x="0" y="183" width="239" height="239"/>
+	<SubTexture name="overlay0000" x="244" y="183" width="178" height="178"/>
+</TextureAtlas>

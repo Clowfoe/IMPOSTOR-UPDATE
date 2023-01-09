@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="button.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="buy0000" x="0" y="0" width="426" height="130"/>
+	<SubTexture name="equipped0000" x="0" y="135" width="426" height="130"/>
+	<SubTexture name="grey0000" x="0" y="270" width="426" height="130"/>
+	<SubTexture name="locked0000" x="0" y="405" width="426" height="130"/>
+	<SubTexture name="overlay0000" x="0" y="540" width="426" height="130"/>
+</TextureAtlas>

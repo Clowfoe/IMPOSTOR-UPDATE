@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="greenmenu.png">
+	<!-- Created with Adobe Animate version 20.5.0.29329 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="green idle0000" x="10" y="10" width="1091" height="1281" frameX="0" frameY="0" frameWidth="1092" frameHeight="1281"/>
+	<SubTexture name="green idle0001" x="1111" y="10" width="1092" height="1279" frameX="0" frameY="0" frameWidth="1092" frameHeight="1281"/>
+	<SubTexture name="green idle0002" x="2213" y="10" width="1091" height="1279" frameX="-1" frameY="0" frameWidth="1092" frameHeight="1281"/>
+	<SubTexture name="green idle0003" x="3314" y="10" width="1090" height="1281" frameX="-1" frameY="0" frameWidth="1092" frameHeight="1281"/>
+	<SubTexture name="green select0000" x="4414" y="10" width="1088" height="1297" frameX="0" frameY="-74" frameWidth="1095" frameHeight="1371"/>
+	<SubTexture name="green select0001" x="5512" y="10" width="1089" height="1297" frameX="0" frameY="-74" frameWidth="1095" frameHeight="1371"/>
+	<SubTexture name="green select0002" x="6611" y="10" width="1089" height="1297" frameX="0" frameY="-74" frameWidth="1095" frameHeight="1371"/>
+	<SubTexture name="green select0003" x="10" y="1317" width="1047" height="1268" frameX="-37" frameY="-22" frameWidth="1095" frameHeight="1371"/>
+	<SubTexture name="green select0004" x="10" y="1317" width="1047" height="1268" frameX="-37" frameY="-22" frameWidth="1095" frameHeight="1371"/>
+	<SubTexture name="green select0005" x="1067" y="1317" width="1046" height="1270" frameX="-38" frameY="-21" frameWidth="1095" frameHeight="1371"/>
+	<SubTexture name="green select0006" x="1067" y="1317" width="1046" height="1270" frameX="-38" frameY="-21" frameWidth="1095" frameHeight="1371"/>
+	<SubTexture name="green select0007" x="2123" y="1317" width="1050" height="1256" frameX="-45" frameY="0" frameWidth="1095" frameHeight="1371"/>
+	<SubTexture name="green select0008" x="2123" y="1317" width="1050" height="1256" frameX="-45" frameY="0" frameWidth="1095" frameHeight="1371"/>
+	<SubTexture name="green select0009" x="3183" y="1317" width="1050" height="1255" frameX="-45" frameY="-1" frameWidth="1095" frameHeight="1371"/>
+	<SubTexture name="green select0010" x="3183" y="1317" width="1050" height="1255" frameX="-45" frameY="-1" frameWidth="1095" frameHeight="1371"/>
+	<SubTexture name="green select0011" x="4243" y="1317" width="1050" height="1256"/>
+	<SubTexture name="green select0012" x="4243" y="1317" width="1050" height="1256"/>
+	<SubTexture name="green select0013" x="5303" y="1317" width="1050" height="1255" frameX="0" frameY="-1" frameWidth="1050" frameHeight="1256"/>
+	<SubTexture name="green select0014" x="5303" y="1317" width="1050" height="1255" frameX="0" frameY="-1" frameWidth="1050" frameHeight="1256"/>
+	<SubTexture name="green select0015" x="4243" y="1317" width="1050" height="1256"/>
+	<SubTexture name="green select0016" x="4243" y="1317" width="1050" height="1256"/>
+	<SubTexture name="green select0017" x="5303" y="1317" width="1050" height="1255" frameX="0" frameY="-1" frameWidth="1050" frameHeight="1256"/>
+	<SubTexture name="green select0018" x="5303" y="1317" width="1050" height="1255" frameX="0" frameY="-1" frameWidth="1050" frameHeight="1256"/>
+</TextureAtlas>
