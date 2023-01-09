@@ -689,7 +689,7 @@ class AmongFreeplayState extends MusicBeatState
 					FROM_STORY_MODE,
 					['defeat'],
 					0,
-					true
+					false
 				],
 				[
 					"Finale",
