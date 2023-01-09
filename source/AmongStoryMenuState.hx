@@ -599,9 +599,10 @@ class AmongStoryMenuState extends MusicBeatState
 		addVirtualPad(LEFT_FULL, A_B);
 		addVirtualPadCamera();
 		if (acceptedP)
-			removeVirualPad();
+			{
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 		        addVirtualPad(LEFT_RIGHT, A));
+		    }
 		#end
 	}
 
@@ -807,6 +808,10 @@ class AmongStoryMenuState extends MusicBeatState
 					selectingDifficulty = true;
 					selectedWeek = true;
                     acceptedP = true;
+
+					#if mobile
+					removeVirtualPad();
+					#end
 				}
 				else if (controls.RESET && curWeek != 0)
 				{

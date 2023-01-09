@@ -340,9 +340,10 @@ class AmongFreeplayState extends MusicBeatState
 		addVirtualPad(LEFT_FULL, A_B);
 		addVirtualPadCamera();
 		if (acceptedP)
-			removeVirualPad();
+			{
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 		        addVirtualPad(LEFT_RIGHT, A));
+		    }
 		#end
 	}
 
@@ -420,7 +421,6 @@ class AmongFreeplayState extends MusicBeatState
 				//
 				if (accepted)
 				{
-					acceptedP = true;
 					var pulseColor:FlxColor;
 
 					if (listOfButtons[curSelected].locked)
@@ -468,7 +468,12 @@ class AmongFreeplayState extends MusicBeatState
 						textTween = FlxTween.color(listOfButtons[curSelected].songText, 0.5, pulseColor, 0xFFFFFFFF, {ease: FlxEase.sineOut});
 					}
 					else
-					{				
+					{
+						#if mobile
+						removeVirtualPad();
+						#end
+
+						acceptedP = true;
 						openSubState(new AmongDifficultySubstate(curWeek, listOfButtons[curSelected].songName));
 						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 						ClientPrefs.beans = localBeans;
