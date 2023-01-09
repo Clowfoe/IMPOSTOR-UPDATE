@@ -82,6 +82,8 @@ class AmongStoryMenuState extends MusicBeatState
 
 	var caShader:ChromaticAbberation;
 
+	var acceptedP:Bool = false;
+
 	function doTheThing()
 	{
 		if (Highscore.getScore('meltdown', 2) != 0)
@@ -596,7 +598,7 @@ class AmongStoryMenuState extends MusicBeatState
 		#if mobile
 		addVirtualPad(LEFT_FULL, A_B);
 		addVirtualPadCamera();
-		if (accepted)
+		if (acceptedP)
 			removeVirualPad();
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 		        addVirtualPad(LEFT_RIGHT, A));
@@ -804,10 +806,7 @@ class AmongStoryMenuState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 					selectingDifficulty = true;
 					selectedWeek = true;
-
-					#if mobile
-					removeVirtualPad();
-					#end
+                    acceptedP = true;
 				}
 				else if (controls.RESET && curWeek != 0)
 				{

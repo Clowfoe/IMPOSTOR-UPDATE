@@ -109,6 +109,8 @@ class AmongFreeplayState extends MusicBeatState
 
 	var listOfButtons:Array<FreeplayCard> = [];
 
+	var acceptedP:Bool = false;
+
 	override function create()
 	{
 		super.create();
@@ -337,7 +339,7 @@ class AmongFreeplayState extends MusicBeatState
 		#if mobile
 		addVirtualPad(LEFT_FULL, A_B);
 		addVirtualPadCamera();
-		if (accepted)
+		if (acceptedP)
 			removeVirualPad();
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 		        addVirtualPad(LEFT_RIGHT, A));
@@ -418,6 +420,7 @@ class AmongFreeplayState extends MusicBeatState
 				//
 				if (accepted)
 				{
+					acceptedP = true;
 					var pulseColor:FlxColor;
 
 					if (listOfButtons[curSelected].locked)
