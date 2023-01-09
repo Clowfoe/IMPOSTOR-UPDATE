@@ -8790,8 +8790,9 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		#if mobile
-		removeHitbox();
+        #if mobile
+		new FlxTimer().start(1, function(tmr:FlxTimer)
+		     removeHitbox());
 		#end
 
 		timeBarBG.visible = false;
