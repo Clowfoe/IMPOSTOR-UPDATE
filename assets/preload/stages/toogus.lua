@@ -56,7 +56,7 @@ function onUpdate()
             if getProperty('dad.animation.curAnim.name') == 'idle-alt' then
                 triggerEvent('Camera Follow Pos',xx,yy)
             end
-            if getProperty('dad.animation.curAnim.name') == 'idle' then
+            if getProperty('dad.animation.curAnim.name') == 'idle' or getProperty('dad.animation.curAnim.name') == 'notice' or getProperty('dad.animation.curAnim.name') == 'handbye' or getProperty('dad.animation.curAnim.name') == 'wave' then
                 triggerEvent('Camera Follow Pos',xx,yy)
             end
         else
