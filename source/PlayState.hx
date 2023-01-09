@@ -5255,6 +5255,11 @@ class PlayState extends MusicBeatState
 		
 		if (SONG.song.toLowerCase() == 'identity crisis'){
 			doorTransition.animation.play('open',true,false,300);
+			doorTransition.animation.callback = function(name,framenumber,index){
+				if(name == 'open' && framenumber == 369){
+					remove(doorTransition);
+				}
+			}
 			FlxG.sound.play(Paths.sound('doorOpenSfx','impostor'),0.7);
 		}
 
