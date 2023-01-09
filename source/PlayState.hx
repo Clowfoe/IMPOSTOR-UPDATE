@@ -10114,11 +10114,6 @@ class PlayState extends MusicBeatState
 				{
 					crowd2.animation.play('bop');
 				}
-			case 'polus2':
-				if (curBeat % 2 == 0)
-				{
-					crowd.animation.play('bop');
-				}
 			case 'grey':
 				if(curBeat % chromFreq == 0){
 					if(chromTween != null) chromTween.cancel();
