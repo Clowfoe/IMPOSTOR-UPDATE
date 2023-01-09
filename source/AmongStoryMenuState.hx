@@ -69,8 +69,6 @@ class AmongStoryMenuState extends MusicBeatState
 	var weekXvalues:Array<Float> = [];
 	var weekYvalues:Array<Float> = [];
 	var canMove:Bool = true;
-	var canAddMissPad:Bool;
-	var fromStory:Bool;
 
 	public var camSpace:FlxCamera;
 	public var camScreen:FlxCamera;
@@ -598,9 +596,10 @@ class AmongStoryMenuState extends MusicBeatState
 		#if mobile
 		addVirtualPad(LEFT_FULL, A_B);
 		addVirtualPadCamera();
-
-		if (canAddMissPad)
-			addVirtualPad(LEFT_RIGHT, A);
+		if (accepted)
+			removeVirualPad
+			new FlxTimer().start(1, function(tmr:FlxTimer)
+		        addVirtualPad(LEFT_RIGHT, A));
 		#end
 	}
 
@@ -807,7 +806,6 @@ class AmongStoryMenuState extends MusicBeatState
 					selectedWeek = true;
 
 					#if mobile
-                    fromStory = true;
 					removeVirtualPad();
 					#end
 				}

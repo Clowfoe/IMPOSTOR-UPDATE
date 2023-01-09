@@ -109,9 +109,6 @@ class AmongFreeplayState extends MusicBeatState
 
 	var listOfButtons:Array<FreeplayCard> = [];
 
-	var canAddMissPad:Bool;
-	var fromFreeplay:Bool;
-
 	override function create()
 	{
 		super.create();
@@ -340,9 +337,10 @@ class AmongFreeplayState extends MusicBeatState
 		#if mobile
 		addVirtualPad(LEFT_FULL, A_B);
 		addVirtualPadCamera();
-
-		if (canAddMissPad)
-			addVirtualPad(LEFT_RIGHT, A);
+		if (accepted)
+			removeVirualPad
+			new FlxTimer().start(1, function(tmr:FlxTimer)
+		        addVirtualPad(LEFT_RIGHT, A));
 		#end
 	}
 
@@ -467,12 +465,7 @@ class AmongFreeplayState extends MusicBeatState
 						textTween = FlxTween.color(listOfButtons[curSelected].songText, 0.5, pulseColor, 0xFFFFFFFF, {ease: FlxEase.sineOut});
 					}
 					else
-					{
-						#if mobile
-						fromFreeplay = true;
-						removeVirtualPad();
-						#end
-						
+					{				
 						openSubState(new AmongDifficultySubstate(curWeek, listOfButtons[curSelected].songName));
 						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
 						ClientPrefs.beans = localBeans;

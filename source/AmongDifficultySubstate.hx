@@ -122,12 +122,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 			var leftP = controls.UI_LEFT_P;
 			var accepted = controls.ACCEPT;
 			//
-
-            if (AmongFreeplayState.fromFreeplay)
-			    AmongFreeplayState.canAddMissPad = true;
-			if (AmongStoryMenuState.fromStory)
-			    AmongStoryMenuState.canAddMissPad = true;
-
+			
 			if(accepted){
 				if(!songsWithMissLimits.contains(selectedSong.toLowerCase()) || hasEnteredMissSelection){
 					var songLowercase:String = Paths.formatToSongPath(selectedSong.toLowerCase());

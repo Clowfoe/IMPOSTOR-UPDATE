@@ -78,11 +78,6 @@ class AmongDeathSubstate extends MusicBeatSubstate
 
 		if(accepted && hasEnteredMissSelection == true)
 		{
-			if (AmongFreeplayState.fromFreeplay)
-			    AmongFreeplayState.canAddMissPad = true;
-			if (AmongStoryMenuState.fromStory)
-			    AmongStoryMenuState.canAddMissPad = true;
-			
 			FlxG.sound.play(Paths.sound('amongkill', 'impostor'), 0.9);
 			hasEnteredMissSelection = false;
 			close();
