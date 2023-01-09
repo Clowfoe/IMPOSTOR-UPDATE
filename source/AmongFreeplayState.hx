@@ -109,8 +109,8 @@ class AmongFreeplayState extends MusicBeatState
 
 	var listOfButtons:Array<FreeplayCard> = [];
 
-	public var canAddMissPad:Bool = false;
-	public var fromFreeplay:Bool = false;
+	public var canAddMissPad:Bool;
+	public var fromFreeplay:Bool;
 
 	override function create()
 	{

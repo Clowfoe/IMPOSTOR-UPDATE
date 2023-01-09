@@ -69,8 +69,8 @@ class AmongStoryMenuState extends MusicBeatState
 	var weekXvalues:Array<Float> = [];
 	var weekYvalues:Array<Float> = [];
 	var canMove:Bool = true;
-	public var canAddMissPad:Bool = false;
-	public var fromStory:Bool = false;
+	public var canAddMissPad:Bool;
+	public var fromStory:Bool;
 
 	public var camSpace:FlxCamera;
 	public var camScreen:FlxCamera;
