@@ -14,7 +14,6 @@ class AmongDeathSubstate extends MusicBeatSubstate
 
 	var missAmountArrow:FlxSprite;
 	var missTxt:FlxText;
-
 	public var dummySprites:FlxTypedGroup<FlxSprite>;
 	public var maximumMissLimit:Int = 5;
 
@@ -41,17 +40,14 @@ class AmongDeathSubstate extends MusicBeatSubstate
 			var dummypostor:FlxSprite = new FlxSprite((i * 150) + 200, 450).loadGraphic(Paths.image('freeplay/dummypostor${i + 1}', 'impostor'));
 			dummypostor.alpha = 0;
 			dummypostor.ID = i;
-			//dummypostor.updateHitbox();
 			dummySprites.add(dummypostor);
-			switch (i)
-			{
+			switch(i){
 				case 2 | 3:
 					dummypostor.y += 40;
 				case 4 | 5:
 					dummypostor.y += 65;
 			}
 		}
-
 		add(dummySprites);
 
 		missAmountArrow = new FlxSprite(0, 400).loadGraphic(Paths.image('freeplay/missAmountArrow', 'impostor'));
@@ -61,10 +57,10 @@ class AmongDeathSubstate extends MusicBeatSubstate
 		missTxt = new FlxText(0, 150, FlxG.width, "", 20);
 		missTxt.setFormat(Paths.font("vcr.ttf"), 100, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		missTxt.antialiasing = false;
-		missTxt.scrollFactor.set();
+        missTxt.scrollFactor.set();
 		missTxt.alpha = 0;
 		missTxt.borderSize = 3;
-		add(missTxt);
+        add(missTxt);
 
 		changeMissAmount(0);
 		openMissLimit();
@@ -75,63 +71,83 @@ class AmongDeathSubstate extends MusicBeatSubstate
 	public var isClosing:Bool = false;
 
 	override public function update(elapsed:Float)
-	{
-		for (touch in FlxG.touches.list) {
-			dummySprites.forEach(function(spr:FlxSprite) {
-				if (hasEnteredMissSelection) {
-					if (touch.overlaps(spr) && PlayState.missLimitCount == spr.ID) {
-						FlxG.sound.play(Paths.sound('amongkill', 'impostor'), 0.9);
-						hasEnteredMissSelection = false;
-						close();
+	{	
+		var rightP = controls.UI_RIGHT_P;
+		var leftP = controls.UI_LEFT_P;
+		var accepted = controls.ACCEPT;
 
-						var blackScreen:FlxSprite = new FlxSprite().makeGraphic(1920, 1080, FlxColor.BLACK);
-						add(blackScreen);
+		if(accepted && hasEnteredMissSelection == true)
+		{
+			if (AmongFreeplayState.fromFreeplay)
+			    AmongFreeplayState.canAddMissPad = true;
+			if (AmongStoryMenuState.fromStory)
+			    AmongStoryMenuState.canAddMissPad = true;
+			
+			FlxG.sound.play(Paths.sound('amongkill', 'impostor'), 0.9);
+			hasEnteredMissSelection = false;
+			close();
 
-						missTxt.alpha = 0;
-						missAmountArrow.alpha = 0;
+			var blackScreen:FlxSprite = new FlxSprite().makeGraphic(1920, 1080, FlxColor.BLACK);
+			add(blackScreen);
 
-						dummySprites.forEach(function(spr:FlxSprite)
-						{
-							spr.alpha = 0;
-						});
-						var songArray:Array<String> = [];
-						var leWeek:Array<Dynamic> = WeekData.weeksLoaded.get(WeekData.weeksList[AmongStoryMenuState.curWeek]).songs;
-						for (i in 0...leWeek.length) songArray.push(leWeek[i][0]);
+			missTxt.alpha = 0;
+		 	missAmountArrow.alpha = 0;
 
-						// Nevermind that's stupid lmao
-						PlayState.storyPlaylist = songArray;
-						PlayState.isStoryMode = true;
+		 	dummySprites.forEach(function(spr:FlxSprite)
+			{
+				spr.alpha = 0;	
+			});
+			var songArray:Array<String> = [];
+			var leWeek:Array<Dynamic> = WeekData.weeksLoaded.get(WeekData.weeksList[AmongStoryMenuState.curWeek]).songs;
+			for (i in 0...leWeek.length)
+			{
+				songArray.push(leWeek[i][0]);
+			}
 
-						var diffic = CoolUtil.difficultyStuff[AmongStoryMenuState.curDifficulty][1];
-						if (diffic == null) diffic = '';
+			// Nevermind that's stupid lmao
+			PlayState.storyPlaylist = songArray;
+			PlayState.isStoryMode = true;
 
-						PlayState.storyDifficulty = AmongStoryMenuState.curDifficulty;
+			var diffic = CoolUtil.difficultyStuff[AmongStoryMenuState.curDifficulty][1];
+			if (diffic == null)
+				diffic = '';
 
-						PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
-						PlayState.storyWeek = AmongStoryMenuState.curWeek;
-						PlayState.campaignScore = 0;
-						PlayState.campaignMisses = 0;
+			PlayState.storyDifficulty = AmongStoryMenuState.curDifficulty;
 
-						FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
-							ease: FlxEase.circOut,
-							onComplete: function(tween:FlxTween)
-							{
-								trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
-								LoadingState.loadAndSwitchState(new PlayState());
-							}
-						});
-					} else if (touch.overlaps(spr)) {
-						changeMissAmount(5 - spr.ID);
-						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
-					}
+			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
+			PlayState.storyWeek = AmongStoryMenuState.curWeek;
+			PlayState.campaignScore = 0;
+			PlayState.campaignMisses = 0;
+			
+			FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
+				ease: FlxEase.circOut,
+				onComplete: function(tween:FlxTween)
+				{
+					trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+					LoadingState.loadAndSwitchState(new PlayState());
 				}
 			});
+		}
+		if (rightP)
+		{
+			if (hasEnteredMissSelection)
+				changeMissAmount(-1);
+			
+			FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
+		}
+
+		if (leftP)
+		{
+			if (hasEnteredMissSelection)
+				changeMissAmount(1);
+	
+			FlxG.sound.play(Paths.sound('panelDisappear', 'impostor'), 0.5);
 		}
 	}
 
 	function changeMissAmount(change:Int)
 	{
-		PlayState.missLimitCount = change;
+		PlayState.missLimitCount += change;
 		if (PlayState.missLimitCount > maximumMissLimit)
 			PlayState.missLimitCount = 0;
 		if (PlayState.missLimitCount < 0)
@@ -139,8 +155,7 @@ class AmongDeathSubstate extends MusicBeatSubstate
 
 		dummySprites.forEach(function(spr:FlxSprite)
 		{
-			if ((5 - spr.ID) == PlayState.missLimitCount)
-			{
+			if((5 - spr.ID) == PlayState.missLimitCount){
 				missAmountArrow.x = spr.x;
 				missTxt.text = '${PlayState.missLimitCount}/5 COMBO BREAKS';
 				missTxt.x = ((FlxG.width / 2) - (missTxt.width / 2));

@@ -109,6 +109,9 @@ class AmongFreeplayState extends MusicBeatState
 
 	var listOfButtons:Array<FreeplayCard> = [];
 
+	public var canAddMissPad:Bool = false;
+	public var fromFreeplay:Bool = false;
+
 	override function create()
 	{
 		super.create();
@@ -337,6 +340,9 @@ class AmongFreeplayState extends MusicBeatState
 		#if mobile
 		addVirtualPad(LEFT_FULL, A_B);
 		addVirtualPadCamera();
+
+		if (canAddMissPad)
+			addVirtualPad(LEFT_RIGHT, A);
 		#end
 	}
 
@@ -463,6 +469,7 @@ class AmongFreeplayState extends MusicBeatState
 					else
 					{
 						#if mobile
+						fromFreeplay = true;
 						removeVirtualPad();
 						#end
 						

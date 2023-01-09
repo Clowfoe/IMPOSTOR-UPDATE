@@ -21,7 +21,6 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 	var blackBG:FlxSprite;
 	var missAmountArrow:FlxSprite;
 	var missTxt:FlxText;
-
 	public var dummySprites:FlxTypedGroup<FlxSprite>;
 	public var maximumMissLimit:Int = 5;
 
@@ -47,7 +46,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 
 		curDifficulty = 2;
 		changeDiff(0);
-
+		
 		blackBG = new FlxSprite().makeGraphic(1400, 1400, 0xFF000000);
 		blackBG.screenCenter(XY);
 		blackBG.alpha = 0;
@@ -60,17 +59,14 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 			var dummypostor:FlxSprite = new FlxSprite((i * 150) + 200, 450).loadGraphic(Paths.image('freeplay/dummypostor${i + 1}', 'impostor'));
 			dummypostor.alpha = 0;
 			dummypostor.ID = i;
-			//dummypostor.updateHitbox();
 			dummySprites.add(dummypostor);
-			switch (i)
-			{
+			switch(i){
 				case 2 | 3:
 					dummypostor.y += 40;
 				case 4 | 5:
 					dummypostor.y += 65;
 			}
 		}
-
 		add(dummySprites);
 
 		missAmountArrow = new FlxSprite(0, 400).loadGraphic(Paths.image('freeplay/missAmountArrow', 'impostor'));
@@ -80,10 +76,10 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 		missTxt = new FlxText(0, 150, FlxG.width, "", 20);
 		missTxt.setFormat(Paths.font("vcr.ttf"), 100, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		missTxt.antialiasing = false;
-		missTxt.scrollFactor.set();
+        missTxt.scrollFactor.set();
 		missTxt.alpha = 0;
 		missTxt.borderSize = 3;
-		add(missTxt);
+        add(missTxt);
 
 		changeMissAmount(0);
 
@@ -97,7 +93,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 			PlayState.storyWeek = curWeek;
 
 			var diffic:String = '-hard';
-
+				
 			var poop:String = Highscore.formatSong(songLowercase, 1);
 			PlayState.SONG = Song.loadFromJson(poop + diffic, songLowercase);
 
@@ -122,38 +118,53 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 	{
 		if (canControl && !isClosing)
 		{
-			for (touch in FlxG.touches.list) {
-				dummySprites.forEach(function(spr:FlxSprite) {
-					if (touch.overlaps(spr) && PlayState.missLimitCount == spr.ID) {
-						if (!songsWithMissLimits.contains(selectedSong.toLowerCase()) || hasEnteredMissSelection)
+			var rightP = controls.UI_RIGHT_P;
+			var leftP = controls.UI_LEFT_P;
+			var accepted = controls.ACCEPT;
+			//
+
+            if (AmongFreeplayState.fromFreeplay)
+			    AmongFreeplayState.canAddMissPad = true;
+			if (AmongStoryMenuState.fromStory)
+			    AmongStoryMenuState.canAddMissPad = true;
+
+			if(accepted){
+				if(!songsWithMissLimits.contains(selectedSong.toLowerCase()) || hasEnteredMissSelection){
+					var songLowercase:String = Paths.formatToSongPath(selectedSong.toLowerCase());
+					trace(selectedSong);
+
+					PlayState.isStoryMode = false;
+					PlayState.storyDifficulty = 2;
+					PlayState.storyWeek = curWeek;
+
+					var diffic:String = '-hard';
+						
+					var poop:String = Highscore.formatSong(songLowercase, 1);
+					PlayState.SONG = Song.loadFromJson(poop + diffic, songLowercase);
+
+					FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
+						ease: FlxEase.circOut,
+						onComplete: function(tween:FlxTween)
 						{
-							var songLowercase:String = Paths.formatToSongPath(selectedSong.toLowerCase());
-							trace(selectedSong);
-
-							PlayState.isStoryMode = false;
-							PlayState.storyDifficulty = 2;
-							PlayState.storyWeek = curWeek;
-
-							var diffic:String = '-hard';
-
-							var poop:String = Highscore.formatSong(songLowercase, 1);
-							PlayState.SONG = Song.loadFromJson(poop + diffic, songLowercase);
-
-							FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
-								ease: FlxEase.circOut,
-								onComplete: function(tween:FlxTween)
-								{
-									trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
-									LoadingState.loadAndSwitchState(new PlayState());
-								}
-							});
+							trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+							LoadingState.loadAndSwitchState(new PlayState());
 						}
-					} else if (touch.overlaps(spr)) {
-						changeMissAmount(5 - spr.ID);
-						trace(5 - spr.ID);
-						FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
-					}
-				});
+					});
+				}
+			}
+
+			if (rightP)
+			{
+				if (hasEnteredMissSelection)
+					changeMissAmount(-1);
+				FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
+			}
+			//
+			if (leftP)
+			{
+				if (hasEnteredMissSelection)
+					changeMissAmount(1);
+				FlxG.sound.play(Paths.sound('panelDisappear', 'impostor'), 0.5);
 			}
 		}
 		else
@@ -162,7 +173,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 
 	function changeMissAmount(change:Int)
 	{
-		PlayState.missLimitCount = change;
+		PlayState.missLimitCount += change;
 		if (PlayState.missLimitCount > maximumMissLimit)
 			PlayState.missLimitCount = 0;
 		if (PlayState.missLimitCount < 0)
@@ -170,8 +181,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 
 		dummySprites.forEach(function(spr:FlxSprite)
 		{
-			if ((5 - spr.ID) == PlayState.missLimitCount)
-			{
+			if((5 - spr.ID) == PlayState.missLimitCount){
 				missAmountArrow.x = spr.x;
 				missTxt.text = '${PlayState.missLimitCount}/5 COMBO BREAKS';
 				missTxt.x = ((FlxG.width / 2) - (missTxt.width / 2));
