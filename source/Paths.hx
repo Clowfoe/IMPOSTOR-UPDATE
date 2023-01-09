@@ -96,8 +96,7 @@ class Paths
 
 		for (key in OpenFlAssets.cache.getSoundKeys())
 		{
-			var obj = OpenFlAssets.cache.getSound(key);
-			if (obj != null && !currentTrackedAssets["sounds"].exists(key))
+			if (localTrackedAssets["sounds"].contains(key) && !currentTrackedAssets["sounds"].exists(key))
 			{
 				OpenFlAssets.cache.removeSound(key);
 				OpenFlAssets.cache.clearSounds(key);
@@ -108,13 +107,9 @@ class Paths
 
 		for (key in OpenFlAssets.cache.getFontKeys())
 		{
-			var obj = OpenFlAssets.cache.getFont(key);
-			if (obj != null)
-			{
-				OpenFlAssets.cache.removeFont(key);
-				OpenFlAssets.cache.clearFonts(key);
-				OpenFlAssets.cache.clear(key);
-			}
+			OpenFlAssets.cache.removeFont(key);
+			OpenFlAssets.cache.clearFonts(key);
+			OpenFlAssets.cache.clear(key);
 		}
 	}
 
