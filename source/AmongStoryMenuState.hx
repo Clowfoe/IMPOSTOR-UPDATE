@@ -597,7 +597,7 @@ class AmongStoryMenuState extends MusicBeatState
 		addVirtualPad(LEFT_FULL, A_B);
 		addVirtualPadCamera();
 		if (accepted)
-			removeVirualPad
+			removeVirualPad();
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 		        addVirtualPad(LEFT_RIGHT, A));
 		#end
