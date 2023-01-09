@@ -3247,7 +3247,7 @@ class PlayState extends MusicBeatState
 				mainoverlay.active = false;
 				add(mainoverlay);
 			case 'cargo':
-				lightoverlayDK = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/scavd', 'impostor'));
+				lightoverlayDK = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/scvavd', 'impostor'));
 				lightoverlayDK.antialiasing = true;
 				lightoverlayDK.scrollFactor.set(1, 1);
 				lightoverlayDK.active = false;
