@@ -20,6 +20,15 @@ class AmongDeathSubstate extends MusicBeatSubstate
 	public var camUpper:FlxCamera;
 	public var camOther:FlxCamera;
 
+	override function create()
+	{
+	
+		#if mobile
+		addVirtualPad(LEFT_RIGHT, A);
+		#end
+		super.create();
+	}
+
 	public function new()
 	{
 		super();

@@ -9,6 +9,7 @@ import android.widget.Toast;
 import haxe.CallStack;
 import haxe.io.Path;
 import lime.system.System as LimeSystem;
+import openfl.system.System as FlSystem;
 import openfl.Lib;
 import openfl.events.UncaughtErrorEvent;
 import openfl.utils.Assets;
@@ -88,7 +89,7 @@ class SUtil
 			for (file in Assets.list().filter(folder -> folder.contains('assets/videos')))
 				SUtil.copyContent(file, SUtil.getStorageDirectory() + file);
 
-			Main.gc(); // clean da memory.
+			FlSystem.gc(); // clean da memory.
 		}
 		#end
 	}

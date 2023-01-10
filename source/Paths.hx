@@ -243,6 +243,13 @@ class Paths
 		return returnAsset;
 	}
 
+	inline static public function buttonimage(key:String, ?library:String):FlxGraphic
+	{
+		// image function for buttons 
+		var returnAsset:FlxGraphic = returnGraphic(key, library);
+		return returnAsset;
+	}
+
 	static public function getTextFromFile(key:String, ?ignoreMods:Bool = false):String
 	{
 		#if MODS_ALLOWED

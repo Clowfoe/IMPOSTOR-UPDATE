@@ -74,7 +74,7 @@ class AmongStoryMenuState extends MusicBeatState
 	public var camScreen:FlxCamera;
 
 	//                             red[0], green[1], yellowWeek[2] black[3] maroon[4] grey[5] pink[6] jorsawsee?[7] henry[8] tomong[9] loggo[10] alpha[11]
-	var unlockedWeek:Array<Bool> = [true, false, false, false, true, false, false, true, false, false, false, false]; // weeks in order of files in preload/weeks
+	var unlockedWeek:Array<Bool> = [true, true, true, true, true, false, false, true, false, false, false, false]; // weeks in order of files in preload/weeks
 
 	// var unlockedWeek:Array<Bool> = [true, true, true, true, true, true, true, true, true, true, true, true];
 	var localFinaleState:FinaleState;
@@ -245,7 +245,7 @@ class AmongStoryMenuState extends MusicBeatState
 		add(border);
 		border.cameras = [camScreen];
 
-		var back:FlxSprite = new FlxSprite(85, 65).loadGraphic(Paths.image('storymenu/menuBack', 'impostor'));
+		var back:FlxSprite = new FlxSprite(85, 65).loadGraphic(Paths.buttonimage('storymenu/menuBack', 'impostor'));
 		add(back);
 		back.cameras = [camScreen];
 

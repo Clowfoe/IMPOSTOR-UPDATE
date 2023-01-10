@@ -286,7 +286,7 @@ class AmongFreeplayState extends MusicBeatState
 		upperBar.cameras = [camUpper];
 		add(upperBar);
 
-		crossImage = new FlxSprite(12.50, 8.05).loadGraphic(Paths.image('freeplay/menuBack', 'impostor'));
+		crossImage = new FlxSprite(12.50, 8.05).loadGraphic(Paths.buttonimage('freeplay/menuBack', 'impostor'));
 		crossImage.antialiasing = true;
 		crossImage.scrollFactor.set();
 		crossImage.updateHitbox();
