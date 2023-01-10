@@ -1451,7 +1451,7 @@ class PlayState extends MusicBeatState
 
 				if (isStoryMode && SONG.song.toLowerCase() != 'oversight')
 				{
-                    FlxG.mouse.visible = true;
+					FlxG.mouse.visible = true;
 
 					henryTeleporter = new FlxSprite(998, 620).loadGraphic(Paths.image('airship/newAirship/Teleporter', 'impostor'));
 					henryTeleporter.antialiasing = true;
@@ -1463,6 +1463,7 @@ class PlayState extends MusicBeatState
 
 					FlxMouseEventManager.add(henryTeleporter, function onMouseDown(teleporter:FlxSprite)
 					{
+						FlxG.mouse.visible = false;
 						henryTeleporter.visible = false;
 						henryTeleport();
 					}, null, null, null);
