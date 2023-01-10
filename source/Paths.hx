@@ -40,7 +40,7 @@ class Paths
 			@:privateAccess
 			if (!localTrackedAssets["graphics"].contains(key) && currentTrackedAssets["graphics"].exists(key))
 			{
-				if (!localTrackedAssets["textures"].contains(key) && currentTrackedAssets["textures"].exists(key))
+				if (currentTrackedAssets["textures"].exists(key))
 				{
 					var texture:Null<Texture> = currentTrackedAssets["textures"].get(key);
 					texture.dispose();
