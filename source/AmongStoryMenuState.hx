@@ -97,7 +97,6 @@ class AmongStoryMenuState extends MusicBeatState
 		if (Highscore.getScore('double-kill', 2) != 0)
 		{
 			unlockedWeek[3] = true;
-			//
 		}
 		if (Highscore.getScore('titular', 2) != 0)
 		{
