@@ -74,7 +74,7 @@ class Paths
 		}
 
 		// run the garbage collector for good measure lmfao
-		Main.gc();
+		System.gc();
 	}
 
 	public static function clearStoredMemory():Void
