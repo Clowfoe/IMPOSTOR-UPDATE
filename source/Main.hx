@@ -1,10 +1,6 @@
 package;
 
-#if cpp
-import cpp.vm.Gc;
-#else
 import openfl.system.System;
-#end
 import flixel.graphics.FlxGraphic;
 import flixel.FlxCamera;
 import flixel.FlxG;
@@ -36,10 +32,6 @@ class Main extends Sprite
 
 		SUtil.uncaughtErrorHandler();
 
-		#if cpp
-		Gc.enable(true);
-		#end
-
 		ClientPrefs.startControls();
 
 		SUtil.checkPermissions();
@@ -58,7 +50,7 @@ class Main extends Sprite
 
 		#if html5
 		FlxG.autoPause = false;
-		FlxG.mouse.visible = #if mobile false #else true #end;
+		FlxG.mouse.visible = false;
 		#end
 	}
 
@@ -86,13 +78,4 @@ class Main extends Sprite
 		}
 	}
 	#end
-
-	public static function gc():Void
-	{
-		#if cpp
-		Gc.run(true);
-		#else
-		openfl.system.System.gc();
-		#end
-	}
 }
