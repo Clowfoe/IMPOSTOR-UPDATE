@@ -107,6 +107,8 @@ class AmongFreeplayState extends MusicBeatState
 	var hasSavedData:Bool = false;
 	var localWeeks:Array<FreeplayWeek>;
 
+	var dumpymode:Bool = false;
+
 	var listOfButtons:Array<FreeplayCard> = [];
 
 	override function create()
@@ -535,6 +537,7 @@ class AmongFreeplayState extends MusicBeatState
 
 	public static function addWeeks():Array<FreeplayWeek>
 	{
+
 		weeks = [];
 		// im just like putting this in its own function because
 		// jesus christ man this cant get near the coherent code
