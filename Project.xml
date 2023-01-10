@@ -39,7 +39,6 @@
 	<!-- PSYCH ENGINE CUSTOMIZATION -->
 	<define name="LUA_ALLOWED" if="cpp" />
 	<define name="VIDEOS_ALLOWED" if="desktop || android" unless="32" />
-	<define name="VIDEOS_ALLOWED" if="desktop || android" if="debug" />
 
 	<assets path="assets/mobile" if="mobile" />
 	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
