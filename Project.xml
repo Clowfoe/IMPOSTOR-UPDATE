@@ -79,7 +79,10 @@
 	<haxelib name="hxcpp-debug-server" if="desktop" />
 	<haxelib name="extension-androidtools" if="android" />
 
-	<!-- ______________________________ Haxedefines _____________________________ -->
+	<!-- ______________________________ HaxeDefines _____________________________ -->
+
+	<!--Stable Lua-->
+	<haxedef name="LINC_LUA_RELATIVE_DYNAMIC_LIB"/>
 
 	<!--Disable the Flixel core focus lost screen-->
 	<haxedef name="FLX_NO_FOCUS_LOST_SCREEN" />
