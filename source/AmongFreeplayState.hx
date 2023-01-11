@@ -163,48 +163,11 @@ class AmongFreeplayState extends MusicBeatState
 		portrait = new FlxSprite();
 		portrait.frames = Paths.getSparrowAtlas('freeplay/portraits', 'impostor');
 
-		portrait.animation.addByIndices('red', 'Character', [1], null, 24, true);
-		portrait.animation.addByIndices('yellow', 'Character', [2], null, 24, true);
-		portrait.animation.addByIndices('green', 'Character', [3], null, 24, true);
-		portrait.animation.addByIndices('tomo', 'Character', [4], null, 24, true);
-		portrait.animation.addByIndices('ham', 'Character', [5], null, 24, true);
-		portrait.animation.addByIndices('black', 'Character', [6], null, 24, true);
-		portrait.animation.addByIndices('white', 'Character', [7], null, 24, true);
-		portrait.animation.addByIndices('para', 'Character', [8], null, 24, true);
-		portrait.animation.addByIndices('pink', 'Character', [9], null, 24, true);
-		portrait.animation.addByIndices('maroon', 'Character', [10], null, 24, true);
-		portrait.animation.addByIndices('grey', 'Character', [11], null, 24, true);
-		portrait.animation.addByIndices('chef', 'Character', [12], null, 24, true);
-		portrait.animation.addByIndices('tit', 'Character', [13], null, 24, true);
-		portrait.animation.addByIndices('ellie', 'Character', [14], null, 24, true);
-		portrait.animation.addByIndices('rhm', 'Character', [15], null, 24, true);
-		portrait.animation.addByIndices('loggo', 'Character', [16], null, 24, true);
-		portrait.animation.addByIndices('clow', 'Character', [17], null, 24, true);
-		portrait.animation.addByIndices('ziffy', 'Character', [18], null, 24, true);
-		portrait.animation.addByIndices('chips', 'Character', [19], null, 24, true);
-		portrait.animation.addByIndices('oldpostor', 'Character', [20], null, 24, true);
-		portrait.animation.addByIndices('top', 'Character', [21], null, 24, true);
-		portrait.animation.addByIndices('jorsawsee', 'Character', [22], null, 24, true);
-		portrait.animation.addByIndices('warchief', 'Character', [23], null, 24, true);
-		portrait.animation.addByIndices('redmungus', 'Character', [24], null, 24, true);
-		portrait.animation.addByIndices('bananungus', 'Character', [25], null, 24, true);
-		portrait.animation.addByIndices('powers', 'Character', [26], null, 24, true);
-		portrait.animation.addByIndices('kills', 'Character', [27], null, 24, true);
-		portrait.animation.addByIndices('jerma', 'Character', [28], null, 24, true);
-		portrait.animation.addByIndices('who', 'Character', [29], null, 24, true);
-		portrait.animation.addByIndices('monotone', 'Character', [30], null, 24, true);
-		portrait.animation.addByIndices('charles', 'Character', [31], null, 24, true);
-		portrait.animation.addByIndices('finale', 'Character', [32], null, 24, true);
-		portrait.animation.addByIndices('pop', 'Character', [33], null, 24, true);
-		portrait.animation.addByIndices('torture', 'Character', [34], null, 24, true);
-		portrait.animation.addByIndices('dave', 'Character', [35], null, 24, true);
-		portrait.animation.addByIndices('bpmar', 'Character', [36], null, 24, true);
-		portrait.animation.addByIndices('grinch', 'Character', [37], null, 24, true);
-		portrait.animation.addByIndices('redmunp', 'Character', [38], null, 24, true);
-		portrait.animation.addByIndices('nuzzus', 'Character', [39], null, 24, true);
-		portrait.animation.addByIndices('monotoner', 'Character', [40], null, 24, true);
-		portrait.animation.addByIndices('idk', 'Character', [41], null, 24, true);
-		portrait.animation.addByIndices('esculent', 'Character', [42], null, 24, true);
+		var songPortraitStuff:Array<String> = ['', 'red','yellow','green','tomo','ham','black','white','para','pink','maroon','grey','chef','tit','ellie','rhm','loggo','clow','ziffy','chips','oldposter','top','jorsawsee','warchief','redmungus','banananungus','powers','kills','jerma','who','monotone','charles','finale','pop','torture','dave','bpmar','grinch','redmunp','nuzzus','monotoner','idk','esculent'];
+		for (i => name in songPortraitStuff){
+			portrait.animation.addByIndices(name, 'Character', [i], null, 24, true);
+		}
+		// what the actual fuck
 		portrait.animation.play('red');
 		portrait.antialiasing = true;
 		portrait.setPosition(304.65, -100);
@@ -761,7 +724,7 @@ class AmongFreeplayState extends MusicBeatState
 			add(i.bean);
 			add(i.lock);
 			add(i.priceText);
-			trace('added button ' + i);
+			// trace('added button ' + i);
 		}
 
 		for (i in 0...listOfButtons.length)
