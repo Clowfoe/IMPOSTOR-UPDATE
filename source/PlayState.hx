@@ -4193,7 +4193,7 @@ class PlayState extends MusicBeatState
 		sussusPenisLOL.cameras = [camHUD];
 
 		#if mobile
-		addHitbox();
+		addHitbox(false);
 		addHitboxCamera();
 		#end
 
