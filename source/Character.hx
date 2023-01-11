@@ -155,7 +155,7 @@ class Character extends FlxSprite
 				if (json.no_antialiasing)
 				{
 					antialiasing = false;
-					noAntialiasing = !ClientPrefs.lowQuality;
+					noAntialiasing = true;
 				}
 
 				if (json.healthbar_colors != null && json.healthbar_colors.length > 2)
