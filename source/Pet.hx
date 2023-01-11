@@ -127,7 +127,7 @@ class Pet extends FlxSprite
 				if (json.no_antialiasing)
 				{
 					antialiasing = false;
-					noantialiasing = !ClientPrefs.lowQuality;
+					noAntialiasing = !ClientPrefs.lowQuality;
 				}
 
 				if (json.healthbar_colors != null && json.healthbar_colors.length > 2)
