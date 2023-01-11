@@ -70,6 +70,8 @@ import openfl8.effects.WiggleEffect.WiggleEffectType;
 import ShopState.BeansPopup;
 import HeatwaveShader;
 import ChromaticAbberation;
+import shaders.*;
+import shaders.BloomShader.BloomEffect;
 
 using StringTools;
 
@@ -82,6 +84,10 @@ import sys.FileSystem;
 
 class PlayState extends MusicBeatState
 {
+	var usingBFSkin:Bool = false;
+	var usingGFSkin:Bool = false;
+	var usingPet:Bool = false;
+
 	var noteRows:Array<Array<Array<Note>>> = [[],[]];
 	var votingnoteRows:Array<Array<Array<Note>>> = [[],[]];
 	private var singAnimations:Array<String> = ['singLEFT', 'singDOWN', 'singUP', 'singRIGHT'];
@@ -379,9 +385,9 @@ class PlayState extends MusicBeatState
 	var finaleBarRed:FlxSprite;
 	var finaleBarBlue:FlxSprite;
 
-
 	//jermasorry
 	var scaryJerma:FlxSprite;
+
 
 	// nick
 	var nickt:FlxSprite;
@@ -490,6 +496,7 @@ class PlayState extends MusicBeatState
 	var fog_front:FlxSprite;
 	var spotlights:FlxSprite;
 	var vicPulse:FlxSprite;
+	var fuckingBloomShader:BloomEffect;
 
 	// bananungus
 	var bananas:FlxSprite;
@@ -1453,6 +1460,7 @@ class PlayState extends MusicBeatState
 				whiteAwkward.animation.addByPrefix('stare', 'white stare', 24, false);
 				whiteAwkward.animation.play('sweat');
 				whiteAwkward.antialiasing = true;
+				whiteAwkward.visible = (dad.curCharacter != 'white');
 				add(whiteAwkward);
 
 				if (isStoryMode && SONG.song.toLowerCase() != 'oversight')
@@ -3403,6 +3411,12 @@ class PlayState extends MusicBeatState
 				fog_front.alpha = 0.44;
 				add(fog_front);
 
+				fuckingBloomShader = new BloomEffect();
+				fuckingBloomShader.blurSize = 0;
+				fuckingBloomShader.intensity = 0;
+				var filter:ShaderFilter = new ShaderFilter(fuckingBloomShader.shader);
+				camGame.setFilters([filter]);
+
 			case 'banana':
 				var lightoverlay:FlxSprite = new FlxSprite(-221.85, -167.7).loadGraphic(Paths.image('banana/LIGHTSOURCE', 'impostor'));
 				lightoverlay.antialiasing = true;
@@ -3674,6 +3688,7 @@ class PlayState extends MusicBeatState
 		if (ClientPrefs.charOverrides[1] != '' && ClientPrefs.charOverrides[1] != 'gf' && !isStoryMode && !SONG.allowGFskin)
 		{
 			SONG.player3 = ClientPrefs.charOverrides[1];
+			usingGFSkin = true;
 		}
 
 		var gfVersion:String = SONG.player3;
@@ -3770,8 +3785,10 @@ class PlayState extends MusicBeatState
 		}
 		else if (ClientPrefs.charOverrides[0] != '' && ClientPrefs.charOverrides[0] != 'bf' && !isStoryMode && !SONG.allowBFskin)
 		{
+			usingBFSkin = true;
 			SONG.player1 = ClientPrefs.charOverrides[0];
 		}
+
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
@@ -4876,6 +4893,12 @@ class PlayState extends MusicBeatState
 			{
 				setOnLuas('defaultPlayerStrumX' + i, playerStrums.members[i].x);
 				setOnLuas('defaultPlayerStrumY' + i, playerStrums.members[i].y);
+				//offset the strums incorrectly like in kade engine LMAO
+				//if u dont believe me look at this shit
+				//https://cdn.discordapp.com/attachments/1005410124027920444/1061101153900843119/image.png
+				if(curStage == "alpha"){
+					playerStrums.members[i].x -= 71.25;
+				}
 			}
 			for (i in 0...opponentStrums.length)
 			{
@@ -4883,6 +4906,9 @@ class PlayState extends MusicBeatState
 				setOnLuas('defaultOpponentStrumY' + i, opponentStrums.members[i].y);
 				if (ClientPrefs.middleScroll || SONG.stage.toLowerCase() == 'defeat')
 					opponentStrums.members[i].visible = false;
+				if(curStage == "alpha"){
+					opponentStrums.members[i].x -= 71.25;
+				}
 			}
 
 			startedCountdown = true;
@@ -5823,7 +5849,7 @@ class PlayState extends MusicBeatState
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 	public var ratingIndexArray:Array<String> = ["sick", "good", "bad", "shit"];
-	public var returnArray:Array<String> = [" [SFC]", " [GFC]", " [FC]", ""];
+	public var returnArray:Array<String> = [" [SFC]", " [GFC]", " [FC]", " [FC]"]; // if you get a shit you're STILL fcing, y'know. Unless you plan on making the combo break on a shit, too!
 	public var smallestRating:String;
 
 	override public function update(elapsed:Float)
@@ -5842,6 +5868,11 @@ class PlayState extends MusicBeatState
 		if (curStage == 'toogus')
 		{
 			saxguy.x = FlxMath.lerp(saxguy.x, saxguy.x + 15, CoolUtil.boundTo(elapsed * 9, 0, 1));
+		}
+		if(curStage == 'victory'){
+			fuckingBloomShader.update();
+			fuckingBloomShader.intensity = FlxMath.lerp(fuckingBloomShader.intensity, 0, CoolUtil.boundTo(elapsed * 2.25, 0, 1));
+			fuckingBloomShader.blurSize = FlxMath.lerp(fuckingBloomShader.blurSize, 0, CoolUtil.boundTo(elapsed * 2.25, 0, 1));
 		}
 
 		if (curStage == "tripletrouble")
@@ -6290,6 +6321,7 @@ class PlayState extends MusicBeatState
 				if (ratingString != '?'){
 					scoreTxt.text += ((Math.floor(ratingPercent * 10000) / 100)) + '% | ';
 
+					// tbh this should be rewritten to be more accurate to KE tbh
 					switch(ratingString){
 						case ' [SFC]':
 							scoreTxt.text += '(MFC) AAAA:';
@@ -6298,7 +6330,12 @@ class PlayState extends MusicBeatState
 						case ' [FC]':
 							scoreTxt.text += '(FC) AA:';
 						default:
-							scoreTxt.text += '(SDCB) A:';
+							if(songMisses<10){
+								scoreTxt.text += '(SDCB) A:';
+							}else{
+								scoreTxt.text += '(Clear) A:';
+							}
+							
 					}
 				}
 				else{
@@ -6707,7 +6744,9 @@ class PlayState extends MusicBeatState
 									// potentially have jump anims?
 									var chord = noteRows[daNote.mustPress?0:1][daNote.row];
 									var animNote = chord[0];
+									var animNote2 = chord[1];
 									var realAnim = singAnimations[Std.int(Math.abs(animNote.noteData))] + altAnim;
+									var doubleAnim = singAnimations[Std.int(Math.abs(animNote2.noteData))] + altAnim;
 									if (mom.mostRecentRow != daNote.row)
 									{
 										mom.playAnim(realAnim, true);
@@ -6721,7 +6760,7 @@ class PlayState extends MusicBeatState
 									if (!daNote.noAnimation)
 									{
 										if(mom.mostRecentRow != daNote.row)
-											doGhostAnim('mom', animToPlay + altAnim);
+											doGhostAnim('mom', doubleAnim);
 									}
 									mom.mostRecentRow = daNote.row;
 								}
@@ -6746,7 +6785,9 @@ class PlayState extends MusicBeatState
 									// potentially have jump anims?
 									var chord = noteRows[daNote.mustPress?0:1][daNote.row];
 									var animNote = chord[0];
+									var animNote2 = chord[1];
 									var realAnim = singAnimations[Std.int(Math.abs(animNote.noteData))] + altAnim;
+									var doubleAnim = singAnimations[Std.int(Math.abs(animNote2.noteData))] + altAnim;
 									if (dad.mostRecentRow != daNote.row)
 									{
 										dad.playAnim(realAnim, true);
@@ -6758,8 +6799,9 @@ class PlayState extends MusicBeatState
 									// dad.angle += 15; lmaooooo
 									if (!daNote.noAnimation)
 									{
-										if(dad.mostRecentRow != daNote.row)
-											doGhostAnim('dad', animToPlay + altAnim);
+										if(dad.mostRecentRow != daNote.row){
+											doGhostAnim('dad', doubleAnim);
+										}
 									}
 									dad.mostRecentRow = daNote.row;
 								}
@@ -7605,7 +7647,7 @@ class PlayState extends MusicBeatState
 					bfvent.animation.play('vent');
 					bfvent.alpha = 1;
 					ldSpeaker.animation.play('boom');
-					ldSpeaker.visible = true;
+					ldSpeaker.visible = gf.curCharacter!='ghostgf';
 				
 				case 'Lights Down OFF':
 					camGame.visible = false;
@@ -7644,7 +7686,9 @@ class PlayState extends MusicBeatState
 							cargoReadyKill = true;
 						case 'readykill':
 							camGame.flash(FlxColor.BLACK, 2.75);
-							triggerEventNote('Change Character', '0', 'bf-defeat-normal');
+							if(!usingBFSkin)triggerEventNote('Change Character', '0', 'bf-defeat-normal'); // so if you have a skin it wont goto this character
+							// mainly cus it irks me that it randomly goes to BF at the end lol, alternatively could turn off bf skin on double kill
+
 							defeatDKoverlay.alpha = 1;
 							lightoverlayDK.alpha = 0;
 							mainoverlayDK.alpha = 0;
@@ -7835,6 +7879,7 @@ class PlayState extends MusicBeatState
 					scaryJerma.alpha = 0;
 					FlxG.camera.zoom += 0.9;
 					camHUD.zoom += 0.9;
+		
 
 				case 'Dave AUGH':
 					var targetsArray:Array<FlxCamera> = [camGame, camHUD];
@@ -8871,7 +8916,7 @@ class PlayState extends MusicBeatState
 					trace('LOADING NEXT SONG');
 					trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
 
-					var winterHorrorlandNext = (Paths.formatToSongPath(SONG.song) == "eggnog");
+					/*var winterHorrorlandNext = (Paths.formatToSongPath(SONG.song) == "eggnog");
 					if (winterHorrorlandNext)
 					{
 						var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
@@ -8932,7 +8977,71 @@ class PlayState extends MusicBeatState
 							camGame.alpha = 0;
 							camOther.flash(FlxColor.WHITE, 3);
 						});
+					}*/
+
+					var delayedStateChange:Bool = false;
+					var changeDelay:Float= 1.5;
+					switch(Paths.formatToSongPath(SONG.song)){
+						case 'eggnog': // next is winter horrorland
+							delayedStateChange = true;
+							changeDelay = 1.5;
+							var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
+								-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+							blackShit.scrollFactor.set();
+							add(blackShit);
+							camHUD.visible = false;
+
+							FlxG.sound.play(Paths.sound('Lights_Shut_off'));
+						case 'pinkwave': // next is pretender
+							delayedStateChange = true;
+							changeDelay = 9;
+
+							camZooming = true;
+							greymira.alpha = 0;
+							cyanmira.alpha = 0;
+							greytender.alpha = 1;
+							noootomatomongus.alpha = 1;
+							longfuckery.alpha = 1;
+							noootomatomongus.animation.play('anim');
+							longfuckery.animation.play('anim');
+							greytender.animation.play('anim');
+							ventNotSus.animation.play('anim');
+							pretenderDark.animation.play('anim');
+							FlxG.sound.play(Paths.sound('pretender_kill', 'impostor'));
+							defaultCamZoom = 0.75;
+
+							FlxTween.tween(camHUD, {alpha: 0}, 0.4);
+							FlxTween.tween(gf, {alpha: 0.1}, 0.4);
+							FlxTween.tween(dad, {alpha: 0.25}, 0.4);
+							FlxTween.tween(boyfriend, {alpha: 0.25}, 0.4);
+						case 'reinforcements': // next is armed
+							delayedStateChange = true;
+							changeDelay = 6;
+
+							FlxTween.tween(camHUD, {alpha: 0}, 0.4);
+							FlxG.sound.play(Paths.sound('rhm_crash', 'impostor'));
+							dad.playAnim('armed');
+							dad.specialAnim = true;
+							mom.playAnim('armed');
+							mom.specialAnim = true;
+
+							new FlxTimer().start(2.1, function(tmr:FlxTimer)
+							{
+								camGame.shake(0.005, 0.9);
+							});
+
+							new FlxTimer().start(2.8, function(tmr:FlxTimer)
+							{
+								armedGuy.alpha = 1;
+								armedGuy.animation.play('crash');
+							});
+							new FlxTimer().start(3, function(tmr:FlxTimer)
+							{
+								camGame.alpha = 0;
+								camOther.flash(FlxColor.WHITE, 3);
+							});
 					}
+
 
 					FlxTransitionableState.skipNextTransIn = true;
 					FlxTransitionableState.skipNextTransOut = true;
@@ -8942,36 +9051,14 @@ class PlayState extends MusicBeatState
 
 					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
 					FlxG.sound.music.stop();
-
-					if (winterHorrorlandNext)
-					{
-						new FlxTimer().start(1.5, function(tmr:FlxTimer)
+					if(delayedStateChange){
+						new FlxTimer().start(changeDelay, function(tmr:FlxTimer)
 						{
 							cancelFadeTween();
 							// resetSpriteCache = true;
 							LoadingState.loadAndSwitchState(new PlayState());
 						});
-					}
-					else if(pretenderNext)
-					{
-						new FlxTimer().start(9, function(tmr:FlxTimer)
-						{
-							cancelFadeTween();
-							// resetSpriteCache = true;
-							LoadingState.loadAndSwitchState(new PlayState());
-						});
-					}
-					else if(armedNext)
-					{
-						new FlxTimer().start(6, function(tmr:FlxTimer)
-						{
-							cancelFadeTween();
-							// resetSpriteCache = true;
-							LoadingState.loadAndSwitchState(new PlayState());
-						});
-					}
-					else
-					{
+					}else{
 						cancelFadeTween();
 						// resetSpriteCache = true;
 						LoadingState.loadAndSwitchState(new PlayState());
@@ -9132,6 +9219,9 @@ class PlayState extends MusicBeatState
 					player = mom;
 			}
 	
+			var direction:String = animToPlay.substring(4);
+			var direction2:String = player.animation.name.substring(4);
+			var bpmTime:Float = SONG.bpm * 0.0015;
 									
 			ghost.frames = player.frames;
 			ghost.animation.copyFrom(player.animation);
@@ -9148,6 +9238,7 @@ class PlayState extends MusicBeatState
 			switch(curStage.toLowerCase()){
 				case 'who' | 'voting' | 'nuzzus' | 'idk':
 					//erm
+					//buddy...
 				case 'cargo' | 'finalem':
 					FlxG.camera.zoom += 0.015;
 					camHUD.zoom += 0.015;
@@ -9155,15 +9246,32 @@ class PlayState extends MusicBeatState
 					FlxG.camera.zoom += 0.015;
 					camHUD.zoom += 0.03;
 			}
-	
+
+			var directionMap:Map<String, Array<Float>> = [
+				'UP' => [0, -30],
+				'DOWN' => [0, 30],
+				'RIGHT' => [30, 0],
+				'LEFT' => [-30, 0],
+				'UP-alt' => [0, -30],
+				'DOWN-alt' => [0, 30],
+				'RIGHT-alt' => [30, 0],
+				'LEFT-alt' => [-30, 0],
+			];
+			//had to add alt cuz it kept crashing on room code LOL
+
+			var moveDirections:Array<Float> = [
+				player.x + (directionMap.get(direction)[0] + directionMap.get(direction2)[0]),
+				player.y + (directionMap.get(direction)[1] + directionMap.get(direction2)[1])
+			];
+
 			switch (char.toLowerCase().trim())
 			{
 				case 'bf' | 'boyfriend' | '0':
 					if (bfGhostTween != null)
 						bfGhostTween.cancel();
 					ghost.color = FlxColor.fromRGB(boyfriend.healthColorArray[0] + 50, boyfriend.healthColorArray[1] + 50, boyfriend.healthColorArray[2] + 50);
-					bfGhostTween = FlxTween.tween(bfGhost, {alpha: 0}, 0.75, {
-						ease: FlxEase.linear,
+					bfGhostTween = FlxTween.tween(bfGhost, {alpha: 0, x: moveDirections[0], y: moveDirections[1]}, bpmTime, {
+						ease: FlxEase.quadInOut,
 						onComplete: function(twn:FlxTween)
 						{
 							bfGhostTween = null;
@@ -9174,8 +9282,8 @@ class PlayState extends MusicBeatState
 					if (dadGhostTween != null)
 						dadGhostTween.cancel();
 					ghost.color = FlxColor.fromRGB(dad.healthColorArray[0] + 50, dad.healthColorArray[1] + 50, dad.healthColorArray[2] + 50);
-					dadGhostTween = FlxTween.tween(dadGhost, {alpha: 0}, 0.75, {
-						ease: FlxEase.linear,
+					dadGhostTween = FlxTween.tween(dadGhost, {alpha: 0, x: moveDirections[0], y: moveDirections[1]}, bpmTime, {
+						ease: FlxEase.quadInOut,
 						onComplete: function(twn:FlxTween)
 						{
 							dadGhostTween = null;
@@ -9185,14 +9293,18 @@ class PlayState extends MusicBeatState
 					if (momGhostTween != null)
 						momGhostTween.cancel();
 					ghost.color = FlxColor.fromRGB(mom.healthColorArray[0] + 50, mom.healthColorArray[1] + 50, mom.healthColorArray[2] + 50);
-					momGhostTween = FlxTween.tween(momGhost, {alpha: 0}, 0.75, {
-						ease: FlxEase.linear,
+					momGhostTween = FlxTween.tween(momGhost, {alpha: 0, x: moveDirections[0], y: moveDirections[1]}, bpmTime, {
+						ease: FlxEase.quadInOut,
 						onComplete: function(twn:FlxTween)
 						{
 							momGhostTween = null;
 						}
 					});
 			}
+			#if debug
+			trace('DIRECTION: $direction + $direction2 | TIME: $bpmTime');
+			trace("X: " + moveDirections[0] + " Y: " + moveDirections[1]);
+			#end
 		}
 
 	private function popUpScore(note:Note = null):Void
@@ -9662,7 +9774,9 @@ class PlayState extends MusicBeatState
 							// potentially have jump anims?
 							var chord = noteRows[note.mustPress?0:1][note.row];
 							var animNote = chord[0];
+							var animNote2 = chord[1];
 							var realAnim = singAnimations[Std.int(Math.abs(animNote.noteData))] + daAlt;
+							var doubleAnim = singAnimations[Std.int(Math.abs(animNote2.noteData))] + daAlt;
 							if (boyfriend.mostRecentRow != note.row)
 							{
 								boyfriend.playAnim(realAnim, true);
@@ -9676,7 +9790,7 @@ class PlayState extends MusicBeatState
 							if (!note.noAnimation)
 							{
 								if(boyfriend.mostRecentRow != note.row)
-									doGhostAnim('bf', animToPlay + daAlt);
+									doGhostAnim('bf', doubleAnim);
 							}
 							boyfriend.mostRecentRow = note.row;
 						}
@@ -10260,6 +10374,11 @@ class PlayState extends MusicBeatState
 					bg_vic.animation.play('bop', true);
 					vicPulse.animation.play('pulsate', true);
 					bg_jelq.animation.play('bop', true);
+				}
+				if (curBeat % 4 == 0)
+				{
+					fuckingBloomShader.blurSize = 0.5;
+					fuckingBloomShader.intensity = 0.125;
 				}
 	
 			case 'polus3':
