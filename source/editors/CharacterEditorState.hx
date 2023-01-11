@@ -438,7 +438,7 @@ class CharacterEditorState extends MusicBeatState
 			char.antialiasing = false;
 			if (!noAntialiasingCheckBox.checked && ClientPrefs.globalAntialiasing)
 			{
-				char.antialiasing = !ClientPrefs.lowQuality;
+				char.antialiasing = true;
 			}
 			char.noAntialiasing = noAntialiasingCheckBox.checked;
 		};
