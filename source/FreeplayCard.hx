@@ -57,7 +57,7 @@ class FreeplayCard extends FlxSprite
 		visible = false;
 
 		spriteOne = new FlxSprite(trueX, trueY).loadGraphic(Paths.image('freeplay/songPanel', 'impostor'));
-		spriteOne.antialiasing = true;
+		spriteOne.antialiasing = !ClientPrefs.lowQuality;
 		spriteOne.updateHitbox();
 
 		lock = new FlxSprite(0, 0);
@@ -68,32 +68,32 @@ class FreeplayCard extends FlxSprite
 		lock.animation.addByPrefix('lock', 'lock0', 24, true);
 		lock.animation.addByPrefix('unlock', 'lock open', 24, false);
 		lock.animation.play('lock');
-		lock.antialiasing = true;
+		lock.antialiasing = !ClientPrefs.lowQuality;
 		lock.updateHitbox();
 
 		priceText = new FlxText(0, 0, 500, Std.string(price), 28);
 		priceText.setFormat(Paths.font("ariblk.ttf"), 28, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		priceText.updateHitbox();
 		priceText.borderSize = 2;
-		priceText.antialiasing = true;
+		priceText.antialiasing = !ClientPrefs.lowQuality;
 
 		bean = new FlxSprite(trueX, trueY).loadGraphic(Paths.image('freeplay/bean', 'impostor'));
 		bean.scale.set(0.6, 0.6);
-		bean.antialiasing = true;
+		bean.antialiasing = !ClientPrefs.lowQuality;
 		bean.updateHitbox();
 
 		var name:String = 'icons/icon-' + iconName;
 		var file:Dynamic = Paths.image(name);
 
 		icon = new FlxSprite(trueX - 13, trueY - 23).loadGraphic(file, true, 150, 150);
-		icon.antialiasing = true;
+		icon.antialiasing = !ClientPrefs.lowQuality;
 		icon.updateHitbox();
 		icon.setGraphicSize(Std.int(icon.width * 0.6));
 
 		songText = new FlxText(trueX + 50, trueY - 23, 0, song, 48);
 		songText.setFormat(Paths.font('AmaticSC-Bold.ttf'), 64, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		songText.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 1, 1);
-		songText.antialiasing = true;
+		songText.antialiasing = !ClientPrefs.lowQuality;
 		songText.updateHitbox();
 
 		for (i in 0...song.length)

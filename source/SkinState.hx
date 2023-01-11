@@ -50,14 +50,14 @@ class SkinState extends MusicBeatState
 		transOut = FlxTransitionableState.defaultTransOut;
 
 		space = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-		space.antialiasing = true;
+		space.antialiasing = !ClientPrefs.lowQuality;
 		space.updateHitbox();
 		space.scrollFactor.set();
 		add(space);
 
 		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
 		starsBG.setPosition(111.3, 67.95);
-		starsBG.antialiasing = true;
+		starsBG.antialiasing = !ClientPrefs.lowQuality;
 		starsBG.updateHitbox();
 		starsBG.scrollFactor.set();
 		add(starsBG);
@@ -65,7 +65,7 @@ class SkinState extends MusicBeatState
 		starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'), 1, 1, true, true);
 		starsFG.setPosition(54.3, 59.45);
 		starsFG.updateHitbox();
-		starsFG.antialiasing = true;
+		starsFG.antialiasing = !ClientPrefs.lowQuality;
 		starsFG.scrollFactor.set();
 		add(starsFG);
 

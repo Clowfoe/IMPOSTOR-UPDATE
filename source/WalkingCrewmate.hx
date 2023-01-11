@@ -35,7 +35,7 @@ class WalkingCrewmate extends FlxSprite
 		animation.addByPrefix('walk', thecolor, 24, true);
 		animation.addByIndices('idle', thecolor, [8], "", 24, true);
 		animation.play('walk');
-		antialiasing = true;
+		antialiasing = !ClientPrefs.lowQuality;
 		scrollFactor.set(1, 1);
 
 		setNewActionTime();

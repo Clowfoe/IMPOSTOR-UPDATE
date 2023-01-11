@@ -177,13 +177,13 @@ class TitleState extends MusicBeatState
 
 		starFG = new FlxBackdrop(Paths.image('menuBooba/starFG', 'impostor'), 1, 1, true, true);
 		starFG.updateHitbox();
-		starFG.antialiasing = true;
+		starFG.antialiasing = !ClientPrefs.lowQuality;
 		starFG.scrollFactor.set();
 		add(starFG);
 
 		starBG = new FlxBackdrop(Paths.image('menuBooba/starBG', 'impostor'), 1, 1, true, true);
 		starBG.updateHitbox();
-		starBG.antialiasing = true;
+		starBG.antialiasing = !ClientPrefs.lowQuality;
 		starBG.scrollFactor.set();
 		add(starBG);
 

@@ -79,19 +79,19 @@ class MainMenuState extends MusicBeatState
 		bg.scrollFactor.set();
 		if (FlxG.save.data.antialiasing)
 		{
-			bg.antialiasing = true;
+			bg.antialiasing = !ClientPrefs.lowQuality;
 		}
 		add(bg);
 
 		starFG = new FlxBackdrop(Paths.image('menuBooba/starFG', 'impostor'), 1, 1, true, true);
 		starFG.updateHitbox();
-		starFG.antialiasing = true;
+		starFG.antialiasing = !ClientPrefs.lowQuality;
 		starFG.scrollFactor.set();
 		add(starFG);
 
 		starBG = new FlxBackdrop(Paths.image('menuBooba/starBG', 'impostor'), 1, 1, true, true);
 		starBG.updateHitbox();
-		starBG.antialiasing = true;
+		starBG.antialiasing = !ClientPrefs.lowQuality;
 		starBG.scrollFactor.set();
 		add(starBG);
 
@@ -100,7 +100,7 @@ class MainMenuState extends MusicBeatState
 		redImpostor.animation.addByPrefix('idle', 'red idle', 24, true);
 		redImpostor.animation.addByPrefix('select', 'red select', 24, false);
 		redImpostor.animation.play('idle');
-		redImpostor.antialiasing = true;
+		redImpostor.antialiasing = !ClientPrefs.lowQuality;
 		redImpostor.updateHitbox();
 		redImpostor.active = true;
 		redImpostor.scale.set(0.7, 0.7);
@@ -112,7 +112,7 @@ class MainMenuState extends MusicBeatState
 		greenImpostor.animation.addByPrefix('idle', 'green idle', 24, true);
 		greenImpostor.animation.addByPrefix('select', 'green select', 24, false);
 		greenImpostor.animation.play('idle');
-		greenImpostor.antialiasing = true;
+		greenImpostor.antialiasing = !ClientPrefs.lowQuality;
 		greenImpostor.updateHitbox();
 		greenImpostor.active = true;
 		greenImpostor.scale.set(0.7, 0.7);
@@ -126,14 +126,14 @@ class MainMenuState extends MusicBeatState
 		}
 
 		vignette = new FlxSprite(0, 0).loadGraphic(Paths.image('menuBooba/vignette', 'impostor'));
-		vignette.antialiasing = true;
+		vignette.antialiasing = !ClientPrefs.lowQuality;
 		vignette.updateHitbox();
 		vignette.active = false;
 		vignette.scrollFactor.set();
 		add(vignette);
 
 		glowyThing = new FlxSprite(361, 438).loadGraphic(Paths.image('menuBooba/buttonglow', 'impostor'));
-		glowyThing.antialiasing = true;
+		glowyThing.antialiasing = !ClientPrefs.lowQuality;
 		glowyThing.scale.set(0.51, 0.51);
 		glowyThing.updateHitbox();
 		glowyThing.active = false;
@@ -158,7 +158,7 @@ class MainMenuState extends MusicBeatState
 			testButton.animation.addByPrefix('idle', optionShit[i] + ' Button', 24, true);
 			testButton.animation.addByPrefix('hover', optionShit[i] + ' Select', 24, true);
 			testButton.animation.play('idle');
-			testButton.antialiasing = true;
+			testButton.antialiasing = !ClientPrefs.lowQuality;
 			testButton.scale.set(0.50, 0.50);
 			testButton.updateHitbox();
 			testButton.screenCenter(X);
@@ -193,7 +193,7 @@ class MainMenuState extends MusicBeatState
 		logo.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logo.screenCenter();
 		logo.updateHitbox();
-		logo.antialiasing = true;
+		logo.antialiasing = !ClientPrefs.lowQuality;
 		logo.scale.set(0.65, 0.65);
 		logo.y -= 160;
 		add(logo);

@@ -148,7 +148,7 @@ class AmongStoryMenuState extends MusicBeatState
 
 		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
 		starsBG.setPosition(111.3, 67.95);
-		starsBG.antialiasing = true;
+		starsBG.antialiasing = !ClientPrefs.lowQuality;
 		starsBG.updateHitbox();
 		starsBG.scrollFactor.set();
 		add(starsBG);
@@ -156,13 +156,13 @@ class AmongStoryMenuState extends MusicBeatState
 		starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'), 1, 1, true, true);
 		starsFG.setPosition(54.3, 59.45);
 		starsFG.updateHitbox();
-		starsFG.antialiasing = true;
+		starsFG.antialiasing = !ClientPrefs.lowQuality;
 		starsFG.scrollFactor.set();
 		add(starsFG);
 
 		finaleAura = new FlxSprite(710, -500).loadGraphic(Paths.image('storymenu/finaleAura', 'impostor'));
 		finaleAura.updateHitbox();
-		finaleAura.antialiasing = true;
+		finaleAura.antialiasing = !ClientPrefs.lowQuality;
 		finaleAura.scale.set(2.5, 2.5);
 		if (localFinaleState == NOT_PLAYED)
 			add(finaleAura);
@@ -556,7 +556,7 @@ class AmongStoryMenuState extends MusicBeatState
 		panel.animation.addByPrefix('left', 'DifficultyScreenLeft', 24, false);
 		panel.animation.addByPrefix('right', 'DifficultyScreenRight', 24, false);
 		panel.animation.play('idle');
-		panel.antialiasing = true;
+		panel.antialiasing = !ClientPrefs.lowQuality;
 		panel.updateHitbox();
 		panel.scrollFactor.set();
 		panel.cameras = [camScreen];

@@ -61,7 +61,7 @@ class ShopNode extends FlxSprite
 		skinType = _skinType;
 
 		connector = new FlxSprite(0, 0).loadGraphic(Paths.image('shop/connector', 'impostor'));
-		connector.antialiasing = true;
+		connector.antialiasing = !ClientPrefs.lowQuality;
 		connector.updateHitbox();
 		connector.visible = false;
 
@@ -69,20 +69,20 @@ class ShopNode extends FlxSprite
 		outline.frames = Paths.getSparrowAtlas('shop/node', 'impostor');
 		outline.animation.addByPrefix('guh', 'back', 24, true);
 		outline.animation.play('guh');
-		outline.antialiasing = true;
+		outline.antialiasing = !ClientPrefs.lowQuality;
 		outline.updateHitbox();
 
 		frames = Paths.getSparrowAtlas('shop/node', 'impostor');
 		animation.addByPrefix('guh', 'emptysquare', 24, true);
 		animation.play('guh');
-		antialiasing = true;
+		antialiasing = !ClientPrefs.lowQuality;
 		updateHitbox();
 
 		overlay = new FlxSprite(0, 0);
 		overlay.frames = Paths.getSparrowAtlas('shop/node', 'impostor');
 		overlay.animation.addByPrefix('guh', 'overlay', 24, true);
 		overlay.animation.play('guh');
-		overlay.antialiasing = true;
+		overlay.antialiasing = !ClientPrefs.lowQuality;
 		overlay.updateHitbox();
 
 		if (skinType == PET)
@@ -106,7 +106,7 @@ class ShopNode extends FlxSprite
 		text = new FlxText(0, 0, width, Std.string(price), 36);
 		text.setFormat(Paths.font("ariblk.ttf"), 36, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		text.borderSize = 3;
-		text.antialiasing = true;
+		text.antialiasing = !ClientPrefs.lowQuality;
 		text.updateHitbox();
 	}
 
@@ -149,13 +149,13 @@ class ShopNode extends FlxSprite
 			portrait.frames = Paths.getSparrowAtlas('shop/portraits', 'impostor');
 			portrait.animation.addByPrefix('guh', name, 0, false);
 			portrait.animation.play('guh');
-			portrait.antialiasing = true;
+			portrait.antialiasing = !ClientPrefs.lowQuality;
 			portrait.updateHitbox();
 		}
 		else
 		{
 			portrait = new FlxSprite(0, 0).loadGraphic(Paths.image('shop/missing', 'impostor'));
-			portrait.antialiasing = true;
+			portrait.antialiasing = !ClientPrefs.lowQuality;
 			portrait.updateHitbox();
 		}
 	}
@@ -172,7 +172,7 @@ class ShopNode extends FlxSprite
 		icon = new FlxSprite(0, 0).loadGraphic(file, true, 150, 150);
 		icon.animation.add('ball', [0], 0, false, false);
 		icon.animation.play('ball');
-		icon.antialiasing = true;
+		icon.antialiasing = !ClientPrefs.lowQuality;
 
 		if (skinType == PET)
 			icon.alpha = 0;

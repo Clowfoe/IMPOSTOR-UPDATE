@@ -241,41 +241,41 @@ class AmongCreditsState extends MusicBeatState
 		camFollowPos.setPosition(660, 370);
 
 		wallback = new FlxSprite().loadGraphic(Paths.image('credits/wallback', 'impostor'));
-		wallback.antialiasing = true;
+		wallback.antialiasing = !ClientPrefs.lowQuality;
 		wallback.scale.set(1.3, 1.3);
 		add(wallback);
 
 		portrait = new FlxSprite(0, 100).loadGraphic(Paths.image('credits/portraits/clow', 'impostor'));
-		portrait.antialiasing = true;
+		portrait.antialiasing = !ClientPrefs.lowQuality;
 		add(portrait);
 
 		frame = new FlxSprite(0, 50).loadGraphic(Paths.image('credits/frame', 'impostor'));
-		frame.antialiasing = true;
+		frame.antialiasing = !ClientPrefs.lowQuality;
 		add(frame);
 
 		dumnote = new FlxSprite(0, 30).loadGraphic(Paths.image('credits/stickynote', 'impostor'));
-		dumnote.antialiasing = true;
+		dumnote.antialiasing = !ClientPrefs.lowQuality;
 		dumnote.scale.set(1.25, 1.25);
 		add(dumnote);
 
 		lamplight = new FlxSprite(0, 100).loadGraphic(Paths.image('credits/lamplight', 'impostor'));
-		lamplight.antialiasing = true;
+		lamplight.antialiasing = !ClientPrefs.lowQuality;
 		lamplight.x = (FlxG.width / 2) - (lamplight.width / 2);
 		lamplight.blend = ADD;
 		lamplight.alpha = 0.2;
 		add(lamplight);
 
 		lamp = new FlxSprite(0, -50).loadGraphic(Paths.image('credits/lamp', 'impostor'));
-		lamp.antialiasing = true;
+		lamp.antialiasing = !ClientPrefs.lowQuality;
 		lamp.x = (FlxG.width / 2) - (lamp.width / 2);
 		add(lamp);
 
 		tree1 = new FlxSprite(-400, 0).loadGraphic(Paths.image('credits/tree', 'impostor'));
-		tree1.antialiasing = true;
+		tree1.antialiasing = !ClientPrefs.lowQuality;
 		add(tree1);
 
 		tree2 = new FlxSprite(1050, 0).loadGraphic(Paths.image('credits/tree2', 'impostor'));
-		tree2.antialiasing = true;
+		tree2.antialiasing = !ClientPrefs.lowQuality;
 		add(tree2);
 
 		mole = new FlxSprite(621, 620).loadGraphic(Paths.image('credits/mole', 'impostor'));

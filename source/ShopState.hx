@@ -435,7 +435,7 @@ class ShopState extends MusicBeatState
 		// camStars.follow(camFollowPos, null, 2);
 
 		starsBG = new Haxe5Backdrop(Paths.image('shop/starBG', 'impostor'), XY, 0, 0);
-		starsBG.antialiasing = true;
+		starsBG.antialiasing = !ClientPrefs.lowQuality;
 		starsBG.updateHitbox();
 		// starsBG.cameras = [camStars];
 		starsBG.scrollFactor.set(0.3, 0.3);
@@ -443,7 +443,7 @@ class ShopState extends MusicBeatState
 
 		starsFG = new Haxe5Backdrop(Paths.image('shop/starFG', 'impostor'), XY, 0, 0);
 		starsFG.updateHitbox();
-		starsFG.antialiasing = true;
+		starsFG.antialiasing = !ClientPrefs.lowQuality;
 		// starsFG.cameras = [camStars];
 		starsFG.scrollFactor.set(0.5, 0.5);
 		add(starsFG);
@@ -499,7 +499,7 @@ class ShopState extends MusicBeatState
 		equipbutton.animation.addByPrefix('grey', 'grey', 0, false);
 		equipbutton.animation.addByPrefix('locked', 'locked', 0, false);
 		equipbutton.animation.play('buy');
-		equipbutton.antialiasing = true;
+		equipbutton.antialiasing = !ClientPrefs.lowQuality;
 		equipbutton.scale.set(0.8, 0.8);
 		equipbutton.updateHitbox();
 		equipbutton.scrollFactor.set();
@@ -511,7 +511,7 @@ class ShopState extends MusicBeatState
 		equipText.updateHitbox();
 		equipText.borderSize = 3;
 		equipText.scrollFactor.set();
-		equipText.antialiasing = true;
+		equipText.antialiasing = !ClientPrefs.lowQuality;
 		equipText.cameras = [camUpper];
 		add(equipText);
 
@@ -520,7 +520,7 @@ class ShopState extends MusicBeatState
 		charName.updateHitbox();
 		charName.borderSize = 3;
 		charName.scrollFactor.set();
-		charName.antialiasing = true;
+		charName.antialiasing = !ClientPrefs.lowQuality;
 		charName.cameras = [camUpper];
 		add(charName);
 
@@ -529,19 +529,19 @@ class ShopState extends MusicBeatState
 		charDesc.updateHitbox();
 		charDesc.borderSize = 1;
 		charDesc.scrollFactor.set();
-		charDesc.antialiasing = true;
+		charDesc.antialiasing = !ClientPrefs.lowQuality;
 		charDesc.cameras = [camUpper];
 		add(charDesc);
 
 		upperBar = new FlxSprite(-2, -1.4).loadGraphic(Paths.image('freeplay/topBar', 'impostor'));
-		upperBar.antialiasing = true;
+		upperBar.antialiasing = !ClientPrefs.lowQuality;
 		upperBar.updateHitbox();
 		upperBar.scrollFactor.set();
 		upperBar.cameras = [camUpper];
 		add(upperBar);
 
 		crossImage = new FlxSprite(12.50, 8.05).loadGraphic(Paths.buttonimage('freeplay/menuBack', 'impostor'));
-		crossImage.antialiasing = true;
+		crossImage.antialiasing = !ClientPrefs.lowQuality;
 		crossImage.scrollFactor.set();
 		crossImage.updateHitbox();
 		crossImage.cameras = [camUpper];
@@ -552,7 +552,7 @@ class ShopState extends MusicBeatState
 		}, null, null);
 
 		topBean = new FlxSprite(30, 100).loadGraphic(Paths.image('shop/bean', 'impostor'));
-		topBean.antialiasing = true;
+		topBean.antialiasing = !ClientPrefs.lowQuality;
 		topBean.cameras = [camUpper];
 		topBean.updateHitbox();
 		add(topBean);
@@ -562,7 +562,7 @@ class ShopState extends MusicBeatState
 		beanText.updateHitbox();
 		beanText.borderSize = 3;
 		beanText.scrollFactor.set();
-		beanText.antialiasing = true;
+		beanText.antialiasing = !ClientPrefs.lowQuality;
 		beanText.cameras = [camUpper];
 		add(beanText);
 
@@ -1036,7 +1036,7 @@ class BeansPopup extends FlxSpriteGroup
 
 		bean = new FlxSprite(0, 0).loadGraphic(Paths.image('shop/bean', 'impostor'));
 		bean.setPosition(popupBG.getGraphicMidpoint().x - 90, popupBG.getGraphicMidpoint().y - (bean.height / 2));
-		bean.antialiasing = true;
+		bean.antialiasing = !ClientPrefs.lowQuality;
 		bean.updateHitbox();
 		bean.scrollFactor.set();
 		add(bean);
@@ -1047,7 +1047,7 @@ class BeansPopup extends FlxSpriteGroup
 		theText.updateHitbox();
 		theText.borderSize = 3;
 		theText.scrollFactor.set();
-		theText.antialiasing = true;
+		theText.antialiasing = !ClientPrefs.lowQuality;
 		add(theText);
 
 		bean.shader = colorShader.shader;

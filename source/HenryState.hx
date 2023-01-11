@@ -81,9 +81,9 @@ class HenryState extends MusicBeatState
 		add(stare);
 		add(mic);
 
-		mic.antialiasing = true;
-		stare.antialiasing = true;
-		sock.antialiasing = true;
+		mic.antialiasing = !ClientPrefs.lowQuality;
+		stare.antialiasing = !ClientPrefs.lowQuality;
+		sock.antialiasing = !ClientPrefs.lowQuality;
 
 		mic.screenCenter();
 		mic.x -= FlxG.width * 0.15;

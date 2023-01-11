@@ -138,14 +138,14 @@ class AmongFreeplayState extends MusicBeatState
 		persistentDraw = true;
 
 		space = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-		space.antialiasing = true;
+		space.antialiasing = !ClientPrefs.lowQuality;
 		space.updateHitbox();
 		space.scrollFactor.set();
 		add(space);
 
 		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
 		starsBG.setPosition(111.3, 67.95);
-		starsBG.antialiasing = true;
+		starsBG.antialiasing = !ClientPrefs.lowQuality;
 		starsBG.updateHitbox();
 		starsBG.scrollFactor.set();
 		add(starsBG);
@@ -153,12 +153,12 @@ class AmongFreeplayState extends MusicBeatState
 		starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'), 1, 1, true, true);
 		starsFG.setPosition(54.3, 59.45);
 		starsFG.updateHitbox();
-		starsFG.antialiasing = true;
+		starsFG.antialiasing = !ClientPrefs.lowQuality;
 		starsFG.scrollFactor.set();
 		add(starsFG);
 
 		porGlow = new FlxSprite(-11.1, -12.65).loadGraphic(Paths.image('freeplay/backGlow', 'impostor'));
-		porGlow.antialiasing = true;
+		porGlow.antialiasing = !ClientPrefs.lowQuality;
 		porGlow.updateHitbox();
 		porGlow.scrollFactor.set();
 		porGlow.color = FlxColor.RED;
@@ -210,14 +210,14 @@ class AmongFreeplayState extends MusicBeatState
 		portrait.animation.addByIndices('idk', 'Character', [41], null, 24, true);
 		portrait.animation.addByIndices('esculent', 'Character', [42], null, 24, true);
 		portrait.animation.play('red');
-		portrait.antialiasing = true;
+		portrait.antialiasing = !ClientPrefs.lowQuality;
 		portrait.setPosition(304.65, -100);
 		portrait.updateHitbox();
 		portrait.scrollFactor.set();
 		add(portrait);
 
 		infoText = new FlxText(1071.05, 91, 0, '291921 \n Rating: 32 \n', 48);
-		infoText.antialiasing = true;
+		infoText.antialiasing = !ClientPrefs.lowQuality;
 		infoText.updateHitbox();
 		infoText.scrollFactor.set();
 		infoText.setFormat(Paths.font("vcr.ttf"), 36, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -282,14 +282,14 @@ class AmongFreeplayState extends MusicBeatState
 		}
 
 		upperBar = new FlxSprite(-2, -1.4).loadGraphic(Paths.image('freeplay/topBar', 'impostor'));
-		upperBar.antialiasing = true;
+		upperBar.antialiasing = !ClientPrefs.lowQuality;
 		upperBar.updateHitbox();
 		upperBar.scrollFactor.set();
 		upperBar.cameras = [camUpper];
 		add(upperBar);
 
 		crossImage = new FlxSprite(12.50, 8.05).loadGraphic(Paths.buttonimage('freeplay/menuBack', 'impostor'));
-		crossImage.antialiasing = true;
+		crossImage.antialiasing = !ClientPrefs.lowQuality;
 		crossImage.scrollFactor.set();
 		crossImage.updateHitbox();
 		crossImage.cameras = [camUpper];
@@ -314,7 +314,7 @@ class AmongFreeplayState extends MusicBeatState
 		portrait.shader = rimlight.shader;
 
 		topBean = new FlxSprite(30, 100).loadGraphic(Paths.image('shop/bean', 'impostor'));
-		topBean.antialiasing = true;
+		topBean.antialiasing = !ClientPrefs.lowQuality;
 		topBean.cameras = [camUpper];
 		topBean.updateHitbox();
 		add(topBean);
@@ -324,7 +324,7 @@ class AmongFreeplayState extends MusicBeatState
 		beanText.updateHitbox();
 		beanText.borderSize = 3;
 		beanText.scrollFactor.set();
-		beanText.antialiasing = true;
+		beanText.antialiasing = !ClientPrefs.lowQuality;
 		beanText.cameras = [camUpper];
 		add(beanText);
 
