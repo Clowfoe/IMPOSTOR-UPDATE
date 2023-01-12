@@ -2,6 +2,7 @@ package;
 
 import flixel.FlxBasic;
 import flixel.FlxG;
+import sys.FileSystem;
 
 class FlxVideo extends FlxBasic
 {
@@ -19,7 +20,14 @@ class FlxVideo extends FlxBasic
 			if (finishCallback != null)
 				finishCallback();
 		}
-		video.playVideo(SUtil.getStorageDirectory() + path, false, false);
+
+		if (FileSystem.exists(SUtil.getStorageDirectory() + path))
+			video.playVideo(SUtil.getStorageDirectory() + path, false, false);
+		else
+		{
+			if (finishCallback != null)
+				finishCallback();
+		}
 		#else
 		if (finishCallback != null)
 			finishCallback();
