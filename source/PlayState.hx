@@ -5074,6 +5074,9 @@ class PlayState extends MusicBeatState
 
 	function instantStart():Void
 	{
+		#if mobile
+		hitbox.visible = true;
+		#end
 		generateStaticArrows(0);
 		generateStaticArrows(1);
 		for (i in 0...playerStrums.length)
