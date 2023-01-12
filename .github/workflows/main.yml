@@ -76,5 +76,5 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: androidBuild-${{ matrix.arch }}
-          path: export/android/bin/app/build/outputs/apk/debug
+          path: export/${{ matrix.arch }}/android/bin/app/build/outputs/apk/debug
           if-no-files-found: error
