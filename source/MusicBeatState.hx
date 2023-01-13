@@ -132,18 +132,16 @@ class MusicBeatState extends FlxUIState
 
 	override function create()
 	{
-		var skip:Bool = FlxTransitionableState.skipNextTransOut;
-		super.create();
-
 		Paths.clearStoredMemory();
 		if ((!Std.isOfType(this, PlayState)) && (!Std.isOfType(this, ChartingState)))
 			Paths.clearUnusedMemory();
 
+		super.create();
+
 		// Custom made Trans out
-		if (!skip)
-		{
+		if (!FlxTransitionableState.skipNextTransOut)
 			openSubState(new CustomFadeTransition(1, true));
-		}
+
 		FlxTransitionableState.skipNextTransOut = false;
 	}
 
