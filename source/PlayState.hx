@@ -6690,58 +6690,74 @@ class PlayState extends MusicBeatState
 							mom.holdTimer = 0;
 							dad.playAnim(animToPlay + altAnim, true);
 							dad.holdTimer = 0;
-							switch(curStage){
-								case 'cargo':
-									healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
-									iconP2.changeIcon('whiteblack');	
-									botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-									scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-	
-							}
 						}
-						else if (daNote.noteType == 'Opponent 2 Sing' || opponent2sing == true)
+						else if (daNote.noteType == 'Opponent 2 Sing')
 						{
-							mom.holdTimer = 0;
-							if (!daNote.isSustainNote && noteRows[daNote.mustPress?0:1][daNote.row].length > 1)
-								{
-									// potentially have jump anims?
-									var chord = noteRows[daNote.mustPress?0:1][daNote.row];
-									var animNote = chord[0];
-									var realAnim = singAnimations[Std.int(Math.abs(animNote.noteData))] + altAnim;
-									if (mom.mostRecentRow != daNote.row)
+							if(opponent2sing == true){
+								dad.holdTimer = 0;
+								if (!daNote.isSustainNote && noteRows[daNote.mustPress?0:1][daNote.row].length > 1)
 									{
-										mom.playAnim(realAnim, true);
+										// potentially have jump anims?
+										var chord = noteRows[daNote.mustPress?0:1][daNote.row];
+										var animNote = chord[0];
+										var realAnim = singAnimations[Std.int(Math.abs(animNote.noteData))] + altAnim;
+										if (dad.mostRecentRow != daNote.row)
+										{
+											dad.playAnim(realAnim, true);
+										}
+					
+										// if (daNote != animNote)
+										// dad.playGhostAnim(chord.indexOf(daNote)-1, animToPlay, true);
+					
+										// dad.angle += 15; lmaooooo
+										if (!daNote.noAnimation)
+										{
+											if(dad.mostRecentRow != daNote.row)
+												doGhostAnim('dad', animToPlay + altAnim);
+										}
+										dad.mostRecentRow = daNote.row;
 									}
-				
-									// if (daNote != animNote)
-									// mom.playGhostAnim(chord.indexOf(daNote)-1, animToPlay, true);
-				
-									
-									// mom.angle += 15; lmaooooo
-									if (!daNote.noAnimation)
+									else{
+										dad.playAnim(animToPlay + altAnim, true);
+										// dad.angle = 0;
+									}
+							}
+							else{
+								mom.holdTimer = 0;
+								if (!daNote.isSustainNote && noteRows[daNote.mustPress?0:1][daNote.row].length > 1)
 									{
-										if(mom.mostRecentRow != daNote.row)
-											doGhostAnim('mom', animToPlay + altAnim);
+										// potentially have jump anims?
+										var chord = noteRows[daNote.mustPress?0:1][daNote.row];
+										var animNote = chord[0];
+										var realAnim = singAnimations[Std.int(Math.abs(animNote.noteData))] + altAnim;
+										if (mom.mostRecentRow != daNote.row)
+										{
+											mom.playAnim(realAnim, true);
+										}
+					
+										// if (daNote != animNote)
+										// mom.playGhostAnim(chord.indexOf(daNote)-1, animToPlay, true);
+					
+										
+										// mom.angle += 15; lmaooooo
+										if (!daNote.noAnimation)
+										{
+											if(mom.mostRecentRow != daNote.row)
+												doGhostAnim('mom', animToPlay + altAnim);
+										}
+										mom.mostRecentRow = daNote.row;
 									}
-									mom.mostRecentRow = daNote.row;
-								}
-								else{
-									mom.playAnim(animToPlay + altAnim, true);
-									// mom.angle = 0;
-								}
-								switch(curStage){
-									case 'cargo':
-										healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
-										iconP2.changeIcon('black');
-										botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-										scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-			
-								}
+									else{
+										mom.playAnim(animToPlay + altAnim, true);
+										// mom.angle = 0;
+									}
+							}
 						}
 						else
 						{
-							dad.holdTimer = 0;
-							if (!daNote.isSustainNote && noteRows[daNote.mustPress?0:1][daNote.row].length > 1)
+							if(opponent2sing == false){
+								dad.holdTimer = 0;
+								if (!daNote.isSustainNote && noteRows[daNote.mustPress?0:1][daNote.row].length > 1)
 								{
 									// potentially have jump anims?
 									var chord = noteRows[daNote.mustPress?0:1][daNote.row];
@@ -6751,10 +6767,10 @@ class PlayState extends MusicBeatState
 									{
 										dad.playAnim(realAnim, true);
 									}
-				
+					
 									// if (daNote != animNote)
 									// dad.playGhostAnim(chord.indexOf(daNote)-1, animToPlay, true);
-				
+					
 									// dad.angle += 15; lmaooooo
 									if (!daNote.noAnimation)
 									{
@@ -6767,46 +6783,37 @@ class PlayState extends MusicBeatState
 									dad.playAnim(animToPlay + altAnim, true);
 									// dad.angle = 0;
 								}
-								switch(curStage){
-									case 'cargo':
-										healthBar.createColoredEmptyBar(FlxColor.fromRGB(209,210,248));    
-										iconP2.changeIcon('white');
-										botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-										scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-	
+							}
+							else{
+								mom.holdTimer = 0;
+								if (!daNote.isSustainNote && noteRows[daNote.mustPress?0:1][daNote.row].length > 1)
+								{
+									// potentially have jump anims?
+									var chord = noteRows[daNote.mustPress?0:1][daNote.row];
+									var animNote = chord[0];
+									var realAnim = singAnimations[Std.int(Math.abs(animNote.noteData))] + altAnim;
+									if (mom.mostRecentRow != daNote.row)
+									{
+										mom.playAnim(realAnim, true);
+									}
+					
+									// if (daNote != animNote)
+									// mom.playGhostAnim(chord.indexOf(daNote)-1, animToPlay, true);
+					
+										
+									// mom.angle += 15; lmaooooo
+									if (!daNote.noAnimation)
+									{
+										if(mom.mostRecentRow != daNote.row)
+											doGhostAnim('mom', animToPlay + altAnim);
+									}
+									mom.mostRecentRow = daNote.row;
 								}
-						}
-
-						if (daNote.noteType == 'fabs')
-						{
-							//	gf.playAnim(animToPlay + altAnim, true);
-							//	gf.holdTimer = 0;
-						}
-						else
-						{
-							//	dad.playAnim(animToPlay + altAnim, true);
-							//	dad.holdTimer = 0;
-						}
-						if (daNote.noteType == 'orb')
-						{
-							//	gf.playAnim(animToPlay + altAnim, true);
-							//	gf.holdTimer = 0;
-						}
-						else
-						{
-							//	dad.playAnim(animToPlay + altAnim, true);
-							//	dad.holdTimer = 0;
-						}
-
-						if (daNote.noteType == 'rare')
-						{
-							//	gf.playAnim(animToPlay + altAnim, true);
-							//	gf.holdTimer = 0;
-						}
-						else
-						{
-							//	dad.playAnim(animToPlay + altAnim, true);
-							//	dad.holdTimer = 0;
+								else{
+									mom.playAnim(animToPlay + altAnim, true);
+									// mom.angle = 0;
+								}
+							}
 						}
 					}
 
@@ -6872,7 +6879,6 @@ class PlayState extends MusicBeatState
 										for (note in parentNote.childrenNotes)
 											note.tooLate = true;
 									}
-									//
 								}
 							}
 						}
@@ -8104,8 +8110,57 @@ class PlayState extends MusicBeatState
 					opponent2sing = !opponent2sing;
 					bothOpponentsSing = false;
 
+					if(opponent2sing){
+						switch(curStage){
+							case 'cargo':
+								healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
+								iconP2.changeIcon('black');
+								botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+								scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+						}
+					}
+					else{
+						switch(curStage){
+							case 'cargo':
+								healthBar.createColoredEmptyBar(FlxColor.fromRGB(209,210,248));    
+								iconP2.changeIcon('white');
+								botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+								scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+						}
+					}
+
 				case 'Both Opponents':
 					bothOpponentsSing = !bothOpponentsSing;
+
+					if(bothOpponentsSing){
+						switch(curStage){
+							case 'cargo':
+								healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
+								iconP2.changeIcon('whiteblack');	
+								botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+								scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+						}
+					}
+					else{
+						if(opponent2sing){
+							switch(curStage){
+								case 'cargo':
+									healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
+									iconP2.changeIcon('black');
+									botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+									scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+							}
+						}
+						else{
+							switch(curStage){
+								case 'cargo':
+									healthBar.createColoredEmptyBar(FlxColor.fromRGB(209,210,248));    
+									iconP2.changeIcon('white');
+									botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+									scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+							}
+						}
+					}
 					
 				case 'scream danger':
 					airshipskyflash.alpha = 1;
