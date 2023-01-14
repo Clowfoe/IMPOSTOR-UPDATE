@@ -29,7 +29,6 @@ class Paths
 	inline public static var VIDEO_EXT = "mp4";
 
 	private static var currentTrackedAssets:Map<String, Map<String, Dynamic>> = ["textures" => [], "graphics" => [], "sounds" => []];
-
 	private static var localTrackedAssets:Map<String, Array<String>> = ["graphics" => [], "sounds" => []];
 
 	// haya I love you for the base cache dump I took to the max
@@ -38,7 +37,7 @@ class Paths
 		for (key in currentTrackedAssets["graphics"].keys())
 		{
 			@:privateAccess
-			if (!localTrackedAssets["graphics"].contains(key) && currentTrackedAssets["graphics"].exists(key))
+			if (!localTrackedAssets["graphics"].contains(key))
 			{
 				if (currentTrackedAssets["textures"].exists(key))
 				{
@@ -50,8 +49,6 @@ class Paths
 
 				var graphic:Null<FlxGraphic> = currentTrackedAssets["graphics"].get(key);
 				OpenFlAssets.cache.removeBitmapData(key);
-				OpenFlAssets.cache.clearBitmapData(key);
-				OpenFlAssets.cache.clear(key);
 				FlxG.bitmap._cache.remove(key);
 				graphic.destroy();
 				currentTrackedAssets["graphics"].remove(key);
@@ -60,16 +57,10 @@ class Paths
 
 		for (key in currentTrackedAssets["sounds"].keys())
 		{
-			if (!localTrackedAssets["sounds"].contains(key) && key != null)
+			if (!localTrackedAssets["sounds"].contains(key))
 			{
-				var obj = currentTrackedAssets["sounds"].get(key);
-				if (obj != null)
-				{
-					OpenFlAssets.cache.removeSound(key);
-					OpenFlAssets.cache.clearSounds(key);
-					OpenFlAssets.cache.clear(key);
-					currentTrackedAssets["sounds"].remove(key);
-				}
+				OpenFlAssets.cache.removeSound(key);
+				currentTrackedAssets["sounds"].remove(key);
 			}
 		}
 
@@ -79,38 +70,30 @@ class Paths
 
 	public static function clearStoredMemory():Void
 	{
+		FlxG.bitmap.dumpCache();
+
 		@:privateAccess
 		for (key in FlxG.bitmap._cache.keys())
 		{
-			if (localTrackedAssets["graphics"].contains(key) && !currentTrackedAssets["graphics"].exists(key))
+			if (!currentTrackedAssets["graphics"].exists(key))
 			{
 				var graphic:Null<FlxGraphic> = FlxG.bitmap._cache.get(key);
 				OpenFlAssets.cache.removeBitmapData(key);
-				OpenFlAssets.cache.clearBitmapData(key);
-				OpenFlAssets.cache.clear(key);
 				FlxG.bitmap._cache.remove(key);
 				graphic.destroy();
-				localTrackedAssets["graphics"].remove(key);
 			}
 		}
 
 		for (key in OpenFlAssets.cache.getSoundKeys())
 		{
-			if (localTrackedAssets["sounds"].contains(key) && !currentTrackedAssets["sounds"].exists(key))
-			{
+			if (!currentTrackedAssets["sounds"].exists(key))
 				OpenFlAssets.cache.removeSound(key);
-				OpenFlAssets.cache.clearSounds(key);
-				OpenFlAssets.cache.clear(key);
-				localTrackedAssets["sounds"].remove(key);
-			}
 		}
 
 		for (key in OpenFlAssets.cache.getFontKeys())
-		{
 			OpenFlAssets.cache.removeFont(key);
-			OpenFlAssets.cache.clearFonts(key);
-			OpenFlAssets.cache.clear(key);
-		}
+
+		localTrackedAssets["sounds"] = localTrackedAssets["graphics"] = [];
 	}
 
 	static public var currentModDirectory:String = '';
