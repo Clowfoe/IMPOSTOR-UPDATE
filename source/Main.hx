@@ -31,13 +31,11 @@ class Main extends Sprite
 		super();
 
 		SUtil.uncaughtErrorHandler();
-
-		ClientPrefs.startControls();
-
 		SUtil.checkPermissions();
 
-		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
+		ClientPrefs.startControls();
 		FlxGraphic.defaultPersist = false;
+		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
 
 		#if desktop
 		FlxG.signals.gameResized.add(onResizeGame);
@@ -51,6 +49,11 @@ class Main extends Sprite
 		#if html5
 		FlxG.autoPause = false;
 		FlxG.mouse.visible = false;
+		#end
+
+		#if cpp
+		cpp.NativeGc.enable(true);
+		cpp.NativeGc.run(true);
 		#end
 	}
 
