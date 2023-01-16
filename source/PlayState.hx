@@ -6768,6 +6768,8 @@ class PlayState extends MusicBeatState
 								dad.holdTimer = 0;
 								if (!daNote.isSustainNote && noteRows[daNote.mustPress?0:1][daNote.row].length > 1)
 								{
+									var realAnim = singAnimations[Std.int(Math.abs(animNote.noteData))] + altAnim;
+									
 									if (dad.mostRecentRow != daNote.row)
 									{
 										dad.playAnim(realAnim, true);
