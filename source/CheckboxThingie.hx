@@ -7,7 +7,9 @@ class CheckboxThingie extends FlxSprite
 {
 	public var sprTracker:FlxSprite;
 	public var daValue(default, set):Bool;
-	public function new(x:Float = 0, y:Float = 0, ?checked = false) {
+
+	public function new(x:Float = 0, y:Float = 0, ?checked = false)
+	{
 		super(x, y);
 
 		frames = Paths.getSparrowAtlas('checkboxThingie');
@@ -19,7 +21,8 @@ class CheckboxThingie extends FlxSprite
 		set_daValue(checked);
 	}
 
-	override function update(elapsed:Float) {
+	override function update(elapsed:Float)
+	{
 		/*switch (animation.curAnim.name) {
 			case "checked":
 				offset.set(17, 70);
@@ -31,20 +34,25 @@ class CheckboxThingie extends FlxSprite
 			setPosition(sprTracker.x - 130, sprTracker.y + 30);
 
 		/*if (sprTracker != null)
-			setPosition(sprTracker.x - 100, sprTracker.y + 5);*/
+			setPosition(sprTracker.x - 100, sprTracker.y + 5); */
 
 		super.update(elapsed);
 	}
 
-	private function set_daValue(value:Bool):Bool {
-		if(value) {
-			if(animation.curAnim.name != 'checked') {
+	private function set_daValue(value:Bool):Bool
+	{
+		if (value)
+		{
+			if (animation.curAnim.name != 'checked')
+			{
 				animation.play('checked', true);
-				//offset.set(17, 70);
+				// offset.set(17, 70);
 			}
-		} else {
+		}
+		else
+		{
 			animation.play("static");
-			//offset.set(0, 0);
+			// offset.set(0, 0);
 		}
 		return value;
 	}

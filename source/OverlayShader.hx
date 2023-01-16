@@ -33,5 +33,7 @@ class OverlayShader extends FlxShader
 		super();
 	}
 
-	public function setBitmapOverlay(overlayImage:BitmapData) {}
+	public function setBitmapOverlay(overlayImage:BitmapData)
+	{
+	}
 }

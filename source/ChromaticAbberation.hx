@@ -9,33 +9,36 @@ import flixel.system.FlxAssets.FlxShader;
 
 class ChromaticAbberation extends FlxBasic
 {
-    public var shader(default, null):CAGLSL = new CAGLSL();
+	public var shader(default, null):CAGLSL = new CAGLSL();
 
-    var iTime:Float = 0;
+	var iTime:Float = 0;
 
-    public var amount(default, set):Float = 0;
+	public var amount(default, set):Float = 0;
 
-    public function new(_amount:Float):Void{
-        super();
-       // shader.iResolution.value = [FlxG.stage.stageWidth, FlxG.stage.stageHeight];
-        amount = _amount;
-    }
+	public function new(_amount:Float):Void
+	{
+		super();
+		// shader.iResolution.value = [FlxG.stage.stageWidth, FlxG.stage.stageHeight];
+		amount = _amount;
+	}
 
-    override public function update(elapsed:Float):Void{
-        super.update(elapsed);
-    }
-    
-    function set_amount(v:Float):Float{
+	override public function update(elapsed:Float):Void
+	{
+		super.update(elapsed);
+	}
+
+	function set_amount(v:Float):Float
+	{
 		amount = v;
 		shader.amount.value = [amount];
-       // shader.iResolution.value = [FlxG.stage.stageWidth, FlxG.stage.stageHeight];
+		// shader.iResolution.value = [FlxG.stage.stageWidth, FlxG.stage.stageHeight];
 		return v;
 	}
 }
 
 class CAGLSL extends FlxShader
 {
-    @:glFragmentSource('
+	@:glFragmentSource('
         #pragma header
 
         uniform float amount;
@@ -50,9 +53,9 @@ class CAGLSL extends FlxShader
 
     vec3 ChromaticAbberation(sampler2D tex, in vec2 uv) 
     {
-	    float rChannel = texture(tex, PincushionDistortion(uv, 0.3 * amount)).r;
-        float gChannel = texture(tex, PincushionDistortion(uv, 0.15 * amount)).g;
-        float bChannel = texture(tex, PincushionDistortion(uv, 0.075 * amount)).b;
+	    float rChannel = texture2D(tex, PincushionDistortion(uv, 0.3 * amount)).r;
+        float gChannel = texture2D(tex, PincushionDistortion(uv, 0.15 * amount)).g;
+        float bChannel = texture2D(tex, PincushionDistortion(uv, 0.075 * amount)).b;
         vec3 retColor = vec3(rChannel, gChannel, bChannel);
         return retColor;
     }
@@ -64,9 +67,8 @@ class CAGLSL extends FlxShader
     
         gl_FragColor = vec4(col, 1.0);
     }')
-
-    public function new()
-    {
-        super();
-    }
+	public function new()
+	{
+		super();
+	}
 }

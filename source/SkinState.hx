@@ -27,14 +27,15 @@ using StringTools;
 class SkinState extends MusicBeatState
 {
 	private var camGame:FlxCamera;
+
 	public static var curSkinSelected:Int = 0;
 
 	var skins:Array<String> = ['bf', 'amongbf', 'bfpolus'];
 	var selectSkins:FlxSpriteGroup;
 	var skinBox:FlxSprite;
 	var space:FlxSprite;
-    var starsBG:FlxBackdrop;
-    var starsFG:FlxBackdrop;
+	var starsBG:FlxBackdrop;
+	var starsFG:FlxBackdrop;
 
 	override function create()
 	{
@@ -49,24 +50,24 @@ class SkinState extends MusicBeatState
 		transOut = FlxTransitionableState.defaultTransOut;
 
 		space = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-        space.antialiasing = true;
-        space.updateHitbox();
-        space.scrollFactor.set();
-        add(space);
+		space.antialiasing = !ClientPrefs.lowQuality;
+		space.updateHitbox();
+		space.scrollFactor.set();
+		add(space);
 
-        starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
-        starsBG.setPosition(111.3, 67.95);
-        starsBG.antialiasing = true;
-        starsBG.updateHitbox();
-        starsBG.scrollFactor.set();
-        add(starsBG);
-        
-        starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'), 1, 1, true, true);
-        starsFG.setPosition(54.3, 59.45);
-        starsFG.updateHitbox();
-        starsFG.antialiasing = true;
-        starsFG.scrollFactor.set();
-        add(starsFG);
+		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
+		starsBG.setPosition(111.3, 67.95);
+		starsBG.antialiasing = !ClientPrefs.lowQuality;
+		starsBG.updateHitbox();
+		starsBG.scrollFactor.set();
+		add(starsBG);
+
+		starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'), 1, 1, true, true);
+		starsFG.setPosition(54.3, 59.45);
+		starsFG.updateHitbox();
+		starsFG.antialiasing = !ClientPrefs.lowQuality;
+		starsFG.scrollFactor.set();
+		add(starsFG);
 
 		skinBox = new FlxSprite().loadGraphic(Paths.image('skinSelect'));
 		skinBox.scrollFactor.set(0, 0);
@@ -82,13 +83,14 @@ class SkinState extends MusicBeatState
 		for (i in 0...skins.length)
 		{
 			var bf:Character = new Character(590, 240, skins[i]);
-			//startCharacterPos(bf, true);
-			//bf.screenCenter();
+			// startCharacterPos(bf, true);
+			// bf.screenCenter();
 			bf.ID = i;
 			bf.flipX = false;
 			selectSkins.add(bf);
 
-			switch(i){
+			switch (i)
+			{
 				case 1:
 					bf.x -= 35;
 					bf.y += 170;
@@ -106,12 +108,12 @@ class SkinState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		/*selectSkins.forEach(function(spr:FlxSprite)
-		{
-	        spr.x = skinBox.x;
+			{
+				spr.x = skinBox.x;
 		});*/
 
 		starsBG.x = FlxMath.lerp(starsBG.x, starsBG.x - 0.5, CoolUtil.boundTo(elapsed * 9, 0, 1));
-        starsFG.x = FlxMath.lerp(starsFG.x, starsFG.x - 1, CoolUtil.boundTo(elapsed * 9, 0, 1));
+		starsFG.x = FlxMath.lerp(starsFG.x, starsFG.x - 1, CoolUtil.boundTo(elapsed * 9, 0, 1));
 
 		if (FlxG.sound.music.volume < 0.8)
 		{
@@ -152,7 +154,7 @@ class SkinState extends MusicBeatState
 						{
 							MusicBeatState.switchState(new MainMenuState());
 						});
-						//spr.playAnim('singRIGHT');
+						// spr.playAnim('singRIGHT');
 					}
 				});
 			}

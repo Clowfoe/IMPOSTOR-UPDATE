@@ -18,74 +18,78 @@ import openfl.utils.Assets as OpenFlAssets;
 
 using StringTools;
 
-#if sys
+#if MODS_ALLOWED
 import sys.FileSystem;
 #end
 
 class BlackRematchState extends MusicBeatState
 {
-
 	override function create()
 	{
 		super.create();
 
-        startVideo('finale');
-    }
+		startVideo('finale');
+	}
 
-   function goToMenu(){
-        if(ClientPrefs.finaleState != NOT_PLAYED || ClientPrefs.finaleState != COMPLETED)
-            ClientPrefs.finaleState = NOT_PLAYED;
+	function goToMenu()
+	{
+		if (ClientPrefs.finaleState != NOT_PLAYED || ClientPrefs.finaleState != COMPLETED)
+			ClientPrefs.finaleState = NOT_PLAYED;
 
-        ClientPrefs.saveSettings();
-        LoadingState.loadAndSwitchState(new TitleState(), true);
-   }
+		ClientPrefs.saveSettings();
+		LoadingState.loadAndSwitchState(new TitleState(), true);
+	}
 
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
 	}
 
-    public function startVideo(name:String):Void {
+	public function startVideo(name:String):Void
+	{
+		var finishCallback:Void->Void;
 
-        var finishCallback:Void->Void;
+		finishCallback = goToMenu;
 
-        finishCallback = goToMenu; 
-        
-		#if VIDEOS_ALLOWED
-		var foundFile:Bool = false;
-		var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
-		#if sys
-		if(FileSystem.exists(fileName)) {
+	#if VIDEOS_ALLOWED
+	var foundFile:Bool = false;
+	var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
+	#if MODS_ALLOWED
+	if (FileSystem.exists(fileName))
+	{
+		foundFile = true;
+	}
+	#end
+
+	if (!foundFile)
+	{
+		fileName = Paths.video(name);
+		#if MODS_ALLOWED
+		if (FileSystem.exists(fileName))
+		{
+		#else
+		if (OpenFlAssets.exists(fileName))
+		{
+		#end
 			foundFile = true;
 		}
-		#end
-
-		if(!foundFile) {
-			fileName = Paths.video(name);
-			#if sys
-			if(FileSystem.exists(fileName)) {
-			#else
-			if(OpenFlAssets.exists(fileName)) {
-			#end
-				foundFile = true;
-			}
-		}
-
-		if(foundFile) {
+		} if (foundFile)
+		{
 			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 			bg.scrollFactor.set();
 			add(bg);
 
-			(new FlxVideo(fileName)).finishCallback = function() {
+			(new FlxVideo(fileName)).finishCallback = function()
+			{
 				remove(bg);
-                finishCallback();
+				finishCallback();
 			}
 			return;
-		} else {
+		}
+		else
+		{
 			FlxG.log.warn('Couldnt find video file: ' + fileName);
 		}
 		#end
 	}
-
-
 }

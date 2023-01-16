@@ -1,29 +1,32 @@
 package;
 
-import openfl.display.BitmapData;
 import flixel.FlxBasic;
 import flixel.system.FlxAssets.FlxShader;
+import openfl.utils.Assets;
 
 class HeatwaveShader extends FlxBasic
 {
-    public var shader(default, null):FabsShaderGLSL = new FabsShaderGLSL();
-    var iTime:Float = 0;
+	public var shader(default, null):FabsShaderGLSL = new FabsShaderGLSL();
 
-    public function new():Void{
-        super();
-        shader.distortTexture.input = BitmapData.fromFile(Paths.getPreloadPath('impostor/images/polus/heatwave.png'));
-    }
+	var iTime:Float = 0;
 
-    override public function update(elapsed:Float):Void{
-        super.update(elapsed);
-        iTime += elapsed;
-        shader.iTime.value = [iTime];
-    }
+	public function new():Void
+	{
+		super();
+		shader.distortTexture.input = Assets.getBitmapData(Paths.file('images/polus/heatwave.png', IMAGE, 'impostor'));
+	}
+
+	override public function update(elapsed:Float):Void
+	{
+		super.update(elapsed);
+		iTime += elapsed;
+		shader.iTime.value = [iTime];
+	}
 }
 
 class FabsShaderGLSL extends FlxShader
 {
-    @:glFragmentSource('
+	@:glFragmentSource('
         #pragma header
 
         uniform float iTime;
@@ -50,9 +53,8 @@ class FabsShaderGLSL extends FlxShader
                 vec2 dist_tex_coord = p_m.st + dst_offset;
                 gl_FragColor = flixel_texture2D(bitmap, dist_tex_coord); 
         }')
-
-    public function new()
-    {
-        super();
-    }
+	public function new()
+	{
+		super();
+	}
 }

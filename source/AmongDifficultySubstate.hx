@@ -122,7 +122,7 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 			var leftP = controls.UI_LEFT_P;
 			var accepted = controls.ACCEPT;
 			//
-
+			
 			if(accepted){
 				if(!songsWithMissLimits.contains(selectedSong.toLowerCase()) || hasEnteredMissSelection){
 					var songLowercase:String = Paths.formatToSongPath(selectedSong.toLowerCase());

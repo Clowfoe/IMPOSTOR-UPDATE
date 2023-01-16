@@ -20,8 +20,9 @@ class CCShader
 	public var contrast(default, set):Float = 0;
 	public var multiply(default, set):FlxColor = 0x00FFFFFF;
 
-
-	public function new(_hue:Float = 0, _saturation:Float = 0, _brightness:Float = 0, _contrast:Float = 0, _multiply:FlxColor = 0x00FFFFFF, _distX:Float = 0.0009, _distY:Float = 0.0009, _rimlightColor:FlxColor = 0xFFFFFFFF, ?_refSprite:FlxSprite = null):Void{
+	public function new(_hue:Float = 0, _saturation:Float = 0, _brightness:Float = 0, _contrast:Float = 0, _multiply:FlxColor = 0x00FFFFFF,
+			_distX:Float = 0.0009, _distY:Float = 0.0009, _rimlightColor:FlxColor = 0xFFFFFFFF, ?_refSprite:FlxSprite = null):Void
+	{
 		distanceX = _distX;
 		distanceY = _distY;
 		rimlightColor = _rimlightColor;
@@ -34,64 +35,83 @@ class CCShader
 		multiply = _multiply;
 	}
 
-	public function update():Void{
-		if(refSprite != null){
-			shader.bounds.value = [refSprite.frame.uv.left, refSprite.frame.uv.top, refSprite.frame.uv.right, refSprite.frame.uv.bottom];
+	public function update():Void
+	{
+		if (refSprite != null)
+		{
+			shader.bounds.value = [
+				refSprite.frame.uv.left,
+				refSprite.frame.uv.top,
+				refSprite.frame.uv.right,
+				refSprite.frame.uv.bottom
+			];
 		}
-		else{ 
-			shader.bounds.value = [0, 0, 1, 1]; 
+		else
+		{
+			shader.bounds.value = [0, 0, 1, 1];
 		}
 	}
 
-	function set_distanceX(v:Float):Float{
+	function set_distanceX(v:Float):Float
+	{
 		distanceX = v;
 		shader.distance.value = [distanceX, distanceY];
 		return v;
 	}
 
-	function set_distanceY(v:Float):Float{
+	function set_distanceY(v:Float):Float
+	{
 		distanceY = v;
 		shader.distance.value = [distanceX, distanceY];
 		return v;
 	}
 
-	function set_rimlightColor(v:FlxColor):FlxColor{
+	function set_rimlightColor(v:FlxColor):FlxColor
+	{
 		rimlightColor = v;
-		shader.rimlightColor.value = [rimlightColor.redFloat, rimlightColor.greenFloat, rimlightColor.blueFloat, rimlightColor.alphaFloat];
+		shader.rimlightColor.value = [
+			rimlightColor.redFloat,
+			rimlightColor.greenFloat,
+			rimlightColor.blueFloat,
+			rimlightColor.alphaFloat
+		];
 		return v;
 	}
 
-	
-	function set_hue(v:Float):Float{
+	function set_hue(v:Float):Float
+	{
 		hue = v;
 		shader.hue.value = [hue];
 		return v;
 	}
 
-	function set_saturation(v:Float):Float{
+	function set_saturation(v:Float):Float
+	{
 		saturation = v;
 		shader.saturation.value = [saturation];
 		return v;
 	}
 
-	function set_brightness(v:Float):Float{
+	function set_brightness(v:Float):Float
+	{
 		brightness = v;
 		shader.brightness.value = [brightness];
 		return v;
 	}
 
-	function set_contrast(v:Float):Float{
+	function set_contrast(v:Float):Float
+	{
 		contrast = v;
 		shader.contrast.value = [contrast];
 		return v;
 	}
 
-	function set_multiply(v:FlxColor):FlxColor{
+	function set_multiply(v:FlxColor):FlxColor
+	{
 		multiply = v;
 		shader.muliply.value = [multiply.redFloat, multiply.greenFloat, multiply.blueFloat, multiply.alphaFloat];
 		return v;
 	}
-
 }
 
 class CCShaderGLSL extends FlxShader
@@ -160,7 +180,6 @@ class CCShaderGLSL extends FlxShader
 	
 			gl_FragColor = vec4(outColor.rgb * textureColor.a, textureColor.a);
 		}')
-
 	public function new()
 	{
 		super();
