@@ -34,7 +34,7 @@ import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.group.FlxSpriteGroup;
 import flixel.input.keyboard.FlxKey;
-import flixel.input.mouse.FlxMouseEventManager;
+import flixel.input.mouse.FlxMouseEvent;
 import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
@@ -1465,7 +1465,8 @@ class PlayState extends MusicBeatState
 					henryTeleporter.visible = true;
 					add(henryTeleporter);
 
-					FlxMouseEventManager.add(henryTeleporter, function onMouseDown(teleporter:FlxSprite)
+					
+					FlxMouseEvent.add(henryTeleporter, function onMouseDown(teleporter:FlxSprite)
 					{
 						henryTeleporter.visible = false;
 						henryTeleport();
@@ -2633,11 +2634,13 @@ class PlayState extends MusicBeatState
 				mainoverlayDK.alpha = 0;
 				defeatFinaleStuff.add(mainoverlayDK);
 
+				// Set this all to 0.001 so we have no lag spike at transition
 				var bg0:FlxSprite = new FlxSprite(-600, -400).loadGraphic(Paths.image('bgg'));
 				bg0.updateHitbox();
 				bg0.antialiasing = true;
 				bg0.scrollFactor.set(0.8, 0.8);
 				bg0.active = true;
+				bg0.alpha = 0.001;
 				bg0.scale.set(1.1, 1.1);
 				
 
@@ -2646,6 +2649,7 @@ class PlayState extends MusicBeatState
 				bg1.antialiasing = true;
 				bg1.scrollFactor.set(0.8, 0.8);
 				bg1.active = true;
+				bg1.alpha = 0.001;
 				bg1.scale.set(1.1, 1.1);
 				
 				var bg2:FlxSprite = new FlxSprite(-790, -530).loadGraphic(Paths.image('bg'));
@@ -2653,6 +2657,7 @@ class PlayState extends MusicBeatState
 				bg2.antialiasing = true;
 				bg2.scrollFactor.set(0.9, 0.9);
 				bg2.active = true;
+				bg2.alpha = 0.001;
 				bg2.scale.set(1.1, 1.1);
 
 				var bg3:FlxSprite = new FlxSprite(370, 1200).loadGraphic(Paths.image('splat'));
@@ -2660,6 +2665,7 @@ class PlayState extends MusicBeatState
 				bg3.antialiasing = true;
 				bg3.scrollFactor.set(1, 1);
 				bg3.active = true;
+				bg3.alpha = 0.001;
 				bg3.scale.set(1.1, 1.1);
 
 				var bg4:FlxSprite = new FlxSprite(990, -380).loadGraphic(Paths.image('lamp'));
@@ -2667,6 +2673,7 @@ class PlayState extends MusicBeatState
 				bg4.antialiasing = true;
 				bg4.scrollFactor.set(1, 1);
 				bg4.active = true;
+				bg4.alpha = 0.001;
 				bg4.scale.set(1.1, 1.1);
 
 				var bg5:FlxSprite = new FlxSprite(-750, 160).loadGraphic(Paths.image('fore'));
@@ -2674,6 +2681,7 @@ class PlayState extends MusicBeatState
 				bg5.antialiasing = true;
 				bg5.scrollFactor.set(1, 1);
 				bg5.active = true;
+				bg5.alpha = 0.001;
 				bg5.scale.set(1.1, 1.1);
 
 				finaleLight = new FlxSprite(-230, -200);
@@ -2684,6 +2692,7 @@ class PlayState extends MusicBeatState
 				finaleLight.antialiasing = true;
 				finaleLight.scrollFactor.set(0.8, 0.8);
 				finaleLight.active = true;
+				finaleLight.alpha = 0.001;
 				finaleLight.blend = ADD;
 
 				var dark:FlxSprite = new FlxSprite(-950, -160).loadGraphic(Paths.image('finale/dark'));
@@ -2703,10 +2712,6 @@ class PlayState extends MusicBeatState
 				finaleFGStuff.add(dark);
 				finaleFGStuff.add(finaleLight);
 
-				finaleBGStuff.visible = false;
-				finaleFGStuff.visible = false;
-				defeatFinaleStuff.visible = true;
-
 				add(defeatFinaleStuff);
 				add(finaleBGStuff);
 
@@ -2714,8 +2719,6 @@ class PlayState extends MusicBeatState
 				finaleDarkFG.antialiasing = true;
 				finaleDarkFG.updateHitbox();
 				finaleDarkFG.scrollFactor.set();
-
-			//	add(stageCurtains);
 
 			case 'defeat':
 				GameOverSubstate.characterName = 'bf-defeat-dead';
@@ -3580,8 +3583,6 @@ class PlayState extends MusicBeatState
 				add(emergency);
 				add(whoAngered);
 
-			case 'polus3':
-				//thing
 			case 'spooky':
 				add(halloweenWhite);
 			case 'airship':
@@ -7709,7 +7710,15 @@ class PlayState extends MusicBeatState
 				case 'Finale Drop':
 					health = 0.1;
 					finaleBGStuff.visible = true;
-					finaleFGStuff.visible = true;
+					for (item in 0 ... finaleBGStuff.length) {
+						finaleBGStuff.members[item].alpha = 1;
+					}
+					for (item in 0 ... finaleFGStuff.length) {
+						finaleFGStuff.members[item].alpha = 1;
+					}
+					defeatFinaleStuff.forEachExists(function(asset:FlxSprite) {
+						asset.destroy();
+					});
 					defeatFinaleStuff.visible = false;
 					lightoverlay.visible = false;
 					healthBar.visible = false;
@@ -7750,8 +7759,8 @@ class PlayState extends MusicBeatState
 						}
 
 				case 'Show Victory Guy': //makes bg dudes appear (this is annoying)
-					if (value1 == 'jor')
-						{
+					switch(value1) {
+						case 'jor':
 							if (value2 == 'show')
 								{
 									bg_jor.alpha = 1;
@@ -7760,9 +7769,7 @@ class PlayState extends MusicBeatState
 								{
 									bg_jor.alpha = 0;
 								}
-						}
-					else if (value1 == 'war')
-						{
+						case 'war':
 							if (value2 == 'show')
 								{
 									bg_war.alpha = 1;
@@ -7773,9 +7780,7 @@ class PlayState extends MusicBeatState
 								{
 									bg_war.alpha = 0;
 								}
-						}
-					else if (value1 == 'warMid')
-						{
+						case 'warMid':
 							if (value2 == 'show')
 								{
 									bg_war.alpha = 1;
@@ -7786,9 +7791,7 @@ class PlayState extends MusicBeatState
 								{
 									bg_war.alpha = 0;
 								}
-						}
-					else if (value1 == 'jelqLeft')
-						{
+						case 'jelqLeft':
 							if (value2 == 'show')
 								{
 									bg_jelq.alpha = 1;
@@ -7799,9 +7802,7 @@ class PlayState extends MusicBeatState
 								{
 									bg_jelq.alpha = 0;
 								}
-						}
-					else if (value1 == 'jelqMid')
-						{
+						case 'jelqMid':
 							if (value2 == 'show')
 								{
 									bg_jelq.alpha = 1;
@@ -7812,9 +7813,7 @@ class PlayState extends MusicBeatState
 								{
 									bg_jelq.alpha = 0;
 								}
-						}
-					else if (value1 == 'jelqRight')
-						{
+						case 'jelqRight':
 							if (value2 == 'show')
 								{
 									bg_jelq.alpha = 1;
@@ -7825,13 +7824,11 @@ class PlayState extends MusicBeatState
 								{
 									bg_jelq.alpha = 0;
 								}
-						}
-					else
-						{
+						default:
 							bg_jelq.alpha = 0;
 							bg_war.alpha = 0;
 							bg_jor.alpha = 0;
-						}
+					}
 
 				case 'Jerma Scream':
 					scaryJerma.animation.play('w');
@@ -8047,13 +8044,7 @@ class PlayState extends MusicBeatState
 						{
 							camFollowPos.setPosition(460, 700);
 							FlxG.camera.focusOn(camFollowPos.getPosition());
-							iconP2.changeIcon(dad.healthIcon);
-							healthBar.createFilledBar(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
-							FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
-							healthBar.updateBar();
-							botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-							scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		
+							changeCharacterBar(dad, null, null, boyfriend);
 						}
 						else
 						{
@@ -8072,23 +8063,13 @@ class PlayState extends MusicBeatState
 						{
 							camFollowPos.setPosition(480, 680);
 							FlxG.camera.focusOn(camFollowPos.getPosition());
-							iconP2.changeIcon(gf.healthIcon);
-							healthBar.createFilledBar(FlxColor.fromRGB(gf.healthColorArray[0], gf.healthColorArray[1], gf.healthColorArray[2]),
-							FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
-							healthBar.updateBar();
-							botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(gf.healthColorArray[0], gf.healthColorArray[1], gf.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-							scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(gf.healthColorArray[0], gf.healthColorArray[1], gf.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+							changeCharacterBar(gf, null, null, boyfriend);
 						}
 						else
 						{
 							camFollowPos.setPosition(1450, 680);
 							FlxG.camera.focusOn(camFollowPos.getPosition());
-							iconP2.changeIcon(mom.healthIcon);
-							botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(mom.healthColorArray[0], mom.healthColorArray[1], mom.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-							scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(mom.healthColorArray[0], mom.healthColorArray[1], mom.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-							healthBar.createFilledBar(FlxColor.fromRGB(mom.healthColorArray[0], mom.healthColorArray[1], mom.healthColorArray[2]),
-							FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
-							healthBar.updateBar();
+							changeCharacterBar(mom, null, null, boyfriend);
 						}
 					}
 					else
@@ -8113,19 +8094,13 @@ class PlayState extends MusicBeatState
 					if(opponent2sing){
 						switch(curStage){
 							case 'cargo':
-								healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
-								iconP2.changeIcon('black');
-								botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-								scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+								changeCharacterBar(dad, [58,27,80], "black");
 						}
 					}
 					else{
 						switch(curStage){
 							case 'cargo':
-								healthBar.createColoredEmptyBar(FlxColor.fromRGB(209,210,248));    
-								iconP2.changeIcon('white');
-								botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-								scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+								changeCharacterBar(dad);
 						}
 					}
 
@@ -8135,29 +8110,20 @@ class PlayState extends MusicBeatState
 					if(bothOpponentsSing){
 						switch(curStage){
 							case 'cargo':
-								healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
-								iconP2.changeIcon('whiteblack');	
-								botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-								scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+								changeCharacterBar(dad, null, "whiteblack");
 						}
 					}
 					else{
 						if(opponent2sing){
 							switch(curStage){
 								case 'cargo':
-									healthBar.createColoredEmptyBar(FlxColor.fromRGB(58,27,80));    
-									iconP2.changeIcon('black');
-									botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-									scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+									changeCharacterBar(dad, [58,27,80], "black");
 							}
 						}
 						else{
 							switch(curStage){
 								case 'cargo':
-									healthBar.createColoredEmptyBar(FlxColor.fromRGB(209,210,248));    
-									iconP2.changeIcon('white');
-									botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-									scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+									changeCharacterBar(dad);
 							}
 						}
 					}
@@ -8177,47 +8143,6 @@ class PlayState extends MusicBeatState
 					mom.playAnim('enter', false);
 					mom.specialAnim = true;
 					iconP2.changeIcon('ellie');
-				case 'Hey!':
-					var value:Int = 2;
-					switch (value1.toLowerCase().trim())
-					{
-						case 'bf' | 'boyfriend' | '0':
-							value = 0;
-						case 'gf' | 'girlfriend' | '1':
-							value = 1;
-					}
-
-					var time:Float = Std.parseFloat(value2);
-					if (Math.isNaN(time) || time <= 0)
-						time = 0.6;
-
-					if (value != 0)
-					{
-						if (dad.curCharacter.startsWith('gf'))
-						{ // Tutorial GF is actually Dad! The GF is an imposter!! ding ding ding ding ding ding ding, dindinding, end my suffering
-							dad.playAnim('cheer', true);
-							dad.specialAnim = true;
-							dad.heyTimer = time;
-						}
-						else
-						{
-							gf.playAnim('cheer', true);
-							gf.specialAnim = true;
-							gf.heyTimer = time;
-						}
-
-						if (curStage == 'mall')
-						{
-							bottomBoppers.animation.play('hey', true);
-							heyTimer = time;
-						}
-					}
-					if (value != 1)
-					{
-						boyfriend.playAnim('hey', true);
-						boyfriend.specialAnim = true;
-						boyfriend.heyTimer = time;
-					}
 
 				case 'Set GF Speed':
 					var value:Int = Std.parseInt(value1);
@@ -8238,166 +8163,6 @@ class PlayState extends MusicBeatState
 					add(saxguy);
 					saxguy.visible = true;
 					saxguy.animation.play('bop');
-					
-
-				case 'Blammed Lights':
-					var lightId:Int = Std.parseInt(value1);
-					if (Math.isNaN(lightId))
-						lightId = 0;
-
-					if (lightId > 0 && curLightEvent != lightId)
-					{
-						if (lightId > 5)
-							lightId = FlxG.random.int(1, 5, [curLightEvent]);
-
-						var color:Int = 0xffffffff;
-						switch (lightId)
-						{
-							case 1: // Blue
-								color = 0xff31a2fd;
-							case 2: // Green
-								color = 0xff31fd8c;
-							case 3: // Pink
-								color = 0xfff794f7;
-							case 4: // Red
-								color = 0xfff96d63;
-							case 5: // Orange
-								color = 0xfffba633;
-						}
-						curLightEvent = lightId;
-
-						if (blammedLightsBlack.alpha == 0)
-						{
-							if (blammedLightsBlackTween != null)
-							{
-								blammedLightsBlackTween.cancel();
-							}
-							blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 1}, 1, {
-								ease: FlxEase.quadInOut,
-								onComplete: function(twn:FlxTween)
-								{
-									blammedLightsBlackTween = null;
-								}
-							});
-
-							var chars:Array<Character> = [boyfriend, gf, dad, mom];
-							for (i in 0...chars.length)
-							{
-								if (chars[i].colorTween != null)
-								{
-									chars[i].colorTween.cancel();
-								}
-								chars[i].colorTween = FlxTween.color(chars[i], 1, FlxColor.WHITE, color, {
-									onComplete: function(twn:FlxTween)
-									{
-										chars[i].colorTween = null;
-									},
-									ease: FlxEase.quadInOut
-								});
-							}
-						}
-						else
-						{
-							if (blammedLightsBlackTween != null)
-							{
-								blammedLightsBlackTween.cancel();
-							}
-							blammedLightsBlackTween = null;
-							blammedLightsBlack.alpha = 1;
-
-							var chars:Array<Character> = [boyfriend, gf, dad, mom];
-							for (i in 0...chars.length)
-							{
-								if (chars[i].colorTween != null)
-								{
-									chars[i].colorTween.cancel();
-								}
-								chars[i].colorTween = null;
-							}
-							dad.color = color;
-							mom.color = color;
-							boyfriend.color = color;
-							gf.color = color;
-						}
-
-						if (curStage == 'philly')
-						{
-							if (phillyCityLightsEvent != null)
-							{
-								phillyCityLightsEvent.forEach(function(spr:BGSprite)
-								{
-									spr.visible = false;
-								});
-								phillyCityLightsEvent.members[lightId - 1].visible = true;
-								phillyCityLightsEvent.members[lightId - 1].alpha = 1;
-							}
-						}
-					}
-					else
-					{
-						if (blammedLightsBlack.alpha != 0)
-						{
-							if (blammedLightsBlackTween != null)
-							{
-								blammedLightsBlackTween.cancel();
-							}
-							blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 0}, 1, {
-								ease: FlxEase.quadInOut,
-								onComplete: function(twn:FlxTween)
-								{
-									blammedLightsBlackTween = null;
-								}
-							});
-						}
-
-						if (curStage == 'philly')
-						{
-							phillyCityLights.forEach(function(spr:BGSprite)
-							{
-								spr.visible = false;
-							});
-							phillyCityLightsEvent.forEach(function(spr:BGSprite)
-							{
-								spr.visible = false;
-							});
-
-							var memb:FlxSprite = phillyCityLightsEvent.members[curLightEvent - 1];
-							if (memb != null)
-							{
-								memb.visible = true;
-								memb.alpha = 1;
-								if (phillyCityLightsEventTween != null)
-									phillyCityLightsEventTween.cancel();
-
-								phillyCityLightsEventTween = FlxTween.tween(memb, {alpha: 0}, 1, {
-									onComplete: function(twn:FlxTween)
-									{
-										phillyCityLightsEventTween = null;
-									},
-									ease: FlxEase.quadInOut
-								});
-							}
-						}
-
-						var chars:Array<Character> = [boyfriend, gf, dad, mom];
-						for (i in 0...chars.length)
-						{
-							if (chars[i].colorTween != null)
-							{
-								chars[i].colorTween.cancel();
-							}
-							chars[i].colorTween = FlxTween.color(chars[i], 1, chars[i].color, FlxColor.WHITE, {
-								onComplete: function(twn:FlxTween)
-								{
-									chars[i].colorTween = null;
-								},
-								ease: FlxEase.quadInOut
-							});
-						}
-
-						curLight = 0;
-						curLightEvent = 0;
-					}
 
 				case 'Add Camera Zoom':
 					if (ClientPrefs.camZooms && FlxG.camera.zoom < 1.35)
@@ -8640,10 +8405,7 @@ class PlayState extends MusicBeatState
 									dad.alpha = 1;
 									dad.alreadyLoaded = true;
 								}
-								dad.visible = true;
-								iconP2.changeIcon(dad.healthIcon);
-								botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-								scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+								changeCharacterBar(dad);
 							}
 
 						case 2:
@@ -8740,6 +8502,32 @@ class PlayState extends MusicBeatState
 					}
 				});
 			}
+		}
+	}
+
+	private function changeCharacterBar(character:Character, ?overrideColor:Array<Int>, ?iconString:String, ?borderColor:Character):Void {
+		// Define our variables so we don't need to trace back to the character again
+		var r:Int = overrideColor == null ? character.healthColorArray[0] : overrideColor[0]; 
+		var g:Int = overrideColor == null ? character.healthColorArray[1] : overrideColor[1]; 
+		var b:Int = overrideColor == null ? character.healthColorArray[2] : overrideColor[2];
+
+		// We have different case scenarios since there is two different results!
+		if (borderColor == null) {
+			healthBar.createColoredEmptyBar(FlxColor.fromRGB(r, g, b));    
+			iconP2.changeIcon(iconString == null ? character.healthIcon : iconString);
+			botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(r, g, b), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(r, g, b), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		} else {
+			var br:Int = borderColor != null ? borderColor.healthColorArray[0] : 0; 
+			var bg:Int = borderColor != null ? borderColor.healthColorArray[1] : 0; 
+			var bb:Int = borderColor != null ? borderColor.healthColorArray[2] : 0;
+
+
+			iconP2.changeIcon(iconString == null ? character.healthIcon : iconString);
+			healthBar.createFilledBar(FlxColor.fromRGB(r, g, b), FlxColor.fromRGB(br, bg, bb));
+			healthBar.updateBar();
+			botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.fromRGB(r, g, b), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.fromRGB(r, g, b), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		}
 	}
 
@@ -9834,7 +9622,6 @@ class PlayState extends MusicBeatState
 		if (cpuControlled && (note.ignoreNote || note.hitCausesMiss))
 			return;
 
-		trace('function gvnh called');
 		if (!note.ignoreNote)
 		{
 			if (!note.noAnimation)
