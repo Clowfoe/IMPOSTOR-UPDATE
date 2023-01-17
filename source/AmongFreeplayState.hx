@@ -43,6 +43,13 @@ typedef FreeplayWeek =
 	var songs:Array<Dynamic>;
 	var section:Int;
 }
+	
+typedef FreeplayPortraitCode =
+{
+	// JSON variables
+	var ports:Array<Dynamic>;
+	var value:Int;
+}
 
 class AmongFreeplayState extends MusicBeatState
 {
@@ -78,6 +85,7 @@ class AmongFreeplayState extends MusicBeatState
 	var lockMovement:Bool = false;
 
 	var portraitArray:Int;
+        var portraitCURRENT:String = "";
 
 	var upScroll:Bool;
 	var downScroll:Bool;
@@ -106,6 +114,7 @@ class AmongFreeplayState extends MusicBeatState
 	var localWeeks:Array<FreeplayWeek>;
 
 	var listOfButtons:Array<FreeplayCard> = [];
+	public static var ports:Array<FreeplayPortraitCode> = [];
 
 	override function create()
 	{
@@ -143,7 +152,7 @@ class AmongFreeplayState extends MusicBeatState
 		starsBG.setPosition(111.3, 67.95);
 		starsBG.antialiasing = true;
 		starsBG.updateHitbox();
-		starsBG.scrollFactor.set();
+		starsBG.scrollFactor.set(); 
 		add(starsBG);
 
 		starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'), 1, 1, true, true);
@@ -206,11 +215,22 @@ class AmongFreeplayState extends MusicBeatState
 		portrait.animation.addByIndices('idk', 'Character', [41], null, 24, true);
 		portrait.animation.addByIndices('esculent', 'Character', [42], null, 24, true);
 		portrait.animation.play('red');
+		portraitCURRENT = portrait.animation;
 		portrait.antialiasing = true;
 		portrait.setPosition(304.65, -100);
 		portrait.updateHitbox();
 		portrait.scrollFactor.set();
 		add(portrait);
+		ports = [];
+		ports.push({'red', 1, 'green', 2});
+		/*if(portraitCURRENT == "yellow")
+		{
+		    trace("yes");
+		}
+		else if(portraitCURRENT == "top")
+		{
+		    portrait.animation.play('red');
+		} */
 
 		infoText = new FlxText(1071.05, 91, 0, '291921 \n Rating: 32 \n', 48);
 		infoText.antialiasing = true;
@@ -249,9 +269,9 @@ class AmongFreeplayState extends MusicBeatState
 			}
 		}
 
-		trace('created Weeks');
+	        trace("Valid Ports " + ports);
 
-		trace('pushed list of buttons with ' + listOfButtons.length + ' buttons');
+	        trace("Invalid Ports " + portrait);
 
 		for (i in listOfButtons)
 		{
@@ -788,21 +808,24 @@ class AmongFreeplayState extends MusicBeatState
 	function changePortrait(?reset:Bool = false)
 	{
 		prevPort = portrait.animation.name;
+		//port.push = [];
 		switch (listOfButtons[curSelected].portrait)
 		{
 			default:
+				portrait.visible = false;
 				portrait.animation.play(listOfButtons[curSelected].portrait);
+				portrait.visible = true;
 		}
 
 		if(listOfButtons[curSelected].locked){
 			portrait.shader = rimlight.shader;
 			portrait.color = FlxColor.BLACK;
 		}else{
-			portrait.shader = null;
+			portrait.shader = rimlight.shader;
 			portrait.color = FlxColor.WHITE;
 		} 
 
-		trace(portrait.animation.name);
+		//trace("FPS Is dippin");
 		
 		if (!reset)
 		{
