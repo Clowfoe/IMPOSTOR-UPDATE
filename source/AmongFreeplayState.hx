@@ -43,6 +43,13 @@ typedef FreeplayWeek =
 	var songs:Array<Dynamic>;
 	var section:Int;
 }
+	
+typedef FreeplayPortraitCode =
+{
+	// JSON variables
+	var ports:Array<Dynamic>;
+	var value:Int;
+}
 
 class AmongFreeplayState extends MusicBeatState
 {
@@ -78,6 +85,7 @@ class AmongFreeplayState extends MusicBeatState
 	var lockMovement:Bool = false;
 
 	var portraitArray:Int;
+        var portraitCURRENT:String = "";
 
 	var upScroll:Bool;
 	var downScroll:Bool;
@@ -106,6 +114,7 @@ class AmongFreeplayState extends MusicBeatState
 	var localWeeks:Array<FreeplayWeek>;
 
 	var listOfButtons:Array<FreeplayCard> = [];
+	public static var ports:Array<FreeplayPortraitCode> = [];
 
 	override function create()
 	{
@@ -143,7 +152,7 @@ class AmongFreeplayState extends MusicBeatState
 		starsBG.setPosition(111.3, 67.95);
 		starsBG.antialiasing = true;
 		starsBG.updateHitbox();
-		starsBG.scrollFactor.set();
+		starsBG.scrollFactor.set(); 
 		add(starsBG);
 
 		starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'), 1, 1, true, true);
@@ -162,55 +171,29 @@ class AmongFreeplayState extends MusicBeatState
 
 		portrait = new FlxSprite();
 		portrait.frames = Paths.getSparrowAtlas('freeplay/portraits', 'impostor');
-
-		portrait.animation.addByIndices('red', 'Character', [1], null, 24, true);
-		portrait.animation.addByIndices('yellow', 'Character', [2], null, 24, true);
-		portrait.animation.addByIndices('green', 'Character', [3], null, 24, true);
-		portrait.animation.addByIndices('tomo', 'Character', [4], null, 24, true);
-		portrait.animation.addByIndices('ham', 'Character', [5], null, 24, true);
-		portrait.animation.addByIndices('black', 'Character', [6], null, 24, true);
-		portrait.animation.addByIndices('white', 'Character', [7], null, 24, true);
-		portrait.animation.addByIndices('para', 'Character', [8], null, 24, true);
-		portrait.animation.addByIndices('pink', 'Character', [9], null, 24, true);
-		portrait.animation.addByIndices('maroon', 'Character', [10], null, 24, true);
-		portrait.animation.addByIndices('grey', 'Character', [11], null, 24, true);
-		portrait.animation.addByIndices('chef', 'Character', [12], null, 24, true);
-		portrait.animation.addByIndices('tit', 'Character', [13], null, 24, true);
-		portrait.animation.addByIndices('ellie', 'Character', [14], null, 24, true);
-		portrait.animation.addByIndices('rhm', 'Character', [15], null, 24, true);
-		portrait.animation.addByIndices('loggo', 'Character', [16], null, 24, true);
-		portrait.animation.addByIndices('clow', 'Character', [17], null, 24, true);
-		portrait.animation.addByIndices('ziffy', 'Character', [18], null, 24, true);
-		portrait.animation.addByIndices('chips', 'Character', [19], null, 24, true);
-		portrait.animation.addByIndices('oldpostor', 'Character', [20], null, 24, true);
-		portrait.animation.addByIndices('top', 'Character', [21], null, 24, true);
-		portrait.animation.addByIndices('jorsawsee', 'Character', [22], null, 24, true);
-		portrait.animation.addByIndices('warchief', 'Character', [23], null, 24, true);
-		portrait.animation.addByIndices('redmungus', 'Character', [24], null, 24, true);
-		portrait.animation.addByIndices('bananungus', 'Character', [25], null, 24, true);
-		portrait.animation.addByIndices('powers', 'Character', [26], null, 24, true);
-		portrait.animation.addByIndices('kills', 'Character', [27], null, 24, true);
-		portrait.animation.addByIndices('jerma', 'Character', [28], null, 24, true);
-		portrait.animation.addByIndices('who', 'Character', [29], null, 24, true);
-		portrait.animation.addByIndices('monotone', 'Character', [30], null, 24, true);
-		portrait.animation.addByIndices('charles', 'Character', [31], null, 24, true);
-		portrait.animation.addByIndices('finale', 'Character', [32], null, 24, true);
-		portrait.animation.addByIndices('pop', 'Character', [33], null, 24, true);
-		portrait.animation.addByIndices('torture', 'Character', [34], null, 24, true);
-		portrait.animation.addByIndices('dave', 'Character', [35], null, 24, true);
-		portrait.animation.addByIndices('bpmar', 'Character', [36], null, 24, true);
-		portrait.animation.addByIndices('grinch', 'Character', [37], null, 24, true);
-		portrait.animation.addByIndices('redmunp', 'Character', [38], null, 24, true);
-		portrait.animation.addByIndices('nuzzus', 'Character', [39], null, 24, true);
-		portrait.animation.addByIndices('monotoner', 'Character', [40], null, 24, true);
-		portrait.animation.addByIndices('idk', 'Character', [41], null, 24, true);
-		portrait.animation.addByIndices('esculent', 'Character', [42], null, 24, true);
+		
+		var songPortraitStuff:Array<String> = ['', 'red','yellow','green','tomo','ham','black','white','para','pink','maroon','grey','chef','tit','ellie','rhm','loggo','clow','ziffy','chips','oldposter','top','jorsawsee','warchief','redmungus','banananungus','powers','kills','jerma','who','monotone','charles','finale','pop','torture','dave','bpmar','grinch','redmunp','nuzzus','monotoner','idk','esculent'];
+		for (i => name in songPortraitStuff){
+			portrait.animation.addByIndices(name, 'Character', [i], null, 24, true);
+		}
+		// what the actual fuck
 		portrait.animation.play('red');
+		portraitCURRENT = portrait.animation;
 		portrait.antialiasing = true;
 		portrait.setPosition(304.65, -100);
 		portrait.updateHitbox();
 		portrait.scrollFactor.set();
 		add(portrait);
+		ports = [];
+		ports.push({'red', 1, 'green', 2});
+		/*if(portraitCURRENT == "yellow")
+		{
+		    trace("yes");
+		}
+		else if(portraitCURRENT == "top")
+		{
+		    portrait.animation.play('red');
+		} */
 
 		infoText = new FlxText(1071.05, 91, 0, '291921 \n Rating: 32 \n', 48);
 		infoText.antialiasing = true;
@@ -249,9 +232,9 @@ class AmongFreeplayState extends MusicBeatState
 			}
 		}
 
-		trace('created Weeks');
+	        trace("Valid Ports " + ports);
 
-		trace('pushed list of buttons with ' + listOfButtons.length + ' buttons');
+	        trace("Invalid Ports " + portrait);
 
 		for (i in listOfButtons)
 		{
@@ -788,21 +771,24 @@ class AmongFreeplayState extends MusicBeatState
 	function changePortrait(?reset:Bool = false)
 	{
 		prevPort = portrait.animation.name;
+		//port.push = [];
 		switch (listOfButtons[curSelected].portrait)
 		{
 			default:
+				portrait.visible = false;
 				portrait.animation.play(listOfButtons[curSelected].portrait);
+				portrait.visible = true;
 		}
 
 		if(listOfButtons[curSelected].locked){
 			portrait.shader = rimlight.shader;
 			portrait.color = FlxColor.BLACK;
 		}else{
-			portrait.shader = null;
+			portrait.shader = rimlight.shader;
 			portrait.color = FlxColor.WHITE;
 		} 
 
-		trace(portrait.animation.name);
+		//trace("FPS Is dippin");
 		
 		if (!reset)
 		{
