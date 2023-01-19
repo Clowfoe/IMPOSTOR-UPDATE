@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Redmungus.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down0000" x="0" y="0" width="1310" height="620"/>
+	<SubTexture name="idle0000" x="1310" y="0" width="1339" height="707"/>
+	<SubTexture name="left0000" x="2649" y="0" width="1249" height="656"/>
+	<SubTexture name="right0000" x="0" y="707" width="1257" height="695"/>
+	<SubTexture name="up0000" x="1257" y="707" width="1364" height="731"/>
+</TextureAtlas>

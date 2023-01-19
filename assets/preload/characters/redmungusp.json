@@ -2,65 +2,65 @@
 	"animations": [
 		{
 			"offsets": [
-				-157,
-				-441
+				-1,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				-267,
+				-111
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
 			"indices": [],
-			"name": "Right"
+			"name": "right"
 		},
 		{
 			"offsets": [
-				11,
-				-455
+				131,
+				-355
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
-			"name": "Down"
+			"name": "down"
 		},
 		{
 			"offsets": [
-				180,
-				-228
+				60,
+				152
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
-			"name": "Up"
+			"name": "up"
 		},
 		{
 			"offsets": [
-				10,
-				-354
+				290,
+				-74
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
 			"indices": [],
-			"name": "Left"
-		},
-		{
-			"offsets": [
-				70,
-				-280
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "idle",
-			"loop": true,
-			"name": "Idle"
+			"name": "left"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/redMungParasite",
+	"image": "characters/Redmungus",
 	"position": [
-		-380,
-		-450
+		-240,
+		-20
 	],
 	"healthicon": "redmungus",
 	"flip_x": false,
@@ -70,9 +70,9 @@
 		51
 	],
 	"camera_position": [
-		-130,
+		-120,
 		300
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 1.4
 }
