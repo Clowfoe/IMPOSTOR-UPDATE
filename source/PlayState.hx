@@ -2868,6 +2868,7 @@ class PlayState extends MusicBeatState
 				wiggleEffect.waveFrequency = 5;
 				wiggleEffect.waveSpeed = 1;
 				bg.shader = wiggleEffect.shader;
+				gf.alpha = 0;
 
 			case 'airship':
 				GameOverSubstate.characterName = 'bf-running-death';
@@ -3133,9 +3134,11 @@ class PlayState extends MusicBeatState
 				}
 				add(cloudScroll);
 				add(speedLines);
+				if (SONG.song.toLowerCase() == 'ejected'){
 				canPause = false;
 				camGame.visible = false;
 				camHUD.visible = false;
+				}
 				
 
 			case 'polus':
@@ -3768,6 +3771,7 @@ class PlayState extends MusicBeatState
 		{
 			SONG.player1 = 'henryphone';
 		}
+
 		else if (ClientPrefs.charOverrides[0] != '' && ClientPrefs.charOverrides[0] != 'bf' && !isStoryMode && !SONG.allowBFskin)
 		{
 			SONG.player1 = ClientPrefs.charOverrides[0];
@@ -3832,7 +3836,7 @@ class PlayState extends MusicBeatState
 		pet.x += pet.positionArray[0];
 		pet.y += pet.positionArray[1];
 		pet.alpha = 0.001;
-		if (curStage.toLowerCase() != 'alpha' && curStage.toLowerCase() != 'defeat'  && curStage.toLowerCase() != 'who' && !SONG.allowPet)
+		if (!SONG.allowPet)
 		{
 			pet.alpha = 1;
 			boyfriendGroup.add(pet);
@@ -6347,7 +6351,6 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		#if debug
 		if (FlxG.keys.justPressed.SEVEN && !endingSong && !inCutscene)
 		{
 			persistentUpdate = false;
@@ -6360,12 +6363,6 @@ class PlayState extends MusicBeatState
 			DiscordClient.changePresence("Chart Editor", null, null, true);
 			#end
 		}
-
-		if (FlxG.keys.justPressed.SIX && !endingSong && !inCutscene)
-			{
-				cpuControlled = !cpuControlled; //sorry i just dont wanna play the song each time i change a small thing
-			}
-		#end
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
@@ -8810,7 +8807,14 @@ class PlayState extends MusicBeatState
 			{
 				return;
 			}
+
+			if (SONG.song.toLowerCase() == 'defeat'){
+				var poop = Highscore.formatSong('triple-trouble', 2);
+				PlayState.SONG = Song.loadFromJson(poop, 'triple-trouble');
+				PlayState.storyDifficulty = 2;
+				LoadingState.loadAndSwitchState(new PlayState());
 		}
+	}
 
 		timeBarBG.visible = false;
 		timeBar.visible = false;

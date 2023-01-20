@@ -2,7 +2,6 @@ package;
 
 import FreeplayState.SongMetadata;
 import WeekData;
-import flash.text.TextField;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -224,8 +223,6 @@ class AmongFreeplayState extends MusicBeatState
 
 		if(ClientPrefs.forceUnlockedSongs != null){
 			localWeeks = ClientPrefs.forceUnlockedSongs;
-			hasSavedData = true;
-			trace(localWeeks);
 		}else{
 			localWeeks = weeks;
 		}
@@ -239,11 +236,25 @@ class AmongFreeplayState extends MusicBeatState
 				if (weeks[prevI].section == curWeek)
 				{
 					if(hasSavedData){
-						listOfButtons.push(new FreeplayCard(0, 0, weeks[prevI].songs[i][0], weeks[prevI].songs[i][1], weeks[prevI].songs[i][3],
-							weeks[prevI].songs[i][2], weeks[prevI].songs[i][4], weeks[prevI].songs[i][5], weeks[prevI].songs[i][6], localWeeks[prevI].songs[i][7]));
+						listOfButtons.push(new FreeplayCard(0, 0, 
+							weeks[prevI].songs[i][0],
+							weeks[prevI].songs[i][1],
+							weeks[prevI].songs[i][3],
+							weeks[prevI].songs[i][2], 
+							weeks[prevI].songs[i][4], 
+							weeks[prevI].songs[i][5], 
+							weeks[prevI].songs[i][6],
+							localWeeks[prevI].songs[i][7]));
 					}else{
-						listOfButtons.push(new FreeplayCard(0, 0, weeks[prevI].songs[i][0], weeks[prevI].songs[i][1], weeks[prevI].songs[i][3],
-							weeks[prevI].songs[i][2], weeks[prevI].songs[i][4], weeks[prevI].songs[i][5], weeks[prevI].songs[i][6], weeks[prevI].songs[i][7]));
+						listOfButtons.push(new FreeplayCard(0, 0, 
+							weeks[prevI].songs[i][0], 
+							weeks[prevI].songs[i][1], 
+							weeks[prevI].songs[i][3],
+							weeks[prevI].songs[i][2], 
+							weeks[prevI].songs[i][4], 
+							weeks[prevI].songs[i][5], 
+							weeks[prevI].songs[i][6], 
+							weeks[prevI].songs[i][7]));
 					}
 				}
 			}
@@ -491,14 +502,6 @@ class AmongFreeplayState extends MusicBeatState
 		changePortrait();
 	}
 
-	function Hover()
-	{
-	}
-
-	function UnHover()
-	{
-	}
-
 	public function goBack()
 	{
 		ClientPrefs.beans = localBeans;
@@ -530,7 +533,15 @@ class AmongFreeplayState extends MusicBeatState
 				["Sussus Toogus", "crewmate", 'green', FlxColor.fromRGB(0, 255, 0), FROM_STORY_MODE, ['sussus-toogus'], 0, false],
 				["Lights Down", "impostor3", 'green', FlxColor.fromRGB(0, 255, 0), FROM_STORY_MODE, ['lights-down'], 0, false],
 				["Reactor", "impostor3", 'green', FlxColor.fromRGB(0, 255, 0), FROM_STORY_MODE, ['reactor'], 0, false],
-				["Ejected", "parasite", 'para', FlxColor.fromRGB(0, 255, 0), FROM_STORY_MODE, ['ejected'], 0, false]
+				["Ejected", "parasite", 'para', FlxColor.fromRGB(0, 255, 0), FROM_STORY_MODE, ['ejected'], 0, false]			
+			],
+
+			section: 0
+		});
+
+		weeks.push({
+			songs: [
+				["Double Trouble", "parasite", 'para', FlxColor.fromRGB(0, 255, 0), FROM_STORY_MODE, ['double-trouble'], 0, false]			
 			],
 
 			section: 0
@@ -551,6 +562,7 @@ class AmongFreeplayState extends MusicBeatState
 		weeks.push({
 			songs: [
 				["Defeat", "black", 'black', FlxColor.fromRGB(179, 0, 255), FROM_STORY_MODE, ['defeat'], 0, false],
+				["Triple Trouble", "black", 'black', FlxColor.fromRGB(179, 0, 255), SPECIAL, ['triple-trouble'], 0, false],
 				["Finale", "black", 'finale', FlxColor.fromRGB(179, 0, 255), SPECIAL, ['finale'], 0, false]
 			],
 
@@ -689,7 +701,6 @@ class AmongFreeplayState extends MusicBeatState
 
 			section: 8
 		});
-
 		return weeks;
 	}
 
@@ -850,7 +861,6 @@ class AmongFreeplayState extends MusicBeatState
 			colorTween = FlxTween.color(porGlow, 0.2, porGlow.color, listOfButtons[curSelected].coloring);
 			portraitTween = FlxTween.tween(portrait, {x: 304.65}, 0.3, {ease: FlxEase.expoOut});
 			portraitAlphaTween = FlxTween.tween(portrait, {alpha: 1}, 0.3, {ease: FlxEase.expoOut});
-
 		}
 		rimlight.rimlightColor = listOfButtons[curSelected].coloring;
 	}

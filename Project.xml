@@ -102,6 +102,10 @@
 	<haxelib name="discord_rpc" if="desktop"/>
 	<!-- <haxelib name="hxcpp-debug-server" if="desktop"/> -->
 
+	 <!-- Always enable Null Object Reference check for crash dialog -->
+    <haxedef name="HXCPP_CHECK_POINTER" if="release" />
+    <haxedef name="HXCPP_STACK_LINE" if="release" />
+
 	<!-- <haxelib name="markdown" /> -->
 	<!-- <haxelib name="HtmlParser" /> -->
 
