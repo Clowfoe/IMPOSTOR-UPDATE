@@ -3836,7 +3836,7 @@ class PlayState extends MusicBeatState
 		pet.x += pet.positionArray[0];
 		pet.y += pet.positionArray[1];
 		pet.alpha = 0.001;
-		if (!SONG.allowPet)
+		if (SONG.allowPet)
 		{
 			pet.alpha = 1;
 			boyfriendGroup.add(pet);
