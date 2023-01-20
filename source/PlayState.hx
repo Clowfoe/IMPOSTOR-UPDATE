@@ -3407,6 +3407,75 @@ class PlayState extends MusicBeatState
 				add(fog_front);
 
 			case 'banana':
+				GameOverSubstate.loopSoundName = 'Jorsawsee_Loop';
+				GameOverSubstate.endSoundName = 'Jorsawsee_End';
+			
+				var sky:FlxSprite = new FlxSprite(-221.85, -167.85).loadGraphic(Paths.image('banana/sky', 'impostor'));
+				sky.antialiasing = true;
+				sky.scrollFactor.set(0.5, 0.5);
+				sky.active = false;
+				add(sky);
+
+				var hills:FlxSprite = new FlxSprite(-358, 438.4).loadGraphic(Paths.image('banana/mountains', 'impostor'));
+				hills.antialiasing = true;
+				hills.scrollFactor.set(0.8, 0.8);
+				hills.active = false;
+				add(hills);
+
+				var ground:FlxSprite = new FlxSprite(-331.95, 608.9).loadGraphic(Paths.image('banana/ground', 'impostor'));
+				ground.antialiasing = true;
+				ground.scrollFactor.set(1.0, 1.0);
+				ground.active = false;
+				add(ground);
+
+				sneakySnitch = new FlxSprite(106.65, 458.45);
+				sneakySnitch.frames = Paths.getSparrowAtlas('banana/tone', 'impostor');
+				sneakySnitch.animation.addByPrefix('hide', 'sneaky', 24, true);
+				sneakySnitch.antialiasing = true;
+				sneakySnitch.scrollFactor.set(1, 1);
+				sneakySnitch.active = true;
+				add(sneakySnitch);
+
+				bananaCrowd = new FlxSprite(1473, 430.1);
+				bananaCrowd.frames = Paths.getSparrowAtlas('banana/bananabgboppers', 'impostor');
+				bananaCrowd.animation.addByIndices('leftbop', 'amongbabies instance 1', [0, 1, 2, 3, 4, 5, 6], "", 24, false);
+				bananaCrowd.animation.addByIndices('rightbop', 'amongbabies instance 1', [7, 8, 9, 10, 11, 12, 13], "", 24, false);
+				bananaCrowd.antialiasing = true;
+				bananaCrowd.scrollFactor.set(1, 1);
+				bananaCrowd.active = true;
+				add(bananaCrowd);
+
+				bananaChef = new FlxSprite(804.85, 238.55);
+				bananaChef.frames = Paths.getSparrowAtlas('banana/chef_banana', 'impostor');
+				bananaChef.animation.addByPrefix('event', 'chef instance 1', 24, false);
+				bananaChef.antialiasing = true;
+				bananaChef.scrollFactor.set(1, 1);
+				bananaChef.active = true;
+				add(bananaChef);
+
+				tomato = new FlxSprite(804.85, 538.55);
+				tomato.frames = Paths.getSparrowAtlas('banana/tomato', 'impostor');
+				tomato.animation.addByPrefix('smush', 'tom', 24, true);
+				tomato.antialiasing = true;
+				tomato.scrollFactor.set(1, 1);
+				tomato.active = true;
+
+				bananas = new FlxSprite(117.7, 928.4).loadGraphic(Paths.image('banana/bananas', 'impostor'));
+				bananas.antialiasing = true;
+				bananas.scrollFactor.set(1.1, 1.1);
+				bananas.active = false;
+
+				bunches = new FlxSprite(-284.55, -168).loadGraphic(Paths.image('banana/bananabunches', 'impostor'));
+				bunches.antialiasing = true;
+				bunches.scrollFactor.set(1.3, 1.3);
+				bunches.active = false;
+
+				leaves = new FlxSprite(-78.2, -293.9).loadGraphic(Paths.image('banana/leaves', 'impostor'));
+				leaves.antialiasing = true;
+				leaves.scrollFactor.set(1.5, 1.5);
+				leaves.active = false;
+                add(leaves);
+
 				var lightoverlay:FlxSprite = new FlxSprite(-221.85, -167.7).loadGraphic(Paths.image('banana/LIGHTSOURCE', 'impostor'));
 				lightoverlay.antialiasing = true;
 				lightoverlay.scrollFactor.set(1, 1);

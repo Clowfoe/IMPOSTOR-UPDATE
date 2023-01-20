@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-150
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "bidle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-140,
+				-527
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "bright",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-155,
+				-439
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "bdown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				121,
+				-317
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "bleft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-199,
+				-139
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "bup",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bananungus",
+	"position": [
+		-70,
+		-30
+	],
+	"healthicon": "bananungus",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		212,
+		82
+	],
+	"camera_position": [
+		-253,
+		140
+	],
+	"sing_duration": 10,
+	"scale": 1
+}
