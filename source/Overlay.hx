@@ -26,7 +26,7 @@ class Overlay extends TextField
 		super();
 
 		this.x = x;
-		this.y = x;
+		this.y = y;
 
 		autoSize = LEFT;
 		selectable = false;
