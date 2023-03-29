@@ -11,7 +11,7 @@ import flixel.addons.display.FlxBackdrop;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.input.mouse.FlxMouseEventManager;
+import flixel.input.mouse.FlxMouseEvent;
 import flixel.math.FlxMath;
 import flixel.system.FlxSound;
 import flixel.text.FlxText;
@@ -283,7 +283,7 @@ class AmongFreeplayState extends MusicBeatState
 		crossImage.updateHitbox();
 		crossImage.cameras = [camUpper];
 		add(crossImage);
-		FlxMouseEventManager.add(crossImage, function onMouseDown(s:FlxSprite)
+		FlxMouseEvent.add(crossImage, function onMouseDown(s:FlxSprite)
 		{
 			goBack();
 		}, null, null);
