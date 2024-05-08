@@ -623,12 +623,15 @@ class PlayState extends MusicBeatState
 
 	var pet:Pet;
 
+	//identity crisis
+	var doorTransition:FlxSprite;
+
 	override public function create()
 	{
 		super.create();
 
-		FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Inst'); // fuck
-		FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Voices');
+		FlxG.sound.cache('songs:assets/songs/${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Inst.ogg'); // fuck
+		FlxG.sound.cache('songs:assets/songs/${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Voices.ogg'); // fuck
 		instance = this;
 		resetSpriteCache = false;
 
@@ -2993,7 +2996,7 @@ class PlayState extends MusicBeatState
 				airshipskyflash.scrollFactor.set(1, 1);
 				airshipskyflash.active = true;
 				add(airshipskyflash);
-				airshipskyflash.alpha = 0;
+				airshipskyflash.alpha = 0.00001;
 
 			case 'school': // Week 6 - Senpai, Roses
 				GameOverSubstate.deathSoundName = 'fnf_loss_sfx-pixel';
@@ -3134,8 +3137,8 @@ class PlayState extends MusicBeatState
 				add(cloudScroll);
 				add(speedLines);
 				canPause = false;
-				camGame.visible = false;
-				camHUD.visible = false;
+				camGame.alpha = 0.00001;
+				camHUD.alpha = 0.00001;
 				
 
 			case 'polus':
@@ -3244,7 +3247,7 @@ class PlayState extends MusicBeatState
 				mainoverlay.active = false;
 				add(mainoverlay);
 			case 'cargo':
-				lightoverlayDK = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/scavd', 'impostor'));
+				lightoverlayDK = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/scvavd', 'impostor'));
 				lightoverlayDK.antialiasing = true;
 				lightoverlayDK.scrollFactor.set(1, 1);
 				lightoverlayDK.active = false;
@@ -4230,6 +4233,17 @@ class PlayState extends MusicBeatState
 			add(timeBar);
 			add(timeTxt);
 			}
+		
+		if (SONG.song.toLowerCase() == 'identity crisis'){
+			doorTransition = new FlxSprite();
+			doorTransition.frames = Paths.getSparrowAtlas('skeld/doors','impostor');
+			doorTransition.animation.addByPrefix('open','Door Openin Animation Shrunk instance 1',24,false);
+			doorTransition.scale.set(2.5,2.5);
+			doorTransition.updateHitbox();
+			doorTransition.screenCenter();
+			add(doorTransition);
+			doorTransition.cameras = [camOther];
+		}
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
@@ -5237,6 +5251,17 @@ class PlayState extends MusicBeatState
 		#end
 		setOnLuas('songLength', songLength);
 		callOnLuas('onSongStart', []);
+
+		
+		if (SONG.song.toLowerCase() == 'identity crisis'){
+			doorTransition.animation.play('open',true,false,300);
+			doorTransition.animation.callback = function(name,framenumber,index){
+				if(name == 'open' && framenumber == 369){
+					remove(doorTransition);
+				}
+			}
+			FlxG.sound.play(Paths.sound('doorOpenSfx','impostor'),0.7);
+		}
 
 		new FlxTimer().start(0.3, function(tmr:FlxTimer)
 		{
@@ -7174,44 +7199,9 @@ class PlayState extends MusicBeatState
 				KillNotes();
 				FlxG.sound.music.onComplete();
 			}
-			if (FlxG.keys.justPressed.TWO)
-			{ // Go 10 seconds into the future :O
-				FlxG.sound.music.pause();
-				vocals.pause();
-				Conductor.songPosition += 10000;
-				notes.forEachAlive(function(daNote:Note)
-				{
-					if (daNote.strumTime + 800 < Conductor.songPosition)
-					{
-						daNote.active = false;
-						daNote.visible = false;
-
-						daNote.kill();
-						notes.remove(daNote, true);
-						daNote.destroy();
-					}
-				});
-				for (i in 0...unspawnNotes.length)
-				{
-					var daNote:Note = unspawnNotes[0];
-					if (daNote.strumTime + 800 >= Conductor.songPosition)
-					{
-						break;
-					}
-
-					daNote.active = false;
-					daNote.visible = false;
-
-					daNote.kill();
-					unspawnNotes.splice(unspawnNotes.indexOf(daNote), 1);
-					daNote.destroy();
-				}
-
-				FlxG.sound.music.time = Conductor.songPosition;
-				FlxG.sound.music.play();
-
-				vocals.time = Conductor.songPosition;
-				vocals.play();
+			if(FlxG.keys.justPressed.TWO) { //Go 10 seconds into the future :O
+				setSongTime(Conductor.songPosition + 10000);
+				clearNotesBefore(Conductor.songPosition);
 			}
 			if (FlxG.keys.justPressed.THREE)
 			{ 
@@ -7229,6 +7219,60 @@ class PlayState extends MusicBeatState
 	}
 
 	var isDead:Bool = false;
+
+	public function clearNotesBefore(time:Float)
+		{
+			var i:Int = unspawnNotes.length - 1;
+			while (i >= 0) {
+				var daNote:Note = unspawnNotes[i];
+				if(daNote.strumTime - 350 < time)
+				{
+					daNote.active = false;
+					daNote.visible = false;
+					daNote.ignoreNote = true;
+	
+					daNote.kill();
+					unspawnNotes.remove(daNote);
+					daNote.destroy();
+				}
+				--i;
+			}
+	
+			i = notes.length - 1;
+			while (i >= 0) {
+				var daNote:Note = notes.members[i];
+				if(daNote.strumTime - 350 < time)
+				{
+					daNote.active = false;
+					daNote.visible = false;
+					daNote.ignoreNote = true;
+	
+					daNote.kill();
+					notes.remove(daNote, true);
+					daNote.destroy();
+				}
+				--i;
+			}
+		}
+
+	public function setSongTime(time:Float)
+		{
+			if(time < 0) time = 0;
+	
+			FlxG.sound.music.pause();
+			vocals.pause();
+	
+			FlxG.sound.music.time = time;
+			FlxG.sound.music.play();
+	
+			if (Conductor.songPosition <= vocals.length)
+			{
+				vocals.time = time;
+			}
+			vocals.play();
+			Conductor.songPosition = time;
+			songTime = time;
+		}
 
 	function doDeathCheck()
 	{
@@ -7626,8 +7670,8 @@ class PlayState extends MusicBeatState
 				case 'Ejected Start':
 					camGame.flash(FlxColor.WHITE, 0.35);
 					canPause = true;
-					camGame.visible = true;
-					camHUD.visible = true;
+					camGame.alpha = 1;
+					camHUD.alpha = 1;
 				case 'Double Kill Events':
 					switch(value1.toLowerCase()){
 						case 'darken':
@@ -10129,11 +10173,6 @@ class PlayState extends MusicBeatState
 				if (curBeat % 2 == 0)
 				{
 					crowd2.animation.play('bop');
-				}
-			case 'polus2':
-				if (curBeat % 2 == 0)
-				{
-					crowd.animation.play('bop');
 				}
 			case 'grey':
 				if(curBeat % chromFreq == 0){
