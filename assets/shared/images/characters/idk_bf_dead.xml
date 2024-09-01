@@ -1,24 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="idk_bf_dead.png">
-	<!-- Created with Adobe Animate version 21.0.5.40714 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="first death0000" x="0" y="0" width="183" height="272"/>
-	<SubTexture name="first death0001" x="193" y="0" width="183" height="272"/>
-	<SubTexture name="first death0002" x="386" y="0" width="183" height="272"/>
-	<SubTexture name="first death0003" x="579" y="0" width="183" height="272"/>
-	<SubTexture name="first death0004" x="772" y="0" width="183" height="272"/>
-	<SubTexture name="first death0005" x="965" y="0" width="183" height="272"/>
-	<SubTexture name="first death0006" x="1158" y="0" width="183" height="272"/>
-	<SubTexture name="first death0007" x="1351" y="0" width="183" height="272"/>
-	<SubTexture name="first death0008" x="1544" y="0" width="183" height="272"/>
-	<SubTexture name="first death0009" x="1737" y="0" width="183" height="272"/>
-	<SubTexture name="first death0010" x="0" y="282" width="183" height="272"/>
-	<SubTexture name="first death0011" x="193" y="282" width="183" height="272"/>
-	<SubTexture name="first death0012" x="386" y="282" width="183" height="272"/>
-	<SubTexture name="first death0013" x="579" y="282" width="183" height="272"/>
-	<SubTexture name="first death0014" x="772" y="282" width="183" height="272"/>
-	<SubTexture name="first death0015" x="965" y="282" width="183" height="272"/>
-	<SubTexture name="first death0016" x="1158" y="282" width="183" height="272"/>
-	<SubTexture name="first death0017" x="1351" y="282" width="183" height="272"/>
-	<SubTexture name="first death0018" x="1351" y="282" width="183" height="272"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="idk_bf_dead.png" width="2828" height="266">
+	<SubTexture name="first death0000" x="252" y="0" width="138" height="130" frameX="-4" frameY="-133" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0001" x="143" y="0" width="104" height="94" frameX="-17" frameY="-96" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0002" x="395" y="0" width="138" height="217" frameX="-4" frameY="-46" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0003" x="2675" y="0" width="153" height="266" frameX="-2" frameY="-6" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0004" x="833" y="0" width="170" height="263" frameX="-2" frameY="-0" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0005" x="1008" y="0" width="162" height="263" frameX="-4" frameY="-0" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0006" x="1175" y="0" width="179" height="263" frameX="-4" frameY="-0" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0007" x="1359" y="0" width="183" height="263" frameX="-0" frameY="-0" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0008" x="1547" y="0" width="175" height="263" frameX="-0" frameY="-0" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0009" x="1727" y="0" width="175" height="263" frameX="-0" frameY="-0" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0010" x="1907" y="0" width="164" height="263" frameX="-2" frameY="-0" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0011" x="538" y="0" width="145" height="254" frameX="-2" frameY="-9" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0012" x="688" y="0" width="140" height="260" frameX="-2" frameY="-3" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0013" x="2076" y="0" width="138" height="263" frameX="-4" frameY="-0" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0014" x="2219" y="0" width="153" height="263" frameX="-2" frameY="-0" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0015" x="2377" y="0" width="140" height="263" frameX="-4" frameY="-0" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0016" x="2522" y="0" width="148" height="263" frameX="-4" frameY="-0" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0017" x="0" y="0" width="138" height="86" frameX="-4" frameY="-177" frameWidth="183" frameHeight="272"/>
+	<SubTexture name="first death0018" x="0" y="0" width="138" height="86" frameX="-4" frameY="-177" frameWidth="183" frameHeight="272"/>
 </TextureAtlas>

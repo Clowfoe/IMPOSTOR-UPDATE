@@ -1,16 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="airshipFan.png">
-	<!-- Created with Adobe Animate version 22.0.1.105 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="ala avion instance 10000" x="30" y="30" width="1808" height="1041" pivotX="1398.75" pivotY="2050.3"/>
-	<SubTexture name="ala avion instance 10001" x="1868" y="30" width="1808" height="1041"/>
-	<SubTexture name="ala avion instance 10002" x="3706" y="30" width="1808" height="1041"/>
-	<SubTexture name="ala avion instance 10003" x="5544" y="30" width="1808" height="1041"/>
-	<SubTexture name="ala avion instance 10004" x="30" y="1101" width="1808" height="1041"/>
-	<SubTexture name="ala avion instance 10005" x="1868" y="1101" width="1808" height="1041"/>
-	<SubTexture name="ala avion instance 10006" x="3706" y="1101" width="1808" height="1041"/>
-	<SubTexture name="ala avion instance 10007" x="5544" y="1101" width="1808" height="1041"/>
-	<SubTexture name="ala avion instance 10008" x="30" y="2172" width="1808" height="1041"/>
-	<SubTexture name="ala avion instance 10009" x="1868" y="2172" width="1808" height="1041"/>
-	<SubTexture name="ala avion instance 10010" x="3706" y="2172" width="1808" height="1041"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="airshipFan.png" width="3899" height="5711">
+	<SubTexture name="ala avion instance 10000" x="0" y="0" width="1807" height="1041" frameX="-1" frameY="-0" frameWidth="1808" frameHeight="1041"/>
+	<SubTexture name="ala avion instance 10001" x="1812" y="0" width="1041" height="1807" rotated="true" frameX="-1" frameY="-0" frameWidth="1808" frameHeight="1041"/>
+	<SubTexture name="ala avion instance 10002" x="0" y="1046" width="1041" height="1807" rotated="true" frameX="-1" frameY="-0" frameWidth="1808" frameHeight="1041"/>
+	<SubTexture name="ala avion instance 10003" x="1046" y="1812" width="1807" height="1041" frameX="-1" frameY="-0" frameWidth="1808" frameHeight="1041"/>
+	<SubTexture name="ala avion instance 10004" x="2858" y="0" width="1041" height="1807" rotated="true" frameX="-1" frameY="-0" frameWidth="1808" frameHeight="1041"/>
+	<SubTexture name="ala avion instance 10005" x="2858" y="1812" width="1041" height="1807" rotated="true" frameX="-1" frameY="-0" frameWidth="1808" frameHeight="1041"/>
+	<SubTexture name="ala avion instance 10006" x="0" y="2858" width="1041" height="1807" rotated="true" frameX="-1" frameY="-0" frameWidth="1808" frameHeight="1041"/>
+	<SubTexture name="ala avion instance 10007" x="1046" y="2858" width="1041" height="1807" rotated="true" frameX="-1" frameY="-0" frameWidth="1808" frameHeight="1041"/>
+	<SubTexture name="ala avion instance 10008" x="2092" y="3624" width="1807" height="1041" frameX="-1" frameY="-0" frameWidth="1808" frameHeight="1041"/>
+	<SubTexture name="ala avion instance 10009" x="0" y="4670" width="1807" height="1041" frameX="-1" frameY="-0" frameWidth="1808" frameHeight="1041"/>
+	<SubTexture name="ala avion instance 10010" x="1812" y="4670" width="1807" height="1041" frameX="-1" frameY="-0" frameWidth="1808" frameHeight="1041"/>
 </TextureAtlas>

@@ -1,35 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="bubbles.png">
-	<!-- Created with Adobe Animate version 21.0.6.41649 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Lava Bubbles0000" x="0" y="0" width="15" height="13" frameX="-146" frameY="-14" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0001" x="0" y="0" width="15" height="13" frameX="-146" frameY="-14" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0002" x="20" y="0" width="573" height="158" frameX="-144" frameY="-10" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0003" x="598" y="0" width="1577" height="164" frameX="-137" frameY="-4" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0004" x="2180" y="0" width="1580" height="168" frameX="-134" frameY="-2" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0005" x="0" y="173" width="1702" height="169" frameX="-16" frameY="-2" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0006" x="1707" y="173" width="1707" height="172" frameX="-16" frameY="0" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0007" x="0" y="350" width="1709" height="169" frameX="-15" frameY="-3" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0008" x="1714" y="350" width="1714" height="168" frameX="-10" frameY="-5" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0009" x="0" y="524" width="1720" height="169" frameX="-8" frameY="-5" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0010" x="1725" y="524" width="1724" height="162" frameX="-8" frameY="-12" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0011" x="0" y="698" width="1729" height="162" frameX="-6" frameY="-12" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0012" x="1734" y="698" width="1733" height="159" frameX="-2" frameY="-15" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0013" x="0" y="865" width="1720" height="159" frameX="0" frameY="-15" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0014" x="1725" y="865" width="1722" height="158" frameX="0" frameY="-27" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0015" x="0" y="1029" width="1711" height="161" frameX="-2" frameY="-24" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0016" x="1716" y="1029" width="1711" height="162" frameX="-2" frameY="-24" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0017" x="0" y="1196" width="1714" height="164" frameX="-3" frameY="-23" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0018" x="1719" y="1196" width="1718" height="163" frameX="-3" frameY="-25" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0019" x="0" y="1365" width="1538" height="161" frameX="-186" frameY="-27" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0020" x="1543" y="1365" width="1537" height="162" frameX="-187" frameY="-27" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0021" x="0" y="1532" width="1522" height="156" frameX="-187" frameY="-34" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0022" x="1527" y="1532" width="191" height="114" frameX="-1072" frameY="-76" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0023" x="1527" y="1532" width="191" height="114" frameX="-1072" frameY="-76" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0024" x="1723" y="1532" width="191" height="115" frameX="-1075" frameY="-75" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0025" x="1919" y="1532" width="195" height="113" frameX="-1075" frameY="-77" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0026" x="2119" y="1532" width="197" height="110" frameX="-1076" frameY="-79" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0027" x="2119" y="1532" width="197" height="110" frameX="-1076" frameY="-79" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0028" x="2321" y="1532" width="43" height="20" frameX="-1215" frameY="-86" frameWidth="1735" frameHeight="190"/>
-	<SubTexture name="Lava Bubbles0029" x="2369" y="1532" width="45" height="21" frameX="-1215" frameY="-86" frameWidth="1735" frameHeight="190"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="bubbles.png" width="2393" height="2529">
+	<SubTexture name="Lava Bubbles0000" x="1711" y="98" width="15" height="12" frameX="-146" frameY="-14" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0001" x="1711" y="98" width="15" height="12" frameX="-146" frameY="-14" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0002" x="1737" y="1716" width="158" height="572" rotated="true" frameX="-144" frameY="-10" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0003" x="2064" y="0" width="163" height="1576" rotated="true" frameX="-137" frameY="-5" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0004" x="0" y="2034" width="1579" height="168" frameX="-134" frameY="-2" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0005" x="0" y="696" width="1702" height="168" frameX="-16" frameY="-2" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0006" x="0" y="0" width="1706" height="171" frameX="-16" frameY="-1" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0007" x="0" y="349" width="1709" height="169" frameX="-15" frameY="-3" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0008" x="0" y="523" width="1714" height="168" frameX="-10" frameY="-5" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0009" x="0" y="176" width="1720" height="168" frameX="-8" frameY="-5" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0010" x="0" y="1372" width="1723" height="162" frameX="-8" frameY="-12" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0011" x="0" y="869" width="1728" height="162" frameX="-6" frameY="-12" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0012" x="0" y="1706" width="1732" height="159" frameX="-2" frameY="-15" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0013" x="0" y="1870" width="1719" height="159" frameX="-0" frameY="-15" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0014" x="1902" y="0" width="157" height="1722" rotated="true" frameX="-0" frameY="-27" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0015" x="1737" y="0" width="160" height="1711" rotated="true" frameX="-2" frameY="-24" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0016" x="0" y="1539" width="1711" height="162" frameX="-2" frameY="-24" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0017" x="0" y="1204" width="1714" height="163" frameX="-3" frameY="-23" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0018" x="0" y="1036" width="1717" height="163" frameX="-3" frameY="-25" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0019" x="2232" y="0" width="161" height="1537" rotated="true" frameX="-186" frameY="-27" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0020" x="0" y="2207" width="1536" height="162" frameX="-187" frameY="-27" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0021" x="0" y="2374" width="1521" height="155" frameX="-187" frameY="-34" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0022" x="1722" y="2293" width="191" height="114" frameX="-1072" frameY="-76" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0023" x="1722" y="2293" width="191" height="114" frameX="-1072" frameY="-76" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0024" x="1526" y="2407" width="191" height="115" frameX="-1075" frameY="-75" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0025" x="1541" y="2207" width="113" height="195" rotated="true" frameX="-1075" frameY="-77" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0026" x="1722" y="2412" width="197" height="110" frameX="-1076" frameY="-79" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0027" x="1722" y="2412" width="197" height="110" frameX="-1076" frameY="-79" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0028" x="1711" y="0" width="20" height="43" rotated="true" frameX="-1215" frameY="-86" frameWidth="1735" frameHeight="190"/>
+	<SubTexture name="Lava Bubbles0029" x="1711" y="48" width="19" height="45" rotated="true" frameX="-1215" frameY="-87" frameWidth="1735" frameHeight="190"/>
 </TextureAtlas>

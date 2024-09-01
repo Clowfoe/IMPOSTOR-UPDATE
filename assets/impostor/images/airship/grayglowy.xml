@@ -1,33 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="grayglowy.png">
-	<!-- Created with Adobe Animate version 21.0.6.41649 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="jar??0000" x="0" y="0" width="581" height="603"/>
-	<SubTexture name="jar??0001" x="586" y="0" width="581" height="603"/>
-	<SubTexture name="jar??0002" x="1172" y="0" width="581" height="603"/>
-	<SubTexture name="jar??0003" x="1758" y="0" width="581" height="603"/>
-	<SubTexture name="jar??0004" x="2344" y="0" width="581" height="603"/>
-	<SubTexture name="jar??0005" x="2930" y="0" width="581" height="603"/>
-	<SubTexture name="jar??0006" x="0" y="608" width="581" height="603"/>
-	<SubTexture name="jar??0007" x="586" y="608" width="581" height="603"/>
-	<SubTexture name="jar??0008" x="1172" y="608" width="581" height="603"/>
-	<SubTexture name="jar??0009" x="1758" y="608" width="581" height="603"/>
-	<SubTexture name="jar??0010" x="2344" y="608" width="581" height="603"/>
-	<SubTexture name="jar??0011" x="2930" y="608" width="581" height="603"/>
-	<SubTexture name="jar??0012" x="0" y="1216" width="581" height="603"/>
-	<SubTexture name="jar??0013" x="586" y="1216" width="581" height="603"/>
-	<SubTexture name="jar??0014" x="1172" y="1216" width="581" height="603"/>
-	<SubTexture name="jar??0015" x="1758" y="1216" width="581" height="603"/>
-	<SubTexture name="jar??0016" x="2344" y="1216" width="581" height="603"/>
-	<SubTexture name="jar??0017" x="2930" y="1216" width="581" height="603"/>
-	<SubTexture name="jar??0018" x="0" y="1824" width="581" height="603"/>
-	<SubTexture name="jar??0019" x="586" y="1824" width="581" height="603"/>
-	<SubTexture name="jar??0020" x="1172" y="1824" width="581" height="603"/>
-	<SubTexture name="jar??0021" x="1758" y="1824" width="581" height="603"/>
-	<SubTexture name="jar??0022" x="2344" y="1824" width="581" height="603"/>
-	<SubTexture name="jar??0023" x="2930" y="1824" width="581" height="603"/>
-	<SubTexture name="jar??0024" x="0" y="2432" width="581" height="603"/>
-	<SubTexture name="jar??0025" x="586" y="2432" width="581" height="603"/>
-	<SubTexture name="jar??0026" x="1172" y="2432" width="581" height="603"/>
-	<SubTexture name="jar??0027" x="1758" y="2432" width="581" height="603"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="grayglowy.png" width="5167" height="1063">
+	<SubTexture name="jar??0000" x="0" y="0" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0001" x="0" y="0" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0002" x="0" y="555" width="550" height="508" rotated="true" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0003" x="513" y="0" width="550" height="508" rotated="true" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0004" x="555" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0005" x="555" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0006" x="1068" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0007" x="1068" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0008" x="1068" y="0" width="550" height="508" rotated="true" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0009" x="1581" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0010" x="1623" y="0" width="550" height="508" rotated="true" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0011" x="1623" y="0" width="550" height="508" rotated="true" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0012" x="2094" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0013" x="2094" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0014" x="2178" y="0" width="550" height="508" rotated="true" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0015" x="2607" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0016" x="2733" y="0" width="550" height="508" rotated="true" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0017" x="2733" y="0" width="550" height="508" rotated="true" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0018" x="3120" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0019" x="3120" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0020" x="3288" y="0" width="550" height="508" rotated="true" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0021" x="3633" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0022" x="3843" y="0" width="550" height="508" rotated="true" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0023" x="3843" y="0" width="550" height="508" rotated="true" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0024" x="4146" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0025" x="4146" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0026" x="4398" y="0" width="550" height="508" rotated="true" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
+	<SubTexture name="jar??0027" x="4659" y="513" width="508" height="550" frameX="-36" frameY="-20" frameWidth="581" frameHeight="603"/>
 </TextureAtlas>

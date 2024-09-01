@@ -1,31 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="blue.png">
-	<!-- Created with Adobe Animate version 22.0.0.93 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="blue down0000" x="10" y="10" width="377" height="321"/>
-	<SubTexture name="blue down0001" x="10" y="10" width="377" height="321"/>
-	<SubTexture name="blue down0002" x="397" y="10" width="377" height="321"/>
-	<SubTexture name="blue idle0000" x="784" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0001" x="784" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0002" x="1097" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0003" x="1097" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0004" x="1410" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0005" x="1410" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0006" x="1723" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0007" x="1723" y="10" width="303" height="344"/>
-	<SubTexture name="blue idle0008" x="10" y="364" width="303" height="344"/>
-	<SubTexture name="blue idle0009" x="10" y="364" width="303" height="344"/>
-	<SubTexture name="blue idle0010" x="323" y="364" width="303" height="344"/>
-	<SubTexture name="blue idle0011" x="323" y="364" width="303" height="344"/>
-	<SubTexture name="blue idle0012" x="323" y="364" width="303" height="344"/>
-	<SubTexture name="blue idle0013" x="323" y="364" width="303" height="344"/>
-	<SubTexture name="blue left0000" x="636" y="364" width="373" height="342"/>
-	<SubTexture name="blue left0001" x="636" y="364" width="373" height="342"/>
-	<SubTexture name="blue left0002" x="1019" y="364" width="373" height="342"/>
-	<SubTexture name="blue right0000" x="1402" y="364" width="458" height="342"/>
-	<SubTexture name="blue right0001" x="1402" y="364" width="458" height="342"/>
-	<SubTexture name="blue right0002" x="10" y="718" width="458" height="342"/>
-	<SubTexture name="blue up0000" x="478" y="718" width="340" height="375"/>
-	<SubTexture name="blue up0001" x="478" y="718" width="340" height="375"/>
-	<SubTexture name="blue up0002" x="828" y="718" width="340" height="375"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="blue.png" width="5158" height="342">
+	<SubTexture name="blue down0000" x="2008" y="0" width="369" height="312" frameX="-0" frameY="-8" frameWidth="377" frameHeight="321"/>
+	<SubTexture name="blue down0001" x="2008" y="0" width="369" height="312" frameX="-0" frameY="-8" frameWidth="377" frameHeight="321"/>
+	<SubTexture name="blue down0002" x="2382" y="0" width="376" height="320" frameX="-1" frameY="-0" frameWidth="377" frameHeight="321"/>
+	<SubTexture name="blue idle0000" x="1692" y="0" width="311" height="302" rotated="true" frameX="-0" frameY="-32" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue idle0001" x="1692" y="0" width="311" height="302" rotated="true" frameX="-0" frameY="-32" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue idle0002" x="1372" y="0" width="315" height="299" rotated="true" frameX="-4" frameY="-28" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue idle0003" x="1372" y="0" width="315" height="299" rotated="true" frameX="-4" frameY="-28" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue idle0004" x="1042" y="0" width="325" height="287" rotated="true" frameX="-5" frameY="-18" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue idle0005" x="1042" y="0" width="325" height="287" rotated="true" frameX="-5" frameY="-18" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue idle0006" x="696" y="0" width="341" height="274" rotated="true" frameX="-2" frameY="-2" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue idle0007" x="696" y="0" width="341" height="274" rotated="true" frameX="-2" frameY="-2" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue idle0008" x="348" y="0" width="343" height="272" rotated="true" frameX="-1" frameY="-0" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue idle0009" x="348" y="0" width="343" height="272" rotated="true" frameX="-1" frameY="-0" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue idle0010" x="0" y="0" width="343" height="269" rotated="true" frameX="-1" frameY="-0" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue idle0011" x="0" y="0" width="343" height="269" rotated="true" frameX="-1" frameY="-0" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue idle0012" x="0" y="0" width="343" height="269" rotated="true" frameX="-1" frameY="-0" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue idle0013" x="0" y="0" width="343" height="269" rotated="true" frameX="-1" frameY="-0" frameWidth="303" frameHeight="344"/>
+	<SubTexture name="blue left0000" x="3143" y="0" width="356" height="339" frameX="-0" frameY="-3" frameWidth="373" frameHeight="342"/>
+	<SubTexture name="blue left0001" x="3143" y="0" width="356" height="339" frameX="-0" frameY="-3" frameWidth="373" frameHeight="342"/>
+	<SubTexture name="blue left0002" x="3875" y="0" width="368" height="342" frameX="-5" frameY="-0" frameWidth="373" frameHeight="342"/>
+	<SubTexture name="blue right0000" x="4248" y="0" width="455" height="342" frameX="-3" frameY="-0" frameWidth="458" frameHeight="342"/>
+	<SubTexture name="blue right0001" x="4248" y="0" width="455" height="342" frameX="-3" frameY="-0" frameWidth="458" frameHeight="342"/>
+	<SubTexture name="blue right0002" x="4708" y="0" width="450" height="342" frameX="-0" frameY="-0" frameWidth="458" frameHeight="342"/>
+	<SubTexture name="blue up0000" x="2763" y="0" width="375" height="323" rotated="true" frameX="-5" frameY="-0" frameWidth="340" frameHeight="375"/>
+	<SubTexture name="blue up0001" x="2763" y="0" width="375" height="323" rotated="true" frameX="-5" frameY="-0" frameWidth="340" frameHeight="375"/>
+	<SubTexture name="blue up0002" x="3504" y="0" width="366" height="340" rotated="true" frameX="-0" frameY="-9" frameWidth="340" frameHeight="375"/>
 </TextureAtlas>

@@ -1,126 +1,127 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="crewmate.png">
-	<!-- Created with Adobe Animate version 21.0.6.41649 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="green down0000" x="0" y="0" width="620" height="395" frameX="0" frameY="-5" frameWidth="622" frameHeight="400"/>
-	<SubTexture name="green down0001" x="0" y="0" width="620" height="395" frameX="0" frameY="-5" frameWidth="622" frameHeight="400"/>
-	<SubTexture name="green down0002" x="630" y="0" width="622" height="387" frameX="0" frameY="0" frameWidth="622" frameHeight="400"/>
-	<SubTexture name="green down0003" x="630" y="0" width="622" height="387" frameX="0" frameY="0" frameWidth="622" frameHeight="400"/>
-	<SubTexture name="green down0004" x="1262" y="0" width="622" height="387" frameX="0" frameY="0" frameWidth="622" frameHeight="400"/>
-	<SubTexture name="green down0005" x="1262" y="0" width="622" height="387" frameX="0" frameY="0" frameWidth="622" frameHeight="400"/>
-	<SubTexture name="green down0006" x="1894" y="0" width="622" height="387" frameX="0" frameY="0" frameWidth="622" frameHeight="400"/>
-	<SubTexture name="green down0007" x="1894" y="0" width="622" height="387" frameX="0" frameY="0" frameWidth="622" frameHeight="400"/>
-	<SubTexture name="green idle0000" x="2526" y="0" width="476" height="362" frameX="-1" frameY="-18" frameWidth="477" frameHeight="380"/>
-	<SubTexture name="green idle0001" x="2526" y="0" width="476" height="362" frameX="-1" frameY="-18" frameWidth="477" frameHeight="380"/>
-	<SubTexture name="green idle0002" x="3012" y="0" width="476" height="367" frameX="0" frameY="-12" frameWidth="477" frameHeight="380"/>
-	<SubTexture name="green idle0003" x="3012" y="0" width="476" height="367" frameX="0" frameY="-12" frameWidth="477" frameHeight="380"/>
-	<SubTexture name="green idle0004" x="3498" y="0" width="446" height="378" frameX="-3" frameY="-2" frameWidth="477" frameHeight="380"/>
-	<SubTexture name="green idle0005" x="3498" y="0" width="446" height="378" frameX="-3" frameY="-2" frameWidth="477" frameHeight="380"/>
-	<SubTexture name="green idle0006" x="3954" y="0" width="433" height="380" frameX="-2" frameY="0" frameWidth="477" frameHeight="380"/>
-	<SubTexture name="green idle0007" x="3954" y="0" width="433" height="380" frameX="-2" frameY="0" frameWidth="477" frameHeight="380"/>
-	<SubTexture name="green idle0008" x="4397" y="0" width="434" height="380" frameX="-1" frameY="0" frameWidth="477" frameHeight="380"/>
-	<SubTexture name="green idle0009" x="4397" y="0" width="434" height="380" frameX="-1" frameY="0" frameWidth="477" frameHeight="380"/>
-	<SubTexture name="green idle0010" x="4841" y="0" width="434" height="380" frameX="-1" frameY="0" frameWidth="477" frameHeight="380"/>
-	<SubTexture name="green idle0011" x="4841" y="0" width="434" height="380" frameX="-1" frameY="0" frameWidth="477" frameHeight="380"/>
-	<SubTexture name="green left0000" x="5285" y="0" width="658" height="382" frameX="0" frameY="-1" frameWidth="672" frameHeight="383"/>
-	<SubTexture name="green left0001" x="5285" y="0" width="658" height="382" frameX="0" frameY="-1" frameWidth="672" frameHeight="383"/>
-	<SubTexture name="green left0002" x="5953" y="0" width="666" height="383" frameX="-6" frameY="0" frameWidth="672" frameHeight="383"/>
-	<SubTexture name="green left0003" x="5953" y="0" width="666" height="383" frameX="-6" frameY="0" frameWidth="672" frameHeight="383"/>
-	<SubTexture name="green left0004" x="6629" y="0" width="666" height="383" frameX="-6" frameY="0" frameWidth="672" frameHeight="383"/>
-	<SubTexture name="green left0005" x="6629" y="0" width="666" height="383" frameX="-6" frameY="0" frameWidth="672" frameHeight="383"/>
-	<SubTexture name="green left0006" x="7305" y="0" width="666" height="383" frameX="-6" frameY="0" frameWidth="672" frameHeight="383"/>
-	<SubTexture name="green left0007" x="7305" y="0" width="666" height="383" frameX="-6" frameY="0" frameWidth="672" frameHeight="383"/>
-	<SubTexture name="green left0008" x="0" y="405" width="666" height="383" frameX="-6" frameY="0" frameWidth="672" frameHeight="383"/>
-	<SubTexture name="green notice0000" x="676" y="405" width="434" height="380" frameX="-176" frameY="-2" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0001" x="676" y="405" width="434" height="380" frameX="-176" frameY="-2" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0002" x="1120" y="405" width="443" height="377" frameX="-174" frameY="-5" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0003" x="1120" y="405" width="443" height="377" frameX="-174" frameY="-5" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0004" x="1573" y="405" width="487" height="382" frameX="-185" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0005" x="1573" y="405" width="487" height="382" frameX="-185" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0006" x="2070" y="405" width="490" height="382" frameX="-181" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0007" x="2070" y="405" width="490" height="382" frameX="-181" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0008" x="2570" y="405" width="492" height="382" frameX="-179" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0009" x="2570" y="405" width="492" height="382" frameX="-179" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0010" x="2570" y="405" width="492" height="382" frameX="-179" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0011" x="2570" y="405" width="492" height="382" frameX="-179" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0012" x="2570" y="405" width="492" height="382" frameX="-179" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0013" x="2570" y="405" width="492" height="382" frameX="-179" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0014" x="3072" y="405" width="492" height="379" frameX="-179" frameY="-3" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0015" x="3072" y="405" width="492" height="379" frameX="-179" frameY="-3" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0016" x="3574" y="405" width="634" height="395" frameX="-37" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0017" x="3574" y="405" width="634" height="395" frameX="-37" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0018" x="4218" y="405" width="671" height="382" frameX="0" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green notice0019" x="4218" y="405" width="671" height="382" frameX="0" frameY="0" frameWidth="672" frameHeight="395"/>
-	<SubTexture name="green right0000" x="4899" y="405" width="579" height="370" frameX="-6" frameY="0" frameWidth="585" frameHeight="370"/>
-	<SubTexture name="green right0001" x="4899" y="405" width="579" height="370" frameX="-6" frameY="0" frameWidth="585" frameHeight="370"/>
-	<SubTexture name="green right0002" x="5488" y="405" width="567" height="370" frameX="0" frameY="0" frameWidth="585" frameHeight="370"/>
-	<SubTexture name="green right0003" x="5488" y="405" width="567" height="370" frameX="0" frameY="0" frameWidth="585" frameHeight="370"/>
-	<SubTexture name="green right0004" x="6065" y="405" width="567" height="370" frameX="0" frameY="0" frameWidth="585" frameHeight="370"/>
-	<SubTexture name="green right0005" x="6065" y="405" width="567" height="370" frameX="0" frameY="0" frameWidth="585" frameHeight="370"/>
-	<SubTexture name="green right0006" x="6642" y="405" width="567" height="370" frameX="0" frameY="0" frameWidth="585" frameHeight="370"/>
-	<SubTexture name="green right0007" x="6642" y="405" width="567" height="370" frameX="0" frameY="0" frameWidth="585" frameHeight="370"/>
-	<SubTexture name="green unwave0000" x="7219" y="405" width="667" height="382"/>
-	<SubTexture name="green unwave0001" x="7219" y="405" width="667" height="382"/>
-	<SubTexture name="green unwave0002" x="0" y="810" width="659" height="382" frameX="-8" frameY="0" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0003" x="0" y="810" width="659" height="382" frameX="-8" frameY="0" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0004" x="669" y="810" width="612" height="381" frameX="-55" frameY="-1" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0005" x="669" y="810" width="612" height="381" frameX="-55" frameY="-1" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0006" x="1291" y="810" width="574" height="374" frameX="-93" frameY="-8" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0007" x="1291" y="810" width="574" height="374" frameX="-93" frameY="-8" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0008" x="1875" y="810" width="576" height="375" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0009" x="1875" y="810" width="576" height="375" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0010" x="2461" y="810" width="576" height="375" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0011" x="2461" y="810" width="576" height="375" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0012" x="2461" y="810" width="576" height="375" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0013" x="2461" y="810" width="576" height="375" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0014" x="2461" y="810" width="576" height="375" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0015" x="2461" y="810" width="576" height="375" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green unwave0016" x="2461" y="810" width="576" height="375" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
-	<SubTexture name="green up0000" x="3047" y="810" width="759" height="503" frameX="-9" frameY="0" frameWidth="819" frameHeight="503"/>
-	<SubTexture name="green up0001" x="3047" y="810" width="759" height="503" frameX="-9" frameY="0" frameWidth="819" frameHeight="503"/>
-	<SubTexture name="green up0002" x="3816" y="810" width="804" height="483" frameX="0" frameY="-20" frameWidth="819" frameHeight="503"/>
-	<SubTexture name="green up0003" x="4630" y="810" width="819" height="485" frameX="0" frameY="-18" frameWidth="819" frameHeight="503"/>
-	<SubTexture name="green up0004" x="5459" y="810" width="819" height="485" frameX="0" frameY="-18" frameWidth="819" frameHeight="503"/>
-	<SubTexture name="green up0005" x="6288" y="810" width="817" height="484" frameX="0" frameY="-19" frameWidth="819" frameHeight="503"/>
-	<SubTexture name="green up0006" x="7115" y="810" width="817" height="484" frameX="0" frameY="-19" frameWidth="819" frameHeight="503"/>
-	<SubTexture name="green up0007" x="0" y="1323" width="634" height="453" frameX="0" frameY="-50" frameWidth="819" frameHeight="503"/>
-	<SubTexture name="green up0008" x="644" y="1323" width="634" height="453" frameX="0" frameY="-50" frameWidth="819" frameHeight="503"/>
-	<SubTexture name="green wave0000" x="1288" y="1323" width="675" height="382" frameX="-13" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="green wave0001" x="1288" y="1323" width="675" height="382" frameX="-13" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="green wave0002" x="1973" y="1323" width="659" height="382" frameX="-29" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="green wave0003" x="1973" y="1323" width="659" height="382" frameX="-29" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="green wave0004" x="2642" y="1323" width="653" height="382" frameX="-35" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="green wave0005" x="2642" y="1323" width="653" height="382" frameX="-35" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="green wave0006" x="3305" y="1323" width="655" height="382" frameX="-33" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="green wave0007" x="3305" y="1323" width="655" height="382" frameX="-33" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="green wave0008" x="3970" y="1323" width="676" height="382" frameX="-12" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="green wave0009" x="3970" y="1323" width="676" height="382" frameX="-12" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="green wave0010" x="4656" y="1323" width="686" height="382" frameX="-2" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="green wave0011" x="4656" y="1323" width="686" height="382" frameX="-2" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="green wave0012" x="5352" y="1323" width="688" height="382"/>
-	<SubTexture name="green wave0013" x="5352" y="1323" width="688" height="382"/>
-	<SubTexture name="green wave0014" x="6050" y="1323" width="683" height="382" frameX="-5" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="green wave0015" x="6050" y="1323" width="683" height="382" frameX="-5" frameY="0" frameWidth="688" frameHeight="382"/>
-	<SubTexture name="silly dance left0000" x="6743" y="1323" width="433" height="399" frameX="-5" frameY="0" frameWidth="438" frameHeight="399"/>
-	<SubTexture name="silly dance left0001" x="6743" y="1323" width="433" height="399" frameX="-5" frameY="0" frameWidth="438" frameHeight="399"/>
-	<SubTexture name="silly dance left0002" x="7186" y="1323" width="432" height="397" frameX="0" frameY="-2" frameWidth="438" frameHeight="399"/>
-	<SubTexture name="silly dance left0003" x="7186" y="1323" width="432" height="397" frameX="0" frameY="-2" frameWidth="438" frameHeight="399"/>
-	<SubTexture name="silly dance left0004" x="7628" y="1323" width="427" height="396" frameX="-2" frameY="-3" frameWidth="438" frameHeight="399"/>
-	<SubTexture name="silly dance left0005" x="0" y="1786" width="413" height="376" frameX="-3" frameY="-23" frameWidth="438" frameHeight="399"/>
-	<SubTexture name="silly dance left0006" x="0" y="1786" width="413" height="376" frameX="-3" frameY="-23" frameWidth="438" frameHeight="399"/>
-	<SubTexture name="silly dance left0007" x="423" y="1786" width="411" height="379" frameX="-5" frameY="-20" frameWidth="438" frameHeight="399"/>
-	<SubTexture name="silly dance left0008" x="423" y="1786" width="411" height="379" frameX="-5" frameY="-20" frameWidth="438" frameHeight="399"/>
-	<SubTexture name="silly dance left0009" x="844" y="1786" width="410" height="379" frameX="-6" frameY="-20" frameWidth="438" frameHeight="399"/>
-	<SubTexture name="silly dance left0010" x="844" y="1786" width="410" height="379" frameX="-6" frameY="-20" frameWidth="438" frameHeight="399"/>
-	<SubTexture name="silly dance right0000" x="1264" y="1786" width="362" height="399" frameX="-22" frameY="0" frameWidth="412" frameHeight="399"/>
-	<SubTexture name="silly dance right0001" x="1264" y="1786" width="362" height="399" frameX="-22" frameY="0" frameWidth="412" frameHeight="399"/>
-	<SubTexture name="silly dance right0002" x="1636" y="1786" width="368" height="397" frameX="-21" frameY="-2" frameWidth="412" frameHeight="399"/>
-	<SubTexture name="silly dance right0003" x="1636" y="1786" width="368" height="397" frameX="-21" frameY="-2" frameWidth="412" frameHeight="399"/>
-	<SubTexture name="silly dance right0004" x="2014" y="1786" width="373" height="395" frameX="-20" frameY="-4" frameWidth="412" frameHeight="399"/>
-	<SubTexture name="silly dance right0005" x="2397" y="1786" width="397" height="376" frameX="-15" frameY="-23" frameWidth="412" frameHeight="399"/>
-	<SubTexture name="silly dance right0006" x="2397" y="1786" width="397" height="376" frameX="-15" frameY="-23" frameWidth="412" frameHeight="399"/>
-	<SubTexture name="silly dance right0007" x="2804" y="1786" width="411" height="379" frameX="-1" frameY="-20" frameWidth="412" frameHeight="399"/>
-	<SubTexture name="silly dance right0008" x="2804" y="1786" width="411" height="379" frameX="-1" frameY="-20" frameWidth="412" frameHeight="399"/>
-	<SubTexture name="silly dance right0009" x="3225" y="1786" width="412" height="379" frameX="0" frameY="-20" frameWidth="412" frameHeight="399"/>
-	<SubTexture name="silly dance right0010" x="3225" y="1786" width="412" height="379" frameX="0" frameY="-20" frameWidth="412" frameHeight="399"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="crewmate.png" width="4118" height="3842">
+	<SubTexture name="green down0000" x="2650" y="1318" width="619" height="394" frameX="-0" frameY="-5" frameWidth="622" frameHeight="400"/>
+	<SubTexture name="green down0001" x="2650" y="1318" width="619" height="394" frameX="-0" frameY="-5" frameWidth="622" frameHeight="400"/>
+	<SubTexture name="green down0002" x="1328" y="2530" width="621" height="387" frameX="-0" frameY="-0" frameWidth="622" frameHeight="400"/>
+	<SubTexture name="green down0003" x="1328" y="2530" width="621" height="387" frameX="-0" frameY="-0" frameWidth="622" frameHeight="400"/>
+	<SubTexture name="green down0004" x="1954" y="2541" width="621" height="387" frameX="-0" frameY="-0" frameWidth="622" frameHeight="400"/>
+	<SubTexture name="green down0005" x="1954" y="2541" width="621" height="387" frameX="-0" frameY="-0" frameWidth="622" frameHeight="400"/>
+	<SubTexture name="green down0006" x="2961" y="0" width="387" height="621" rotated="true" frameX="-0" frameY="-0" frameWidth="622" frameHeight="400"/>
+	<SubTexture name="green down0007" x="2961" y="0" width="387" height="621" rotated="true" frameX="-0" frameY="-0" frameWidth="622" frameHeight="400"/>
+	<SubTexture name="green idle0000" x="3159" y="1717" width="476" height="360" frameX="-1" frameY="-19" frameWidth="477" frameHeight="380"/>
+	<SubTexture name="green idle0001" x="3159" y="1717" width="476" height="360" frameX="-1" frameY="-19" frameWidth="477" frameHeight="380"/>
+	<SubTexture name="green idle0002" x="3346" y="987" width="367" height="476" rotated="true" frameX="-0" frameY="-12" frameWidth="477" frameHeight="380"/>
+	<SubTexture name="green idle0003" x="3346" y="987" width="367" height="476" rotated="true" frameX="-0" frameY="-12" frameWidth="477" frameHeight="380"/>
+	<SubTexture name="green idle0004" x="3231" y="2082" width="446" height="378" frameX="-3" frameY="-2" frameWidth="477" frameHeight="380"/>
+	<SubTexture name="green idle0005" x="3231" y="2082" width="446" height="378" frameX="-3" frameY="-2" frameWidth="477" frameHeight="380"/>
+	<SubTexture name="green idle0006" x="438" y="3463" width="432" height="379" frameX="-2" frameY="-0" frameWidth="477" frameHeight="380"/>
+	<SubTexture name="green idle0007" x="438" y="3463" width="432" height="379" frameX="-2" frameY="-0" frameWidth="477" frameHeight="380"/>
+	<SubTexture name="green idle0008" x="3289" y="2846" width="433" height="379" frameX="-1" frameY="-0" frameWidth="477" frameHeight="380"/>
+	<SubTexture name="green idle0009" x="3289" y="2846" width="433" height="379" frameX="-1" frameY="-0" frameWidth="477" frameHeight="380"/>
+	<SubTexture name="green idle0010" x="0" y="3463" width="433" height="379" frameX="-1" frameY="-0" frameWidth="477" frameHeight="380"/>
+	<SubTexture name="green idle0011" x="0" y="3463" width="433" height="379" frameX="-1" frameY="-0" frameWidth="477" frameHeight="380"/>
+	<SubTexture name="green left0000" x="1348" y="2143" width="658" height="382" frameX="-0" frameY="-1" frameWidth="672" frameHeight="383"/>
+	<SubTexture name="green left0001" x="1348" y="2143" width="658" height="382" frameX="-0" frameY="-1" frameWidth="672" frameHeight="383"/>
+	<SubTexture name="green left0002" x="1384" y="1755" width="665" height="383" frameX="-6" frameY="-0" frameWidth="672" frameHeight="383"/>
+	<SubTexture name="green left0003" x="1384" y="1755" width="665" height="383" frameX="-6" frameY="-0" frameWidth="672" frameHeight="383"/>
+	<SubTexture name="green left0004" x="2187" y="0" width="383" height="665" rotated="true" frameX="-6" frameY="-0" frameWidth="672" frameHeight="383"/>
+	<SubTexture name="green left0005" x="2187" y="0" width="383" height="665" rotated="true" frameX="-6" frameY="-0" frameWidth="672" frameHeight="383"/>
+	<SubTexture name="green left0006" x="2187" y="670" width="383" height="665" rotated="true" frameX="-6" frameY="-0" frameWidth="672" frameHeight="383"/>
+	<SubTexture name="green left0007" x="2187" y="670" width="383" height="665" rotated="true" frameX="-6" frameY="-0" frameWidth="672" frameHeight="383"/>
+	<SubTexture name="green left0008" x="2187" y="1340" width="383" height="665" rotated="true" frameX="-6" frameY="-0" frameWidth="672" frameHeight="383"/>
+	<SubTexture name="green notice0000" x="0" y="3463" width="433" height="379" frameX="-176" frameY="-2" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0001" x="0" y="3463" width="433" height="379" frameX="-176" frameY="-2" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0002" x="3289" y="2465" width="443" height="376" frameX="-174" frameY="-5" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0003" x="3289" y="2465" width="443" height="376" frameX="-174" frameY="-5" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0004" x="3353" y="495" width="381" height="487" rotated="true" frameX="-185" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0005" x="3353" y="495" width="381" height="487" rotated="true" frameX="-185" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0006" x="3353" y="0" width="381" height="490" rotated="true" frameX="-181" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0007" x="3353" y="0" width="381" height="490" rotated="true" frameX="-181" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0008" x="2295" y="3052" width="492" height="381" frameX="-179" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0009" x="2295" y="3052" width="492" height="381" frameX="-179" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0010" x="2295" y="3052" width="492" height="381" frameX="-179" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0011" x="2295" y="3052" width="492" height="381" frameX="-179" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0012" x="2295" y="3052" width="492" height="381" frameX="-179" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0013" x="2295" y="3052" width="492" height="381" frameX="-179" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0014" x="2792" y="3052" width="492" height="378" frameX="-179" frameY="-3" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0015" x="2792" y="3052" width="492" height="378" frameX="-179" frameY="-3" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0016" x="2011" y="2143" width="634" height="393" frameX="-37" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0017" x="2011" y="2143" width="634" height="393" frameX="-37" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0018" x="0" y="1855" width="671" height="381" frameX="-0" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green notice0019" x="0" y="1855" width="671" height="381" frameX="-0" frameY="-1" frameWidth="672" frameHeight="395"/>
+	<SubTexture name="green right0000" x="2575" y="1717" width="579" height="370" frameX="-6" frameY="-0" frameWidth="585" frameHeight="370"/>
+	<SubTexture name="green right0001" x="2575" y="1717" width="579" height="370" frameX="-6" frameY="-0" frameWidth="585" frameHeight="370"/>
+	<SubTexture name="green right0002" x="579" y="3085" width="567" height="370" frameX="-0" frameY="-0" frameWidth="585" frameHeight="370"/>
+	<SubTexture name="green right0003" x="579" y="3085" width="567" height="370" frameX="-0" frameY="-0" frameWidth="585" frameHeight="370"/>
+	<SubTexture name="green right0004" x="1151" y="3085" width="567" height="370" frameX="-0" frameY="-0" frameWidth="585" frameHeight="370"/>
+	<SubTexture name="green right0005" x="1151" y="3085" width="567" height="370" frameX="-0" frameY="-0" frameWidth="585" frameHeight="370"/>
+	<SubTexture name="green right0006" x="1723" y="3052" width="567" height="370" frameX="-0" frameY="-0" frameWidth="585" frameHeight="370"/>
+	<SubTexture name="green right0007" x="1723" y="3052" width="567" height="370" frameX="-0" frameY="-0" frameWidth="585" frameHeight="370"/>
+	<SubTexture name="green unwave0000" x="676" y="1855" width="667" height="381" frameX="-0" frameY="-1" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0001" x="676" y="1855" width="667" height="381" frameX="-0" frameY="-1" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0002" x="0" y="2241" width="659" height="381" frameX="-8" frameY="-1" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0003" x="0" y="2241" width="659" height="381" frameX="-8" frameY="-1" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0004" x="2961" y="626" width="380" height="612" rotated="true" frameX="-55" frameY="-1" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0005" x="2961" y="626" width="380" height="612" rotated="true" frameX="-55" frameY="-1" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0006" x="0" y="3085" width="574" height="373" frameX="-93" frameY="-8" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0007" x="0" y="3085" width="574" height="373" frameX="-93" frameY="-8" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0008" x="2650" y="2092" width="576" height="374" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0009" x="2650" y="2092" width="576" height="374" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0010" x="2650" y="2471" width="374" height="576" rotated="true" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0011" x="2650" y="2471" width="374" height="576" rotated="true" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0012" x="2650" y="2471" width="374" height="576" rotated="true" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0013" x="2650" y="2471" width="374" height="576" rotated="true" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0014" x="2650" y="2471" width="374" height="576" rotated="true" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0015" x="2650" y="2471" width="374" height="576" rotated="true" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green unwave0016" x="2650" y="2471" width="374" height="576" rotated="true" frameX="-90" frameY="-7" frameWidth="667" frameHeight="382"/>
+	<SubTexture name="green up0000" x="824" y="822" width="758" height="502" frameX="-9" frameY="-0" frameWidth="819" frameHeight="503"/>
+	<SubTexture name="green up0001" x="824" y="822" width="758" height="502" frameX="-9" frameY="-0" frameWidth="819" frameHeight="503"/>
+	<SubTexture name="green up0002" x="1313" y="0" width="483" height="804" rotated="true" frameX="-0" frameY="-20" frameWidth="819" frameHeight="503"/>
+	<SubTexture name="green up0003" x="0" y="0" width="819" height="485" frameX="-0" frameY="-18" frameWidth="819" frameHeight="503"/>
+	<SubTexture name="green up0004" x="0" y="490" width="819" height="485" frameX="-0" frameY="-18" frameWidth="819" frameHeight="503"/>
+	<SubTexture name="green up0005" x="824" y="0" width="484" height="817" rotated="true" frameX="-0" frameY="-19" frameWidth="819" frameHeight="503"/>
+	<SubTexture name="green up0006" x="0" y="980" width="817" height="484" frameX="-0" frameY="-19" frameWidth="819" frameHeight="503"/>
+	<SubTexture name="green up0007" x="0" y="2627" width="634" height="453" frameX="-0" frameY="-50" frameWidth="819" frameHeight="503"/>
+	<SubTexture name="green up0008" x="639" y="2627" width="634" height="453" frameX="-0" frameY="-50" frameWidth="819" frameHeight="503"/>
+	<SubTexture name="green wave0000" x="1384" y="1369" width="674" height="381" frameX="-14" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0001" x="1384" y="1369" width="674" height="381" frameX="-14" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0002" x="664" y="2241" width="659" height="381" frameX="-29" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0003" x="664" y="2241" width="659" height="381" frameX="-29" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0004" x="2575" y="660" width="381" height="653" rotated="true" frameX="-35" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0005" x="2575" y="660" width="381" height="653" rotated="true" frameX="-35" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0006" x="2575" y="0" width="381" height="655" rotated="true" frameX="-33" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0007" x="2575" y="0" width="381" height="655" rotated="true" frameX="-33" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0008" x="1801" y="688" width="381" height="676" rotated="true" frameX="-12" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0009" x="1801" y="688" width="381" height="676" rotated="true" frameX="-12" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0010" x="693" y="1469" width="686" height="381" frameX="-2" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0011" x="693" y="1469" width="686" height="381" frameX="-2" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0012" x="0" y="1469" width="688" height="381" frameX="-0" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0013" x="0" y="1469" width="688" height="381" frameX="-0" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0014" x="1801" y="0" width="381" height="683" rotated="true" frameX="-5" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="green wave0015" x="1801" y="0" width="381" height="683" rotated="true" frameX="-5" frameY="-1" frameWidth="688" frameHeight="382"/>
+	<SubTexture name="silly dance left0000" x="1723" y="3438" width="433" height="398" frameX="-5" frameY="-0" frameWidth="438" frameHeight="399"/>
+	<SubTexture name="silly dance left0001" x="1723" y="3438" width="433" height="398" frameX="-5" frameY="-0" frameWidth="438" frameHeight="399"/>
+	<SubTexture name="silly dance left0002" x="2161" y="3438" width="432" height="396" frameX="-0" frameY="-2" frameWidth="438" frameHeight="399"/>
+	<SubTexture name="silly dance left0003" x="2161" y="3438" width="432" height="396" frameX="-0" frameY="-2" frameWidth="438" frameHeight="399"/>
+	<SubTexture name="silly dance left0004" x="2598" y="3438" width="427" height="395" frameX="-2" frameY="-3" frameWidth="438" frameHeight="399"/>
+	<SubTexture name="silly dance left0005" x="875" y="3460" width="413" height="376" frameX="-3" frameY="-23" frameWidth="438" frameHeight="399"/>
+	<SubTexture name="silly dance left0006" x="875" y="3460" width="413" height="376" frameX="-3" frameY="-23" frameWidth="438" frameHeight="399"/>
+	<SubTexture name="silly dance left0007" x="3030" y="3435" width="411" height="379" frameX="-5" frameY="-20" frameWidth="438" frameHeight="399"/>
+	<SubTexture name="silly dance left0008" x="3030" y="3435" width="411" height="379" frameX="-5" frameY="-20" frameWidth="438" frameHeight="399"/>
+	<SubTexture name="silly dance left0009" x="3739" y="416" width="379" height="410" rotated="true" frameX="-6" frameY="-20" frameWidth="438" frameHeight="399"/>
+	<SubTexture name="silly dance left0010" x="3739" y="416" width="379" height="410" rotated="true" frameX="-6" frameY="-20" frameWidth="438" frameHeight="399"/>
+	<SubTexture name="silly dance right0000" x="3718" y="987" width="399" height="362" rotated="true" frameX="-22" frameY="-0" frameWidth="412" frameHeight="399"/>
+	<SubTexture name="silly dance right0001" x="3718" y="987" width="399" height="362" rotated="true" frameX="-22" frameY="-0" frameWidth="412" frameHeight="399"/>
+	<SubTexture name="silly dance right0002" x="3718" y="1354" width="397" height="368" rotated="true" frameX="-21" frameY="-2" frameWidth="412" frameHeight="399"/>
+	<SubTexture name="silly dance right0003" x="3718" y="1354" width="397" height="368" rotated="true" frameX="-21" frameY="-2" frameWidth="412" frameHeight="399"/>
+	<SubTexture name="silly dance right0004" x="3737" y="2129" width="373" height="394" frameX="-20" frameY="-5" frameWidth="412" frameHeight="399"/>
+	<SubTexture name="silly dance right0005" x="3737" y="1727" width="376" height="397" rotated="true" frameX="-15" frameY="-23" frameWidth="412" frameHeight="399"/>
+	<SubTexture name="silly dance right0006" x="3737" y="1727" width="376" height="397" rotated="true" frameX="-15" frameY="-23" frameWidth="412" frameHeight="399"/>
+	<SubTexture name="silly dance right0007" x="3739" y="0" width="379" height="411" rotated="true" frameX="-1" frameY="-20" frameWidth="412" frameHeight="399"/>
+	<SubTexture name="silly dance right0008" x="3739" y="0" width="379" height="411" rotated="true" frameX="-1" frameY="-20" frameWidth="412" frameHeight="399"/>
+	<SubTexture name="silly dance right0009" x="1293" y="3460" width="412" height="379" frameX="-0" frameY="-20" frameWidth="412" frameHeight="399"/>
+	<SubTexture name="silly dance right0010" x="1293" y="3460" width="412" height="379" frameX="-0" frameY="-20" frameWidth="412" frameHeight="399"/>
 </TextureAtlas>

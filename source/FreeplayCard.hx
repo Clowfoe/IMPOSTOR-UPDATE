@@ -157,6 +157,13 @@ class FreeplayCard extends FlxSprite {
 
     function findLocked(requirement:RequireType, songs:Array<String>, forceUnlock:Bool = false){
         locked = false;
+        #if debug
+        lock.visible = false;
+        bean.visible = false;
+        priceText.visible = false;
+        return;
+        #end
+
         if(forceUnlock){
             lock.visible = false;
             bean.visible = false;
@@ -222,12 +229,14 @@ class FreeplayCard extends FlxSprite {
 
         deAlpha = 1 + (-Math.abs(targetY) * 0.25);
 
-        icon.alpha = FlxMath.lerp(icon.alpha, deAlpha, lerpVal);
-        lock.alpha = FlxMath.lerp(lock.alpha, deAlpha, lerpVal);
-        bean.alpha = FlxMath.lerp(bean.alpha, deAlpha, lerpVal);
-        priceText.alpha = FlxMath.lerp(lock.alpha, deAlpha, lerpVal);
-        spriteOne.alpha = FlxMath.lerp(icon.alpha, deAlpha, lerpVal);
-        songText.alpha = FlxMath.lerp(icon.alpha, deAlpha, lerpVal);
+        final lerpV = FlxMath.lerp(icon.alpha, deAlpha, lerpVal);
+
+        icon.alpha = lerpV;
+        lock.alpha = lerpV;
+        bean.alpha = lerpV;
+        priceText.alpha = lerpV;
+        spriteOne.alpha = lerpV;
+        songText.alpha = lerpV;
 
         icon.setPosition(spriteOne.x - 13, spriteOne.y - 23);
         lock.setPosition(spriteOne.x + 25, spriteOne.y + 11);

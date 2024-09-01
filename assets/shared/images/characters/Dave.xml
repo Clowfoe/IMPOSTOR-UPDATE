@@ -1,42 +1,46 @@
-<?xml version='1.0' encoding='utf-8'?>
-<TextureAtlas imagePath="Dave.png"><SubTexture name="Dave Idle0000" x="0" y="0" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Idle0001" x="1204" y="0" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Idle0002" x="2408" y="0" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Idle0003" x="3612" y="0" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Idle0004" x="4816" y="0" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Idle0005" x="6020" y="0" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Idle0006" x="0" y="804" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Idle0007" x="1204" y="804" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Left0000" x="2408" y="804" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Left0001" x="3612" y="804" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Left0002" x="4816" y="804" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Down0000" x="6020" y="804" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Down0001" x="0" y="1608" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Down0002" x="1204" y="1608" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Up0000" x="2408" y="1608" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Up0001" x="3612" y="1608" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Up0002" x="4816" y="1608" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Right0000" x="6020" y="1608" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Right0001" x="0" y="2412" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Right0002" x="1204" y="2412" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0000" x="2408" y="2412" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0001" x="3612" y="2412" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0002" x="4816" y="2412" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0003" x="6020" y="2412" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0004" x="0" y="3216" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0005" x="1204" y="3216" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0006" x="2408" y="3216" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0007" x="3612" y="3216" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0008" x="4816" y="3216" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0009" x="6020" y="3216" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0010" x="0" y="4020" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0011" x="1204" y="4020" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0012" x="2408" y="4020" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0013" x="3612" y="4020" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0014" x="4816" y="4020" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0015" x="6020" y="4020" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0016" x="0" y="4824" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0017" x="1204" y="4824" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0018" x="2408" y="4824" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
-<SubTexture name="Dave Death0019" x="3612" y="4824" width="1204" height="804" frameX="0" frameY="0" frameWidth="1204" frameHeight="804" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="Dave.png" width="3479" height="3278">
+	<SubTexture name="Dave Idle0000" x="2134" y="2002" width="660" height="493" frameX="-135" frameY="-289" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Idle0001" x="2229" y="1027" width="644" height="509" frameX="-124" frameY="-274" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Idle0002" x="2110" y="0" width="640" height="517" frameX="-106" frameY="-264" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Idle0003" x="0" y="1231" width="711" height="550" frameX="-126" frameY="-239" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Idle0004" x="1409" y="0" width="696" height="548" frameX="-130" frameY="-239" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Idle0005" x="1470" y="553" width="679" height="496" frameX="-131" frameY="-289" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Idle0006" x="2154" y="522" width="657" height="500" frameX="-135" frameY="-282" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Idle0007" x="2134" y="2002" width="660" height="493" frameX="-135" frameY="-289" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Left0000" x="733" y="579" width="732" height="522" frameX="-10" frameY="-261" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Left0001" x="1438" y="1764" width="691" height="506" frameX="-45" frameY="-277" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Left0002" x="0" y="1786" width="695" height="509" frameX="-41" frameY="-274" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Down0000" x="2755" y="0" width="662" height="452" frameX="-183" frameY="-331" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Down0001" x="651" y="2779" width="650" height="469" frameX="-190" frameY="-313" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Down0002" x="0" y="2300" width="646" height="484" frameX="-192" frameY="-298" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Up0000" x="679" y="0" width="725" height="574" frameX="-42" frameY="-212" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Up0001" x="716" y="1231" width="728" height="528" frameX="-37" frameY="-260" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Up0002" x="0" y="688" width="728" height="538" frameX="-40" frameY="-249" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Right0000" x="2878" y="957" width="601" height="484" frameX="-233" frameY="-302" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Right0001" x="2799" y="2002" width="544" height="488" frameX="-222" frameY="-298" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Right0002" x="2712" y="2500" width="554" height="488" frameX="-227" frameY="-298" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0000" x="0" y="2789" width="619" height="489" frameX="-128" frameY="-292" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0001" x="2086" y="2500" width="621" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0002" x="1345" y="2775" width="618" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0003" x="2086" y="2500" width="621" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0004" x="2086" y="2500" width="621" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0005" x="2086" y="2500" width="621" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0006" x="2086" y="2500" width="621" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0007" x="2086" y="2500" width="621" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0008" x="2086" y="2500" width="621" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0009" x="2816" y="457" width="599" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0010" x="1438" y="2275" width="643" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0011" x="700" y="2279" width="640" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0012" x="700" y="2279" width="640" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0013" x="700" y="2279" width="640" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0014" x="700" y="2279" width="640" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0015" x="700" y="2279" width="640" height="495" frameX="-131" frameY="-286" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0016" x="2134" y="1549" width="752" height="448" frameX="-33" frameY="-335" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0017" x="1449" y="1106" width="775" height="438" frameX="-8" frameY="-345" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0018" x="716" y="1764" width="717" height="510" frameX="-25" frameY="-243" frameWidth="1204" frameHeight="804"/>
+	<SubTexture name="Dave Death0019" x="0" y="0" width="674" height="683" frameX="-7" frameY="-5" frameWidth="1204" frameHeight="804"/>
 </TextureAtlas>

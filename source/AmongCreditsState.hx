@@ -40,7 +40,8 @@ class AmongCreditsState extends MusicBeatState
         ['orbyy',			'orb',			"Im really happy i got to work on this, i was brought on v3 to do pixel art for tomongus and i'm grateful for being given the opportunity. I hope yall love the new pixel art for tomongus week and i apologize for v3's defeat chart.",    'https://twitter.com/OrbyyNew'],   
         ['squidboy',	'squid',	'hi im squid you may or may not know me for moderating the impostorm discord server\nive also been working for impostor ever since its beginning so thats cool i guess\nlove u zial <3<3<3',		'https://twitter.com/SquidBoy84'],
         ['pip',			'pip',			'"            "',				'https://twitter.com/DojimaDog'],   
-        ['crocidy',				'croc',		"can you follow me i made fourth wall",	'https://twitter.com/croc2RTX'],
+        ['grave',				'grave',		"opium",	'https://x.com/konn_artist'],
+        ['data\n5',				'data',		"i saved the mod",	'https://x.com/_data5'],
         ['Lay\nLasagna',				'lay',		"#1 giggleboy and omfg fan\nhello mommy!!!!!!! :)))) i'm a big boy now!!!!",	'https://twitter.com/LayLasagna7'],
         ['coti',			'coti',			'hi !! im coti-- i didnt really do much except for a drawing or visual tweaking here and there, but im happy i got to work on the mod anyway !! remember to always be silly',	'https://twitter.com/espeoncutie'],   
         ['elikapika',			'pika',			'bunny emoji',	'https://twitter.com/elikapika'],   
@@ -55,7 +56,7 @@ class AmongCreditsState extends MusicBeatState
         ['kal',				'kal',		"i love snas\n-art by @Butholeeo",	'https://twitter.com/Kal_050'],
         
         ['monotone\ndoc',				'monotone',		"hi i'm the guy who voiced the shapeshifter, very grateful to have had the opportunity and i hope y'all thought it was cool :)",	'https://twitter.com/MonotoneDoc'],
-        ['amongus\nfan',				'cooper',		"i did nothing for this mod but let them use red mungus but i get a quote for having cancer",	'https://twitter.com/amongusfan24'],
+        ['amongus\nfan',				'cooper',		"i did nothing for this mod but let them use red mungus but i get a quote for having cancer\nfly high cooper",	'https://twitter.com/amongusfan24'],
     ];
 
     var nameText:FlxText;

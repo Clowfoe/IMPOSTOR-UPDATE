@@ -64,6 +64,8 @@ class FlxVideo extends FlxBasic {
 
 		FlxG.addChildBelowMouse(vlcBitmap);
 		vlcBitmap.play(checkFile(name));
+
+		FlxG.signals.postUpdate.add(checkForSkip);
 		#end
 	}
 
@@ -93,6 +95,10 @@ class FlxVideo extends FlxBasic {
 		}
 	}
 
+	function checkForSkip() {
+		if (FlxG.keys.justPressed.ENTER && vlcBitmap != null) onVLCComplete();
+	}
+
 	function fixVolume(e:Event)
 	{
 		// shitty volume fix
@@ -104,6 +110,8 @@ class FlxVideo extends FlxBasic {
 
 	public function onVLCComplete()
 	{
+		if (FlxG.signals.postUpdate.has(checkForSkip)) FlxG.signals.postUpdate.remove(checkForSkip);
+
 		vlcBitmap.stop();
 
 		// Clean player, just in case!

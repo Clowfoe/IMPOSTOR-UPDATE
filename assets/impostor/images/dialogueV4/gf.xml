@@ -1,46 +1,47 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="gf.png">
-	<!-- Created with Adobe Animate version 20.5.0.29329 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="GF glint0000" x="5" y="5" width="236" height="314"/>
-	<SubTexture name="GF glint0001" x="246" y="5" width="236" height="314"/>
-	<SubTexture name="GF glint0002" x="487" y="5" width="236" height="314"/>
-	<SubTexture name="GF glint0003" x="728" y="5" width="236" height="314"/>
-	<SubTexture name="GF glint0004" x="969" y="5" width="236" height="314"/>
-	<SubTexture name="GF glint0005" x="1210" y="5" width="236" height="314"/>
-	<SubTexture name="GF glint0006" x="1451" y="5" width="236" height="314"/>
-	<SubTexture name="GF happy0000" x="1692" y="5" width="235" height="314"/>
-	<SubTexture name="GF happy0001" x="5" y="324" width="235" height="314"/>
-	<SubTexture name="GF happy0002" x="245" y="324" width="235" height="314"/>
-	<SubTexture name="GF happy0003" x="485" y="324" width="235" height="314"/>
-	<SubTexture name="GF happy0004" x="725" y="324" width="235" height="314"/>
-	<SubTexture name="GF happy0005" x="965" y="324" width="235" height="314"/>
-	<SubTexture name="GF happy0006" x="1205" y="324" width="235" height="314"/>
-	<SubTexture name="GF mad0000" x="1445" y="324" width="235" height="315"/>
-	<SubTexture name="GF mad0001" x="1685" y="324" width="235" height="315"/>
-	<SubTexture name="GF mad0002" x="5" y="644" width="235" height="315"/>
-	<SubTexture name="GF mad0003" x="245" y="644" width="235" height="315"/>
-	<SubTexture name="GF mad0004" x="485" y="644" width="235" height="315"/>
-	<SubTexture name="GF mad0005" x="725" y="644" width="235" height="315"/>
-	<SubTexture name="GF neutral0000" x="965" y="644" width="231" height="312"/>
-	<SubTexture name="GF neutral0001" x="1201" y="644" width="231" height="312"/>
-	<SubTexture name="GF neutral0002" x="1437" y="644" width="231" height="312"/>
-	<SubTexture name="GF neutral0003" x="1673" y="644" width="231" height="312"/>
-	<SubTexture name="GF neutral0004" x="5" y="964" width="231" height="312"/>
-	<SubTexture name="GF neutral0005" x="241" y="964" width="231" height="312"/>
-	<SubTexture name="GF neutral0006" x="477" y="964" width="231" height="312"/>
-	<SubTexture name="GF q0000" x="713" y="964" width="281" height="359"/>
-	<SubTexture name="GF q0001" x="713" y="964" width="281" height="359"/>
-	<SubTexture name="GF q0002" x="713" y="964" width="281" height="359"/>
-	<SubTexture name="GF q0003" x="713" y="964" width="281" height="359"/>
-	<SubTexture name="GF q0004" x="713" y="964" width="281" height="359"/>
-	<SubTexture name="GF q0005" x="713" y="964" width="281" height="359"/>
-	<SubTexture name="GF q0006" x="713" y="964" width="281" height="359"/>
-	<SubTexture name="GF suspect0000" x="999" y="964" width="232" height="312"/>
-	<SubTexture name="GF suspect0001" x="1236" y="964" width="232" height="312"/>
-	<SubTexture name="GF suspect0002" x="1473" y="964" width="232" height="312"/>
-	<SubTexture name="GF suspect0003" x="1710" y="964" width="232" height="312"/>
-	<SubTexture name="GF suspect0004" x="5" y="1328" width="232" height="312"/>
-	<SubTexture name="GF suspect0005" x="242" y="1328" width="232" height="312"/>
-	<SubTexture name="GF suspect0006" x="479" y="1328" width="232" height="312"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="gf.png" width="1688" height="1613">
+	<SubTexture name="GF glint0000" x="474" y="636" width="231" height="312" frameX="-4" frameY="-2" frameWidth="236" frameHeight="314"/>
+	<SubTexture name="GF glint0001" x="236" y="985" width="231" height="311" frameX="-3" frameY="-2" frameWidth="236" frameHeight="314"/>
+	<SubTexture name="GF glint0002" x="270" y="0" width="232" height="313" frameX="-3" frameY="-0" frameWidth="236" frameHeight="314"/>
+	<SubTexture name="GF glint0003" x="270" y="318" width="232" height="313" frameX="-3" frameY="-0" frameWidth="236" frameHeight="314"/>
+	<SubTexture name="GF glint0004" x="0" y="349" width="232" height="313" frameX="-3" frameY="-0" frameWidth="236" frameHeight="314"/>
+	<SubTexture name="GF glint0005" x="744" y="0" width="234" height="312" frameX="-1" frameY="-1" frameWidth="236" frameHeight="314"/>
+	<SubTexture name="GF glint0006" x="472" y="954" width="235" height="311" frameX="-0" frameY="-2" frameWidth="236" frameHeight="314"/>
+	<SubTexture name="GF happy0000" x="744" y="317" width="231" height="312" frameX="-4" frameY="-2" frameWidth="235" frameHeight="314"/>
+	<SubTexture name="GF happy0001" x="712" y="951" width="231" height="311" frameX="-3" frameY="-2" frameWidth="235" frameHeight="314"/>
+	<SubTexture name="GF happy0002" x="744" y="634" width="232" height="312" frameX="-3" frameY="-1" frameWidth="235" frameHeight="314"/>
+	<SubTexture name="GF happy0003" x="507" y="0" width="232" height="313" frameX="-3" frameY="-0" frameWidth="235" frameHeight="314"/>
+	<SubTexture name="GF happy0004" x="507" y="318" width="232" height="313" frameX="-3" frameY="-0" frameWidth="235" frameHeight="314"/>
+	<SubTexture name="GF happy0005" x="980" y="317" width="233" height="312" frameX="-1" frameY="-1" frameWidth="235" frameHeight="314"/>
+	<SubTexture name="GF happy0006" x="468" y="1301" width="235" height="310" frameX="-0" frameY="-3" frameWidth="235" frameHeight="314"/>
+	<SubTexture name="GF mad0000" x="983" y="0" width="231" height="312" frameX="-4" frameY="-3" frameWidth="235" frameHeight="315"/>
+	<SubTexture name="GF mad0001" x="948" y="951" width="231" height="311" frameX="-3" frameY="-3" frameWidth="235" frameHeight="315"/>
+	<SubTexture name="GF mad0002" x="0" y="667" width="232" height="313" frameX="-1" frameY="-1" frameWidth="235" frameHeight="315"/>
+	<SubTexture name="GF mad0003" x="237" y="636" width="232" height="313" frameX="-0" frameY="-1" frameWidth="235" frameHeight="315"/>
+	<SubTexture name="GF mad0004" x="981" y="634" width="230" height="312" frameX="-0" frameY="-2" frameWidth="235" frameHeight="315"/>
+	<SubTexture name="GF mad0005" x="1219" y="0" width="232" height="311" frameX="-0" frameY="-3" frameWidth="235" frameHeight="315"/>
+	<SubTexture name="GF neutral0000" x="0" y="985" width="231" height="312" frameX="-0" frameY="-0" frameWidth="231" frameHeight="312"/>
+	<SubTexture name="GF neutral0001" x="1219" y="316" width="230" height="311" frameX="-0" frameY="-0" frameWidth="231" frameHeight="312"/>
+	<SubTexture name="GF neutral0002" x="1218" y="632" width="229" height="311" frameX="-2" frameY="-0" frameWidth="231" frameHeight="312"/>
+	<SubTexture name="GF neutral0003" x="1216" y="948" width="228" height="311" frameX="-3" frameY="-0" frameWidth="231" frameHeight="312"/>
+	<SubTexture name="GF neutral0004" x="0" y="1302" width="228" height="311" frameX="-3" frameY="-0" frameWidth="231" frameHeight="312"/>
+	<SubTexture name="GF neutral0005" x="233" y="1302" width="230" height="311" frameX="-1" frameY="-0" frameWidth="231" frameHeight="312"/>
+	<SubTexture name="GF neutral0006" x="708" y="1270" width="231" height="310" frameX="-0" frameY="-1" frameWidth="231" frameHeight="312"/>
+	<SubTexture name="GF q0000" x="0" y="0" width="265" height="344" frameX="-10" frameY="-15" frameWidth="281" frameHeight="359"/>
+	<SubTexture name="GF q0001" x="0" y="0" width="265" height="344" frameX="-10" frameY="-15" frameWidth="281" frameHeight="359"/>
+	<SubTexture name="GF q0002" x="0" y="0" width="265" height="344" frameX="-10" frameY="-15" frameWidth="281" frameHeight="359"/>
+	<SubTexture name="GF q0003" x="0" y="0" width="265" height="344" frameX="-10" frameY="-15" frameWidth="281" frameHeight="359"/>
+	<SubTexture name="GF q0004" x="0" y="0" width="265" height="344" frameX="-10" frameY="-15" frameWidth="281" frameHeight="359"/>
+	<SubTexture name="GF q0005" x="0" y="0" width="265" height="344" frameX="-10" frameY="-15" frameWidth="281" frameHeight="359"/>
+	<SubTexture name="GF q0006" x="0" y="0" width="265" height="344" frameX="-10" frameY="-15" frameWidth="281" frameHeight="359"/>
+	<SubTexture name="GF suspect0000" x="1456" y="0" width="232" height="309" frameX="-0" frameY="-3" frameWidth="232" frameHeight="312"/>
+	<SubTexture name="GF suspect0001" x="1456" y="314" width="232" height="309" frameX="-0" frameY="-2" frameWidth="232" frameHeight="312"/>
+	<SubTexture name="GF suspect0002" x="1454" y="628" width="232" height="309" frameX="-0" frameY="-1" frameWidth="232" frameHeight="312"/>
+	<SubTexture name="GF suspect0003" x="944" y="1267" width="232" height="310" frameX="-0" frameY="-0" frameWidth="232" frameHeight="312"/>
+	<SubTexture name="GF suspect0004" x="1181" y="1267" width="232" height="310" frameX="-0" frameY="-0" frameWidth="232" frameHeight="312"/>
+	<SubTexture name="GF suspect0005" x="1452" y="942" width="232" height="309" frameX="-0" frameY="-1" frameWidth="232" frameHeight="312"/>
+	<SubTexture name="GF suspect0006" x="1449" y="1256" width="232" height="309" frameX="-0" frameY="-2" frameWidth="232" frameHeight="312"/>
 </TextureAtlas>

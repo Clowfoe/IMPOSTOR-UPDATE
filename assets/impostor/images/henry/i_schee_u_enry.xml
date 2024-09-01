@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="i_schee_u_enry.png">
-	<!-- Created with Adobe Animate version 21.0.5.40714 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="rhm intro shadow0000" x="0" y="0" width="1786" height="1313"/>
-	<SubTexture name="rhm intro shadow0001" x="1796" y="0" width="1786" height="1313"/>
-	<SubTexture name="rhm intro shadow0002" x="0" y="1323" width="1786" height="1313"/>
-	<SubTexture name="rhm intro shadow0003" x="1796" y="1323" width="1786" height="1313"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="i_schee_u_enry.png" width="1386" height="1121">
+	<SubTexture name="rhm intro shadow0000" x="0" y="641" width="754" height="459" frameX="-0" frameY="-0" frameWidth="1786" frameHeight="1313"/>
+	<SubTexture name="rhm intro shadow0001" x="0" y="0" width="694" height="636" frameX="-867" frameY="-598" frameWidth="1786" frameHeight="1313"/>
+	<SubTexture name="rhm intro shadow0002" x="699" y="0" width="631" height="559" frameX="-1148" frameY="-750" frameWidth="1786" frameHeight="1313"/>
+	<SubTexture name="rhm intro shadow0003" x="759" y="564" width="627" height="557" frameX="-1154" frameY="-751" frameWidth="1786" frameHeight="1313"/>
 </TextureAtlas>

@@ -8,7 +8,7 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "IdleJerma",
+			"name": "idle",
 			"indices": []
 		},
 		{
@@ -19,7 +19,7 @@
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "LeftJerma",
+			"name": "left",
 			"indices": []
 		},
 		{
@@ -30,7 +30,7 @@
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "UpJerma",
+			"name": "up",
 			"indices": []
 		},
 		{
@@ -41,7 +41,7 @@
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "DownJerma",
+			"name": "down",
 			"indices": []
 		},
 		{
@@ -52,7 +52,7 @@
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "RightJerma",
+			"name": "right",
 			"indices": []
 		}
 	],

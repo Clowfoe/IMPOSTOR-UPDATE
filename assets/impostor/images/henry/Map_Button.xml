@@ -1,39 +1,40 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="Map_Button.png">
-	<!-- Created with Adobe Animate version 21.0.0.35450 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Map Button0000" x="13" y="13" width="272" height="157"/>
-	<SubTexture name="Map Button Select0000" x="298" y="13" width="272" height="157" frameX="-28" frameY="-19" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0001" x="583" y="13" width="283" height="164" frameX="-17" frameY="-12" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0002" x="13" y="190" width="291" height="171" frameX="-9" frameY="-6" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0003" x="317" y="190" width="295" height="174" frameX="-5" frameY="-3" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0004" x="625" y="190" width="298" height="176" frameX="-2" frameY="-1" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0005" x="13" y="379" width="299" height="176" frameX="-1" frameY="-1" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0006" x="325" y="379" width="299" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0007" x="637" y="379" width="300" height="177"/>
-	<SubTexture name="Map Button Select0008" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0009" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0010" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0011" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0012" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0013" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0014" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0015" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0016" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0017" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0018" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0019" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0020" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0021" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0022" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0023" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0024" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0025" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0026" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0027" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0028" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0029" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0030" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0031" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
-	<SubTexture name="Map Button Select0032" x="637" y="379" width="300" height="177" frameX="-1" frameY="0" frameWidth="300" frameHeight="177"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="Map_Button.png" width="2649" height="177">
+	<SubTexture name="Map Button0000" x="2377" y="0" width="272" height="157" frameX="-0" frameY="-0" frameWidth="272" frameHeight="157"/>
+	<SubTexture name="Map Button Select0000" x="2100" y="0" width="272" height="157" frameX="-28" frameY="-19" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0001" x="1812" y="0" width="283" height="164" frameX="-17" frameY="-12" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0002" x="1516" y="0" width="291" height="170" frameX="-9" frameY="-6" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0003" x="1216" y="0" width="295" height="174" frameX="-5" frameY="-3" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0004" x="913" y="0" width="298" height="176" frameX="-2" frameY="-1" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0005" x="609" y="0" width="299" height="176" frameX="-1" frameY="-1" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0006" x="305" y="0" width="299" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0007" x="0" y="0" width="300" height="177" frameX="-0" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0008" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0009" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0010" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0011" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0012" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0013" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0014" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0015" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0016" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0017" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0018" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0019" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0020" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0021" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0022" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0023" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0024" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0025" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0026" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0027" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0028" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0029" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0030" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0031" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
+	<SubTexture name="Map Button Select0032" x="0" y="0" width="300" height="177" frameX="-1" frameY="-0" frameWidth="301" frameHeight="177"/>
 </TextureAtlas>

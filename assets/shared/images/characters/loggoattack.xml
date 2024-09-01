@@ -1,19 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="loggoattack.png">
-	<!-- Created with Adobe Animate version 21.0.6.41649 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="loggfriend instance 10000" x="0" y="0" width="507" height="607"/>
-	<SubTexture name="loggfriend instance 10001" x="512" y="0" width="507" height="607"/>
-	<SubTexture name="loggfriend instance 10002" x="1024" y="0" width="507" height="607"/>
-	<SubTexture name="loggfriend instance 10003" x="1536" y="0" width="507" height="607"/>
-	<SubTexture name="loggfriend instance 10004" x="0" y="612" width="507" height="607"/>
-	<SubTexture name="loggfriend instance 10005" x="512" y="612" width="507" height="606" frameX="0" frameY="-1" frameWidth="507" frameHeight="607"/>
-	<SubTexture name="loggfriend instance 10006" x="1024" y="612" width="507" height="607"/>
-	<SubTexture name="loggfriend instance 10007" x="0" y="0" width="507" height="607"/>
-	<SubTexture name="loggfriend instance 10008" x="512" y="0" width="507" height="607"/>
-	<SubTexture name="loggfriend instance 10009" x="1024" y="0" width="507" height="607"/>
-	<SubTexture name="loggfriend instance 10010" x="1536" y="0" width="507" height="607"/>
-	<SubTexture name="loggfriend instance 10011" x="0" y="612" width="507" height="607"/>
-	<SubTexture name="loggfriend instance 10012" x="512" y="612" width="507" height="606" frameX="0" frameY="-1" frameWidth="507" frameHeight="607"/>
-	<SubTexture name="loggfriend instance 10013" x="1024" y="612" width="507" height="607"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="loggoattack.png" width="506" height="4278">
+	<SubTexture name="loggfriend instance 10000" x="0" y="0" width="506" height="607" frameX="-0" frameY="-0" frameWidth="507" frameHeight="607"/>
+	<SubTexture name="loggfriend instance 10001" x="0" y="612" width="506" height="607" frameX="-0" frameY="-0" frameWidth="507" frameHeight="607"/>
+	<SubTexture name="loggfriend instance 10002" x="0" y="1224" width="506" height="607" frameX="-0" frameY="-0" frameWidth="507" frameHeight="607"/>
+	<SubTexture name="loggfriend instance 10003" x="0" y="1836" width="506" height="607" frameX="-0" frameY="-0" frameWidth="507" frameHeight="607"/>
+	<SubTexture name="loggfriend instance 10004" x="0" y="2448" width="506" height="607" frameX="-0" frameY="-0" frameWidth="507" frameHeight="607"/>
+	<SubTexture name="loggfriend instance 10005" x="0" y="3672" width="506" height="606" frameX="-0" frameY="-1" frameWidth="507" frameHeight="607"/>
+	<SubTexture name="loggfriend instance 10006" x="0" y="3060" width="506" height="607" frameX="-0" frameY="-0" frameWidth="507" frameHeight="607"/>
+	<SubTexture name="loggfriend instance 10007" x="0" y="0" width="506" height="607" frameX="-0" frameY="-0" frameWidth="507" frameHeight="607"/>
+	<SubTexture name="loggfriend instance 10008" x="0" y="612" width="506" height="607" frameX="-0" frameY="-0" frameWidth="507" frameHeight="607"/>
+	<SubTexture name="loggfriend instance 10009" x="0" y="1224" width="506" height="607" frameX="-0" frameY="-0" frameWidth="507" frameHeight="607"/>
+	<SubTexture name="loggfriend instance 10010" x="0" y="1836" width="506" height="607" frameX="-0" frameY="-0" frameWidth="507" frameHeight="607"/>
+	<SubTexture name="loggfriend instance 10011" x="0" y="2448" width="506" height="607" frameX="-0" frameY="-0" frameWidth="507" frameHeight="607"/>
+	<SubTexture name="loggfriend instance 10012" x="0" y="3672" width="506" height="606" frameX="-0" frameY="-1" frameWidth="507" frameHeight="607"/>
+	<SubTexture name="loggfriend instance 10013" x="0" y="3060" width="506" height="607" frameX="-0" frameY="-0" frameWidth="507" frameHeight="607"/>
 </TextureAtlas>

@@ -1,5 +1,6 @@
 package;
 
+import extensions.FixedFlxBGSprite;
 import Achievements;
 import DialogueBoxPsych;
 import FunkinLua;
@@ -38,7 +39,7 @@ import flixel.input.mouse.FlxMouseEventManager;
 import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
-import flixel.system.FlxSound;
+
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -627,8 +628,9 @@ class PlayState extends MusicBeatState
 	{
 		super.create();
 
-		FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Inst'); // fuck
-		FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Voices');
+		// FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Inst'); // fuck
+		// FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Voices');
+
 		instance = this;
 		resetSpriteCache = false;
 
@@ -636,19 +638,19 @@ class PlayState extends MusicBeatState
 			FlxG.sound.music.stop();
 
 		practiceMode = false;
-		// var gameCam:FlxCamera = FlxG.camera;
+
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
 		camOther = new FlxCamera();
-		camHUD.bgColor.alpha = 0;
-		camOther.bgColor.alpha = 0;
+		camHUD.bgColor = 0x0;
+		camOther.bgColor = 0x0;
 
 		FlxG.cameras.reset(camGame);
-		FlxG.cameras.add(camHUD);
-		FlxG.cameras.add(camOther);
+		FlxG.cameras.add(camHUD,false);
+		FlxG.cameras.add(camOther,false);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
+		FlxG.cameras.setDefaultDrawTarget(camGame,true);
 
-		FlxCamera.defaultCameras = [camGame];
 		CustomFadeTransition.nextCamera = camOther;
 		// FlxG.cameras.setDefaultDrawTarget(camGame, true);
 
@@ -797,35 +799,35 @@ class PlayState extends MusicBeatState
 				bg.active = false;
 				add(bg);
 
-				cloud1 = new FlxBackdrop(Paths.image('mira/cloud 1', 'impostor'), 1, 1, true, true);
+				cloud1 = new FlxBackdrop(Paths.image('mira/cloud 1', 'impostor'));
 				cloud1.setPosition(0, -1000);
 				cloud1.updateHitbox();
 				cloud1.antialiasing = true;
 				cloud1.scrollFactor.set(1, 1);
 				add(cloud1);
 
-				cloud2 = new FlxBackdrop(Paths.image('mira/cloud 2', 'impostor'), 1, 1, true, true);
+				cloud2 = new FlxBackdrop(Paths.image('mira/cloud 2', 'impostor'));
 				cloud2.setPosition(0, -1200);
 				cloud2.updateHitbox();
 				cloud2.antialiasing = true;
 				cloud2.scrollFactor.set(1, 1);
 				add(cloud2);
 
-				cloud3 = new FlxBackdrop(Paths.image('mira/cloud 3', 'impostor'), 1, 1, true, true);
+				cloud3 = new FlxBackdrop(Paths.image('mira/cloud 3', 'impostor'));
 				cloud3.setPosition(0, -1400);
 				cloud3.updateHitbox();
 				cloud3.antialiasing = true;
 				cloud3.scrollFactor.set(1, 1);
 				add(cloud3);
 
-				cloud4 = new FlxBackdrop(Paths.image('mira/cloud 4', 'impostor'), 1, 1, true, true);
+				cloud4 = new FlxBackdrop(Paths.image('mira/cloud 4', 'impostor'));
 				cloud4.setPosition(0, -1600);
 				cloud4.updateHitbox();
 				cloud4.antialiasing = true;
 				cloud4.scrollFactor.set(1, 1);
 				add(cloud4);
 
-				cloudbig = new FlxBackdrop(Paths.image('mira/bigcloud', 'impostor'), 1, 1, true, true);
+				cloudbig = new FlxBackdrop(Paths.image('mira/bigcloud', 'impostor'));
 				cloudbig.setPosition(0, -1200);
 				cloudbig.updateHitbox();
 				cloudbig.antialiasing = true;
@@ -993,35 +995,35 @@ class PlayState extends MusicBeatState
 				bg.active = false;
 				add(bg);
 
-				cloud1 = new FlxBackdrop(Paths.image('mira/pretender/cloud 1', 'impostor'), 1, 1, true, true);
+				cloud1 = new FlxBackdrop(Paths.image('mira/pretender/cloud 1', 'impostor'));
 				cloud1.setPosition(0, -1000);
 				cloud1.updateHitbox();
 				cloud1.antialiasing = true;
 				cloud1.scrollFactor.set(1, 1);
 				add(cloud1);
 
-				cloud2 = new FlxBackdrop(Paths.image('mira/pretender/cloud 2', 'impostor'), 1, 1, true, true);
+				cloud2 = new FlxBackdrop(Paths.image('mira/pretender/cloud 2', 'impostor'));
 				cloud2.setPosition(0, -1200);
 				cloud2.updateHitbox();
 				cloud2.antialiasing = true;
 				cloud2.scrollFactor.set(1, 1);
 				add(cloud2);
 
-				cloud3 = new FlxBackdrop(Paths.image('mira/pretender/cloud 3', 'impostor'), 1, 1, true, true);
+				cloud3 = new FlxBackdrop(Paths.image('mira/pretender/cloud 3', 'impostor'));
 				cloud3.setPosition(0, -1400);
 				cloud3.updateHitbox();
 				cloud3.antialiasing = true;
 				cloud3.scrollFactor.set(1, 1);
 				add(cloud3);
 
-				cloud4 = new FlxBackdrop(Paths.image('mira/pretender/cloud 4', 'impostor'), 1, 1, true, true);
+				cloud4 = new FlxBackdrop(Paths.image('mira/pretender/cloud 4', 'impostor'));
 				cloud4.setPosition(0, -1600);
 				cloud4.updateHitbox();
 				cloud4.antialiasing = true;
 				cloud4.scrollFactor.set(1, 1);
 				add(cloud4);
 
-				cloudbig = new FlxBackdrop(Paths.image('mira/pretender/bigcloud', 'impostor'), 1, 1, true, true);
+				cloudbig = new FlxBackdrop(Paths.image('mira/pretender/bigcloud', 'impostor'));
 				cloudbig.setPosition(0, -1200);
 				cloudbig.updateHitbox();
 				cloudbig.antialiasing = true;
@@ -1354,7 +1356,7 @@ class PlayState extends MusicBeatState
 				add(space);
 				space.visible = false;
 
-				starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
+				starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'),XY,1,1);
 				starsBG.setPosition(111.3, 67.95);
 				starsBG.antialiasing = true;
 				starsBG.updateHitbox();
@@ -1362,7 +1364,7 @@ class PlayState extends MusicBeatState
 				add(starsBG);
 				starsBG.visible = false;
 
-				starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'), 5, 5, true, true);
+				starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'),XY,5,5);
 				starsFG.setPosition(54.3, 59.45);
 				starsFG.updateHitbox();
 				starsFG.antialiasing = true;
@@ -1465,7 +1467,7 @@ class PlayState extends MusicBeatState
 					henryTeleporter.visible = true;
 					add(henryTeleporter);
 
-					FlxMouseEventManager.add(henryTeleporter, function onMouseDown(teleporter:FlxSprite)
+					flixel.input.mouse.FlxMouseEvent.add(henryTeleporter, function onMouseDown(teleporter:FlxSprite)
 					{
 						henryTeleporter.visible = false;
 						henryTeleport();
@@ -1726,7 +1728,7 @@ class PlayState extends MusicBeatState
 					farClouds.add(newCloud);
 				}
 
-				speedLines = new FlxBackdrop(Paths.image('ejected/speedLines', 'impostor'), 1, 1, true, true);
+				speedLines = new FlxBackdrop(Paths.image('ejected/speedLines', 'impostor'));
 				speedLines.antialiasing = true;
 				speedLines.updateHitbox();
 				speedLines.scrollFactor.set(1.3, 1.3);
@@ -2337,7 +2339,7 @@ class PlayState extends MusicBeatState
 				heatwaveShader = new HeatwaveShader();
 				add(heatwaveShader);
 				var filter:ShaderFilter = new ShaderFilter(heatwaveShader.shader);
-				camGame.setFilters([filter, filter2]);
+				FlxG.camera.filters =[filter, filter2];
 
 				//		var sky:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('polus/SkyPolusLol', 'impostor'));
 				//		sky.antialiasing = true;
@@ -3455,7 +3457,7 @@ class PlayState extends MusicBeatState
 				lightoverlay.setGraphicSize(Std.int(lightoverlay.width * 2));
 				add(lightoverlay);
 
-				speedLines = new FlxBackdrop(Paths.image('ejected/speedLines', 'impostor'), 1, 1, true, true);
+				speedLines = new FlxBackdrop(Paths.image('ejected/speedLines', 'impostor'));
 				speedLines.antialiasing = true;
 				speedLines.updateHitbox();
 				speedLines.scrollFactor.set(1.3, 1.3);
@@ -3498,7 +3500,7 @@ class PlayState extends MusicBeatState
 				add(caShader);
 				caShader.amount = -0.5;
 				var filter:ShaderFilter = new ShaderFilter(caShader.shader);
-				camGame.setFilters([filter]);
+				FlxG.camera.filters = [filter];
 
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/grayfg', 'impostor'));
 				lightoverlay.antialiasing = true;
@@ -3580,8 +3582,6 @@ class PlayState extends MusicBeatState
 				add(emergency);
 				add(whoAngered);
 
-			case 'polus3':
-				//thing
 			case 'spooky':
 				add(halloweenWhite);
 			case 'airship':
@@ -4347,7 +4347,7 @@ class PlayState extends MusicBeatState
 				case 'mando':
 					startVideo('mando');
 					piss = false;
-				case 'lights-down'| 'dlow' | 'ashes' | 'magmatic'| 'heartbeat'| 'pinkwave'| 'delusion':
+				case 'lights-down'| 'dlow' | 'ashes' | 'magmatic'| 'heartbeat'| 'pinkwave':
 					schoolIntro(doof);
 				
 				case 'boiling-point':
@@ -4418,6 +4418,8 @@ class PlayState extends MusicBeatState
 		CoolUtil.precacheSound('missnote1');
 		CoolUtil.precacheSound('missnote2');
 		CoolUtil.precacheSound('missnote3');
+
+		Paths.image('alphabet');
 
 		keysArray = [
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_left')),
@@ -4741,9 +4743,9 @@ class PlayState extends MusicBeatState
                 trace('oh  nvm');
                 schoolIntro(doof);
             }
-                if(piss == true) {
-                    startCountdown();
-                }
+			if(piss == true) {
+				startCountdown();
+			}
 		}
 	}
 
@@ -4790,7 +4792,8 @@ class PlayState extends MusicBeatState
     function schoolIntro(?dialogueBox:DialogueBox):Void
 		{
 			inCutscene = true;
-			var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
+			var black:FlxSprite = new FixedFlxBGSprite();
+			black.color = FlxColor.BLACK;
 			black.scrollFactor.set();
 			add(black);
 	
@@ -6365,13 +6368,23 @@ class PlayState extends MusicBeatState
 			{
 				cpuControlled = !cpuControlled; //sorry i just dont wanna play the song each time i change a small thing
 			}
+
+		if (FlxG.keys.justPressed.FOUR) {
+			MusicBeatState.resetState();
+		}
 		#end
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
 		if(curStage.toLowerCase() != 'finalem'){
-			iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width, CoolUtil.boundTo(1 - (elapsed * 30), 0, 1))));
-			iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, CoolUtil.boundTo(1 - (elapsed * 30), 0, 1))));
+			var lrp = FlxMath.lerp(iconP1.scale.x,1, 0.4 * 60 * elapsed);
+			iconP1.scale.set(lrp,lrp);
+
+			var lrp = FlxMath.lerp(iconP2.scale.x,1, 0.4 * 60 * elapsed);
+			iconP2.scale.set(lrp,lrp);
+
+			// iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width, CoolUtil.boundTo(1 - (elapsed * 30), 0, 1))));
+			// iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, CoolUtil.boundTo(1 - (elapsed * 30), 0, 1))));
 		}
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
@@ -7976,7 +7989,7 @@ class PlayState extends MusicBeatState
 					if (value1 == 'in')
 					{
 						defaultCamZoom = 1.2;
-						camGame.camera.zoom = 1.2;
+						camGame.zoom = 1.2;
 						cameraLocked = true;
 						if (value2 == 'dad')
 						{
@@ -8041,7 +8054,7 @@ class PlayState extends MusicBeatState
 					if (value1 == 'in')
 					{
 						defaultCamZoom = 1.2;
-						camGame.camera.zoom = 1.2;
+						camGame.zoom = 1.2;
 						cameraLocked = true;
 						if (value2 == 'dad')
 						{
@@ -8066,7 +8079,7 @@ class PlayState extends MusicBeatState
 					else if (value1 == 'close')
 					{
 						defaultCamZoom = 1.25;
-						camGame.camera.zoom = 1.25;
+						camGame.zoom = 1.25;
 						cameraLocked = true;
 						if (value2 == 'dad')
 						{
@@ -10087,15 +10100,15 @@ class PlayState extends MusicBeatState
 
 		if (curBeat % 2 == 0)
 		{
-			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing") && boyfriend.curCharacter != 'bf-running')
+			if (boyfriend.animation.curAnim != null && !boyfriend.animation.curAnim.name.startsWith("sing") && boyfriend.curCharacter != 'bf-running')
 			{
 				boyfriend.dance();
 			}
-			if (dad.animation.curAnim.name != null && !dad.animation.curAnim.name.startsWith("sing") && !dad.stunned)
+			if (dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith("sing") && !dad.stunned)
 			{
 				dad.dance();
 			}
-			if (mom.animation.curAnim.name != null && !mom.animation.curAnim.name.startsWith("sing") && !mom.stunned)
+			if (mom.animation.curAnim != null && !mom.animation.curAnim.name.startsWith("sing") && !mom.stunned)
 			{
 				mom.dance();
 			}
@@ -10248,7 +10261,7 @@ class PlayState extends MusicBeatState
 					ROZEBUD_ILOVEROZEBUD_HEISAWESOME.animation.finishCallback = function(name){
 						ROZEBUD_ILOVEROZEBUD_HEISAWESOME.destroy();
 					}
-					FlxTween.tween(camGame.camera, {zoom: defaultCamZoom - 0.5}, 4*Conductor.crochet/1000, {ease: FlxEase.quintOut});
+					FlxTween.tween(camGame, {zoom: defaultCamZoom - 0.5}, 4*Conductor.crochet/1000, {ease: FlxEase.quintOut});
 				}
 
 				if(curBeat == 271){

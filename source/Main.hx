@@ -84,28 +84,28 @@ class Main extends Sprite
 		#end
 
 		// Paths.getModFolders();
-		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
+		addChild(new FlxGame(gameWidth, gameHeight, initialState, framerate, framerate, skipSplash, startFullscreen));
 		FlxGraphic.defaultPersist = false;
 
 		FlxG.signals.gameResized.add(onResizeGame);
-		FlxG.signals.preStateSwitch.add(function () {
-			Paths.clearStoredMemory(true);
-			FlxG.bitmap.dumpCache();
+		// FlxG.signals.preStateSwitch.add(function () {
+		// 	Paths.clearStoredMemory(true);
+		// 	FlxG.bitmap.dumpCache();
 
-			var cache = cast(Assets.cache, AssetCache);
-			for (key=>font in cache.font)
-				cache.removeFont(key);
-			for (key=>sound in cache.sound)
-				cache.removeSound(key);
+		// 	var cache = cast(Assets.cache, AssetCache);
+		// 	for (key=>font in cache.font)
+		// 		cache.removeFont(key);
+		// 	for (key=>sound in cache.sound)
+		// 		cache.removeSound(key);
 
-			gc();
-		});
-		FlxG.signals.postStateSwitch.add(function () {
-			Paths.clearUnusedMemory();
-			gc();
+		// 	gc();
+		// });
+		// FlxG.signals.postStateSwitch.add(function () {
+		// 	Paths.clearUnusedMemory();
+		// 	gc();
 
-			trace(System.totalMemory);
-		});
+		// 	trace(System.totalMemory);
+		// });
 		
 		#if !mobile
 		fpsCounter = new FPS(10, 5, 0xFFFFFF);
@@ -116,6 +116,9 @@ class Main extends Sprite
 			fpsCounter.visible = ClientPrefs.showFPS;
 		}
 		#end
+
+		trace(FlxG.save.path)
+		;
 
 		
 
@@ -131,9 +134,10 @@ class Main extends Sprite
 
 		for (cam in FlxG.cameras.list) {
 			@:privateAccess
-			if (cam != null && (cam._filters != null || cam._filters != []))
+			if (cam != null && (cam.filters != null || cam.filters != []))
 				fixShaderSize(cam);
 		}	
+		
 	}
 
 	function fixShaderSize(camera:FlxCamera) // Shout out to Ne_Eo for bringing this to my attention

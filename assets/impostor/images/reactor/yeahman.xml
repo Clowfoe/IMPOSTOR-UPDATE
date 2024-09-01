@@ -1,20 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="yeahman.png">
-	<!-- Created with Adobe Animate version 21.0.6.41649 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Reactor Overlay Top instance 10000" x="0" y="0" width="2051" height="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10001" x="0" y="0" width="2051" height="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10002" x="2071" y="0" width="1980" height="1741" frameX="-35" frameY="-20" frameWidth="2051" frameHeight="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10003" x="2071" y="0" width="1980" height="1741" frameX="-35" frameY="-20" frameWidth="2051" frameHeight="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10004" x="0" y="1819" width="1948" height="1718" frameX="-51" frameY="-28" frameWidth="2051" frameHeight="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10005" x="0" y="1819" width="1948" height="1718" frameX="-51" frameY="-28" frameWidth="2051" frameHeight="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10006" x="1968" y="1819" width="1915" height="1686" frameX="-67" frameY="-39" frameWidth="2051" frameHeight="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10007" x="1968" y="1819" width="1915" height="1686" frameX="-67" frameY="-39" frameWidth="2051" frameHeight="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10008" x="1968" y="1819" width="1915" height="1686" frameX="-67" frameY="-39" frameWidth="2051" frameHeight="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10009" x="1968" y="1819" width="1915" height="1686" frameX="-67" frameY="-39" frameWidth="2051" frameHeight="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10010" x="1968" y="1819" width="1915" height="1686" frameX="-67" frameY="-39" frameWidth="2051" frameHeight="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10011" x="1968" y="1819" width="1915" height="1686" frameX="-67" frameY="-39" frameWidth="2051" frameHeight="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10012" x="1968" y="1819" width="1915" height="1686" frameX="-67" frameY="-39" frameWidth="2051" frameHeight="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10013" x="1968" y="1819" width="1915" height="1686" frameX="-67" frameY="-39" frameWidth="2051" frameHeight="1799"/>
-	<SubTexture name="Reactor Overlay Top instance 10014" x="1968" y="1819" width="1915" height="1686" frameX="-67" frameY="-39" frameWidth="2051" frameHeight="1799"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="yeahman.png" width="3296" height="2972">
+	<SubTexture name="Reactor Overlay Top instance 10000" x="0" y="0" width="1714" height="1513" frameX="-167" frameY="-139" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10001" x="0" y="0" width="1714" height="1513" frameX="-167" frameY="-139" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10002" x="0" y="1518" width="1642" height="1454" frameX="-203" frameY="-159" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10003" x="0" y="1518" width="1642" height="1454" frameX="-203" frameY="-159" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10004" x="1647" y="1518" width="1609" height="1431" frameX="-219" frameY="-168" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10005" x="1647" y="1518" width="1609" height="1431" frameX="-219" frameY="-168" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10006" x="1719" y="0" width="1577" height="1400" frameX="-235" frameY="-178" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10007" x="1719" y="0" width="1577" height="1400" frameX="-235" frameY="-178" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10008" x="1719" y="0" width="1577" height="1400" frameX="-235" frameY="-178" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10009" x="1719" y="0" width="1577" height="1400" frameX="-235" frameY="-178" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10010" x="1719" y="0" width="1577" height="1400" frameX="-235" frameY="-178" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10011" x="1719" y="0" width="1577" height="1400" frameX="-235" frameY="-178" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10012" x="1719" y="0" width="1577" height="1400" frameX="-235" frameY="-178" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10013" x="1719" y="0" width="1577" height="1400" frameX="-235" frameY="-178" frameWidth="2051" frameHeight="1799"/>
+	<SubTexture name="Reactor Overlay Top instance 10014" x="1719" y="0" width="1577" height="1400" frameX="-235" frameY="-178" frameWidth="2051" frameHeight="1799"/>
 </TextureAtlas>

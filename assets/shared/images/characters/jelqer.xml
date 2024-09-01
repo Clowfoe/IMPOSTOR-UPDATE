@@ -1,73 +1,74 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="jelqer.png">
-	<!-- Created with Adobe Animate version 21.0.6.41649 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="jelqer dance left0000" x="0" y="0" width="500" height="406" frameX="0" frameY="-5" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance left0001" x="0" y="0" width="500" height="406" frameX="0" frameY="-5" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance left0002" x="505" y="0" width="500" height="407" frameX="-2" frameY="-4" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance left0003" x="505" y="0" width="500" height="407" frameX="-2" frameY="-4" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance left0004" x="1010" y="0" width="501" height="407" frameX="-3" frameY="-4" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance left0005" x="1010" y="0" width="501" height="407" frameX="-3" frameY="-4" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance left0006" x="1516" y="0" width="501" height="408" frameX="-6" frameY="-3" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance left0007" x="1516" y="0" width="501" height="408" frameX="-6" frameY="-3" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance left0008" x="2022" y="0" width="498" height="410" frameX="-10" frameY="-1" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance left0009" x="2022" y="0" width="498" height="410" frameX="-10" frameY="-1" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance left0010" x="2525" y="0" width="493" height="411" frameX="-18" frameY="0" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance left0011" x="2525" y="0" width="493" height="411" frameX="-18" frameY="0" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance left0012" x="3023" y="0" width="493" height="411" frameX="-19" frameY="0" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance left0013" x="3023" y="0" width="493" height="411" frameX="-19" frameY="0" frameWidth="512" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0000" x="3521" y="0" width="462" height="405" frameX="-47" frameY="-6" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0001" x="3521" y="0" width="462" height="405" frameX="-47" frameY="-6" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0002" x="0" y="416" width="456" height="406" frameX="-50" frameY="-5" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0003" x="0" y="416" width="456" height="406" frameX="-50" frameY="-5" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0004" x="461" y="416" width="457" height="407" frameX="-46" frameY="-4" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0005" x="461" y="416" width="457" height="407" frameX="-46" frameY="-4" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0006" x="923" y="416" width="467" height="407" frameX="-34" frameY="-4" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0007" x="923" y="416" width="467" height="407" frameX="-34" frameY="-4" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0008" x="1395" y="416" width="491" height="408" frameX="-8" frameY="-3" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0009" x="1395" y="416" width="491" height="408" frameX="-8" frameY="-3" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0010" x="1891" y="416" width="494" height="411" frameX="-1" frameY="0" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0011" x="1891" y="416" width="494" height="411" frameX="-1" frameY="0" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0012" x="2390" y="416" width="494" height="411" frameX="0" frameY="0" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer dance right0013" x="2390" y="416" width="494" height="411" frameX="0" frameY="0" frameWidth="509" frameHeight="411"/>
-	<SubTexture name="jelqer down0000" x="2889" y="416" width="479" height="350" frameX="0" frameY="-9" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer down0001" x="2889" y="416" width="479" height="350" frameX="0" frameY="-9" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer down0002" x="3373" y="416" width="479" height="357" frameX="0" frameY="-2" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer down0003" x="3373" y="416" width="479" height="357" frameX="0" frameY="-2" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer down0004" x="0" y="832" width="478" height="359" frameX="-1" frameY="0" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer down0005" x="0" y="832" width="478" height="359" frameX="-1" frameY="0" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer down0006" x="0" y="832" width="478" height="359" frameX="-1" frameY="0" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer down0007" x="0" y="832" width="478" height="359" frameX="-1" frameY="0" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer down0008" x="0" y="832" width="478" height="359" frameX="-1" frameY="0" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer down0009" x="0" y="832" width="478" height="359" frameX="-1" frameY="0" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer down0010" x="0" y="832" width="478" height="359" frameX="-1" frameY="0" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer down0011" x="0" y="832" width="478" height="359" frameX="-1" frameY="0" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer down0012" x="0" y="832" width="478" height="359" frameX="-1" frameY="0" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer down0013" x="0" y="832" width="478" height="359" frameX="-1" frameY="0" frameWidth="479" frameHeight="359"/>
-	<SubTexture name="jelqer left0000" x="483" y="832" width="586" height="415"/>
-	<SubTexture name="jelqer left0001" x="483" y="832" width="586" height="415"/>
-	<SubTexture name="jelqer left0002" x="1074" y="832" width="569" height="415" frameX="-14" frameY="0" frameWidth="586" frameHeight="415"/>
-	<SubTexture name="jelqer left0003" x="1074" y="832" width="569" height="415" frameX="-14" frameY="0" frameWidth="586" frameHeight="415"/>
-	<SubTexture name="jelqer left0004" x="1648" y="832" width="570" height="415" frameX="-15" frameY="0" frameWidth="586" frameHeight="415"/>
-	<SubTexture name="jelqer left0005" x="1648" y="832" width="570" height="415" frameX="-15" frameY="0" frameWidth="586" frameHeight="415"/>
-	<SubTexture name="jelqer right0000" x="2223" y="832" width="520" height="371" frameX="-25" frameY="-8" frameWidth="549" frameHeight="379"/>
-	<SubTexture name="jelqer right0001" x="2223" y="832" width="520" height="371" frameX="-25" frameY="-8" frameWidth="549" frameHeight="379"/>
-	<SubTexture name="jelqer right0002" x="2748" y="832" width="544" height="379" frameX="-4" frameY="0" frameWidth="549" frameHeight="379"/>
-	<SubTexture name="jelqer right0003" x="2748" y="832" width="544" height="379" frameX="-4" frameY="0" frameWidth="549" frameHeight="379"/>
-	<SubTexture name="jelqer right0004" x="3297" y="832" width="549" height="378" frameX="0" frameY="-1" frameWidth="549" frameHeight="379"/>
-	<SubTexture name="jelqer right0005" x="3297" y="832" width="549" height="378" frameX="0" frameY="-1" frameWidth="549" frameHeight="379"/>
-	<SubTexture name="jelqer up0000" x="0" y="1252" width="476" height="443" frameX="0" frameY="0" frameWidth="477" frameHeight="443"/>
-	<SubTexture name="jelqer up0001" x="0" y="1252" width="476" height="443" frameX="0" frameY="0" frameWidth="477" frameHeight="443"/>
-	<SubTexture name="jelqer up0002" x="481" y="1252" width="476" height="439" frameX="0" frameY="-4" frameWidth="477" frameHeight="443"/>
-	<SubTexture name="jelqer up0003" x="481" y="1252" width="476" height="439" frameX="0" frameY="-4" frameWidth="477" frameHeight="443"/>
-	<SubTexture name="jelqer up0004" x="962" y="1252" width="477" height="436" frameX="0" frameY="-7" frameWidth="477" frameHeight="443"/>
-	<SubTexture name="jelqer up0005" x="962" y="1252" width="477" height="436" frameX="0" frameY="-7" frameWidth="477" frameHeight="443"/>
-	<SubTexture name="jelqer up0006" x="962" y="1252" width="477" height="436" frameX="0" frameY="-7" frameWidth="477" frameHeight="443"/>
-	<SubTexture name="jelqer up0007" x="962" y="1252" width="477" height="436" frameX="0" frameY="-7" frameWidth="477" frameHeight="443"/>
-	<SubTexture name="jelqer up0008" x="962" y="1252" width="477" height="436" frameX="0" frameY="-7" frameWidth="477" frameHeight="443"/>
-	<SubTexture name="jelqer up0009" x="962" y="1252" width="477" height="436" frameX="0" frameY="-7" frameWidth="477" frameHeight="443"/>
-	<SubTexture name="jelqer up0010" x="962" y="1252" width="477" height="436" frameX="0" frameY="-7" frameWidth="477" frameHeight="443"/>
-	<SubTexture name="jelqer up0011" x="962" y="1252" width="477" height="436" frameX="0" frameY="-7" frameWidth="477" frameHeight="443"/>
-	<SubTexture name="jelqer up0012" x="962" y="1252" width="477" height="436" frameX="0" frameY="-7" frameWidth="477" frameHeight="443"/>
-	<SubTexture name="jelqer up0013" x="962" y="1252" width="477" height="436" frameX="0" frameY="-7" frameWidth="477" frameHeight="443"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="jelqer.png" width="2603" height="2482">
+	<SubTexture name="jelqer dance left0000" x="0" y="1662" width="500" height="405" frameX="-0" frameY="-5" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance left0001" x="0" y="1662" width="500" height="405" frameX="-0" frameY="-5" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance left0002" x="1511" y="1237" width="499" height="406" frameX="-2" frameY="-4" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance left0003" x="1511" y="1237" width="499" height="406" frameX="-2" frameY="-4" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance left0004" x="1443" y="826" width="501" height="406" frameX="-3" frameY="-4" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance left0005" x="1443" y="826" width="501" height="406" frameX="-3" frameY="-4" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance left0006" x="1143" y="0" width="501" height="407" frameX="-6" frameY="-3" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance left0007" x="1143" y="0" width="501" height="407" frameX="-6" frameY="-3" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance left0008" x="1149" y="412" width="498" height="409" frameX="-10" frameY="-1" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance left0009" x="1149" y="412" width="498" height="409" frameX="-10" frameY="-1" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance left0010" x="1003" y="1662" width="493" height="409" frameX="-18" frameY="-1" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance left0011" x="1003" y="1662" width="493" height="409" frameX="-18" frameY="-1" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance left0012" x="505" y="1662" width="493" height="410" frameX="-19" frameY="-0" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance left0013" x="505" y="1662" width="493" height="410" frameX="-19" frameY="-0" frameWidth="512" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0000" x="1003" y="2076" width="461" height="404" frameX="-47" frameY="-6" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0001" x="1003" y="2076" width="461" height="404" frameX="-47" frameY="-6" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0002" x="2010" y="1648" width="456" height="405" frameX="-50" frameY="-5" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0003" x="2010" y="1648" width="456" height="405" frameX="-50" frameY="-5" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0004" x="496" y="2077" width="457" height="405" frameX="-46" frameY="-5" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0005" x="496" y="2077" width="457" height="405" frameX="-46" frameY="-5" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0006" x="1652" y="415" width="467" height="406" frameX="-34" frameY="-4" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0007" x="1652" y="415" width="467" height="406" frameX="-34" frameY="-4" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0008" x="0" y="2072" width="491" height="407" frameX="-8" frameY="-3" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0009" x="0" y="2072" width="491" height="407" frameX="-8" frameY="-3" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0010" x="1652" y="0" width="494" height="410" frameX="-1" frameY="-0" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0011" x="1652" y="0" width="494" height="410" frameX="-1" frameY="-0" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0012" x="1511" y="1648" width="494" height="410" frameX="-0" frameY="-0" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer dance right0013" x="1511" y="1648" width="494" height="410" frameX="-0" frameY="-0" frameWidth="509" frameHeight="411"/>
+	<SubTexture name="jelqer down0000" x="2124" y="415" width="479" height="348" frameX="-0" frameY="-10" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer down0001" x="2124" y="415" width="479" height="348" frameX="-0" frameY="-10" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer down0002" x="1949" y="826" width="479" height="355" frameX="-0" frameY="-3" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer down0003" x="1949" y="826" width="479" height="355" frameX="-0" frameY="-3" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer down0004" x="2026" y="2058" width="478" height="358" frameX="-1" frameY="-0" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer down0005" x="2026" y="2058" width="478" height="358" frameX="-1" frameY="-0" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer down0006" x="2026" y="2058" width="478" height="358" frameX="-1" frameY="-0" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer down0007" x="2026" y="2058" width="478" height="358" frameX="-1" frameY="-0" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer down0008" x="2026" y="2058" width="478" height="358" frameX="-1" frameY="-0" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer down0009" x="2026" y="2058" width="478" height="358" frameX="-1" frameY="-0" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer down0010" x="2026" y="2058" width="478" height="358" frameX="-1" frameY="-0" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer down0011" x="2026" y="2058" width="478" height="358" frameX="-1" frameY="-0" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer down0012" x="2026" y="2058" width="478" height="358" frameX="-1" frameY="-0" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer down0013" x="2026" y="2058" width="478" height="358" frameX="-1" frameY="-0" frameWidth="479" frameHeight="359"/>
+	<SubTexture name="jelqer left0000" x="0" y="0" width="585" height="414" frameX="-0" frameY="-0" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="jelqer left0001" x="0" y="0" width="585" height="414" frameX="-0" frameY="-0" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="jelqer left0002" x="575" y="419" width="569" height="414" frameX="-14" frameY="-0" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="jelqer left0003" x="575" y="419" width="569" height="414" frameX="-14" frameY="-0" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="jelqer left0004" x="0" y="419" width="570" height="414" frameX="-15" frameY="-0" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="jelqer left0005" x="0" y="419" width="570" height="414" frameX="-15" frameY="-0" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="jelqer right0000" x="1501" y="2063" width="520" height="370" frameX="-25" frameY="-9" frameWidth="549" frameHeight="379"/>
+	<SubTexture name="jelqer right0001" x="1501" y="2063" width="520" height="370" frameX="-25" frameY="-9" frameWidth="549" frameHeight="379"/>
+	<SubTexture name="jelqer right0002" x="962" y="1278" width="544" height="379" frameX="-4" frameY="-0" frameWidth="549" frameHeight="379"/>
+	<SubTexture name="jelqer right0003" x="962" y="1278" width="544" height="379" frameX="-4" frameY="-0" frameWidth="549" frameHeight="379"/>
+	<SubTexture name="jelqer right0004" x="590" y="0" width="548" height="378" frameX="-0" frameY="-1" frameWidth="549" frameHeight="379"/>
+	<SubTexture name="jelqer right0005" x="590" y="0" width="548" height="378" frameX="-0" frameY="-1" frameWidth="549" frameHeight="379"/>
+	<SubTexture name="jelqer up0000" x="0" y="838" width="476" height="443" frameX="-0" frameY="-0" frameWidth="477" frameHeight="443"/>
+	<SubTexture name="jelqer up0001" x="0" y="838" width="476" height="443" frameX="-0" frameY="-0" frameWidth="477" frameHeight="443"/>
+	<SubTexture name="jelqer up0002" x="481" y="838" width="476" height="439" frameX="-0" frameY="-4" frameWidth="477" frameHeight="443"/>
+	<SubTexture name="jelqer up0003" x="481" y="838" width="476" height="439" frameX="-0" frameY="-4" frameWidth="477" frameHeight="443"/>
+	<SubTexture name="jelqer up0004" x="962" y="838" width="476" height="435" frameX="-0" frameY="-7" frameWidth="477" frameHeight="443"/>
+	<SubTexture name="jelqer up0005" x="962" y="838" width="476" height="435" frameX="-0" frameY="-7" frameWidth="477" frameHeight="443"/>
+	<SubTexture name="jelqer up0006" x="962" y="838" width="476" height="435" frameX="-0" frameY="-7" frameWidth="477" frameHeight="443"/>
+	<SubTexture name="jelqer up0007" x="962" y="838" width="476" height="435" frameX="-0" frameY="-7" frameWidth="477" frameHeight="443"/>
+	<SubTexture name="jelqer up0008" x="962" y="838" width="476" height="435" frameX="-0" frameY="-7" frameWidth="477" frameHeight="443"/>
+	<SubTexture name="jelqer up0009" x="962" y="838" width="476" height="435" frameX="-0" frameY="-7" frameWidth="477" frameHeight="443"/>
+	<SubTexture name="jelqer up0010" x="962" y="838" width="476" height="435" frameX="-0" frameY="-7" frameWidth="477" frameHeight="443"/>
+	<SubTexture name="jelqer up0011" x="962" y="838" width="476" height="435" frameX="-0" frameY="-7" frameWidth="477" frameHeight="443"/>
+	<SubTexture name="jelqer up0012" x="962" y="838" width="476" height="435" frameX="-0" frameY="-7" frameWidth="477" frameHeight="443"/>
+	<SubTexture name="jelqer up0013" x="962" y="838" width="476" height="435" frameX="-0" frameY="-7" frameWidth="477" frameHeight="443"/>
 </TextureAtlas>

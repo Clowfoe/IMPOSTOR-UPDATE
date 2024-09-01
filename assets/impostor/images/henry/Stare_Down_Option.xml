@@ -1,24 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="Stare_Down_Option.png">
-	<!-- Created with Adobe Animate version 21.0.0.35450 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Stare Down0000" x="13" y="13" width="342" height="311"/>
-	<SubTexture name="Stare Down Select0000" x="368" y="13" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0001" x="368" y="13" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0002" x="13" y="337" width="342" height="309"/>
-	<SubTexture name="Stare Down Select0003" x="13" y="337" width="342" height="309"/>
-	<SubTexture name="Stare Down Select0004" x="368" y="337" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0005" x="368" y="337" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0006" x="13" y="659" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0007" x="13" y="659" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0008" x="13" y="659" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0009" x="13" y="659" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0010" x="13" y="659" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0011" x="13" y="659" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0012" x="13" y="659" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0013" x="13" y="659" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0014" x="13" y="659" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0015" x="13" y="659" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0016" x="13" y="659" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
-	<SubTexture name="Stare Down Select0017" x="13" y="659" width="342" height="308" frameX="0" frameY="-1" frameWidth="342" frameHeight="309"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="Stare_Down_Option.png" width="342" height="1563">
+	<SubTexture name="Stare Down0000" x="0" y="0" width="342" height="311" frameX="-0" frameY="-0" frameWidth="342" frameHeight="311"/>
+	<SubTexture name="Stare Down Select0000" x="0" y="316" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0001" x="0" y="316" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0002" x="0" y="629" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0003" x="0" y="629" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0004" x="0" y="942" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0005" x="0" y="942" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0006" x="0" y="1255" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0007" x="0" y="1255" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0008" x="0" y="1255" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0009" x="0" y="1255" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0010" x="0" y="1255" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0011" x="0" y="1255" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0012" x="0" y="1255" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0013" x="0" y="1255" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0014" x="0" y="1255" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0015" x="0" y="1255" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0016" x="0" y="1255" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
+	<SubTexture name="Stare Down Select0017" x="0" y="1255" width="342" height="308" frameX="-0" frameY="-1" frameWidth="342" frameHeight="309"/>
 </TextureAtlas>

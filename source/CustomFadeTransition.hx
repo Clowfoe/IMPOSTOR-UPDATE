@@ -28,11 +28,16 @@ class CustomFadeTransition extends MusicBeatSubstate {
 		this.isTransIn = isTransIn;
 		var width:Int = Std.int(FlxG.width);
 		var height:Int = Std.int(FlxG.height);
-		transGradient = FlxGradient.createGradientFlxSprite(width, height, (isTransIn ? [0x0, FlxColor.BLACK] : [FlxColor.BLACK, 0x0]));
+		transGradient = FlxGradient.createGradientFlxSprite(1, height, (isTransIn ? [0x0, FlxColor.BLACK] : [FlxColor.BLACK, 0x0]));
+		transGradient.scale.x = width;
+		transGradient.updateHitbox();
 		transGradient.scrollFactor.set();
 		add(transGradient);
 
-		transBlack = new FlxSprite().makeGraphic(width, height + 400, FlxColor.BLACK);
+		transBlack = new FlxSprite().makeGraphic(1, 1, FlxColor.BLACK);
+		transBlack.scale.y = height + 400;
+		transBlack.scale.x = width;
+		transBlack.updateHitbox();
 		transBlack.scrollFactor.set();
 		add(transBlack);
 
@@ -55,26 +60,15 @@ class CustomFadeTransition extends MusicBeatSubstate {
 			transGradient.y = -transGradient.height;
 			transBlack.y = transGradient.y - transBlack.height + 50;
 			leTween = FlxTween.tween(transGradient, {y: transGradient.height + 50}, duration, {
-				onComplete: function(twn:FlxTween)
-				{
-					if (finishCallback != null)
-						finishCallback();
-				},
+				onComplete: executeCallback,
 				ease: FlxEase.linear
 			});
 		}
+
+
 	}
 
 	override function update(elapsed:Float) {
-		if (isTransIn)
-			transBlack.y = transGradient.y + transGradient.height;
-		else
-			transBlack.y = transGradient.y - transBlack.height;
-
-		var camList = FlxG.cameras.list;
-		camera = camList[camList.length - 1];
-		transBlack.cameras = [camera];
-		transGradient.cameras = [camera];
 
 		super.update(elapsed);
 		
@@ -82,13 +76,23 @@ class CustomFadeTransition extends MusicBeatSubstate {
 			transBlack.y = transGradient.y + transGradient.height;
 		else
 			transBlack.y = transGradient.y - transBlack.height;
+
+		this.cameras = [FlxG.cameras.list[FlxG.cameras.list.length-1]];
 	}
 
 	override function destroy() {
 		if(leTween != null) {
-			finishCallback();
+			executeCallback();
 			leTween.cancel();
 		}
 		super.destroy();
+	}
+
+
+	function executeCallback(?_) {
+		if (finishCallback != null) {
+			finishCallback();
+			finishCallback = null;
+		}
 	}
 }

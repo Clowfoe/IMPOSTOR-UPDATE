@@ -1,5 +1,6 @@
 package;
 
+import extensions.FixedFlxBGSprite;
 #if desktop
 import Discord.DiscordClient;
 import sys.thread.Thread;
@@ -20,7 +21,7 @@ import flixel.group.FlxGroup;
 import flixel.input.gamepad.FlxGamepad;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
-import flixel.system.FlxSound;
+
 import flixel.system.ui.FlxSoundTray;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
@@ -95,7 +96,10 @@ class TitleState extends MusicBeatState
 		swagShader = new ColorSwap();
 		super.create();
 
-		FlxG.save.bind('funkin', 'ninjamuffin99');
+
+		@:privateAccess
+		FlxG.save.bind('funkin', '${FlxG.stage.application.meta.get('company')}/${flixel.util.FlxSave.validate(FlxG.stage.application.meta.get('file'))}');
+		// FlxG.save.bind('funkin', 'ninjamuffin99');
 		ClientPrefs.loadPrefs();
 
 		Highscore.load();
@@ -147,27 +151,6 @@ class TitleState extends MusicBeatState
 	{
 		if (!initialized)
 		{
-			/*var diamond:FlxGraphic = FlxGraphic.fromClass(GraphicTransTileDiamond);
-			diamond.persist = true;
-			diamond.destroyOnNoUse = false;
-
-			FlxTransitionableState.defaultTransIn = new TransitionData(FADE, FlxColor.BLACK, 1, new FlxPoint(0, -1), {asset: diamond, width: 32, height: 32},
-				new FlxRect(-300, -300, FlxG.width * 1.8, FlxG.height * 1.8));
-			FlxTransitionableState.defaultTransOut = new TransitionData(FADE, FlxColor.BLACK, 0.7, new FlxPoint(0, 1),
-				{asset: diamond, width: 32, height: 32}, new FlxRect(-300, -300, FlxG.width * 1.8, FlxG.height * 1.8));
-				
-			transIn = FlxTransitionableState.defaultTransIn;
-			transOut = FlxTransitionableState.defaultTransOut;*/
-
-			// HAD TO MODIFY SOME BACKEND SHIT
-			// IF THIS PR IS HERE IF ITS ACCEPTED UR GOOD TO GO
-			// https://github.com/HaxeFlixel/flixel-addons/pull/348
-
-			// var music:FlxSound = new FlxSound();
-			// music.loadStream(Paths.music('freakyMenu'));
-			// FlxG.sound.list.add(music);
-			// music.play();
-
 			if(FlxG.sound.music == null) {
 				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 
@@ -184,13 +167,13 @@ class TitleState extends MusicBeatState
 		// bg.updateHitbox();
 		add(bg);
 
-		starFG = new FlxBackdrop(Paths.image('menuBooba/starFG', 'impostor'), 1, 1, true, true);
+		starFG = new FlxBackdrop(Paths.image('menuBooba/starFG', 'impostor'), XY, 1, 1);
 		starFG.updateHitbox();
 		starFG.antialiasing = true;
 		starFG.scrollFactor.set();
 		add(starFG);
 
-		starBG = new FlxBackdrop(Paths.image('menuBooba/starBG', 'impostor'), 1, 1, true, true);
+		starBG = new FlxBackdrop(Paths.image('menuBooba/starBG', 'impostor'), XY, 1, 1);
 		starBG.updateHitbox();
 		starBG.antialiasing = true;
 		starBG.scrollFactor.set();
@@ -384,7 +367,8 @@ class TitleState extends MusicBeatState
 							FlxG.save.data.psykaEasterEgg = !FlxG.save.data.psykaEasterEgg;
 							FlxG.sound.play(Paths.sound('secretSound'));
 
-							var black:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+							var black:FlxSprite = new FixedFlxBGSprite();
+							black.color = FlxColor.BLACK;
 							black.alpha = 0;
 							add(black);
 
@@ -562,7 +546,8 @@ class TitleState extends MusicBeatState
 		}
 		} if (foundFile)
 		{
-			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+			var bg = new FixedFlxBGSprite();
+			bg.color = FlxColor.BLACK;
 			bg.scrollFactor.set();
 			add(bg);
 

@@ -1,16 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="aoe_vic.png">
-	<!-- Created with Adobe Animate version 21.0.3.38773 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="animatedlight instance 10000" x="0" y="0" width="2667" height="1137"/>
-	<SubTexture name="animatedlight instance 10001" x="2676" y="0" width="2667" height="1137"/>
-	<SubTexture name="animatedlight instance 10002" x="5352" y="0" width="2667" height="1137"/>
-	<SubTexture name="animatedlight instance 10003" x="0" y="1146" width="2667" height="1137"/>
-	<SubTexture name="animatedlight instance 10004" x="2676" y="1146" width="2667" height="1137"/>
-	<SubTexture name="animatedlight instance 10005" x="5352" y="1146" width="2667" height="1137"/>
-	<SubTexture name="animatedlight instance 10006" x="0" y="2292" width="2667" height="1137"/>
-	<SubTexture name="animatedlight instance 10007" x="2676" y="2292" width="2667" height="1137"/>
-	<SubTexture name="animatedlight instance 10008" x="5352" y="2292" width="2667" height="1137"/>
-	<SubTexture name="animatedlight instance 10009" x="0" y="3438" width="2667" height="1137"/>
-	<SubTexture name="animatedlight instance 10010" x="2676" y="3438" width="2667" height="1137"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="aoe_vic.png" width="5418" height="5040">
+	<SubTexture name="animatedlight instance 10000" x="0" y="0" width="2417" height="1004" frameX="-124" frameY="-67" frameWidth="2667" frameHeight="1137"/>
+	<SubTexture name="animatedlight instance 10001" x="0" y="1009" width="2417" height="1004" frameX="-124" frameY="-67" frameWidth="2667" frameHeight="1137"/>
+	<SubTexture name="animatedlight instance 10002" x="0" y="2018" width="2417" height="1004" frameX="-124" frameY="-67" frameWidth="2667" frameHeight="1137"/>
+	<SubTexture name="animatedlight instance 10003" x="2422" y="0" width="1004" height="2417" rotated="true" frameX="-124" frameY="-67" frameWidth="2667" frameHeight="1137"/>
+	<SubTexture name="animatedlight instance 10004" x="0" y="3027" width="2417" height="1004" frameX="-124" frameY="-67" frameWidth="2667" frameHeight="1137"/>
+	<SubTexture name="animatedlight instance 10005" x="3431" y="0" width="1004" height="2417" rotated="true" frameX="-124" frameY="-67" frameWidth="2667" frameHeight="1137"/>
+	<SubTexture name="animatedlight instance 10006" x="0" y="4036" width="2417" height="1004" frameX="-124" frameY="-67" frameWidth="2667" frameHeight="1137"/>
+	<SubTexture name="animatedlight instance 10007" x="2422" y="2422" width="978" height="2393" rotated="true" frameX="-136" frameY="-80" frameWidth="2667" frameHeight="1137"/>
+	<SubTexture name="animatedlight instance 10008" x="3405" y="2422" width="978" height="2393" rotated="true" frameX="-136" frameY="-80" frameWidth="2667" frameHeight="1137"/>
+	<SubTexture name="animatedlight instance 10009" x="4440" y="0" width="978" height="2393" rotated="true" frameX="-136" frameY="-80" frameWidth="2667" frameHeight="1137"/>
+	<SubTexture name="animatedlight instance 10010" x="4440" y="2398" width="978" height="2393" rotated="true" frameX="-136" frameY="-80" frameWidth="2667" frameHeight="1137"/>
 </TextureAtlas>

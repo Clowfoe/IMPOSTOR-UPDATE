@@ -1,5 +1,6 @@
 package;
 
+import flixel.input.mouse.FlxMouseEvent;
 import flixel.tweens.misc.NumTween;
 import flixel.math.FlxPoint;
 #if desktop
@@ -84,8 +85,8 @@ class ShopState extends MusicBeatState
     var charName:FlxText;
     var charDesc:FlxText;
 
-    var starsBG:Haxe5Backdrop;
-    var starsFG:Haxe5Backdrop;
+    var starsBG:FlxBackdrop;
+    var starsFG:FlxBackdrop;
 
     var upperBar:FlxSprite;
     var crossImage:FlxSprite;
@@ -192,10 +193,10 @@ class ShopState extends MusicBeatState
         camUpper.bgColor.alpha = 0;
         camOther.bgColor.alpha = 0;
         FlxG.cameras.reset(camGame);
-        FlxG.cameras.add(camUpper);
-        FlxG.cameras.add(camOther);
+        FlxG.cameras.add(camUpper,false);
+        FlxG.cameras.add(camOther,false);
+        FlxG.cameras.setDefaultDrawTarget(camGame,true);
         
-        FlxCamera.defaultCameras = [camGame];
         CustomFadeTransition.nextCamera = camOther;
 
         icons = new FlxTypedGroup<FlxSprite>();
@@ -212,14 +213,14 @@ class ShopState extends MusicBeatState
         FlxG.camera.follow(camFollowPos, null, 2);
         //camStars.follow(camFollowPos, null, 2);
 
-        starsBG = new Haxe5Backdrop(Paths.image('shop/starBG', 'impostor'), XY, 0, 0);
+        starsBG = new FlxBackdrop(Paths.image('shop/starBG', 'impostor'), XY, 0, 0);
         starsBG.antialiasing = true;
         starsBG.updateHitbox();
         //starsBG.cameras = [camStars];
         starsBG.scrollFactor.set(0.3, 0.3);
         add(starsBG);
         
-        starsFG = new Haxe5Backdrop(Paths.image('shop/starFG', 'impostor'), XY, 0, 0);
+        starsFG = new FlxBackdrop(Paths.image('shop/starFG', 'impostor'), XY, 0, 0);
         starsFG.updateHitbox();
         starsFG.antialiasing = true;
         //starsFG.cameras = [camStars];
@@ -322,7 +323,7 @@ class ShopState extends MusicBeatState
 		crossImage.updateHitbox();
 		crossImage.cameras = [camUpper];
 		add(crossImage);
-        FlxMouseEventManager.add(crossImage, function onMouseDown(s:FlxSprite)
+        FlxMouseEvent.add(crossImage, function onMouseDown(s:FlxSprite)
 		{
 			goBack();
 		}, null, null);

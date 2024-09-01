@@ -1,25 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="vines.png">
-	<!-- Created with Adobe Animate version 21.0.5.40714 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="green0000" x="0" y="0" width="2612" height="1487"/>
-	<SubTexture name="green0001" x="0" y="0" width="2612" height="1487"/>
-	<SubTexture name="green0002" x="2622" y="0" width="2612" height="1487"/>
-	<SubTexture name="green0003" x="2622" y="0" width="2612" height="1487"/>
-	<SubTexture name="green0004" x="5244" y="0" width="2612" height="1487"/>
-	<SubTexture name="green0005" x="5244" y="0" width="2612" height="1487"/>
-	<SubTexture name="green0006" x="0" y="1497" width="2612" height="1487"/>
-	<SubTexture name="green0007" x="0" y="1497" width="2612" height="1487"/>
-	<SubTexture name="green0008" x="2622" y="1497" width="2612" height="1487"/>
-	<SubTexture name="green0009" x="2622" y="1497" width="2612" height="1487"/>
-	<SubTexture name="green0010" x="5244" y="0" width="2612" height="1487"/>
-	<SubTexture name="green0011" x="5244" y="0" width="2612" height="1487"/>
-	<SubTexture name="green0012" x="5244" y="1497" width="2612" height="1487"/>
-	<SubTexture name="green0013" x="5244" y="1497" width="2612" height="1487"/>
-	<SubTexture name="green0014" x="0" y="2994" width="2612" height="1487"/>
-	<SubTexture name="green0015" x="0" y="2994" width="2612" height="1487"/>
-	<SubTexture name="green0016" x="0" y="0" width="2612" height="1487"/>
-	<SubTexture name="green0017" x="0" y="0" width="2612" height="1487"/>
-	<SubTexture name="green0018" x="0" y="0" width="2612" height="1487"/>
-	<SubTexture name="green0019" x="0" y="0" width="2612" height="1487"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="vines.png" width="5181" height="5951">
+	<SubTexture name="green0000" x="0" y="1489" width="2590" height="1484" frameX="-19" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0001" x="0" y="1489" width="2590" height="1484" frameX="-19" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0002" x="0" y="0" width="2591" height="1484" frameX="-9" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0003" x="0" y="0" width="2591" height="1484" frameX="-9" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0004" x="2596" y="0" width="2584" height="1484" frameX="-6" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0005" x="2596" y="0" width="2584" height="1484" frameX="-6" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0006" x="2595" y="1489" width="2586" height="1484" frameX="-0" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0007" x="2595" y="1489" width="2586" height="1484" frameX="-0" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0008" x="2588" y="2978" width="2582" height="1484" frameX="-0" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0009" x="2588" y="2978" width="2582" height="1484" frameX="-0" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0010" x="2596" y="0" width="2584" height="1484" frameX="-6" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0011" x="2596" y="0" width="2584" height="1484" frameX="-6" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0012" x="0" y="4467" width="2581" height="1484" frameX="-13" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0013" x="0" y="4467" width="2581" height="1484" frameX="-13" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0014" x="0" y="2978" width="2583" height="1484" frameX="-15" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0015" x="0" y="2978" width="2583" height="1484" frameX="-15" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0016" x="0" y="1489" width="2590" height="1484" frameX="-19" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0017" x="0" y="1489" width="2590" height="1484" frameX="-19" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0018" x="0" y="1489" width="2590" height="1484" frameX="-19" frameY="-0" frameWidth="2612" frameHeight="1487"/>
+	<SubTexture name="green0019" x="0" y="1489" width="2590" height="1484" frameX="-19" frameY="-0" frameWidth="2612" frameHeight="1487"/>
 </TextureAtlas>

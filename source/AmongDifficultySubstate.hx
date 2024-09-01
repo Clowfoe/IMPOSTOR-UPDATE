@@ -38,8 +38,8 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 		camOther = new FlxCamera();
 		camUpper.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
-		FlxG.cameras.add(camUpper);
-		FlxG.cameras.add(camOther);
+		FlxG.cameras.add(camUpper,false);
+		FlxG.cameras.add(camOther,false);
 
 		cameras = [camUpper];
 		CustomFadeTransition.nextCamera = camOther;
@@ -97,17 +97,34 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 			var poop:String = Highscore.formatSong(songLowercase, 1);
 			PlayState.SONG = Song.loadFromJson(poop + diffic, songLowercase);
 
-			FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
-				ease: FlxEase.circOut,
-				onComplete: function(tween:FlxTween)
-				{
-					trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
-					LoadingState.loadAndSwitchState(new PlayState());
-				}
-			});
+
+
+			loadState();
+			
+
+
+			// FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
+			// 	ease: FlxEase.circOut,
+			// 	onComplete: function(tween:FlxTween)
+			// 	{
+			// 		trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+			// 		LoadingState.loadAndSwitchState(new PlayState());
+			// 	}
+			// });
 		}
 		else
 			openMissLimit();
+	}
+
+	function loadState() {
+		canControl = false;
+		var sound = FlxG.sound.play(Paths.sound('confirmMenu'));
+		sound.persist = true;
+		sound.autoDestroy = true;
+			trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+			LoadingState.loadAndSwitchState(new PlayState());
+
+
 	}
 
 	public var canControl:Bool = false;
@@ -137,14 +154,15 @@ class AmongDifficultySubstate extends MusicBeatSubstate
 					var poop:String = Highscore.formatSong(songLowercase, 1);
 					PlayState.SONG = Song.loadFromJson(poop + diffic, songLowercase);
 
-					FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
-						ease: FlxEase.circOut,
-						onComplete: function(tween:FlxTween)
-						{
-							trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
-							LoadingState.loadAndSwitchState(new PlayState());
-						}
-					});
+					loadState();
+					// FlxTween.tween(camUpper, {alpha: 0}, 0.25, {
+					// 	ease: FlxEase.circOut,
+					// 	onComplete: function(tween:FlxTween)
+					// 	{
+					// 		trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+					// 		LoadingState.loadAndSwitchState(new PlayState());
+					// 	}
+					// });
 				}
 			}
 

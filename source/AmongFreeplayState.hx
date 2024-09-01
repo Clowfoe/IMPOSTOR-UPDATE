@@ -1,5 +1,6 @@
 package;
 
+import flixel.input.mouse.FlxMouseEvent;
 import FreeplayState.SongMetadata;
 import WeekData;
 import flash.text.TextField;
@@ -13,7 +14,7 @@ import flixel.addons.transition.FlxTransitionableState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.input.mouse.FlxMouseEventManager;
 import flixel.math.FlxMath;
-import flixel.system.FlxSound;
+
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -124,11 +125,9 @@ class AmongFreeplayState extends MusicBeatState
 		camUpper.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 		FlxG.cameras.reset(camGame);
-		FlxG.cameras.add(camUpper);
-		FlxG.cameras.add(camOther);
-
-		FlxCamera.defaultCameras = [camGame];
-		CustomFadeTransition.nextCamera = camOther;
+		FlxG.cameras.add(camUpper,false);
+		FlxG.cameras.add(camOther,false);
+		FlxG.cameras.setDefaultDrawTarget(camGame,true);
 
 		persistentUpdate = true;
 		persistentDraw = true;
@@ -139,14 +138,14 @@ class AmongFreeplayState extends MusicBeatState
 		space.scrollFactor.set();
 		add(space);
 
-		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
+		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'));
 		starsBG.setPosition(111.3, 67.95);
 		starsBG.antialiasing = true;
 		starsBG.updateHitbox();
 		starsBG.scrollFactor.set();
 		add(starsBG);
 
-		starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'), 1, 1, true, true);
+		starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'));
 		starsFG.setPosition(54.3, 59.45);
 		starsFG.updateHitbox();
 		starsFG.antialiasing = true;
@@ -283,7 +282,7 @@ class AmongFreeplayState extends MusicBeatState
 		crossImage.updateHitbox();
 		crossImage.cameras = [camUpper];
 		add(crossImage);
-		FlxMouseEventManager.add(crossImage, function onMouseDown(s:FlxSprite)
+		FlxMouseEvent.add(crossImage, function onMouseDown(s:FlxSprite)
 		{
 			goBack();
 		}, null, null);
@@ -323,7 +322,6 @@ class AmongFreeplayState extends MusicBeatState
 		changeSelection(0);
 		changePortrait();
 		
-		CustomFadeTransition.nextCamera = camOther;
 		
 	}
 

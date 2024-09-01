@@ -1,35 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="farmer_gf.png">
-	<!-- Created with Adobe Animate version 21.0.3.38773 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="GF Dancing Beat0000" x="0" y="0" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0001" x="712" y="0" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0002" x="1424" y="0" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0003" x="2136" y="0" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0004" x="2848" y="0" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0005" x="0" y="760" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0006" x="712" y="760" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0007" x="1424" y="760" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0008" x="1424" y="760" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0009" x="2136" y="760" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0010" x="2848" y="760" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0011" x="0" y="1520" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0012" x="0" y="1520" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0013" x="712" y="1520" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0014" x="712" y="1520" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0015" x="1424" y="1520" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0016" x="2136" y="1520" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0017" x="2848" y="1520" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0018" x="0" y="2280" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0019" x="712" y="2280" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0020" x="1424" y="2280" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0021" x="2136" y="2280" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0022" x="2848" y="2280" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0023" x="2848" y="2280" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0024" x="2848" y="2280" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0025" x="0" y="3040" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0026" x="712" y="3040" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0027" x="712" y="3040" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0028" x="1424" y="3040" width="703" height="751"/>
-	<SubTexture name="GF Dancing Beat0029" x="1424" y="3040" width="703" height="751"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="farmer_gf.png" width="3518" height="3738">
+	<SubTexture name="GF Dancing Beat0000" x="0" y="2266" width="700" height="741" frameX="-1" frameY="-9" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0001" x="705" y="2265" width="703" height="741" frameX="-0" frameY="-9" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0002" x="1413" y="2263" width="703" height="741" frameX="-0" frameY="-9" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0003" x="2819" y="0" width="699" height="741" frameX="-1" frameY="-9" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0004" x="2115" y="750" width="699" height="743" frameX="-1" frameY="-7" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0005" x="2113" y="1498" width="700" height="743" frameX="-1" frameY="-7" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0006" x="2115" y="0" width="699" height="745" frameX="-1" frameY="-5" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0007" x="705" y="0" width="700" height="750" frameX="-1" frameY="-0" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0008" x="705" y="0" width="700" height="750" frameX="-1" frameY="-0" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0009" x="0" y="756" width="699" height="750" frameX="-1" frameY="-0" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0010" x="704" y="756" width="699" height="750" frameX="-1" frameY="-0" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0011" x="0" y="0" width="700" height="751" frameX="-1" frameY="-0" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0012" x="0" y="0" width="700" height="751" frameX="-1" frameY="-0" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0013" x="1409" y="1510" width="699" height="748" frameX="-1" frameY="-1" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0014" x="1409" y="1510" width="699" height="748" frameX="-1" frameY="-1" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0015" x="0" y="3012" width="700" height="726" frameX="-1" frameY="-23" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0016" x="705" y="3011" width="703" height="726" frameX="-0" frameY="-23" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0017" x="1413" y="3009" width="703" height="724" frameX="-0" frameY="-25" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0018" x="2121" y="2955" width="700" height="724" frameX="-1" frameY="-25" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0019" x="2819" y="1487" width="699" height="729" frameX="-1" frameY="-21" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0020" x="2818" y="2221" width="700" height="729" frameX="-1" frameY="-21" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0021" x="2819" y="746" width="699" height="736" frameX="-1" frameY="-14" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0022" x="705" y="1511" width="699" height="749" frameX="-1" frameY="-1" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0023" x="705" y="1511" width="699" height="749" frameX="-1" frameY="-1" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0024" x="705" y="1511" width="699" height="749" frameX="-1" frameY="-1" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0025" x="1410" y="0" width="700" height="750" frameX="-1" frameY="-0" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0026" x="1408" y="755" width="699" height="750" frameX="-1" frameY="-0" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0027" x="1408" y="755" width="699" height="750" frameX="-1" frameY="-0" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0028" x="0" y="1511" width="700" height="750" frameX="-1" frameY="-0" frameWidth="703" frameHeight="751"/>
+	<SubTexture name="GF Dancing Beat0029" x="0" y="1511" width="700" height="750" frameX="-1" frameY="-0" frameWidth="703" frameHeight="751"/>
 </TextureAtlas>

@@ -1,21 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="screamsky.png">
-	<!-- Created with Adobe Animate version 21.0.6.41649 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="scream sky  instance 10000" x="0" y="0" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10001" x="2079" y="0" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10002" x="4158" y="0" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10003" x="0" y="1136" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10004" x="2079" y="1136" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10005" x="4158" y="1136" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10006" x="2079" y="1136" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10007" x="4158" y="1136" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10008" x="2079" y="1136" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10009" x="4158" y="1136" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10010" x="2079" y="1136" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10011" x="4158" y="1136" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10012" x="0" y="2272" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10013" x="2079" y="2272" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10014" x="4158" y="2272" width="2059" height="1116"/>
-	<SubTexture name="scream sky  instance 10015" x="0" y="3408" width="2059" height="1116"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="screamsky.png" width="5422" height="4479">
+	<SubTexture name="scream sky  instance 10000" x="0" y="0" width="2059" height="1116" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10001" x="0" y="1121" width="2059" height="1116" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10002" x="2064" y="0" width="1116" height="2059" rotated="true" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10003" x="0" y="2242" width="2059" height="1116" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10004" x="3185" y="0" width="1116" height="2059" rotated="true" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10005" x="2064" y="2064" width="2059" height="1116" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10006" x="3185" y="0" width="1116" height="2059" rotated="true" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10007" x="2064" y="2064" width="2059" height="1116" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10008" x="3185" y="0" width="1116" height="2059" rotated="true" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10009" x="2064" y="2064" width="2059" height="1116" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10010" x="3185" y="0" width="1116" height="2059" rotated="true" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10011" x="2064" y="2064" width="2059" height="1116" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10012" x="0" y="3363" width="2059" height="1116" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10013" x="2064" y="3185" width="2059" height="1116" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10014" x="4306" y="0" width="1116" height="2059" rotated="true" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
+	<SubTexture name="scream sky  instance 10015" x="4128" y="2064" width="1116" height="2059" rotated="true" frameX="-0" frameY="-0" frameWidth="2059" frameHeight="1116"/>
 </TextureAtlas>

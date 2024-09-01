@@ -25,6 +25,7 @@ import ClientPrefs;
 import ChromaticAbberation;
 import openfl.filters.ShaderFilter;
 import flixel.math.FlxPoint;
+import flixel.input.mouse.FlxMouseEvent;
 
 using StringTools;
 
@@ -128,9 +129,8 @@ class AmongStoryMenuState extends MusicBeatState
 		camScreen.bgColor.alpha = 0;
 
 		FlxG.cameras.reset(camSpace);
-		FlxG.cameras.add(camScreen);
-
-		FlxCamera.defaultCameras = [camSpace];
+		FlxG.cameras.add(camScreen,false);
+		FlxG.cameras.setDefaultDrawTarget(camSpace,true);
 
 		camSpace.zoom = 0.7;
 
@@ -139,17 +139,17 @@ class AmongStoryMenuState extends MusicBeatState
 			add(caShader);
 			caShader.amount = 0;
 			var filter2:ShaderFilter = new ShaderFilter(caShader.shader);
-			camSpace.setFilters([filter2]);
+			camSpace.filters = [filter2];
 		}
 
-		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
+		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'));
 		starsBG.setPosition(111.3, 67.95);
         starsBG.antialiasing = true;
         starsBG.updateHitbox();
         starsBG.scrollFactor.set();
         add(starsBG);
         
-        starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'), 1, 1, true, true);
+        starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'));
         starsFG.setPosition(54.3, 59.45);
         starsFG.updateHitbox();
         starsFG.antialiasing = true;
@@ -243,7 +243,7 @@ class AmongStoryMenuState extends MusicBeatState
 		add(back);
 		back.cameras = [camScreen];
 
-		FlxMouseEventManager.add(back, function onMouseDown(back:FlxSprite){
+		FlxMouseEvent.add(back, function onMouseDown(back:FlxSprite){
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			movedBack = true;
 			MusicBeatState.switchState(new MainMenuState());
@@ -269,7 +269,7 @@ class AmongStoryMenuState extends MusicBeatState
 			var weekCircle:FlxSprite = new FlxSprite(0, 50).loadGraphic(Paths.image('storymenu/circle', 'impostor'));
 			weekCircle.antialiasing = ClientPrefs.globalAntialiasing;
 
-			FlxMouseEventManager.add(weekCircle, function onMouseDown(weekCircle:FlxSprite){
+			FlxMouseEvent.add(weekCircle, function onMouseDown(weekCircle:FlxSprite){
 				if(curWeek == i && curWeek != 0){
 					openDiff();
 					FlxG.sound.play(Paths.sound('panelAppear', 'impostor'), 0.5);
@@ -549,7 +549,7 @@ class AmongStoryMenuState extends MusicBeatState
         add(panel);
 		panel.cameras = [camScreen];
 
-		FlxMouseEventManager.add(panel, function onMouseDown(panel:FlxSprite){
+		FlxMouseEvent.add(panel, function onMouseDown(panel:FlxSprite){
 			changeDifficulty(1);
 		}, null);
 

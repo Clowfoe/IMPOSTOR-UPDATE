@@ -1,13 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="Big_Buttons_UI.png">
-	<!-- Created with Adobe Animate version 21.0.0.35450 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Credits Button0000" x="30" y="30" width="440" height="112"/>
-	<SubTexture name="Credits Select0000" x="500" y="30" width="442" height="114"/>
-	<SubTexture name="Freeplay Button0000" x="30" y="174" width="442" height="182"/>
-	<SubTexture name="Freeplay Select0000" x="502" y="174" width="442" height="182"/>
-	<SubTexture name="Gallery Button0000" x="30" y="386" width="440" height="112"/>
-	<SubTexture name="Gallery Select0000" x="500" y="386" width="440" height="112"/>
-	<SubTexture name="Story Mode Button0000" x="30" y="528" width="442" height="182"/>
-	<SubTexture name="Story Mode Select0000" x="502" y="528" width="442" height="182"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="Big_Buttons_UI.png" width="887" height="605">
+	<SubTexture name="Credits Button0000" x="446" y="374" width="439" height="112" frameX="-0" frameY="-0" frameWidth="440" frameHeight="112"/>
+	<SubTexture name="Credits Select0000" x="0" y="0" width="441" height="114" frameX="-0" frameY="-0" frameWidth="442" frameHeight="114"/>
+	<SubTexture name="Freeplay Button0000" x="0" y="119" width="441" height="182" frameX="-0" frameY="-0" frameWidth="442" frameHeight="182"/>
+	<SubTexture name="Freeplay Select0000" x="0" y="306" width="441" height="182" frameX="-0" frameY="-0" frameWidth="442" frameHeight="182"/>
+	<SubTexture name="Gallery Button0000" x="0" y="493" width="439" height="112" frameX="-0" frameY="-0" frameWidth="440" frameHeight="112"/>
+	<SubTexture name="Gallery Select0000" x="444" y="493" width="439" height="112" frameX="-0" frameY="-0" frameWidth="440" frameHeight="112"/>
+	<SubTexture name="Story Mode Button0000" x="446" y="0" width="441" height="182" frameX="-0" frameY="-0" frameWidth="442" frameHeight="182"/>
+	<SubTexture name="Story Mode Select0000" x="446" y="187" width="441" height="182" frameX="-0" frameY="-0" frameWidth="442" frameHeight="182"/>
 </TextureAtlas>

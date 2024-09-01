@@ -1,84 +1,85 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="defeat_death.png">
-	<!-- Created with Adobe Animate version 21.0.5.40714 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="black kill 10000" x="4520" y="2851" width="794" height="850"/>
-	<SubTexture name="black kill 10001" x="4520" y="2851" width="794" height="850"/>
-	<SubTexture name="black kill 10002" x="5324" y="2948" width="794" height="850"/>
-	<SubTexture name="black kill 10003" x="5324" y="2948" width="794" height="850"/>
-	<SubTexture name="black kill 10004" x="6128" y="2948" width="794" height="850"/>
-	<SubTexture name="black kill 10005" x="6128" y="2948" width="794" height="850"/>
-	<SubTexture name="black kill 10006" x="6932" y="2948" width="794" height="850"/>
-	<SubTexture name="black kill 10007" x="6932" y="2948" width="794" height="850"/>
-	<SubTexture name="black kill 10008" x="0" y="3171" width="794" height="850"/>
-	<SubTexture name="black kill 10009" x="0" y="3171" width="794" height="850"/>
-	<SubTexture name="black kill 10010" x="804" y="3171" width="794" height="850"/>
-	<SubTexture name="black kill 10011" x="804" y="3171" width="794" height="850"/>
-	<SubTexture name="black kill 10012" x="1608" y="3171" width="794" height="850"/>
-	<SubTexture name="black kill 10013" x="1608" y="3171" width="794" height="850"/>
-	<SubTexture name="black kill 10014" x="2412" y="3171" width="794" height="850"/>
-	<SubTexture name="black kill 10015" x="2412" y="3171" width="794" height="850"/>
-	<SubTexture name="black kill 10016" x="3216" y="3588" width="794" height="850"/>
-	<SubTexture name="black kill 10017" x="3216" y="3588" width="794" height="850"/>
-	<SubTexture name="black kill 10018" x="4020" y="3711" width="794" height="850"/>
-	<SubTexture name="black kill 10019" x="4824" y="3808" width="794" height="850"/>
-	<SubTexture name="black kill 10020" x="5628" y="3808" width="794" height="850"/>
-	<SubTexture name="black kill 10021" x="5628" y="3808" width="794" height="850"/>
-	<SubTexture name="black kill 10022" x="6432" y="3808" width="794" height="850"/>
-	<SubTexture name="black kill 10023" x="6432" y="3808" width="794" height="850"/>
-	<SubTexture name="black kill 10024" x="7236" y="3808" width="794" height="850"/>
-	<SubTexture name="black kill 10025" x="7236" y="3808" width="794" height="850"/>
-	<SubTexture name="black kill 10026" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10027" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10028" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10029" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10030" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10031" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10032" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10033" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10034" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10035" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10036" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10037" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10038" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10039" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10040" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10041" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10042" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10043" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10044" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 10045" x="0" y="4031" width="794" height="850"/>
-	<SubTexture name="black kill 20000" x="6748" y="0" width="1136" height="727"/>
-	<SubTexture name="black kill 20001" x="6748" y="0" width="1136" height="727"/>
-	<SubTexture name="black kill 20002" x="6748" y="737" width="1136" height="727"/>
-	<SubTexture name="black kill 20003" x="6748" y="737" width="1136" height="727"/>
-	<SubTexture name="black kill 20004" x="6748" y="1474" width="1136" height="727"/>
-	<SubTexture name="black kill 20005" x="6748" y="1474" width="1136" height="727"/>
-	<SubTexture name="black kill 20006" x="3374" y="2114" width="1136" height="727"/>
-	<SubTexture name="black kill 20007" x="3374" y="2114" width="1136" height="727"/>
-	<SubTexture name="black kill 20008" x="4520" y="2114" width="1136" height="727"/>
-	<SubTexture name="black kill 20009" x="4520" y="2114" width="1136" height="727"/>
-	<SubTexture name="black kill 20010" x="5666" y="2211" width="1136" height="727"/>
-	<SubTexture name="black kill 20011" x="5666" y="2211" width="1136" height="727"/>
-	<SubTexture name="black kill 20012" x="6812" y="2211" width="1136" height="727"/>
-	<SubTexture name="black kill 20013" x="6812" y="2211" width="1136" height="727"/>
-	<SubTexture name="black kill 20014" x="3374" y="2851" width="1136" height="727"/>
-	<SubTexture name="black kill 20015" x="3374" y="2851" width="1136" height="727"/>
-	<SubTexture name="black kill 30000" x="0" y="0" width="1677" height="1047"/>
-	<SubTexture name="black kill 30001" x="0" y="0" width="1677" height="1047"/>
-	<SubTexture name="black kill 30002" x="1687" y="0" width="1677" height="1047"/>
-	<SubTexture name="black kill 30003" x="1687" y="0" width="1677" height="1047"/>
-	<SubTexture name="black kill 30004" x="3374" y="0" width="1677" height="1047"/>
-	<SubTexture name="black kill 30005" x="3374" y="0" width="1677" height="1047"/>
-	<SubTexture name="black kill 30006" x="5061" y="0" width="1677" height="1047"/>
-	<SubTexture name="black kill 30007" x="5061" y="0" width="1677" height="1047"/>
-	<SubTexture name="black kill 30008" x="0" y="1057" width="1677" height="1047"/>
-	<SubTexture name="black kill 30009" x="0" y="1057" width="1677" height="1047"/>
-	<SubTexture name="black kill 30010" x="1687" y="1057" width="1677" height="1047"/>
-	<SubTexture name="black kill 30011" x="1687" y="1057" width="1677" height="1047"/>
-	<SubTexture name="black kill 30012" x="1687" y="1057" width="1677" height="1047"/>
-	<SubTexture name="black kill 30013" x="3374" y="1057" width="1677" height="1047"/>
-	<SubTexture name="black kill 30014" x="5061" y="1057" width="1677" height="1047"/>
-	<SubTexture name="black kill 30015" x="0" y="2114" width="1677" height="1047"/>
-	<SubTexture name="black kill 30016" x="1687" y="2114" width="1677" height="1047"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="defeat_death.png" width="4618" height="4488">
+	<SubTexture name="black kill 10000" x="2259" y="3809" width="660" height="671" frameX="-37" frameY="-42" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10001" x="2259" y="3809" width="660" height="671" frameX="-37" frameY="-42" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10002" x="3959" y="0" width="659" height="671" frameX="-40" frameY="-42" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10003" x="3959" y="0" width="659" height="671" frameX="-40" frameY="-42" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10004" x="3949" y="751" width="669" height="651" rotated="true" frameX="-54" frameY="-44" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10005" x="3949" y="751" width="669" height="651" rotated="true" frameX="-54" frameY="-44" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10006" x="3949" y="1407" width="661" height="640" rotated="true" frameX="-81" frameY="-52" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10007" x="3949" y="1407" width="661" height="640" rotated="true" frameX="-81" frameY="-52" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10008" x="3959" y="2052" width="644" height="637" rotated="true" frameX="-96" frameY="-68" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10009" x="3959" y="2052" width="644" height="637" rotated="true" frameX="-96" frameY="-68" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10010" x="1552" y="3809" width="702" height="647" frameX="-67" frameY="-77" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10011" x="1552" y="3809" width="702" height="647" frameX="-67" frameY="-77" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10012" x="2467" y="1577" width="785" height="761" frameX="-9" frameY="-88" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10013" x="2467" y="1577" width="785" height="761" frameX="-9" frameY="-88" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10014" x="2467" y="2343" width="743" height="782" rotated="true" frameX="-0" frameY="-87" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10015" x="2467" y="2343" width="743" height="782" rotated="true" frameX="-0" frameY="-87" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10016" x="780" y="3169" width="767" height="687" frameX="-0" frameY="-75" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10017" x="780" y="3169" width="767" height="687" frameX="-0" frameY="-75" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10018" x="1552" y="3137" width="749" height="667" frameX="-7" frameY="-67" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10019" x="2306" y="3137" width="749" height="667" frameX="-7" frameY="-67" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10020" x="3215" y="2343" width="739" height="661" frameX="-11" frameY="-64" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10021" x="3215" y="2343" width="739" height="661" frameX="-11" frameY="-64" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10022" x="3060" y="3130" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10023" x="3060" y="3130" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10024" x="3286" y="814" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10025" x="3286" y="814" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10026" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10027" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10028" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10029" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10030" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10031" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10032" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10033" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10034" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10035" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10036" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10037" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10038" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10039" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10040" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10041" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10042" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10043" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10044" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 10045" x="3286" y="1556" width="658" height="737" rotated="true" frameX="-12" frameY="-62" frameWidth="794" frameHeight="850"/>
+	<SubTexture name="black kill 20000" x="3315" y="0" width="639" height="746" rotated="true" frameX="-58" frameY="-0" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20001" x="3315" y="0" width="639" height="746" rotated="true" frameX="-58" frameY="-0" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20002" x="0" y="3169" width="775" height="698" frameX="-34" frameY="-20" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20003" x="0" y="3169" width="775" height="698" frameX="-34" frameY="-20" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20004" x="2624" y="814" width="657" height="757" rotated="true" frameX="-15" frameY="-50" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20005" x="2624" y="814" width="657" height="757" rotated="true" frameX="-15" frameY="-50" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20006" x="2624" y="0" width="686" height="809" rotated="true" frameX="-0" frameY="-41" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20007" x="2624" y="0" width="686" height="809" rotated="true" frameX="-0" frameY="-41" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20008" x="0" y="2511" width="854" height="653" frameX="-112" frameY="-27" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20009" x="0" y="2511" width="854" height="653" frameX="-112" frameY="-27" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20010" x="1979" y="0" width="640" height="992" rotated="true" frameX="-132" frameY="-18" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20011" x="1979" y="0" width="640" height="992" rotated="true" frameX="-132" frameY="-18" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20012" x="0" y="1873" width="999" height="633" frameX="-129" frameY="-16" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20013" x="0" y="1873" width="999" height="633" frameX="-129" frameY="-16" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20014" x="1016" y="1012" width="637" height="995" rotated="true" frameX="-135" frameY="-14" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 20015" x="1016" y="1012" width="637" height="995" rotated="true" frameX="-135" frameY="-14" frameWidth="1136" frameHeight="727"/>
+	<SubTexture name="black kill 30000" x="0" y="3872" width="707" height="616" frameX="-277" frameY="-386" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30001" x="0" y="3872" width="707" height="616" frameX="-277" frameY="-386" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30002" x="712" y="3872" width="545" height="606" frameX="-326" frameY="-396" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30003" x="712" y="3872" width="545" height="606" frameX="-326" frameY="-396" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30004" x="3959" y="2694" width="644" height="517" rotated="true" frameX="-286" frameY="-366" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30005" x="3959" y="2694" width="644" height="517" rotated="true" frameX="-286" frameY="-366" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30006" x="1658" y="1012" width="917" height="560" rotated="true" frameX="-151" frameY="-93" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30007" x="1658" y="1012" width="917" height="560" rotated="true" frameX="-151" frameY="-93" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30008" x="1658" y="1577" width="678" height="863" frameX="-13" frameY="-148" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30009" x="1658" y="1577" width="678" height="863" frameX="-13" frameY="-148" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30010" x="1646" y="2445" width="816" height="687" rotated="true" frameX="-0" frameY="-195" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30011" x="1646" y="2445" width="816" height="687" rotated="true" frameX="-0" frameY="-195" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30012" x="1646" y="2445" width="816" height="687" rotated="true" frameX="-0" frameY="-195" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30013" x="1004" y="2012" width="637" height="826" frameX="-50" frameY="-185" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30014" x="1329" y="0" width="645" height="1007" frameX="-140" frameY="-4" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30015" x="0" y="948" width="1011" height="920" rotated="true" frameX="-311" frameY="-0" frameWidth="1677" frameHeight="1047"/>
+	<SubTexture name="black kill 30016" x="0" y="0" width="1324" height="943" frameX="-353" frameY="-70" frameWidth="1677" frameHeight="1047"/>
 </TextureAtlas>

@@ -1,11 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="hearts.png">
-	<!-- Created with Adobe Animate version 18.0.1.115 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Symbol 20000" x="0" y="0" width="1310" height="750"/>
-	<SubTexture name="Symbol 20001" x="0" y="0" width="1310" height="750"/>
-	<SubTexture name="Symbol 20002" x="0" y="0" width="1310" height="750"/>
-	<SubTexture name="Symbol 20003" x="0" y="755" width="1310" height="750"/>
-	<SubTexture name="Symbol 20004" x="0" y="755" width="1310" height="750"/>
-	<SubTexture name="Symbol 20005" x="0" y="755" width="1310" height="750"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="hearts.png" width="2450" height="175">
+	<SubTexture name="Symbol 20000" x="0" y="0" width="1223" height="172" frameX="-47" frameY="-545" frameWidth="1310" frameHeight="750"/>
+	<SubTexture name="Symbol 20001" x="0" y="0" width="1223" height="172" frameX="-47" frameY="-545" frameWidth="1310" frameHeight="750"/>
+	<SubTexture name="Symbol 20002" x="0" y="0" width="1223" height="172" frameX="-47" frameY="-545" frameWidth="1310" frameHeight="750"/>
+	<SubTexture name="Symbol 20003" x="1228" y="0" width="1222" height="175" frameX="-48" frameY="-543" frameWidth="1310" frameHeight="750"/>
+	<SubTexture name="Symbol 20004" x="1228" y="0" width="1222" height="175" frameX="-48" frameY="-543" frameWidth="1310" frameHeight="750"/>
+	<SubTexture name="Symbol 20005" x="1228" y="0" width="1222" height="175" frameX="-48" frameY="-543" frameWidth="1310" frameHeight="750"/>
 </TextureAtlas>

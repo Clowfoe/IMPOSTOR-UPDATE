@@ -1,10 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="buildingSheet.png">
-	<!-- Created with Adobe Animate version 21.0.7.42652 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="BuildingA10000" x="0" y="0" width="1343" height="6977"/>
-	<SubTexture name="BuildingA20000" x="1358" y="0" width="1343" height="6535"/>
-	<SubTexture name="BuildingA30000" x="2716" y="0" width="1343" height="6049"/>
-	<SubTexture name="BuildingB20000" x="4074" y="0" width="1120" height="3939"/>
-	<SubTexture name="BuildingB10000" x="5209" y="0" width="1119" height="3937"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="buildingSheet.png" width="5164" height="7880">
+	<SubTexture name="BuildingA10000" x="0" y="0" width="1343" height="6977" frameX="-0" frameY="-0" frameWidth="1343" frameHeight="6977"/>
+	<SubTexture name="BuildingA20000" x="1348" y="0" width="1343" height="6535" frameX="-0" frameY="-0" frameWidth="1343" frameHeight="6535"/>
+	<SubTexture name="BuildingA30000" x="2696" y="0" width="1343" height="6049" frameX="-0" frameY="-0" frameWidth="1343" frameHeight="6049"/>
+	<SubTexture name="BuildingB20000" x="4044" y="0" width="1120" height="3939" frameX="-0" frameY="-0" frameWidth="1120" frameHeight="3939"/>
+	<SubTexture name="BuildingB10000" x="4044" y="3944" width="1119" height="3936" frameX="-0" frameY="-0" frameWidth="1119" frameHeight="3937"/>
 </TextureAtlas>

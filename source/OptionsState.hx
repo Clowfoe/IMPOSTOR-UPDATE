@@ -45,14 +45,14 @@ class OptionsState extends MusicBeatState
 		DiscordClient.changePresence("Options Menu", null);
 		#end
 
-		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
+		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'));
 		starsBG.setPosition(111.3, 67.95);
         starsBG.antialiasing = true;
         starsBG.updateHitbox();
         starsBG.scrollFactor.set();
         add(starsBG);
         
-        starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'), 1, 1, true, true);
+        starsFG = new FlxBackdrop(Paths.image('freeplay/starFG', 'impostor'));
         starsFG.setPosition(54.3, 59.45);
         starsFG.updateHitbox();
         starsFG.antialiasing = true;

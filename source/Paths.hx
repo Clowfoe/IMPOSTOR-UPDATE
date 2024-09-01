@@ -361,20 +361,20 @@ class Paths
 				// path = path.substring(path.indexOf(':') + 1, path.length);
 				var bitmap = BitmapData.fromFile(path);
 				var newGraphic:FlxGraphic;
-				if (textureCompression)
-				{
-					var texture = FlxG.stage.context3D.createTexture(bitmap.width, bitmap.height, BGRA, true, 0);
-					texture.uploadFromBitmapData(bitmap);
-					currentTrackedTextures.set(key, texture);
-					bitmap.dispose();
-					bitmap.disposeImage();
-					bitmap = null;
-					newGraphic = FlxGraphic.fromBitmapData(BitmapData.fromTexture(texture), true, key, false);
-				}
-				else
-				{
+				// if (textureCompression)
+				// {
+				// 	var texture = FlxG.stage.context3D.createTexture(bitmap.width, bitmap.height, BGRA, true, 0);
+				// 	texture.uploadFromBitmapData(bitmap);
+				// 	currentTrackedTextures.set(key, texture);
+				// 	bitmap.dispose();
+				// 	bitmap.disposeImage();
+				// 	bitmap = null;
+				// 	newGraphic = FlxGraphic.fromBitmapData(BitmapData.fromTexture(texture), true, key, false);
+				// }
+				// else
+				// {
 					newGraphic = FlxGraphic.fromBitmapData(bitmap, true, key, false);
-				}
+				//}
 				newGraphic.persist = true;
 				currentTrackedAssets.set(path, newGraphic);
 			}

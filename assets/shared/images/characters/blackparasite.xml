@@ -1,63 +1,64 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="blackparasite.png">
-	<!-- Created with Adobe Animate version 21.0.6.41649 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="BLACK UP instance 10000" x="0" y="0" width="804" height="989" frameX="0" frameY="-18" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10001" x="809" y="0" width="804" height="989" frameX="0" frameY="-18" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10002" x="1618" y="0" width="741" height="950" frameX="-40" frameY="0" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10003" x="2364" y="0" width="741" height="950" frameX="-40" frameY="0" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10004" x="3110" y="0" width="718" height="836" frameX="-57" frameY="-114" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10005" x="3833" y="0" width="718" height="836" frameX="-57" frameY="-114" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10006" x="4556" y="0" width="712" height="814" frameX="-67" frameY="-135" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10007" x="5273" y="0" width="712" height="814" frameX="-67" frameY="-135" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10008" x="5990" y="0" width="712" height="814" frameX="-67" frameY="-135" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10009" x="6707" y="0" width="712" height="814" frameX="-67" frameY="-135" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10010" x="7424" y="0" width="712" height="814" frameX="-67" frameY="-135" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10011" x="5990" y="0" width="712" height="814" frameX="-67" frameY="-135" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10012" x="0" y="994" width="712" height="814" frameX="-67" frameY="-135" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10013" x="717" y="994" width="712" height="814" frameX="-67" frameY="-135" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="BLACK UP instance 10014" x="5990" y="0" width="712" height="814" frameX="-67" frameY="-135" frameWidth="804" frameHeight="1007"/>
-	<SubTexture name="abomination black idle instance 10000" x="1434" y="994" width="972" height="563" frameX="0" frameY="-18" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10001" x="2411" y="994" width="972" height="563" frameX="0" frameY="-18" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10002" x="3388" y="994" width="967" height="576" frameX="-4" frameY="-6" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10003" x="4360" y="994" width="961" height="581" frameX="-13" frameY="-1" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10004" x="5326" y="994" width="950" height="582" frameX="-28" frameY="0" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10005" x="6281" y="994" width="950" height="582" frameX="-28" frameY="0" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10006" x="7236" y="994" width="935" height="580" frameX="-45" frameY="-2" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10007" x="0" y="1813" width="935" height="580" frameX="-45" frameY="-2" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10008" x="940" y="1813" width="932" height="575" frameX="-53" frameY="-7" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10009" x="1877" y="1813" width="932" height="575" frameX="-53" frameY="-7" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10010" x="2814" y="1813" width="936" height="565" frameX="-53" frameY="-16" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10011" x="3755" y="1813" width="947" height="561" frameX="-40" frameY="-22" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10012" x="4707" y="1813" width="966" height="561" frameX="-19" frameY="-26" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10013" x="5678" y="1813" width="974" height="561" frameX="-5" frameY="-29" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10014" x="6657" y="1813" width="974" height="561" frameX="-5" frameY="-29" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10015" x="0" y="2398" width="974" height="563" frameX="0" frameY="-25" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="abomination black idle instance 10016" x="979" y="2398" width="974" height="563" frameX="0" frameY="-25" frameWidth="989" frameHeight="590"/>
-	<SubTexture name="black down instance 10000" x="1958" y="2398" width="1206" height="1049"/>
-	<SubTexture name="black down instance 10001" x="3169" y="2398" width="1206" height="1045" frameX="0" frameY="0" frameWidth="1206" frameHeight="1049"/>
-	<SubTexture name="black down instance 10002" x="4380" y="2398" width="1066" height="917" frameX="-31" frameY="-75" frameWidth="1206" frameHeight="1049"/>
-	<SubTexture name="black down instance 10003" x="5451" y="2398" width="1066" height="919" frameX="-31" frameY="-75" frameWidth="1206" frameHeight="1049"/>
-	<SubTexture name="black down instance 10004" x="6522" y="2398" width="1054" height="862" frameX="-29" frameY="-108" frameWidth="1206" frameHeight="1049"/>
-	<SubTexture name="black down instance 10005" x="0" y="3452" width="1054" height="862" frameX="-29" frameY="-108" frameWidth="1206" frameHeight="1049"/>
-	<SubTexture name="black down instance 10006" x="1059" y="3452" width="1049" height="839" frameX="-18" frameY="-122" frameWidth="1206" frameHeight="1049"/>
-	<SubTexture name="black down instance 10007" x="1059" y="3452" width="1049" height="839" frameX="-18" frameY="-122" frameWidth="1206" frameHeight="1049"/>
-	<SubTexture name="black down instance 10008" x="1059" y="3452" width="1049" height="839" frameX="-18" frameY="-122" frameWidth="1206" frameHeight="1049"/>
-	<SubTexture name="left  instance 10000" x="2113" y="3452" width="1075" height="887" frameX="0" frameY="0" frameWidth="1117" frameHeight="887"/>
-	<SubTexture name="left  instance 10001" x="3193" y="3452" width="1075" height="887" frameX="0" frameY="0" frameWidth="1117" frameHeight="887"/>
-	<SubTexture name="left  instance 10002" x="4273" y="3452" width="1074" height="753" frameX="-26" frameY="-111" frameWidth="1117" frameHeight="887"/>
-	<SubTexture name="left  instance 10003" x="5352" y="3452" width="1074" height="753" frameX="-26" frameY="-111" frameWidth="1117" frameHeight="887"/>
-	<SubTexture name="left  instance 10004" x="6431" y="3452" width="1044" height="760" frameX="-70" frameY="-96" frameWidth="1117" frameHeight="887"/>
-	<SubTexture name="left  instance 10005" x="6431" y="3452" width="1044" height="760" frameX="-70" frameY="-96" frameWidth="1117" frameHeight="887"/>
-	<SubTexture name="left  instance 10006" x="0" y="4344" width="1036" height="783" frameX="-81" frameY="-77" frameWidth="1117" frameHeight="887"/>
-	<SubTexture name="right ske instance 10000" x="1041" y="4344" width="1166" height="755" frameX="0" frameY="-25" frameWidth="1166" frameHeight="913"/>
-	<SubTexture name="right ske instance 10001" x="2212" y="4344" width="1166" height="755" frameX="0" frameY="-25" frameWidth="1166" frameHeight="913"/>
-	<SubTexture name="right ske instance 10002" x="3383" y="4344" width="959" height="889" frameX="-26" frameY="0" frameWidth="1166" frameHeight="913"/>
-	<SubTexture name="right ske instance 10003" x="3383" y="4344" width="959" height="889" frameX="-26" frameY="0" frameWidth="1166" frameHeight="913"/>
-	<SubTexture name="right ske instance 10004" x="4347" y="4344" width="868" height="899" frameX="-25" frameY="-7" frameWidth="1166" frameHeight="913"/>
-	<SubTexture name="right ske instance 10005" x="4347" y="4344" width="868" height="899" frameX="-25" frameY="-7" frameWidth="1166" frameHeight="913"/>
-	<SubTexture name="right ske instance 10006" x="5220" y="4344" width="843" height="901" frameX="-24" frameY="-12" frameWidth="1166" frameHeight="913"/>
-	<SubTexture name="right ske instance 10007" x="5220" y="4344" width="843" height="901" frameX="-24" frameY="-12" frameWidth="1166" frameHeight="913"/>
-	<SubTexture name="right ske instance 10008" x="5220" y="4344" width="843" height="901" frameX="-24" frameY="-12" frameWidth="1166" frameHeight="913"/>
-	<SubTexture name="right ske instance 10009" x="6068" y="4344" width="843" height="901" frameX="-24" frameY="-12" frameWidth="1166" frameHeight="913"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="blackparasite.png" width="6270" height="5742">
+	<SubTexture name="BLACK UP instance 10000" x="1794" y="4081" width="757" height="924" frameX="-46" frameY="-83" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10001" x="2556" y="4289" width="924" height="757" rotated="true" frameX="-46" frameY="-83" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10002" x="1048" y="3851" width="741" height="950" frameX="-40" frameY="-0" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10003" x="0" y="4187" width="950" height="741" rotated="true" frameX="-40" frameY="-0" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10004" x="4165" y="0" width="760" height="717" rotated="true" frameX="-57" frameY="-189" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10005" x="3485" y="4289" width="718" height="760" frameX="-57" frameY="-189" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10006" x="4066" y="1653" width="712" height="732" frameX="-67" frameY="-217" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10007" x="4372" y="722" width="712" height="732" frameX="-67" frameY="-217" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10008" x="4099" y="2390" width="712" height="729" frameX="-67" frameY="-220" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10009" x="4099" y="3124" width="712" height="729" frameX="-67" frameY="-220" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10010" x="4208" y="3858" width="712" height="729" frameX="-67" frameY="-220" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10011" x="4099" y="2390" width="712" height="729" frameX="-67" frameY="-220" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10012" x="955" y="4806" width="712" height="729" frameX="-67" frameY="-220" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10013" x="1672" y="5010" width="712" height="729" frameX="-67" frameY="-220" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="BLACK UP instance 10014" x="4099" y="2390" width="712" height="729" frameX="-67" frameY="-220" frameWidth="804" frameHeight="1007"/>
+	<SubTexture name="abomination black idle instance 10000" x="4132" y="5179" width="883" height="563" frameX="-0" frameY="-18" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10001" x="4783" y="1459" width="883" height="563" frameX="-0" frameY="-18" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10002" x="0" y="4933" width="879" height="576" frameX="-4" frameY="-6" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10003" x="2389" y="5051" width="872" height="581" frameX="-13" frameY="-1" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10004" x="4208" y="4592" width="861" height="582" frameX="-28" frameY="-0" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10005" x="3266" y="5054" width="861" height="582" frameX="-28" frameY="-0" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10006" x="4816" y="2588" width="846" height="579" frameX="-45" frameY="-3" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10007" x="4816" y="3172" width="846" height="579" frameX="-45" frameY="-3" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10008" x="5650" y="0" width="575" height="843" rotated="true" frameX="-53" frameY="-7" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10009" x="5631" y="3756" width="575" height="843" rotated="true" frameX="-53" frameY="-7" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10010" x="5705" y="1449" width="565" height="847" rotated="true" frameX="-53" frameY="-16" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10011" x="5667" y="2588" width="559" height="858" rotated="true" frameX="-40" frameY="-22" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10012" x="5089" y="890" width="877" height="554" frameX="-19" frameY="-27" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10013" x="5074" y="3756" width="552" height="885" rotated="true" frameX="-5" frameY="-29" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10014" x="5074" y="4646" width="552" height="885" rotated="true" frameX="-5" frameY="-29" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10015" x="4816" y="2027" width="884" height="556" frameX="-1" frameY="-25" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="abomination black idle instance 10016" x="5089" y="0" width="556" height="885" rotated="true" frameX="-0" frameY="-25" frameWidth="989" frameHeight="590"/>
+	<SubTexture name="black down instance 10000" x="0" y="0" width="1205" height="966" frameX="-0" frameY="-0" frameWidth="1206" frameHeight="1049"/>
+	<SubTexture name="black down instance 10001" x="0" y="971" width="1205" height="966" frameX="-0" frameY="-0" frameWidth="1206" frameHeight="1049"/>
+	<SubTexture name="black down instance 10002" x="1210" y="0" width="817" height="1065" rotated="true" frameX="-31" frameY="-75" frameWidth="1206" frameHeight="1049"/>
+	<SubTexture name="black down instance 10003" x="1210" y="1070" width="814" height="1065" rotated="true" frameX="-31" frameY="-75" frameWidth="1206" frameHeight="1049"/>
+	<SubTexture name="black down instance 10004" x="2773" y="795" width="756" height="1054" rotated="true" frameX="-29" frameY="-109" frameWidth="1206" frameHeight="1049"/>
+	<SubTexture name="black down instance 10005" x="2135" y="2241" width="1054" height="757" frameX="-29" frameY="-108" frameWidth="1206" frameHeight="1049"/>
+	<SubTexture name="black down instance 10006" x="3111" y="0" width="1049" height="743" frameX="-18" frameY="-122" frameWidth="1206" frameHeight="1049"/>
+	<SubTexture name="black down instance 10007" x="3111" y="0" width="1049" height="743" frameX="-18" frameY="-122" frameWidth="1206" frameHeight="1049"/>
+	<SubTexture name="black down instance 10008" x="3111" y="0" width="1049" height="743" frameX="-18" frameY="-122" frameWidth="1206" frameHeight="1049"/>
+	<SubTexture name="left  instance 10000" x="0" y="2686" width="1074" height="790" frameX="-0" frameY="-0" frameWidth="1117" frameHeight="887"/>
+	<SubTexture name="left  instance 10001" x="2032" y="0" width="1074" height="790" frameX="-0" frameY="-0" frameWidth="1117" frameHeight="887"/>
+	<SubTexture name="left  instance 10002" x="2135" y="3003" width="688" height="1073" rotated="true" frameX="-26" frameY="-111" frameWidth="1117" frameHeight="887"/>
+	<SubTexture name="left  instance 10003" x="2828" y="3596" width="1073" height="688" frameX="-26" frameY="-111" frameWidth="1117" frameHeight="887"/>
+	<SubTexture name="left  instance 10004" x="0" y="3481" width="1043" height="701" frameX="-70" frameY="-96" frameWidth="1117" frameHeight="887"/>
+	<SubTexture name="left  instance 10005" x="0" y="3481" width="1043" height="701" frameX="-70" frameY="-96" frameWidth="1117" frameHeight="887"/>
+	<SubTexture name="left  instance 10006" x="1079" y="3134" width="1034" height="712" frameX="-82" frameY="-77" frameWidth="1117" frameHeight="887"/>
+	<SubTexture name="right ske instance 10000" x="0" y="1942" width="1166" height="739" frameX="-0" frameY="-40" frameWidth="1166" frameHeight="913"/>
+	<SubTexture name="right ske instance 10001" x="2029" y="1070" width="739" height="1166" rotated="true" frameX="-0" frameY="-40" frameWidth="1166" frameHeight="913"/>
+	<SubTexture name="right ske instance 10002" x="1171" y="2241" width="959" height="888" frameX="-26" frameY="-0" frameWidth="1166" frameHeight="913"/>
+	<SubTexture name="right ske instance 10003" x="1171" y="2241" width="959" height="888" frameX="-26" frameY="-0" frameWidth="1166" frameHeight="913"/>
+	<SubTexture name="right ske instance 10004" x="3194" y="1854" width="867" height="899" frameX="-25" frameY="-7" frameWidth="1166" frameHeight="913"/>
+	<SubTexture name="right ske instance 10005" x="3194" y="1854" width="867" height="899" frameX="-25" frameY="-7" frameWidth="1166" frameHeight="913"/>
+	<SubTexture name="right ske instance 10006" x="3534" y="748" width="833" height="900" frameX="-25" frameY="-13" frameWidth="1166" frameHeight="913"/>
+	<SubTexture name="right ske instance 10007" x="3534" y="748" width="833" height="900" frameX="-25" frameY="-13" frameWidth="1166" frameHeight="913"/>
+	<SubTexture name="right ske instance 10008" x="3534" y="748" width="833" height="900" frameX="-25" frameY="-13" frameWidth="1166" frameHeight="913"/>
+	<SubTexture name="right ske instance 10009" x="3194" y="2758" width="900" height="833" rotated="true" frameX="-25" frameY="-13" frameWidth="1166" frameHeight="913"/>
 </TextureAtlas>

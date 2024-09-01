@@ -1,19 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="eye_shine_thing.png">
-	<!-- Created with Adobe Animate version 21.0.7.42652 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="eye shine thing lol instance 10000" x="119" y="0" width="144" height="360" frameX="-34" frameY="-85" frameWidth="210" frameHeight="529"/>
-	<SubTexture name="eye shine thing lol instance 10001" x="0" y="0" width="104" height="529" frameX="-53" frameY="0" frameWidth="210" frameHeight="529"/>
-	<SubTexture name="eye shine thing lol instance 10002" x="119" y="375" width="210" height="104" frameX="0" frameY="-213" frameWidth="210" frameHeight="529"/>
-	<SubTexture name="eye shine thing lol instance 10003" x="278" y="0" width="115" height="188" frameX="-47" frameY="-171" frameWidth="210" frameHeight="529"/>
-	<SubTexture name="eye shine thing lol instance 10004" x="408" y="0" width="112" height="141" frameX="-50" frameY="-194" frameWidth="210" frameHeight="529"/>
-	<SubTexture name="eye shine thing lol instance 10005" x="278" y="203" width="163" height="110" frameX="-24" frameY="-211" frameWidth="210" frameHeight="529"/>
-	<SubTexture name="eye shine thing lol instance 10006" x="344" y="328" width="174" height="89" frameX="-19" frameY="-220" frameWidth="210" frameHeight="529"/>
-	<SubTexture name="eye shine thing lol instance 10007" x="456" y="156" width="158" height="98" frameX="-27" frameY="-215" frameWidth="210" frameHeight="529"/>
-	<SubTexture name="eye shine thing lol instance 10008" x="0" y="544" width="94" height="90" frameX="-59" frameY="-219" frameWidth="210" frameHeight="529"/>
-	<SubTexture name="eye shine thing lol instance 10009" x="535" y="0" width="95" height="104" frameX="-57" frameY="-213" frameWidth="210" frameHeight="529"/>
-	<SubTexture name="eye shine thing lol instance 10010" x="344" y="432" width="102" height="90" frameX="-54" frameY="-220" frameWidth="210" frameHeight="529"/>
-	<SubTexture name="eye shine thing lol instance 10011" x="119" y="494" width="102" height="88" frameX="-55" frameY="-221" frameWidth="210" frameHeight="529"/>
-	<SubTexture name="eye shine thing lol instance 10012" x="236" y="494" width="90" height="78" frameX="-61" frameY="-226" frameWidth="210" frameHeight="529"/>
-	<SubTexture name="eye shine thing lol instance 10013" x="461" y="432" width="90" height="78" frameX="-61" frameY="-226" frameWidth="210" frameHeight="529"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="eye_shine_thing.png" width="526" height="500">
+	<SubTexture name="eye shine thing lol instance 10000" x="91" y="0" width="121" height="338" frameX="-44" frameY="-94" frameWidth="210" frameHeight="529"/>
+	<SubTexture name="eye shine thing lol instance 10001" x="0" y="0" width="86" height="500" frameX="-60" frameY="-13" frameWidth="210" frameHeight="529"/>
+	<SubTexture name="eye shine thing lol instance 10002" x="217" y="0" width="197" height="100" frameX="-4" frameY="-213" frameWidth="210" frameHeight="529"/>
+	<SubTexture name="eye shine thing lol instance 10003" x="217" y="105" width="105" height="181" frameX="-50" frameY="-172" frameWidth="210" frameHeight="529"/>
+	<SubTexture name="eye shine thing lol instance 10004" x="419" y="0" width="107" height="136" frameX="-50" frameY="-195" frameWidth="210" frameHeight="529"/>
+	<SubTexture name="eye shine thing lol instance 10005" x="91" y="376" width="157" height="100" frameX="-25" frameY="-214" frameWidth="210" frameHeight="529"/>
+	<SubTexture name="eye shine thing lol instance 10006" x="217" y="291" width="168" height="80" frameX="-20" frameY="-223" frameWidth="210" frameHeight="529"/>
+	<SubTexture name="eye shine thing lol instance 10007" x="253" y="376" width="151" height="89" frameX="-28" frameY="-217" frameWidth="210" frameHeight="529"/>
+	<SubTexture name="eye shine thing lol instance 10008" x="414" y="141" width="87" height="81" frameX="-61" frameY="-222" frameWidth="210" frameHeight="529"/>
+	<SubTexture name="eye shine thing lol instance 10009" x="327" y="105" width="82" height="97" frameX="-61" frameY="-215" frameWidth="210" frameHeight="529"/>
+	<SubTexture name="eye shine thing lol instance 10010" x="409" y="227" width="87" height="82" frameX="-59" frameY="-222" frameWidth="210" frameHeight="529"/>
+	<SubTexture name="eye shine thing lol instance 10011" x="409" y="314" width="81" height="76" frameX="-63" frameY="-225" frameWidth="210" frameHeight="529"/>
+	<SubTexture name="eye shine thing lol instance 10012" x="327" y="207" width="61" height="61" frameX="-73" frameY="-232" frameWidth="210" frameHeight="529"/>
+	<SubTexture name="eye shine thing lol instance 10013" x="393" y="207" width="1" height="1" frameX="-0" frameY="-0" frameWidth="210" frameHeight="529"/>
 </TextureAtlas>

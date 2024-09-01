@@ -287,7 +287,9 @@ class HenryState extends MusicBeatState
 
 			(new FlxVideo(fileName)).finishCallback = function() {
 				remove(bg);
-                finishCallback();
+                if (finishCallback == null) throw 'finish callback was null?';
+                else
+                    finishCallback();
 			}
 			return;
 		} else {

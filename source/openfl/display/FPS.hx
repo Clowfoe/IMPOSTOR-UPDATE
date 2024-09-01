@@ -1,5 +1,6 @@
 package openfl.display;
 
+import flixel.util.FlxStringUtil;
 import flixel.FlxG;
 import openfl.display.Shader;
 import openfl.filters.ShaderFilter;
@@ -13,8 +14,6 @@ class FPS extends TextField
 		The current frame rate, expressed using frames-per-second
 	**/
 	public var currentFPS(default, null):UInt;
-
-	var peak:UInt = 0;
 
 	@:noCompletion private var cacheCount:Int;
 	@:noCompletion private var currentTime:Float;
@@ -70,33 +69,8 @@ class FPS extends TextField
 
 		text += "FPS: " + currentFPS + "\n";
 
-		var mem = System.totalMemory;
-		if (mem > peak)
-			peak = mem;
+		text += "MEM: " + FlxStringUtil.formatBytes(System.totalMemory) + "\n";
 
-		text += "MEM: " + getSizeLabel(System.totalMemory) + "\n";
-
-		text += "MEM peak: " + getSizeLabel(peak) + "\n";
-	}
-
-	final dataTexts = ["B", "KB", "MB", "GB", "TB", "PB"];
-
-	function getSizeLabel(num:UInt):String
-	{
-		var size:Float = num;
-		var data = 0;
-		while (size > 1024 && data < dataTexts.length - 1)
-		{
-			data++;
-			size = size / 1024;
-		}
-
-		size = Math.round(size * 100) / 100;
-
-		if (data <= 2)
-			size = Math.round(size);
-
-		return size + " " + dataTexts[data];
 	}
 }
 
