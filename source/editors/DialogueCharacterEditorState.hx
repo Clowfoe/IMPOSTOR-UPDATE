@@ -78,8 +78,8 @@ class DialogueCharacterEditorState extends MusicBeatState
 		camOther.bgColor.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
-		FlxG.cameras.add(camOther);
-		FlxCamera.defaultCameras = [camOther];
+		FlxG.cameras.add(camOther,false);
+		// FlxCamera.defaultCameras = [camOther];
 		
 		mainGroup = new FlxSpriteGroup();
 		mainGroup.cameras = [camGame];

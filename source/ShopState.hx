@@ -772,7 +772,7 @@ class BeansPopup extends FlxSpriteGroup {
             FlxG.sound.play(Paths.sound('getbeans', 'impostor'), 0.9);
         });
 
-		var cam:Array<FlxCamera> = FlxCamera.defaultCameras;
+		var cam:Array<FlxCamera> = FlxG.cameras.list;
 		if(camera != null) {
 			cam = [camera];
 		}
