@@ -627,9 +627,7 @@ class PlayState extends MusicBeatState
 	override public function create()
 	{
 		super.create();
-
-		// FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Inst'); // fuck
-		// FlxG.sound.cache('${PlayState.SONG.song.toLowerCase().replace(' ', '-')}/Voices');
+		Paths.clearStoredMemory();
 
 		instance = this;
 		resetSpriteCache = false;

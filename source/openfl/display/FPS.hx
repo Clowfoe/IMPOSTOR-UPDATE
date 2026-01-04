@@ -65,11 +65,11 @@ class FPS extends TextField
 		var currentCount = times.length;
 		currentFPS = Math.round((currentCount + cacheCount));
 
-		text = "";
+		
 
-		text += "FPS: " + currentFPS + "\n";
+		text = 'FPS: $currentFPS \nMEM: ${FlxStringUtil.formatBytes(System.totalMemoryNumber)}\n';
 
-		text += "MEM: " + FlxStringUtil.formatBytes(System.totalMemory) + "\n";
+
 
 	}
 }

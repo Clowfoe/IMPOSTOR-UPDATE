@@ -131,6 +131,7 @@ class TitleState extends MusicBeatState
 				if (initialized)
 				{
 					startIntro();
+					canPressEnter = true;
 				}
 				else
 				{
@@ -218,10 +219,7 @@ class TitleState extends MusicBeatState
 		titleText.y -= 80;
 		add(titleText);
 
-		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
-		logo.screenCenter();
-		logo.antialiasing = ClientPrefs.globalAntialiasing;
-		// add(logo);
+
 
 		// FlxTween.tween(logoBl, {y: logoBl.y + 50}, 0.6, {ease: FlxEase.quadInOut, type: PINGPONG});
 		// FlxTween.tween(logo, {y: logoBl.y + 50}, 0.6, {ease: FlxEase.quadInOut, type: PINGPONG, startDelay: 0.1});

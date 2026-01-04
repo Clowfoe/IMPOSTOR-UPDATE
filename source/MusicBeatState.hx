@@ -31,10 +31,10 @@ class MusicBeatState extends FlxUIState
 		var skip:Bool = FlxTransitionableState.skipNextTransOut;
 		super.create();
 
-		Paths.clearStoredMemory();
-		if ((!Std.isOfType(this, PlayState)) 
-		&& (!Std.isOfType(this, ChartingState)))
-			Paths.clearUnusedMemory();
+		// Paths.clearStoredMemory();
+		// if ((!Std.isOfType(this, PlayState)) 
+		// && (!Std.isOfType(this, ChartingState)))
+		// 	Paths.clearUnusedMemory();
 
 		// Custom made Trans out
 		if(!skip) {
@@ -121,9 +121,7 @@ class MusicBeatState extends FlxUIState
 	}
 
 	public static function getState():MusicBeatState {
-		var curState:Dynamic = FlxG.state;
-		var leState:MusicBeatState = curState;
-		return leState;
+		return cast FlxG.state;
 	}
 
 	public function stepHit():Void
