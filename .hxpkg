@@ -3,41 +3,51 @@
 		"profile": "default",
 		"pkgs": [
 			{
-				"name": "flixel"
+				"name": "flixel",
+				"version": "6.1.2"
 			},
 			{
-				"name": "flixel-addons"
+				"name": "flixel-addons",
+				"version": "4.0.1"
 			},
 			{
-				"name": "flixel-ui"
+				"name": "flixel-ui",
+				"version": "2.6.4"
 			},
 			{
-				"name": "flixel-tools"
+				"name": "flixel-tools",
+				"version": "1.5.1"
 			},
 			{
-				"name": "hscript"
+				"name": "hscript",
+				"version": "2.7.0"
 			},
 			{
-				"name": "hxcpp-debug-server"
+				"name": "hxcpp-debug-server",
+				"version": "1.2.4"
 			},
 			{
 				"name": "hxcpp",
-				"link": "https://github.com/HaxeFoundation/hxcpp"
+				"link": "https://github.com/HaxeFoundation/hxcpp",
+				"branch": "4cff17a5a5e2076750f00a1bf74379a9f1ee57e9"
 			},
 			{
 				"name": "lime",
 				"version": "8.1.3"
 			},
 			{
-				"name": "openfl"
+				"name": "openfl",
+				"version": "9.5.0"
 			},
 			{
 				"name": "linc_luajit",
-				"link": "https://github.com/superpowers04/linc_luajit.git"
+				"link": "https://github.com/superpowers04/linc_luajit.git",
+				"branch": "daf0664aee99aa8b8d6bdd1eda993a1c3a399067"
 			},
 			{
 				"name": "discord_rpc",
-				"link": "https://github.com/Aidan63/linc_discord-rpc"
+				"link": "https://github.com/Aidan63/linc_discord-rpc",
+				"branch": "2d83fa863ef0c1eace5f1cf67c3ac315d1a3a8a5"
 			}
 		]
 	}
