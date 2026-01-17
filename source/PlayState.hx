@@ -3771,12 +3771,18 @@ class PlayState extends MusicBeatState
 			SONG.player1 = ClientPrefs.charOverrides[0];
 		}
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
+		if (curStage.toLowerCase() == 'turbulence' && SONG.player1 != 'bf_turb')
+		{
+			boyfriend.angle += -90;
+			boyfriend.scale.scale(1.3);
+			boyfriend.updateHitbox();
+			boyfriend.cameraPosition = [0, 0];
+			boyfriend.positionArray = [Math.min(0, boyfriend.positionArray[1] - 350), 0];
+			var centerAttempt = Math.max(-54, (boyfriend.height - 540) / 2);
+			boyfriend.animOffsets = [for (i => off in boyfriend.animOffsets) i => [off[1] * 1.3, -off[0] * 1.3 + centerAttempt]];
+		}
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
-		//if (curStage.toLowerCase() == 'turbulence')
-		//{
-			//boyfriendGroup.angle = -90;
-		//}
 		
 		dadGhost.visible = false;
 		dadGhost.antialiasing = true;
