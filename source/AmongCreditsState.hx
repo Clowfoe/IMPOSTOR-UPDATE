@@ -80,14 +80,17 @@ class AmongCreditsState extends MusicBeatState
 
     override public function create()
     {
-        super.create();
 
         camFollowPos = new FlxObject(0, 0, 1, 1);
+        add(camFollowPos);
 
         FlxG.camera.zoom = 0.8;
         FlxG.camera.follow(camFollowPos, LOCKON);
 
         camFollowPos.setPosition(660, 370);
+
+        super.create();
+
 
         wallback = new FlxSprite().loadGraphic(Paths.image('credits/wallback', 'impostor'));
 		wallback.antialiasing = true;
@@ -132,13 +135,13 @@ class AmongCreditsState extends MusicBeatState
 		mole.antialiasing = false;
         add(mole);
 
-        descText = new FlxText(0, 600, 1200, "", 0);
+        descText = new FlxText(0, 600, 1200, "", 50);
 		descText.setFormat(Paths.font("AmaticSC-Bold.ttf"), 50, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		descText.scrollFactor.set();
 		descText.borderSize = 1.3;
         add(descText);
 
-        nameText = new FlxText(565, 120, 800, "", 0);
+        nameText = new FlxText(565, 120, 800, "", 45);
 		nameText.setFormat(Paths.font("Dum-Regular.ttf"), 45, FlxColor.BLACK, CENTER);
 		nameText.angle = -12;
         nameText.updateHitbox();
