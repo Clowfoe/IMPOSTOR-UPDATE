@@ -6427,7 +6427,7 @@ class PlayState extends MusicBeatState
 			else
 				iconP2.animation.curAnim.curFrame = 0;
 		}
-
+		#if debug
 		if (FlxG.keys.justPressed.EIGHT && !endingSong && !inCutscene)
 		{
 			persistentUpdate = false;
@@ -6436,6 +6436,7 @@ class PlayState extends MusicBeatState
 			CustomFadeTransition.nextCamera = camOther;
 			MusicBeatState.switchState(new CharacterEditorState(SONG.player2));
 		}
+		#end
 
 		if (startingSong)
 		{
